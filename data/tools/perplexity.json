@@ -60,7 +60,7 @@
       "name": "Enterprise Pro",
       "slug": "enterprise-pro",
       "pricingModel": "per_seat",
-      "basePrice": 0,
+      "basePrice": 2000,
       "billingPeriod": "monthly",
       "annualDiscount": 17,
       "seatPrice": 40,
