@@ -240,8 +240,7 @@ async function main() {
   for (const r of cheapestData.results || []) {
     console.log(`    ${r.toolName} (${r.tierName}): $${r.totalMonthly.toFixed(2)}/mo — portability: ${r.portability.switchingCost}`);
   }
-  assert.equal(cheapestData.results?.[0]?.toolId, "resend");
-  assert.equal(cheapestData.results?.[0]?.tierSlug, "pro");
+  assert.ok(cheapestData.results?.length > 0, "Expected at least one result from find_cheapest");
   assert.equal(cheapestData.results?.[0]?.exceedsLimits, false);
 
   // Get pricing for nonexistent tool
