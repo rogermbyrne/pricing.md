@@ -33,6 +33,33 @@
       }
     },
     {
+      "name": "Telemetry Pay-as-you-go",
+      "slug": "telemetry-payg",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": 33,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "ingestion",
+          "unit": "GB",
+          "pricePerUnit": 0.15,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "retention",
+          "unit": "GB",
+          "pricePerUnit": 0.08,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
       "name": "Telemetry Nano",
       "slug": "telemetry-nano",
       "pricingModel": "flat_rate",
@@ -67,33 +94,6 @@
           "pricePerUnit": 0,
           "unitQuantity": 1,
           "includedQuantity": 340
-        }
-      ],
-      "features": [],
-      "limits": {}
-    },
-    {
-      "name": "Telemetry Pay-as-you-go",
-      "slug": "telemetry-payg",
-      "pricingModel": "usage_based",
-      "basePrice": 0,
-      "billingPeriod": "monthly",
-      "annualDiscount": 33,
-      "seatPrice": null,
-      "usageMetrics": [
-        {
-          "name": "ingestion",
-          "unit": "GB",
-          "pricePerUnit": 0.15,
-          "unitQuantity": 1,
-          "includedQuantity": 0
-        },
-        {
-          "name": "retention",
-          "unit": "GB",
-          "pricePerUnit": 0.08,
-          "unitQuantity": 1,
-          "includedQuantity": 0
         }
       ],
       "features": [],

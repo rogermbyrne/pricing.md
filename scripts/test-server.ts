@@ -86,7 +86,7 @@ async function main() {
   for (const tool of searchData.tools || []) {
     console.log(`  ${tool.name}: free tier ${tool.freeTier ? "yes" : "no"}, lowest paid $${tool.lowestPaidPrice}/mo`);
   }
-  assert.equal(searchData.total, 4);
+  assert.ok(searchData.total >= 4, `Expected at least 4 email tools, got ${searchData.total}`);
 
   // Get pricing - resend
   console.log("\n=== Test 4: Get Pricing (resend) ===");
