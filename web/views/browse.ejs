@@ -1,14 +1,14 @@
 <%- include('partials/head', { title }) %>
 
 <div class="max-w-6xl mx-auto px-6 py-10">
-  <h1 class="text-3xl font-bold tracking-tighter text-neutral-900 dark:text-neutral-100">Developer Tool Pricing</h1>
-  <p class="text-sm text-neutral-500 mt-1 mb-8">Compare pricing across <%= categories.reduce((sum, c) => sum + c.count, 0) %> tools in <%= categories.length %> categories</p>
+  <h1 class="text-4xl md:text-5xl font-bold tracking-tighter text-neutral-900 dark:text-white">Developer Tool Pricing</h1>
+  <p class="text-base text-neutral-500 mt-2 mb-10">Compare pricing across <%= categories.reduce((sum, c) => sum + c.count, 0) %> tools in <%= categories.length %> categories</p>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
     <% for (const cat of categories) { %>
       <a href="/browse/<%= cat.name %>" class="block bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 rounded-none p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] hover:-translate-y-0.5 hover:border-neutral-900 dark:hover:border-neutral-400 transition-all no-underline theme-transition">
         <div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-2"><%= cat.displayName %></div>
-        <div class="font-mono text-2xl font-bold text-neutral-900 dark:text-neutral-100"><%= cat.count %></div>
+        <div class="font-mono text-2xl font-bold text-neutral-900 dark:text-white"><%= cat.count %></div>
         <div class="text-xs text-neutral-500 mt-0.5">tool<%= cat.count !== 1 ? 's' : '' %></div>
         <div class="text-xs text-neutral-400 dark:text-neutral-600 mt-3 truncate"><%= cat.topTools.join(', ') %><%= cat.count > 3 ? '...' : '' %></div>
       </a>

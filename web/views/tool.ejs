@@ -2,9 +2,9 @@
 
 <%
 function formatPrice(price) {
-  if (price === 0) return '<span class="font-mono font-bold text-neutral-900 dark:text-neutral-100">Free</span>';
+  if (price === 0) return '<span class="font-mono font-bold text-neutral-900 dark:text-white">Free</span>';
   if (price === null || price === undefined) return '<span class="font-mono text-neutral-400 italic">Contact Sales</span>';
-  return '<span class="font-mono font-bold text-neutral-900 dark:text-neutral-100">$' + price + '/mo</span>';
+  return '<span class="font-mono font-bold text-neutral-900 dark:text-white">$' + price + '/mo</span>';
 }
 
 function switchingBadge(cost) {
@@ -37,13 +37,13 @@ const categoryDisplay = tool.category.replace(/-/g, ' ').replace(/\b\w/g, c => c
     <span class="text-neutral-400">/</span>
     <a href="/browse/<%= tool.category %>" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors font-mono"><%= categoryDisplay %></a>
     <span class="text-neutral-400">/</span>
-    <span class="text-neutral-900 dark:text-neutral-100 font-mono"><%= tool.name %></span>
+    <span class="text-neutral-900 dark:text-white font-mono"><%= tool.name %></span>
   </div>
 
   <!-- Hero -->
   <div class="mb-10">
     <div class="flex items-center gap-3 flex-wrap">
-      <h1 class="text-4xl font-bold tracking-tighter text-neutral-900 dark:text-neutral-100"><%= tool.name %></h1>
+      <h1 class="text-4xl font-bold tracking-tighter text-neutral-900 dark:text-white"><%= tool.name %></h1>
       <span class="inline-block px-2 py-0.5 text-xs font-mono border border-neutral-300 dark:border-neutral-700 text-neutral-500 rounded-none"><%= categoryDisplay %></span>
       <span class="inline-block px-2 py-0.5 text-xs font-mono border rounded-none <%= fresh.cls %>"><%= fresh.label %></span>
     </div>
@@ -64,7 +64,7 @@ const categoryDisplay = tool.category.replace(/-/g, ' ').replace(/\b\w/g, c => c
       </div>
       <div>
         <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-1">Open Standard</div>
-        <span class="text-sm text-neutral-900 dark:text-neutral-100"><%= tool.portability.openStandard || 'Proprietary' %></span>
+        <span class="text-sm text-neutral-900 dark:text-white"><%= tool.portability.openStandard || 'Proprietary' %></span>
       </div>
     </div>
     <p class="text-sm text-neutral-500 mt-3"><span class="font-semibold text-neutral-700 dark:text-neutral-300">What you lose:</span> <%= tool.portability.whatYouLose %></p>
@@ -77,11 +77,11 @@ const categoryDisplay = tool.category.replace(/-/g, ' ').replace(/\b\w/g, c => c
       <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] flex flex-col theme-transition">
         <div class="flex justify-between items-start mb-4">
           <div>
-            <h3 class="text-lg font-bold text-neutral-900 dark:text-neutral-100"><%= tier.name %></h3>
+            <h3 class="text-lg font-bold text-neutral-900 dark:text-white"><%= tier.name %></h3>
             <span class="text-[10px] font-mono uppercase tracking-widest text-neutral-400"><%= tier.pricingModel.replace(/_/g, ' ') %></span>
           </div>
           <div class="text-right">
-            <div class="text-2xl font-mono font-bold text-neutral-900 dark:text-neutral-100">
+            <div class="text-2xl font-mono font-bold text-neutral-900 dark:text-white">
               <% if (tier.basePrice === 0) { %>Free<% } else if (tier.basePrice === null || tier.basePrice === undefined) { %><span class="text-lg italic text-neutral-400">Contact Sales</span><% } else { %>$<%= tier.basePrice %><% } %>
             </div>
             <% if (tier.billingPeriod) { %>
@@ -93,7 +93,7 @@ const categoryDisplay = tool.category.replace(/-/g, ' ').replace(/\b\w/g, c => c
         <% if (tier.seatPrice !== null) { %>
           <div class="text-sm mb-2">
             <span class="text-neutral-500">Per seat:</span>
-            <span class="font-mono text-neutral-900 dark:text-neutral-100">$<%= tier.seatPrice %>/mo</span>
+            <span class="font-mono text-neutral-900 dark:text-white">$<%= tier.seatPrice %>/mo</span>
           </div>
         <% } %>
 
@@ -107,7 +107,7 @@ const categoryDisplay = tool.category.replace(/-/g, ' ').replace(/\b\w/g, c => c
             <% for (const m of tier.usageMetrics) { %>
               <div class="flex justify-between text-xs py-0.5">
                 <span class="text-neutral-500"><%= m.name %></span>
-                <span class="font-mono text-neutral-900 dark:text-neutral-100"><%= m.includedQuantity.toLocaleString() %> <span class="text-neutral-400"><%= m.unit %></span></span>
+                <span class="font-mono text-neutral-900 dark:text-white"><%= m.includedQuantity.toLocaleString() %> <span class="text-neutral-400"><%= m.unit %></span></span>
               </div>
               <% if (m.pricePerUnit > 0) { %>
                 <div class="text-xs text-neutral-400 font-mono ml-auto text-right">then $<%= m.pricePerUnit %>/<%= m.unitQuantity > 1 ? m.unitQuantity.toLocaleString() + ' ' : '' %><%= m.unit %></div>
@@ -123,7 +123,7 @@ const categoryDisplay = tool.category.replace(/-/g, ' ').replace(/\b\w/g, c => c
             <% for (const [key, val] of limitEntries) { %>
               <div class="flex justify-between text-xs py-0.5">
                 <span class="text-neutral-500"><%= key.replace(/([A-Z])/g, ' $1').replace(/^./, s => s.toUpperCase()) %></span>
-                <span class="font-mono text-neutral-900 dark:text-neutral-100"><%= typeof val === 'number' ? val.toLocaleString() : val %></span>
+                <span class="font-mono text-neutral-900 dark:text-white"><%= typeof val === 'number' ? val.toLocaleString() : val %></span>
               </div>
             <% } %>
           </div>
@@ -134,7 +134,7 @@ const categoryDisplay = tool.category.replace(/-/g, ' ').replace(/\b\w/g, c => c
             <div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-2">Features</div>
             <% for (const f of tier.features) { %>
               <div class="text-xs py-0.5 flex items-center gap-1.5">
-                <span class="<%= f.included ? 'text-neutral-900 dark:text-neutral-100' : 'text-neutral-300 dark:text-neutral-700' %>"><%= f.included ? '&#10003;' : '&#10007;' %></span>
+                <span class="<%= f.included ? 'text-neutral-900 dark:text-white' : 'text-neutral-300 dark:text-neutral-700' %>"><%= f.included ? '&#10003;' : '&#10007;' %></span>
                 <span class="<%= f.included ? 'text-neutral-700 dark:text-neutral-300' : 'text-neutral-400 dark:text-neutral-600' %>"><%= f.name %></span>
               </div>
             <% } %>

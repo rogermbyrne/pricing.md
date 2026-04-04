@@ -30,7 +30,7 @@ export function createBrowseRouter(registry: Registry): Router {
       return;
     }
 
-    const tools = registry.search({ category: category as any });
+    let tools = registry.search({ category: category as any });
 
     if (tools.length === 0) {
       res.status(404).render("error", {
@@ -40,6 +40,26 @@ export function createBrowseRouter(registry: Registry): Router {
       return;
     }
 
+    const sort = (req.query.sort as string) || "name";
+
+    if (sort === "lowest-paid") {
+      tools = [...tools].sort((a, b) => {
+        const aPrice = Math.min(...a.tiers.filter(t => t.basePrice !== null && t.basePrice > 0).map(t => t.basePrice!));
+        const bPrice = Math.min(...b.tiers.filter(t => t.basePrice !== null && t.basePrice > 0).map(t => t.basePrice!));
+        const aVal = isFinite(aPrice) ? aPrice : 999999;
+        const bVal = isFinite(bPrice) ? bPrice : 999999;
+        return aVal - bVal;
+      });
+    } else if (sort === "name") {
+      tools = [...tools].sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sort === "free-first") {
+      tools = [...tools].sort((a, b) => {
+        const aFree = a.tiers.some(t => t.pricingModel === "free" || t.basePrice === 0) ? 0 : 1;
+        const bFree = b.tiers.some(t => t.pricingModel === "free" || t.basePrice === 0) ? 0 : 1;
+        return aFree - bFree || a.name.localeCompare(b.name);
+      });
+    }
+
     const displayName = category.replace(/-/g, " ").replace(/\b\w/g, (c: string) => c.toUpperCase());
 
     res.render("category", {
@@ -47,6 +67,7 @@ export function createBrowseRouter(registry: Registry): Router {
       category: displayName,
       categorySlug: category,
       tools,
+      currentSort: sort,
     });
   });
 
