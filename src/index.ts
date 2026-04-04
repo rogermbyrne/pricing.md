@@ -9,7 +9,7 @@ const DATA_DIR = path.join(__dirname, "..", "..", "data", "tools");
 
 async function main() {
   const registry = new Registry(DATA_DIR);
-  console.error(`PricingMD: loaded ${registry.size} tools across ${registry.categories().length} categories`);
+  console.error(`Pricing.md: loaded ${registry.size} tools across ${registry.categories().length} categories`);
 
   const server = createServer(registry);
   const transport = new StdioServerTransport();

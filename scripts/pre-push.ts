@@ -221,7 +221,7 @@ function formatVariants(num: number): string[] {
 }
 
 function main() {
-  console.log("PricingMD Pre-Push Gate");
+  console.log("Pricing.md Pre-Push Gate");
   console.log("=======================\n");
 
   // Step 1: Build

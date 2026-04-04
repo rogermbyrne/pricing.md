@@ -26,7 +26,7 @@ async function fetchPricingMd(url: string): Promise<string | null> {
     const res = await fetch(url, {
       redirect: "follow",
       signal: AbortSignal.timeout(15000),
-      headers: { "User-Agent": "PricingMD-Parser/1.0" },
+      headers: { "User-Agent": "Pricing.md-Parser/1.0" },
     });
 
     if (!res.ok) return null;

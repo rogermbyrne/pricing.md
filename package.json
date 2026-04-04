@@ -1,10 +1,10 @@
 {
-  "name": "pricingmd",
+  "name": "pricing.md",
   "version": "1.0.0",
   "description": "Pricing registry for developer tools, exposed as an MCP server",
   "main": "dist/src/index.js",
   "bin": {
-    "pricingmd": "dist/src/index.js"
+    "pricing.md": "dist/src/index.js"
   },
   "files": [
     "dist/src/",

@@ -22,7 +22,7 @@ async function fetchContent(url: string): Promise<string | null> {
     const res = await fetch(url, {
       redirect: "follow",
       signal: AbortSignal.timeout(15000),
-      headers: { "User-Agent": "PricingMD-Freshness/1.0" },
+      headers: { "User-Agent": "Pricing.md-Freshness/1.0" },
     });
     if (!res.ok) return null;
     return await res.text();

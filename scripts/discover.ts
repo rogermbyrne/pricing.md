@@ -219,7 +219,7 @@ async function checkUrl(url: string): Promise<{ ok: boolean; redirectedTo?: stri
       redirect: "follow",
       signal: AbortSignal.timeout(10000),
       headers: {
-        "User-Agent": "PricingMD-Discovery/1.0",
+        "User-Agent": "Pricing.md-Discovery/1.0",
       },
     });
 
@@ -256,7 +256,7 @@ async function checkLlmsTxt(domain: string): Promise<{ url: string; pricingRef?:
   try {
     const res = await fetch(url, {
       signal: AbortSignal.timeout(10000),
-      headers: { "User-Agent": "PricingMD-Discovery/1.0" },
+      headers: { "User-Agent": "Pricing.md-Discovery/1.0" },
     });
 
     if (!res.ok) return null;
@@ -332,7 +332,7 @@ async function discoverTool(tool: ToolSeed): Promise<{
 }
 
 async function main() {
-  console.log(`PricingMD Discovery — checking ${TOOLS.length} tools across ${new Set(TOOLS.map(t => t.category)).size} categories\n`);
+  console.log(`Pricing.md Discovery — checking ${TOOLS.length} tools across ${new Set(TOOLS.map(t => t.category)).size} categories\n`);
 
   const db = initDb();
   const now = new Date().toISOString().split("T")[0]; // YYYY-MM-DD

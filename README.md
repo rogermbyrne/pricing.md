@@ -1,49 +1,31 @@
----
-tags:
-  - pricing
-  - cost-awareness
-  - developer tools
-  - MCP
-  - skill
-tools:
-  - Vercel
-  - Railway
-  - Fly.io
-  - Netlify
-  - Render
-people:
-  - rogermbyrne
-frameworks:
-  - Claude
----
-# PricingMD
+# Pricing.md
 
 Make your AI agent cost-aware when planning developer tool stacks.
 
-PricingMD surfaces pricing breakpoints, compares alternatives, flags lock-in risks, and shows where free tiers end — so developers make informed decisions about the tools they choose.
+Pricing.md surfaces pricing breakpoints, compares alternatives, flags lock-in risks, and shows where free tiers end — so developers make informed decisions about the tools they choose.
 
 ## Install as a Skill
 
-The quickest way to use PricingMD is as an agent skill. No MCP setup needed — the pricing data is embedded directly in the skill.
+The quickest way to use Pricing.md is as an agent skill. No MCP setup needed — the pricing data is embedded directly in the skill.
 
 ```bash
-npx skills add rogermbyrne/pricingmd
+npx skills add rogermbyrne/pricing.md
 ```
 
 Once installed, your agent will proactively surface pricing when you're evaluating tools, planning a stack, or comparing options.
 
 ## Install as an MCP Server
 
-For programmatic pricing queries (search, compare, estimate cost), you can also run PricingMD as an MCP server.
+For programmatic pricing queries (search, compare, estimate cost), you can also run Pricing.md as an MCP server.
 
 Add to your Claude Code MCP config:
 
 ```json
 {
   "mcpServers": {
-    "pricingmd": {
+    "pricing.md": {
       "command": "npx",
-      "args": ["-y", "pricingmd"]
+      "args": ["-y", "pricing.md"]
     }
   }
 }
@@ -106,6 +88,14 @@ npm run check-freshness
 # Re-discover which tools have pricing.md files
 npm run discover
 ```
+
+## Contributing
+
+Pricing.md is community-maintained. Anyone can add a new tool or update stale pricing by submitting a PR.
+
+**Quick version:** Add a JSON file to `data/tools/`, run `npm run validate`, open a PR with a link to the pricing page you used.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide — schema reference, category list, portability ratings, and review process.
 
 ## License
 

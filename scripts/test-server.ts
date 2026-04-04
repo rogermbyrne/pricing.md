@@ -53,7 +53,7 @@ async function main() {
   });
   console.log("Server name:", initResult.result?.serverInfo?.name);
   console.log("Tools available:", initResult.result ? "yes" : "no");
-  assert.equal(initResult.result?.serverInfo?.name, "pricingmd");
+  assert.equal(initResult.result?.serverInfo?.name, "pricing.md");
 
   // Send initialized notification
   proc.stdin!.write(JSON.stringify({ jsonrpc: "2.0", method: "notifications/initialized" }) + "\n");

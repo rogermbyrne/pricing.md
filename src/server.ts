@@ -20,7 +20,7 @@ function respond(result: unknown) {
 
 export function createServer(registry: Registry): McpServer {
   const server = new McpServer({
-    name: "pricingmd",
+    name: "pricing.md",
     version: "1.0.0",
   });
 
