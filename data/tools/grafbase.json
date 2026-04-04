@@ -1,0 +1,43 @@
+{
+  "id": "grafbase",
+  "name": "Grafbase",
+  "description": "Rust-based GraphQL federation gateway with edge caching and schema governance",
+  "url": "https://grafbase.com",
+  "pricingUrl": "https://grafbase.com/pricing",
+  "category": "database",
+  "tags": ["database", "graphql", "federation", "rust", "edge"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "GraphQL Federation",
+    "whatYouLose": "Rust gateway performance, edge caching, schema governance"
+  },
+  "tiers": [
+    {
+      "name": "Open Source",
+      "slug": "open-source",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

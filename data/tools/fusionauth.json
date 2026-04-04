@@ -1,0 +1,23 @@
+{
+  "id": "fusionauth",
+  "name": "FusionAuth",
+  "description": "Full-featured auth platform with self-hosting option and MAU-based cloud pricing",
+  "url": "https://fusionauth.io",
+  "pricingUrl": "https://fusionauth.io/pricing",
+  "category": "auth",
+  "tags": ["self-hosted", "ciam", "sso", "mfa", "oauth", "saml"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "OAuth2/OIDC/SAML",
+    "whatYouLose": "Breached password detection, FusionAuth-specific connectors, hosted infrastructure, threat detection"
+  },
+  "tiers": [
+    { "name": "Community", "slug": "community", "pricingModel": "free", "basePrice": 0, "billingPeriod": null, "annualDiscount": null, "seatPrice": null, "usageMetrics": [], "features": [], "limits": {} },
+    { "name": "Starter", "slug": "starter", "pricingModel": "tiered", "basePrice": 125, "billingPeriod": "monthly", "annualDiscount": null, "seatPrice": null, "usageMetrics": [{ "name": "MAU", "unit": "users", "pricePerUnit": 75, "unitQuantity": 10000, "includedQuantity": 10000 }], "features": [], "limits": {} },
+    { "name": "Essentials", "slug": "essentials", "pricingModel": "tiered", "basePrice": 850, "billingPeriod": "monthly", "annualDiscount": null, "seatPrice": null, "usageMetrics": [{ "name": "MAU", "unit": "users", "pricePerUnit": 850, "unitQuantity": 10000, "includedQuantity": 10000 }], "features": [], "limits": {} },
+    { "name": "Enterprise", "slug": "enterprise", "pricingModel": "custom", "basePrice": null, "billingPeriod": null, "annualDiscount": null, "seatPrice": null, "usageMetrics": [], "features": [], "limits": {} }
+  ]
+}

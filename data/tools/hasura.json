@@ -1,0 +1,71 @@
+{
+  "id": "hasura",
+  "name": "Hasura",
+  "description": "Instant GraphQL and REST APIs on your data sources with Hasura DDN edge network",
+  "url": "https://hasura.io",
+  "pricingUrl": "https://hasura.io/pricing",
+  "category": "database",
+  "tags": ["database", "graphql", "api", "postgres", "federation"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": "GraphQL, PostgreSQL",
+    "whatYouLose": "Auto-generated GraphQL API layer, Hasura DDN edge network, supergraph federation"
+  },
+  "tiers": [
+    {
+      "name": "DDN Free",
+      "slug": "ddn-free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "DDN Base",
+      "slug": "ddn-base",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "Active Models",
+          "unit": "active-model",
+          "pricePerUnit": 5,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "DDN Advanced",
+      "slug": "ddn-advanced",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "Active Models",
+          "unit": "active-model",
+          "pricePerUnit": 30,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

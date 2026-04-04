@@ -1,0 +1,43 @@
+{
+  "id": "akamai",
+  "name": "Akamai",
+  "description": "Global CDN and edge platform with security, media delivery, and edge compute services",
+  "url": "https://www.akamai.com",
+  "pricingUrl": "https://www.akamai.com/pricing",
+  "category": "edge",
+  "tags": ["edge", "cdn", "security", "edge-compute"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "architectural",
+    "openStandard": null,
+    "whatYouLose": "Edge configurations, EdgeWorkers scripts, security rulesets, DNS settings"
+  },
+  "tiers": [
+    {
+      "name": "Pay-As-You-Go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

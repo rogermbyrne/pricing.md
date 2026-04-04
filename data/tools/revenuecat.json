@@ -1,0 +1,65 @@
+{
+  "id": "revenuecat",
+  "name": "RevenueCat",
+  "description": "Mobile subscription management platform with cross-platform receipt validation and analytics",
+  "url": "https://www.revenuecat.com",
+  "pricingUrl": "https://www.revenuecat.com/pricing/",
+  "category": "payments",
+  "tags": ["payments", "subscriptions", "mobile", "in-app-purchases"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Paywall templates, A/B experiment history, cohort analytics, receipt validation"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "monthlyTrackedRevenue": 2500
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "Revenue Share",
+          "unit": "percent of MTR above $2.5K",
+          "pricePerUnit": 1,
+          "unitQuantity": 1,
+          "includedQuantity": 2500
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

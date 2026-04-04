@@ -1,0 +1,76 @@
+{
+  "id": "mailtrap",
+  "name": "Mailtrap",
+  "description": "Email testing and sending platform with sandbox environments and SMTP/API delivery",
+  "url": "https://mailtrap.io",
+  "pricingUrl": "https://mailtrap.io/pricing/",
+  "category": "email",
+  "tags": ["email", "testing", "smtp", "email-delivery"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "SMTP",
+    "whatYouLose": "Email sandbox testing environments, test email history"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "emailsPerMonth": 4000,
+        "domains": 1
+      }
+    },
+    {
+      "name": "Basic",
+      "slug": "basic",
+      "pricingModel": "flat_rate",
+      "basePrice": 15,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "emailsPerMonth": 10000
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "flat_rate",
+      "basePrice": 85,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "emailsPerMonth": 100000
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "flat_rate",
+      "basePrice": 750,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "emailsPerMonth": 1500000
+      }
+    }
+  ]
+}

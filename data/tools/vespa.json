@@ -1,0 +1,55 @@
+{
+  "id": "vespa",
+  "name": "Vespa Cloud",
+  "description": "Big data serving engine for real-time search, recommendation, and ranking at scale",
+  "url": "https://vespa.ai",
+  "pricingUrl": "https://cloud.vespa.ai/pricing",
+  "category": "search",
+  "tags": ["search", "big-data", "ranking", "recommendation"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Vespa-specific schema/ranking, managed cluster, content nodes"
+  },
+  "tiers": [
+    {
+      "name": "Free Trial",
+      "slug": "free-trial",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pay-As-You-Go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

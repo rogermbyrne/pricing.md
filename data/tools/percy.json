@@ -1,0 +1,73 @@
+{
+  "id": "percy",
+  "name": "Percy by BrowserStack",
+  "description": "Visual testing and review platform with automated screenshot comparison and approval workflows",
+  "url": "https://www.browserstack.com/percy",
+  "pricingUrl": "https://www.browserstack.com/percy/pricing",
+  "category": "testing",
+  "tags": ["testing", "visual-testing", "screenshots", "browserstack"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Visual baseline history, approval workflows, snapshot configurations"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "screenshotsPerMonth": 5000
+      }
+    },
+    {
+      "name": "Desktop",
+      "slug": "desktop",
+      "pricingModel": "flat_rate",
+      "basePrice": 199,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "screenshotsPerMonth": 10000
+      }
+    },
+    {
+      "name": "Desktop + Mobile",
+      "slug": "desktop-mobile",
+      "pricingModel": "flat_rate",
+      "basePrice": 599,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "screenshotsPerMonth": 25000
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

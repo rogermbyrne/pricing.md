@@ -1,0 +1,73 @@
+{
+  "id": "matomo",
+  "name": "Matomo",
+  "description": "Open-source Google Analytics alternative with full data ownership and privacy compliance",
+  "url": "https://matomo.org",
+  "pricingUrl": "https://matomo.org/pricing/",
+  "category": "analytics",
+  "tags": ["analytics", "web-analytics", "open-source", "privacy"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "GPL v3 open-source, self-hostable",
+    "whatYouLose": "Cloud data if not self-hosted; premium plugin access"
+  },
+  "tiers": [
+    {
+      "name": "On-Premise",
+      "slug": "on-premise",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Starter Cloud",
+      "slug": "starter-cloud",
+      "pricingModel": "flat_rate",
+      "basePrice": 26,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "hitsPerMonth": 50000
+      }
+    },
+    {
+      "name": "Business Cloud",
+      "slug": "business-cloud",
+      "pricingModel": "flat_rate",
+      "basePrice": 42,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "hitsPerMonth": 100000
+      }
+    },
+    {
+      "name": "Enterprise Cloud",
+      "slug": "enterprise-cloud",
+      "pricingModel": "flat_rate",
+      "basePrice": 399,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "hitsPerMonth": 2000000
+      }
+    }
+  ]
+}

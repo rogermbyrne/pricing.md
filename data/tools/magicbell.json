@@ -1,0 +1,22 @@
+{
+  "id": "magicbell",
+  "name": "MagicBell",
+  "description": "In-app notification inbox with multi-channel delivery and smart routing",
+  "url": "https://www.magicbell.com",
+  "pricingUrl": "https://www.magicbell.com/pricing",
+  "category": "notifications",
+  "tags": ["notifications", "in-app", "email", "push", "inbox", "multi-channel"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "MagicBell notification inbox UI, Smart Delivery routing logic, multi-channel orchestration, user preference data"
+  },
+  "tiers": [
+    { "name": "Builder", "slug": "builder", "pricingModel": "free", "basePrice": 0, "billingPeriod": null, "annualDiscount": null, "seatPrice": null, "usageMetrics": [], "features": [], "limits": { "deliveriesPerMonth": 1000, "projects": 1 } },
+    { "name": "Startup", "slug": "startup", "pricingModel": "tiered", "basePrice": 249, "billingPeriod": "monthly", "annualDiscount": null, "seatPrice": null, "usageMetrics": [{ "name": "deliveries", "unit": "deliveries", "pricePerUnit": 2.50, "unitQuantity": 1000, "includedQuantity": 50000 }], "features": [], "limits": { "projects": 5 } },
+    { "name": "Enterprise", "slug": "enterprise", "pricingModel": "custom", "basePrice": null, "billingPeriod": null, "annualDiscount": null, "seatPrice": null, "usageMetrics": [], "features": [], "limits": {} }
+  ]
+}

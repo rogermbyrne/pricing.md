@@ -1,0 +1,42 @@
+{
+  "id": "wasabi",
+  "name": "Wasabi",
+  "description": "S3-compatible hot cloud storage with no egress fees and no API request charges",
+  "url": "https://wasabi.com",
+  "pricingUrl": "https://wasabi.com/pricing",
+  "category": "storage",
+  "tags": ["storage", "s3-compatible", "cloud-storage", "no-egress"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "S3-compatible",
+    "whatYouLose": "Zero egress fees advantage; data and S3 API calls are fully portable"
+  },
+  "tiers": [
+    {
+      "name": "Pay-As-You-Go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "Storage",
+          "unit": "TB",
+          "pricePerUnit": 6.99,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "minimumStorageTB": 1,
+        "minimumRetentionDays": 90
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "configcat",
+  "name": "ConfigCat",
+  "description": "Feature flag service with unlimited seats across all plans and config delivery via CDN",
+  "url": "https://configcat.com",
+  "pricingUrl": "https://configcat.com/pricing/",
+  "category": "feature-flags",
+  "tags": ["feature-flags", "config-management", "unlimited-seats"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Targeting rules, percentage rollouts, audit log history"
+  },
+  "tiers": [
+    {
+      "name": "Forever Free",
+      "slug": "forever-free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "flags": 10,
+        "configDownloadsPerMonth": 5000000
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 110,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "flags": 100,
+        "configDownloadsPerMonth": 25000000
+      }
+    },
+    {
+      "name": "Smart",
+      "slug": "smart",
+      "pricingModel": "flat_rate",
+      "basePrice": 325,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "configDownloadsPerMonth": 250000000
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "flat_rate",
+      "basePrice": 900,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "configDownloadsPerMonth": 1000000000
+      }
+    }
+  ]
+}

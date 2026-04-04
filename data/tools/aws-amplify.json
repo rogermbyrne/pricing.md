@@ -1,0 +1,21 @@
+{
+  "id": "aws-amplify",
+  "name": "AWS Amplify Hosting",
+  "description": "AWS frontend hosting and CI/CD with SSR support and global CDN",
+  "url": "https://aws.amazon.com/amplify/",
+  "pricingUrl": "https://aws.amazon.com/amplify/pricing/",
+  "category": "hosting",
+  "tags": ["aws", "hosting", "ci-cd", "ssr", "cdn", "serverless"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "AWS-native build pipeline, automatic branch previews, integrated SSR compute"
+  },
+  "tiers": [
+    { "name": "Free Tier", "slug": "free-tier", "pricingModel": "free", "basePrice": 0, "billingPeriod": null, "annualDiscount": null, "seatPrice": null, "usageMetrics": [], "features": [], "limits": { "buildMinutesPerMonth": 1000, "storageGB": 5, "dataTransferGB": 15, "freeTierDurationMonths": 12 } },
+    { "name": "Pay-As-You-Go", "slug": "pay-as-you-go", "pricingModel": "usage_based", "basePrice": 0, "billingPeriod": "monthly", "annualDiscount": null, "seatPrice": null, "usageMetrics": [{ "name": "build-minutes", "unit": "minutes", "pricePerUnit": 0.01, "unitQuantity": 1, "includedQuantity": 0 }, { "name": "storage", "unit": "GB", "pricePerUnit": 0.023, "unitQuantity": 1, "includedQuantity": 0 }, { "name": "data-transfer", "unit": "GB", "pricePerUnit": 0.15, "unitQuantity": 1, "includedQuantity": 0 }], "features": [], "limits": {} }
+  ]
+}

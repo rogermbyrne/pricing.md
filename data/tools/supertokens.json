@@ -1,0 +1,22 @@
+{
+  "id": "supertokens",
+  "name": "SuperTokens",
+  "description": "Open-source auth with managed hosting and per-MAU add-on pricing",
+  "url": "https://supertokens.com",
+  "pricingUrl": "https://supertokens.com/pricing",
+  "category": "auth",
+  "tags": ["open-source", "self-hosted", "cloud", "mfa", "social-login", "session-management"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "OAuth2/OIDC",
+    "whatYouLose": "Managed SuperTokens core, pre-built UI components, integrated MFA/account linking add-ons"
+  },
+  "tiers": [
+    { "name": "Self-Hosted", "slug": "self-hosted", "pricingModel": "free", "basePrice": 0, "billingPeriod": null, "annualDiscount": null, "seatPrice": null, "usageMetrics": [], "features": [], "limits": {} },
+    { "name": "Cloud Free", "slug": "cloud-free", "pricingModel": "free", "basePrice": 0, "billingPeriod": null, "annualDiscount": null, "seatPrice": null, "usageMetrics": [], "features": [], "limits": { "mau": 5000 } },
+    { "name": "Cloud Pay-as-You-Go", "slug": "cloud-payg", "pricingModel": "usage_based", "basePrice": 100, "billingPeriod": "monthly", "annualDiscount": null, "seatPrice": null, "usageMetrics": [{ "name": "MAU", "unit": "users", "pricePerUnit": 20, "unitQuantity": 1000, "includedQuantity": 5000 }], "features": [], "limits": {} }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "mabl",
+  "name": "Mabl",
+  "description": "AI-native test automation platform with auto-healing tests and low-code test creation",
+  "url": "https://www.mabl.com",
+  "pricingUrl": "https://www.mabl.com/pricing",
+  "category": "testing",
+  "tags": ["testing", "test-automation", "ai", "auto-healing"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "AI auto-healing test logic, proprietary test recorder scripts, historical run data"
+  },
+  "tiers": [
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "custom",
+      "basePrice": 499,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "cloudCredits": 500
+      }
+    },
+    {
+      "name": "Professional",
+      "slug": "professional",
+      "pricingModel": "custom",
+      "basePrice": 1199,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

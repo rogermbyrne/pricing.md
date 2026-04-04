@@ -1,0 +1,63 @@
+{
+  "id": "kissmetrics",
+  "name": "Kissmetrics",
+  "description": "Behavioral analytics platform with funnel analysis, cohort tracking, and attribution modeling",
+  "url": "https://www.kissmetrics.io",
+  "pricingUrl": "https://www.kissmetrics.io/pricing/",
+  "category": "analytics",
+  "tags": ["analytics", "behavioral-analytics", "funnels", "attribution"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Historical behavioral event data, funnel configurations, cohort analysis, attribution models"
+  },
+  "tiers": [
+    {
+      "name": "Core",
+      "slug": "core",
+      "pricingModel": "flat_rate",
+      "basePrice": 99,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "eventsPerMonth": 500000
+      }
+    },
+    {
+      "name": "Silver",
+      "slug": "silver",
+      "pricingModel": "flat_rate",
+      "basePrice": 199,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "eventsPerMonth": 2000000,
+        "seats": 3
+      }
+    },
+    {
+      "name": "Gold",
+      "slug": "gold",
+      "pricingModel": "flat_rate",
+      "basePrice": 499,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "eventsPerMonth": 5000000,
+        "seats": 10
+      }
+    }
+  ]
+}

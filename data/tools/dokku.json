@@ -1,0 +1,31 @@
+{
+  "id": "dokku",
+  "name": "Dokku",
+  "description": "Open-source self-hosted PaaS built on Docker for deploying applications with Heroku-like workflow",
+  "url": "https://dokku.com",
+  "pricingUrl": "https://dokku.com",
+  "category": "hosting",
+  "tags": ["hosting", "open-source", "paas", "docker", "self-hosted"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "Docker",
+    "whatYouLose": "Dokku CLI and plugin configs; containers are standard Docker"
+  },
+  "tiers": [
+    {
+      "name": "Open Source",
+      "slug": "open-source",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

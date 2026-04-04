@@ -1,0 +1,54 @@
+{
+  "id": "polar",
+  "name": "Polar",
+  "description": "Merchant of Record platform for developer monetization with automated tax handling and benefit delivery",
+  "url": "https://polar.sh",
+  "pricingUrl": "https://polar.sh/pricing",
+  "category": "payments",
+  "tags": ["payments", "merchant-of-record", "developer-monetization"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "MoR tax handling, automated benefit delivery, storefront pages"
+  },
+  "tiers": [
+    {
+      "name": "Standard",
+      "slug": "standard",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "Transaction Fee",
+          "unit": "transaction",
+          "pricePerUnit": 0.40,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "transactionFeePercent": 4,
+        "transactionFeeFixedCents": 40
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

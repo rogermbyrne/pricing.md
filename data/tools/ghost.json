@@ -1,0 +1,79 @@
+{
+  "id": "ghost",
+  "name": "Ghost",
+  "description": "Open-source publishing platform for blogs, newsletters, and memberships",
+  "url": "https://ghost.org",
+  "pricingUrl": "https://ghost.org/pricing/",
+  "category": "cms",
+  "tags": ["open-source", "newsletter", "membership", "blog", "publishing"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "MIT License, self-hostable",
+    "whatYouLose": "Managed hosting, automatic updates, CDN, email delivery infrastructure"
+  },
+  "tiers": [
+    {
+      "name": "Self-Hosted",
+      "slug": "self-hosted",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "flat_rate",
+      "basePrice": 18,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "members": 1000, "staffUsers": 1 }
+    },
+    {
+      "name": "Publisher",
+      "slug": "publisher",
+      "pricingModel": "flat_rate",
+      "basePrice": 29,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "members": 1000, "staffUsers": 3, "newsletters": 3 }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "flat_rate",
+      "basePrice": 199,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "members": 10000, "staffUsers": 15 }
+    },
+    {
+      "name": "Custom",
+      "slug": "custom",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

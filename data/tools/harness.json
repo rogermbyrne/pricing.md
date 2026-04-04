@@ -1,0 +1,22 @@
+{
+  "id": "harness",
+  "name": "Harness",
+  "description": "AI-native software delivery platform with modular CI/CD, feature flags, and cloud cost management",
+  "url": "https://harness.io",
+  "pricingUrl": "https://www.harness.io/pricing",
+  "category": "ci-cd",
+  "tags": ["ci-cd", "devops", "gitops", "feature-flags", "cloud-cost", "ai"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Harness pipeline definitions, AIDA AI assistant, integrated module ecosystem, GitOps config"
+  },
+  "tiers": [
+    { "name": "Free", "slug": "free", "pricingModel": "free", "basePrice": 0, "billingPeriod": null, "annualDiscount": null, "seatPrice": null, "usageMetrics": [], "features": [], "limits": { "cloudCreditsPerMonth": 2000 } },
+    { "name": "Startup", "slug": "startup", "pricingModel": "per_seat", "basePrice": 0, "billingPeriod": "monthly", "annualDiscount": null, "seatPrice": 57, "usageMetrics": [], "features": [], "limits": { "maxUsers": 500 } },
+    { "name": "Enterprise", "slug": "enterprise", "pricingModel": "custom", "basePrice": null, "billingPeriod": null, "annualDiscount": null, "seatPrice": null, "usageMetrics": [], "features": [], "limits": {} }
+  ]
+}

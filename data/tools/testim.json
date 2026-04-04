@@ -1,0 +1,55 @@
+{
+  "id": "testim",
+  "name": "Testim by Tricentis",
+  "description": "AI-powered test automation platform with smart locators and codeless test creation",
+  "url": "https://www.testim.io",
+  "pricingUrl": "https://www.testim.io/pricing/",
+  "category": "testing",
+  "tags": ["testing", "test-automation", "ai", "codeless"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "AI-trained smart locators, test execution history, Testim-specific configs"
+  },
+  "tiers": [
+    {
+      "name": "Community",
+      "slug": "community",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Essentials",
+      "slug": "essentials",
+      "pricingModel": "custom",
+      "basePrice": 450,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

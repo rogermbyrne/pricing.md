@@ -1,0 +1,22 @@
+{
+  "id": "travis-ci",
+  "name": "Travis CI",
+  "description": "Continuous integration service with credit-based and unlimited build plans",
+  "url": "https://www.travis-ci.com",
+  "pricingUrl": "https://www.travis-ci.com/pricing/",
+  "category": "ci-cd",
+  "tags": ["ci-cd", "continuous-integration", "testing", "builds"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": ".travis.yml pipeline configs, build history, Travis AI support"
+  },
+  "tiers": [
+    { "name": "Trial", "slug": "trial", "pricingModel": "free", "basePrice": 0, "billingPeriod": null, "annualDiscount": null, "seatPrice": null, "usageMetrics": [], "features": [], "limits": { "buildCredits": 10000 } },
+    { "name": "Usage Based", "slug": "usage-based", "pricingModel": "usage_based", "basePrice": 15, "billingPeriod": "monthly", "annualDiscount": 8, "seatPrice": null, "usageMetrics": [], "features": [], "limits": { "buildCreditsPerMonth": 35000, "concurrentJobs": 80 } },
+    { "name": "Unlimited", "slug": "unlimited", "pricingModel": "flat_rate", "basePrice": 78, "billingPeriod": "monthly", "annualDiscount": 8, "seatPrice": null, "usageMetrics": [], "features": [], "limits": {} }
+  ]
+}

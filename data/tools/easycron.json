@@ -1,0 +1,61 @@
+{
+  "id": "easycron",
+  "name": "EasyCron",
+  "description": "Online cron job scheduling service with execution logs and failure notifications",
+  "url": "https://www.easycron.com",
+  "pricingUrl": "https://www.easycron.com/pricing",
+  "category": "scheduling",
+  "tags": ["scheduling", "cron", "automation"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "cron expression syntax",
+    "whatYouLose": "Execution logs, failure notifications; cron expressions are portable"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "executionsPerDay": 200
+      }
+    },
+    {
+      "name": "Individual-1",
+      "slug": "individual-1",
+      "pricingModel": "flat_rate",
+      "basePrice": 24,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "executionsPerDay": 8000
+      }
+    },
+    {
+      "name": "Enterprise-1",
+      "slug": "enterprise-1",
+      "pricingModel": "flat_rate",
+      "basePrice": 120,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "executionsPerDay": 10000
+      }
+    }
+  ]
+}

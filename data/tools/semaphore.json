@@ -1,0 +1,21 @@
+{
+  "id": "semaphore",
+  "name": "Semaphore CI",
+  "description": "Fast CI/CD pipeline platform with usage-based compute pricing",
+  "url": "https://semaphore.io",
+  "pricingUrl": "https://semaphore.io/pricing",
+  "category": "ci-cd",
+  "tags": ["ci-cd", "pipelines", "docker", "testing", "automation"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Semaphore YAML pipeline configs, built-in caching layer, artifact storage"
+  },
+  "tiers": [
+    { "name": "Free", "slug": "free", "pricingModel": "free", "basePrice": 0, "billingPeriod": null, "annualDiscount": null, "seatPrice": null, "usageMetrics": [], "features": [], "limits": { "freeCreditsPerMonth": 15, "concurrentJobs": 20 } },
+    { "name": "Usage-Based", "slug": "usage-based", "pricingModel": "usage_based", "basePrice": 0, "billingPeriod": "monthly", "annualDiscount": null, "seatPrice": null, "usageMetrics": [{ "name": "linux-x64-2vcpu", "unit": "minutes", "pricePerUnit": 0.0075, "unitQuantity": 1, "includedQuantity": 0 }, { "name": "linux-arm-2vcpu", "unit": "minutes", "pricePerUnit": 0.003, "unitQuantity": 1, "includedQuantity": 0 }], "features": [], "limits": { "concurrentJobs": 20 } }
+  ]
+}

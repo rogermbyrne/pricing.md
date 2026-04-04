@@ -1,0 +1,67 @@
+{
+  "id": "cloudamqp",
+  "name": "CloudAMQP",
+  "description": "Managed RabbitMQ hosting with monitoring, alarms, and plugin support",
+  "url": "https://www.cloudamqp.com",
+  "pricingUrl": "https://www.cloudamqp.com/plans.html",
+  "category": "queues",
+  "tags": ["queues", "rabbitmq", "amqp", "message-broker"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "AMQP protocol",
+    "whatYouLose": "Managed RabbitMQ config, plugins, alarms; AMQP clients portable"
+  },
+  "tiers": [
+    {
+      "name": "Little Lemur",
+      "slug": "little-lemur",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Tough Tiger",
+      "slug": "tough-tiger",
+      "pricingModel": "flat_rate",
+      "basePrice": 19,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Roaring Rabbit",
+      "slug": "roaring-rabbit",
+      "pricingModel": "flat_rate",
+      "basePrice": 99,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Power Panda",
+      "slug": "power-panda",
+      "pricingModel": "flat_rate",
+      "basePrice": 499,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "storj",
+  "name": "Storj",
+  "description": "Decentralized S3-compatible cloud storage with distributed redundancy and competitive pricing",
+  "url": "https://www.storj.io",
+  "pricingUrl": "https://www.storj.io/pricing",
+  "category": "storage",
+  "tags": ["storage", "s3-compatible", "decentralized", "cloud-storage"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "S3-compatible",
+    "whatYouLose": "Decentralized redundancy advantage; S3 API fully portable"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "storageGB": 25,
+        "bandwidthGB": 25
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "Storage",
+          "unit": "TB",
+          "pricePerUnit": 4,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Bandwidth",
+          "unit": "TB",
+          "pricePerUnit": 7,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

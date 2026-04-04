@@ -1,0 +1,80 @@
+{
+  "id": "square",
+  "name": "Square Developer",
+  "description": "Payment processing APIs with POS integration for in-person and online transactions",
+  "url": "https://squareup.com/us/en/developers",
+  "pricingUrl": "https://squareup.com/us/en/pricing",
+  "category": "payments",
+  "tags": ["payments", "pos", "payment-processing", "commerce"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Square POS ecosystem, stored cards, transaction history"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "inPersonFeePercent": 2.6,
+        "inPersonFeeFixedCents": 15,
+        "onlineFeePercent": 3.3,
+        "onlineFeeFixedCents": 30
+      }
+    },
+    {
+      "name": "Plus",
+      "slug": "plus",
+      "pricingModel": "hybrid",
+      "basePrice": 49,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "inPersonFeePercent": 2.5,
+        "inPersonFeeFixedCents": 15
+      }
+    },
+    {
+      "name": "Premium",
+      "slug": "premium",
+      "pricingModel": "hybrid",
+      "basePrice": 149,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "inPersonFeePercent": 2.4,
+        "inPersonFeeFixedCents": 15
+      }
+    },
+    {
+      "name": "Custom",
+      "slug": "custom",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "minimumAnnualVolume": 250000
+      }
+    }
+  ]
+}

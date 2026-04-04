@@ -1,0 +1,73 @@
+{
+  "id": "sparkpost",
+  "name": "SparkPost (Bird)",
+  "description": "High-volume email delivery platform with predictive analytics and IP reputation management",
+  "url": "https://www.sparkpost.com",
+  "pricingUrl": "https://www.sparkpost.com/pricing/",
+  "category": "email",
+  "tags": ["email", "email-delivery", "smtp", "transactional-email"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "SMTP",
+    "whatYouLose": "Signals predictive analytics, IP reputation history, dedicated IP warmup"
+  },
+  "tiers": [
+    {
+      "name": "Test",
+      "slug": "test",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "emailsPerMonth": 500
+      }
+    },
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "flat_rate",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "emailsPerMonth": 50000
+      }
+    },
+    {
+      "name": "Premier",
+      "slug": "premier",
+      "pricingModel": "flat_rate",
+      "basePrice": 75,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "emailsPerMonth": 100000
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

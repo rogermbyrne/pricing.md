@@ -1,0 +1,39 @@
+{
+  "id": "keycdn",
+  "name": "KeyCDN",
+  "description": "Pay-as-you-go CDN with pull zones, custom SSL, and HTTP/2 support",
+  "url": "https://www.keycdn.com",
+  "pricingUrl": "https://www.keycdn.com/pricing",
+  "category": "edge",
+  "tags": ["edge", "cdn", "pay-as-you-go"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "Pull zone configurations, custom SSL; standard CDN setup"
+  },
+  "tiers": [
+    {
+      "name": "Pay-As-You-Go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "Bandwidth",
+          "unit": "GB",
+          "pricePerUnit": 0.04,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

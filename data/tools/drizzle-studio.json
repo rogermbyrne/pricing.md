@@ -1,0 +1,31 @@
+{
+  "id": "drizzle-studio",
+  "name": "Drizzle Studio",
+  "description": "Fully open-source database management studio for Drizzle ORM with visual schema explorer",
+  "url": "https://orm.drizzle.team/drizzle-studio/overview",
+  "pricingUrl": "https://orm.drizzle.team",
+  "category": "database",
+  "tags": ["database", "open-source", "orm", "studio"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "SQL",
+    "whatYouLose": "Nothing — fully open-source"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

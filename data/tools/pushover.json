@@ -1,0 +1,43 @@
+{
+  "id": "pushover",
+  "name": "Pushover",
+  "description": "Simple push notification service with one-time purchase per platform and REST API",
+  "url": "https://pushover.net",
+  "pricingUrl": "https://pushover.net/pricing",
+  "category": "notifications",
+  "tags": ["notifications", "push", "simple"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "Pushover-specific API integrations; simple REST API makes switching easy"
+  },
+  "tiers": [
+    {
+      "name": "Teams",
+      "slug": "teams",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 5,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Individual",
+      "slug": "individual",
+      "pricingModel": "flat_rate",
+      "basePrice": 4.99,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

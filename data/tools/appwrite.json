@@ -1,0 +1,58 @@
+{
+  "id": "appwrite",
+  "name": "Appwrite",
+  "description": "Open-source backend-as-a-service platform with auth, databases, storage, and serverless functions",
+  "url": "https://appwrite.io",
+  "pricingUrl": "https://appwrite.io/pricing",
+  "category": "database",
+  "tags": ["database", "baas", "open-source", "auth", "serverless"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "REST API, GraphQL",
+    "whatYouLose": "Appwrite SDK integrations, built-in auth flows, realtime subscriptions"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "monthlyActiveUsers": 75000,
+        "projects": 2
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "hybrid",
+      "basePrice": 25,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

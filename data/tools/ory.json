@@ -1,0 +1,22 @@
+{
+  "id": "ory",
+  "name": "Ory",
+  "description": "Open-source identity and auth infrastructure with aDAU-based pricing",
+  "url": "https://www.ory.com",
+  "pricingUrl": "https://www.ory.com/pricing",
+  "category": "auth",
+  "tags": ["open-source", "identity", "oauth", "oidc", "self-hosted", "cloud"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "OAuth2/OIDC",
+    "whatYouLose": "Managed infrastructure, Ory Permissions (Keto), integrated workspace management"
+  },
+  "tiers": [
+    { "name": "Developer", "slug": "developer", "pricingModel": "free", "basePrice": 0, "billingPeriod": null, "annualDiscount": null, "seatPrice": null, "usageMetrics": [], "features": [], "limits": {} },
+    { "name": "Production", "slug": "production", "pricingModel": "hybrid", "basePrice": 70, "billingPeriod": "monthly", "annualDiscount": null, "seatPrice": null, "usageMetrics": [{ "name": "aDAU", "unit": "users", "pricePerUnit": 0.12, "unitQuantity": 1, "includedQuantity": 0 }], "features": [], "limits": { "consoleUsers": 5 } },
+    { "name": "Enterprise", "slug": "enterprise", "pricingModel": "custom", "basePrice": null, "billingPeriod": null, "annualDiscount": null, "seatPrice": null, "usageMetrics": [], "features": [], "limits": {} }
+  ]
+}

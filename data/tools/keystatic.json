@@ -1,0 +1,57 @@
+{
+  "id": "keystatic",
+  "name": "Keystatic",
+  "description": "Git-based CMS for structured content with Markdown, MDX, and JSON stored directly in your repository",
+  "url": "https://keystatic.com",
+  "pricingUrl": "https://keystatic.com/pricing",
+  "category": "cms",
+  "tags": ["cms", "git-based", "markdown", "mdx"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "Markdown/MDX/JSON in Git",
+    "whatYouLose": "Cloud collaboration features only; all content in Git repo"
+  },
+  "tiers": [
+    {
+      "name": "Free Local",
+      "slug": "free-local",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Cloud Free",
+      "slug": "cloud-free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "usersPerTeam": 3
+      }
+    },
+    {
+      "name": "Cloud Pro",
+      "slug": "cloud-pro",
+      "pricingModel": "hybrid",
+      "basePrice": 10,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 5,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

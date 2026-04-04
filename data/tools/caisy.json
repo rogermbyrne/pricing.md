@@ -1,0 +1,55 @@
+{
+  "id": "caisy",
+  "name": "Caisy",
+  "description": "High-performance headless CMS with GraphQL API and multi-tenancy support",
+  "url": "https://caisy.io",
+  "pricingUrl": "https://caisy.io/pricing",
+  "category": "cms",
+  "tags": ["headless-cms", "graphql", "high-performance", "multi-tenancy"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Blueprint-based content modeling, GraphQL API, CDN delivery, content workflows"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "users": 3, "entries": 5000, "trafficGb": 100, "apiCallsPerMonth": 1000000 }
+    },
+    {
+      "name": "Growth",
+      "slug": "growth",
+      "pricingModel": "hybrid",
+      "basePrice": 49,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 10,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "users": 12, "entries": 20000, "trafficGb": 500, "apiCallsPerMonth": 10000000 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": 1499,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

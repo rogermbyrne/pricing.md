@@ -1,0 +1,69 @@
+{
+  "id": "pendo",
+  "name": "Pendo",
+  "description": "Product analytics and in-app guidance platform with session replay and user onboarding",
+  "url": "https://www.pendo.io",
+  "pricingUrl": "https://www.pendo.io/pricing/",
+  "category": "analytics",
+  "tags": ["analytics", "product-analytics", "in-app-guidance", "session-replay"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Historical product analytics, in-app guide configs, session replay archives"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "monthlyActiveUsers": 500
+      }
+    },
+    {
+      "name": "Base",
+      "slug": "base",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Core",
+      "slug": "core",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Ultimate",
+      "slug": "ultimate",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

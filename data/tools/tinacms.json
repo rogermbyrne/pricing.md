@@ -1,0 +1,79 @@
+{
+  "id": "tinacms",
+  "name": "TinaCMS",
+  "description": "Git-backed headless CMS with visual editing and live preview",
+  "url": "https://tina.io",
+  "pricingUrl": "https://tina.io/pricing/",
+  "category": "cms",
+  "tags": ["headless-cms", "git-backed", "visual-editing", "markdown", "jamstack", "open-source"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "Git (content stored in repo as Markdown/JSON)",
+    "whatYouLose": "Visual editing UI, Tina Cloud sync, editorial workflow, AI features"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "users": 2 }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "per_seat",
+      "basePrice": 29,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": 9,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "usersMax": 10 }
+    },
+    {
+      "name": "Team Plus",
+      "slug": "team-plus",
+      "pricingModel": "per_seat",
+      "basePrice": 49,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": 15,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "usersMax": 20 }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "per_seat",
+      "basePrice": 299,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": 18,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

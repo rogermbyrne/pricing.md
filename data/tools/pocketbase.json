@@ -1,0 +1,31 @@
+{
+  "id": "pocketbase",
+  "name": "PocketBase",
+  "description": "Open-source backend in a single Go binary with SQLite, auth, and realtime subscriptions",
+  "url": "https://pocketbase.io",
+  "pricingUrl": "https://pocketbase.io",
+  "category": "database",
+  "tags": ["database", "baas", "open-source", "sqlite", "go"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "SQLite, REST API",
+    "whatYouLose": "Built-in admin dashboard, realtime subscriptions — all recoverable"
+  },
+  "tiers": [
+    {
+      "name": "Open Source",
+      "slug": "open-source",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

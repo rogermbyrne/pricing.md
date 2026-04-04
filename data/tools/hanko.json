@@ -1,0 +1,22 @@
+{
+  "id": "hanko",
+  "name": "Hanko",
+  "description": "Passkey-first authentication with generous free tier",
+  "url": "https://hanko.io",
+  "pricingUrl": "https://hanko.io/pricing",
+  "category": "auth",
+  "tags": ["passkeys", "passwordless", "webauthn", "fido2", "open-source"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "WebAuthn/FIDO2",
+    "whatYouLose": "Managed passkey infrastructure, pre-built UI components, SAML SSO connections"
+  },
+  "tiers": [
+    { "name": "Starter", "slug": "starter", "pricingModel": "free", "basePrice": 0, "billingPeriod": null, "annualDiscount": null, "seatPrice": null, "usageMetrics": [], "features": [], "limits": { "mau": 10000, "projects": 2 } },
+    { "name": "Pro", "slug": "pro", "pricingModel": "hybrid", "basePrice": 29, "billingPeriod": "monthly", "annualDiscount": null, "seatPrice": null, "usageMetrics": [{ "name": "MAU", "unit": "users", "pricePerUnit": 10, "unitQuantity": 1000, "includedQuantity": 10000 }], "features": [], "limits": { "projects": 5 } },
+    { "name": "Enterprise", "slug": "enterprise", "pricingModel": "custom", "basePrice": null, "billingPeriod": null, "annualDiscount": null, "seatPrice": null, "usageMetrics": [], "features": [], "limits": {} }
+  ]
+}
