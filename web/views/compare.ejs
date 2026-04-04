@@ -179,33 +179,29 @@ function hasFree(tool) {
 </div>
 
 <script>
-  var currentTools = <%= JSON.stringify(toolIds) %>;
-
-  document.addEventListener('DOMContentLoaded', function() {
+  (function() {
+    var currentTools = <%= JSON.stringify(toolIds) %>;
     var sel = document.getElementById('toolSelect');
-    if (sel) {
-      sel.addEventListener('change', function() {
-        var id = this.value;
-        if (!id || currentTools.length >= 5) return;
-        if (currentTools.indexOf(id) === -1) {
-          currentTools.push(id);
-          window.location.href = '/compare?tools=' + currentTools.join(',');
-        }
-      });
-    }
-  });
 
-  function removeTool(id) {
-    var idx = currentTools.indexOf(id);
-    if (idx > -1) {
-      currentTools.splice(idx, 1);
-      if (currentTools.length === 0) {
-        window.location.href = '/compare';
-      } else {
-        window.location.href = '/compare?tools=' + currentTools.join(',');
-      }
+    if (sel) {
+      sel.onchange = function() {
+        var id = sel.value;
+        if (!id) return;
+        if (currentTools.length >= 5) { alert('Max 5 tools'); return; }
+        if (currentTools.indexOf(id) !== -1) return;
+        currentTools.push(id);
+        window.location = '/compare?tools=' + currentTools.join(',');
+      };
     }
-  }
+
+    window.removeTool = function(id) {
+      var idx = currentTools.indexOf(id);
+      if (idx > -1) {
+        currentTools.splice(idx, 1);
+        window.location = currentTools.length === 0 ? '/compare' : '/compare?tools=' + currentTools.join(',');
+      }
+    };
+  })();
 </script>
 
 <%- include('partials/footer') %>
