@@ -1,0 +1,71 @@
+{
+  "id": "propelauth",
+  "name": "PropelAuth",
+  "description": "B2B authentication with built-in organization management, RBAC, SAML SSO, and customizable UIs",
+  "url": "https://www.propelauth.com",
+  "pricingUrl": "https://www.propelauth.com/pricing",
+  "category": "auth",
+  "tags": ["authentication", "b2b", "sso", "saml", "rbac", "organizations"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": "OAuth 2.0 / OIDC",
+    "whatYouLose": "Pre-built UIs, organization management, SAML connections, user impersonation, SCIM sync"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "monthlyActiveUsers": 10000 }
+    },
+    {
+      "name": "Growth",
+      "slug": "growth",
+      "pricingModel": "hybrid",
+      "basePrice": 150,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "additional-mau", "unit": "MAU", "pricePerUnit": 0.05, "unitQuantity": 1, "includedQuantity": 10000 }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Growth Plus",
+      "slug": "growth-plus",
+      "pricingModel": "hybrid",
+      "basePrice": 500,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "additional-mau", "unit": "MAU", "pricePerUnit": 0.05, "unitQuantity": 1, "includedQuantity": 10000 }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

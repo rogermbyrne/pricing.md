@@ -40,7 +40,7 @@
       "seatPrice": null,
       "usageMetrics": [
         { "name": "compute", "unit": "vCPU-hours", "pricePerUnit": 0.09, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "storage", "unit": "GiB", "pricePerUnit": 0.50, "unitQuantity": 1, "includedQuantity": 0 }
+        { "name": "storage", "unit": "GiB", "pricePerUnit": 0.50, "unitQuantity": 1, "includedQuantity": 10 }
       ],
       "features": [],
       "limits": {}

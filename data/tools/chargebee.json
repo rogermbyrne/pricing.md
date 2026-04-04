@@ -1,0 +1,55 @@
+{
+  "id": "chargebee",
+  "name": "Chargebee",
+  "description": "Subscription billing and revenue management platform with dunning, invoicing, and revenue recognition",
+  "url": "https://www.chargebee.com",
+  "pricingUrl": "https://www.chargebee.com/pricing/",
+  "category": "payments",
+  "tags": ["subscription-billing", "recurring-payments", "dunning", "invoicing", "revenue-recognition"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "architectural",
+    "openStandard": null,
+    "whatYouLose": "Subscription lifecycle management, dunning workflows, consolidated invoicing, revenue recognition setup"
+  },
+  "tiers": [
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "lifetimeBillingFreeUSD": 250000 }
+    },
+    {
+      "name": "Performance",
+      "slug": "performance",
+      "pricingModel": "flat_rate",
+      "basePrice": 599,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

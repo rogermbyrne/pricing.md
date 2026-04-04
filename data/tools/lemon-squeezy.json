@@ -1,0 +1,33 @@
+{
+  "id": "lemon-squeezy",
+  "name": "Lemon Squeezy",
+  "description": "Merchant of record for digital products handling payments, global tax compliance, fraud protection, and affiliate programs",
+  "url": "https://www.lemonsqueezy.com",
+  "pricingUrl": "https://www.lemonsqueezy.com/pricing",
+  "category": "payments",
+  "tags": ["merchant-of-record", "digital-products", "subscriptions", "tax-compliance"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Merchant of record tax/VAT handling, built-in affiliate program, abandoned cart recovery, customer billing portal"
+  },
+  "tiers": [
+    {
+      "name": "Pay As You Go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "transaction-fee", "unit": "percentage", "pricePerUnit": 5, "unitQuantity": 1, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "stytch",
+  "name": "Stytch",
+  "description": "Authentication and identity platform with passwordless and B2B auth",
+  "url": "https://stytch.com",
+  "pricingUrl": "https://stytch.com/pricing",
+  "category": "auth",
+  "tags": ["authentication", "passwordless", "sso", "mfa", "b2b", "identity"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": "OAuth 2.0 / OIDC",
+    "whatYouLose": "Device fingerprinting, pre-built UI components, session management, organization-level auth policies"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "mau": 10000, "ssoConnections": 5 }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "hybrid",
+      "basePrice": 249,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "additional-mau", "unit": "MAU", "pricePerUnit": 0.10, "unitQuantity": 1, "includedQuantity": 10000 }
+      ],
+      "features": [],
+      "limits": { "ssoConnections": 3 }
+    },
+    {
+      "name": "Scale",
+      "slug": "scale",
+      "pricingModel": "hybrid",
+      "basePrice": 799,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "additional-mau", "unit": "MAU", "pricePerUnit": 0.10, "unitQuantity": 1, "includedQuantity": 10000 }
+      ],
+      "features": [],
+      "limits": { "ssoConnections": 8 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

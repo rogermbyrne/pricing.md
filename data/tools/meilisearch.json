@@ -1,0 +1,73 @@
+{
+  "id": "meilisearch",
+  "name": "Meilisearch",
+  "description": "Open-source, typo-tolerant search engine with managed cloud plans",
+  "url": "https://www.meilisearch.com",
+  "pricingUrl": "https://www.meilisearch.com/pricing",
+  "category": "search",
+  "tags": ["search", "open-source", "typo-tolerance", "instant-search", "full-text"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Meilisearch-specific API and relevancy tuning; managed cloud infrastructure; data exportable"
+  },
+  "tiers": [
+    {
+      "name": "Open Source (Self-Hosted)",
+      "slug": "self-hosted",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Cloud Build",
+      "slug": "cloud-build",
+      "pricingModel": "usage_based",
+      "basePrice": 30,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "searches", "unit": "searches", "pricePerUnit": 0.40, "unitQuantity": 1000, "includedQuantity": 50000 },
+        { "name": "documents", "unit": "documents", "pricePerUnit": 0.30, "unitQuantity": 1000, "includedQuantity": 100000 }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Cloud Pro",
+      "slug": "cloud-pro",
+      "pricingModel": "usage_based",
+      "basePrice": 300,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "searches", "unit": "searches", "pricePerUnit": 0.30, "unitQuantity": 1000, "includedQuantity": 250000 },
+        { "name": "documents", "unit": "documents", "pricePerUnit": 0.20, "unitQuantity": 1000, "includedQuantity": 1000000 }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

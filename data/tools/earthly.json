@@ -1,0 +1,43 @@
+{
+  "id": "earthly",
+  "name": "Earthly",
+  "description": "Open-source build framework with containerized, repeatable builds and optional cloud Satellites for remote execution",
+  "url": "https://earthly.dev",
+  "pricingUrl": "https://earthly.dev/pricing",
+  "category": "ci-cd",
+  "tags": ["ci-cd", "build-tool", "containers", "open-source", "remote-builds"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Earthfile build configs need rewriting; lose Satellites remote caching; core CLI is open source"
+  },
+  "tiers": [
+    {
+      "name": "Free (Open Source)",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "buildMinutesPerMonth": 6000 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

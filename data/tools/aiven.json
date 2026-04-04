@@ -1,0 +1,79 @@
+{
+  "id": "aiven",
+  "name": "Aiven",
+  "description": "Managed open source data infrastructure (PostgreSQL, MySQL, Redis, Kafka, etc.)",
+  "url": "https://aiven.io",
+  "pricingUrl": "https://aiven.io/pricing",
+  "category": "database",
+  "tags": ["managed-database", "postgresql", "mysql", "kafka", "redis", "multi-cloud"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "PostgreSQL/MySQL/Kafka",
+    "whatYouLose": "Managed backups, monitoring, HA configuration, VPC peering setup, cross-service integrations"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "storageMB": 1024, "nodes": 1, "ramGB": 1 }
+    },
+    {
+      "name": "Developer",
+      "slug": "developer",
+      "pricingModel": "flat_rate",
+      "basePrice": 5,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "storageMB": 8192, "nodes": 1, "ramGB": 1 }
+    },
+    {
+      "name": "Startup",
+      "slug": "startup",
+      "pricingModel": "flat_rate",
+      "basePrice": 75,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "storageMB": 51200, "nodes": 1, "ramGB": 4, "backupRetentionDays": 2 }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "flat_rate",
+      "basePrice": 200,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "nodes": 2, "backupRetentionDays": 14 }
+    },
+    {
+      "name": "Premium",
+      "slug": "premium",
+      "pricingModel": "flat_rate",
+      "basePrice": 300,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "nodes": 3, "backupRetentionDays": 30 }
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "kinde",
+  "name": "Kinde",
+  "description": "Authentication and user management for modern apps with built-in feature flags",
+  "url": "https://kinde.com",
+  "pricingUrl": "https://kinde.com/pricing",
+  "category": "auth",
+  "tags": ["authentication", "user-management", "sso", "mfa", "feature-flags", "rbac"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": "OAuth 2.0 / OIDC",
+    "whatYouLose": "Built-in feature flags, workflows, custom properties, Kinde-specific SDKs and admin portal"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "mau": 10500, "roles": 2, "permissions": 10, "featureFlags": 10 }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "hybrid",
+      "basePrice": 25,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "additional-mau", "unit": "MAU", "pricePerUnit": 0.0175, "unitQuantity": 1, "includedQuantity": 10500 }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Plus",
+      "slug": "plus",
+      "pricingModel": "hybrid",
+      "basePrice": 75,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "additional-mau", "unit": "MAU", "pricePerUnit": 0.0163, "unitQuantity": 1, "includedQuantity": 10500 }
+      ],
+      "features": [],
+      "limits": { "environments": 6 }
+    },
+    {
+      "name": "Scale",
+      "slug": "scale",
+      "pricingModel": "hybrid",
+      "basePrice": 250,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "additional-mau", "unit": "MAU", "pricePerUnit": 0.0151, "unitQuantity": 1, "includedQuantity": 10500 }
+      ],
+      "features": [],
+      "limits": { "environments": 11 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

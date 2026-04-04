@@ -1,0 +1,55 @@
+{
+  "id": "stack-auth",
+  "name": "Stack Auth",
+  "description": "Open-source Auth0/Clerk alternative with managed hosting or free self-hosting, built for Next.js",
+  "url": "https://stack-auth.com",
+  "pricingUrl": "https://stack-auth.com/pricing",
+  "category": "auth",
+  "tags": ["authentication", "open-source", "self-hosted", "nextjs", "b2b", "sso"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "OAuth 2.0 / OIDC",
+    "whatYouLose": "Managed hosting convenience; self-hosting is always free so data is fully portable"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "users": 10000, "dashboardAdmins": 1 }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "hybrid",
+      "basePrice": 49,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 49,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "users": 50000, "dashboardAdmins": 3 }
+    },
+    {
+      "name": "Growth",
+      "slug": "growth",
+      "pricingModel": "hybrid",
+      "basePrice": 299,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 49,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "dashboardAdmins": 5, "samlConnections": 3 }
+    }
+  ]
+}

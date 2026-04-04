@@ -1,0 +1,67 @@
+{
+  "id": "frontegg",
+  "name": "Frontegg",
+  "description": "B2B SaaS authentication and user management platform with multi-tenancy",
+  "url": "https://frontegg.com",
+  "pricingUrl": "https://frontegg.com/pricing",
+  "category": "auth",
+  "tags": ["authentication", "b2b", "multi-tenancy", "sso", "user-management", "admin-portal"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": "OAuth 2.0 / OIDC / SAML",
+    "whatYouLose": "Pre-built admin portal, multi-tenant architecture, entitlements engine, audit logs"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "organizations": 5 }
+    },
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "flat_rate",
+      "basePrice": 99,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "mau": 1000, "ssoConnections": 3 }
+    },
+    {
+      "name": "Growth",
+      "slug": "growth",
+      "pricingModel": "flat_rate",
+      "basePrice": 799,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "mau": 5000, "ssoConnections": 10 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

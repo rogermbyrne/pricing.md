@@ -28,6 +28,23 @@
       "limits": { "proSearchesPerDay": 5 }
     },
     {
+      "name": "Sonar API",
+      "slug": "sonar-api",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "Sonar input tokens", "unit": "tokens", "pricePerUnit": 1.00, "unitQuantity": 1000000, "includedQuantity": 0 },
+        { "name": "Sonar output tokens", "unit": "tokens", "pricePerUnit": 1.00, "unitQuantity": 1000000, "includedQuantity": 0 },
+        { "name": "Sonar Pro input tokens", "unit": "tokens", "pricePerUnit": 3.00, "unitQuantity": 1000000, "includedQuantity": 0 },
+        { "name": "Sonar Pro output tokens", "unit": "tokens", "pricePerUnit": 15.00, "unitQuantity": 1000000, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
       "name": "Pro",
       "slug": "pro",
       "pricingModel": "flat_rate",
@@ -50,23 +67,6 @@
       "usageMetrics": [],
       "features": [],
       "limits": { "minimumSeats": 50, "researchQueriesPerDay": 500 }
-    },
-    {
-      "name": "Sonar API",
-      "slug": "sonar-api",
-      "pricingModel": "usage_based",
-      "basePrice": 0,
-      "billingPeriod": null,
-      "annualDiscount": null,
-      "seatPrice": null,
-      "usageMetrics": [
-        { "name": "Sonar input tokens", "unit": "tokens", "pricePerUnit": 1.00, "unitQuantity": 1000000, "includedQuantity": 0 },
-        { "name": "Sonar output tokens", "unit": "tokens", "pricePerUnit": 1.00, "unitQuantity": 1000000, "includedQuantity": 0 },
-        { "name": "Sonar Pro input tokens", "unit": "tokens", "pricePerUnit": 3.00, "unitQuantity": 1000000, "includedQuantity": 0 },
-        { "name": "Sonar Pro output tokens", "unit": "tokens", "pricePerUnit": 15.00, "unitQuantity": 1000000, "includedQuantity": 0 }
-      ],
-      "features": [],
-      "limits": {}
     }
   ]
 }

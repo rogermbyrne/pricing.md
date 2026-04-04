@@ -1,0 +1,45 @@
+{
+  "id": "recurly",
+  "name": "Recurly",
+  "description": "Enterprise subscription management platform with churn mitigation, payments orchestration, and revenue recognition",
+  "url": "https://recurly.com",
+  "pricingUrl": "https://recurly.com/pricing/",
+  "category": "payments",
+  "tags": ["subscription-billing", "recurring-payments", "dunning", "churn-mitigation", "revenue-recognition"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "architectural",
+    "openStandard": null,
+    "whatYouLose": "Subscription lifecycle management, churn mitigation tools, payments orchestration, revenue recognition"
+  },
+  "tiers": [
+    {
+      "name": "Commerce (Shopify)",
+      "slug": "commerce-shopify",
+      "pricingModel": "hybrid",
+      "basePrice": 399,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "gmv-fee", "unit": "percentage", "pricePerUnit": 1.5, "unitQuantity": 1, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Subscriptions",
+      "slug": "subscriptions",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

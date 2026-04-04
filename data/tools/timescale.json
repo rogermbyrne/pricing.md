@@ -1,0 +1,59 @@
+{
+  "id": "timescale",
+  "name": "Timescale",
+  "description": "Time-series database built on PostgreSQL with managed cloud hosting",
+  "url": "https://timescale.com",
+  "pricingUrl": "https://www.tigerdata.com/pricing",
+  "category": "database",
+  "tags": ["time-series", "postgresql", "managed-database", "analytics", "iot"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "PostgreSQL",
+    "whatYouLose": "TimescaleDB hypertables, continuous aggregates, tiered storage, compression, managed HA replicas"
+  },
+  "tiers": [
+    {
+      "name": "Performance",
+      "slug": "performance",
+      "pricingModel": "usage_based",
+      "basePrice": 30,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "storage", "unit": "GB", "pricePerUnit": 0.177, "unitQuantity": 1, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": { "maxCPUPerService": 8, "maxRAMGBPerService": 32 }
+    },
+    {
+      "name": "Scale",
+      "slug": "scale",
+      "pricingModel": "usage_based",
+      "basePrice": 36,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "storage", "unit": "GB", "pricePerUnit": 0.212, "unitQuantity": 1, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": { "maxCPUPerService": 32, "maxRAMGBPerService": 128 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}
