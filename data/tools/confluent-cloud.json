@@ -1,0 +1,68 @@
+{
+  "id": "confluent-cloud",
+  "name": "Confluent Cloud",
+  "description": "Fully managed Apache Kafka service with stream processing, connectors, and governance",
+  "url": "https://www.confluent.io",
+  "pricingUrl": "https://www.confluent.io/pricing",
+  "category": "queues",
+  "tags": ["kafka", "streaming", "event-driven", "flink", "connectors", "schema-registry"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": "Apache Kafka",
+    "whatYouLose": "Managed scaling, Confluent connectors, Flink integration, Schema Registry managed service, 99.99% SLA"
+  },
+  "tiers": [
+    {
+      "name": "Basic",
+      "slug": "basic",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "compute", "unit": "eCKU-hours", "pricePerUnit": 0.14, "unitQuantity": 1, "includedQuantity": 0 },
+        { "name": "data-in", "unit": "GB", "pricePerUnit": 0.05, "unitQuantity": 1, "includedQuantity": 0 },
+        { "name": "data-out", "unit": "GB", "pricePerUnit": 0.05, "unitQuantity": 1, "includedQuantity": 0 },
+        { "name": "storage", "unit": "GB", "pricePerUnit": 0.08, "unitQuantity": 1, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": { "maxPartitions": 1500 }
+    },
+    {
+      "name": "Standard",
+      "slug": "standard",
+      "pricingModel": "usage_based",
+      "basePrice": 385,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "compute", "unit": "eCKU-hours", "pricePerUnit": 0.75, "unitQuantity": 1, "includedQuantity": 0 },
+        { "name": "data-in", "unit": "GB", "pricePerUnit": 0.05, "unitQuantity": 1, "includedQuantity": 0 },
+        { "name": "data-out", "unit": "GB", "pricePerUnit": 0.05, "unitQuantity": 1, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": { "maxPartitions": 2500 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "usage_based",
+      "basePrice": 895,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "compute", "unit": "eCKU-hours", "pricePerUnit": 2.00, "unitQuantity": 1, "includedQuantity": 0 },
+        { "name": "data-in", "unit": "GB", "pricePerUnit": 0.04, "unitQuantity": 1, "includedQuantity": 0 },
+        { "name": "data-out", "unit": "GB", "pricePerUnit": 0.04, "unitQuantity": 1, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": { "maxPartitions": 96000 }
+    }
+  ]
+}

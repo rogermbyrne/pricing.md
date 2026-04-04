@@ -1,0 +1,55 @@
+{
+  "id": "directus",
+  "name": "Directus",
+  "description": "Open-source headless CMS and backend-as-a-service with REST and GraphQL APIs and managed cloud",
+  "url": "https://directus.io",
+  "pricingUrl": "https://directus.io/pricing",
+  "category": "cms",
+  "tags": ["headless-cms", "open-source", "backend-as-a-service", "rest-api", "graphql", "self-hosted"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "BSL 1.1 (open-source for orgs under $5M revenue)",
+    "whatYouLose": "Visual automation flows, admin studio UI, managed infrastructure; data is portable since Directus uses standard SQL databases"
+  },
+  "tiers": [
+    {
+      "name": "Community (Self-Hosted)",
+      "slug": "community",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Professional Cloud",
+      "slug": "professional",
+      "pricingModel": "hybrid",
+      "basePrice": 99,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 15,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "studioUsers": 5, "databaseEntries": 75000, "monthlyAPIRequests": 250000, "fileStorageGB": 150 }
+    },
+    {
+      "name": "Enterprise Cloud",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

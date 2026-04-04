@@ -1,0 +1,55 @@
+{
+  "id": "heap",
+  "name": "Heap by Contentsquare",
+  "description": "Auto-capture product analytics with session replay, heatmaps, and AI-powered insights",
+  "url": "https://heap.io",
+  "pricingUrl": "https://heap.io/pricing",
+  "category": "analytics",
+  "tags": ["product-analytics", "auto-capture", "session-replay", "heatmaps"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Historical auto-captured event data, custom charts and dashboards, behavioral cohorts, retroactive analytics"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "monthlySessions": 10000, "dataHistoryMonths": 6 }
+    },
+    {
+      "name": "Growth",
+      "slug": "growth",
+      "pricingModel": "custom",
+      "basePrice": 2500,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "monthlySessions": 500000, "dataHistoryMonths": 12 }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

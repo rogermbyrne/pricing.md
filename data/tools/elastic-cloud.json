@@ -1,0 +1,67 @@
+{
+  "id": "elastic-cloud",
+  "name": "Elastic Cloud",
+  "description": "Managed Elasticsearch and Kibana on AWS, Azure, or GCP with hosted and serverless options",
+  "url": "https://www.elastic.co",
+  "pricingUrl": "https://www.elastic.co/pricing",
+  "category": "search",
+  "tags": ["elasticsearch", "kibana", "observability", "security", "vector-search", "siem"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "Elasticsearch (SSPL/Elastic License)",
+    "whatYouLose": "Managed scaling, cross-cluster replication, Elastic Security/Observability features, ML nodes, searchable snapshots"
+  },
+  "tiers": [
+    {
+      "name": "Standard",
+      "slug": "standard",
+      "pricingModel": "usage_based",
+      "basePrice": 99,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Gold",
+      "slug": "gold",
+      "pricingModel": "usage_based",
+      "basePrice": 114,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Platinum",
+      "slug": "platinum",
+      "pricingModel": "usage_based",
+      "basePrice": 131,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "usage_based",
+      "basePrice": 184,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

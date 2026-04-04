@@ -1,0 +1,57 @@
+{
+  "id": "segment",
+  "name": "Segment by Twilio",
+  "description": "Customer data platform (CDP) for collecting, cleaning, and routing user data to any tool",
+  "url": "https://segment.com",
+  "pricingUrl": "https://segment.com/pricing",
+  "category": "analytics",
+  "tags": ["cdp", "customer-data-platform", "data-pipeline", "integrations", "identity-resolution"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "architectural",
+    "openStandard": null,
+    "whatYouLose": "Unified customer profiles, 700+ pre-built integrations, identity resolution graph, audience definitions, journey orchestrations"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "monthlyTrackedUsers": 1000, "sources": 2, "warehouseDestinations": 1 }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "usage_based",
+      "basePrice": 120,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "MTUs", "unit": "users", "pricePerUnit": 12, "unitQuantity": 1000, "includedQuantity": 10000 }
+      ],
+      "features": [],
+      "limits": { "seats": 10 }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "id": "heroku",
+  "name": "Heroku",
+  "description": "PaaS for deploying, managing, and scaling apps with managed dynos and add-ons",
+  "url": "https://www.heroku.com",
+  "pricingUrl": "https://www.heroku.com/pricing",
+  "category": "hosting",
+  "tags": ["paas", "dynos", "deployment", "salesforce"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Buildpack pipeline, Heroku Postgres managed add-ons, review apps, Heroku CLI workflows, Private Spaces"
+  },
+  "tiers": [
+    {
+      "name": "Eco",
+      "slug": "eco",
+      "pricingModel": "flat_rate",
+      "basePrice": 5,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "ramMb": 512, "computeHours": 1000 }
+    },
+    {
+      "name": "Basic",
+      "slug": "basic",
+      "pricingModel": "flat_rate",
+      "basePrice": 7,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "ramMb": 512 }
+    },
+    {
+      "name": "Standard-1X",
+      "slug": "standard-1x",
+      "pricingModel": "flat_rate",
+      "basePrice": 25,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "ramMb": 512 }
+    },
+    {
+      "name": "Standard-2X",
+      "slug": "standard-2x",
+      "pricingModel": "flat_rate",
+      "basePrice": 50,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "ramMb": 1024 }
+    },
+    {
+      "name": "Performance-M",
+      "slug": "performance-m",
+      "pricingModel": "flat_rate",
+      "basePrice": 250,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "ramMb": 2560 }
+    },
+    {
+      "name": "Performance-L",
+      "slug": "performance-l",
+      "pricingModel": "flat_rate",
+      "basePrice": 500,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "ramMb": 14336 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

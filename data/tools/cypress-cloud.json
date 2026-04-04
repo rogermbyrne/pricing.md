@@ -1,0 +1,67 @@
+{
+  "id": "cypress-cloud",
+  "name": "Cypress Cloud",
+  "description": "Cloud dashboard for Cypress E2E tests with parallelization, replay, and flake detection",
+  "url": "https://www.cypress.io",
+  "pricingUrl": "https://www.cypress.io/pricing",
+  "category": "testing",
+  "tags": ["e2e-testing", "cypress", "test-replay", "parallelization", "flake-detection"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Test Replay recordings, parallelization orchestration, flake detection analytics, spec prioritization, historical test data"
+  },
+  "tiers": [
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "users": 50, "testResultsPerMonth": 500, "dataRetentionDays": 30 }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "flat_rate",
+      "basePrice": 67,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "users": 50, "testResultsPerYear": 120000, "dataRetentionDays": 90 }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "flat_rate",
+      "basePrice": 267,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "users": 50, "testResultsPerYear": 120000, "dataRetentionDays": 90 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}
