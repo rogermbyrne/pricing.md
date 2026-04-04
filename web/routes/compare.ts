@@ -10,6 +10,7 @@ export function createCompareRouter(registry: Registry): Router {
       .split(",")
       .map((s) => s.trim())
       .filter(Boolean)
+      .filter((s) => /^[a-z0-9][a-z0-9-]*$/.test(s)) // only valid slugs
       .slice(0, 5);
 
     const tools = registry.compare(toolIds).filter((t) => t !== null);

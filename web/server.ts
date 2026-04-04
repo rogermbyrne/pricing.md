@@ -30,6 +30,9 @@ console.log("Changelog DB initialized");
 
 const app = express();
 
+// Disable X-Powered-By header
+app.disable("x-powered-by");
+
 // View engine
 app.set("view engine", "ejs");
 app.set("views", viewsDir);
@@ -46,6 +49,23 @@ app.use(createToolRouter(registry, changelogDB));
 app.use(createCompareRouter(registry));
 app.use(createChangelogRouter(registry, changelogDB));
 app.use(createApiRouter(registry, changelogDB));
+
+// 404 catch-all
+app.use((req: express.Request, res: express.Response) => {
+  res.status(404).render("error", {
+    title: "Not Found",
+    message: "The page you're looking for doesn't exist.",
+  });
+});
+
+// Global error handler — never leak stack traces
+app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
+  console.error("Unhandled error:", err.message);
+  res.status(500).render("error", {
+    title: "Server Error",
+    message: "Something went wrong. Please try again.",
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`Pricing.md web server running at http://localhost:${PORT}`);

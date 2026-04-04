@@ -178,9 +178,10 @@ function hasFree(tool) {
   <% } %>
 </div>
 
+<script id="compare-data" type="application/json"><%= JSON.stringify(toolIds) %></script>
 <script>
   (function() {
-    var currentTools = <%- JSON.stringify(toolIds) %>;
+    var currentTools = JSON.parse(document.getElementById('compare-data').textContent);
     var sel = document.getElementById('toolSelect');
 
     if (sel) {
