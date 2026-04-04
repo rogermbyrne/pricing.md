@@ -180,7 +180,7 @@ function hasFree(tool) {
 
 <script>
   (function() {
-    var currentTools = <%= JSON.stringify(toolIds) %>;
+    var currentTools = <%- JSON.stringify(toolIds) %>;
     var sel = document.getElementById('toolSelect');
 
     if (sel) {
