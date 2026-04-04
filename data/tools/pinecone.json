@@ -1,0 +1,63 @@
+{
+  "id": "pinecone",
+  "name": "Pinecone",
+  "description": "Managed vector database for high-performance similarity search and AI applications",
+  "url": "https://pinecone.io",
+  "pricingUrl": "https://www.pinecone.io/pricing/",
+  "category": "search",
+  "tags": ["vector-database", "embeddings", "similarity-search", "ai-infrastructure"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Managed serverless infrastructure, Pinecone Assistant, integrated inference pipeline, backup/restore"
+  },
+  "tiers": [
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "storageMb": 2048, "indexes": 5, "users": 2 }
+    },
+    {
+      "name": "Standard",
+      "slug": "standard",
+      "pricingModel": "usage_based",
+      "basePrice": 50,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "storage", "unit": "GB", "pricePerUnit": 0.33, "unitQuantity": 1, "includedQuantity": 0 },
+        { "name": "write-units", "unit": "units", "pricePerUnit": 4, "unitQuantity": 1000000, "includedQuantity": 0 },
+        { "name": "read-units", "unit": "units", "pricePerUnit": 16, "unitQuantity": 1000000, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "usage_based",
+      "basePrice": 500,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "storage", "unit": "GB", "pricePerUnit": 0.33, "unitQuantity": 1, "includedQuantity": 0 },
+        { "name": "write-units", "unit": "units", "pricePerUnit": 6, "unitQuantity": 1000000, "includedQuantity": 0 },
+        { "name": "read-units", "unit": "units", "pricePerUnit": 24, "unitQuantity": 1000000, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

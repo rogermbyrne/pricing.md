@@ -1,0 +1,67 @@
+{
+  "id": "strapi-cloud",
+  "name": "Strapi Cloud",
+  "description": "Managed cloud hosting for the Strapi open-source headless CMS",
+  "url": "https://strapi.io",
+  "pricingUrl": "https://strapi.io/pricing-cloud",
+  "category": "cms",
+  "tags": ["headless-cms", "open-source", "rest-api", "graphql", "cloud"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Cloud managed hosting, backups, environment configuration; content is exportable"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "apiRequestsPerMonth": 2500, "storageGB": 10, "databaseEntries": 500 }
+    },
+    {
+      "name": "Essential",
+      "slug": "essential",
+      "pricingModel": "flat_rate",
+      "basePrice": 18,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "apiRequestsPerMonth": 50000, "storageGB": 50 }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 90,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "apiRequestsPerMonth": 1000000, "storageGB": 250 }
+    },
+    {
+      "name": "Scale",
+      "slug": "scale",
+      "pricingModel": "flat_rate",
+      "basePrice": 450,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "apiRequestsPerMonth": 10000000, "storageGB": 1000 }
+    }
+  ]
+}

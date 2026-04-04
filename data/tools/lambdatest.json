@@ -1,0 +1,67 @@
+{
+  "id": "lambdatest",
+  "name": "LambdaTest",
+  "description": "Cloud testing platform with AI-native test management, real device and browser testing",
+  "url": "https://lambdatest.com",
+  "pricingUrl": "https://www.testmuai.com/pricing/",
+  "category": "testing",
+  "tags": ["cloud-testing", "cross-browser", "real-devices", "selenium", "playwright", "ai-testing"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "Selenium WebDriver / Appium / Playwright",
+    "whatYouLose": "HyperExecute orchestration config, Kane AI agent workflows, SmartUI visual baselines"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "parallelTests": 1, "liveTestingMinutesPerMonth": 60 }
+    },
+    {
+      "name": "Virtual Live",
+      "slug": "virtual-live",
+      "pricingModel": "flat_rate",
+      "basePrice": 15,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "parallelTests": 1 }
+    },
+    {
+      "name": "Real Device Plus Live",
+      "slug": "real-device-plus-live",
+      "pricingModel": "flat_rate",
+      "basePrice": 39,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "parallelTests": 1 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

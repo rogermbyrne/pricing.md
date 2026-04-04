@@ -1,0 +1,43 @@
+{
+  "id": "windmill",
+  "name": "Windmill",
+  "description": "Open-source workflow engine and developer platform for scripts, flows, and internal apps",
+  "url": "https://windmill.dev",
+  "pricingUrl": "https://www.windmill.dev/pricing",
+  "category": "queues",
+  "tags": ["workflow-engine", "open-source", "internal-tools", "scripts", "automation"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "AGPL-3.0 open source",
+    "whatYouLose": "Windmill-specific flow definitions, app UIs, schedule configurations; scripts themselves are portable"
+  },
+  "tiers": [
+    {
+      "name": "Free and Open-source",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "users": 50, "workspaces": 3 }
+    },
+    {
+      "name": "Enterprise Edition",
+      "slug": "enterprise",
+      "pricingModel": "hybrid",
+      "basePrice": 120,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 20,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "knock",
+  "name": "Knock",
+  "description": "Notification infrastructure for building and managing cross-channel notification systems",
+  "url": "https://knock.app",
+  "pricingUrl": "https://knock.app/pricing",
+  "category": "notifications",
+  "tags": ["notifications", "messaging", "in-app", "push", "email", "sms"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Notification workflows, preference management, feed components, batch/digest logic, multi-tenancy configurations"
+  },
+  "tiers": [
+    {
+      "name": "Developer",
+      "slug": "developer",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "messagesIncluded": 10000 }
+    },
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "hybrid",
+      "basePrice": 250,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "messages", "unit": "messages", "pricePerUnit": 5, "unitQuantity": 1000, "includedQuantity": 50000 }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

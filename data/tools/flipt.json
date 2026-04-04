@@ -1,0 +1,55 @@
+{
+  "id": "flipt",
+  "name": "Flipt",
+  "description": "Git-native, open-source feature flag solution with REST and gRPC APIs",
+  "url": "https://flipt.io",
+  "pricingUrl": "https://flipt.io/pricing",
+  "category": "feature-flags",
+  "tags": ["feature-flags", "open-source", "git-native", "self-hosted", "grpc"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "OpenFeature",
+    "whatYouLose": "Git-synced flag configurations and UI workflow history"
+  },
+  "tiers": [
+    {
+      "name": "Open Source",
+      "slug": "open-source",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 200,
+      "billingPeriod": "monthly",
+      "annualDiscount": 20,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

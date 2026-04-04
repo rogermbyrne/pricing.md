@@ -1,0 +1,55 @@
+{
+  "id": "growthbook",
+  "name": "GrowthBook",
+  "description": "Open-source feature flagging and A/B testing platform with warehouse-native analytics",
+  "url": "https://growthbook.io",
+  "pricingUrl": "https://growthbook.io/pricing",
+  "category": "feature-flags",
+  "tags": ["feature-flags", "a-b-testing", "experimentation", "open-source", "warehouse-native"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "OpenFeature",
+    "whatYouLose": "Experiment history, statistical results, feature flag targeting rules, SDK integrations"
+  },
+  "tiers": [
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "seats": 3, "cdnRequestsPerMonth": 1000000 }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 40,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "seats": 50, "cdnRequestsPerMonth": 2000000 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

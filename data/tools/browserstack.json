@@ -1,0 +1,79 @@
+{
+  "id": "browserstack",
+  "name": "BrowserStack",
+  "description": "Cross-browser testing platform with real devices, automated testing, and visual testing",
+  "url": "https://browserstack.com",
+  "pricingUrl": "https://www.browserstack.com/pricing",
+  "category": "testing",
+  "tags": ["cross-browser", "real-devices", "selenium", "appium", "visual-testing"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "Selenium WebDriver / Appium",
+    "whatYouLose": "BrowserStack debugging tools, Percy visual snapshots, proprietary device farm, test analytics dashboards"
+  },
+  "tiers": [
+    {
+      "name": "Live Individual",
+      "slug": "live-individual",
+      "pricingModel": "flat_rate",
+      "basePrice": 29,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "parallelTests": 1, "users": 1 }
+    },
+    {
+      "name": "Automate Desktop",
+      "slug": "automate-desktop",
+      "pricingModel": "flat_rate",
+      "basePrice": 129,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "parallelTests": 1 }
+    },
+    {
+      "name": "Live Team",
+      "slug": "live-team",
+      "pricingModel": "flat_rate",
+      "basePrice": 150,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "parallelTests": 1, "users": 5 }
+    },
+    {
+      "name": "Automate Desktop + Mobile",
+      "slug": "automate-desktop-mobile",
+      "pricingModel": "flat_rate",
+      "basePrice": 199,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "parallelTests": 1 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

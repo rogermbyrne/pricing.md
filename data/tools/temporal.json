@@ -1,0 +1,71 @@
+{
+  "id": "temporal",
+  "name": "Temporal",
+  "description": "Durable execution and workflow orchestration platform for building reliable distributed applications",
+  "url": "https://temporal.io",
+  "pricingUrl": "https://temporal.io/pricing",
+  "category": "queues",
+  "tags": ["workflow-orchestration", "durable-execution", "distributed-systems", "microservices"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "architectural",
+    "openStandard": null,
+    "whatYouLose": "Workflow definitions, activity implementations, signal/query handlers, durable execution guarantees tied to Temporal SDK"
+  },
+  "tiers": [
+    {
+      "name": "Free Credits",
+      "slug": "free-credits",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "creditsDollars": 1000, "creditValidityDays": 90 }
+    },
+    {
+      "name": "Essentials",
+      "slug": "essentials",
+      "pricingModel": "hybrid",
+      "basePrice": 100,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "actions", "unit": "actions", "pricePerUnit": 50, "unitQuantity": 1000000, "includedQuantity": 1000000 }
+      ],
+      "features": [],
+      "limits": { "activeStorageGB": 1, "retainedStorageGB": 40 }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "hybrid",
+      "basePrice": 500,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "actions", "unit": "actions", "pricePerUnit": 50, "unitQuantity": 1000000, "includedQuantity": 2500000 }
+      ],
+      "features": [],
+      "limits": { "activeStorageGB": 2, "retainedStorageGB": 100 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

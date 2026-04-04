@@ -1,0 +1,55 @@
+{
+  "id": "qdrant",
+  "name": "Qdrant",
+  "description": "Open-source vector similarity search engine with managed cloud offering",
+  "url": "https://qdrant.tech",
+  "pricingUrl": "https://qdrant.tech/pricing/",
+  "category": "search",
+  "tags": ["vector-database", "similarity-search", "open-source", "self-hosted"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "Apache 2.0 (self-hosted)",
+    "whatYouLose": "Managed cloud infrastructure, automatic scaling, backup/disaster recovery"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "ramGb": 1, "diskGb": 4, "nodes": 1 }
+    },
+    {
+      "name": "Standard",
+      "slug": "standard",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Premium",
+      "slug": "premium",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

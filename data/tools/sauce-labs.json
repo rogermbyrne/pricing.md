@@ -1,0 +1,67 @@
+{
+  "id": "sauce-labs",
+  "name": "Sauce Labs",
+  "description": "Cloud testing platform with virtual and real device testing for web and mobile applications",
+  "url": "https://saucelabs.com",
+  "pricingUrl": "https://saucelabs.com/pricing",
+  "category": "testing",
+  "tags": ["cloud-testing", "selenium", "appium", "real-devices", "cross-browser"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "Selenium WebDriver / Appium",
+    "whatYouLose": "Sauce Connect secure tunneling config, Sauce-specific test analytics, video/screenshot archives"
+  },
+  "tiers": [
+    {
+      "name": "Live Testing",
+      "slug": "live-testing",
+      "pricingModel": "flat_rate",
+      "basePrice": 39,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "parallelTests": 1 }
+    },
+    {
+      "name": "Virtual Cloud",
+      "slug": "virtual-cloud",
+      "pricingModel": "flat_rate",
+      "basePrice": 149,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "parallelTests": 1 }
+    },
+    {
+      "name": "Real Device Cloud",
+      "slug": "real-device-cloud",
+      "pricingModel": "flat_rate",
+      "basePrice": 199,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "parallelTests": 1 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "flagsmith",
+  "name": "Flagsmith",
+  "description": "Open-source feature flag and remote config service with A/B testing support",
+  "url": "https://flagsmith.com",
+  "pricingUrl": "https://flagsmith.com/pricing",
+  "category": "feature-flags",
+  "tags": ["feature-flags", "remote-config", "a-b-testing", "open-source", "self-hosted"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "OpenFeature",
+    "whatYouLose": "Flag configurations, segment definitions, identity overrides, A/B test history"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "seats": 1, "apiRequestsPerMonth": 50000 }
+    },
+    {
+      "name": "Start-Up",
+      "slug": "start-up",
+      "pricingModel": "flat_rate",
+      "basePrice": 45,
+      "billingPeriod": "monthly",
+      "annualDiscount": 11,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "seats": 3, "apiRequestsPerMonth": 1000000 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

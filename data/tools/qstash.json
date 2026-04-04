@@ -1,0 +1,81 @@
+{
+  "id": "qstash",
+  "name": "QStash",
+  "description": "Serverless HTTP-based messaging and scheduling service from Upstash with at-least-once delivery",
+  "url": "https://upstash.com/docs/qstash",
+  "pricingUrl": "https://upstash.com/pricing/qstash",
+  "category": "queues",
+  "tags": ["serverless", "messaging", "scheduling", "queues", "http-messaging", "cron"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "HTTP-based message delivery endpoints, scheduled jobs, URL groups, DLQ configurations"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "messagesPerDay": 1000, "maxMessageSizeMB": 1, "activeSchedules": 10 }
+    },
+    {
+      "name": "Pay as You Go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "messages", "unit": "messages", "pricePerUnit": 1.00, "unitQuantity": 100000, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": { "maxMessageSizeMB": 10, "activeSchedules": 1000 }
+    },
+    {
+      "name": "Fixed 1M",
+      "slug": "fixed-1m",
+      "pricingModel": "flat_rate",
+      "basePrice": 180,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "messagesPerDay": 1000000, "maxMessageSizeMB": 50, "activeSchedules": 10000 }
+    },
+    {
+      "name": "Fixed 10M",
+      "slug": "fixed-10m",
+      "pricingModel": "flat_rate",
+      "basePrice": 420,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "messagesPerDay": 10000000, "maxMessageSizeMB": 50, "activeSchedules": 50000 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

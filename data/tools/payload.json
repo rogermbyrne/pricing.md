@@ -1,0 +1,67 @@
+{
+  "id": "payload",
+  "name": "Payload",
+  "description": "TypeScript-first open-source headless CMS with code-based configuration and managed cloud hosting",
+  "url": "https://payloadcms.com",
+  "pricingUrl": "https://payloadcms.com/pricing",
+  "category": "cms",
+  "tags": ["headless-cms", "open-source", "typescript", "self-hosted", "react"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Cloud managed hosting; CMS code and content are fully portable since it is open-source"
+  },
+  "tiers": [
+    {
+      "name": "Free (Self-Hosted)",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Standard Cloud",
+      "slug": "standard",
+      "pricingModel": "flat_rate",
+      "basePrice": 35,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "databaseStorageGB": 3, "fileStorageGB": 30, "bandwidthGB": 40 }
+    },
+    {
+      "name": "Pro Cloud",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 199,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "databaseStorageGB": 30, "fileStorageGB": 150 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": 833,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

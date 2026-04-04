@@ -1,0 +1,31 @@
+{
+  "id": "playwright-cloud",
+  "name": "Playwright (Microsoft)",
+  "description": "Free, open-source end-to-end testing framework by Microsoft for Chromium, Firefox, and WebKit",
+  "url": "https://playwright.dev",
+  "pricingUrl": "https://playwright.dev",
+  "category": "testing",
+  "tags": ["open-source", "e2e-testing", "browser-automation", "chromium", "firefox", "webkit"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "Playwright API (MIT-licensed)",
+    "whatYouLose": "Nothing — fully open-source with no vendor lock-in"
+  },
+  "tiers": [
+    {
+      "name": "Open Source",
+      "slug": "open-source",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

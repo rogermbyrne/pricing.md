@@ -1,0 +1,55 @@
+{
+  "id": "hygraph",
+  "name": "Hygraph",
+  "description": "API-first headless CMS with content federation and AI-powered content workflows",
+  "url": "https://hygraph.com",
+  "pricingUrl": "https://hygraph.com/pricing",
+  "category": "cms",
+  "tags": ["headless-cms", "graphql", "content-federation", "ai"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Content models, content federation setup, remote source configs, workflow automations, AI token allocations"
+  },
+  "tiers": [
+    {
+      "name": "Hobby",
+      "slug": "hobby",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "seats": 3, "contentEntries": 1000, "apiCallsPerMonth": 500000, "assetTrafficGB": 100 }
+    },
+    {
+      "name": "Growth",
+      "slug": "growth",
+      "pricingModel": "flat_rate",
+      "basePrice": 199,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "seats": 10, "contentEntries": 10000, "apiCallsPerMonth": 1000000, "assetTrafficGB": 500 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

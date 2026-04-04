@@ -1,0 +1,67 @@
+{
+  "id": "fastly",
+  "name": "Fastly",
+  "description": "Edge cloud platform providing CDN, compute, security, and observability services",
+  "url": "https://fastly.com",
+  "pricingUrl": "https://www.fastly.com/pricing",
+  "category": "edge",
+  "tags": ["cdn", "edge-compute", "ddos-protection", "waf", "streaming"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "Wasm (Compute), VCL (Varnish Configuration Language)",
+    "whatYouLose": "VCL configurations, edge dictionaries, Compute@Edge Wasm workers, instant purge APIs"
+  },
+  "tiers": [
+    {
+      "name": "Free Tier",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "bandwidthGB": 100, "cdnRequests": 1000000, "computeRequests": 10000000 }
+    },
+    {
+      "name": "Basic Package",
+      "slug": "basic",
+      "pricingModel": "flat_rate",
+      "basePrice": 1500,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "requests": 100000000, "tlsDomains": 20 }
+    },
+    {
+      "name": "Starter Package",
+      "slug": "starter",
+      "pricingModel": "flat_rate",
+      "basePrice": 6000,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "requests": 500000000, "tlsDomains": 40 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

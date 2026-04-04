@@ -1,0 +1,67 @@
+{
+  "id": "builder-io",
+  "name": "Builder.io",
+  "description": "AI-powered visual CMS and design-to-code platform for content publishing and development",
+  "url": "https://builder.io",
+  "pricingUrl": "https://www.builder.io/m/pricing",
+  "category": "cms",
+  "tags": ["visual-cms", "headless-cms", "ai-design-to-code", "no-code"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Visual editor integrations, AI code generation workflows, structured content models, component mappings tied to Builder SDK"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "users": 10, "monthlyVisualViews": 10000, "monthlyCodeGenerations": 20 }
+    },
+    {
+      "name": "Develop Pro",
+      "slug": "develop-pro",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 19,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "users": 20, "monthlyCodeGenerations": 200 }
+    },
+    {
+      "name": "Publish Pro",
+      "slug": "publish-pro",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 39,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "users": 20, "monthlyVisualViews": 100000 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

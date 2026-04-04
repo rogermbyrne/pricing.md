@@ -1,0 +1,67 @@
+{
+  "id": "fathom",
+  "name": "Fathom",
+  "description": "Privacy-focused web analytics with no cookie banners required and forever data retention",
+  "url": "https://usefathom.com",
+  "pricingUrl": "https://usefathom.com/pricing",
+  "category": "analytics",
+  "tags": ["web-analytics", "privacy", "gdpr", "cookieless"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "Historical analytics data (exportable), privacy-first tracking without cookie consent banners"
+  },
+  "tiers": [
+    {
+      "name": "100K Pageviews",
+      "slug": "100k",
+      "pricingModel": "flat_rate",
+      "basePrice": 15,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "pageviewsPerMonth": 100000, "sites": 50 }
+    },
+    {
+      "name": "1M Pageviews",
+      "slug": "1m",
+      "pricingModel": "flat_rate",
+      "basePrice": 60,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "pageviewsPerMonth": 1000000, "sites": 50 }
+    },
+    {
+      "name": "10M Pageviews",
+      "slug": "10m",
+      "pricingModel": "flat_rate",
+      "basePrice": 200,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "pageviewsPerMonth": 10000000, "sites": 50 }
+    },
+    {
+      "name": "25M+ Pageviews",
+      "slug": "25m-plus",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}
