@@ -1,0 +1,276 @@
+{
+  "id": "sentry",
+  "name": "Sentry",
+  "description": "Application monitoring and error tracking platform with performance monitoring, session replay, and AI debugging",
+  "url": "https://sentry.io",
+  "pricingUrl": "https://docs.sentry.io/pricing.md",
+  "category": "monitoring",
+  "tags": [
+    "error-tracking",
+    "performance-monitoring",
+    "session-replay",
+    "profiling",
+    "tracing"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Sentry SDK integrations, session replay data, custom dashboards, alert configurations, Seer AI debugging"
+  },
+  "tiers": [
+    {
+      "name": "Developer",
+      "slug": "developer",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "errors",
+          "pricePerUnit": 0,
+          "unitQuantity": 100,
+          "includedQuantity": 5000,
+          "unit": "events"
+        },
+        {
+          "name": "spans",
+          "pricePerUnit": 0,
+          "unitQuantity": 1000,
+          "includedQuantity": 5000000,
+          "unit": "events"
+        },
+        {
+          "name": "replays",
+          "pricePerUnit": 0,
+          "unitQuantity": 1,
+          "includedQuantity": 50,
+          "unit": "events"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "users": 1
+      }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "tiered",
+      "basePrice": 26,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "errors",
+          "pricePerUnit": 0.029,
+          "unitQuantity": 100,
+          "includedQuantity": 50000,
+          "tieredPricing": [
+            {
+              "upTo": 50000,
+              "pricePerUnit": 0
+            },
+            {
+              "upTo": 100000,
+              "pricePerUnit": 0.029
+            },
+            {
+              "upTo": 500000,
+              "pricePerUnit": 0.0175
+            },
+            {
+              "upTo": 10000000,
+              "pricePerUnit": 0.015
+            },
+            {
+              "upTo": 20000000,
+              "pricePerUnit": 0.013
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 0.012
+            }
+          ],
+          "unit": "events"
+        },
+        {
+          "name": "spans",
+          "pricePerUnit": 0.0016,
+          "unitQuantity": 1000,
+          "includedQuantity": 5000000,
+          "tieredPricing": [
+            {
+              "upTo": 5000000,
+              "pricePerUnit": 0
+            },
+            {
+              "upTo": 100000000,
+              "pricePerUnit": 0.0016
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 0.0014
+            }
+          ],
+          "unit": "events"
+        },
+        {
+          "name": "replays",
+          "pricePerUnit": 0.003,
+          "unitQuantity": 1,
+          "includedQuantity": 50,
+          "tieredPricing": [
+            {
+              "upTo": 50,
+              "pricePerUnit": 0
+            },
+            {
+              "upTo": 5000,
+              "pricePerUnit": 0.003
+            },
+            {
+              "upTo": 100000,
+              "pricePerUnit": 0.00285
+            },
+            {
+              "upTo": 900000,
+              "pricePerUnit": 0.002565
+            },
+            {
+              "upTo": 4500000,
+              "pricePerUnit": 0.002309
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 0.001962
+            }
+          ],
+          "unit": "events"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "metricAlerts": 20,
+        "customDashboards": 20
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "tiered",
+      "basePrice": 80,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "errors",
+          "pricePerUnit": 0.089,
+          "unitQuantity": 100,
+          "includedQuantity": 50000,
+          "tieredPricing": [
+            {
+              "upTo": 50000,
+              "pricePerUnit": 0
+            },
+            {
+              "upTo": 100000,
+              "pricePerUnit": 0.089
+            },
+            {
+              "upTo": 500000,
+              "pricePerUnit": 0.05
+            },
+            {
+              "upTo": 10000000,
+              "pricePerUnit": 0.03
+            },
+            {
+              "upTo": 20000000,
+              "pricePerUnit": 0.026
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 0.024
+            }
+          ],
+          "unit": "events"
+        },
+        {
+          "name": "spans",
+          "pricePerUnit": 0.0032,
+          "unitQuantity": 1000,
+          "includedQuantity": 5000000,
+          "tieredPricing": [
+            {
+              "upTo": 5000000,
+              "pricePerUnit": 0
+            },
+            {
+              "upTo": 100000000,
+              "pricePerUnit": 0.0032
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 0.0029
+            }
+          ],
+          "unit": "events"
+        },
+        {
+          "name": "replays",
+          "pricePerUnit": 0.003,
+          "unitQuantity": 1,
+          "includedQuantity": 50,
+          "tieredPricing": [
+            {
+              "upTo": 50,
+              "pricePerUnit": 0
+            },
+            {
+              "upTo": 5000,
+              "pricePerUnit": 0.003
+            },
+            {
+              "upTo": 100000,
+              "pricePerUnit": 0.00285
+            },
+            {
+              "upTo": 900000,
+              "pricePerUnit": 0.002565
+            },
+            {
+              "upTo": 4500000,
+              "pricePerUnit": 0.002309
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 0.001962
+            }
+          ],
+          "unit": "events"
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

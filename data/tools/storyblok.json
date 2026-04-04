@@ -1,0 +1,121 @@
+{
+  "id": "storyblok",
+  "name": "Storyblok",
+  "description": "Headless CMS with a visual editor, component-based content management, and multi-language support",
+  "url": "https://storyblok.com",
+  "pricingUrl": "https://www.storyblok.com/pricing",
+  "category": "cms",
+  "tags": [],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Storyblok Visual Editor, component-based content, release management, custom workflows"
+  },
+  "tiers": [
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "users": 1,
+        "maxUsers": 2,
+        "spaces": 1,
+        "apiRequestsPerMonth": 100000,
+        "trafficGbPerMonth": 100,
+        "locales": 2,
+        "aiCreditsPerMonth": 25000
+      }
+    },
+    {
+      "name": "Growth",
+      "slug": "growth",
+      "pricingModel": "hybrid",
+      "basePrice": 99,
+      "billingPeriod": "monthly",
+      "annualDiscount": 8,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "api-requests",
+          "unit": "requests",
+          "pricePerUnit": 10,
+          "unitQuantity": 1000000,
+          "includedQuantity": 1000000
+        },
+        {
+          "name": "traffic",
+          "unit": "GB",
+          "pricePerUnit": 75,
+          "unitQuantity": 250,
+          "includedQuantity": 400
+        }
+      ],
+      "features": [],
+      "limits": {
+        "users": 5,
+        "maxUsers": 10,
+        "spaces": 1,
+        "apiRequestsPerMonth": 1000000,
+        "trafficGbPerMonth": 400,
+        "locales": 2,
+        "aiCreditsPerMonth": 100000
+      }
+    },
+    {
+      "name": "Growth Plus",
+      "slug": "growth-plus",
+      "pricingModel": "hybrid",
+      "basePrice": 349,
+      "billingPeriod": "monthly",
+      "annualDiscount": 8,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "api-requests",
+          "unit": "requests",
+          "pricePerUnit": 10,
+          "unitQuantity": 1000000,
+          "includedQuantity": 4000000
+        },
+        {
+          "name": "traffic",
+          "unit": "GB",
+          "pricePerUnit": 75,
+          "unitQuantity": 250,
+          "includedQuantity": 1000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "users": 15,
+        "maxUsers": 20,
+        "spaces": 1,
+        "apiRequestsPerMonth": 4000000,
+        "trafficGbPerMonth": 1000,
+        "locales": 10,
+        "aiCreditsPerMonth": 200000
+      }
+    },
+    {
+      "name": "Premium",
+      "slug": "premium",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

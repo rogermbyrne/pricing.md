@@ -1,0 +1,46 @@
+{
+  "id": "stripe",
+  "name": "Stripe",
+  "description": "Payment processing platform for online businesses with APIs for payments, subscriptions, billing, and financial services",
+  "url": "https://stripe.com",
+  "pricingUrl": "https://stripe.com/pricing",
+  "category": "payments",
+  "tags": ["payments", "billing", "subscriptions", "fintech"],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Stripe.js, Elements UI components, Connect platform, Billing/Invoicing, customer payment methods on file"
+  },
+  "tiers": [
+    {
+      "name": "Standard",
+      "slug": "standard",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "transactionFeePercent": 2.9,
+        "transactionFeeFixedCents": 30
+      }
+    },
+    {
+      "name": "Enterprise / Custom",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

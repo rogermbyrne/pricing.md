@@ -1,0 +1,104 @@
+{
+  "id": "new-relic",
+  "name": "New Relic",
+  "description": "Full-stack observability platform with APM, infrastructure monitoring, logs, and alerting",
+  "url": "https://newrelic.com",
+  "pricingUrl": "https://newrelic.com/pricing",
+  "category": "monitoring",
+  "tags": [],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "New Relic dashboards, NRQL queries, alert policies, APM instrumentation"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "data-ingest",
+          "unit": "GB",
+          "pricePerUnit": 0.40,
+          "unitQuantity": 1,
+          "includedQuantity": 100
+        }
+      ],
+      "features": [],
+      "limits": {
+        "fullPlatformUsers": 1,
+        "dataIngestGbPerMonth": 100,
+        "dataRetentionDays": 8
+      }
+    },
+    {
+      "name": "Standard",
+      "slug": "standard",
+      "pricingModel": "hybrid",
+      "basePrice": 10,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "data-ingest",
+          "unit": "GB",
+          "pricePerUnit": 0.40,
+          "unitQuantity": 1,
+          "includedQuantity": 100
+        },
+        {
+          "name": "additional-full-users",
+          "unit": "users",
+          "pricePerUnit": 99,
+          "unitQuantity": 1,
+          "includedQuantity": 1
+        }
+      ],
+      "features": [],
+      "limits": {
+        "fullPlatformUsers": 5
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "per_seat",
+      "basePrice": 349,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 349,
+      "usageMetrics": [
+        {
+          "name": "data-ingest",
+          "unit": "GB",
+          "pricePerUnit": 0.40,
+          "unitQuantity": 1,
+          "includedQuantity": 100
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

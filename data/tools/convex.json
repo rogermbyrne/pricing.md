@@ -1,0 +1,74 @@
+{
+  "id": "convex",
+  "name": "Convex",
+  "description": "Reactive backend platform with real-time sync, server functions, and integrated database",
+  "url": "https://convex.dev",
+  "pricingUrl": "https://convex.dev/pricing",
+  "category": "database",
+  "tags": [],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Convex reactive queries, real-time sync, server functions, scheduling, file storage integration"
+  },
+  "tiers": [
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "developers": 6,
+        "functionCallsPerMonth": 1000000,
+        "databaseStorageGb": 0.5,
+        "fileStorageGb": 1,
+        "databaseIoGbPerMonth": 1,
+        "dataEgressGbPerMonth": 1,
+        "deployments": 40
+      }
+    },
+    {
+      "name": "Professional",
+      "slug": "professional",
+      "pricingModel": "per_seat",
+      "basePrice": 25,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 25,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "developers": 20,
+        "functionCallsPerMonth": 25000000,
+        "databaseStorageGb": 50,
+        "fileStorageGb": 100,
+        "databaseIoGbPerMonth": 50,
+        "dataEgressGbPerMonth": 50,
+        "deployments": 300,
+        "concurrentSessions": 10000
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "custom",
+      "basePrice": 2500,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "developers": 50
+      }
+    }
+  ]
+}

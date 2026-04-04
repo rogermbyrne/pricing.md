@@ -1,0 +1,71 @@
+{
+  "id": "contentful",
+  "name": "Contentful",
+  "description": "API-first content management platform for digital experiences",
+  "url": "https://contentful.com",
+  "pricingUrl": "https://www.contentful.com/pricing/",
+  "category": "cms",
+  "tags": [],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "EUR",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Content model, Contentful App Framework, rich text editor, localization workflows"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "users": 10,
+        "roles": 2,
+        "locales": 2,
+        "apiCallsPerMonth": 100000,
+        "cdnBandwidthGb": 50,
+        "contentTypes": 25,
+        "environments": 2,
+        "records": 10000,
+        "spaces": 1
+      }
+    },
+    {
+      "name": "Lite",
+      "slug": "lite",
+      "pricingModel": "flat_rate",
+      "basePrice": 300,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "users": 20,
+        "roles": 3,
+        "locales": 3,
+        "apiCallsPerMonth": 1000000,
+        "cdnBandwidthGb": 100
+      }
+    },
+    {
+      "name": "Premium",
+      "slug": "premium",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

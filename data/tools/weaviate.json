@@ -1,0 +1,93 @@
+{
+  "id": "weaviate",
+  "name": "Weaviate",
+  "description": "Open-source vector database for hybrid search, RAG, and AI-native applications with managed cloud deployment",
+  "url": "https://weaviate.io",
+  "pricingUrl": "https://weaviate.io/pricing.md",
+  "category": "search",
+  "tags": [
+    "vector-database",
+    "semantic-search",
+    "hybrid-search",
+    "rag",
+    "embeddings"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Weaviate-specific schema and module configuration, Query Agent integration, vector compression settings, multi-tenancy setup, hybrid search tuning"
+  },
+  "tiers": [
+    {
+      "name": "Free Trial",
+      "slug": "free-trial",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "query-agent-requests",
+          "pricePerUnit": 0,
+          "unitQuantity": 1,
+          "includedQuantity": 250,
+          "unit": "requests"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "trialDays": 14,
+        "queryAgentRequests": 250
+      }
+    },
+    {
+      "name": "Flex",
+      "slug": "flex",
+      "pricingModel": "usage_based",
+      "basePrice": 45,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "query-agent-requests",
+          "pricePerUnit": 0,
+          "unitQuantity": 1,
+          "includedQuantity": 30000,
+          "unit": "requests"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "queryAgentRequests": 30000,
+        "uptimeSLA": 995
+      }
+    },
+    {
+      "name": "Premium",
+      "slug": "premium",
+      "pricingModel": "custom",
+      "basePrice": 400,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "query-agent-requests",
+          "pricePerUnit": 0,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "requests"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "uptimeSLA": 9995
+      }
+    }
+  ]
+}

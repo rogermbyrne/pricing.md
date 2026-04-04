@@ -1,0 +1,153 @@
+{
+  "id": "orama",
+  "name": "Orama",
+  "description": "Fast search and RAG service with full-text, vector, and hybrid search capabilities",
+  "url": "https://orama.com",
+  "pricingUrl": "https://orama.com/pricing.md",
+  "category": "search",
+  "tags": [
+    "search",
+    "rag",
+    "vector-search",
+    "full-text-search",
+    "ai"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Orama Cloud features, AI sessions, analytics dashboard"
+  },
+  "tiers": [
+    {
+      "name": "Base",
+      "slug": "base",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "projects": 2,
+        "docsPerProject": 500,
+        "maxDocsPerProject": 5000,
+        "analyticsRetentionDays": 60,
+        "aiSessions": 500,
+        "indexesPerProject": 2
+      }
+    },
+    {
+      "name": "Build",
+      "slug": "build",
+      "pricingModel": "flat_rate",
+      "basePrice": 100,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "extra-documents",
+          "unit": "documents",
+          "pricePerUnit": 0.9,
+          "unitQuantity": 1000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "extra-indexes",
+          "unit": "indexes (per 10)",
+          "pricePerUnit": 5,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "full-analytics-addon",
+          "unit": "projects/month",
+          "pricePerUnit": 10,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "high-precision-tuning",
+          "unit": "projects/month",
+          "pricePerUnit": 10,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "projects": 5,
+        "docsPerProject": 5000,
+        "maxDocsPerProject": 100000,
+        "analyticsRetentionDays": 90,
+        "aiSessions": 2500,
+        "indexesPerProject": 5,
+        "aiGeneratedSynonymsPerProject": 5
+      }
+    },
+    {
+      "name": "Scale",
+      "slug": "scale",
+      "pricingModel": "flat_rate",
+      "basePrice": 1450,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "extra-documents",
+          "unit": "documents",
+          "pricePerUnit": 0.35,
+          "unitQuantity": 1000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "extra-projects",
+          "unit": "projects",
+          "pricePerUnit": 5,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "full-analytics-addon",
+          "unit": "projects/month",
+          "pricePerUnit": 5,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "raw-analytics-addon",
+          "unit": "projects/month",
+          "pricePerUnit": 100,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "projects": 25,
+        "docsPerProject": 100000,
+        "maxDocsPerProject": 10000000,
+        "aiSessions": 10000,
+        "indexesPerProject": 25,
+        "aiGeneratedSynonymsPerProject": 25
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

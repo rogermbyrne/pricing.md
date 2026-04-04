@@ -1,0 +1,40 @@
+{
+  "name": "pricingmd",
+  "version": "1.0.0",
+  "description": "Pricing registry for developer tools, exposed as an MCP server",
+  "main": "dist/src/index.js",
+  "bin": {
+    "pricingmd": "dist/src/index.js"
+  },
+  "files": [
+    "dist/src/",
+    "data/tools/",
+    "SKILL.md"
+  ],
+  "scripts": {
+    "discover": "tsx scripts/discover.ts",
+    "parse": "tsx scripts/parse.ts",
+    "validate": "tsx scripts/validate.ts",
+    "build": "tsc",
+    "start": "node dist/src/index.js",
+    "check-freshness": "tsx scripts/check-freshness.ts",
+    "test": "tsx scripts/test-server.ts",
+    "sanity-check": "tsx scripts/sanity-check.ts",
+    "pre-push": "tsx scripts/pre-push.ts"
+  },
+  "keywords": ["mcp", "pricing", "developer-tools", "claude-code"],
+  "author": "Roger Byrne",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^25.5.0",
+    "better-sqlite3": "^12.8.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  }
+}

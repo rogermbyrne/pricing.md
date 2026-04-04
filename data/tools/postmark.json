@@ -1,0 +1,93 @@
+{
+  "id": "postmark",
+  "name": "Postmark",
+  "description": "Transactional email delivery service with high deliverability and message streams",
+  "url": "https://postmarkapp.com",
+  "pricingUrl": "https://postmarkapp.com/pricing",
+  "category": "email",
+  "tags": [],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "SMTP",
+    "whatYouLose": "Postmark message streams, delivery analytics, template system"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "emailsPerMonth": 100
+      }
+    },
+    {
+      "name": "Basic",
+      "slug": "basic",
+      "pricingModel": "tiered",
+      "basePrice": 15,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "emails",
+          "unit": "emails",
+          "pricePerUnit": 1.80,
+          "unitQuantity": 1000,
+          "includedQuantity": 10000
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "tiered",
+      "basePrice": 16.5,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "emails",
+          "unit": "emails",
+          "pricePerUnit": 1.30,
+          "unitQuantity": 1000,
+          "includedQuantity": 10000
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Platform",
+      "slug": "platform",
+      "pricingModel": "tiered",
+      "basePrice": 18,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "emails",
+          "unit": "emails",
+          "pricePerUnit": 1.20,
+          "unitQuantity": 1000,
+          "includedQuantity": 10000
+        }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

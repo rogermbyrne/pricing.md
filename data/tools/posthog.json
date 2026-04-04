@@ -1,0 +1,101 @@
+{
+  "id": "posthog",
+  "name": "PostHog",
+  "description": "Open-source product analytics platform with session replay, feature flags, A/B testing, and usage-based pricing",
+  "url": "https://posthog.com",
+  "pricingUrl": "https://posthog.com/pricing.md",
+  "category": "analytics",
+  "tags": [
+    "analytics",
+    "product-analytics",
+    "session-replay",
+    "feature-flags",
+    "ab-testing"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Autocapture, session replay, feature flags, A/B testing integrations"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "projects": 1,
+        "dataRetentionYears": 1
+      }
+    },
+    {
+      "name": "Paid",
+      "slug": "paid",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "Product Analytics Events",
+          "unit": "events",
+          "pricePerUnit": 0.00005,
+          "unitQuantity": 1,
+          "includedQuantity": 1000000,
+          "tieredPricing": [
+            { "upTo": 1000000, "pricePerUnit": 0 },
+            { "upTo": 2000000, "pricePerUnit": 0.00005 },
+            { "upTo": 15000000, "pricePerUnit": 0.0000343 },
+            { "upTo": 50000000, "pricePerUnit": 0.0000295 },
+            { "upTo": 100000000, "pricePerUnit": 0.0000218 },
+            { "upTo": 250000000, "pricePerUnit": 0.000015 },
+            { "upTo": null, "pricePerUnit": 0.000009 }
+          ]
+        },
+        {
+          "name": "Session Replay Recordings",
+          "unit": "recordings",
+          "pricePerUnit": 0.005,
+          "unitQuantity": 1,
+          "includedQuantity": 5000,
+          "tieredPricing": [
+            { "upTo": 5000, "pricePerUnit": 0 },
+            { "upTo": 15000, "pricePerUnit": 0.005 },
+            { "upTo": 50000, "pricePerUnit": 0.0035 },
+            { "upTo": 150000, "pricePerUnit": 0.002 },
+            { "upTo": 500000, "pricePerUnit": 0.0017 },
+            { "upTo": null, "pricePerUnit": 0.0015 }
+          ]
+        },
+        {
+          "name": "Feature Flag Requests",
+          "unit": "requests",
+          "pricePerUnit": 0.0001,
+          "unitQuantity": 1,
+          "includedQuantity": 1000000,
+          "tieredPricing": [
+            { "upTo": 1000000, "pricePerUnit": 0 },
+            { "upTo": 2000000, "pricePerUnit": 0.0001 },
+            { "upTo": 10000000, "pricePerUnit": 0.000045 },
+            { "upTo": 50000000, "pricePerUnit": 0.000025 },
+            { "upTo": null, "pricePerUnit": 0.00001 }
+          ]
+        }
+      ],
+      "features": [],
+      "limits": {
+        "projects": 6,
+        "dataRetentionYears": 7
+      }
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "amplitude",
+  "name": "Amplitude",
+  "description": "Product analytics platform for tracking user behavior, running experiments, and optimizing digital products",
+  "url": "https://amplitude.com",
+  "pricingUrl": "https://amplitude.com/pricing",
+  "category": "analytics",
+  "tags": [],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Amplitude charts, cohorts, experiment analysis, data taxonomy"
+  },
+  "tiers": [
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "mtus": 10000,
+        "eventsPerMonth": 10000000
+      }
+    },
+    {
+      "name": "Plus",
+      "slug": "plus",
+      "pricingModel": "flat_rate",
+      "basePrice": 49,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "mtus": 300000,
+        "eventsPerMonth": 25000000
+      }
+    },
+    {
+      "name": "Growth",
+      "slug": "growth",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "courier",
+  "name": "Courier",
+  "description": "Multichannel notification platform for email, push, SMS, in-app, and chat",
+  "url": "https://courier.com",
+  "pricingUrl": "https://courier.com/pricing.md",
+  "category": "notifications",
+  "tags": [
+    "notifications",
+    "multichannel",
+    "email",
+    "push",
+    "sms",
+    "in-app"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Courier notification routing, template builder, preference center"
+  },
+  "tiers": [
+    {
+      "name": "Developer",
+      "slug": "developer",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "sends",
+          "unit": "sends",
+          "pricePerUnit": 0,
+          "unitQuantity": 1,
+          "includedQuantity": 10000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "sendsPerMonth": 10000
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "sends",
+          "unit": "sends",
+          "pricePerUnit": 0.005,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

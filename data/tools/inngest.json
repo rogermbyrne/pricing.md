@@ -1,0 +1,80 @@
+{
+  "id": "inngest",
+  "name": "Inngest",
+  "description": "Event-driven orchestration platform with step functions, flow control, and built-in retries for background jobs and workflows",
+  "url": "https://www.inngest.com",
+  "pricingUrl": "https://www.inngest.com/pricing",
+  "category": "queues",
+  "tags": ["queues", "orchestration", "step-functions", "event-driven", "background-jobs"],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Inngest event-driven orchestration, step functions, flow control, built-in retries"
+  },
+  "tiers": [
+    {
+      "name": "Hobby",
+      "slug": "hobby",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "executionsPerMonth": 50000,
+        "concurrentSteps": 5,
+        "realtimeConnections": 50,
+        "users": 3
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "hybrid",
+      "basePrice": 75,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "Executions",
+          "unit": "executions",
+          "pricePerUnit": 0.00005,
+          "unitQuantity": 1,
+          "includedQuantity": 1000000,
+          "tieredPricing": [
+            { "upTo": 1000000, "pricePerUnit": 0 },
+            { "upTo": 5000000, "pricePerUnit": 0.00005 },
+            { "upTo": 15000000, "pricePerUnit": 0.000025 },
+            { "upTo": 50000000, "pricePerUnit": 0.00002 },
+            { "upTo": 100000000, "pricePerUnit": 0.000015 },
+            { "upTo": null, "pricePerUnit": 0.000015 }
+          ]
+        }
+      ],
+      "features": [],
+      "limits": {
+        "concurrentSteps": 100,
+        "realtimeConnections": 1000,
+        "users": 15
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "id": "neon",
+  "name": "Neon",
+  "description": "Serverless Postgres platform with autoscaling, branching, and scale-to-zero",
+  "url": "https://neon.tech",
+  "pricingUrl": "https://neon.tech/pricing.md",
+  "category": "database",
+  "tags": [
+    "database",
+    "postgres",
+    "serverless",
+    "branching"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "PostgreSQL wire protocol",
+    "whatYouLose": "Serverless autoscaling, scale-to-zero, database branching, instant restore, Neon Auth"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "egress",
+          "pricePerUnit": 0,
+          "unitQuantity": 1,
+          "includedQuantity": 5,
+          "unit": "GB"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "projects": 100,
+        "branchesPerProject": 10,
+        "maxComputeCU": 2,
+        "restoreWindowHours": 6,
+        "monitoringRetentionDays": 1,
+        "manualSnapshots": 1,
+        "authMAU": 60000,
+        "computeCUHours": 100,
+        "storageGB": 0.5
+      }
+    },
+    {
+      "name": "Launch",
+      "slug": "launch",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "compute",
+          "pricePerUnit": 0.106,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "CU-hours"
+        },
+        {
+          "name": "storage",
+          "pricePerUnit": 0.35,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "GB-month"
+        },
+        {
+          "name": "extra-branches",
+          "pricePerUnit": 1.5,
+          "unitQuantity": 1,
+          "includedQuantity": 10,
+          "unit": "branches"
+        },
+        {
+          "name": "instant-restore",
+          "pricePerUnit": 0.2,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "GB-month"
+        },
+        {
+          "name": "egress",
+          "pricePerUnit": 0.1,
+          "unitQuantity": 1,
+          "includedQuantity": 100,
+          "unit": "GB"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "projects": 100,
+        "branchesPerProject": 10,
+        "maxComputeCU": 16,
+        "restoreWindowDays": 7,
+        "monitoringRetentionDays": 3,
+        "manualSnapshots": 10,
+        "authMAU": 1000000
+      }
+    },
+    {
+      "name": "Scale",
+      "slug": "scale",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "compute",
+          "pricePerUnit": 0.222,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "CU-hours"
+        },
+        {
+          "name": "storage",
+          "pricePerUnit": 0.35,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "GB-month"
+        },
+        {
+          "name": "extra-branches",
+          "pricePerUnit": 1.5,
+          "unitQuantity": 1,
+          "includedQuantity": 25,
+          "unit": "branches"
+        },
+        {
+          "name": "instant-restore",
+          "pricePerUnit": 0.2,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "GB-month"
+        },
+        {
+          "name": "egress",
+          "pricePerUnit": 0.1,
+          "unitQuantity": 1,
+          "includedQuantity": 100,
+          "unit": "GB"
+        },
+        {
+          "name": "private-network-transfer",
+          "pricePerUnit": 0.01,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "GB"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "projects": 1000,
+        "branchesPerProject": 25,
+        "maxComputeCU": 56,
+        "restoreWindowDays": 30,
+        "monitoringRetentionDays": 14,
+        "manualSnapshots": 10,
+        "authMAU": 1000000
+      }
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "trigger-dev",
+  "name": "Trigger.dev",
+  "description": "Background job orchestration platform with built-in retry, scheduling, and realtime connections",
+  "url": "https://trigger.dev",
+  "pricingUrl": "https://trigger.dev/pricing",
+  "category": "queues",
+  "tags": [],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Trigger.dev task orchestration, built-in retry/scheduling, Realtime connections"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "concurrentRuns": 20,
+        "teamMembers": 5,
+        "schedules": 10,
+        "logRetentionDays": 1,
+        "realtimeConnections": 10,
+        "usageCreditUsd": 5
+      }
+    },
+    {
+      "name": "Hobby",
+      "slug": "hobby",
+      "pricingModel": "flat_rate",
+      "basePrice": 10,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "concurrentRuns": 50,
+        "teamMembers": 5,
+        "environments": 3,
+        "schedules": 100,
+        "logRetentionDays": 7,
+        "alertDestinations": 3,
+        "realtimeConnections": 50,
+        "usageCreditUsd": 10
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 50,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "concurrentRuns": 200,
+        "teamMembers": 25,
+        "schedules": 1000,
+        "logRetentionDays": 30,
+        "realtimeConnections": 500,
+        "usageCreditUsd": 50
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

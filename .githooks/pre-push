@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "Running pre-push checks..."
+npx tsx scripts/pre-push.ts

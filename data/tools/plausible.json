@@ -1,0 +1,75 @@
+{
+  "id": "plausible",
+  "name": "Plausible",
+  "description": "Privacy-friendly, lightweight web analytics platform with simple dashboard, goal tracking, and UTM analysis",
+  "url": "https://plausible.io",
+  "pricingUrl": "https://plausible.io/pricing",
+  "category": "analytics",
+  "tags": ["analytics", "web-analytics", "privacy", "lightweight"],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "Plausible dashboard, goal tracking, UTM analysis"
+  },
+  "tiers": [
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "flat_rate",
+      "basePrice": 9,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "pageviewsPerMonth": 10000
+      }
+    },
+    {
+      "name": "Growth",
+      "slug": "growth",
+      "pricingModel": "flat_rate",
+      "basePrice": 14,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "pageviewsPerMonth": 100000
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "flat_rate",
+      "basePrice": 19,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "pageviewsPerMonth": 200000
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "pageviewsPerMonth": 10000000
+      }
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "launchdarkly",
+  "name": "LaunchDarkly",
+  "description": "Feature flag management platform with SDK integrations, targeting rules, experimentation, and session replays",
+  "url": "https://launchdarkly.com",
+  "pricingUrl": "https://launchdarkly.com/pricing/",
+  "category": "feature-flags",
+  "tags": ["feature-flags", "experimentation", "ab-testing", "targeting", "session-replays"],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "LaunchDarkly SDK integrations, targeting rules, experimentation data, audit logs"
+  },
+  "tiers": [
+    {
+      "name": "Developer",
+      "slug": "developer",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "serviceConnections": 5,
+        "clientSideMAU": 1000,
+        "environments": 3,
+        "sessionReplaysPerMonth": 5000,
+        "logsAndTracesPerMonth": 10000000
+      }
+    },
+    {
+      "name": "Foundation",
+      "slug": "foundation",
+      "pricingModel": "hybrid",
+      "basePrice": 12,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "Client-Side MAU",
+          "unit": "MAU",
+          "pricePerUnit": 10,
+          "unitQuantity": 1000,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Guardian",
+      "slug": "guardian",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

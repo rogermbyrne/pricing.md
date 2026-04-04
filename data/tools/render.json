@@ -1,0 +1,94 @@
+{
+  "id": "render",
+  "name": "Render",
+  "description": "Cloud platform for deploying full-stack apps, databases, and services with usage-based compute pricing",
+  "url": "https://render.com",
+  "pricingUrl": "https://render.com/pricing.md",
+  "category": "hosting",
+  "tags": [
+    "hosting",
+    "deployment",
+    "paas",
+    "databases",
+    "docker"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "PostgreSQL wire protocol",
+    "whatYouLose": "Render-specific infrastructure-as-code config, managed Postgres/Key Value, auto-scaling setup, deploy hooks"
+  },
+  "tiers": [
+    {
+      "name": "Hobby",
+      "slug": "hobby",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "bandwidthGb": 100,
+        "buildPipelineMinutes": 500,
+        "projects": 1,
+        "environments": 2,
+        "customDomains": 2,
+        "logRetentionDays": 7,
+        "rollbackBuilds": 5
+      }
+    },
+    {
+      "name": "Professional",
+      "slug": "professional",
+      "pricingModel": "per_seat",
+      "basePrice": 19,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 19,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "bandwidthGb": 500,
+        "teamMembers": 10,
+        "logRetentionDays": 14,
+        "rollbackBuilds": 15,
+        "privateLinks": 3,
+        "webhooks": 1
+      }
+    },
+    {
+      "name": "Organization",
+      "slug": "organization",
+      "pricingModel": "per_seat",
+      "basePrice": 29,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 29,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "bandwidthGb": 1000,
+        "logRetentionDays": 30,
+        "rollbackBuilds": 30,
+        "privateLinks": 3,
+        "webhooks": 100
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

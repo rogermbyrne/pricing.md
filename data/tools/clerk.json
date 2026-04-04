@@ -1,0 +1,109 @@
+{
+  "id": "clerk",
+  "name": "Clerk",
+  "description": "Authentication and user management platform with prebuilt UI components, OAuth/OIDC support, and enterprise SSO",
+  "url": "https://clerk.com",
+  "pricingUrl": "https://clerk.com/pricing",
+  "category": "auth",
+  "tags": ["auth", "authentication", "user-management", "oauth", "oidc"],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": "OAuth 2.0 / OIDC",
+    "whatYouLose": "Clerk components, prebuilt UI, user management dashboard, webhook integrations"
+  },
+  "tiers": [
+    {
+      "name": "Hobby",
+      "slug": "hobby",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "mruPerApp": 50000,
+        "dashboardSeats": 3
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "hybrid",
+      "basePrice": 25,
+      "billingPeriod": "monthly",
+      "annualDiscount": 20,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "Monthly Active Users (MRU)",
+          "unit": "MRU",
+          "pricePerUnit": 0.02,
+          "unitQuantity": 1,
+          "includedQuantity": 50000,
+          "tieredPricing": [
+            { "upTo": 50000, "pricePerUnit": 0 },
+            { "upTo": 100000, "pricePerUnit": 0.02 },
+            { "upTo": 1000000, "pricePerUnit": 0.018 },
+            { "upTo": 10000000, "pricePerUnit": 0.015 },
+            { "upTo": null, "pricePerUnit": 0.012 }
+          ]
+        },
+        {
+          "name": "Enterprise Connections",
+          "unit": "connections",
+          "pricePerUnit": 75,
+          "unitQuantity": 1,
+          "includedQuantity": 1
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "hybrid",
+      "basePrice": 300,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": 20,
+      "usageMetrics": [
+        {
+          "name": "Monthly Active Users (MRU)",
+          "unit": "MRU",
+          "pricePerUnit": 0.02,
+          "unitQuantity": 1,
+          "includedQuantity": 50000,
+          "tieredPricing": [
+            { "upTo": 50000, "pricePerUnit": 0 },
+            { "upTo": 100000, "pricePerUnit": 0.02 },
+            { "upTo": 1000000, "pricePerUnit": 0.018 },
+            { "upTo": 10000000, "pricePerUnit": 0.015 },
+            { "upTo": null, "pricePerUnit": 0.012 }
+          ]
+        }
+      ],
+      "features": [],
+      "limits": {
+        "dashboardSeats": 10
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

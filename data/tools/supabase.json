@@ -1,0 +1,100 @@
+{
+  "id": "supabase",
+  "name": "Supabase",
+  "description": "Open-source Firebase alternative with PostgreSQL database, authentication, realtime subscriptions, edge functions, and storage",
+  "url": "https://supabase.com",
+  "pricingUrl": "https://supabase.com/pricing",
+  "category": "database",
+  "tags": ["database", "postgresql", "auth", "realtime", "baas"],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "PostgreSQL wire protocol",
+    "whatYouLose": "Supabase Auth, Realtime, Edge Functions, Storage, Dashboard, row-level security helpers"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "databaseMB": 500,
+        "fileStorageMB": 1024,
+        "monthlyActiveUsers": 50000,
+        "bandwidthMB": 512,
+        "projects": 2
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "usage_based",
+      "basePrice": 25,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "Database Storage Overage",
+          "unit": "GB",
+          "pricePerUnit": 0.125,
+          "unitQuantity": 1,
+          "includedQuantity": 8
+        },
+        {
+          "name": "File Storage Overage",
+          "unit": "GB",
+          "pricePerUnit": 0.021,
+          "unitQuantity": 1,
+          "includedQuantity": 100
+        },
+        {
+          "name": "Bandwidth Overage",
+          "unit": "GB",
+          "pricePerUnit": 0.09,
+          "unitQuantity": 1,
+          "includedQuantity": 250
+        }
+      ],
+      "features": [],
+      "limits": {
+        "databaseGB": 8,
+        "fileStorageGB": 100,
+        "monthlyActiveUsers": 100000,
+        "bandwidthGB": 250
+      }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "flat_rate",
+      "basePrice": 599,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

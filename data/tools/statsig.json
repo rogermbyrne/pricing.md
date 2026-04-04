@@ -1,0 +1,70 @@
+{
+  "id": "statsig",
+  "name": "Statsig",
+  "description": "Feature flagging and experimentation platform with warehouse-native integrations and product analytics",
+  "url": "https://statsig.com",
+  "pricingUrl": "https://statsig.com/pricing",
+  "category": "feature-flags",
+  "tags": [],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Statsig console, experiment analysis, metric definitions, warehouse-native integrations"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "eventsPerMonth": 1000000,
+        "seats": 5,
+        "featureFlags": 10,
+        "experiments": 3
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "usage_based",
+      "basePrice": 150,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "events",
+          "unit": "events",
+          "pricePerUnit": 0.03,
+          "unitQuantity": 1000,
+          "includedQuantity": 50000000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "eventsPerMonth": 50000000
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

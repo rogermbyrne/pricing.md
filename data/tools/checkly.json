@@ -1,0 +1,112 @@
+{
+  "id": "checkly",
+  "name": "Checkly",
+  "description": "Monitoring platform for uptime checks, synthetic monitoring with Playwright, status pages, and AI root cause analysis",
+  "url": "https://www.checklyhq.com",
+  "pricingUrl": "https://checklyhq.com/pricing.md",
+  "category": "monitoring",
+  "tags": [
+    "monitoring",
+    "uptime",
+    "synthetic-monitoring",
+    "playwright",
+    "status-pages"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "Playwright",
+    "whatYouLose": "Checkly-specific monitoring dashboards, alert integrations, global check locations"
+  },
+  "tiers": [
+    {
+      "name": "Hobby",
+      "slug": "hobby",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "users": 1,
+        "uptimeMonitors": 10,
+        "browserCheckRuns": 1000,
+        "apiCheckRuns": 10000,
+        "statusPageServices": 20,
+        "statusPageSubscribers": 250,
+        "dashboards": 1,
+        "aiRcaInvocations": 10,
+        "publicLocations": 6,
+        "rawDataRetentionDays": 7,
+        "aggregatedDataRetentionDays": 30
+      }
+    },
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "flat_rate",
+      "basePrice": 60,
+      "billingPeriod": "monthly",
+      "annualDiscount": 20,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "users": 3,
+        "uptimeMonitors": 50,
+        "browserCheckRuns": 3000,
+        "apiCheckRuns": 25000,
+        "statusPageServices": 25,
+        "statusPageSubscribers": 500,
+        "dashboards": 1,
+        "aiRcaInvocations": 50,
+        "publicLocations": 6,
+        "smsAlertsPerMonth": 100,
+        "rawDataRetentionDays": 7,
+        "aggregatedDataRetentionDays": 30
+      }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "flat_rate",
+      "basePrice": 163,
+      "billingPeriod": "monthly",
+      "annualDiscount": 20,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "users": 10,
+        "uptimeMonitors": 75,
+        "browserCheckRuns": 12000,
+        "apiCheckRuns": 100000,
+        "statusPageServices": 50,
+        "statusPageSubscribers": 1000,
+        "dashboards": 10,
+        "aiRcaInvocations": 150,
+        "publicLocations": 22,
+        "smsAlertsPerMonth": 200,
+        "phoneAlertsPerMonth": 200,
+        "rawDataRetentionDays": 30,
+        "aggregatedDataRetentionDays": 365
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

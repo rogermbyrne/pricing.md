@@ -1,0 +1,70 @@
+{
+  "id": "tigris",
+  "name": "Tigris",
+  "description": "Globally distributed, S3-compatible object storage with zero egress fees and usage-based pricing",
+  "url": "https://tigrisdata.com",
+  "pricingUrl": "https://tigrisdata.com/pricing.md",
+  "category": "storage",
+  "tags": [
+    "storage",
+    "object-storage",
+    "s3-compatible",
+    "cdn"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "S3-compatible",
+    "whatYouLose": "Global distribution, zero egress, Tigris-specific storage classes"
+  },
+  "tiers": [
+    {
+      "name": "Pay as You Go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "Standard Storage",
+          "unit": "GB",
+          "pricePerUnit": 0.02,
+          "unitQuantity": 1,
+          "includedQuantity": 5
+        },
+        {
+          "name": "Class A Requests",
+          "unit": "requests",
+          "pricePerUnit": 0.005,
+          "unitQuantity": 1000,
+          "includedQuantity": 10000
+        },
+        {
+          "name": "Class B Requests",
+          "unit": "requests",
+          "pricePerUnit": 0.0005,
+          "unitQuantity": 1000,
+          "includedQuantity": 100000
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

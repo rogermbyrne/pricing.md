@@ -1,0 +1,85 @@
+{
+  "id": "upstash",
+  "name": "Upstash",
+  "description": "Serverless Redis and Kafka with per-request pricing and global replication",
+  "url": "https://upstash.com",
+  "pricingUrl": "https://upstash.com/pricing",
+  "category": "database",
+  "tags": [],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "Redis protocol",
+    "whatYouLose": "Serverless scaling, global replication, QStash messaging, per-request pricing"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "maxDataSizeMb": 256,
+        "maxCommandsPerSec": 10000,
+        "monthlyBandwidthGb": 10
+      }
+    },
+    {
+      "name": "Pay as You Go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "commands",
+          "unit": "commands",
+          "pricePerUnit": 0.2,
+          "unitQuantity": 100000,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "maxDataSizeGb": 100,
+        "maxCommandsPerSec": 10000
+      }
+    },
+    {
+      "name": "Fixed 250MB",
+      "slug": "fixed-250mb",
+      "pricingModel": "flat_rate",
+      "basePrice": 10,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "maxDataSizeMb": 250,
+        "monthlyBandwidthGb": 50
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

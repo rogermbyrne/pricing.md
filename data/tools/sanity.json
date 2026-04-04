@@ -1,0 +1,98 @@
+{
+  "id": "sanity",
+  "name": "Sanity",
+  "description": "Headless CMS platform with GROQ query language, real-time collaboration, Sanity Studio, and Content Lake",
+  "url": "https://sanity.io",
+  "pricingUrl": "https://sanity.io/pricing",
+  "category": "cms",
+  "tags": ["cms", "headless-cms", "content-management", "groq", "real-time"],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "GROQ query language, Sanity Studio, Content Lake, real-time collaboration"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "seats": 20,
+        "datasets": 2,
+        "documents": 10000,
+        "apiCdnRequestsPerMonth": 1000000,
+        "apiRequestsPerMonth": 250000,
+        "assetsGB": 100,
+        "bandwidthGBPerMonth": 100,
+        "aiCreditsPerMonth": 100
+      }
+    },
+    {
+      "name": "Growth",
+      "slug": "growth",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 15,
+      "usageMetrics": [
+        {
+          "name": "API CDN Requests",
+          "unit": "requests",
+          "pricePerUnit": 1,
+          "unitQuantity": 250000,
+          "includedQuantity": 1000000
+        },
+        {
+          "name": "API Requests",
+          "unit": "requests",
+          "pricePerUnit": 1,
+          "unitQuantity": 25000,
+          "includedQuantity": 250000
+        },
+        {
+          "name": "Assets Storage",
+          "unit": "GB",
+          "pricePerUnit": 0.50,
+          "unitQuantity": 1,
+          "includedQuantity": 100
+        },
+        {
+          "name": "Bandwidth",
+          "unit": "GB",
+          "pricePerUnit": 0.30,
+          "unitQuantity": 1,
+          "includedQuantity": 100
+        }
+      ],
+      "features": [],
+      "limits": {
+        "seats": 50,
+        "roles": 5,
+        "datasets": 2,
+        "documents": 25000
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

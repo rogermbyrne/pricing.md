@@ -1,0 +1,78 @@
+{
+  "id": "sendgrid",
+  "name": "SendGrid",
+  "description": "Cloud-based email delivery platform for transactional and marketing emails with analytics and template management",
+  "url": "https://sendgrid.com",
+  "pricingUrl": "https://sendgrid.com/en-us/pricing",
+  "category": "email",
+  "tags": [],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "SMTP",
+    "whatYouLose": "SendGrid email templates, analytics, dedicated IPs, subuser management"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "emailsPerDay": 100
+      }
+    },
+    {
+      "name": "Essentials",
+      "slug": "essentials",
+      "pricingModel": "flat_rate",
+      "basePrice": 19.95,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "emailsPerMonth": 50000,
+        "teammates": 1,
+        "eventWebhooks": 2
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 89.95,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "emailsPerMonth": 100000,
+        "teammates": 1000,
+        "eventWebhooks": 5,
+        "emailValidations": 2500
+      }
+    },
+    {
+      "name": "Premier",
+      "slug": "premier",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

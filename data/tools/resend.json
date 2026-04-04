@@ -1,0 +1,135 @@
+{
+  "id": "resend",
+  "name": "Resend",
+  "description": "Developer-first email API for transactional and marketing emails",
+  "url": "https://resend.com",
+  "pricingUrl": "https://resend.com/pricing.md",
+  "category": "email",
+  "tags": [
+    "transactional-email",
+    "marketing-email",
+    "api",
+    "smtp"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "SMTP",
+    "whatYouLose": "React Email integration, dashboard analytics, domain verification config"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "emails",
+          "pricePerUnit": 0,
+          "unitQuantity": 1000,
+          "includedQuantity": 3000,
+          "unit": "emails"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "emailsPerDay": 100,
+        "domains": 1
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "tiered",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "emails",
+          "pricePerUnit": 0.9,
+          "unitQuantity": 1000,
+          "includedQuantity": 50000,
+          "tieredPricing": [
+            {
+              "upTo": 50000,
+              "pricePerUnit": 0
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 0.9
+            }
+          ],
+          "unit": "emails"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "domains": 10
+      }
+    },
+    {
+      "name": "Scale",
+      "slug": "scale",
+      "pricingModel": "tiered",
+      "basePrice": 90,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "emails",
+          "pricePerUnit": 0.9,
+          "unitQuantity": 1000,
+          "includedQuantity": 100000,
+          "tieredPricing": [
+            {
+              "upTo": 100000,
+              "pricePerUnit": 0
+            },
+            {
+              "upTo": 500000,
+              "pricePerUnit": 0.7
+            },
+            {
+              "upTo": 1000000,
+              "pricePerUnit": 0.65
+            },
+            {
+              "upTo": 2500000,
+              "pricePerUnit": 0.46
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 0.46
+            }
+          ],
+          "unit": "emails"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "domains": 1000
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

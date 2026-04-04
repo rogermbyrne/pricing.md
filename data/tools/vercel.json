@@ -1,0 +1,146 @@
+{
+  "id": "vercel",
+  "name": "Vercel",
+  "description": "Frontend cloud platform for deploying and scaling web applications with serverless functions and edge network",
+  "url": "https://vercel.com",
+  "pricingUrl": "https://vercel.com/pricing.md",
+  "category": "hosting",
+  "tags": [
+    "hosting",
+    "deployment",
+    "serverless",
+    "edge",
+    "cdn",
+    "jamstack"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Vercel-specific edge functions, ISR caching, Fluid compute, image optimization pipeline, analytics integrations"
+  },
+  "tiers": [
+    {
+      "name": "Hobby",
+      "slug": "hobby",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "edge-requests",
+          "pricePerUnit": 0,
+          "unitQuantity": 1000000,
+          "includedQuantity": 1000000,
+          "unit": "requests"
+        },
+        {
+          "name": "fast-data-transfer",
+          "pricePerUnit": 0,
+          "unitQuantity": 1,
+          "includedQuantity": 100,
+          "unit": "GB"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "developerSeats": 1,
+        "customFirewallRules": 3,
+        "concurrentSandboxes": 10,
+        "functionInvocations": 1000000,
+        "activeCpuHours": 4,
+        "imageTransformations": 5000
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "hybrid",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 20,
+      "usageMetrics": [
+        {
+          "name": "edge-requests",
+          "pricePerUnit": 2,
+          "unitQuantity": 1000000,
+          "includedQuantity": 10000000,
+          "unit": "requests"
+        },
+        {
+          "name": "fast-data-transfer",
+          "pricePerUnit": 0.15,
+          "unitQuantity": 1,
+          "includedQuantity": 1000,
+          "unit": "GB"
+        },
+        {
+          "name": "function-invocations",
+          "pricePerUnit": 0.6,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0,
+          "unit": "invocations"
+        },
+        {
+          "name": "active-cpu",
+          "pricePerUnit": 0.128,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "hours"
+        },
+        {
+          "name": "image-transformations",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1000,
+          "includedQuantity": 0,
+          "unit": "transformations"
+        },
+        {
+          "name": "build-minutes-standard",
+          "pricePerUnit": 0.014,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "minutes"
+        },
+        {
+          "name": "web-analytics",
+          "pricePerUnit": 3,
+          "unitQuantity": 100000,
+          "includedQuantity": 0,
+          "unit": "events"
+        },
+        {
+          "name": "log-drains",
+          "pricePerUnit": 0.5,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "GB"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "customFirewallRules": 40,
+        "concurrentSandboxes": 2000
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "customFirewallRules": 1000
+      }
+    }
+  ]
+}

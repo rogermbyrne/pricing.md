@@ -1,0 +1,84 @@
+{
+  "id": "engagespot",
+  "name": "Engagespot",
+  "description": "Multi-channel notification infrastructure with in-app inbox, workflows, and preference management",
+  "url": "https://engagespot.co",
+  "pricingUrl": "https://engagespot.co/pricing.md",
+  "category": "notifications",
+  "tags": [
+    "notifications",
+    "in-app",
+    "multichannel",
+    "workflows",
+    "preferences"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Engagespot in-app notification center, preference management, workflow builder"
+  },
+  "tiers": [
+    {
+      "name": "Launch",
+      "slug": "launch",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "event-triggers",
+          "unit": "event triggers",
+          "pricePerUnit": 0,
+          "unitQuantity": 1000,
+          "includedQuantity": 10000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "eventTriggersPerMonth": 10000,
+        "environments": 2,
+        "teamMembers": 2,
+        "feedRetentionDays": 7
+      }
+    },
+    {
+      "name": "Growth",
+      "slug": "growth",
+      "pricingModel": "tiered",
+      "basePrice": 250,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "event-triggers",
+          "unit": "event triggers",
+          "pricePerUnit": 1.5,
+          "unitQuantity": 1000,
+          "includedQuantity": 250000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "feedRetentionDays": 90
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

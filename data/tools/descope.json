@@ -1,0 +1,130 @@
+{
+  "id": "descope",
+  "name": "Descope",
+  "description": "Drag-and-drop authentication and user management platform with visual workflow builder",
+  "url": "https://descope.com",
+  "pricingUrl": "https://descope.com/pricing.md",
+  "category": "auth",
+  "tags": [
+    "authentication",
+    "sso",
+    "mfa",
+    "passkeys",
+    "b2b",
+    "oauth",
+    "oidc",
+    "scim",
+    "fga"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": "OAuth 2.0 / OIDC",
+    "whatYouLose": "Descope Flows visual builder, SDK integrations, tenant/organization model, SSO connection configs, consent and token vault data"
+  },
+  "tiers": [
+    {
+      "name": "Free Forever",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "MAUs",
+          "pricePerUnit": 0,
+          "unitQuantity": 1,
+          "includedQuantity": 7500,
+          "unit": "MAUs"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "MAUs": 7500,
+        "monthlyActiveTenants": 10,
+        "ssoConnections": 3,
+        "federatedApps": 1,
+        "testUsers": 5,
+        "m2mExchanges": 10000,
+        "monthlyActiveConsents": 2000,
+        "monthlyActiveTokens": 2000,
+        "auditRetentionDays": 7
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "tiered",
+      "basePrice": 249,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "MAUs",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1,
+          "includedQuantity": 10000,
+          "unit": "MAUs"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "MAUs": 10000,
+        "monthlyActiveTenants": 35,
+        "ssoConnections": 5,
+        "federatedApps": 2,
+        "testUsers": 100,
+        "m2mExchanges": 50000,
+        "monthlyActiveConsents": 5000,
+        "monthlyActiveTokens": 5000,
+        "auditRetentionDays": 30
+      }
+    },
+    {
+      "name": "Growth",
+      "slug": "growth",
+      "pricingModel": "tiered",
+      "basePrice": 799,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "MAUs",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1,
+          "includedQuantity": 25000,
+          "unit": "MAUs"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "MAUs": 25000,
+        "monthlyActiveTenants": 100,
+        "ssoConnections": 10,
+        "testUsers": 500,
+        "m2mExchanges": 100000,
+        "monthlyActiveConsents": 10000,
+        "monthlyActiveTokens": 10000,
+        "auditRetentionDays": 30
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

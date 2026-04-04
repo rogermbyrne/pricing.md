@@ -1,0 +1,116 @@
+{
+  "id": "mergent",
+  "name": "Mergent",
+  "description": "Usage-based task scheduling and invocation platform for developers",
+  "url": "https://mergent.co",
+  "pricingUrl": "https://docs.mergent.co/pricing.md",
+  "category": "scheduling",
+  "tags": [
+    "task-scheduling",
+    "cron",
+    "invocations",
+    "api"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Mergent task scheduling, retry logic, dashboard"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "invocations",
+          "unit": "invocations",
+          "pricePerUnit": 0,
+          "unitQuantity": 1,
+          "includedQuantity": 1000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "invocationsPerMonth": 1000
+      }
+    },
+    {
+      "name": "Standard",
+      "slug": "standard",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "invocations",
+          "unit": "invocations",
+          "pricePerUnit": 0.002,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "tieredPricing": [
+            {
+              "upTo": 10000,
+              "pricePerUnit": 0.002
+            },
+            {
+              "upTo": 100000,
+              "pricePerUnit": 0.00175
+            },
+            {
+              "upTo": 500000,
+              "pricePerUnit": 0.0005
+            },
+            {
+              "upTo": 1000000,
+              "pricePerUnit": 0.0002
+            },
+            {
+              "upTo": 2000000,
+              "pricePerUnit": 0.000175
+            },
+            {
+              "upTo": 10000000,
+              "pricePerUnit": 0.00005
+            },
+            {
+              "upTo": 100000000,
+              "pricePerUnit": 0.00002
+            },
+            {
+              "upTo": 1000000000,
+              "pricePerUnit": 0.000004
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 0.000003
+            }
+          ]
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

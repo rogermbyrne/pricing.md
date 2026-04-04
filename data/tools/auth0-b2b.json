@@ -1,0 +1,175 @@
+{
+  "id": "auth0-b2b",
+  "name": "Auth0 (B2B)",
+  "description": "Flexible authentication and authorization platform for B2B applications, by Okta",
+  "url": "https://auth0.com",
+  "pricingUrl": "https://auth0.com/pricing.md",
+  "category": "auth",
+  "tags": [
+    "authentication",
+    "authorization",
+    "sso",
+    "mfa",
+    "b2b",
+    "oauth",
+    "oidc"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": "OAuth 2.0 / OIDC",
+    "whatYouLose": "Auth0 SDKs, Actions/Forms extensibility, Universal Login customization, user database and migration tooling, organization model"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "MAUs",
+          "pricePerUnit": 0,
+          "unitQuantity": 1000,
+          "includedQuantity": 25000,
+          "unit": "MAUs"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "MAUs": 25000,
+        "organizations": 5,
+        "enterpriseConnections": 1,
+        "m2mTokens": 1000,
+        "tenants": 1,
+        "adminContributors": 3,
+        "logRetentionDays": 1,
+        "actionsAndForms": 5
+      }
+    },
+    {
+      "name": "B2B Essentials",
+      "slug": "b2b-essentials",
+      "pricingModel": "tiered",
+      "basePrice": 150,
+      "billingPeriod": "monthly",
+      "annualDiscount": 8.33,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "MAUs",
+          "pricePerUnit": 300,
+          "unitQuantity": 1000,
+          "includedQuantity": 500,
+          "tieredPricing": [
+            {
+              "upTo": 500,
+              "pricePerUnit": 0
+            },
+            {
+              "upTo": 1000,
+              "pricePerUnit": 300
+            },
+            {
+              "upTo": 5000,
+              "pricePerUnit": 280
+            },
+            {
+              "upTo": 10000,
+              "pricePerUnit": 260
+            },
+            {
+              "upTo": 20000,
+              "pricePerUnit": 190
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 190
+            }
+          ],
+          "unit": "MAUs"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "enterpriseConnections": 3,
+        "m2mTokens": 1000,
+        "tenants": 3,
+        "logRetentionDays": 5,
+        "logStreams": 1,
+        "actionsAndForms": 10
+      }
+    },
+    {
+      "name": "B2B Professional",
+      "slug": "b2b-professional",
+      "pricingModel": "tiered",
+      "basePrice": 800,
+      "billingPeriod": "monthly",
+      "annualDiscount": 8.33,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "MAUs",
+          "pricePerUnit": 800,
+          "unitQuantity": 1000,
+          "includedQuantity": 500,
+          "tieredPricing": [
+            {
+              "upTo": 500,
+              "pricePerUnit": 0
+            },
+            {
+              "upTo": 2500,
+              "pricePerUnit": 240
+            },
+            {
+              "upTo": 5000,
+              "pricePerUnit": 300
+            },
+            {
+              "upTo": 10000,
+              "pricePerUnit": 240
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 240
+            }
+          ],
+          "unit": "MAUs"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "enterpriseConnections": 5,
+        "m2mTokens": 5000,
+        "tenants": 12,
+        "logRetentionDays": 10,
+        "logStreams": 2,
+        "actionsAndForms": 15
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "m2mTokens": 5000,
+        "logRetentionDays": 30,
+        "logStreams": 2,
+        "actionsAndForms": 30
+      }
+    }
+  ]
+}

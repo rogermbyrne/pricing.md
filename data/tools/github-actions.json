@@ -1,0 +1,64 @@
+{
+  "id": "github-actions",
+  "name": "GitHub Actions",
+  "description": "CI/CD automation platform integrated with GitHub repositories for building, testing, and deploying code",
+  "url": "https://github.com",
+  "pricingUrl": "https://github.com/pricing",
+  "category": "ci-cd",
+  "tags": [],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "YAML",
+    "whatYouLose": "GitHub-native triggers, marketplace actions, tight PR/issue integration, hosted runners"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "minutesPerMonth": 2000,
+        "packagesStorageMb": 500
+      }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "per_seat",
+      "basePrice": 4,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 4,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "minutesPerMonth": 3000,
+        "packagesStorageGb": 2
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "per_seat",
+      "basePrice": 21,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 21,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "minutesPerMonth": 50000,
+        "packagesStorageGb": 50
+      }
+    }
+  ]
+}

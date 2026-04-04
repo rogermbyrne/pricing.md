@@ -1,0 +1,164 @@
+{
+  "id": "mux",
+  "name": "Mux",
+  "description": "Video infrastructure for developers with encoding, storage, and delivery APIs",
+  "url": "https://mux.com",
+  "pricingUrl": "https://www.mux.com/docs/pricing.txt",
+  "category": "storage",
+  "tags": [
+    "video",
+    "streaming",
+    "cdn",
+    "encoding",
+    "infrastructure"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Mux Player, Data analytics, encoding pipeline, delivery CDN, asset management"
+  },
+  "tiers": [
+    {
+      "name": "Pay As You Go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "plus-encoding-720p",
+          "unit": "minutes",
+          "pricePerUnit": 0.025,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "tieredPricing": [
+            { "upTo": 5000, "pricePerUnit": 0.025 },
+            { "upTo": 15000, "pricePerUnit": 0.02375 },
+            { "upTo": 25000, "pricePerUnit": 0.023125 },
+            { "upTo": null, "pricePerUnit": 0.0225 }
+          ]
+        },
+        {
+          "name": "plus-encoding-1080p",
+          "unit": "minutes",
+          "pricePerUnit": 0.03125,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "tieredPricing": [
+            { "upTo": 5000, "pricePerUnit": 0.03125 },
+            { "upTo": 15000, "pricePerUnit": 0.029688 },
+            { "upTo": 25000, "pricePerUnit": 0.028906 },
+            { "upTo": null, "pricePerUnit": 0.028125 }
+          ]
+        },
+        {
+          "name": "plus-storage-720p",
+          "unit": "minutes/month",
+          "pricePerUnit": 0.0024,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "tieredPricing": [
+            { "upTo": 50000, "pricePerUnit": 0.0024 },
+            { "upTo": 150000, "pricePerUnit": 0.00232 },
+            { "upTo": 250000, "pricePerUnit": 0.00228 },
+            { "upTo": null, "pricePerUnit": 0.00224 }
+          ]
+        },
+        {
+          "name": "plus-delivery-720p",
+          "unit": "minutes",
+          "pricePerUnit": 0.0008,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "tieredPricing": [
+            { "upTo": 500000, "pricePerUnit": 0.0008 },
+            { "upTo": 1000000, "pricePerUnit": 0.00076 },
+            { "upTo": 2000000, "pricePerUnit": 0.00072 },
+            { "upTo": 6000000, "pricePerUnit": 0.00067 },
+            { "upTo": 10000000, "pricePerUnit": 0.00061 },
+            { "upTo": null, "pricePerUnit": 0.00056 }
+          ]
+        },
+        {
+          "name": "live-captions",
+          "unit": "minutes",
+          "pricePerUnit": 0.024,
+          "unitQuantity": 1,
+          "includedQuantity": 6000
+        },
+        {
+          "name": "live-simulcasting",
+          "unit": "minutes per target",
+          "pricePerUnit": 0.02,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "drm-access-fee",
+          "unit": "months",
+          "pricePerUnit": 100,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "drm-license",
+          "unit": "licenses",
+          "pricePerUnit": 0.003,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "freeDeliveryMinutes": 100000
+      }
+    },
+    {
+      "name": "Launch Credits",
+      "slug": "launch-credits",
+      "pricingModel": "hybrid",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "monthlyCreditsUsd": 100
+      }
+    },
+    {
+      "name": "Scale Credits",
+      "slug": "scale-credits",
+      "pricingModel": "hybrid",
+      "basePrice": 500,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "monthlyCreditsUsd": 1000
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "minimumMonthlyUsd": 3000
+      }
+    }
+  ]
+}

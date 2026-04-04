@@ -1,0 +1,145 @@
+{
+  "id": "deno-deploy",
+  "name": "Deno Deploy",
+  "description": "Edge-first serverless platform for JavaScript and TypeScript with built-in Deno KV database",
+  "url": "https://deno.com",
+  "pricingUrl": "https://deno.com/deploy/pricing",
+  "category": "edge",
+  "tags": [],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "Web Standards (Fetch, Web Crypto)",
+    "whatYouLose": "Deno KV, global edge network, automatic TLS, deploy-from-GitHub"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "requestsPerMonth": 1000000,
+        "egressBandwidthGb": 100,
+        "kvStorageGiB": 1,
+        "kvReadUnitsPerMonth": 450000,
+        "kvWriteUnitsPerMonth": 300000
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "hybrid",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "requests",
+          "unit": "requests",
+          "pricePerUnit": 2,
+          "unitQuantity": 1000000,
+          "includedQuantity": 5000000
+        },
+        {
+          "name": "egress",
+          "unit": "GB",
+          "pricePerUnit": 0.50,
+          "unitQuantity": 1,
+          "includedQuantity": 200
+        },
+        {
+          "name": "kv-storage",
+          "unit": "GiB",
+          "pricePerUnit": 0.75,
+          "unitQuantity": 1,
+          "includedQuantity": 5
+        },
+        {
+          "name": "kv-reads",
+          "unit": "reads",
+          "pricePerUnit": 1,
+          "unitQuantity": 1000000,
+          "includedQuantity": 1300000
+        },
+        {
+          "name": "kv-writes",
+          "unit": "writes",
+          "pricePerUnit": 2.50,
+          "unitQuantity": 1000000,
+          "includedQuantity": 900000
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Builder",
+      "slug": "builder",
+      "pricingModel": "hybrid",
+      "basePrice": 200,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "requests",
+          "unit": "requests",
+          "pricePerUnit": 2,
+          "unitQuantity": 1000000,
+          "includedQuantity": 20000000
+        },
+        {
+          "name": "egress",
+          "unit": "GB",
+          "pricePerUnit": 0.50,
+          "unitQuantity": 1,
+          "includedQuantity": 300
+        },
+        {
+          "name": "kv-storage",
+          "unit": "GiB",
+          "pricePerUnit": 0.75,
+          "unitQuantity": 1,
+          "includedQuantity": 10
+        },
+        {
+          "name": "kv-reads",
+          "unit": "reads",
+          "pricePerUnit": 1,
+          "unitQuantity": 1000000,
+          "includedQuantity": 5000000
+        },
+        {
+          "name": "kv-writes",
+          "unit": "writes",
+          "pricePerUnit": 2.50,
+          "unitQuantity": 1000000,
+          "includedQuantity": 3000000
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

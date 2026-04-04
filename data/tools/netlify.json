@@ -1,0 +1,99 @@
+{
+  "id": "netlify",
+  "name": "Netlify",
+  "description": "Web platform for building, deploying, and scaling modern web projects with credit-based usage pricing",
+  "url": "https://netlify.com",
+  "pricingUrl": "https://netlify.com/pricing.md",
+  "category": "hosting",
+  "tags": [
+    "hosting",
+    "deployment",
+    "jamstack",
+    "serverless",
+    "cdn"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Netlify Functions, deploy previews, credit-based billing model, built-in form handling, Agent Runners"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "credits",
+          "pricePerUnit": 0,
+          "unitQuantity": 1,
+          "includedQuantity": 300,
+          "unit": "credits"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "credits": 300
+      }
+    },
+    {
+      "name": "Personal",
+      "slug": "personal",
+      "pricingModel": "hybrid",
+      "basePrice": 9,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "credits",
+          "pricePerUnit": 0.01,
+          "unitQuantity": 1,
+          "includedQuantity": 1000,
+          "unit": "credits"
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "hybrid",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 20,
+      "usageMetrics": [
+        {
+          "name": "credits",
+          "pricePerUnit": 0.00667,
+          "unitQuantity": 1,
+          "includedQuantity": 3000,
+          "unit": "credits"
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

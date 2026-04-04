@@ -1,0 +1,82 @@
+{
+  "id": "planetscale-vitess",
+  "name": "PlanetScale Vitess",
+  "description": "MySQL-compatible distributed database with horizontal sharding via Vitess",
+  "url": "https://planetscale.com",
+  "pricingUrl": "https://planetscale.com/pricing.md",
+  "category": "database",
+  "tags": [
+    "database",
+    "mysql",
+    "vitess",
+    "managed"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "MySQL wire protocol",
+    "whatYouLose": "Vitess horizontal sharding, non-blocking schema changes, managed HA clustering, metal storage tiers"
+  },
+  "tiers": [
+    {
+      "name": "Vitess Non-Metal",
+      "slug": "vitess-non-metal",
+      "pricingModel": "usage_based",
+      "basePrice": 39,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "cluster-node",
+          "pricePerUnit": 39,
+          "unitQuantity": 1,
+          "includedQuantity": 1,
+          "unit": "nodes"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "minPriceUsd": 39,
+        "maxPriceUsd": 7199,
+        "minVcpu": 0.125,
+        "maxVcpu": 64,
+        "minMemoryGiB": 1,
+        "maxMemoryGiB": 256,
+        "replicaCount": 2
+      }
+    },
+    {
+      "name": "Vitess Metal",
+      "slug": "vitess-metal",
+      "pricingModel": "usage_based",
+      "basePrice": 609,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "cluster-node",
+          "pricePerUnit": 609,
+          "unitQuantity": 1,
+          "includedQuantity": 1,
+          "unit": "nodes"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "minPriceUsd": 609,
+        "maxPriceUsd": 23979,
+        "minVcpu": 2,
+        "maxVcpu": 64,
+        "minMemoryGiB": 16,
+        "maxMemoryGiB": 512,
+        "minStorageGiB": 110,
+        "maxStorageGiB": 14992,
+        "replicaCount": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "id": "planetscale-postgres",
+  "name": "PlanetScale Postgres",
+  "description": "Managed PostgreSQL with single-node or HA clustering options",
+  "url": "https://planetscale.com",
+  "pricingUrl": "https://planetscale.com/pricing.md",
+  "category": "database",
+  "tags": [
+    "database",
+    "postgres",
+    "managed"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "MySQL wire protocol",
+    "whatYouLose": "Vitess horizontal sharding, non-blocking schema changes, managed HA clustering, metal storage tiers"
+  },
+  "tiers": [
+    {
+      "name": "Postgres EBS Non-HA",
+      "slug": "postgres-ebs-non-ha",
+      "pricingModel": "usage_based",
+      "basePrice": 5,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "cluster-node",
+          "pricePerUnit": 5,
+          "unitQuantity": 1,
+          "includedQuantity": 1,
+          "unit": "nodes"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "minPriceUsd": 5,
+        "maxPriceUsd": 1867,
+        "minVcpu": 0.0625,
+        "maxVcpu": 32,
+        "minMemoryGiB": 0.5,
+        "maxMemoryGiB": 256
+      }
+    },
+    {
+      "name": "Postgres EBS HA",
+      "slug": "postgres-ebs-ha",
+      "pricingModel": "usage_based",
+      "basePrice": 15,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "cluster-node",
+          "pricePerUnit": 15,
+          "unitQuantity": 1,
+          "includedQuantity": 1,
+          "unit": "nodes"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "minPriceUsd": 15,
+        "maxPriceUsd": 5599,
+        "minVcpu": 0.0625,
+        "maxVcpu": 32,
+        "minMemoryGiB": 0.5,
+        "maxMemoryGiB": 256,
+        "replicaCount": 2
+      }
+    },
+    {
+      "name": "Postgres Metal",
+      "slug": "postgres-metal",
+      "pricingModel": "usage_based",
+      "basePrice": 50,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "cluster-node",
+          "pricePerUnit": 50,
+          "unitQuantity": 1,
+          "includedQuantity": 1,
+          "unit": "nodes"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "minPriceUsd": 50,
+        "maxPriceUsd": 94429,
+        "minVcpu": 0.125,
+        "maxVcpu": 192,
+        "minMemoryGiB": 1,
+        "maxMemoryGiB": 1536,
+        "minStorageGiB": 10,
+        "maxStorageGiB": 122880,
+        "replicaCount": 2
+      }
+    }
+  ]
+}

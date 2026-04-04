@@ -1,0 +1,53 @@
+{
+  "id": "fly-io",
+  "name": "Fly.io",
+  "description": "Global application platform that runs full-stack apps and databases close to users with usage-based pricing",
+  "url": "https://fly.io",
+  "pricingUrl": "https://fly.io/docs/about/pricing/",
+  "category": "hosting",
+  "tags": [],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Fly.io Machines API, global Anycast networking, built-in WireGuard, fly.toml config"
+  },
+  "tiers": [
+    {
+      "name": "Pay As You Go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "shared-cpu-1x-256mb",
+          "unit": "VMs/month",
+          "pricePerUnit": 2.02,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "volume-storage",
+          "unit": "GB/month",
+          "pricePerUnit": 0.15,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "bandwidth-na-eu",
+          "unit": "GB",
+          "pricePerUnit": 0.02,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

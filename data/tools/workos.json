@@ -1,0 +1,127 @@
+{
+  "id": "workos",
+  "name": "WorkOS",
+  "description": "Enterprise-ready authentication and identity platform with SSO, directory sync, and user management",
+  "url": "https://workos.com",
+  "pricingUrl": "https://workos.com/pricing.md",
+  "category": "auth",
+  "tags": [
+    "authentication",
+    "sso",
+    "directory-sync",
+    "enterprise",
+    "oauth",
+    "oidc",
+    "scim"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": "OAuth 2.0 / OIDC",
+    "whatYouLose": "AuthKit UI components, WorkOS SDKs, SSO connection configurations, directory sync integrations, audit log pipeline"
+  },
+  "tiers": [
+    {
+      "name": "Pay as You Go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "MAUs",
+          "pricePerUnit": 2500,
+          "unitQuantity": 1000000,
+          "includedQuantity": 1000000,
+          "tieredPricing": [
+            {
+              "upTo": 1000000,
+              "pricePerUnit": 0
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 2500
+            }
+          ],
+          "unit": "MAUs"
+        },
+        {
+          "name": "SSO connections",
+          "pricePerUnit": 125,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "tieredPricing": [
+            {
+              "upTo": 15,
+              "pricePerUnit": 125
+            },
+            {
+              "upTo": 30,
+              "pricePerUnit": 100
+            },
+            {
+              "upTo": 50,
+              "pricePerUnit": 80
+            },
+            {
+              "upTo": 100,
+              "pricePerUnit": 65
+            },
+            {
+              "upTo": 200,
+              "pricePerUnit": 50
+            }
+          ],
+          "unit": "connections"
+        },
+        {
+          "name": "Directory Sync connections",
+          "pricePerUnit": 125,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "tieredPricing": [
+            {
+              "upTo": 15,
+              "pricePerUnit": 125
+            },
+            {
+              "upTo": 30,
+              "pricePerUnit": 100
+            },
+            {
+              "upTo": 50,
+              "pricePerUnit": 80
+            },
+            {
+              "upTo": 100,
+              "pricePerUnit": 65
+            },
+            {
+              "upTo": 200,
+              "pricePerUnit": 50
+            }
+          ],
+          "unit": "connections"
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Annual Credits",
+      "slug": "annual-credits",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

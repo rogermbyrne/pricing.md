@@ -1,0 +1,101 @@
+{
+  "id": "algolia",
+  "name": "Algolia",
+  "description": "Search and discovery API platform with AI-powered recommendations, instant search, and analytics",
+  "url": "https://algolia.com",
+  "pricingUrl": "https://www.algolia.com/pricing/",
+  "category": "search",
+  "tags": [],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Algolia InstantSearch UI, AI Recommendations, analytics, A/B testing, query rules"
+  },
+  "tiers": [
+    {
+      "name": "Build",
+      "slug": "build",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "searchRequestsPerMonth": 10000,
+        "records": 1000000,
+        "aiRecommendationRequestsPerMonth": 10000
+      }
+    },
+    {
+      "name": "Grow",
+      "slug": "grow",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "search-requests",
+          "unit": "requests",
+          "pricePerUnit": 0.50,
+          "unitQuantity": 1000,
+          "includedQuantity": 10000
+        },
+        {
+          "name": "records",
+          "unit": "records",
+          "pricePerUnit": 0.40,
+          "unitQuantity": 1000,
+          "includedQuantity": 100000
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Grow Plus",
+      "slug": "grow-plus",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "search-requests",
+          "unit": "requests",
+          "pricePerUnit": 1.75,
+          "unitQuantity": 1000,
+          "includedQuantity": 10000
+        },
+        {
+          "name": "records",
+          "unit": "records",
+          "pricePerUnit": 0.40,
+          "unitQuantity": 1000,
+          "includedQuantity": 100000
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Elevate",
+      "slug": "elevate",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

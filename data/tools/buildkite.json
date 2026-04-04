@@ -1,0 +1,104 @@
+{
+  "id": "buildkite",
+  "name": "Buildkite",
+  "description": "CI/CD platform for running fast, secure, and scalable pipelines on your own infrastructure or hosted agents",
+  "url": "https://buildkite.com",
+  "pricingUrl": "https://buildkite.com/docs/platform/pricing-and-plans.md",
+  "category": "ci-cd",
+  "tags": [
+    "ci-cd",
+    "continuous-integration",
+    "continuous-deployment",
+    "pipelines",
+    "self-hosted-runners"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "YAML",
+    "whatYouLose": "Buildkite agent infrastructure, pipeline YAML config, Test Engine analytics, Package Registries, hosted agent minutes"
+  },
+  "tiers": [
+    {
+      "name": "Personal",
+      "slug": "personal",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "hosted-agent-minutes",
+          "pricePerUnit": 0,
+          "unitQuantity": 1,
+          "includedQuantity": 500,
+          "unit": "minutes"
+        },
+        {
+          "name": "test-executions",
+          "pricePerUnit": 0,
+          "unitQuantity": 1,
+          "includedQuantity": 50000,
+          "unit": "executions"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "activeUsers": 1,
+        "concurrentJobs": 3,
+        "buildRetentionDays": 90,
+        "packageRegistriesStorageGB": 1,
+        "testEngineWorkflows": 1
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "per_seat",
+      "basePrice": 30,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 30,
+      "usageMetrics": [
+        {
+          "name": "hosted-agent-minutes",
+          "pricePerUnit": 0,
+          "unitQuantity": 1,
+          "includedQuantity": 2000,
+          "unit": "minutes"
+        },
+{
+          "name": "additional-agents",
+          "pricePerUnit": 2.5,
+          "unitQuantity": 1,
+          "includedQuantity": 10,
+          "unit": "agents"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "buildRetentionDays": 365,
+        "packageRegistriesStorageGB": 20,
+        "testEngineWorkflows": 3,
+        "managedTestsIncluded": 250
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "buildRetentionDays": 365
+      }
+    }
+  ]
+}

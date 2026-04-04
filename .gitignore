@@ -1,0 +1,16 @@
+node_modules/
+dist/
+data/discovery.db
+data/discovery.db-shm
+data/discovery.db-wal
+data/raw/
+data/snapshots/
+*.tgz
+# Local-only research skill
+scripts/research/
+.agents/
+.claude/skills/
+PROCESSES.md
+PROMO-FEATURE-PLAN.md
+.superset/
+skills-lock.json

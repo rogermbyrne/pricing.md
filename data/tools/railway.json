@@ -1,0 +1,161 @@
+{
+  "id": "railway",
+  "name": "Railway",
+  "description": "Deploy apps and databases with zero config, usage-based pricing",
+  "url": "https://railway.com",
+  "pricingUrl": "https://docs.railway.com/pricing.md",
+  "category": "hosting",
+  "tags": [
+    "hosting",
+    "deployment",
+    "paas",
+    "databases"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Railway-specific config (railway.toml), built-in databases, deployment pipelines"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "ram",
+          "pricePerUnit": 10,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "GB/month"
+        },
+        {
+          "name": "cpu",
+          "pricePerUnit": 20,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "vCPU/month"
+        },
+        {
+          "name": "network-egress",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "GB"
+        },
+        {
+          "name": "volume-storage",
+          "pricePerUnit": 0.15,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "GB"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "resourceCreditsUsd": 1
+      }
+    },
+    {
+      "name": "Hobby",
+      "slug": "hobby",
+      "pricingModel": "hybrid",
+      "basePrice": 5,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "ram",
+          "pricePerUnit": 10,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "GB/month"
+        },
+        {
+          "name": "cpu",
+          "pricePerUnit": 20,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "vCPU/month"
+        },
+        {
+          "name": "network-egress",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "GB"
+        },
+        {
+          "name": "volume-storage",
+          "pricePerUnit": 0.15,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "GB"
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "hybrid",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "ram",
+          "pricePerUnit": 10,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "GB/month"
+        },
+        {
+          "name": "cpu",
+          "pricePerUnit": 20,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "vCPU/month"
+        },
+        {
+          "name": "network-egress",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "GB"
+        },
+        {
+          "name": "volume-storage",
+          "pricePerUnit": 0.15,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "GB"
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "id": "turso",
+  "name": "Turso",
+  "description": "Edge-hosted SQLite-compatible database with embedded replicas",
+  "url": "https://turso.tech",
+  "pricingUrl": "https://turso.tech/pricing.md",
+  "category": "database",
+  "tags": [
+    "database",
+    "sqlite",
+    "edge",
+    "embedded-replicas"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "SQLite wire protocol (libSQL)",
+    "whatYouLose": "Edge replication, embedded replicas, multi-region, Turso-specific extensions"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "rows-read",
+          "pricePerUnit": 0,
+          "unitQuantity": 1000000000,
+          "includedQuantity": 500000000,
+          "unit": "rows"
+        },
+        {
+          "name": "rows-written",
+          "pricePerUnit": 0,
+          "unitQuantity": 1000000,
+          "includedQuantity": 10000000,
+          "unit": "rows"
+        },
+        {
+          "name": "syncs",
+          "unit": "GB",
+          "pricePerUnit": 0,
+          "unitQuantity": 1,
+          "includedQuantity": 3
+        }
+      ],
+      "features": [],
+      "limits": {
+        "databases": 100,
+        "storageGb": 5,
+        "pointInTimeRestoreDays": 1
+      }
+    },
+    {
+      "name": "Developer",
+      "slug": "developer",
+      "pricingModel": "hybrid",
+      "basePrice": 5.99,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "rows-read",
+          "pricePerUnit": 1,
+          "unitQuantity": 1000000000,
+          "includedQuantity": 2500000000,
+          "unit": "rows"
+        },
+        {
+          "name": "rows-written",
+          "pricePerUnit": 1,
+          "unitQuantity": 1000000,
+          "includedQuantity": 25000000,
+          "unit": "rows"
+        },
+        {
+          "name": "storage",
+          "pricePerUnit": 0.75,
+          "unitQuantity": 1,
+          "includedQuantity": 9,
+          "unit": "GB"
+        },
+        {
+          "name": "active-databases",
+          "pricePerUnit": 0.2,
+          "unitQuantity": 1,
+          "includedQuantity": 500,
+          "unit": "databases"
+        },
+        {
+          "name": "syncs",
+          "unit": "GB",
+          "pricePerUnit": 0.35,
+          "unitQuantity": 1,
+          "includedQuantity": 10
+        }
+      ],
+      "features": [],
+      "limits": {
+        "pointInTimeRestoreDays": 10
+      }
+    },
+    {
+      "name": "Scaler",
+      "slug": "scaler",
+      "pricingModel": "hybrid",
+      "basePrice": 29,
+      "billingPeriod": "monthly",
+      "annualDiscount": 14,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "rows-read",
+          "pricePerUnit": 0.8,
+          "unitQuantity": 1000000000,
+          "includedQuantity": 100000000000,
+          "unit": "rows"
+        },
+        {
+          "name": "rows-written",
+          "pricePerUnit": 0.8,
+          "unitQuantity": 1000000,
+          "includedQuantity": 100000000,
+          "unit": "rows"
+        },
+        {
+          "name": "storage",
+          "pricePerUnit": 0.5,
+          "unitQuantity": 1,
+          "includedQuantity": 24,
+          "unit": "GB"
+        },
+        {
+          "name": "active-databases",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1,
+          "includedQuantity": 2500,
+          "unit": "databases"
+        },
+        {
+          "name": "syncs",
+          "unit": "GB",
+          "pricePerUnit": 0.25,
+          "unitQuantity": 1,
+          "includedQuantity": 24
+        }
+      ],
+      "features": [],
+      "limits": {
+        "storageGb": 24,
+        "pointInTimeRestoreDays": 30
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "hybrid",
+      "basePrice": 499,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "rows-read",
+          "pricePerUnit": 0.75,
+          "unitQuantity": 1000000000,
+          "includedQuantity": 250000000000,
+          "unit": "rows"
+        },
+        {
+          "name": "rows-written",
+          "pricePerUnit": 0.75,
+          "unitQuantity": 1000000,
+          "includedQuantity": 250000000,
+          "unit": "rows"
+        },
+        {
+          "name": "storage",
+          "pricePerUnit": 0.45,
+          "unitQuantity": 1,
+          "includedQuantity": 50,
+          "unit": "GB"
+        },
+        {
+          "name": "active-databases",
+          "pricePerUnit": 0.025,
+          "unitQuantity": 1,
+          "includedQuantity": 10000,
+          "unit": "databases"
+        },
+        {
+          "name": "syncs",
+          "unit": "GB",
+          "pricePerUnit": 0.15,
+          "unitQuantity": 1,
+          "includedQuantity": 100
+        }
+      ],
+      "features": [],
+      "limits": {
+        "storageGb": 50,
+        "pointInTimeRestoreDays": 90
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

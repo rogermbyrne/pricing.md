@@ -1,0 +1,46 @@
+{
+  "id": "paddle",
+  "name": "Paddle",
+  "description": "Complete payments infrastructure with checkout, subscriptions, and tax compliance as a Merchant of Record",
+  "url": "https://paddle.com",
+  "pricingUrl": "https://www.paddle.com/pricing",
+  "category": "payments",
+  "tags": [],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Paddle checkout, subscription management, tax compliance, MoR status"
+  },
+  "tiers": [
+    {
+      "name": "Standard",
+      "slug": "standard",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "transactionFeePercent": 5,
+        "transactionFeeFixedCents": 50
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

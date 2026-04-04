@@ -1,0 +1,66 @@
+{
+  "id": "depot",
+  "name": "Depot",
+  "description": "Fast container builds and CI runners with persistent caching and GitHub Actions integration",
+  "url": "https://depot.dev",
+  "pricingUrl": "https://depot.dev/pricing",
+  "category": "ci-cd",
+  "tags": [],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "Docker/OCI",
+    "whatYouLose": "Depot build cache, managed runners, GitHub Actions integration"
+  },
+  "tiers": [
+    {
+      "name": "Developer",
+      "slug": "developer",
+      "pricingModel": "flat_rate",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "dockerBuildMinutes": 500,
+        "depotCiMinutes": 2000,
+        "githubActionsMinutes": 2000,
+        "cacheStorageGb": 25,
+        "users": 1
+      }
+    },
+    {
+      "name": "Startup",
+      "slug": "startup",
+      "pricingModel": "flat_rate",
+      "basePrice": 200,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "dockerBuildMinutes": 5000,
+        "depotCiMinutes": 20000,
+        "githubActionsMinutes": 20000,
+        "cacheStorageGb": 250
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "circleci",
+  "name": "CircleCI",
+  "description": "Flexible usage-based CI/CD platform with Docker, Linux, macOS, Windows, and Arm support",
+  "url": "https://circleci.com",
+  "pricingUrl": "https://circleci.com/pricing.md",
+  "category": "ci-cd",
+  "tags": [
+    "ci-cd",
+    "continuous-integration",
+    "continuous-deployment",
+    "docker",
+    "pipelines"
+  ],
+  "lastVerified": "2026-04-02",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "YAML",
+    "whatYouLose": "CircleCI orbs, credit-based billing optimizations, Docker layer caching config, pipeline insights, IP ranges feature"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "credits",
+          "pricePerUnit": 0,
+          "unitQuantity": 25000,
+          "includedQuantity": 30000,
+          "unit": "credits"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "activeUsers": 5,
+        "concurrencyDocker": 30,
+        "selfHostedRunners": 5,
+        "networkGB": 1,
+        "storageGB": 2
+      }
+    },
+    {
+      "name": "Performance",
+      "slug": "performance",
+      "pricingModel": "tiered",
+      "basePrice": 15,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 15,
+      "usageMetrics": [
+        {
+          "name": "credits",
+          "pricePerUnit": 15,
+          "unitQuantity": 25000,
+          "includedQuantity": 30000,
+          "tieredPricing": [
+            {
+              "upTo": 30000,
+              "pricePerUnit": 0
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 15
+            }
+          ],
+          "unit": "credits"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "activeUsers": 5,
+        "concurrencyDocker": 80,
+        "selfHostedRunners": 20,
+        "networkGB": 5,
+        "storageGB": 2
+      }
+    },
+    {
+      "name": "Scale",
+      "slug": "scale",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "networkGB": 50,
+        "storageGB": 200
+      }
+    }
+  ]
+}

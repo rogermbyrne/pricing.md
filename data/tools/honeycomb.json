@@ -1,0 +1,65 @@
+{
+  "id": "honeycomb",
+  "name": "Honeycomb",
+  "description": "Observability platform for debugging complex systems with distributed tracing and event-driven analytics",
+  "url": "https://honeycomb.io",
+  "pricingUrl": "https://www.honeycomb.io/pricing",
+  "category": "monitoring",
+  "tags": [],
+  "lastVerified": "2026-04-03",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "OpenTelemetry",
+    "whatYouLose": "Honeycomb BubbleUp, SLOs, query engine, team query history"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "eventsPerMonth": 20000000,
+        "triggers": 2
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 130,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "eventsPerMonth": 1500000000,
+        "triggers": 100,
+        "slos": 2
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "triggers": 300,
+        "slos": 100
+      }
+    }
+  ]
+}
