@@ -1,0 +1,90 @@
+{
+  "id": "axiom",
+  "name": "Axiom",
+  "description": "Cloud-native observability platform for logs, traces, and event data with serverless query engine and unlimited cardinality",
+  "url": "https://axiom.co",
+  "pricingUrl": "https://axiom.co/pricing",
+  "category": "monitoring",
+  "tags": ["logs", "observability", "traces", "event-data", "opentelemetry"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "OpenTelemetry",
+    "whatYouLose": "Dashboards, monitors/alerts configuration, saved queries, and ingested log/trace data"
+  },
+  "tiers": [
+    {
+      "name": "Personal",
+      "slug": "personal",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "dataLoadingGBPerMonth": 500,
+        "queryComputeGBHoursPerMonth": 10,
+        "storageGB": 25,
+        "dataRetentionDays": 30,
+        "datasets": 2,
+        "users": 1,
+        "monitors": 3
+      }
+    },
+    {
+      "name": "Axiom Cloud",
+      "slug": "cloud",
+      "pricingModel": "usage_based",
+      "basePrice": 25,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "data-loading",
+          "unit": "GB",
+          "pricePerUnit": 0.096,
+          "unitQuantity": 1,
+          "includedQuantity": 1000
+        },
+        {
+          "name": "query-compute",
+          "unit": "GB-hours",
+          "pricePerUnit": 0.12,
+          "unitQuantity": 1,
+          "includedQuantity": 100
+        },
+        {
+          "name": "storage",
+          "unit": "GB",
+          "pricePerUnit": 0.03,
+          "unitQuantity": 1,
+          "includedQuantity": 100
+        }
+      ],
+      "features": [],
+      "limits": {
+        "datasets": 100,
+        "fieldsPerDataset": 1024,
+        "users": 100,
+        "monitors": 500
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

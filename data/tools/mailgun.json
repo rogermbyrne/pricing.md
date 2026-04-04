@@ -1,0 +1,114 @@
+{
+  "id": "mailgun",
+  "name": "Mailgun",
+  "description": "Transactional email API service for developers with powerful sending infrastructure",
+  "url": "https://www.mailgun.com",
+  "pricingUrl": "https://www.mailgun.com/pricing/",
+  "category": "email",
+  "tags": ["transactional-email", "email-api", "smtp", "email-validation"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "SMTP",
+    "whatYouLose": "Email validation credits, sending reputation, log retention history, inbound routing rules"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "emailsPerDay": 100,
+        "customDomains": 1
+      }
+    },
+    {
+      "name": "Basic",
+      "slug": "basic",
+      "pricingModel": "tiered",
+      "basePrice": 15,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "emails",
+          "unit": "emails",
+          "pricePerUnit": 1.80,
+          "unitQuantity": 1000,
+          "includedQuantity": 10000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "logRetentionDays": 1
+      }
+    },
+    {
+      "name": "Foundation",
+      "slug": "foundation",
+      "pricingModel": "tiered",
+      "basePrice": 35,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "emails",
+          "unit": "emails",
+          "pricePerUnit": 1.30,
+          "unitQuantity": 1000,
+          "includedQuantity": 50000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "customDomains": 1000,
+        "logRetentionDays": 5
+      }
+    },
+    {
+      "name": "Scale",
+      "slug": "scale",
+      "pricingModel": "tiered",
+      "basePrice": 90,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "emails",
+          "unit": "emails",
+          "pricePerUnit": 1.10,
+          "unitQuantity": 1000,
+          "includedQuantity": 100000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "validationCredits": 5000,
+        "logRetentionDays": 30
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

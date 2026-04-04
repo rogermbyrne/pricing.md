@@ -1,0 +1,108 @@
+{
+  "id": "highlight",
+  "name": "Highlight.io",
+  "description": "Open-source full-stack observability platform with session replay, error monitoring, logging, and tracing",
+  "url": "https://www.highlight.io",
+  "pricingUrl": "https://www.highlight.io/pricing",
+  "category": "monitoring",
+  "tags": ["session-replay", "error-monitoring", "logging", "tracing", "open-source", "observability"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "OpenTelemetry",
+    "whatYouLose": "Session replay recordings, error groupings, dashboard configurations, and alert rules"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "sessions": 500,
+        "errors": 1000,
+        "logs": 1000000,
+        "traces": 25000000,
+        "seats": 15
+      }
+    },
+    {
+      "name": "Pay-as-you-go",
+      "slug": "payg",
+      "pricingModel": "hybrid",
+      "basePrice": 50,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "sessions",
+          "unit": "sessions",
+          "pricePerUnit": 20,
+          "unitQuantity": 1000,
+          "includedQuantity": 500
+        },
+        {
+          "name": "errors",
+          "unit": "errors",
+          "pricePerUnit": 2,
+          "unitQuantity": 1000,
+          "includedQuantity": 1000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "dashboards": 3,
+        "projects": 2,
+        "seats": 15,
+        "retentionDays": 7
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "hybrid",
+      "basePrice": 800,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "sessions",
+          "unit": "sessions",
+          "pricePerUnit": 20,
+          "unitQuantity": 1000,
+          "includedQuantity": 500
+        },
+        {
+          "name": "errors",
+          "unit": "errors",
+          "pricePerUnit": 2,
+          "unitQuantity": 1000,
+          "includedQuantity": 1000
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

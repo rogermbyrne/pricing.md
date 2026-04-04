@@ -1,0 +1,103 @@
+{
+  "id": "betterstack",
+  "name": "BetterStack",
+  "description": "Unified monitoring, logging, and incident management platform for developers and DevOps teams",
+  "url": "https://betterstack.com",
+  "pricingUrl": "https://betterstack.com/pricing",
+  "category": "monitoring",
+  "tags": ["uptime-monitoring", "logging", "incident-management", "status-pages"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "OpenTelemetry",
+    "whatYouLose": "Configured monitors, status pages, incident workflows, on-call schedules, historical log/metric data"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "monitors": 10,
+        "statusPages": 1,
+        "exceptions": 100000,
+        "sessionReplays": 5000
+      }
+    },
+    {
+      "name": "Telemetry Nano",
+      "slug": "telemetry-nano",
+      "pricingModel": "flat_rate",
+      "basePrice": 30,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "telemetry",
+          "unit": "GB",
+          "pricePerUnit": 0,
+          "unitQuantity": 1,
+          "includedQuantity": 40
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Telemetry Mega",
+      "slug": "telemetry-mega",
+      "pricingModel": "flat_rate",
+      "basePrice": 250,
+      "billingPeriod": "monthly",
+      "annualDiscount": 16,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "telemetry",
+          "unit": "GB",
+          "pricePerUnit": 0,
+          "unitQuantity": 1,
+          "includedQuantity": 340
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Telemetry Pay-as-you-go",
+      "slug": "telemetry-payg",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": 33,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "ingestion",
+          "unit": "GB",
+          "pricePerUnit": 0.15,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "retention",
+          "unit": "GB",
+          "pricePerUnit": 0.08,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

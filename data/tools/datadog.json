@@ -1,0 +1,82 @@
+{
+  "id": "datadog",
+  "name": "Datadog",
+  "description": "Cloud-scale monitoring and security platform for infrastructure, APM, logs, and real-time observability",
+  "url": "https://datadoghq.com",
+  "pricingUrl": "https://www.datadoghq.com/pricing/",
+  "category": "monitoring",
+  "tags": ["infrastructure-monitoring", "apm", "logs", "observability", "alerts"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "architectural",
+    "openStandard": "OpenTelemetry",
+    "whatYouLose": "Custom dashboards, alert configurations, APM traces history, log pipelines, and Datadog-specific integrations"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "hosts": 5,
+        "metricRetentionDays": 1
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "hosts",
+          "unit": "hosts",
+          "pricePerUnit": 15,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "customMetricsPerHost": 100,
+        "containersPerHost": 5,
+        "metricRetentionMonths": 15
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "hosts",
+          "unit": "hosts",
+          "pricePerUnit": 23,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "customMetricsPerHost": 200,
+        "containersPerHost": 10,
+        "metricRetentionMonths": 15
+      }
+    }
+  ]
+}

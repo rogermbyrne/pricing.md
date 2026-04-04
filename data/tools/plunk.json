@@ -1,0 +1,65 @@
+{
+  "id": "plunk",
+  "name": "Plunk",
+  "description": "Open-source email platform for transactional and marketing emails with a simple API",
+  "url": "https://useplunk.com",
+  "pricingUrl": "https://www.useplunk.com/pricing",
+  "category": "email",
+  "tags": ["transactional-email", "open-source", "email-api", "self-hosted"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "SMTP",
+    "whatYouLose": "Plunk workflow automations, campaign broadcast UI; can self-host via AGPL-3.0 Docker image"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "emailsPerMonth": 1000
+      }
+    },
+    {
+      "name": "Pay As You Grow",
+      "slug": "pay-as-you-grow",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "emails",
+          "unit": "emails",
+          "pricePerUnit": 1.00,
+          "unitQuantity": 1000,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Self-Hosted",
+      "slug": "self-hosted",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

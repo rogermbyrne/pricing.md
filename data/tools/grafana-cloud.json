@@ -1,0 +1,117 @@
+{
+  "id": "grafana-cloud",
+  "name": "Grafana Cloud",
+  "description": "Composable observability platform with managed Prometheus, Loki, and Tempo for metrics, logs, and traces",
+  "url": "https://grafana.com",
+  "pricingUrl": "https://grafana.com/pricing/",
+  "category": "monitoring",
+  "tags": ["metrics", "logging", "tracing", "prometheus", "grafana", "observability", "dashboards"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "OpenTelemetry, Prometheus, Loki, Tempo",
+    "whatYouLose": "Managed infrastructure, pre-built dashboards, Grafana-specific alerting rules"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "metricsSeries": 10000,
+        "dataRetentionDays": 14,
+        "activeUsers": 3
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "hybrid",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 19,
+      "usageMetrics": [
+        {
+          "name": "metrics",
+          "unit": "series",
+          "pricePerUnit": 8,
+          "unitQuantity": 1000,
+          "includedQuantity": 10000
+        },
+        {
+          "name": "logs",
+          "unit": "GB",
+          "pricePerUnit": 0.50,
+          "unitQuantity": 1,
+          "includedQuantity": 50
+        },
+        {
+          "name": "traces",
+          "unit": "GB",
+          "pricePerUnit": 0.50,
+          "unitQuantity": 1,
+          "includedQuantity": 50
+        }
+      ],
+      "features": [],
+      "limits": {
+        "metricRetentionMonths": 13
+      }
+    },
+    {
+      "name": "Advanced",
+      "slug": "advanced",
+      "pricingModel": "hybrid",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 55,
+      "usageMetrics": [
+        {
+          "name": "metrics",
+          "unit": "series",
+          "pricePerUnit": 8,
+          "unitQuantity": 1000,
+          "includedQuantity": 10000
+        },
+        {
+          "name": "logs",
+          "unit": "GB",
+          "pricePerUnit": 0.50,
+          "unitQuantity": 1,
+          "includedQuantity": 50
+        },
+        {
+          "name": "traces",
+          "unit": "GB",
+          "pricePerUnit": 0.50,
+          "unitQuantity": 1,
+          "includedQuantity": 50
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

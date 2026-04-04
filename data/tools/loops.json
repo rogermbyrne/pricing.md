@@ -1,0 +1,66 @@
+{
+  "id": "loops",
+  "name": "Loops",
+  "description": "Email platform for modern SaaS companies with built-in transactional and marketing email",
+  "url": "https://loops.so",
+  "pricingUrl": "https://loops.so/pricing",
+  "category": "email",
+  "tags": ["saas-email", "transactional-email", "marketing-email", "email-automation"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "SMTP",
+    "whatYouLose": "Loop workflows, audience segments, built-in transactional templates, event-based automations"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "contacts": 1000,
+        "emailsPerMonth": 4000
+      }
+    },
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "tiered",
+      "basePrice": 49,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "contacts",
+          "unit": "contacts",
+          "pricePerUnit": 49,
+          "unitQuantity": 5000,
+          "includedQuantity": 5000
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

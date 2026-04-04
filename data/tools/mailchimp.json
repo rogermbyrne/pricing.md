@@ -1,0 +1,103 @@
+{
+  "id": "mailchimp",
+  "name": "Mailchimp",
+  "description": "All-in-one email marketing and automation platform with audience management, landing pages, and analytics",
+  "url": "https://mailchimp.com",
+  "pricingUrl": "https://mailchimp.com/pricing/",
+  "category": "email",
+  "tags": ["email-marketing", "automation", "landing-pages", "audience-management"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Audience segments, automation workflows, campaign performance history, and landing pages"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "contacts": 250,
+        "emailSendsPerMonth": 500,
+        "dailySendLimit": 250,
+        "seats": 1,
+        "audiences": 1
+      }
+    },
+    {
+      "name": "Essentials",
+      "slug": "essentials",
+      "pricingModel": "tiered",
+      "basePrice": 13,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "contacts",
+          "unit": "contacts",
+          "pricePerUnit": 13,
+          "unitQuantity": 500,
+          "includedQuantity": 500
+        }
+      ],
+      "features": [],
+      "limits": {
+        "seats": 3,
+        "audiences": 3
+      }
+    },
+    {
+      "name": "Standard",
+      "slug": "standard",
+      "pricingModel": "tiered",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "contacts",
+          "unit": "contacts",
+          "pricePerUnit": 20,
+          "unitQuantity": 500,
+          "includedQuantity": 500
+        }
+      ],
+      "features": [],
+      "limits": {
+        "seats": 5,
+        "audiences": 5
+      }
+    },
+    {
+      "name": "Premium",
+      "slug": "premium",
+      "pricingModel": "tiered",
+      "basePrice": 350,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "contacts",
+          "unit": "contacts",
+          "pricePerUnit": 350,
+          "unitQuantity": 10000,
+          "includedQuantity": 10000
+        }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

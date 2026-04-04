@@ -1,0 +1,74 @@
+{
+  "id": "anthropic",
+  "name": "Anthropic",
+  "description": "AI API platform offering Claude models for text generation, coding, analysis, and agentic tasks",
+  "url": "https://anthropic.com",
+  "pricingUrl": "https://docs.anthropic.com/en/docs/about-claude/pricing",
+  "category": "ai-api",
+  "tags": ["llm", "claude", "reasoning", "coding", "multimodal", "agents", "extended-thinking"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Prompt caching state, extended thinking capabilities, tool-use patterns specific to Claude"
+  },
+  "tiers": [
+    {
+      "name": "Pay-as-you-go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "Claude Opus 4.6 input",
+          "unit": "tokens",
+          "pricePerUnit": 5.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Claude Opus 4.6 output",
+          "unit": "tokens",
+          "pricePerUnit": 25.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Claude Sonnet 4.6 input",
+          "unit": "tokens",
+          "pricePerUnit": 3.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Claude Sonnet 4.6 output",
+          "unit": "tokens",
+          "pricePerUnit": 15.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Claude Haiku 4.5 input",
+          "unit": "tokens",
+          "pricePerUnit": 1.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Claude Haiku 4.5 output",
+          "unit": "tokens",
+          "pricePerUnit": 5.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

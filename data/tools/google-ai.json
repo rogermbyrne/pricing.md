@@ -1,0 +1,86 @@
+{
+  "id": "google-ai",
+  "name": "Google AI",
+  "description": "AI API platform offering Gemini models for text, code, multimodal, and reasoning tasks with generous free tiers",
+  "url": "https://ai.google.dev",
+  "pricingUrl": "https://ai.google.dev/pricing",
+  "category": "ai-api",
+  "tags": ["llm", "gemini", "multimodal", "reasoning", "code-generation", "google"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Grounding with Google Search, context caching state, Gemini-specific multimodal capabilities, Google Cloud integrations"
+  },
+  "tiers": [
+    {
+      "name": "Free Tier",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pay-as-you-go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "Gemini 2.5 Pro input",
+          "unit": "tokens",
+          "pricePerUnit": 1.25,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Gemini 2.5 Pro output",
+          "unit": "tokens",
+          "pricePerUnit": 10.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Gemini 2.5 Flash input",
+          "unit": "tokens",
+          "pricePerUnit": 0.30,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Gemini 2.5 Flash output",
+          "unit": "tokens",
+          "pricePerUnit": 2.50,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Gemini 2.5 Flash-Lite input",
+          "unit": "tokens",
+          "pricePerUnit": 0.10,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Gemini 2.5 Flash-Lite output",
+          "unit": "tokens",
+          "pricePerUnit": 0.40,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

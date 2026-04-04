@@ -1,0 +1,84 @@
+{
+  "id": "mistral",
+  "name": "Mistral",
+  "description": "European AI API platform offering open-weight and proprietary models with GDPR-compliant EU hosting",
+  "url": "https://mistral.ai",
+  "pricingUrl": "https://mistral.ai/pricing",
+  "category": "ai-api",
+  "tags": ["llm", "open-weight", "eu-hosted", "gdpr", "code-generation"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "OpenAI-compatible Chat Completions API",
+    "whatYouLose": "EU data residency guarantees, open-weight model self-hosting option, Mistral-specific fine-tuning"
+  },
+  "tiers": [
+    {
+      "name": "API Pay-as-you-go",
+      "slug": "api-pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "Mistral Large 3 input",
+          "unit": "tokens",
+          "pricePerUnit": 2.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Mistral Large 3 output",
+          "unit": "tokens",
+          "pricePerUnit": 6.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Mistral Small 3 input",
+          "unit": "tokens",
+          "pricePerUnit": 0.20,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Mistral Small 3 output",
+          "unit": "tokens",
+          "pricePerUnit": 0.60,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Le Chat Pro",
+      "slug": "le-chat-pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 14.99,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Le Chat Team",
+      "slug": "le-chat-team",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 24.99,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

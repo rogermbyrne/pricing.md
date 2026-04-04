@@ -1,0 +1,71 @@
+{
+  "id": "cronitor",
+  "name": "Cronitor",
+  "description": "Monitoring platform for cron jobs, heartbeats, websites, and APIs with integrated status pages",
+  "url": "https://cronitor.io",
+  "pricingUrl": "https://cronitor.io/pricing",
+  "category": "monitoring",
+  "tags": ["cron-monitoring", "heartbeat", "uptime-monitoring", "status-pages", "api-monitoring"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Monitor configurations, alerting rules, status page subscribers, historical monitoring data"
+  },
+  "tiers": [
+    {
+      "name": "Hacker",
+      "slug": "hacker",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "monitors": 5,
+        "users": 1,
+        "statusPages": 1,
+        "subscribers": 50
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "hybrid",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 5,
+      "usageMetrics": [
+        {
+          "name": "monitors",
+          "unit": "monitors",
+          "pricePerUnit": 2,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "alertIntegrations": 10,
+        "subscribersIncluded": 500
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

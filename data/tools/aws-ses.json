@@ -1,0 +1,61 @@
+{
+  "id": "aws-ses",
+  "name": "AWS SES",
+  "description": "Amazon Simple Email Service for high-volume transactional and marketing email",
+  "url": "https://aws.amazon.com/ses/",
+  "pricingUrl": "https://aws.amazon.com/ses/pricing/",
+  "category": "email",
+  "tags": ["transactional-email", "bulk-email", "smtp", "aws"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "SMTP",
+    "whatYouLose": "Dedicated IP reputation, Virtual Deliverability Manager insights, Mail Manager rules, AWS service integrations"
+  },
+  "tiers": [
+    {
+      "name": "Free Tier",
+      "slug": "free-tier",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "messageChargesPerMonth": 3000,
+        "durationMonths": 12
+      }
+    },
+    {
+      "name": "Pay As You Go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "outbound-emails",
+          "unit": "emails",
+          "pricePerUnit": 0.10,
+          "unitQuantity": 1000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "attachments",
+          "unit": "GB",
+          "pricePerUnit": 0.12,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

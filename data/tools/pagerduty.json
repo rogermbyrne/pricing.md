@@ -1,0 +1,79 @@
+{
+  "id": "pagerduty",
+  "name": "PagerDuty",
+  "description": "Incident management and response platform with on-call scheduling, alerting, and AIOps",
+  "url": "https://www.pagerduty.com",
+  "pricingUrl": "https://www.pagerduty.com/pricing/",
+  "category": "monitoring",
+  "tags": ["incident-management", "on-call", "alerting", "aiops", "status-pages"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "On-call schedules, escalation policies, incident workflows, runbooks, integration configurations, historical incident data"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "users": 5,
+        "smsPhoneNotifications": 100,
+        "onCallSchedules": 1,
+        "escalationPolicies": 1
+      }
+    },
+    {
+      "name": "Professional",
+      "slug": "professional",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": 16,
+      "seatPrice": 25,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "statusPageSubscribers": 250,
+        "advanceCredits": 1000
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": 16,
+      "seatPrice": 49,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "customIncidentTypes": 3,
+        "statusPageSubscribers": 500,
+        "advanceCredits": 5000
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

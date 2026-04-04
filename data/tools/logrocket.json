@@ -1,0 +1,82 @@
+{
+  "id": "logrocket",
+  "name": "LogRocket",
+  "description": "Frontend monitoring and session replay platform for debugging user experience issues with error tracking and product analytics",
+  "url": "https://logrocket.com",
+  "pricingUrl": "https://logrocket.com/pricing",
+  "category": "monitoring",
+  "tags": ["session-replay", "error-tracking", "frontend-monitoring", "product-analytics"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Session replay recordings, error grouping history, product analytics funnels, and user identification mappings"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "sessionsPerMonth": 1000,
+        "dataRetentionMonths": 1,
+        "seats": 3
+      }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "tiered",
+      "basePrice": 69,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "sessions",
+          "unit": "sessions",
+          "pricePerUnit": 69,
+          "unitQuantity": 10000,
+          "includedQuantity": 10000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "dataRetentionMonths": 1,
+        "seats": 10
+      }
+    },
+    {
+      "name": "Professional",
+      "slug": "professional",
+      "pricingModel": "custom",
+      "basePrice": 295,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

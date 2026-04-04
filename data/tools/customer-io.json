@@ -1,0 +1,74 @@
+{
+  "id": "customer-io",
+  "name": "Customer.io",
+  "description": "Automated messaging platform for targeted emails, push notifications, SMS, and in-app messages based on user behavior",
+  "url": "https://customer.io",
+  "pricingUrl": "https://customer.io/pricing",
+  "category": "email",
+  "tags": ["marketing-automation", "behavioral-messaging", "push-notifications", "sms"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Behavioral triggers, journey workflows, segment definitions, and historical event data"
+  },
+  "tiers": [
+    {
+      "name": "Essentials",
+      "slug": "essentials",
+      "pricingModel": "tiered",
+      "basePrice": 100,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "profiles",
+          "unit": "profiles",
+          "pricePerUnit": 9,
+          "unitQuantity": 1000,
+          "includedQuantity": 5000
+        },
+        {
+          "name": "emails",
+          "unit": "emails",
+          "pricePerUnit": 0.12,
+          "unitQuantity": 1000,
+          "includedQuantity": 1000000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "objectTypes": 2
+      }
+    },
+    {
+      "name": "Premium",
+      "slug": "premium",
+      "pricingModel": "custom",
+      "basePrice": 1000,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "objectTypes": 10
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "groq",
+  "name": "Groq",
+  "description": "Ultra-fast AI inference platform powered by custom LPU hardware, offering open-source models at low latency",
+  "url": "https://groq.com",
+  "pricingUrl": "https://groq.com/pricing/",
+  "category": "ai-api",
+  "tags": ["llm", "inference", "low-latency", "lpu", "open-source-models", "llama"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "OpenAI-compatible Chat Completions API",
+    "whatYouLose": "LPU-accelerated inference speed; models themselves are open-source and portable"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pay-as-you-go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "Llama 3.3 70B input",
+          "unit": "tokens",
+          "pricePerUnit": 0.59,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Llama 3.3 70B output",
+          "unit": "tokens",
+          "pricePerUnit": 0.79,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Llama 4 Scout input",
+          "unit": "tokens",
+          "pricePerUnit": 0.11,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Llama 4 Scout output",
+          "unit": "tokens",
+          "pricePerUnit": 0.34,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Llama 3.1 8B input",
+          "unit": "tokens",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Llama 3.1 8B output",
+          "unit": "tokens",
+          "pricePerUnit": 0.08,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Whisper Large v3 Turbo",
+          "unit": "hours",
+          "pricePerUnit": 0.04,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

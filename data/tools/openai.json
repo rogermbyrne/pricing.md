@@ -1,0 +1,88 @@
+{
+  "id": "openai",
+  "name": "OpenAI",
+  "description": "AI API platform offering GPT and reasoning models for text generation, code, and multimodal tasks",
+  "url": "https://openai.com",
+  "pricingUrl": "https://openai.com/api/pricing/",
+  "category": "ai-api",
+  "tags": ["llm", "gpt", "reasoning", "multimodal", "code-generation", "embeddings"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "OpenAI Chat Completions API (de facto standard)",
+    "whatYouLose": "Fine-tuned models, assistants/threads state, prompt caching benefits, OpenAI-specific function-calling conventions"
+  },
+  "tiers": [
+    {
+      "name": "Pay-as-you-go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "GPT-4o input",
+          "unit": "tokens",
+          "pricePerUnit": 2.50,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "GPT-4o output",
+          "unit": "tokens",
+          "pricePerUnit": 10.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "GPT-4o mini input",
+          "unit": "tokens",
+          "pricePerUnit": 0.15,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "GPT-4o mini output",
+          "unit": "tokens",
+          "pricePerUnit": 0.60,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "o3 input",
+          "unit": "tokens",
+          "pricePerUnit": 2.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "o3 output",
+          "unit": "tokens",
+          "pricePerUnit": 8.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "o4-mini input",
+          "unit": "tokens",
+          "pricePerUnit": 0.55,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "o4-mini output",
+          "unit": "tokens",
+          "pricePerUnit": 2.20,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

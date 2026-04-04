@@ -1,0 +1,111 @@
+{
+  "id": "brevo",
+  "name": "Brevo",
+  "description": "All-in-one marketing platform with email, SMS, CRM, and marketing automation",
+  "url": "https://www.brevo.com",
+  "pricingUrl": "https://www.brevo.com/pricing/",
+  "category": "email",
+  "tags": ["email-marketing", "marketing-automation", "crm", "sms", "transactional-email"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": "SMTP",
+    "whatYouLose": "Marketing automations, CRM data, landing pages, contact scoring, campaign history, SMS/WhatsApp integrations"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "emailsPerDay": 300,
+        "contacts": 100000
+      }
+    },
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "tiered",
+      "basePrice": 9,
+      "billingPeriod": "monthly",
+      "annualDiscount": 10,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "emails",
+          "unit": "emails",
+          "pricePerUnit": 9,
+          "unitQuantity": 5000,
+          "includedQuantity": 5000
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Standard",
+      "slug": "standard",
+      "pricingModel": "tiered",
+      "basePrice": 18,
+      "billingPeriod": "monthly",
+      "annualDiscount": 10,
+      "seatPrice": 12,
+      "usageMetrics": [
+        {
+          "name": "emails",
+          "unit": "emails",
+          "pricePerUnit": 18,
+          "unitQuantity": 5000,
+          "includedQuantity": 5000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "landingPages": 1,
+        "maxUsers": 10
+      }
+    },
+    {
+      "name": "Professional",
+      "slug": "professional",
+      "pricingModel": "tiered",
+      "basePrice": 499,
+      "billingPeriod": "monthly",
+      "annualDiscount": 10,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "emails",
+          "unit": "emails",
+          "pricePerUnit": 499,
+          "unitQuantity": 150000,
+          "includedQuantity": 150000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "seats": 10
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}
