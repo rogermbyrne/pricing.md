@@ -43,20 +43,18 @@
 <body class="font-sans bg-white dark:bg-[#0a0a0a] text-neutral-900 dark:text-neutral-100 min-h-screen theme-transition">
 
   <!-- Dark mode toggle -->
-  <button id="themeToggle" onclick="toggleTheme()" class="fixed top-4 right-4 z-50 w-9 h-9 flex items-center justify-center border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-[#111] text-neutral-700 dark:text-neutral-300 hover:border-neutral-900 dark:hover:border-white transition-colors rounded-none">
-    <svg id="moonIcon" class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/></svg>
-    <svg id="sunIcon" class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" stroke-width="2"/><path stroke-linecap="round" stroke-width="2" d="M12 1v2m0 18v2m-9-11h2m18 0h2m-3.64-6.36l-1.41 1.41M6.05 17.95l-1.41 1.41m0-13.72l1.41 1.41m11.31 11.31l1.41 1.41"/></svg>
+  <button id="theme-btn" class="fixed top-6 right-6 z-50 p-3 bg-white dark:bg-[#111] hover:bg-neutral-100 dark:hover:bg-[#1a1a1a] theme-transition border border-neutral-300 dark:border-neutral-800 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]" aria-label="Toggle Theme" onclick="toggleTheme()">
+    <svg id="moon-icon" class="w-5 h-5 hidden dark:block text-neutral-400 hover:text-white theme-transition" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    <svg id="sun-icon" class="w-5 h-5 block dark:hidden text-neutral-600 hover:text-black theme-transition" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
   </button>
 
-  <!-- Nav -->
-  <nav class="sticky top-0 z-40 flex items-center justify-between px-6 py-4 border-b border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#0a0a0a] theme-transition">
-    <a href="/" class="font-bold text-lg text-neutral-900 dark:text-neutral-100 tracking-tight hover:no-underline">Pricing<span class="text-neutral-400">.</span>md</a>
-    <div class="flex gap-6">
-      <a href="/browse" class="font-mono text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors">Browse</a>
-      <a href="/compare" class="font-mono text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors">Compare</a>
-      <a href="/changelog" class="font-mono text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors">Changelog</a>
-    </div>
-  </nav>
+  <!-- Fixed bottom-right nav -->
+  <div class="fixed bottom-6 right-6 z-50 flex gap-4 font-mono text-xs">
+    <a href="/" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white border-b border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white pb-0.5 transition-all uppercase tracking-widest">Home</a>
+    <a href="/browse" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white border-b border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white pb-0.5 transition-all uppercase tracking-widest">Browse</a>
+    <a href="/compare" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white border-b border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white pb-0.5 transition-all uppercase tracking-widest">Compare</a>
+    <a href="/changelog" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white border-b border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white pb-0.5 transition-all uppercase tracking-widest">Changelog</a>
+  </div>
 
   <script>
     function toggleTheme() {

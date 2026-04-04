@@ -28,7 +28,7 @@ function hasFree(tool) {
 
   <!-- Tool Selector -->
   <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 rounded-none p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] mb-8 theme-transition">
-    <form id="compareForm" method="get" action="/compare" class="flex gap-3 items-end flex-wrap">
+    <div class="flex gap-3 items-end flex-wrap">
       <div class="flex-1 min-w-[250px]">
         <label class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 block mb-1" for="toolSelect">
           <% if (tools.length > 0) { %>
@@ -49,10 +49,8 @@ function hasFree(tool) {
             <option value="<%= t.id %>" <%= toolIds.includes(t.id) ? 'disabled' : '' %>><%= t.name %><%= !lockedCategory ? ' (' + t.category + ')' : '' %></option>
           <% } %>
         </select>
-        <input type="hidden" name="tools" id="toolsInput" value="<%= toolIds.join(',') %>">
       </div>
-      <button type="submit" class="px-4 py-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-mono text-sm rounded-none border border-neutral-900 dark:border-white hover:opacity-80 transition-opacity">Compare</button>
-    </form>
+    </div>
 
     <% if (tools.length > 0) { %>
       <div class="flex gap-2 flex-wrap mt-3">
@@ -187,8 +185,7 @@ function hasFree(tool) {
     if (!id || currentTools.length >= 5) return;
     if (!currentTools.includes(id)) {
       currentTools.push(id);
-      document.getElementById('toolsInput').value = currentTools.join(',');
-      document.getElementById('compareForm').submit();
+      window.location.href = '/compare?tools=' + currentTools.join(',');
     }
   }
 
@@ -196,8 +193,7 @@ function hasFree(tool) {
     const idx = currentTools.indexOf(id);
     if (idx > -1) {
       currentTools.splice(idx, 1);
-      document.getElementById('toolsInput').value = currentTools.join(',');
-      document.getElementById('compareForm').submit();
+      window.location.href = '/compare?tools=' + currentTools.join(',');
     }
   }
 </script>

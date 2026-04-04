@@ -5,7 +5,7 @@ export function createBrowseRouter(registry: Registry): Router {
   const router = Router();
 
   router.get("/browse", (req: Request, res: Response) => {
-    const categories = registry.categories();
+    const categories = registry.categories().filter((cat) => cat !== "ai-api");
     const categoryData = categories.map((cat) => {
       const tools = registry.search({ category: cat as any });
       return {
@@ -24,6 +24,12 @@ export function createBrowseRouter(registry: Registry): Router {
 
   router.get("/browse/:category", (req: Request, res: Response) => {
     const category = req.params.category as string;
+
+    if (category === "ai-api") {
+      res.redirect("/browse");
+      return;
+    }
+
     const tools = registry.search({ category: category as any });
 
     if (tools.length === 0) {
