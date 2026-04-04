@@ -1,0 +1,73 @@
+<%- include('partials/head', { title }) %>
+
+<div class="container">
+  <h1>Pricing Changelog</h1>
+  <p class="text-muted mb-4">Track pricing changes across all developer tools</p>
+
+  <!-- Filter -->
+  <div class="flex items-center gap-2 mb-4">
+    <form method="get" action="/changelog" class="flex items-center gap-2">
+      <select name="category" onchange="this.form.submit()">
+        <option value="">All Categories</option>
+        <% for (const cat of categories) { %>
+          <option value="<%= cat %>" <%= currentCategory === cat ? 'selected' : '' %>><%= cat.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) %></option>
+        <% } %>
+      </select>
+    </form>
+  </div>
+
+  <% if (changes.length === 0) { %>
+    <div class="empty-state">
+      <h2 style="margin-bottom: 0.5rem;">No pricing changes recorded yet</h2>
+      <p>Changes will appear here as tools update their pricing. Run <code class="mono" style="background: var(--card); padding: 0.125rem 0.375rem; border-radius: 0.25rem;">npm run record-snapshot -- --all</code> to seed baseline data.</p>
+    </div>
+  <% } else { %>
+    <div class="card" style="padding: 0;">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Tool</th>
+            <th>Type</th>
+            <th>Summary</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (const change of changes) { %>
+            <tr>
+              <td class="text-sm text-muted mono" style="white-space: nowrap;"><%= change.detected_at.split('T')[0] %></td>
+              <td>
+                <a href="/tool/<%= change.tool_id %>" style="font-weight: 500;"><%= toolNames[change.tool_id] || change.tool_id %></a>
+              </td>
+              <td>
+                <%
+                  const typeColors = {
+                    'price_change': 'badge-orange',
+                    'tier_added': 'badge-green',
+                    'tier_removed': 'badge-red',
+                    'limit_change': 'badge-yellow',
+                    'metric_change': 'badge-blue',
+                  };
+                  const badgeCls = typeColors[change.change_type] || 'badge-muted';
+                %>
+                <span class="badge <%= badgeCls %>"><%= change.change_type.replace(/_/g, ' ') %></span>
+              </td>
+              <td class="text-sm"><%= change.summary %></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+
+    <% if (changes.length >= 50) { %>
+      <div class="flex items-center gap-2 mt-3" style="justify-content: center;">
+        <% if (page > 1) { %>
+          <a href="/changelog?page=<%= page - 1 %><%= currentCategory ? '&category=' + currentCategory : '' %>" class="btn">&larr; Newer</a>
+        <% } %>
+        <a href="/changelog?page=<%= page + 1 %><%= currentCategory ? '&category=' + currentCategory : '' %>" class="btn">Older &rarr;</a>
+      </div>
+    <% } %>
+  <% } %>
+</div>
+
+<%- include('partials/footer') %>

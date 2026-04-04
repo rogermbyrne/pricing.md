@@ -1,0 +1,18 @@
+<%- include('partials/head', { title }) %>
+
+<div class="container">
+  <h1>Developer Tool Pricing</h1>
+  <p class="text-muted mb-4">Compare pricing across <%= categories.reduce((sum, c) => sum + c.count, 0) %> tools in <%= categories.length %> categories</p>
+
+  <div class="grid grid-3">
+    <% for (const cat of categories) { %>
+      <a href="/browse/<%= cat.name %>" class="card" style="text-decoration: none; color: inherit;">
+        <h3 style="color: var(--text);"><%= cat.displayName %></h3>
+        <p class="text-muted text-sm mt-1"><%= cat.count %> tool<%= cat.count !== 1 ? 's' : '' %></p>
+        <p class="text-xs text-muted mt-2"><%= cat.topTools.join(', ') %><%= cat.count > 3 ? '...' : '' %></p>
+      </a>
+    <% } %>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

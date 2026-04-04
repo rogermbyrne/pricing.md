@@ -1,0 +1,193 @@
+<%- include('partials/head', { title }) %>
+
+<%
+function formatPrice(price) {
+  if (price === 0) return '<span class="price price-free">Free</span>';
+  if (price === null || price === undefined) return '<span class="price price-contact">Contact Sales</span>';
+  return '<span class="price mono">$' + price + '/mo</span>';
+}
+
+function switchingBadge(cost) {
+  const map = {
+    'drop-in': 'badge-green',
+    'moderate': 'badge-yellow',
+    'significant': 'badge-orange',
+    'architectural': 'badge-red',
+  };
+  return '<span class="badge ' + (map[cost] || 'badge-muted') + '">' + cost + '</span>';
+}
+
+function hasFree(tool) {
+  return tool.tiers.some(t => t.pricingModel === 'free' || t.basePrice === 0);
+}
+%>
+
+<div class="container-wide">
+  <h1>Compare Pricing</h1>
+  <p class="text-muted mb-4">Select up to 5 tools to compare side-by-side</p>
+
+  <!-- Tool Selector -->
+  <div class="card mb-4">
+    <form id="compareForm" method="get" action="/compare" style="display: flex; gap: 0.75rem; align-items: flex-end; flex-wrap: wrap;">
+      <div style="flex: 1; min-width: 250px;">
+        <label class="text-xs text-muted" for="toolSelect" style="display: block; margin-bottom: 0.25rem;">Add tools</label>
+        <select id="toolSelect" style="width: 100%;" onchange="addTool(this.value)">
+          <option value="">Select a tool...</option>
+          <% for (const t of allTools.sort((a, b) => a.name.localeCompare(b.name))) { %>
+            <option value="<%= t.id %>" <%= toolIds.includes(t.id) ? 'disabled' : '' %>><%= t.name %> (<%= t.category %>)</option>
+          <% } %>
+        </select>
+        <input type="hidden" name="tools" id="toolsInput" value="<%= toolIds.join(',') %>">
+      </div>
+      <button type="submit" class="btn btn-primary">Compare</button>
+    </form>
+
+    <% if (tools.length > 0) { %>
+      <div class="flex gap-1 flex-wrap mt-2">
+        <% for (const t of tools) { %>
+          <span class="badge badge-green" style="cursor: pointer;" onclick="removeTool('<%= t.id %>')">
+            <%= t.name %> &times;
+          </span>
+        <% } %>
+      </div>
+    <% } %>
+  </div>
+
+  <% if (tools.length === 0) { %>
+    <div class="empty-state">
+      <h2 style="margin-bottom: 0.5rem;">No tools selected</h2>
+      <p>Use the selector above to add tools for comparison. You can also visit a <a href="/browse">category page</a> and click "Compare top 3".</p>
+    </div>
+  <% } else { %>
+
+    <!-- Share link -->
+    <div class="text-xs text-muted mb-4">
+      Share this comparison: <span class="mono" style="user-select: all;">/compare?tools=<%= tools.map(t => t.id).join(',') %></span>
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="card" style="overflow-x: auto; padding: 0;">
+      <table>
+        <thead>
+          <tr>
+            <th style="min-width: 150px;"></th>
+            <% for (const t of tools) { %>
+              <th style="min-width: 180px;">
+                <a href="/tool/<%= t.id %>" style="color: var(--text); font-size: 0.875rem; text-transform: none; letter-spacing: 0;"><%= t.name %></a>
+              </th>
+            <% } %>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Category -->
+          <tr>
+            <td class="text-muted">Category</td>
+            <% for (const t of tools) { %>
+              <td><span class="badge badge-blue"><%= t.category.replace(/-/g, ' ') %></span></td>
+            <% } %>
+          </tr>
+
+          <!-- Free Tier -->
+          <tr>
+            <td class="text-muted">Free Tier</td>
+            <% for (const t of tools) { %>
+              <td>
+                <% if (hasFree(t)) { %>
+                  <span class="badge badge-green">Yes</span>
+                <% } else { %>
+                  <span class="badge badge-red">No</span>
+                <% } %>
+              </td>
+            <% } %>
+          </tr>
+
+          <!-- Tiers -->
+          <tr>
+            <td class="text-muted">Tiers</td>
+            <% for (const t of tools) { %>
+              <td>
+                <% for (const tier of t.tiers) { %>
+                  <div style="margin-bottom: 0.5rem;">
+                    <strong class="text-sm"><%= tier.name %></strong><br>
+                    <%- formatPrice(tier.basePrice) %>
+                    <% if (tier.seatPrice !== null) { %>
+                      <span class="text-xs text-muted">+ $<%= tier.seatPrice %>/seat</span>
+                    <% } %>
+                  </div>
+                <% } %>
+              </td>
+            <% } %>
+          </tr>
+
+          <!-- Portability -->
+          <tr>
+            <td class="text-muted">Switching Cost</td>
+            <% for (const t of tools) { %>
+              <td><%- switchingBadge(t.portability.switchingCost) %></td>
+            <% } %>
+          </tr>
+
+          <!-- Open Standard -->
+          <tr>
+            <td class="text-muted">Open Standard</td>
+            <% for (const t of tools) { %>
+              <td class="text-sm"><%= t.portability.openStandard || 'Proprietary' %></td>
+            <% } %>
+          </tr>
+
+          <!-- What You Lose -->
+          <tr>
+            <td class="text-muted">What You Lose</td>
+            <% for (const t of tools) { %>
+              <td class="text-sm text-muted"><%= t.portability.whatYouLose %></td>
+            <% } %>
+          </tr>
+
+          <!-- Key Limits (free tier) -->
+          <tr>
+            <td class="text-muted">Key Limits (Free)</td>
+            <% for (const t of tools) { %>
+              <td>
+                <% const freeTier = t.tiers.find(tier => tier.pricingModel === 'free' || tier.basePrice === 0); %>
+                <% if (freeTier) { %>
+                  <% for (const [key, val] of Object.entries(freeTier.limits).slice(0, 5)) { %>
+                    <div class="text-xs" style="padding: 0.125rem 0;">
+                      <span class="text-muted"><%= key.replace(/([A-Z])/g, ' $1').replace(/^./, s => s.toUpperCase()) %>:</span>
+                      <span class="mono"><%= typeof val === 'number' ? val.toLocaleString() : val %></span>
+                    </div>
+                  <% } %>
+                <% } else { %>
+                  <span class="text-xs text-muted">No free tier</span>
+                <% } %>
+              </td>
+            <% } %>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  <% } %>
+</div>
+
+<script>
+  const currentTools = <%= JSON.stringify(toolIds) %>;
+
+  function addTool(id) {
+    if (!id || currentTools.length >= 5) return;
+    if (!currentTools.includes(id)) {
+      currentTools.push(id);
+      document.getElementById('toolsInput').value = currentTools.join(',');
+      document.getElementById('compareForm').submit();
+    }
+  }
+
+  function removeTool(id) {
+    const idx = currentTools.indexOf(id);
+    if (idx > -1) {
+      currentTools.splice(idx, 1);
+      document.getElementById('toolsInput').value = currentTools.join(',');
+      document.getElementById('compareForm').submit();
+    }
+  }
+</script>
+
+<%- include('partials/footer') %>

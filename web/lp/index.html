@@ -1,0 +1,1425 @@
+<html lang="en" class="dark" vid="0"><head vid="1">
+    <meta charset="UTF-8" vid="2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" vid="3">
+    <title vid="4">Pricing.md</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+    <style vid="7">
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap');
+        
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .theme-transition {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+        
+        .slide-transition {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+
+  <style type="text/css">
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}/*
+! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com
+*//*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  tab-size: 4; /* 3 */
+  font-family: Inter, sans-serif; /* 4 */
+  font-feature-settings: normal; /* 5 */
+  font-variation-settings: normal; /* 6 */
+  -webkit-tap-highlight-color: transparent; /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: JetBrains Mono, monospace; /* 1 */
+  font-feature-settings: normal; /* 2 */
+  font-variation-settings: normal; /* 3 */
+  font-size: 1em; /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-feature-settings: inherit; /* 1 */
+  font-variation-settings: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  letter-spacing: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+[hidden]:where(:not([hidden="until-found"])) {
+  display: none;
+}
+.pointer-events-none {
+  pointer-events: none;
+}
+.fixed {
+  position: fixed;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.inset-0 {
+  inset: 0px;
+}
+.-left-20 {
+  left: -5rem;
+}
+.right-6 {
+  right: 1.5rem;
+}
+.top-20 {
+  top: 5rem;
+}
+.top-6 {
+  top: 1.5rem;
+}
+.z-0 {
+  z-index: 0;
+}
+.z-10 {
+  z-index: 10;
+}
+.z-20 {
+  z-index: 20;
+}
+.z-50 {
+  z-index: 50;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mb-12 {
+  margin-bottom: 3rem;
+}
+.mb-16 {
+  margin-bottom: 4rem;
+}
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+.mb-8 {
+  margin-bottom: 2rem;
+}
+.mt-1 {
+  margin-top: 0.25rem;
+}
+.mt-12 {
+  margin-top: 3rem;
+}
+.mt-6 {
+  margin-top: 1.5rem;
+}
+.mt-auto {
+  margin-top: auto;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.hidden {
+  display: none;
+}
+.h-2 {
+  height: 0.5rem;
+}
+.h-5 {
+  height: 1.25rem;
+}
+.h-\[320px\] {
+  height: 320px;
+}
+.min-h-screen {
+  min-height: 100vh;
+}
+.w-2 {
+  width: 0.5rem;
+}
+.w-5 {
+  width: 1.25rem;
+}
+.w-full {
+  width: 100%;
+}
+.max-w-\[1600px\] {
+  max-width: 1600px;
+}
+.max-w-\[560px\] {
+  max-width: 560px;
+}
+.max-w-xl {
+  max-width: 36rem;
+}
+.shrink-0 {
+  flex-shrink: 0;
+}
+.translate-y-0 {
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.translate-y-4 {
+  --tw-translate-y: 1rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.select-none {
+  user-select: none;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.items-start {
+  align-items: flex-start;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.gap-16 {
+  gap: 4rem;
+}
+.gap-2 {
+  gap: 0.5rem;
+}
+.gap-3 {
+  gap: 0.75rem;
+}
+.gap-4 {
+  gap: 1rem;
+}
+.gap-6 {
+  gap: 1.5rem;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+.rounded-none {
+  border-radius: 0px;
+}
+.border {
+  border-width: 1px;
+}
+.border-b {
+  border-bottom-width: 1px;
+}
+.border-t {
+  border-top-width: 1px;
+}
+.border-neutral-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 229 229 / var(--tw-border-opacity, 1));
+}
+.border-neutral-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(212 212 212 / var(--tw-border-opacity, 1));
+}
+.bg-brand-bgLight {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+.bg-neutral-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 212 212 / var(--tw-bg-opacity, 1));
+}
+.bg-neutral-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 250 250 / var(--tw-bg-opacity, 1));
+}
+.bg-neutral-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(64 64 64 / var(--tw-bg-opacity, 1));
+}
+.bg-neutral-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 23 23 / var(--tw-bg-opacity, 1));
+}
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+.p-3 {
+  padding: 0.75rem;
+}
+.p-4 {
+  padding: 1rem;
+}
+.p-8 {
+  padding: 2rem;
+}
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.pb-1 {
+  padding-bottom: 0.25rem;
+}
+.pb-4 {
+  padding-bottom: 1rem;
+}
+.pt-20 {
+  padding-top: 5rem;
+}
+.pt-4 {
+  padding-top: 1rem;
+}
+.font-mono {
+  font-family: JetBrains Mono, monospace;
+}
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+.text-\[20vw\] {
+  font-size: 20vw;
+}
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.font-bold {
+  font-weight: 700;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.leading-\[1\.05\] {
+  line-height: 1.05;
+}
+.leading-none {
+  line-height: 1;
+}
+.leading-relaxed {
+  line-height: 1.625;
+}
+.tracking-tighter {
+  letter-spacing: -0.05em;
+}
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
+.text-neutral-100 {
+  --tw-text-opacity: 1;
+  color: rgb(245 245 245 / var(--tw-text-opacity, 1));
+}
+.text-neutral-300 {
+  --tw-text-opacity: 1;
+  color: rgb(212 212 212 / var(--tw-text-opacity, 1));
+}
+.text-neutral-400 {
+  --tw-text-opacity: 1;
+  color: rgb(163 163 163 / var(--tw-text-opacity, 1));
+}
+.text-neutral-500 {
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity, 1));
+}
+.text-neutral-600 {
+  --tw-text-opacity: 1;
+  color: rgb(82 82 82 / var(--tw-text-opacity, 1));
+}
+.text-neutral-800 {
+  --tw-text-opacity: 1;
+  color: rgb(38 38 38 / var(--tw-text-opacity, 1));
+}
+.text-neutral-900 {
+  --tw-text-opacity: 1;
+  color: rgb(23 23 23 / var(--tw-text-opacity, 1));
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+.line-through {
+  text-decoration-line: line-through;
+}
+.decoration-neutral-400\/50 {
+  text-decoration-color: rgb(163 163 163 / 0.5);
+}
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.opacity-0 {
+  opacity: 0;
+}
+.opacity-100 {
+  opacity: 1;
+}
+.opacity-50 {
+  opacity: 0.5;
+}
+.shadow-\[16px_16px_0px_0px_rgba\(0\2c 0\2c 0\2c 0\.05\)\] {
+  --tw-shadow: 16px 16px 0px 0px rgba(0,0,0,0.05);
+  --tw-shadow-colored: 16px 16px 0px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-\[4px_4px_0px_0px_rgba\(0\2c 0\2c 0\2c 0\.1\)\] {
+  --tw-shadow: 4px 4px 0px 0px rgba(0,0,0,0.1);
+  --tw-shadow-colored: 4px 4px 0px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-inner {
+  --tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.grayscale {
+  --tw-grayscale: grayscale(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.duration-500 {
+  transition-duration: 500ms;
+}
+.hover\:rotate-0:hover {
+  --tw-rotate: 0deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.hover\:border-neutral-900:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(23 23 23 / var(--tw-border-opacity, 1));
+}
+.hover\:bg-neutral-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity, 1));
+}
+.hover\:bg-neutral-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(82 82 82 / var(--tw-bg-opacity, 1));
+}
+.hover\:text-black:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+.hover\:text-neutral-900:hover {
+  --tw-text-opacity: 1;
+  color: rgb(23 23 23 / var(--tw-text-opacity, 1));
+}
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+.dark\:block:is(.dark *) {
+  display: block;
+}
+.dark\:hidden:is(.dark *) {
+  display: none;
+}
+.dark\:border-neutral-700:is(.dark *) {
+  --tw-border-opacity: 1;
+  border-color: rgb(64 64 64 / var(--tw-border-opacity, 1));
+}
+.dark\:border-neutral-800:is(.dark *) {
+  --tw-border-opacity: 1;
+  border-color: rgb(38 38 38 / var(--tw-border-opacity, 1));
+}
+.dark\:bg-\[\#0a0a0a\]:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(10 10 10 / var(--tw-bg-opacity, 1));
+}
+.dark\:bg-\[\#111\]:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 17 17 / var(--tw-bg-opacity, 1));
+}
+.dark\:bg-brand-bgDark:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(10 10 10 / var(--tw-bg-opacity, 1));
+}
+.dark\:bg-neutral-200:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 229 229 / var(--tw-bg-opacity, 1));
+}
+.dark\:bg-neutral-700:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(64 64 64 / var(--tw-bg-opacity, 1));
+}
+.dark\:bg-white:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+.dark\:text-\[\#111\]:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(17 17 17 / var(--tw-text-opacity, 1));
+}
+.dark\:text-neutral-100:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(245 245 245 / var(--tw-text-opacity, 1));
+}
+.dark\:text-neutral-300:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(212 212 212 / var(--tw-text-opacity, 1));
+}
+.dark\:text-neutral-400:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(163 163 163 / var(--tw-text-opacity, 1));
+}
+.dark\:text-neutral-500:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity, 1));
+}
+.dark\:text-neutral-600:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(82 82 82 / var(--tw-text-opacity, 1));
+}
+.dark\:text-neutral-700:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(64 64 64 / var(--tw-text-opacity, 1));
+}
+.dark\:text-neutral-900:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(23 23 23 / var(--tw-text-opacity, 1));
+}
+.dark\:text-white:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+.dark\:shadow-\[16px_16px_0px_0px_rgba\(0\2c 0\2c 0\2c 0\.8\)\]:is(.dark *) {
+  --tw-shadow: 16px 16px 0px 0px rgba(0,0,0,0.8);
+  --tw-shadow-colored: 16px 16px 0px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.dark\:shadow-\[4px_4px_0px_0px_rgba\(0\2c 0\2c 0\2c 1\)\]:is(.dark *) {
+  --tw-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+  --tw-shadow-colored: 4px 4px 0px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.dark\:hover\:border-white:hover:is(.dark *) {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
+}
+.dark\:hover\:bg-\[\#1a1a1a\]:hover:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 26 26 / var(--tw-bg-opacity, 1));
+}
+.dark\:hover\:bg-neutral-300:hover:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 212 212 / var(--tw-bg-opacity, 1));
+}
+.dark\:hover\:text-white:hover:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+@media (min-width: 640px) {
+
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
+  .sm\:items-center {
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+
+  .md\:p-16 {
+    padding: 4rem;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+@media (min-width: 1024px) {
+
+  .lg\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+
+  .lg\:rotate-2 {
+    --tw-rotate: 2deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:justify-end {
+    justify-content: flex-end;
+  }
+
+  .lg\:pt-0 {
+    padding-top: 0px;
+  }
+
+  .lg\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+@media (min-width: 1280px) {
+
+  .xl\:p-24 {
+    padding: 6rem;
+  }
+}* {
+      -ms-overflow-style: none !important;
+      scrollbar-width: none !important;
+    }
+
+    *::-webkit-scrollbar {
+      display: none !important;
+      width: 0 !important;
+      height: 0 !important;
+    }
+  </style></head>
+<body class="bg-brand-bgLight dark:bg-brand-bgDark text-neutral-900 dark:text-neutral-100 theme-transition min-h-screen w-full overflow-x-hidden flex items-center justify-center" vid="8">
+
+    <button id="theme-btn" class="fixed top-6 right-6 z-50 p-3 bg-white dark:bg-[#111] hover:bg-neutral-100 dark:hover:bg-[#1a1a1a] theme-transition border border-neutral-300 dark:border-neutral-800 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]" aria-label="Toggle Theme" vid="9">
+        <svg id="moon-icon" class="w-5 h-5 hidden dark:block text-neutral-400 hover:text-white theme-transition" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" vid="10">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" vid="11"></path>
+        </svg>
+        <svg id="sun-icon" class="w-5 h-5 block dark:hidden text-neutral-600 hover:text-black theme-transition" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" vid="12">
+            <circle cx="12" cy="12" r="5" vid="13"></circle>
+            <line x1="12" y1="1" x2="12" y2="3" vid="14"></line>
+            <line x1="12" y1="21" x2="12" y2="23" vid="15"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" vid="16"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" vid="17"></line>
+            <line x1="1" y1="12" x2="3" y2="12" vid="18"></line>
+            <line x1="21" y1="12" x2="23" y2="12" vid="19"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" vid="20"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" vid="21"></line>
+        </svg>
+    </button>
+
+    <main class="w-full min-h-screen relative p-8 md:p-16 xl:p-24 overflow-hidden flex flex-col lg:flex-row items-center justify-between max-w-[1600px] mx-auto z-10 gap-16" vid="22">
+        
+        <div class="absolute -left-20 top-20 text-[20vw] font-bold text-neutral-100 dark:text-[#111] leading-none select-none z-0 theme-transition tracking-tighter whitespace-nowrap overflow-hidden opacity-50 pointer-events-none" vid="23">
+            PRICING
+        </div>
+
+        <div class="w-full lg:w-1/2 relative z-10 flex flex-col pt-20 lg:pt-0" vid="24">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-8 leading-[1.05]" vid="25">
+                Agents pick tools based on popularity.<br vid="26">
+                <span class="text-neutral-500 dark:text-neutral-500" vid="27">Yours should also consider cost.</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 mb-12 max-w-xl leading-relaxed" vid="28">
+                Install one skill. Your agent knows what every developer tool costs, and what it'll cost when you scale.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-16" vid="29">
+                <div class="group flex items-center gap-3 font-mono text-sm bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 px-5 py-4 theme-transition shadow-lg" vid="30">
+                    <span vid="31">npx skills add rogermbyrne/Pricing.md</span>
+                    <button onclick="navigator.clipboard.writeText('npx skills add rogermbyrne/Pricing.md'); this.textContent='copied'; setTimeout(() => this.textContent='copy', 2000)" class="text-xs px-2 py-1 bg-neutral-700 dark:bg-neutral-200 text-neutral-300 dark:text-neutral-700 hover:bg-neutral-600 dark:hover:bg-neutral-300 transition-colors uppercase tracking-wider font-bold" vid="32">copy</button>
+                </div>
+                <a href="https://github.com/rogermbyrne/Pricing.md" class="font-mono text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-white border-b border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white pb-1 transition-all" vid="33">
+                    View GitHub →
+                </a>
+            </div>
+
+            <div class="font-mono text-xs text-neutral-500 dark:text-neutral-500 flex flex-wrap gap-4 uppercase tracking-widest mt-auto" vid="34">
+                <span class="text-neutral-800 dark:text-neutral-300" vid="35">Hosting</span> / 
+                <span class="text-neutral-800 dark:text-neutral-300" vid="36">Database</span> / 
+                <span class="text-neutral-800 dark:text-neutral-300" vid="37">Auth</span> / 
+                <span class="text-neutral-800 dark:text-neutral-300" vid="38">Email</span> / 
+                <span class="text-neutral-800 dark:text-neutral-300" vid="39">Monitoring</span> /
+                <span class="text-neutral-800 dark:text-neutral-300" vid="40">CI/CD</span> /
+                <span class="text-neutral-800 dark:text-neutral-300" vid="41">Search</span>
+            </div>
+        </div>
+
+        <div class="w-full lg:w-1/2 relative z-20 flex justify-center lg:justify-end mt-12 lg:mt-0" vid="42">
+            <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 p-8 w-full max-w-[560px] transform lg:rotate-2 hover:rotate-0 transition-transform duration-500 shadow-[16px_16px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[16px_16px_0px_0px_rgba(0,0,0,0.8)] theme-transition flex flex-col" vid="43">
+                
+                <div class="flex justify-between items-center border-b border-neutral-200 dark:border-neutral-800 pb-4 mb-6 font-mono text-sm" vid="44">
+                    <span class="font-bold text-neutral-900 dark:text-white tracking-widest" vid="45">claude</span>
+                    <span class="text-neutral-400" vid="46">code</span>
+                </div>
+
+                <div class="relative w-full h-[320px] font-mono text-sm" vid="47">
+                    
+                    <div id="slide-0" class="pricing-slide absolute inset-0 slide-transition opacity-100 translate-y-0 z-10 flex flex-col gap-6" vid="48">
+                        <div class="flex gap-4" vid="49">
+                            <span class="text-neutral-900 dark:text-white font-bold shrink-0" vid="50">&gt;</span>
+                            <span class="text-neutral-600 dark:text-neutral-400" vid="51">what will my stack cost at 10K users?</span>
+                        </div>
+                        <div class="flex gap-4" vid="52">
+                            <span class="text-neutral-900 dark:text-white font-bold shrink-0" vid="53">&gt;</span>
+                            <div class="text-neutral-600 dark:text-neutral-400 flex flex-col gap-3 w-full" vid="54">
+                                <span vid="55">Calculating full stack at 10K MAUs...</span>
+                                <div class="bg-neutral-50 dark:bg-[#0a0a0a] p-4 border border-neutral-200 dark:border-neutral-800 flex flex-col gap-2 theme-transition shadow-inner" vid="56">
+                                    <div class="flex justify-between text-neutral-400 dark:text-neutral-600 line-through decoration-neutral-400/50" vid="57">
+                                        <span vid="58">With Descope auth:</span>
+                                        <span vid="59">~$304/mo</span>
+                                    </div>
+                                    <div class="flex justify-between text-neutral-900 dark:text-white font-bold text-base" vid="60">
+                                        <span vid="61">With WorkOS auth:</span>
+                                        <span vid="62">~$55/mo</span>
+                                    </div>
+                                </div>
+                                <span class="text-neutral-800 dark:text-neutral-300 mt-1 leading-relaxed" vid="63">Vercel $20 + Neon ~$15 + Resend $20 + auth. Descope $249 vs WorkOS $0 at 10K users. Auth is the cliff.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="slide-1" class="pricing-slide absolute inset-0 slide-transition opacity-0 translate-y-4 pointer-events-none z-0 flex flex-col gap-6" vid="64">
+                        <div class="flex gap-4" vid="65">
+                            <span class="text-neutral-900 dark:text-white font-bold shrink-0" vid="66">&gt;</span>
+                            <span class="text-neutral-600 dark:text-neutral-400" vid="67">I need transactional emails for user notifications</span>
+                        </div>
+                        <div class="flex gap-4" vid="68">
+                            <span class="text-neutral-900 dark:text-white font-bold shrink-0" vid="69">&gt;</span>
+                            <div class="text-neutral-600 dark:text-neutral-400 flex flex-col gap-3 w-full" vid="70">
+                                <span vid="71">Comparing Email...</span>
+                                <div class="bg-neutral-50 dark:bg-[#0a0a0a] p-4 border border-neutral-200 dark:border-neutral-800 flex flex-col gap-2 theme-transition shadow-inner" vid="72">
+                                    <div class="flex justify-between text-neutral-400 dark:text-neutral-600 line-through decoration-neutral-400/50" vid="73">
+                                        <span vid="74">Resend Free:</span>
+                                        <span vid="75">3K/mo (100/day)</span>
+                                    </div>
+                                    <div class="flex justify-between text-neutral-900 dark:text-white font-bold text-base" vid="76">
+                                        <span vid="77">Resend Pro:</span>
+                                        <span vid="78">$20/mo (50K)</span>
+                                    </div>
+                                </div>
+                                <span class="text-neutral-800 dark:text-neutral-300 mt-1 leading-relaxed" vid="79">Free tier caps at 100/day. Pro: 50K emails for $20/mo. Uses standard SMTP — switch providers anytime.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="slide-2" class="pricing-slide absolute inset-0 slide-transition opacity-0 translate-y-4 pointer-events-none z-0 flex flex-col gap-6" vid="80">
+                        <div class="flex gap-4" vid="81">
+                            <span class="text-neutral-900 dark:text-white font-bold shrink-0" vid="82">&gt;</span>
+                            <span class="text-neutral-600 dark:text-neutral-400" vid="83">compare auth providers for my saas</span>
+                        </div>
+                        <div class="flex gap-4" vid="84">
+                            <span class="text-neutral-900 dark:text-white font-bold shrink-0" vid="85">&gt;</span>
+                            <div class="text-neutral-600 dark:text-neutral-400 flex flex-col gap-3 w-full" vid="86">
+                                <span vid="87">Comparing Auth free tiers...</span>
+                                <div class="bg-neutral-50 dark:bg-[#0a0a0a] p-4 border border-neutral-200 dark:border-neutral-800 flex flex-col gap-2 theme-transition shadow-inner" vid="88">
+                                    <div class="flex justify-between text-neutral-400 dark:text-neutral-600" vid="89">
+                                        <span vid="90">Auth0:</span>
+                                        <span vid="91">25K MAUs free</span>
+                                    </div>
+                                    <div class="flex justify-between text-neutral-400 dark:text-neutral-600" vid="92">
+                                        <span vid="93">Descope:</span>
+                                        <span vid="94">7.5K MAUs free</span>
+                                    </div>
+                                    <div class="flex justify-between text-neutral-900 dark:text-white font-bold text-base" vid="95">
+                                        <span vid="96">WorkOS:</span>
+                                        <span vid="97">1M MAUs free</span>
+                                    </div>
+                                </div>
+                                <span class="text-neutral-800 dark:text-neutral-300 mt-1 leading-relaxed" vid="98">40x difference in free tier. Auth0: 25K free then $35/mo. WorkOS: 1M free then $2,500/1M overage.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="slide-3" class="pricing-slide absolute inset-0 slide-transition opacity-0 translate-y-4 pointer-events-none z-0 flex flex-col gap-6" vid="99">
+                        <div class="flex gap-4" vid="100">
+                            <span class="text-neutral-900 dark:text-white font-bold shrink-0" vid="101">&gt;</span>
+                            <span class="text-neutral-600 dark:text-neutral-400" vid="102">database for a side project</span>
+                        </div>
+                        <div class="flex gap-4" vid="103">
+                            <span class="text-neutral-900 dark:text-white font-bold shrink-0" vid="104">&gt;</span>
+                            <div class="text-neutral-600 dark:text-neutral-400 flex flex-col gap-3 w-full" vid="105">
+                                <span vid="106">Comparing Database...</span>
+                                <div class="bg-neutral-50 dark:bg-[#0a0a0a] p-4 border border-neutral-200 dark:border-neutral-800 flex flex-col gap-2 theme-transition shadow-inner" vid="107">
+                                    <div class="flex justify-between text-neutral-400 dark:text-neutral-600" vid="108">
+                                        <span vid="109">Neon Free:</span>
+                                        <span vid="110">0.5GB, PostgreSQL</span>
+                                    </div>
+                                    <div class="flex justify-between text-neutral-400 dark:text-neutral-600" vid="111">
+                                        <span vid="112">Turso Free:</span>
+                                        <span vid="113">5GB, SQLite</span>
+                                    </div>
+                                </div>
+                                <span class="text-neutral-800 dark:text-neutral-300 mt-1 leading-relaxed" vid="114">Neon: drop-in PostgreSQL, switch to any Postgres host anytime. Turso: 10x more storage but SQLite dialect.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="slide-4" class="pricing-slide absolute inset-0 slide-transition opacity-0 translate-y-4 pointer-events-none z-0 flex flex-col gap-6" vid="115">
+                        <div class="flex gap-4" vid="116">
+                            <span class="text-neutral-900 dark:text-white font-bold shrink-0" vid="117">&gt;</span>
+                            <span class="text-neutral-600 dark:text-neutral-400" vid="118">ci/cd pipeline — circleci vs buildkite</span>
+                        </div>
+                        <div class="flex gap-4" vid="119">
+                            <span class="text-neutral-900 dark:text-white font-bold shrink-0" vid="120">&gt;</span>
+                            <div class="text-neutral-600 dark:text-neutral-400 flex flex-col gap-3 w-full" vid="121">
+                                <span vid="122">Comparing CI/CD...</span>
+                                <div class="bg-neutral-50 dark:bg-[#0a0a0a] p-4 border border-neutral-200 dark:border-neutral-800 flex flex-col gap-2 theme-transition shadow-inner" vid="123">
+                                    <div class="flex justify-between text-neutral-400 dark:text-neutral-600" vid="124">
+                                        <span vid="125">CircleCI:</span>
+                                        <span vid="126">$15/seat/mo</span>
+                                    </div>
+                                    <div class="flex justify-between text-neutral-400 dark:text-neutral-600" vid="127">
+                                        <span vid="128">Buildkite:</span>
+                                        <span vid="129">$30/seat/mo</span>
+                                    </div>
+                                </div>
+                                <span class="text-neutral-800 dark:text-neutral-300 mt-1 leading-relaxed" vid="130">CircleCI: cheaper per-seat + $15/25K credits. Buildkite: 2x per-seat but includes hosted runners and 10 agents.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="slide-5" class="pricing-slide absolute inset-0 slide-transition opacity-0 translate-y-4 pointer-events-none z-0 flex flex-col gap-6" vid="131">
+                        <div class="flex gap-4" vid="132">
+                            <span class="text-neutral-900 dark:text-white font-bold shrink-0" vid="133">&gt;</span>
+                            <span class="text-neutral-600 dark:text-neutral-400" vid="134">using vercel for hosting</span>
+                        </div>
+                        <div class="flex gap-4" vid="135">
+                            <span class="text-neutral-900 dark:text-white font-bold shrink-0" vid="136">&gt;</span>
+                            <div class="text-neutral-600 dark:text-neutral-400 flex flex-col gap-3 w-full" vid="137">
+                                <span vid="138">Checking lock-in risk...</span>
+                                <div class="bg-neutral-50 dark:bg-[#0a0a0a] p-4 border border-neutral-200 dark:border-neutral-800 flex flex-col gap-2 theme-transition shadow-inner" vid="139">
+                                    <div class="flex justify-between text-neutral-900 dark:text-white font-bold text-base" vid="140">
+                                        <span vid="141">Vercel Pro:</span>
+                                        <span vid="142">$20/seat/mo</span>
+                                    </div>
+                                    <div class="flex justify-between text-amber-600 dark:text-amber-400 text-xs mt-1" vid="143">
+                                        <span vid="144">Lock-in:</span>
+                                        <span vid="145">moderate</span>
+                                    </div>
+                                </div>
+                                <span class="text-neutral-800 dark:text-neutral-300 mt-1 leading-relaxed" vid="146">ISR, edge functions, and image optimization are proprietary. Switching means rewriting these layers.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex justify-center gap-3 mt-6 pt-4 border-t border-neutral-200 dark:border-neutral-800" vid="144">
+                    <button onclick="manualNav(0)" class="nav-dot w-2 h-2 rounded-none bg-neutral-900 dark:bg-white transition-colors" vid="145"></button>
+                    <button onclick="manualNav(1)" class="nav-dot w-2 h-2 rounded-none bg-neutral-300 dark:bg-neutral-700 transition-colors" vid="146"></button>
+                    <button onclick="manualNav(2)" class="nav-dot w-2 h-2 rounded-none bg-neutral-300 dark:bg-neutral-700 transition-colors" vid="147"></button>
+                    <button onclick="manualNav(3)" class="nav-dot w-2 h-2 rounded-none bg-neutral-300 dark:bg-neutral-700 transition-colors" vid="148"></button>
+                    <button onclick="manualNav(4)" class="nav-dot w-2 h-2 rounded-none bg-neutral-300 dark:bg-neutral-700 transition-colors" vid="149"></button>
+                    <button onclick="manualNav(5)" class="nav-dot w-2 h-2 rounded-none bg-neutral-300 dark:bg-neutral-700 transition-colors" vid="150"></button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script vid="151">
+        const html = document.documentElement;
+        const themeBtn = document.getElementById('theme-btn');
+        
+        themeBtn.addEventListener('click', () => {
+            html.classList.toggle('dark');
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.pricing-slide');
+        const dots = document.querySelectorAll('.nav-dot');
+        let slideInterval;
+
+        function goToSlide(index) {
+            slides[currentSlide].classList.remove('opacity-100', 'translate-y-0', 'z-10');
+            slides[currentSlide].classList.add('opacity-0', 'translate-y-4', 'z-0', 'pointer-events-none');
+            
+            if(html.classList.contains('dark')) {
+                dots[currentSlide].classList.remove('bg-white');
+                dots[currentSlide].classList.add('bg-neutral-700');
+            } else {
+                dots[currentSlide].classList.remove('bg-neutral-900');
+                dots[currentSlide].classList.add('bg-neutral-300');
+            }
+
+            currentSlide = index;
+
+            slides[currentSlide].classList.remove('opacity-0', 'translate-y-4', 'z-0', 'pointer-events-none');
+            slides[currentSlide].classList.add('opacity-100', 'translate-y-0', 'z-10');
+            
+            if(html.classList.contains('dark')) {
+                dots[currentSlide].classList.remove('bg-neutral-700');
+                dots[currentSlide].classList.add('bg-white');
+            } else {
+                dots[currentSlide].classList.remove('bg-neutral-300');
+                dots[currentSlide].classList.add('bg-neutral-900');
+            }
+        }
+
+        function nextSlide() {
+            let next = (currentSlide + 1) % slides.length;
+            goToSlide(next);
+        }
+
+        function startSlideshow() {
+            slideInterval = setInterval(nextSlide, 4000);
+        }
+
+        function stopSlideshow() {
+            clearInterval(slideInterval);
+        }
+
+        function manualNav(index) {
+            stopSlideshow();
+            goToSlide(index);
+            startSlideshow();
+        }
+
+        startSlideshow();
+
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.attributeName === 'class') {
+                    dots.forEach((dot, idx) => {
+                        if (idx === currentSlide) {
+                            dot.className = html.classList.contains('dark') ? 'nav-dot w-2 h-2 rounded-none transition-colors bg-white' : 'nav-dot w-2 h-2 rounded-none transition-colors bg-neutral-900';
+                        } else {
+                            dot.className = html.classList.contains('dark') ? 'nav-dot w-2 h-2 rounded-none transition-colors bg-neutral-700' : 'nav-dot w-2 h-2 rounded-none transition-colors bg-neutral-300';
+                        }
+                    });
+                }
+            });
+        });
+
+        observer.observe(html, { attributes: true });
+
+    </script>
+
+</body></html>

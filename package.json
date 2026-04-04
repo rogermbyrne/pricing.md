@@ -20,18 +20,30 @@
     "check-freshness": "tsx scripts/check-freshness.ts",
     "test": "tsx scripts/test-server.ts",
     "sanity-check": "tsx scripts/sanity-check.ts",
-    "pre-push": "tsx scripts/pre-push.ts"
+    "pre-push": "tsx scripts/pre-push.ts",
+    "web": "tsx web/server.ts",
+    "web:build": "tsc && node dist/web/server.js",
+    "record-snapshot": "tsx scripts/record-snapshot.ts"
   },
-  "keywords": ["mcp", "pricing", "developer-tools", "claude-code"],
+  "keywords": [
+    "mcp",
+    "pricing",
+    "developer-tools",
+    "claude-code"
+  ],
   "author": "Roger Byrne",
   "license": "MIT",
   "type": "commonjs",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",
+    "ejs": "^5.0.1",
+    "express": "^5.2.1",
     "zod": "^4.3.6"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.13",
+    "@types/ejs": "^3.1.5",
+    "@types/express": "^5.0.6",
     "@types/node": "^25.5.0",
     "better-sqlite3": "^12.8.0",
     "tsx": "^4.21.0",
