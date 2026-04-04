@@ -1,0 +1,47 @@
+{
+  "id": "xata",
+  "name": "Xata",
+  "description": "Serverless PostgreSQL-compatible database platform with branching, scale-to-zero compute, and data anonymization",
+  "url": "https://xata.io",
+  "pricingUrl": "https://xata.io/pricing",
+  "category": "database",
+  "tags": ["postgresql", "serverless", "branching", "scale-to-zero"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "PostgreSQL wire protocol",
+    "whatYouLose": "Copy-on-write branching, scale-to-zero compute, built-in data anonymization and masking"
+  },
+  "tiers": [
+    {
+      "name": "Standard",
+      "slug": "standard",
+      "pricingModel": "usage_based",
+      "basePrice": 9,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "compute-micro", "unit": "hours", "pricePerUnit": 0.012, "unitQuantity": 1, "includedQuantity": 0 },
+        { "name": "storage-nvme", "unit": "GB", "pricePerUnit": 0.30, "unitQuantity": 1, "includedQuantity": 0 },
+        { "name": "bandwidth", "unit": "GB", "pricePerUnit": 0.09, "unitQuantity": 1, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": 999,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "id": "cohere",
+  "name": "Cohere",
+  "description": "Enterprise AI platform with Command language models, embeddings, and reranking APIs",
+  "url": "https://cohere.com",
+  "pricingUrl": "https://cohere.com/pricing",
+  "category": "ai-api",
+  "tags": ["inference", "embeddings", "reranking", "rag", "enterprise-ai"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Cohere-specific Embed and Rerank models, RAG connectors, enterprise deployment options"
+  },
+  "tiers": [
+    {
+      "name": "Trial",
+      "slug": "trial",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Production",
+      "slug": "production",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "Command A input", "unit": "tokens", "pricePerUnit": 2.50, "unitQuantity": 1000000, "includedQuantity": 0 },
+        { "name": "Command A output", "unit": "tokens", "pricePerUnit": 10.00, "unitQuantity": 1000000, "includedQuantity": 0 },
+        { "name": "Command R input", "unit": "tokens", "pricePerUnit": 0.50, "unitQuantity": 1000000, "includedQuantity": 0 },
+        { "name": "Command R output", "unit": "tokens", "pricePerUnit": 1.50, "unitQuantity": 1000000, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

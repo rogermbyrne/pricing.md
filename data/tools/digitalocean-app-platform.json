@@ -1,0 +1,67 @@
+{
+  "id": "digitalocean-app-platform",
+  "name": "DigitalOcean App Platform",
+  "description": "Managed PaaS for building, deploying, and scaling apps from code or containers",
+  "url": "https://digitalocean.com",
+  "pricingUrl": "https://www.digitalocean.com/pricing/app-platform",
+  "category": "hosting",
+  "tags": ["paas", "containers", "static-sites", "managed", "autoscaling"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "Docker/OCI",
+    "whatYouLose": "App spec YAML config, managed databases integration, built-in CDN for static sites"
+  },
+  "tiers": [
+    {
+      "name": "Free (Static Sites)",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "staticSiteApps": 3, "bandwidthGiBPerApp": 1 }
+    },
+    {
+      "name": "Starter Container",
+      "slug": "starter-container",
+      "pricingModel": "flat_rate",
+      "basePrice": 5,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "ramMiB": 512, "bandwidthGiB": 50 }
+    },
+    {
+      "name": "Basic Container",
+      "slug": "basic-container",
+      "pricingModel": "flat_rate",
+      "basePrice": 12,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "ramMiB": 1024, "bandwidthGiB": 150 }
+    },
+    {
+      "name": "Pro Container",
+      "slug": "pro-container",
+      "pricingModel": "flat_rate",
+      "basePrice": 50,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "ramMiB": 4096, "bandwidthGiB": 250 }
+    }
+  ]
+}

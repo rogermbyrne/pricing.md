@@ -1,0 +1,67 @@
+{
+  "id": "cloudflare-pages",
+  "name": "Cloudflare Pages",
+  "description": "Full-stack platform for deploying static sites and serverless functions on Cloudflare's global edge network",
+  "url": "https://cloudflare.com",
+  "pricingUrl": "https://www.cloudflare.com/plans/developer-platform/",
+  "category": "hosting",
+  "tags": ["static-sites", "edge", "serverless", "jamstack", "cdn"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Edge Functions use Cloudflare Workers API; Pages-specific build config and _redirects/_headers need porting"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "buildsPerMonth": 500, "concurrentBuilds": 1, "functionRequestsPerDay": 100000 }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "buildsPerMonth": 5000, "concurrentBuilds": 5, "functionRequestsPerMonth": 10000000 }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "flat_rate",
+      "basePrice": 200,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "buildsPerMonth": 20000, "concurrentBuilds": 20, "functionRequestsPerMonth": 50000000 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

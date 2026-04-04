@@ -1,0 +1,55 @@
+{
+  "id": "firebase",
+  "name": "Firebase",
+  "description": "Google's app development platform with Firestore database, Realtime Database, authentication, hosting, and serverless functions",
+  "url": "https://firebase.google.com",
+  "pricingUrl": "https://firebase.google.com/pricing",
+  "category": "database",
+  "tags": ["nosql", "document-database", "realtime", "serverless", "google-cloud", "baas"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "architectural",
+    "openStandard": null,
+    "whatYouLose": "Proprietary Firestore query model, real-time sync, Firebase Auth, FCM push notifications, Crashlytics, Analytics"
+  },
+  "tiers": [
+    {
+      "name": "Spark (Free)",
+      "slug": "spark",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "firestoreStorageGiB": 1,
+        "firestoreReadsPerDay": 50000,
+        "firestoreWritesPerDay": 20000,
+        "cloudStorageGB": 5,
+        "cloudFunctionsInvocationsPerMonth": 2000000,
+        "authMAUs": 50000
+      }
+    },
+    {
+      "name": "Blaze (Pay as you go)",
+      "slug": "blaze",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "firestore-reads", "unit": "documents", "pricePerUnit": 0.06, "unitQuantity": 100000, "includedQuantity": 50000 },
+        { "name": "firestore-writes", "unit": "documents", "pricePerUnit": 0.18, "unitQuantity": 100000, "includedQuantity": 20000 },
+        { "name": "firestore-storage", "unit": "GiB", "pricePerUnit": 0.26, "unitQuantity": 1, "includedQuantity": 1 },
+        { "name": "cloud-functions-invocations", "unit": "invocations", "pricePerUnit": 0.40, "unitQuantity": 1000000, "includedQuantity": 2000000 }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

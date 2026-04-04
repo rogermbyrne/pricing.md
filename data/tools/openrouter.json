@@ -1,0 +1,57 @@
+{
+  "id": "openrouter",
+  "name": "OpenRouter",
+  "description": "Unified API gateway to 300+ AI models from 60+ providers with automatic routing and fallback",
+  "url": "https://openrouter.ai",
+  "pricingUrl": "https://openrouter.ai/pricing",
+  "category": "ai-api",
+  "tags": ["ai", "api-gateway", "llm", "multi-model"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Unified multi-provider routing, automatic fallback, access to 300+ models through single API key"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "requestsPerDay": 50, "requestsPerMinute": 20 }
+    },
+    {
+      "name": "Pay-as-you-go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "platform-fee", "unit": "percentage", "pricePerUnit": 5.5, "unitQuantity": 1, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

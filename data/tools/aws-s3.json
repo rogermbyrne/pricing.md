@@ -1,0 +1,48 @@
+{
+  "id": "aws-s3",
+  "name": "AWS S3",
+  "description": "Industry-standard object storage with multiple storage classes, 11 nines durability, and deep AWS integration",
+  "url": "https://aws.amazon.com",
+  "pricingUrl": "https://aws.amazon.com/s3/pricing/",
+  "category": "storage",
+  "tags": ["object-storage", "cloud-storage", "aws", "s3"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "S3-compatible",
+    "whatYouLose": "Deep AWS service integrations (Lambda triggers, Athena, CloudFront), IAM policies, S3 event notifications"
+  },
+  "tiers": [
+    {
+      "name": "Free Tier",
+      "slug": "free-tier",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "storageGB": 5, "getRequestsPerMonth": 20000, "putRequestsPerMonth": 2000, "durationMonths": 12 }
+    },
+    {
+      "name": "S3 Standard",
+      "slug": "s3-standard",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "storage", "unit": "GB", "pricePerUnit": 0.023, "unitQuantity": 1, "includedQuantity": 0 },
+        { "name": "PUT/POST/LIST requests", "unit": "requests", "pricePerUnit": 0.005, "unitQuantity": 1000, "includedQuantity": 0 },
+        { "name": "GET/SELECT requests", "unit": "requests", "pricePerUnit": 0.0004, "unitQuantity": 1000, "includedQuantity": 0 },
+        { "name": "data-transfer-out", "unit": "GB", "pricePerUnit": 0.09, "unitQuantity": 1, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

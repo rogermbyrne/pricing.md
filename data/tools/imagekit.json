@@ -1,0 +1,73 @@
+{
+  "id": "imagekit",
+  "name": "ImageKit",
+  "description": "Real-time image and video optimization and transformation platform with global CDN delivery",
+  "url": "https://imagekit.io",
+  "pricingUrl": "https://imagekit.io/plans/",
+  "category": "storage",
+  "tags": ["image-cdn", "video", "transformations", "optimization"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "URL-based transformation syntax, named transform presets, media library, extension integrations"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "bandwidthGB": 20, "storageGB": 3 }
+    },
+    {
+      "name": "Lite",
+      "slug": "lite",
+      "pricingModel": "tiered",
+      "basePrice": 9,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "bandwidth", "unit": "GB", "pricePerUnit": 0.50, "unitQuantity": 1, "includedQuantity": 40 },
+        { "name": "storage", "unit": "GB", "pricePerUnit": 0.10, "unitQuantity": 1, "includedQuantity": 10 }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "hybrid",
+      "basePrice": 89,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 9,
+      "usageMetrics": [
+        { "name": "bandwidth", "unit": "GB", "pricePerUnit": 0.45, "unitQuantity": 1, "includedQuantity": 225 },
+        { "name": "storage", "unit": "GB", "pricePerUnit": 0.09, "unitQuantity": 1, "includedQuantity": 225 }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

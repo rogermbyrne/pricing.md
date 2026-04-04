@@ -1,0 +1,72 @@
+{
+  "id": "perplexity",
+  "name": "Perplexity",
+  "description": "AI-powered search engine with real-time web search, citations, and Sonar API for developers",
+  "url": "https://perplexity.ai",
+  "pricingUrl": "https://perplexity.ai/pricing",
+  "category": "ai-api",
+  "tags": ["ai", "search", "llm", "citations", "research"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Real-time web search with citations, Sonar model family, integrated research workflows"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "proSearchesPerDay": 5 }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "researchQueriesPerDay": 20 }
+    },
+    {
+      "name": "Enterprise Pro",
+      "slug": "enterprise-pro",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": 40,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "minimumSeats": 50, "researchQueriesPerDay": 500 }
+    },
+    {
+      "name": "Sonar API",
+      "slug": "sonar-api",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "Sonar input tokens", "unit": "tokens", "pricePerUnit": 1.00, "unitQuantity": 1000000, "includedQuantity": 0 },
+        { "name": "Sonar output tokens", "unit": "tokens", "pricePerUnit": 1.00, "unitQuantity": 1000000, "includedQuantity": 0 },
+        { "name": "Sonar Pro input tokens", "unit": "tokens", "pricePerUnit": 3.00, "unitQuantity": 1000000, "includedQuantity": 0 },
+        { "name": "Sonar Pro output tokens", "unit": "tokens", "pricePerUnit": 15.00, "unitQuantity": 1000000, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

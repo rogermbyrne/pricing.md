@@ -1,0 +1,61 @@
+{
+  "id": "zeabur",
+  "name": "Zeabur",
+  "description": "Cloud deployment platform with AI-powered features for deploying services from Git or templates",
+  "url": "https://zeabur.com",
+  "pricingUrl": "https://zeabur.com/pricing",
+  "category": "hosting",
+  "tags": ["paas", "ai-deployment", "multi-cloud", "serverless"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "Docker/OCI",
+    "whatYouLose": "Zeabur-specific templates, AI agent features, multi-provider orchestration"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "servers": 1 }
+    },
+    {
+      "name": "Developer",
+      "slug": "developer",
+      "pricingModel": "hybrid",
+      "basePrice": 5,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "memory", "unit": "GB-minutes", "pricePerUnit": 0.00025, "unitQuantity": 1, "includedQuantity": 0 },
+        { "name": "network-egress", "unit": "GB", "pricePerUnit": 0.10, "unitQuantity": 1, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "hybrid",
+      "basePrice": 80,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "memory", "unit": "GB-minutes", "pricePerUnit": 0.00025, "unitQuantity": 1, "includedQuantity": 0 },
+        { "name": "network-egress", "unit": "GB", "pricePerUnit": 0.10, "unitQuantity": 1, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

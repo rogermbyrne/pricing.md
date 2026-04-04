@@ -1,0 +1,71 @@
+{
+  "id": "koyeb",
+  "name": "Koyeb",
+  "description": "Serverless platform for deploying full-stack apps globally with scale-to-zero, GPU support, and managed Postgres",
+  "url": "https://koyeb.com",
+  "pricingUrl": "https://www.koyeb.com/pricing",
+  "category": "hosting",
+  "tags": ["serverless", "paas", "gpu", "containers", "postgres", "scale-to-zero"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "Docker/OCI",
+    "whatYouLose": "Koyeb-specific service mesh, managed Postgres, GPU orchestration, global load balancing"
+  },
+  "tiers": [
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "users": 1, "services": 1, "customDomains": 5, "bandwidthGB": 100 }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "hybrid",
+      "basePrice": 29,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "compute-credit", "unit": "USD", "pricePerUnit": 1, "unitQuantity": 1, "includedQuantity": 10 }
+      ],
+      "features": [],
+      "limits": { "users": 10, "services": 100, "customDomains": 100, "concurrentBuilds": 5 }
+    },
+    {
+      "name": "Scale",
+      "slug": "scale",
+      "pricingModel": "hybrid",
+      "basePrice": 299,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "compute-credit", "unit": "USD", "pricePerUnit": 1, "unitQuantity": 1, "includedQuantity": 100 }
+      ],
+      "features": [],
+      "limits": { "users": 50, "services": 1000, "customDomains": 500 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": 1000,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

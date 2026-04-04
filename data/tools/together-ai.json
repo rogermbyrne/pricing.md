@@ -1,0 +1,48 @@
+{
+  "id": "together-ai",
+  "name": "Together AI",
+  "description": "Fast inference API for 200+ open-source models with pay-per-token pricing",
+  "url": "https://together.ai",
+  "pricingUrl": "https://www.together.ai/pricing",
+  "category": "ai-api",
+  "tags": ["inference", "open-source-models", "fine-tuning", "serverless"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "OpenAI-compatible",
+    "whatYouLose": "Together-specific fine-tuning jobs, GPU cluster reservations, optimized model routing"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "freeCredits": 25 }
+    },
+    {
+      "name": "Pay As You Go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "Llama 3.3 70B input", "unit": "tokens", "pricePerUnit": 0.88, "unitQuantity": 1000000, "includedQuantity": 0 },
+        { "name": "Llama 3.3 70B output", "unit": "tokens", "pricePerUnit": 0.88, "unitQuantity": 1000000, "includedQuantity": 0 },
+        { "name": "DeepSeek-R1 input", "unit": "tokens", "pricePerUnit": 3.00, "unitQuantity": 1000000, "includedQuantity": 0 },
+        { "name": "DeepSeek-R1 output", "unit": "tokens", "pricePerUnit": 7.00, "unitQuantity": 1000000, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

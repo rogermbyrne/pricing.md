@@ -1,0 +1,45 @@
+{
+  "id": "coolify",
+  "name": "Coolify",
+  "description": "Open-source, self-hostable alternative to Heroku and Netlify for deploying apps, databases, and services",
+  "url": "https://coolify.io",
+  "pricingUrl": "https://coolify.io/pricing",
+  "category": "hosting",
+  "tags": ["self-hosted", "open-source", "paas", "docker"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "Docker/Docker Compose",
+    "whatYouLose": "Coolify dashboard and automated deployment pipelines; all services run as standard Docker containers"
+  },
+  "tiers": [
+    {
+      "name": "Self-Hosted",
+      "slug": "self-hosted",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Cloud",
+      "slug": "cloud",
+      "pricingModel": "tiered",
+      "basePrice": 5,
+      "billingPeriod": "monthly",
+      "annualDiscount": 20,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "additional-servers", "unit": "servers", "pricePerUnit": 3, "unitQuantity": 1, "includedQuantity": 2 }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

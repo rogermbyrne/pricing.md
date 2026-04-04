@@ -1,0 +1,48 @@
+{
+  "id": "fireworks-ai",
+  "name": "Fireworks AI",
+  "description": "High-speed inference platform for open-source and fine-tuned models with tiered token pricing",
+  "url": "https://fireworks.ai",
+  "pricingUrl": "https://fireworks.ai/pricing",
+  "category": "ai-api",
+  "tags": ["inference", "open-source-models", "fine-tuning", "serverless", "batch-api"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "OpenAI-compatible",
+    "whatYouLose": "Fireworks-specific fine-tuning, on-demand GPU deployments, batch API discounts"
+  },
+  "tiers": [
+    {
+      "name": "Serverless",
+      "slug": "serverless",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "tokens (models <4B)", "unit": "tokens", "pricePerUnit": 0.10, "unitQuantity": 1000000, "includedQuantity": 0 },
+        { "name": "tokens (models 4B-16B)", "unit": "tokens", "pricePerUnit": 0.20, "unitQuantity": 1000000, "includedQuantity": 0 },
+        { "name": "tokens (models 16B+)", "unit": "tokens", "pricePerUnit": 0.90, "unitQuantity": 1000000, "includedQuantity": 0 },
+        { "name": "tokens (MoE 56B+)", "unit": "tokens", "pricePerUnit": 1.20, "unitQuantity": 1000000, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

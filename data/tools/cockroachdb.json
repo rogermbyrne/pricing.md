@@ -1,0 +1,64 @@
+{
+  "id": "cockroachdb",
+  "name": "CockroachDB",
+  "description": "Distributed SQL database built for cloud-native applications with PostgreSQL compatibility and multi-region support",
+  "url": "https://www.cockroachlabs.com",
+  "pricingUrl": "https://www.cockroachlabs.com/pricing/",
+  "category": "database",
+  "tags": ["sql", "distributed", "postgresql", "multi-region", "serverless"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "PostgreSQL wire protocol",
+    "whatYouLose": "Automatic multi-region replication, scale-to-zero serverless compute, 99.999% SLA on Advanced tier"
+  },
+  "tiers": [
+    {
+      "name": "Basic",
+      "slug": "basic",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "request-units", "unit": "RU", "pricePerUnit": 0.0000002, "unitQuantity": 1, "includedQuantity": 50000000 },
+        { "name": "storage", "unit": "GiB", "pricePerUnit": 0.50, "unitQuantity": 1, "includedQuantity": 10 }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Standard",
+      "slug": "standard",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "compute", "unit": "vCPU-hours", "pricePerUnit": 0.09, "unitQuantity": 1, "includedQuantity": 0 },
+        { "name": "storage", "unit": "GiB", "pricePerUnit": 0.50, "unitQuantity": 1, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Advanced",
+      "slug": "advanced",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "compute", "unit": "vCPU-hours", "pricePerUnit": 0.15, "unitQuantity": 1, "includedQuantity": 0 },
+        { "name": "storage", "unit": "GiB", "pricePerUnit": 0.50, "unitQuantity": 1, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

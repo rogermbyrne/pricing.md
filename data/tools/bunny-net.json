@@ -1,0 +1,50 @@
+{
+  "id": "bunny-net",
+  "name": "Bunny.net",
+  "description": "High-performance CDN and edge storage platform with pay-as-you-go pricing and 119+ global PoPs",
+  "url": "https://bunny.net",
+  "pricingUrl": "https://bunny.net/pricing",
+  "category": "storage",
+  "tags": ["cdn", "edge-storage", "video-streaming", "dns"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Edge storage replication topology, Bunny Optimizer image processing URLs, Stream video hosting"
+  },
+  "tiers": [
+    {
+      "name": "Standard Network",
+      "slug": "standard-network",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "bandwidth-eu-na", "unit": "GB", "pricePerUnit": 0.01, "unitQuantity": 1, "includedQuantity": 0 },
+        { "name": "bandwidth-asia", "unit": "GB", "pricePerUnit": 0.03, "unitQuantity": 1, "includedQuantity": 0 },
+        { "name": "storage", "unit": "GB", "pricePerUnit": 0.01, "unitQuantity": 1, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": { "minimumMonthlyChargeUSD": 1 }
+    },
+    {
+      "name": "Volume Network",
+      "slug": "volume-network",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "bandwidth-eu-na", "unit": "GB", "pricePerUnit": 0.005, "unitQuantity": 1, "includedQuantity": 0 },
+        { "name": "storage", "unit": "GB", "pricePerUnit": 0.01, "unitQuantity": 1, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": { "minimumMonthlyChargeUSD": 1 }
+    }
+  ]
+}

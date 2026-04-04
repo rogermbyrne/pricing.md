@@ -1,0 +1,46 @@
+{
+  "id": "replicate",
+  "name": "Replicate",
+  "description": "Run open-source AI models via API with per-second or per-token billing across GPUs",
+  "url": "https://replicate.com",
+  "pricingUrl": "https://replicate.com/pricing",
+  "category": "ai-api",
+  "tags": ["inference", "open-source-models", "image-generation", "serverless-gpu"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Replicate-specific prediction API format, custom model deployments, fine-tuned model hosting"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pay As You Go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "gpu-compute-A100-80GB", "unit": "seconds", "pricePerUnit": 0.0032, "unitQuantity": 1, "includedQuantity": 0 },
+        { "name": "gpu-compute-CPU", "unit": "seconds", "pricePerUnit": 0.000025, "unitQuantity": 1, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

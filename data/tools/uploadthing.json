@@ -1,0 +1,57 @@
+{
+  "id": "uploadthing",
+  "name": "UploadThing",
+  "description": "Developer-friendly file upload service for Next.js and other frameworks with no bandwidth fees",
+  "url": "https://uploadthing.com",
+  "pricingUrl": "https://uploadthing.com/pricing",
+  "category": "storage",
+  "tags": ["file-upload", "nextjs", "react", "storage"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Pre-built React/Next.js upload components, type-safe file routes, zero-config upload infrastructure"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "storageGB": 2 }
+    },
+    {
+      "name": "App",
+      "slug": "app",
+      "pricingModel": "flat_rate",
+      "basePrice": 10,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "storageGB": 100 }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "hybrid",
+      "basePrice": 25,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "storage-overage", "unit": "GB", "pricePerUnit": 0.08, "unitQuantity": 1, "includedQuantity": 250 }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

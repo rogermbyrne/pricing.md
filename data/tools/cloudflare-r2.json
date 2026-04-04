@@ -1,0 +1,47 @@
+{
+  "id": "cloudflare-r2",
+  "name": "Cloudflare R2",
+  "description": "S3-compatible object storage with zero egress fees built on Cloudflare's global network",
+  "url": "https://cloudflare.com",
+  "pricingUrl": "https://developers.cloudflare.com/r2/pricing/",
+  "category": "storage",
+  "tags": ["object-storage", "s3-compatible", "zero-egress", "cloudflare"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "S3-compatible",
+    "whatYouLose": "Zero egress fees and Cloudflare Workers integration"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "storageGB": 10, "classARequestsPerMonth": 1000000, "classBRequestsPerMonth": 10000000 }
+    },
+    {
+      "name": "Standard",
+      "slug": "standard",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "storage", "unit": "GB", "pricePerUnit": 0.015, "unitQuantity": 1, "includedQuantity": 10 },
+        { "name": "class-A-operations", "unit": "requests", "pricePerUnit": 4.50, "unitQuantity": 1000000, "includedQuantity": 1000000 },
+        { "name": "class-B-operations", "unit": "requests", "pricePerUnit": 0.36, "unitQuantity": 1000000, "includedQuantity": 10000000 }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

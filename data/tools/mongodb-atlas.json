@@ -1,0 +1,69 @@
+{
+  "id": "mongodb-atlas",
+  "name": "MongoDB Atlas",
+  "description": "Fully managed cloud database service for MongoDB with automated scaling, backups, and multi-cloud deployment",
+  "url": "https://mongodb.com",
+  "pricingUrl": "https://www.mongodb.com/pricing",
+  "category": "database",
+  "tags": ["nosql", "document-database", "managed-database", "multi-cloud"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Atlas Search, Data Federation, Charts, Triggers, managed backups, multi-cloud replication"
+  },
+  "tiers": [
+    {
+      "name": "Free (M0)",
+      "slug": "m0-free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "storageMB": 512 }
+    },
+    {
+      "name": "Shared M2",
+      "slug": "m2-shared",
+      "pricingModel": "flat_rate",
+      "basePrice": 9,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "storageGB": 2 }
+    },
+    {
+      "name": "Shared M5",
+      "slug": "m5-shared",
+      "pricingModel": "flat_rate",
+      "basePrice": 25,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "storageGB": 5 }
+    },
+    {
+      "name": "Dedicated M10",
+      "slug": "m10-dedicated",
+      "pricingModel": "usage_based",
+      "basePrice": 57,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "compute", "unit": "hours", "pricePerUnit": 0.08, "unitQuantity": 1, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": { "ramGB": 2, "vCPUs": 2 }
+    }
+  ]
+}

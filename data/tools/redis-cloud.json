@@ -1,0 +1,71 @@
+{
+  "id": "redis-cloud",
+  "name": "Redis Cloud",
+  "description": "Managed Redis database service with in-memory caching, real-time data, and multi-model support",
+  "url": "https://redis.io",
+  "pricingUrl": "https://redis.io/pricing/",
+  "category": "database",
+  "tags": ["in-memory", "cache", "key-value", "real-time", "managed"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "Redis protocol (RESP)",
+    "whatYouLose": "Redis Flex auto-tiering, Active-Active multi-region replication, managed infrastructure, 99.999% SLA"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "storageMB": 30, "databases": 1 }
+    },
+    {
+      "name": "Essentials",
+      "slug": "essentials",
+      "pricingModel": "usage_based",
+      "basePrice": 5,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "compute", "unit": "hours", "pricePerUnit": 0.007, "unitQuantity": 1, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": { "databases": 1 }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "usage_based",
+      "basePrice": 200,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "compute", "unit": "hours", "pricePerUnit": 0.014, "unitQuantity": 1, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

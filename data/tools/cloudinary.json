@@ -1,0 +1,67 @@
+{
+  "id": "cloudinary",
+  "name": "Cloudinary",
+  "description": "Cloud-based image and video management platform with on-the-fly transformations, optimization, and CDN delivery",
+  "url": "https://cloudinary.com",
+  "pricingUrl": "https://cloudinary.com/pricing",
+  "category": "storage",
+  "tags": ["image-cdn", "video", "media-management", "transformations", "optimization"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Transformation URL scheme, named transformations, AI-based tagging, upload presets, media library"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "creditsPerMonth": 25, "storageGB": 25, "bandwidthGB": 25 }
+    },
+    {
+      "name": "Plus",
+      "slug": "plus",
+      "pricingModel": "flat_rate",
+      "basePrice": 89,
+      "billingPeriod": "monthly",
+      "annualDiscount": 10,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "creditsPerMonth": 225, "storageGB": 225, "bandwidthGB": 225 }
+    },
+    {
+      "name": "Advanced",
+      "slug": "advanced",
+      "pricingModel": "flat_rate",
+      "basePrice": 224,
+      "billingPeriod": "monthly",
+      "annualDiscount": 10,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "creditsPerMonth": 600, "storageGB": 600, "bandwidthGB": 600 }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

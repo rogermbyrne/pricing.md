@@ -1,0 +1,47 @@
+{
+  "id": "deepseek",
+  "name": "DeepSeek",
+  "description": "High-performance AI inference API offering DeepSeek-V3 and reasoning models at competitive prices",
+  "url": "https://deepseek.com",
+  "pricingUrl": "https://api-docs.deepseek.com/quick_start/pricing",
+  "category": "ai-api",
+  "tags": ["inference", "reasoning", "open-source-models", "code-generation"],
+  "lastVerified": "2026-04-04",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "OpenAI-compatible",
+    "whatYouLose": "DeepSeek-specific cache hit pricing advantage, access to DeepSeek-native reasoning mode"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": { "freeTokens": 5000000, "freeTokenExpiryDays": 30 }
+    },
+    {
+      "name": "Pay As You Go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        { "name": "input tokens (cache miss)", "unit": "tokens", "pricePerUnit": 0.28, "unitQuantity": 1000000, "includedQuantity": 0 },
+        { "name": "input tokens (cache hit)", "unit": "tokens", "pricePerUnit": 0.028, "unitQuantity": 1000000, "includedQuantity": 0 },
+        { "name": "output tokens", "unit": "tokens", "pricePerUnit": 0.42, "unitQuantity": 1000000, "includedQuantity": 0 }
+      ],
+      "features": [],
+      "limits": { "contextWindow": 128000 }
+    }
+  ]
+}
