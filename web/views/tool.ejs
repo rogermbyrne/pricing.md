@@ -2,144 +2,138 @@
 
 <%
 function formatPrice(price) {
-  if (price === 0) return '<span class="price price-free">Free</span>';
-  if (price === null || price === undefined) return '<span class="price price-contact">Contact Sales</span>';
-  return '<span class="price mono">$' + price + '/mo</span>';
+  if (price === 0) return '<span class="font-mono font-bold text-neutral-900 dark:text-neutral-100">Free</span>';
+  if (price === null || price === undefined) return '<span class="font-mono text-neutral-400 italic">Contact Sales</span>';
+  return '<span class="font-mono font-bold text-neutral-900 dark:text-neutral-100">$' + price + '/mo</span>';
 }
 
 function switchingBadge(cost) {
   const map = {
-    'drop-in': 'badge-green',
-    'moderate': 'badge-yellow',
-    'significant': 'badge-orange',
-    'architectural': 'badge-red',
+    'drop-in': 'border-neutral-300 dark:border-neutral-600 text-neutral-600 dark:text-neutral-400',
+    'moderate': 'border-amber-400 dark:border-amber-600 text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950',
+    'significant': 'border-orange-400 dark:border-orange-600 text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-950',
+    'architectural': 'border-red-400 dark:border-red-600 text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-950',
   };
-  return '<span class="badge ' + (map[cost] || 'badge-muted') + '">' + cost + '</span>';
+  return '<span class="inline-block px-2 py-0.5 text-xs font-mono border rounded-none ' + (map[cost] || 'border-neutral-300 dark:border-neutral-700 text-neutral-500') + '">' + cost + '</span>';
 }
 
 function freshness(dateStr) {
   const d = new Date(dateStr);
   const now = new Date();
   const days = Math.floor((now.getTime() - d.getTime()) / (1000 * 60 * 60 * 24));
-  if (days <= 7) return { label: 'Fresh', cls: 'badge-green' };
-  if (days <= 30) return { label: 'Recent', cls: 'badge-yellow' };
-  return { label: 'Stale', cls: 'badge-red' };
+  if (days <= 7) return { label: 'Fresh', cls: 'border-neutral-300 dark:border-neutral-600 text-neutral-600 dark:text-neutral-400' };
+  if (days <= 30) return { label: 'Recent', cls: 'border-amber-400 dark:border-amber-600 text-amber-600 dark:text-amber-400' };
+  return { label: 'Stale', cls: 'border-red-400 dark:border-red-600 text-red-600 dark:text-red-400' };
 }
 
 const fresh = freshness(tool.lastVerified);
 const categoryDisplay = tool.category.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 %>
 
-<div class="container">
+<div class="max-w-5xl mx-auto px-6 py-10">
   <!-- Breadcrumb -->
-  <div class="flex items-center gap-2 mb-2">
-    <a href="/browse" class="text-muted text-sm">Browse</a>
-    <span class="text-muted text-sm">/</span>
-    <a href="/browse/<%= tool.category %>" class="text-muted text-sm"><%= categoryDisplay %></a>
-    <span class="text-muted text-sm">/</span>
-    <span class="text-sm"><%= tool.name %></span>
+  <div class="flex items-center gap-2 mb-4 text-sm">
+    <a href="/browse" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors font-mono">Browse</a>
+    <span class="text-neutral-400">/</span>
+    <a href="/browse/<%= tool.category %>" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors font-mono"><%= categoryDisplay %></a>
+    <span class="text-neutral-400">/</span>
+    <span class="text-neutral-900 dark:text-neutral-100 font-mono"><%= tool.name %></span>
   </div>
 
   <!-- Hero -->
-  <div class="mb-4">
-    <div class="flex items-center gap-2 flex-wrap">
-      <h1 style="margin-bottom: 0;"><%= tool.name %></h1>
-      <span class="badge badge-blue"><%= categoryDisplay %></span>
-      <span class="badge <%= fresh.cls %>"><%= fresh.label %></span>
+  <div class="mb-10">
+    <div class="flex items-center gap-3 flex-wrap">
+      <h1 class="text-4xl font-bold tracking-tighter text-neutral-900 dark:text-neutral-100"><%= tool.name %></h1>
+      <span class="inline-block px-2 py-0.5 text-xs font-mono border border-neutral-300 dark:border-neutral-700 text-neutral-500 rounded-none"><%= categoryDisplay %></span>
+      <span class="inline-block px-2 py-0.5 text-xs font-mono border rounded-none <%= fresh.cls %>"><%= fresh.label %></span>
     </div>
-    <p class="text-muted mt-1"><%= tool.description %></p>
-    <div class="flex items-center gap-3 mt-2">
-      <a href="<%= tool.pricingUrl %>" target="_blank" rel="noopener" class="btn">View Pricing Page &rarr;</a>
-      <span class="text-xs text-muted">Last verified: <%= tool.lastVerified %></span>
+    <p class="text-neutral-500 mt-2 text-sm"><%= tool.description %></p>
+    <div class="flex items-center gap-4 mt-4">
+      <a href="<%= tool.pricingUrl %>" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-mono text-sm rounded-none border border-neutral-900 dark:border-white hover:opacity-80 transition-opacity no-underline">View Pricing Page &rarr;</a>
+      <span class="text-xs text-neutral-400 font-mono">Last verified: <%= tool.lastVerified %></span>
     </div>
   </div>
 
   <!-- Portability -->
-  <div class="card mb-4">
-    <h3>Portability</h3>
-    <div class="flex items-center gap-3 mt-2 flex-wrap">
+  <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 rounded-none p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] mb-8 theme-transition">
+    <div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-3">Portability</div>
+    <div class="flex items-center gap-6 flex-wrap">
       <div>
-        <span class="text-xs text-muted">Switching Cost</span><br>
+        <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-1">Switching Cost</div>
         <%- switchingBadge(tool.portability.switchingCost) %>
       </div>
       <div>
-        <span class="text-xs text-muted">Open Standard</span><br>
-        <span class="text-sm"><%= tool.portability.openStandard || 'Proprietary' %></span>
+        <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-1">Open Standard</div>
+        <span class="text-sm text-neutral-900 dark:text-neutral-100"><%= tool.portability.openStandard || 'Proprietary' %></span>
       </div>
     </div>
-    <p class="text-sm text-muted mt-2"><strong>What you lose:</strong> <%= tool.portability.whatYouLose %></p>
+    <p class="text-sm text-neutral-500 mt-3"><span class="font-semibold text-neutral-700 dark:text-neutral-300">What you lose:</span> <%= tool.portability.whatYouLose %></p>
   </div>
 
   <!-- Tier Cards -->
-  <h2 class="mb-2">Pricing Tiers</h2>
-  <div class="grid grid-3 mb-4">
+  <div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-4">Pricing Tiers</div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
     <% for (const tier of tool.tiers) { %>
-      <div class="card">
-        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+      <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 rounded-none p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] theme-transition">
+        <div class="flex justify-between items-start mb-3">
           <div>
-            <h3 style="margin-bottom: 0.25rem;"><%= tier.name %></h3>
-            <span class="badge badge-muted"><%= tier.pricingModel.replace(/_/g, ' ') %></span>
+            <div class="font-semibold text-neutral-900 dark:text-neutral-100 text-sm"><%= tier.name %></div>
+            <span class="inline-block px-2 py-0.5 text-xs font-mono border border-neutral-300 dark:border-neutral-700 text-neutral-500 rounded-none mt-1"><%= tier.pricingModel.replace(/_/g, ' ') %></span>
           </div>
-          <div style="text-align: right;">
+          <div class="text-right">
             <%- formatPrice(tier.basePrice) %>
             <% if (tier.billingPeriod) { %>
-              <div class="text-xs text-muted"><%= tier.billingPeriod %></div>
+              <div class="text-xs text-neutral-400 font-mono"><%= tier.billingPeriod %></div>
             <% } %>
           </div>
         </div>
 
         <% if (tier.seatPrice !== null) { %>
           <div class="text-sm mt-2">
-            <span class="text-muted">Per seat:</span>
-            <span class="mono">$<%= tier.seatPrice %>/mo</span>
+            <span class="text-neutral-500">Per seat:</span>
+            <span class="font-mono text-neutral-900 dark:text-neutral-100">$<%= tier.seatPrice %>/mo</span>
           </div>
         <% } %>
 
         <% if (tier.annualDiscount) { %>
-          <div class="text-xs text-muted mt-1">
-            <%= tier.annualDiscount %>% annual discount
-          </div>
+          <div class="text-xs text-neutral-400 mt-1 font-mono"><%= tier.annualDiscount %>% annual discount</div>
         <% } %>
 
         <% if (tier.usageMetrics.length > 0) { %>
-          <div class="mt-3">
-            <div class="text-xs text-muted" style="margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Usage Metrics</div>
-            <table style="font-size: 0.8125rem;">
-              <% for (const m of tier.usageMetrics) { %>
-                <tr>
-                  <td style="padding: 0.25rem 0.5rem 0.25rem 0; border: none; color: var(--muted);"><%= m.name %></td>
-                  <td style="padding: 0.25rem 0; border: none;">
-                    <span class="mono"><%= m.includedQuantity.toLocaleString() %></span> <span class="text-muted"><%= m.unit %></span> included
-                    <% if (m.pricePerUnit > 0) { %>
-                      <br><span class="text-xs text-muted">then $<%= m.pricePerUnit %>/<%= m.unitQuantity > 1 ? m.unitQuantity.toLocaleString() + ' ' : '' %><%= m.unit %></span>
-                    <% } %>
-                  </td>
-                </tr>
+          <div class="mt-4 bg-neutral-50 dark:bg-[#0a0a0a] border border-neutral-200 dark:border-neutral-800 shadow-inner rounded-none p-3">
+            <div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-2">Usage Metrics</div>
+            <% for (const m of tier.usageMetrics) { %>
+              <div class="flex justify-between text-xs py-0.5">
+                <span class="text-neutral-500"><%= m.name %></span>
+                <span class="font-mono text-neutral-900 dark:text-neutral-100"><%= m.includedQuantity.toLocaleString() %> <span class="text-neutral-400"><%= m.unit %></span></span>
+              </div>
+              <% if (m.pricePerUnit > 0) { %>
+                <div class="text-xs text-neutral-400 font-mono ml-auto text-right">then $<%= m.pricePerUnit %>/<%= m.unitQuantity > 1 ? m.unitQuantity.toLocaleString() + ' ' : '' %><%= m.unit %></div>
               <% } %>
-            </table>
+            <% } %>
           </div>
         <% } %>
 
         <% const limitEntries = Object.entries(tier.limits); %>
         <% if (limitEntries.length > 0) { %>
-          <div class="mt-3">
-            <div class="text-xs text-muted" style="margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Limits</div>
+          <div class="mt-4 bg-neutral-50 dark:bg-[#0a0a0a] border border-neutral-200 dark:border-neutral-800 shadow-inner rounded-none p-3">
+            <div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-2">Limits</div>
             <% for (const [key, val] of limitEntries) { %>
-              <div class="text-sm" style="display: flex; justify-content: space-between; padding: 0.125rem 0;">
-                <span class="text-muted"><%= key.replace(/([A-Z])/g, ' $1').replace(/^./, s => s.toUpperCase()) %></span>
-                <span class="mono"><%= typeof val === 'number' ? val.toLocaleString() : val %></span>
+              <div class="flex justify-between text-xs py-0.5">
+                <span class="text-neutral-500"><%= key.replace(/([A-Z])/g, ' $1').replace(/^./, s => s.toUpperCase()) %></span>
+                <span class="font-mono text-neutral-900 dark:text-neutral-100"><%= typeof val === 'number' ? val.toLocaleString() : val %></span>
               </div>
             <% } %>
           </div>
         <% } %>
 
         <% if (tier.features.length > 0) { %>
-          <div class="mt-3">
-            <div class="text-xs text-muted" style="margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Features</div>
+          <div class="mt-4">
+            <div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-2">Features</div>
             <% for (const f of tier.features) { %>
-              <div class="text-sm" style="padding: 0.125rem 0;">
-                <span style="color: <%= f.included ? 'var(--accent)' : 'var(--red)' %>"><%= f.included ? '&#10003;' : '&#10007;' %></span>
-                <span class="<%= f.included ? '' : 'text-muted' %>"><%= f.name %></span>
+              <div class="text-xs py-0.5 flex items-center gap-1.5">
+                <span class="<%= f.included ? 'text-neutral-900 dark:text-neutral-100' : 'text-neutral-300 dark:text-neutral-700' %>"><%= f.included ? '&#10003;' : '&#10007;' %></span>
+                <span class="<%= f.included ? 'text-neutral-700 dark:text-neutral-300' : 'text-neutral-400 dark:text-neutral-600' %>"><%= f.name %></span>
               </div>
             <% } %>
           </div>
@@ -149,31 +143,31 @@ const categoryDisplay = tool.category.replace(/-/g, ' ').replace(/\b\w/g, c => c
   </div>
 
   <!-- Changelog -->
-  <h2 class="mb-2">Pricing Changes</h2>
+  <div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-4">Pricing Changes</div>
   <% if (changes.length > 0) { %>
-    <div class="card" style="padding: 0;">
-      <table>
+    <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] overflow-x-auto theme-transition">
+      <table class="w-full border-collapse">
         <thead>
-          <tr>
-            <th>Date</th>
-            <th>Type</th>
-            <th>Summary</th>
+          <tr class="border-b border-neutral-200 dark:border-neutral-800">
+            <th class="px-4 py-3 text-left text-[10px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 font-normal">Date</th>
+            <th class="px-4 py-3 text-left text-[10px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 font-normal">Type</th>
+            <th class="px-4 py-3 text-left text-[10px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 font-normal">Summary</th>
           </tr>
         </thead>
         <tbody>
           <% for (const change of changes) { %>
-            <tr>
-              <td class="text-sm text-muted mono"><%= change.detected_at.split('T')[0] %></td>
-              <td><span class="badge badge-muted"><%= change.change_type.replace(/_/g, ' ') %></span></td>
-              <td class="text-sm"><%= change.summary %></td>
+            <tr class="border-b border-neutral-100 dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-[#0a0a0a] transition-colors">
+              <td class="px-4 py-3 text-xs text-neutral-400 font-mono whitespace-nowrap"><%= change.detected_at.split('T')[0] %></td>
+              <td class="px-4 py-3"><span class="inline-block px-2 py-0.5 text-xs font-mono border border-neutral-300 dark:border-neutral-700 text-neutral-500 rounded-none"><%= change.change_type.replace(/_/g, ' ') %></span></td>
+              <td class="px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300"><%= change.summary %></td>
             </tr>
           <% } %>
         </tbody>
       </table>
     </div>
   <% } else { %>
-    <div class="card">
-      <p class="text-muted text-sm">No pricing changes recorded yet. Changes will appear here as <%= tool.name %> updates their pricing.</p>
+    <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 rounded-none p-5 theme-transition">
+      <p class="text-sm text-neutral-500">No pricing changes recorded yet. Changes will appear here as <%= tool.name %> updates their pricing.</p>
     </div>
   <% } %>
 </div>
