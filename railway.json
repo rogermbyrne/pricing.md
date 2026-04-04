@@ -1,11 +1,12 @@
 {
   "$schema": "https://railway.com/railway.schema.json",
   "build": {
-    "builder": "NIXPACKS"
+    "builder": "NIXPACKS",
+    "buildCommand": "npm ci && npx tsc"
   },
   "deploy": {
-    "startCommand": "npx tsc && node dist/web/server.js",
+    "startCommand": "node dist/web/server.js",
     "healthcheckPath": "/api/tools",
-    "healthcheckTimeout": 30
+    "healthcheckTimeout": 60
   }
 }
