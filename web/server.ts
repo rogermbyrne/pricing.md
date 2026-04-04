@@ -9,8 +9,17 @@ import { createChangelogRouter } from "./routes/changelog.js";
 import { createApiRouter } from "./routes/api.js";
 
 const PORT = parseInt(process.env.PORT || "3001", 10);
-const dataDir = path.join(__dirname, "..", "data", "tools");
-const dbPath = path.join(__dirname, "..", "data", "changelog.db");
+
+// Resolve project root — works whether running via tsx (source) or node (compiled dist/)
+const projectRoot = __dirname.includes("dist")
+  ? path.join(__dirname, "..", "..")
+  : path.join(__dirname, "..");
+
+const dataDir = path.join(projectRoot, "data", "tools");
+const dbPath = path.join(projectRoot, "data", "changelog.db");
+const viewsDir = path.join(projectRoot, "web", "views");
+const lpDir = path.join(projectRoot, "web", "lp");
+const publicDir = path.join(projectRoot, "web", "public");
 
 // Initialize registry and changelog DB
 const registry = new Registry(dataDir);
@@ -23,13 +32,13 @@ const app = express();
 
 // View engine
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
+app.set("views", viewsDir);
 
 // Static files
-app.use("/public", express.static(path.join(__dirname, "public")));
+app.use("/public", express.static(publicDir));
 
 // Landing page at root
-app.use(express.static(path.join(__dirname, "lp")));
+app.use(express.static(lpDir));
 
 // Mount routes
 app.use(createBrowseRouter(registry));
