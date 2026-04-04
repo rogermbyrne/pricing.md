@@ -174,4 +174,27 @@ const categoryDisplay = tool.category.replace(/-/g, ' ').replace(/\b\w/g, c => c
   <% } %>
 </div>
 
+<%
+const prices = tool.tiers.filter(t => t.basePrice !== null).map(t => t.basePrice);
+const lowPrice = prices.length > 0 ? Math.min(...prices) : 0;
+const highPrice = prices.length > 0 ? Math.max(...prices) : 0;
+%>
+<script type="application/ld+json">
+<%- JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": tool.name,
+  "description": tool.description,
+  "url": tool.pricingUrl,
+  "applicationCategory": "DeveloperApplication",
+  "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": String(lowPrice),
+    "highPrice": String(highPrice),
+    "priceCurrency": "USD",
+    "offerCount": String(tool.tiers.length)
+  }
+}, null, 2) %>
+</script>
+
 <%- include('partials/footer') %>

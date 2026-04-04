@@ -21,6 +21,8 @@ export function createChangelogRouter(registry: Registry, changelogDB: Changelog
 
     res.render("changelog", {
       title: "Pricing Changelog",
+      description: "Track pricing changes across all developer tools. See when prices increase, tiers change, or limits are updated.",
+      path: "/changelog",
       changes,
       toolNames,
       categories,
@@ -36,6 +38,8 @@ export function createChangelogRouter(registry: Registry, changelogDB: Changelog
 
     res.render("changelog", {
       title: tool ? `${tool.name} Pricing Changes` : "Pricing Changes",
+      description: tool ? `Track pricing changes for ${tool.name}. See when prices increase, tiers change, or limits are updated.` : "Track pricing changes across all developer tools.",
+      path: `/changelog/${toolId}`,
       changes,
       toolNames: tool ? { [toolId]: tool.name } : {},
       categories: registry.categories(),

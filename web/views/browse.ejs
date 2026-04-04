@@ -16,4 +16,20 @@
   </div>
 </div>
 
+<script type="application/ld+json">
+<%- JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Developer Tool Pricing Categories",
+  "description": "Browse developer tool pricing across " + categories.length + " categories",
+  "numberOfItems": categories.length,
+  "itemListElement": categories.map((cat, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": cat.displayName,
+    "url": "https://latest.sh/browse/" + cat.name
+  }))
+}, null, 2) %>
+</script>
+
 <%- include('partials/footer') %>

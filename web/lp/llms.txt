@@ -1,0 +1,38 @@
+# Pricing.md
+
+> Developer tool pricing registry with 197 tools across 17 categories. Compare pricing, free tiers, switching costs, and portability for hosting, database, auth, email, payments, monitoring, storage, CI/CD, search, analytics, feature flags, CMS, queues, edge, testing, notifications, and scheduling tools.
+
+## Browse Categories
+
+- [Hosting](/browse/hosting): Vercel, Railway, Heroku, Netlify, Render, and more
+- [Database](/browse/database): Neon, Supabase, MongoDB Atlas, Firebase, and more
+- [Auth](/browse/auth): Auth0, Clerk, WorkOS, Stytch, Kinde, and more
+- [Email](/browse/email): Resend, SendGrid, Postmark, Mailgun, and more
+- [Payments](/browse/payments): Stripe, Paddle, Chargebee, RevenueCat, and more
+- [Monitoring](/browse/monitoring): Datadog, Sentry, Grafana, BetterStack, and more
+- [Storage](/browse/storage): AWS S3, Cloudflare R2, Cloudinary, and more
+- [CI/CD](/browse/ci-cd): GitHub Actions, GitLab CI, CircleCI, and more
+- [Search](/browse/search): Algolia, Elastic, Pinecone, Typesense, and more
+- [Analytics](/browse/analytics): PostHog, Mixpanel, Amplitude, Plausible, and more
+- [Feature Flags](/browse/feature-flags): LaunchDarkly, Statsig, Flagsmith, and more
+- [CMS](/browse/cms): Sanity, Contentful, Ghost, Strapi, and more
+- [Queues](/browse/queues): Inngest, Temporal, Confluent, and more
+- [Edge](/browse/edge): Cloudflare, Fastly, Akamai, and more
+- [Testing](/browse/testing): BrowserStack, Cypress, Playwright, and more
+- [Notifications](/browse/notifications): OneSignal, Knock, Courier, and more
+- [Scheduling](/browse/scheduling): Mergent, EasyCron
+
+## API
+
+- [All Tools JSON](/api/tools): Complete tool listing with pricing data
+- [Single Tool](/api/tools/{id}): Full pricing details for a specific tool
+- [Changelog](/api/changelog): Pricing change history
+
+## Compare Tools
+
+- [Compare](/compare): Side-by-side tool comparison (add ?tools=vercel,netlify,railway)
+
+## Optional
+
+- [GitHub Repository](https://github.com/rogermbyrne/pricing.md)
+- [Install as Skill](https://github.com/rogermbyrne/pricing.md#install-as-a-skill): `npx skills add rogermbyrne/pricing.md`

@@ -7,6 +7,7 @@ import { createToolRouter } from "./routes/tool.js";
 import { createCompareRouter } from "./routes/compare.js";
 import { createChangelogRouter } from "./routes/changelog.js";
 import { createApiRouter } from "./routes/api.js";
+import { createSeoRouter } from "./routes/seo.js";
 
 const PORT = parseInt(process.env.PORT || "3001", 10);
 
@@ -49,6 +50,7 @@ app.use(createToolRouter(registry, changelogDB));
 app.use(createCompareRouter(registry));
 app.use(createChangelogRouter(registry, changelogDB));
 app.use(createApiRouter(registry, changelogDB));
+app.use(createSeoRouter(registry));
 
 // 404 catch-all
 app.use((req: express.Request, res: express.Response) => {

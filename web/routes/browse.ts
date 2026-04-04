@@ -18,6 +18,8 @@ export function createBrowseRouter(registry: Registry): Router {
 
     res.render("browse", {
       title: "Browse Developer Tool Pricing",
+      description: "Compare pricing across " + categoryData.reduce((sum, c) => sum + c.count, 0) + " developer tools in " + categoryData.length + " categories. Find free tiers, switching costs, and the cheapest options.",
+      path: "/browse",
       categories: categoryData,
     });
   });
@@ -64,6 +66,8 @@ export function createBrowseRouter(registry: Registry): Router {
 
     res.render("category", {
       title: `${displayName} Pricing Comparison`,
+      description: `Compare ${displayName.toLowerCase()} tool pricing side-by-side. ${tools.length} tools with free tier details, switching costs, and verified prices.`,
+      path: `/browse/${category}`,
       category: displayName,
       categorySlug: category,
       tools,

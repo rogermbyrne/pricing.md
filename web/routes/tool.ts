@@ -20,6 +20,8 @@ export function createToolRouter(registry: Registry, changelogDB: ChangelogDB): 
 
     res.render("tool", {
       title: `${tool.name} Pricing`,
+      description: `Compare ${tool.name} pricing tiers, free tier limits, and switching costs. Verified ${tool.lastVerified}.`,
+      path: `/tool/${tool.id}`,
       tool,
       changes,
     });
