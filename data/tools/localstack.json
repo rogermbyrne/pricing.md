@@ -1,0 +1,83 @@
+{
+  "id": "localstack",
+  "name": "LocalStack",
+  "description": "Local AWS cloud emulator for developing and testing cloud applications offline",
+  "url": "https://localstack.cloud",
+  "pricingUrl": "https://localstack.cloud/pricing",
+  "category": "testing",
+  "tags": [
+    "aws",
+    "emulator",
+    "local-development",
+    "cloud-testing"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "AWS API compatible",
+    "whatYouLose": "Cloud Pods, Cloud Sandbox previews, advanced IAM testing — open-source core remains"
+  },
+  "tiers": [
+    {
+      "name": "Hobby",
+      "slug": "hobby",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "awsServices": 30,
+        "personalSandboxes": 1
+      }
+    },
+    {
+      "name": "Base",
+      "slug": "base",
+      "pricingModel": "flat_rate",
+      "basePrice": 45,
+      "billingPeriod": "monthly",
+      "annualDiscount": 13,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "awsServices": 55,
+        "cloudPodStorageMB": 300,
+        "cloudSandboxMinutesPerMonth": 100
+      }
+    },
+    {
+      "name": "Ultimate",
+      "slug": "ultimate",
+      "pricingModel": "flat_rate",
+      "basePrice": 89,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "awsServices": 110,
+        "cloudPodStorageGB": 3,
+        "cloudSandboxMinutesPerMonth": 500
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

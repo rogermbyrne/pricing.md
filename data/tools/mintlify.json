@@ -1,0 +1,72 @@
+{
+  "id": "mintlify",
+  "name": "Mintlify",
+  "description": "Developer documentation platform with custom domains, API playground, AI assistant, and MDX support",
+  "url": "https://mintlify.com",
+  "pricingUrl": "https://mintlify.com/pricing",
+  "category": "cms",
+  "tags": [
+    "documentation",
+    "docs",
+    "api-docs",
+    "developer-portal"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "MDX / Markdown",
+    "whatYouLose": "Hosted docs portal, AI assistant config, custom components, preview deployments"
+  },
+  "tiers": [
+    {
+      "name": "Hobby",
+      "slug": "hobby",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "aiCreditsPerMonth": 250
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 250,
+      "billingPeriod": "monthly",
+      "annualDiscount": 15,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "ai-credits",
+          "unit": "credits",
+          "pricePerUnit": 0.25,
+          "unitQuantity": 1,
+          "includedQuantity": 250
+        }
+      ],
+      "features": [],
+      "limits": {
+        "aiCreditsPerMonth": 250
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

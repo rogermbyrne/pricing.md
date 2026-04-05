@@ -1,0 +1,78 @@
+{
+  "id": "openpanel",
+  "name": "OpenPanel",
+  "description": "Open-source analytics platform with event tracking, user profiles, and real-time dashboards",
+  "url": "https://openpanel.dev",
+  "pricingUrl": "https://openpanel.dev/pricing",
+  "category": "analytics",
+  "tags": [
+    "analytics",
+    "event-tracking",
+    "open-source",
+    "dashboards"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "Event history, dashboard configs, tracked profiles — can self-host for free"
+  },
+  "tiers": [
+    {
+      "name": "Self-Hosted",
+      "slug": "self-hosted",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Cloud 100K",
+      "slug": "cloud-100k",
+      "pricingModel": "flat_rate",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "eventsPerMonth": 100000
+      }
+    },
+    {
+      "name": "Cloud 1M",
+      "slug": "cloud-1m",
+      "pricingModel": "flat_rate",
+      "basePrice": 90,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "eventsPerMonth": 1000000
+      }
+    },
+    {
+      "name": "Cloud 10M",
+      "slug": "cloud-10m",
+      "pricingModel": "flat_rate",
+      "basePrice": 350,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "eventsPerMonth": 10000000
+      }
+    }
+  ]
+}

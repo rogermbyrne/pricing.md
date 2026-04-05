@@ -1,0 +1,60 @@
+{
+  "id": "cerebras",
+  "name": "Cerebras",
+  "description": "Ultra-fast AI inference platform with custom wafer-scale chips, 20x faster than conventional GPU inference",
+  "url": "https://cerebras.ai",
+  "pricingUrl": "https://cerebras.ai/pricing",
+  "category": "ai-api",
+  "tags": [
+    "ai-inference",
+    "llm",
+    "fast-inference",
+    "coding"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "OpenAI-compatible API",
+    "whatYouLose": "Ultra-fast inference speed, Cerebras-specific model optimizations"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Developer",
+      "slug": "developer",
+      "pricingModel": "usage_based",
+      "basePrice": 10,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

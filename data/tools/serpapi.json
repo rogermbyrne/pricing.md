@@ -1,0 +1,111 @@
+{
+  "id": "serpapi",
+  "name": "SerpApi",
+  "description": "Search engine results API for Google, Bing, and other search engines with structured JSON output",
+  "url": "https://serpapi.com",
+  "pricingUrl": "https://serpapi.com/pricing",
+  "category": "search",
+  "tags": [
+    "search-api",
+    "serp",
+    "web-scraping",
+    "google"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "REST API",
+    "whatYouLose": "Search result parsing, location targeting, cached results"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "searchesPerMonth": 250,
+        "throughputPerHour": 50
+      }
+    },
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "flat_rate",
+      "basePrice": 25,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "searchesPerMonth": 1000,
+        "throughputPerHour": 200
+      }
+    },
+    {
+      "name": "Developer",
+      "slug": "developer",
+      "pricingModel": "flat_rate",
+      "basePrice": 75,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "searchesPerMonth": 5000,
+        "throughputPerHour": 1000
+      }
+    },
+    {
+      "name": "Production",
+      "slug": "production",
+      "pricingModel": "flat_rate",
+      "basePrice": 150,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "searchesPerMonth": 15000,
+        "throughputPerHour": 3000
+      }
+    },
+    {
+      "name": "Big Data",
+      "slug": "big-data",
+      "pricingModel": "flat_rate",
+      "basePrice": 275,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "searchesPerMonth": 30000,
+        "throughputPerHour": 6000
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

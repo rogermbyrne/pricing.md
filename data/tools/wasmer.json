@@ -1,0 +1,131 @@
+{
+  "id": "wasmer",
+  "name": "Wasmer",
+  "description": "WebAssembly runtime and edge deployment platform with serverless apps, databases, and custom domains",
+  "url": "https://wasmer.io",
+  "pricingUrl": "https://wasmer.io/pricing",
+  "category": "edge",
+  "tags": [
+    "wasm",
+    "webassembly",
+    "edge",
+    "serverless"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "WebAssembly",
+    "whatYouLose": "Edge deployment config, Wasmer-specific database, build pipeline, custom domain routing"
+  },
+  "tiers": [
+    {
+      "name": "Hobby",
+      "slug": "hobby",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "members": 1,
+        "apps": 3,
+        "requestsPerMonth": 100000,
+        "bandwidthGB": 150,
+        "activeCpuHours": 50,
+        "storageGB": 1,
+        "databaseMBPerApp": 100,
+        "buildMinutes": 500,
+        "customDomains": 50
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "hybrid",
+      "basePrice": 10,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 5,
+      "usageMetrics": [
+        {
+          "name": "requests",
+          "unit": "requests",
+          "pricePerUnit": 0.20,
+          "unitQuantity": 1000000,
+          "includedQuantity": 1000000
+        },
+        {
+          "name": "bandwidth",
+          "unit": "GB",
+          "pricePerUnit": 0.10,
+          "unitQuantity": 1,
+          "includedQuantity": 1000
+        },
+        {
+          "name": "active-cpu",
+          "unit": "hours",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1,
+          "includedQuantity": 200
+        },
+        {
+          "name": "storage",
+          "unit": "GB",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1,
+          "includedQuantity": 10
+        },
+        {
+          "name": "database",
+          "unit": "GB",
+          "pricePerUnit": 10.00,
+          "unitQuantity": 1,
+          "includedQuantity": 1
+        },
+        {
+          "name": "emails",
+          "unit": "emails",
+          "pricePerUnit": 0.001,
+          "unitQuantity": 1,
+          "includedQuantity": 10000
+        },
+        {
+          "name": "build-minutes",
+          "unit": "minutes",
+          "pricePerUnit": 0.002,
+          "unitQuantity": 1,
+          "includedQuantity": 5000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "members": 2,
+        "apps": 10,
+        "requestsPerMonth": 1000000,
+        "bandwidthGB": 1000,
+        "activeCpuHours": 200,
+        "storageGB": 10,
+        "buildMinutes": 5000,
+        "customDomains": 300,
+        "dedicatedIPs": 1,
+        "dailyBackups": 1
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

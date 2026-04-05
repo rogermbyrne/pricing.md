@@ -1,0 +1,86 @@
+{
+  "id": "warp",
+  "name": "Warp",
+  "description": "AI-powered terminal with cloud agents, codebase indexing, and collaborative session sharing",
+  "url": "https://www.warp.dev",
+  "pricingUrl": "https://www.warp.dev/pricing",
+  "category": "hosting",
+  "tags": [
+    "terminal",
+    "ai-assistant",
+    "developer-tools",
+    "collaboration"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "AI credits, cloud agents, Warp Drive workflows, session sharing, codebase indexing"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "aiCreditsPerMonth": 75,
+        "concurrentCloudAgents": 4,
+        "indexedCodebases": 3,
+        "filesPerCodebase": 3000,
+        "cloudConversations": 30,
+        "sharedSessions": 5
+      }
+    },
+    {
+      "name": "Build",
+      "slug": "build",
+      "pricingModel": "flat_rate",
+      "basePrice": 18,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "aiCreditsPerMonth": 1500,
+        "concurrentCloudAgents": 20,
+        "indexedCodebases": 40,
+        "filesPerCodebase": 100000
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "per_seat",
+      "basePrice": 45,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 45,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "maxSeats": 50
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

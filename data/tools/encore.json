@@ -1,0 +1,91 @@
+{
+  "id": "encore",
+  "name": "Encore",
+  "description": "Backend development platform with type-safe infrastructure, automatic cloud provisioning, and distributed tracing",
+  "url": "https://encore.cloud",
+  "pricingUrl": "https://encore.cloud/pricing",
+  "category": "hosting",
+  "tags": [
+    "backend",
+    "infrastructure",
+    "cloud-provisioning",
+    "tracing"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Infrastructure-as-code generation, Encore Cloud environments, distributed tracing, automatic cloud provisioning"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "devEnvironments": 2,
+        "tracingEventsPerMonth": 1000000,
+        "logRetentionDays": 7,
+        "concurrentBuilds": 1
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "hybrid",
+      "basePrice": 49,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 49,
+      "usageMetrics": [
+        {
+          "name": "cloud-environments",
+          "unit": "environments",
+          "pricePerUnit": 99,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "resources",
+          "unit": "resources",
+          "pricePerUnit": 2.50,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "tracing-events",
+          "unit": "events",
+          "pricePerUnit": 1.20,
+          "unitQuantity": 1000000,
+          "includedQuantity": 20000000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "tracingEventsPerMonth": 20000000,
+        "logRetentionDays": 30,
+        "concurrentBuilds": 2
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}
