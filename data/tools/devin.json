@@ -1,0 +1,79 @@
+{
+  "id": "devin",
+  "name": "Devin",
+  "description": "Autonomous AI software engineer that plans, codes, debugs, and deploys with concurrent sessions",
+  "url": "https://devin.ai",
+  "pricingUrl": "https://devin.ai/pricing",
+  "category": "ai-coding",
+  "tags": [
+    "ai-coding",
+    "autonomous-agent",
+    "software-engineer",
+    "agentic"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "Session history, playbooks, knowledge base — code outputs are yours"
+  },
+  "tiers": [
+    {
+      "name": "Core",
+      "slug": "core",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "acus",
+          "unit": "ACUs",
+          "pricePerUnit": 2.25,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "minimumSpend": 20,
+        "concurrentSessions": 10
+      }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "hybrid",
+      "basePrice": 500,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "acus",
+          "unit": "ACUs",
+          "pricePerUnit": 2.00,
+          "unitQuantity": 1,
+          "includedQuantity": 250
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

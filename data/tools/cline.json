@@ -1,0 +1,62 @@
+{
+  "id": "cline",
+  "name": "Cline",
+  "description": "Open-source autonomous AI coding agent for VS Code and JetBrains with MCP support and BYOK",
+  "url": "https://cline.bot",
+  "pricingUrl": "https://cline.bot/pricing",
+  "category": "ai-coding",
+  "tags": [
+    "ai-coding",
+    "autonomous-agent",
+    "open-source",
+    "mcp"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "MCP",
+    "whatYouLose": "Team config, centralized billing — open-source core works with any AI provider"
+  },
+  "tiers": [
+    {
+      "name": "Open Source",
+      "slug": "open-source",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Teams",
+      "slug": "teams",
+      "pricingModel": "per_seat",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 20,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "freeSeats": 10
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

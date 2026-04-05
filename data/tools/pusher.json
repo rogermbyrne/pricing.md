@@ -1,0 +1,99 @@
+{
+  "id": "pusher",
+  "name": "Pusher Channels",
+  "description": "Realtime messaging API with pub/sub channels, presence, and client events for web and mobile apps",
+  "url": "https://pusher.com",
+  "pricingUrl": "https://pusher.com/channels/pricing",
+  "category": "queues",
+  "tags": [
+    "realtime",
+    "pub-sub",
+    "websockets",
+    "messaging"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Channel config, presence state, client events — Pusher-compatible alternatives exist (Soketi)"
+  },
+  "tiers": [
+    {
+      "name": "Sandbox",
+      "slug": "sandbox",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "messagesPerDay": 200000,
+        "concurrentConnections": 100
+      }
+    },
+    {
+      "name": "Startup",
+      "slug": "startup",
+      "pricingModel": "flat_rate",
+      "basePrice": 49,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "messagesPerDay": 1000000,
+        "concurrentConnections": 500
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 99,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "messagesPerDay": 4000000,
+        "concurrentConnections": 2000
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "flat_rate",
+      "basePrice": 299,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "messagesPerDay": 10000000,
+        "concurrentConnections": 5000
+      }
+    },
+    {
+      "name": "Premium",
+      "slug": "premium",
+      "pricingModel": "flat_rate",
+      "basePrice": 499,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "messagesPerDay": 20000000,
+        "concurrentConnections": 10000
+      }
+    }
+  ]
+}
