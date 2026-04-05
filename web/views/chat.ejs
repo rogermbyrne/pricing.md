@@ -1,0 +1,207 @@
+<%- include('partials/head', { title: 'Stack Advisor', description: 'Describe your app and get a recommended developer tool stack with real pricing at different user scales.', path: '/chat' }) %>
+
+<div class="max-w-3xl mx-auto px-6 py-10 flex flex-col" style="min-height:calc(100vh - 80px)">
+
+  <!-- Header -->
+  <div class="mb-8">
+    <h1 class="text-4xl font-bold tracking-tighter text-neutral-900 dark:text-white">Stack Advisor</h1>
+    <p class="text-base text-neutral-500 mt-2">Describe your app. Get a recommended stack with real pricing.</p>
+  </div>
+
+  <!-- Chat messages area -->
+  <div id="messages" class="flex-1 overflow-y-auto space-y-6 mb-6">
+    <% if (typeof hasApiKey !== 'undefined' && !hasApiKey) { %>
+    <!-- No API key warning -->
+    <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 p-5 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]">
+      <div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 mb-2">System</div>
+      <p class="text-neutral-700 dark:text-neutral-300">Stack Advisor requires an API key to be configured. Please set the <code class="font-mono text-sm bg-neutral-100 dark:bg-[#0a0a0a] px-1 py-0.5">ANTHROPIC_API_KEY</code> environment variable.</p>
+    </div>
+    <% } else { %>
+    <!-- Welcome message -->
+    <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 p-5 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]">
+      <div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 mb-2">Pricing.md</div>
+      <p class="text-neutral-700 dark:text-neutral-300">Describe your app idea and I'll recommend a developer tool stack with pricing at different user scales.</p>
+      <p class="text-sm text-neutral-500 mt-2">Try: "I'm building a SaaS analytics dashboard with user auth, email notifications, and a Postgres database"</p>
+    </div>
+    <% } %>
+  </div>
+
+  <!-- Input area -->
+  <% if (typeof hasApiKey === 'undefined' || hasApiKey) { %>
+  <div class="sticky bottom-0 bg-neutral-50 dark:bg-[#0a0a0a] pt-4 pb-8">
+    <div class="flex gap-3">
+      <input id="chatInput" type="text" placeholder="Describe your app..."
+        class="flex-1 bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-white px-4 py-3 font-sans text-base rounded-none focus:outline-none focus:border-neutral-900 dark:focus:border-white"
+        onkeydown="if(event.key==='Enter')sendMessage()">
+      <button onclick="sendMessage()" id="sendBtn"
+        class="px-6 py-3 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-mono text-sm rounded-none border border-neutral-900 dark:border-white hover:opacity-80 transition-opacity">
+        Send
+      </button>
+    </div>
+  </div>
+  <% } %>
+</div>
+
+<script>
+  const messagesDiv = document.getElementById('messages');
+  const chatInput = document.getElementById('chatInput');
+  const sendBtn = document.getElementById('sendBtn');
+  let history = [];
+  let isLoading = false;
+
+  function addMessage(role, content) {
+    const div = document.createElement('div');
+    if (role === 'user') {
+      div.className = 'flex justify-end';
+      div.innerHTML = '<div class="bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-4 py-3 max-w-[80%] font-sans text-base rounded-none">' + escapeHtml(content) + '</div>';
+    } else {
+      div.className = 'bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 p-5 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]';
+      div.innerHTML = '<div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 mb-2">Pricing.md</div><div class="prose-container text-neutral-700 dark:text-neutral-300">' + content + '</div>';
+    }
+    messagesDiv.appendChild(div);
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+  }
+
+  function addToolCallIndicator(toolName) {
+    const div = document.createElement('div');
+    div.className = 'text-xs font-mono text-neutral-400 flex items-center gap-2 tool-indicator';
+    div.innerHTML = '<span class="inline-block w-2 h-2 bg-neutral-400 animate-pulse"></span> Looking up ' + (toolName === 'find_cheapest' ? 'cheapest options' : 'pricing data') + '...';
+    messagesDiv.appendChild(div);
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+  }
+
+  function removeToolIndicators() {
+    document.querySelectorAll('.tool-indicator').forEach(function(el) { el.remove(); });
+  }
+
+  function escapeHtml(text) {
+    var d = document.createElement('div');
+    d.textContent = text;
+    return d.innerHTML;
+  }
+
+  function renderMarkdown(text) {
+    var html = text;
+
+    // Bold
+    html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+
+    // Headers
+    html = html.replace(/^### (.+)$/gm, '<h3 class="text-lg font-bold text-neutral-900 dark:text-white mt-4 mb-2">$1</h3>');
+    html = html.replace(/^## (.+)$/gm, '<h2 class="text-xl font-bold text-neutral-900 dark:text-white mt-6 mb-3">$1</h2>');
+
+    // Tables
+    html = html.replace(/\|(.+)\|\n\|[-| :]+\|\n((?:\|.+\|\n?)*)/g, function(match, header, body) {
+      var headers = header.split('|').map(function(h) { return h.trim(); }).filter(Boolean);
+      var rows = body.trim().split('\n').map(function(row) { return row.split('|').map(function(c) { return c.trim(); }).filter(Boolean); });
+      var table = '<div class="overflow-x-auto my-3"><table class="w-full text-sm border-collapse">';
+      table += '<thead><tr class="border-b border-neutral-200 dark:border-neutral-700">';
+      headers.forEach(function(h) { table += '<th class="px-3 py-2 text-left text-xs font-mono uppercase tracking-widest text-neutral-500">' + h + '</th>'; });
+      table += '</tr></thead><tbody>';
+      rows.forEach(function(row) {
+        table += '<tr class="border-b border-neutral-100 dark:border-neutral-800">';
+        row.forEach(function(cell) { table += '<td class="px-3 py-2 text-neutral-700 dark:text-neutral-300">' + cell + '</td>'; });
+        table += '</tr>';
+      });
+      table += '</tbody></table></div>';
+      return table;
+    });
+
+    // Bullet lists
+    html = html.replace(/^- (.+)$/gm, '<li class="text-sm text-neutral-600 dark:text-neutral-400 ml-4">$1</li>');
+    html = html.replace(/(<li[^>]*>.*<\/li>\n?)+/g, '<ul class="my-2 list-disc">$&</ul>');
+
+    // Code inline
+    html = html.replace(/`([^`]+)`/g, '<code class="font-mono text-sm bg-neutral-100 dark:bg-[#0a0a0a] px-1 py-0.5 text-neutral-800 dark:text-neutral-200">$1</code>');
+
+    // Money formatting
+    html = html.replace(/\$([0-9,.]+)(\/mo)?/g, '<span class="font-mono font-bold text-neutral-900 dark:text-white">$$$1$2</span>');
+
+    // Paragraphs
+    html = html.replace(/\n\n/g, '</p><p class="text-sm text-neutral-600 dark:text-neutral-400 mt-2">');
+    html = '<p class="text-sm text-neutral-600 dark:text-neutral-400">' + html + '</p>';
+
+    return html;
+  }
+
+  async function sendMessage() {
+    if (isLoading) return;
+    var msg = chatInput.value.trim();
+    if (!msg) return;
+
+    chatInput.value = '';
+    addMessage('user', msg);
+    history.push({ role: 'user', content: msg });
+
+    isLoading = true;
+    sendBtn.textContent = '...';
+    sendBtn.disabled = true;
+
+    try {
+      var response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: msg, history: history.slice(-10) })
+      });
+
+      if (response.status === 429) {
+        addMessage('assistant', 'Rate limit reached. Please try again in a few minutes.');
+        return;
+      }
+
+      if (response.status === 503) {
+        addMessage('assistant', 'Stack Advisor is not available right now.');
+        return;
+      }
+
+      var reader = response.body.getReader();
+      var decoder = new TextDecoder();
+      var buffer = '';
+      var fullResponse = '';
+
+      while (true) {
+        var result = await reader.read();
+        if (result.done) break;
+
+        buffer += decoder.decode(result.value, { stream: true });
+        var lines = buffer.split('\n');
+        buffer = lines.pop() || '';
+
+        for (var i = 0; i < lines.length; i++) {
+          var line = lines[i];
+          if (!line.startsWith('data: ')) continue;
+          var data = line.slice(6);
+          if (data === '[DONE]') continue;
+
+          try {
+            var parsed = JSON.parse(data);
+            if (parsed.type === 'tool_call') {
+              addToolCallIndicator(parsed.name);
+            } else if (parsed.type === 'text') {
+              removeToolIndicators();
+              fullResponse = parsed.content;
+            } else if (parsed.type === 'error') {
+              addMessage('assistant', 'Sorry, something went wrong. Please try again.');
+            }
+          } catch (e) { /* ignore parse errors */ }
+        }
+      }
+
+      if (fullResponse) {
+        addMessage('assistant', renderMarkdown(fullResponse));
+        history.push({ role: 'assistant', content: fullResponse });
+      }
+    } catch (err) {
+      addMessage('assistant', 'Connection error. Please try again.');
+    } finally {
+      isLoading = false;
+      sendBtn.textContent = 'Send';
+      sendBtn.disabled = false;
+      chatInput.focus();
+    }
+  }
+
+  if (chatInput) chatInput.focus();
+</script>
+
+<%- include('partials/footer') %>
