@@ -73,7 +73,7 @@
   var messagesDiv = document.getElementById('messages');
   var chatInput = document.getElementById('chatInput');
   var sendBtn = document.getElementById('sendBtn');
-  var history = [];
+  var chatHistory = [];
   var isLoading = false;
 
   function useExample(btn) {
@@ -311,7 +311,7 @@
     var welcomeEl = document.querySelector('#messages > .max-w-2xl');
     if (welcomeEl) welcomeEl.remove();
     addMessage('user', msg);
-    history.push({ role: 'user', content: msg });
+    chatHistory.push({ role: 'user', content: msg });
     addThinkingIndicator();
 
     isLoading = true;
@@ -322,7 +322,7 @@
       var response = await fetch('/api/stack', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: msg, history: history.slice(-10) })
+        body: JSON.stringify({ message: msg, history: chatHistory.slice(-10) })
       });
 
       if (!response.ok) {
@@ -372,7 +372,7 @@
       removeToolIndicators();
       if (fullResponse) {
         addMessage('assistant', fullResponse, fullResponse);
-        history.push({ role: 'assistant', content: fullResponse });
+        chatHistory.push({ role: 'assistant', content: fullResponse });
       }
     } catch (err) {
       console.error('Stack Advisor fetch error:', err);
