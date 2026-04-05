@@ -225,8 +225,8 @@
     removeThinkingIndicator();
     var div = document.createElement('div');
     div.id = 'thinking-indicator';
-    div.className = 'flex items-center gap-2 py-3';
-    div.innerHTML = '<div class="flex gap-1"><span class="w-2 h-2 bg-neutral-300 dark:bg-neutral-600 rounded-full animate-bounce" style="animation-delay:0ms"></span><span class="w-2 h-2 bg-neutral-300 dark:bg-neutral-600 rounded-full animate-bounce" style="animation-delay:150ms"></span><span class="w-2 h-2 bg-neutral-300 dark:bg-neutral-600 rounded-full animate-bounce" style="animation-delay:300ms"></span></div>';
+    div.className = 'flex items-center gap-3 py-3';
+    div.innerHTML = '<div class="flex gap-1"><span class="w-2 h-2 bg-neutral-400 dark:bg-neutral-500 rounded-full animate-bounce" style="animation-delay:0ms"></span><span class="w-2 h-2 bg-neutral-400 dark:bg-neutral-500 rounded-full animate-bounce" style="animation-delay:150ms"></span><span class="w-2 h-2 bg-neutral-400 dark:bg-neutral-500 rounded-full animate-bounce" style="animation-delay:300ms"></span></div><span class="text-xs text-neutral-400 font-mono">Analyzing your stack needs...</span>';
     messagesDiv.appendChild(div);
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
   }
@@ -326,11 +326,18 @@
       });
 
       if (response.status === 429) {
+        removeThinkingIndicator();
         addMessage('assistant', 'Rate limit reached. Please try again in a few minutes.', 'Rate limit reached.');
         return;
       }
       if (response.status === 503) {
+        removeThinkingIndicator();
         addMessage('assistant', 'Stack Advisor is not available right now.', 'Stack Advisor unavailable.');
+        return;
+      }
+      if (!response.ok) {
+        removeThinkingIndicator();
+        addMessage('assistant', 'Something went wrong (HTTP ' + response.status + '). Please try again.', 'Error.');
         return;
       }
 
