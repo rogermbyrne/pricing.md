@@ -111,7 +111,14 @@ Open Source / Self-Hosted Route:
 - For each OSS alternative, note: what it replaces, that it's free to self-host, and what the trade-off is (you manage the server, updates, backups)
 - A typical self-hosted stack on a $10-20/mo VPS (Coolify + PocketBase + Plunk + Umami) can replace $200+/mo in SaaS costs
 - Always mention the operational overhead honestly — self-hosting is free in $ but costs in time
-- If the user asks specifically about open source or self-hosting, go deep on this route with a full self-hosted stack recommendation`;
+- If the user asks specifically about open source or self-hosting, go deep on this route with a full self-hosted stack recommendation
+
+Output Structure (follow this every time):
+1. **Recommended Stack** — one markdown table with columns: Component, Tool, Tier, Monthly Cost. Show the best option per category.
+2. **Pricing at Scale** — three separate tables for 1K, 10K, and 100K users showing how costs change. This is critical, never skip it.
+3. **Migration Path** — timeline showing when to switch tools as you grow (e.g., "0-1K: Neon Free → 10K: Neon Launch ($19/mo) → 100K: consider PlanetScale")
+4. **Self-Hosted Route** — a short section with the OSS alternative stack and estimated VPS cost
+5. **My Recommendation for You** — personalized advice: what to start with, what to watch out for, one hard decision they'll face`;
 
 export const TOOLS = [
   {

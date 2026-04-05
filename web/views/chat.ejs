@@ -18,7 +18,9 @@
 <div id="drawer-overlay" class="fixed inset-0 bg-black/30 backdrop-blur-sm z-40 hidden transition-opacity duration-300 opacity-0" onclick="closeDrawer()"></div>
 
 <!-- Artifact drawer -->
-<div id="drawer" class="fixed top-0 right-0 h-full w-full max-w-2xl bg-white dark:bg-[#0a0a0a] border-l border-neutral-200 dark:border-neutral-800 z-50 transform translate-x-full transition-transform duration-300 ease-out flex flex-col">
+<div id="drawer" class="fixed top-0 right-0 h-full bg-white dark:bg-[#0a0a0a] border-l border-neutral-200 dark:border-neutral-800 z-50 transform translate-x-full transition-transform duration-300 ease-out flex flex-col" style="width: 55vw; min-width: 400px; max-width: 90vw;">
+  <!-- Resize handle -->
+  <div id="drawer-resize" class="absolute top-0 left-0 w-1.5 h-full cursor-col-resize z-20 hover:bg-neutral-400/30 active:bg-neutral-400/40 transition-colors" style="touch-action:none"></div>
   <div class="sticky top-0 bg-white dark:bg-[#0a0a0a] border-b border-neutral-200 dark:border-neutral-800 px-6 py-4 flex justify-between items-center z-10">
     <span class="font-mono text-[10px] uppercase tracking-widest text-neutral-400">Stack Recommendation</span>
     <button onclick="closeDrawer()" class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg leading-none">&times;</button>
@@ -45,9 +47,9 @@
     <div class="max-w-2xl mx-auto">
       <p class="text-neutral-500 text-center mb-6">Tell me about your app and I'll recommend a dev tool stack with real pricing at different user scales, migration paths, and open-source options.</p>
       <div class="flex flex-wrap justify-center gap-2" id="examples-container">
-        <button onclick="useExample(this)" data-prompt="I want to build something like Cursor, an AI code editor. I'll need user auth, subscription billing, usage tracking, email onboarding, and monitoring. Aiming for 100K+ developers." class="px-4 py-2 text-sm text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 hover:text-neutral-900 dark:hover:text-white rounded-full transition-all cursor-pointer">AI code editor like Cursor</button>
-        <button onclick="useExample(this)" data-prompt="I'm building a social network similar to Bluesky. Need a PostgreSQL database, full-text search, media storage, auth, and email notifications that can handle serious scale." class="px-4 py-2 text-sm text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 hover:text-neutral-900 dark:hover:text-white rounded-full transition-all cursor-pointer">Social network like Bluesky</button>
-        <button onclick="useExample(this)" data-prompt="I'm working on an AI app builder like Lovable where users describe an app and we generate it. Need hosting for the generated apps, a Postgres database, auth, payments, and analytics." class="px-4 py-2 text-sm text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 hover:text-neutral-900 dark:hover:text-white rounded-full transition-all cursor-pointer">AI app builder like Lovable</button>
+        <button onclick="useExample(this)" data-prompt="I'm building a waitlist and launch page tool for indie hackers. Need auth, a database for signups, transactional emails, and basic analytics. Starting solo, hoping to get to 1,000 paying users." class="px-4 py-2 text-sm text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 hover:text-neutral-900 dark:hover:text-white rounded-full transition-all cursor-pointer">Waitlist tool for indie hackers</button>
+        <button onclick="useExample(this)" data-prompt="I want to build a simple invoicing SaaS for freelancers. Need auth, a database, PDF generation, payment processing with Stripe, and email notifications. Targeting maybe 500 users to start." class="px-4 py-2 text-sm text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 hover:text-neutral-900 dark:hover:text-white rounded-full transition-all cursor-pointer">Invoicing SaaS for freelancers</button>
+        <button onclick="useExample(this)" data-prompt="I'm building a team feedback and retro tool, like a lightweight Lattice. Need auth, a Postgres database, real-time updates, email digests, and hosting. Small teams, maybe 50 companies with 10-20 users each." class="px-4 py-2 text-sm text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 hover:text-neutral-900 dark:hover:text-white rounded-full transition-all cursor-pointer">Team retro tool for small teams</button>
       </div>
     </div>
     <% } %>
@@ -153,15 +155,19 @@
     var trs = tableEl.querySelectorAll('tbody tr');
     if (ths.length < 2 || trs.length < 1) return null;
 
-    // Find the rightmost column with $ values for the bars
+    // Find a column that is clearly a cost/price column (header contains cost/price/monthly/total and cells have $)
+    var costHeaders = /cost|price|monthly|total|spend/i;
     var colIndex = -1;
     for (var c = ths.length - 1; c >= 1; c--) {
-      var hasPrice = false;
+      var headerText = ths[c].textContent.trim();
+      if (!costHeaders.test(headerText)) continue;
+      var priceCount = 0;
       trs.forEach(function(tr) {
         var tds = tr.querySelectorAll('td');
-        if (tds[c] && /\$/.test(tds[c].textContent)) hasPrice = true;
+        if (tds[c] && /\$\d/.test(tds[c].textContent)) priceCount++;
       });
-      if (hasPrice) { colIndex = c; break; }
+      // At least half the rows should have $ values
+      if (priceCount >= trs.length / 2) { colIndex = c; break; }
     }
     if (colIndex === -1) return null;
 
@@ -386,6 +392,34 @@
       chatInput.focus();
     }
   }
+
+  // --- Drawer resize ---
+  (function() {
+    var handle = document.getElementById('drawer-resize');
+    var drawer = document.getElementById('drawer');
+    var dragging = false;
+    handle.addEventListener('mousedown', function(e) {
+      e.preventDefault();
+      dragging = true;
+      drawer.style.transition = 'none';
+      document.body.style.cursor = 'col-resize';
+      document.body.style.userSelect = 'none';
+    });
+    document.addEventListener('mousemove', function(e) {
+      if (!dragging) return;
+      var newWidth = window.innerWidth - e.clientX;
+      if (newWidth < 400) newWidth = 400;
+      if (newWidth > window.innerWidth * 0.9) newWidth = window.innerWidth * 0.9;
+      drawer.style.width = newWidth + 'px';
+    });
+    document.addEventListener('mouseup', function() {
+      if (!dragging) return;
+      dragging = false;
+      drawer.style.transition = '';
+      document.body.style.cursor = '';
+      document.body.style.userSelect = '';
+    });
+  })();
 
   if (chatInput) chatInput.focus();
 </script>
