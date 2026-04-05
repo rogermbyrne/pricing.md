@@ -33,11 +33,6 @@ export function createBrowseRouter(registry: Registry): Router {
   router.get("/browse/:category", (req: Request, res: Response) => {
     const category = req.params.category as string;
 
-    if (category === "ai-api") {
-      res.redirect("/browse");
-      return;
-    }
-
     let tools = registry.search({ category: category as any });
 
     if (tools.length === 0) {
