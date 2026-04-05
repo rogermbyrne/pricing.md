@@ -1,5 +1,5 @@
-import type { Registry } from "../../src/registry/registry.js";
-import type { Category } from "../../src/schema/pricing.js";
+import type { Registry } from "../registry/registry.js";
+import type { Category } from "../schema/pricing.js";
 
 export interface GrowthScenario {
   label: string;

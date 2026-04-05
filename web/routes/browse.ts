@@ -1,6 +1,6 @@
 import { Router, Request, Response } from "express";
 import { Registry } from "../../src/registry/registry.js";
-import { GROWTH_SCENARIOS, computeGrowthCost, type GrowthCostResult } from "../lib/growth-scenarios.js";
+import { GROWTH_SCENARIOS, computeGrowthCost, type GrowthCostResult } from "../../src/lib/growth-scenarios.js";
 import type { Category } from "../../src/schema/pricing.js";
 
 export function createBrowseRouter(registry: Registry): Router {

@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { CategoryEnum } from "../schema/pricing.js";
 import type { Registry } from "../registry/registry.js";
-import { GROWTH_SCENARIOS, computeGrowthCost } from "../../web/lib/growth-scenarios.js";
+import { GROWTH_SCENARIOS, computeGrowthCost } from "../lib/growth-scenarios.js";
 
 export const growthCostSchema = z.object({
   category: CategoryEnum.describe("Tool category to compare growth costs for"),
