@@ -66,6 +66,12 @@ export function createBrowseRouter(registry: Registry): Router {
         const bFree = b.tiers.some(t => t.pricingModel === "free" || t.basePrice === 0) ? 0 : 1;
         return aFree - bFree || a.name.localeCompare(b.name);
       });
+    } else if (sort === "verified") {
+      tools = [...tools].sort((a, b) => {
+        const aVerified = a.pricingUrl.endsWith("/pricing.md") ? 0 : 1;
+        const bVerified = b.pricingUrl.endsWith("/pricing.md") ? 0 : 1;
+        return aVerified - bVerified || a.name.localeCompare(b.name);
+      });
     }
 
     const displayName = category.replace(/-/g, " ").replace(/\b\w/g, (c: string) => c.toUpperCase());

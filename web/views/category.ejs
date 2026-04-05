@@ -66,6 +66,10 @@ function hasPricingMd(tool) {
   </div>
 
   <h1 class="text-4xl font-bold tracking-tighter text-neutral-900 dark:text-white"><%= category %></h1>
+  <div class="flex items-center gap-2 mt-3 mb-1 text-xs text-neutral-400 dark:text-neutral-500">
+    <span class="inline-flex items-center justify-center w-3.5 h-3.5 rounded-full bg-[#1d9bf0] flex-shrink-0"><svg viewBox="0 0 24 24" width="8" height="8" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+    <span>= publishes a <a href="https://github.com/nichochar/pricing.md" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white border-b border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white transition-all">pricing.md</a> file &mdash; machine-readable pricing your AI agent can use directly</span>
+  </div>
   <div class="flex flex-wrap items-center gap-4 mt-2 mb-8">
     <p class="text-base text-neutral-500"><%= tools.length %> tool<%= tools.length !== 1 ? 's' : '' %> &middot; <a href="/compare?tools=<%= tools.slice(0, 3).map(t => t.id).join(',') %>" class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white border-b border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white pb-0.5 transition-all">Compare top 3</a></p>
     <div class="flex gap-2 font-mono text-xs">
@@ -73,6 +77,7 @@ function hasPricingMd(tool) {
       <a href="/browse/<%= categorySlug %>?sort=name" class="<%= currentSort === 'name' ? 'text-neutral-900 dark:text-white border-b border-neutral-900 dark:border-white' : 'text-neutral-400 hover:text-neutral-900 dark:hover:text-white' %> pb-0.5 transition-all uppercase tracking-widest">Name</a>
       <a href="/browse/<%= categorySlug %>?sort=lowest-paid" class="<%= currentSort === 'lowest-paid' ? 'text-neutral-900 dark:text-white border-b border-neutral-900 dark:border-white' : 'text-neutral-400 hover:text-neutral-900 dark:hover:text-white' %> pb-0.5 transition-all uppercase tracking-widest">Lowest Paid</a>
       <a href="/browse/<%= categorySlug %>?sort=free-first" class="<%= currentSort === 'free-first' ? 'text-neutral-900 dark:text-white border-b border-neutral-900 dark:border-white' : 'text-neutral-400 hover:text-neutral-900 dark:hover:text-white' %> pb-0.5 transition-all uppercase tracking-widest">Free First</a>
+      <a href="/browse/<%= categorySlug %>?sort=verified" class="<%= currentSort === 'verified' ? 'text-neutral-900 dark:text-white border-b border-neutral-900 dark:border-white' : 'text-neutral-400 hover:text-neutral-900 dark:hover:text-white' %> pb-0.5 transition-all uppercase tracking-widest">Verified</a>
     </div>
   </div>
 
@@ -94,7 +99,7 @@ function hasPricingMd(tool) {
               <div class="flex items-center gap-1.5">
                 <a href="/tool/<%= tool.id %>" class="font-bold text-base text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors no-underline"><%= tool.name %></a>
                 <% if (hasPricingMd(tool)) { %>
-                  <span title="Has pricing.md" class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-[#1d9bf0] flex-shrink-0"><svg viewBox="0 0 24 24" width="10" height="10" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                  <span title="Publishes a pricing.md file — machine-readable pricing for AI agents" class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-[#1d9bf0] flex-shrink-0 cursor-help"><svg viewBox="0 0 24 24" width="10" height="10" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
                 <% } %>
               </div>
               <div class="text-sm text-neutral-500 mt-0.5 max-w-[300px] truncate"><%= tool.description %></div>

@@ -35,17 +35,17 @@ export function createChatRouter(registry: Registry): Router {
     anthropic = new Anthropic({ apiKey, timeout: 30000 });
   }
 
-  router.get("/chat", (req: Request, res: Response) => {
+  router.get("/stack", (req: Request, res: Response) => {
     res.render("chat", {
       title: "Stack Advisor",
       description:
         "Describe your app and get a recommended developer tool stack with real pricing at different user scales.",
-      path: "/chat",
+      path: "/stack",
       hasApiKey: !!apiKey,
     });
   });
 
-  router.post("/api/chat", express.json(), async (req: Request, res: Response) => {
+  router.post("/api/stack", express.json(), async (req: Request, res: Response) => {
     if (!anthropic) {
       res.status(503).json({
         error: "Stack Advisor requires an API key to be configured.",
