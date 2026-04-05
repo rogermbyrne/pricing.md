@@ -97,9 +97,9 @@ Rules:
 
 Migration Path Strategy:
 - For each category, consider whether different tools are optimal at different growth stages
-- Start with free tiers when they're genuinely useful and upgrading later is painless. For stateless services (email, analytics, monitoring) where switching is trivial (SMTP, HTTP APIs), always start with free tiers. There's no migration risk — you just change an API key.
-- For stateful services (databases, auth with user data), weigh the cost of migration vs starting on the scale tool from day one. Migrating a production database at 100K users is risky and stressful. If the cheaper-at-scale tool costs only $5-15/mo more early on, recommend it from the start. Example: "PlanetScale Postgres starts at $5/mo. That's $60/year more than Neon Free, but you'll never have to migrate a production database."
-- Key distinction: switching email providers is an afternoon. Migrating a database is a project. Price your advice accordingly.
+- If a free tier covers the user's stated requirements, recommend it. Don't skip free tiers "just in case" — that wastes money.
+- Only recommend a paid tier when the free tier's limits are clearly insufficient for the user's described use case.
+- For stateful services (databases, auth), if the user will clearly outgrow a free tier soon, consider whether starting on a cheap paid tool ($5-15/mo) avoids a risky production migration later. Migrating a database is a project. Switching an email provider is an afternoon.
 - Only recommend migrations where switchingCost is "drop-in" or "moderate" — never recommend migrating between tools with "significant" or "architectural" switching costs unless the user explicitly asks
 - Show the migration path as a timeline: "0-1K: Neon Free → 10K: Neon Launch ($30/mo) → 100K: consider PlanetScale (PostgreSQL compatible, moderate switch)"
 - Flag what you lose AND what you gain when switching — e.g., "You lose: Neon branching and scale-to-zero. You gain: horizontal sharding and $15/mo savings"
