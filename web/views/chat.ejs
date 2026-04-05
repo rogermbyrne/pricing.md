@@ -193,14 +193,29 @@
     var out = [];
     var i = 0;
 
+    function isSeparatorLine(line) {
+      var t = line.trim();
+      // Match separator lines like |---|---|, |:---:|, | --- | --- |, etc.
+      return /\|/.test(t) && /^[\s|:_-]+$/.test(t) && /--/.test(t);
+    }
+
+    function isTableRow(line) {
+      var t = line.trim();
+      return t.indexOf('|') >= 0 && t.split('|').filter(Boolean).length >= 2;
+    }
+
+    function parseRow(line) {
+      return line.split('|').map(function(c) { return c.trim(); }).filter(Boolean);
+    }
+
     while (i < lines.length) {
-      // Detect table: current line has |, next line is separator |---|
-      if (lines[i].trim().indexOf('|') === 0 && i + 1 < lines.length && /^\|[\s:_-|]+\|$/.test(lines[i + 1].trim())) {
-        var headerCells = lines[i].split('|').map(function(c) { return c.trim(); }).filter(Boolean);
+      // Detect table: current line has |, next line is a separator
+      if (isTableRow(lines[i]) && i + 1 < lines.length && isSeparatorLine(lines[i + 1])) {
+        var headerCells = parseRow(lines[i]);
         i += 2; // skip header + separator
         var rows = [];
-        while (i < lines.length && lines[i].trim().indexOf('|') === 0 && !/^\|[\s:_-|]+\|$/.test(lines[i].trim())) {
-          rows.push(lines[i].split('|').map(function(c) { return c.trim(); }).filter(Boolean));
+        while (i < lines.length && isTableRow(lines[i]) && !isSeparatorLine(lines[i])) {
+          rows.push(parseRow(lines[i]));
           i++;
         }
         var table = '<div class="overflow-x-auto my-4"><table class="w-full text-sm border-collapse">';
