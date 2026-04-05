@@ -68,7 +68,7 @@ async function main() {
   });
   const toolNames = toolsResult.result?.tools?.map((t: { name: string }) => t.name) || [];
   console.log("Tools:", toolNames.join(", "));
-  assert.deepEqual(toolNames, ["search_tools", "get_pricing", "compare_tools", "estimate_cost", "find_cheapest"]);
+  assert.deepEqual(toolNames, ["search_tools", "get_pricing", "compare_tools", "estimate_cost", "find_cheapest", "growth_cost"]);
 
   // Search tools - email category
   console.log("\n=== Test 3: Search (email category) ===");
