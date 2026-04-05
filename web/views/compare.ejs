@@ -20,90 +20,108 @@ function switchingBadge(cost) {
 function hasFree(tool) {
   return tool.tiers.some(t => t.pricingModel === 'free' || t.basePrice === 0);
 }
+
+function humanizeKey(key) {
+  return key
+    .replace(/([A-Z])/g, ' $1')
+    .replace(/([a-z])([0-9])/g, '$1 $2')
+    .replace(/_/g, ' ')
+    .replace(/\b(mb|gb|tb)\b/gi, s => s.toUpperCase())
+    .replace(/^./, s => s.toUpperCase())
+    .trim();
+}
+
+// Find the cheapest base price across all tools for each tier position
+function isCheapestTier(price, tierIdx) {
+  if (price === null || price === undefined) return false;
+  const prices = tools.map(t => t.tiers[tierIdx]?.basePrice).filter(p => p !== null && p !== undefined);
+  return price === Math.min(...prices) && prices.filter(p => p === price).length === 1;
+}
 %>
 
 <div class="max-w-7xl mx-auto px-6 py-10">
-  <h1 class="text-3xl font-bold tracking-tighter text-neutral-900 dark:text-white">Compare Pricing</h1>
-  <p class="text-sm text-neutral-500 mt-1 mb-8">Select up to 5 tools to compare side-by-side</p>
+  <!-- Header -->
+  <div class="flex items-start justify-between mb-6">
+    <div>
+      <% if (tools.length > 0) { %>
+        <div class="flex items-center gap-2 mb-2 text-sm">
+          <a href="/browse" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors font-mono">Browse</a>
+          <span class="text-neutral-400">/</span>
+          <a href="/browse/<%= tools[0].category %>" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors font-mono"><%= tools[0].category.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) %></a>
+          <span class="text-neutral-400">/</span>
+          <span class="text-neutral-900 dark:text-white font-mono">Compare</span>
+        </div>
+      <% } %>
+      <h1 class="text-3xl font-bold tracking-tighter text-neutral-900 dark:text-white">Compare Pricing</h1>
+      <p class="text-sm text-neutral-500 mt-1">Select up to 5 tools side-by-side</p>
+    </div>
+  </div>
 
   <!-- Tool Selector -->
-  <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 rounded-none p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] mb-8 theme-transition">
-    <div class="flex gap-3 items-end flex-wrap">
-      <div class="flex-1 min-w-[250px]">
-        <label class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 block mb-1" for="toolSelect">
-          <% if (tools.length > 0) { %>
-            Add another <%= tools[0].category.replace(/-/g, ' ') %> tool
-          <% } else { %>
-            Select a tool
-          <% } %>
-        </label>
-        <select id="toolSelect" class="w-full bg-neutral-50 dark:bg-[#0a0a0a] border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-white px-3 py-2 font-sans text-sm rounded-none focus:outline-none focus:border-neutral-900 dark:focus:border-white">
-          <option value="">Select a tool...</option>
-          <%
-            const lockedCategory = tools.length > 0 ? tools[0].category : null;
-            const filteredTools = lockedCategory
-              ? allTools.filter(t => t.category === lockedCategory)
-              : allTools;
-          %>
-          <% for (const t of filteredTools.sort((a, b) => a.name.localeCompare(b.name))) { %>
-            <option value="<%= t.id %>" <%= toolIds.includes(t.id) ? 'disabled' : '' %>><%= t.name %><%= !lockedCategory ? ' (' + t.category + ')' : '' %></option>
-          <% } %>
-        </select>
-      </div>
-    </div>
-
+  <div class="flex flex-wrap items-center gap-3 mb-8">
     <% if (tools.length > 0) { %>
-      <div class="flex gap-2 flex-wrap mt-3">
-        <% for (const t of tools) { %>
-          <span class="inline-flex items-center gap-1 px-2 py-0.5 text-xs font-mono border border-neutral-300 dark:border-neutral-600 text-neutral-600 dark:text-neutral-400 rounded-none cursor-pointer hover:border-neutral-900 dark:hover:border-white transition-colors" onclick="removeTool('<%= t.id %>')">
-            <%= t.name %> &times;
-          </span>
+      <% for (const t of tools) { %>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full cursor-pointer hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors" onclick="removeTool('<%= t.id %>')">
+          <%= t.name %> <span class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white">&times;</span>
+        </span>
+      <% } %>
+    <% } %>
+    <% if (tools.length < 5) { %>
+      <select id="toolSelect" class="bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white px-3 py-1.5 font-mono text-xs rounded-full focus:outline-none focus:border-neutral-400 dark:focus:border-neutral-500 transition-colors min-w-[180px]">
+        <option value="">+ Add tool...</option>
+        <%
+          const lockedCategory = tools.length > 0 ? tools[0].category : null;
+          const filteredTools = lockedCategory
+            ? allTools.filter(t => t.category === lockedCategory)
+            : allTools;
+        %>
+        <% for (const t of filteredTools.sort((a, b) => a.name.localeCompare(b.name))) { %>
+          <option value="<%= t.id %>" <%= toolIds.includes(t.id) ? 'disabled' : '' %>><%= t.name %><%= !lockedCategory ? ' (' + t.category + ')' : '' %></option>
         <% } %>
-      </div>
+      </select>
     <% } %>
   </div>
 
   <% if (tools.length === 0) { %>
     <div class="text-center py-16">
       <h2 class="text-xl font-bold tracking-tighter text-neutral-900 dark:text-white mb-2">No tools selected</h2>
-      <p class="text-sm text-neutral-500 max-w-md mx-auto">Use the selector above to add tools for comparison. You can also visit a <a href="/browse" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white border-b border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white pb-0.5 transition-all">category page</a> and click "Compare top 3".</p>
+      <p class="text-sm text-neutral-500 max-w-md mx-auto">Use the selector above to add tools, or visit a <a href="/browse" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white border-b border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white pb-0.5 transition-all">category page</a> and click "Compare top 3".</p>
     </div>
   <% } else { %>
-
-    <!-- Share link -->
-    <div class="text-xs text-neutral-400 font-mono mb-6">
-      Share: <span class="select-all text-neutral-500">/compare?tools=<%= tools.map(t => t.id).join(',') %></span>
-    </div>
 
     <!-- Comparison Table -->
     <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] overflow-x-auto theme-transition">
       <table class="w-full border-collapse">
+        <!-- Tool names header -->
         <thead>
-          <tr class="border-b border-neutral-200 dark:border-neutral-800">
-            <th class="px-4 py-3 text-left text-[10px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 font-normal min-w-[150px]"></th>
+          <tr class="border-b-2 border-neutral-200 dark:border-neutral-700">
+            <th class="px-5 py-4 text-left min-w-[140px]"></th>
             <% for (const t of tools) { %>
-              <th class="px-4 py-3 text-left min-w-[180px]">
-                <a href="/tool/<%= t.id %>" class="text-sm font-semibold text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors no-underline"><%= t.name %></a>
+              <th class="px-5 py-4 text-left min-w-[200px]">
+                <a href="/tool/<%= t.id %>" class="text-base font-bold text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors no-underline"><%= t.name %></a>
               </th>
             <% } %>
           </tr>
         </thead>
         <tbody>
-          <!-- Category -->
-          <tr class="border-b border-neutral-100 dark:border-neutral-800">
-            <td class="px-4 py-3 text-xs text-neutral-400 font-mono">Category</td>
-            <% for (const t of tools) { %>
-              <td class="px-4 py-3"><span class="inline-block px-2 py-0.5 text-xs font-mono border border-neutral-300 dark:border-neutral-700 text-neutral-500 rounded-none"><%= t.category.replace(/-/g, ' ') %></span></td>
-            <% } %>
-          </tr>
+
+          <!-- Section: Pricing -->
+          <tr><td colspan="<%= tools.length + 1 %>" class="px-5 pt-5 pb-2"><span class="text-[10px] font-mono uppercase tracking-widest text-neutral-400">Pricing</span></td></tr>
 
           <!-- Free Tier -->
           <tr class="border-b border-neutral-100 dark:border-neutral-800">
-            <td class="px-4 py-3 text-xs text-neutral-400 font-mono">Free Tier</td>
+            <td class="px-5 py-3 text-xs text-neutral-400 font-mono">Free Tier</td>
             <% for (const t of tools) { %>
-              <td class="px-4 py-3">
+              <td class="px-5 py-3">
                 <% if (hasFree(t)) { %>
-                  <span class="inline-block px-2 py-0.5 text-xs font-mono border border-neutral-300 dark:border-neutral-600 text-neutral-600 dark:text-neutral-400 rounded-none">Yes</span>
+                  <span class="inline-block px-2 py-0.5 text-xs font-mono border border-emerald-300 dark:border-emerald-700 text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950 rounded-none">Yes</span>
+                  <% const freeTier = t.tiers.find(tier => tier.pricingModel === 'free' || tier.basePrice === 0); %>
+                  <% if (freeTier) { %>
+                    <% const limitEntries = Object.entries(freeTier.limits).slice(0, 2); %>
+                    <% if (limitEntries.length > 0) { %>
+                      <div class="text-[11px] text-neutral-400 mt-1"><%= limitEntries.map(([k, v]) => humanizeKey(k) + ': ' + (typeof v === 'number' ? v.toLocaleString() : v)).join(', ') %></div>
+                    <% } %>
+                  <% } %>
                 <% } else { %>
                   <span class="inline-block px-2 py-0.5 text-xs font-mono border border-neutral-300 dark:border-neutral-700 text-neutral-400 rounded-none">No</span>
                 <% } %>
@@ -111,70 +129,76 @@ function hasFree(tool) {
             <% } %>
           </tr>
 
-          <!-- Tiers -->
-          <tr class="border-b border-neutral-100 dark:border-neutral-800">
-            <td class="px-4 py-3 text-xs text-neutral-400 font-mono align-top">Tiers</td>
-            <% for (const t of tools) { %>
-              <td class="px-4 py-3">
-                <% for (const tier of t.tiers) { %>
-                  <div class="mb-2">
-                    <div class="font-semibold text-sm text-neutral-900 dark:text-white"><%= tier.name %></div>
-                    <%- formatPrice(tier.basePrice) %>
-                    <% if (tier.seatPrice !== null) { %>
-                      <span class="text-xs text-neutral-400 font-mono">+ $<%= tier.seatPrice %>/seat</span>
-                    <% } %>
-                  </div>
-                <% } %>
-              </td>
-            <% } %>
-          </tr>
+          <!-- Each tier as its own row -->
+          <% const maxTiers = Math.max(...tools.map(t => t.tiers.length)); %>
+          <% for (let i = 0; i < maxTiers; i++) { %>
+            <tr class="border-b border-neutral-100 dark:border-neutral-800">
+              <td class="px-5 py-3 text-xs text-neutral-400 font-mono align-top"><% if (i === 0) { %>Tiers<% } %></td>
+              <% for (const t of tools) { %>
+                <td class="px-5 py-3">
+                  <% if (t.tiers[i]) { %>
+                    <% const tier = t.tiers[i]; %>
+                    <div class="text-xs font-mono text-neutral-500 mb-0.5"><%= tier.name %></div>
+                    <div class="font-mono text-neutral-900 dark:text-white">
+                      <% if (tier.basePrice === null) { %>
+                        <span class="italic text-neutral-400">Contact Sales</span>
+                      <% } else if (tier.basePrice === 0) { %>
+                        <span class="text-emerald-600 dark:text-emerald-400">Free</span>
+                      <% } else { %>
+                        $<%= tier.basePrice %>/mo
+                      <% } %>
+                      <% if (tier.seatPrice !== null) { %>
+                        <span class="text-xs text-neutral-400">+ $<%= tier.seatPrice %>/seat</span>
+                      <% } %>
+                      <% if (tier.annualDiscount) { %>
+                        <span class="text-xs text-emerald-500 ml-1">-<%= tier.annualDiscount %>% annual</span>
+                      <% } %>
+                    </div>
+                  <% } else { %>
+                    <span class="text-neutral-300 dark:text-neutral-700">&mdash;</span>
+                  <% } %>
+                </td>
+              <% } %>
+            </tr>
+          <% } %>
 
-          <!-- Portability -->
+          <!-- Section: Portability -->
+          <tr><td colspan="<%= tools.length + 1 %>" class="px-5 pt-6 pb-2"><span class="text-[10px] font-mono uppercase tracking-widest text-neutral-400">Portability</span></td></tr>
+
+          <!-- Switching Cost -->
           <tr class="border-b border-neutral-100 dark:border-neutral-800">
-            <td class="px-4 py-3 text-xs text-neutral-400 font-mono">Switching Cost</td>
+            <td class="px-5 py-3 text-xs text-neutral-400 font-mono">Switching Cost</td>
             <% for (const t of tools) { %>
-              <td class="px-4 py-3"><%- switchingBadge(t.portability.switchingCost) %></td>
+              <td class="px-5 py-3"><%- switchingBadge(t.portability.switchingCost) %></td>
             <% } %>
           </tr>
 
           <!-- Open Standard -->
           <tr class="border-b border-neutral-100 dark:border-neutral-800">
-            <td class="px-4 py-3 text-xs text-neutral-400 font-mono">Open Standard</td>
+            <td class="px-5 py-3 text-xs text-neutral-400 font-mono">Open Standard</td>
             <% for (const t of tools) { %>
-              <td class="px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300"><%= t.portability.openStandard || 'Proprietary' %></td>
+              <td class="px-5 py-3 text-sm <%= t.portability.openStandard ? 'text-neutral-900 dark:text-white' : 'text-neutral-400' %>"><%= t.portability.openStandard || 'Proprietary' %></td>
             <% } %>
           </tr>
 
           <!-- What You Lose -->
-          <tr class="border-b border-neutral-100 dark:border-neutral-800">
-            <td class="px-4 py-3 text-xs text-neutral-400 font-mono">What You Lose</td>
+          <tr>
+            <td class="px-5 py-3 text-xs text-neutral-400 font-mono align-top">What You Lose</td>
             <% for (const t of tools) { %>
-              <td class="px-4 py-3 text-sm text-neutral-500"><%= t.portability.whatYouLose %></td>
+              <td class="px-5 py-3 text-sm text-neutral-500 leading-relaxed"><%= t.portability.whatYouLose %></td>
             <% } %>
           </tr>
 
-          <!-- Key Limits (free tier) -->
-          <tr class="border-b border-neutral-100 dark:border-neutral-800">
-            <td class="px-4 py-3 text-xs text-neutral-400 font-mono align-top">Key Limits (Free)</td>
-            <% for (const t of tools) { %>
-              <td class="px-4 py-3">
-                <% const freeTier = t.tiers.find(tier => tier.pricingModel === 'free' || tier.basePrice === 0); %>
-                <% if (freeTier) { %>
-                  <% for (const [key, val] of Object.entries(freeTier.limits).slice(0, 5)) { %>
-                    <div class="text-xs py-0.5">
-                      <span class="text-neutral-400"><%= key.replace(/([A-Z])/g, ' $1').replace(/^./, s => s.toUpperCase()) %>:</span>
-                      <span class="font-mono text-neutral-900 dark:text-white"><%= typeof val === 'number' ? val.toLocaleString() : val %></span>
-                    </div>
-                  <% } %>
-                <% } else { %>
-                  <span class="text-xs text-neutral-400">No free tier</span>
-                <% } %>
-              </td>
-            <% } %>
-          </tr>
         </tbody>
       </table>
     </div>
+
+    <!-- Share link -->
+    <div class="flex items-center gap-2 mt-4 text-xs text-neutral-400 font-mono">
+      <span>Share:</span>
+      <span class="select-all text-neutral-500 bg-neutral-100 dark:bg-neutral-800 px-2 py-1 rounded">/compare?tools=<%= tools.map(t => t.id).join(',') %></span>
+    </div>
+
   <% } %>
 </div>
 
