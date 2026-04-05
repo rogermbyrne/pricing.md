@@ -5,7 +5,12 @@
   "url": "https://keystatic.com",
   "pricingUrl": "https://keystatic.com/pricing",
   "category": "cms",
-  "tags": ["cms", "git-based", "markdown", "mdx"],
+  "tags": [
+    "cms",
+    "git-based",
+    "markdown",
+    "mdx"
+  ],
   "lastVerified": "2026-04-04",
   "freshnessCategory": "volatile",
   "currency": "USD",
@@ -44,7 +49,7 @@
     {
       "name": "Cloud Pro",
       "slug": "cloud-pro",
-      "pricingModel": "hybrid",
+      "pricingModel": "per_seat",
       "basePrice": 10,
       "billingPeriod": "monthly",
       "annualDiscount": null,

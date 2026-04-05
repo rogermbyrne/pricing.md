@@ -5,7 +5,12 @@
   "url": "https://caisy.io",
   "pricingUrl": "https://caisy.io/pricing",
   "category": "cms",
-  "tags": ["headless-cms", "graphql", "high-performance", "multi-tenancy"],
+  "tags": [
+    "headless-cms",
+    "graphql",
+    "high-performance",
+    "multi-tenancy"
+  ],
   "lastVerified": "2026-04-04",
   "freshnessCategory": "volatile",
   "currency": "USD",
@@ -25,19 +30,29 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "users": 3, "entries": 5000, "trafficGb": 100, "apiCallsPerMonth": 1000000 }
+      "limits": {
+        "users": 3,
+        "entries": 5000,
+        "trafficGb": 100,
+        "apiCallsPerMonth": 1000000
+      }
     },
     {
       "name": "Growth",
       "slug": "growth",
-      "pricingModel": "hybrid",
+      "pricingModel": "per_seat",
       "basePrice": 49,
       "billingPeriod": "monthly",
       "annualDiscount": null,
       "seatPrice": 10,
       "usageMetrics": [],
       "features": [],
-      "limits": { "users": 12, "entries": 20000, "trafficGb": 500, "apiCallsPerMonth": 10000000 }
+      "limits": {
+        "users": 12,
+        "entries": 20000,
+        "trafficGb": 500,
+        "apiCallsPerMonth": 10000000
+      }
     },
     {
       "name": "Enterprise",

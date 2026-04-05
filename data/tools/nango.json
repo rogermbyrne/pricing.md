@@ -4,7 +4,7 @@
   "description": "Unified API for building product integrations with auth, syncing, proxying, and webhooks",
   "url": "https://nango.dev",
   "pricingUrl": "https://nango.dev/pricing",
-  "category": "hosting",
+  "category": "queues",
   "tags": [
     "integrations",
     "api",

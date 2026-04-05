@@ -5,7 +5,12 @@
   "url": "https://mindsdb.com",
   "pricingUrl": "https://mindsdb.com/pricing",
   "category": "database",
-  "tags": ["database", "ai", "middleware", "sql"],
+  "tags": [
+    "database",
+    "ai",
+    "middleware",
+    "sql"
+  ],
   "lastVerified": "2026-04-04",
   "freshnessCategory": "volatile",
   "currency": "USD",
@@ -32,7 +37,7 @@
     {
       "name": "Pro",
       "slug": "pro",
-      "pricingModel": "usage_based",
+      "pricingModel": "flat_rate",
       "basePrice": 35,
       "billingPeriod": "monthly",
       "annualDiscount": null,

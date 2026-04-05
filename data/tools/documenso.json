@@ -17,7 +17,7 @@
   "portability": {
     "switchingCost": "drop-in",
     "openStandard": null,
-    "whatYouLose": "Signing history, templates — can self-host open-source version"
+    "whatYouLose": "Signing history, templates \u2014 can self-host open-source version"
   },
   "tiers": [
     {
@@ -50,7 +50,7 @@
     {
       "name": "Teams",
       "slug": "teams",
-      "pricingModel": "hybrid",
+      "pricingModel": "per_seat",
       "basePrice": 40,
       "billingPeriod": "monthly",
       "annualDiscount": 21,

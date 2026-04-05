@@ -37,7 +37,7 @@
     {
       "name": "Premium",
       "slug": "premium",
-      "pricingModel": "hybrid",
+      "pricingModel": "per_seat",
       "basePrice": 65,
       "billingPeriod": "monthly",
       "annualDiscount": null,
@@ -49,7 +49,7 @@
     {
       "name": "Ultimate",
       "slug": "ultimate",
-      "pricingModel": "hybrid",
+      "pricingModel": "per_seat",
       "basePrice": 249,
       "billingPeriod": "monthly",
       "annualDiscount": null,

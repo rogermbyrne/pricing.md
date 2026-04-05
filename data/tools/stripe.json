@@ -5,7 +5,12 @@
   "url": "https://stripe.com",
   "pricingUrl": "https://stripe.com/pricing",
   "category": "payments",
-  "tags": ["payments", "billing", "subscriptions", "fintech"],
+  "tags": [
+    "payments",
+    "billing",
+    "subscriptions",
+    "fintech"
+  ],
   "lastVerified": "2026-04-03",
   "freshnessCategory": "volatile",
   "currency": "USD",
@@ -23,11 +28,19 @@
       "billingPeriod": "monthly",
       "annualDiscount": null,
       "seatPrice": null,
-      "usageMetrics": [],
+      "usageMetrics": [
+        {
+          "name": "transactions",
+          "unit": "transactions",
+          "pricePerUnit": 0.3,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
       "features": [],
       "limits": {
         "transactionFeePercent": 2.9,
-        "transactionFeeFixedCents": 30
+        "perTransactionFee": 0.3
       }
     },
     {

@@ -5,7 +5,12 @@
   "url": "https://squareup.com/us/en/developers",
   "pricingUrl": "https://squareup.com/us/en/pricing",
   "category": "payments",
-  "tags": ["payments", "pos", "payment-processing", "commerce"],
+  "tags": [
+    "payments",
+    "pos",
+    "payment-processing",
+    "commerce"
+  ],
   "lastVerified": "2026-04-04",
   "freshnessCategory": "volatile",
   "currency": "USD",
@@ -23,7 +28,15 @@
       "billingPeriod": "monthly",
       "annualDiscount": null,
       "seatPrice": null,
-      "usageMetrics": [],
+      "usageMetrics": [
+        {
+          "name": "transactions",
+          "unit": "transactions",
+          "pricePerUnit": 0.1,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
       "features": [],
       "limits": {
         "inPersonFeePercent": 2.6,
@@ -35,7 +48,7 @@
     {
       "name": "Plus",
       "slug": "plus",
-      "pricingModel": "hybrid",
+      "pricingModel": "flat_rate",
       "basePrice": 49,
       "billingPeriod": "monthly",
       "annualDiscount": null,
@@ -50,7 +63,7 @@
     {
       "name": "Premium",
       "slug": "premium",
-      "pricingModel": "hybrid",
+      "pricingModel": "flat_rate",
       "basePrice": 149,
       "billingPeriod": "monthly",
       "annualDiscount": null,

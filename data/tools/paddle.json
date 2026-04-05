@@ -23,11 +23,19 @@
       "billingPeriod": null,
       "annualDiscount": null,
       "seatPrice": null,
-      "usageMetrics": [],
+      "usageMetrics": [
+        {
+          "name": "transactions",
+          "unit": "transactions",
+          "pricePerUnit": 0.5,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
       "features": [],
       "limits": {
-        "transactionFeePercent": 5,
-        "transactionFeeFixedCents": 50
+        "transactionFeePercent": 5.0,
+        "perTransactionFee": 0.5
       }
     },
     {

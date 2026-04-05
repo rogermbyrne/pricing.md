@@ -45,7 +45,7 @@
     {
       "name": "Team",
       "slug": "team",
-      "pricingModel": "hybrid",
+      "pricingModel": "flat_rate",
       "basePrice": 500,
       "billingPeriod": "monthly",
       "annualDiscount": null,
@@ -62,7 +62,7 @@
     {
       "name": "Scale",
       "slug": "scale",
-      "pricingModel": "hybrid",
+      "pricingModel": "flat_rate",
       "basePrice": 1000,
       "billingPeriod": "monthly",
       "annualDiscount": null,

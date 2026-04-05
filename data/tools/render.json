@@ -24,7 +24,7 @@
     {
       "name": "Hobby",
       "slug": "hobby",
-      "pricingModel": "usage_based",
+      "pricingModel": "free",
       "basePrice": 0,
       "billingPeriod": "monthly",
       "annualDiscount": null,

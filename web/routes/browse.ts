@@ -5,7 +5,7 @@ export function createBrowseRouter(registry: Registry): Router {
   const router = Router();
 
   router.get("/browse", (req: Request, res: Response) => {
-    const categories = registry.categories().filter((cat) => cat !== "ai-api");
+    const categories = registry.categories();
     const categoryData = categories.map((cat) => {
       const tools = registry.search({ category: cat as any });
       return {

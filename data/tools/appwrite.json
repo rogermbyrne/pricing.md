@@ -5,7 +5,13 @@
   "url": "https://appwrite.io",
   "pricingUrl": "https://appwrite.io/pricing",
   "category": "database",
-  "tags": ["database", "baas", "open-source", "auth", "serverless"],
+  "tags": [
+    "database",
+    "baas",
+    "open-source",
+    "auth",
+    "serverless"
+  ],
   "lastVerified": "2026-04-04",
   "freshnessCategory": "volatile",
   "currency": "USD",
@@ -33,7 +39,7 @@
     {
       "name": "Pro",
       "slug": "pro",
-      "pricingModel": "hybrid",
+      "pricingModel": "flat_rate",
       "basePrice": 25,
       "billingPeriod": "monthly",
       "annualDiscount": null,

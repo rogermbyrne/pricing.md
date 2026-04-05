@@ -4,7 +4,7 @@
   "description": "Chat messaging API and SDK for building real-time messaging features with moderation and offline support",
   "url": "https://getstream.io",
   "pricingUrl": "https://getstream.io/pricing",
-  "category": "hosting",
+  "category": "queues",
   "tags": [
     "chat",
     "messaging",

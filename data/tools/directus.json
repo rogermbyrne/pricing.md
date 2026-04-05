@@ -5,7 +5,14 @@
   "url": "https://directus.io",
   "pricingUrl": "https://directus.io/pricing",
   "category": "cms",
-  "tags": ["headless-cms", "open-source", "backend-as-a-service", "rest-api", "graphql", "self-hosted"],
+  "tags": [
+    "headless-cms",
+    "open-source",
+    "backend-as-a-service",
+    "rest-api",
+    "graphql",
+    "self-hosted"
+  ],
   "lastVerified": "2026-04-04",
   "freshnessCategory": "volatile",
   "currency": "USD",
@@ -30,14 +37,19 @@
     {
       "name": "Professional Cloud",
       "slug": "professional",
-      "pricingModel": "hybrid",
+      "pricingModel": "per_seat",
       "basePrice": 99,
       "billingPeriod": "monthly",
       "annualDiscount": null,
       "seatPrice": 15,
       "usageMetrics": [],
       "features": [],
-      "limits": { "studioUsers": 5, "databaseEntries": 75000, "monthlyAPIRequests": 250000, "fileStorageGB": 150 }
+      "limits": {
+        "studioUsers": 5,
+        "databaseEntries": 75000,
+        "monthlyAPIRequests": 250000,
+        "fileStorageGB": 150
+      }
     },
     {
       "name": "Enterprise Cloud",

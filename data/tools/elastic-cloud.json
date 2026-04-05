@@ -5,7 +5,14 @@
   "url": "https://www.elastic.co",
   "pricingUrl": "https://www.elastic.co/pricing",
   "category": "search",
-  "tags": ["elasticsearch", "kibana", "observability", "security", "vector-search", "siem"],
+  "tags": [
+    "elasticsearch",
+    "kibana",
+    "observability",
+    "security",
+    "vector-search",
+    "siem"
+  ],
   "lastVerified": "2026-04-04",
   "freshnessCategory": "volatile",
   "currency": "USD",
@@ -18,7 +25,7 @@
     {
       "name": "Standard",
       "slug": "standard",
-      "pricingModel": "usage_based",
+      "pricingModel": "flat_rate",
       "basePrice": 99,
       "billingPeriod": "monthly",
       "annualDiscount": null,
@@ -30,7 +37,7 @@
     {
       "name": "Gold",
       "slug": "gold",
-      "pricingModel": "usage_based",
+      "pricingModel": "flat_rate",
       "basePrice": 114,
       "billingPeriod": "monthly",
       "annualDiscount": null,
@@ -42,7 +49,7 @@
     {
       "name": "Platinum",
       "slug": "platinum",
-      "pricingModel": "usage_based",
+      "pricingModel": "flat_rate",
       "basePrice": 131,
       "billingPeriod": "monthly",
       "annualDiscount": null,
@@ -54,7 +61,7 @@
     {
       "name": "Enterprise",
       "slug": "enterprise",
-      "pricingModel": "usage_based",
+      "pricingModel": "flat_rate",
       "basePrice": 184,
       "billingPeriod": "monthly",
       "annualDiscount": null,

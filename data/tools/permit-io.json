@@ -46,7 +46,7 @@
     {
       "name": "Startup",
       "slug": "startup",
-      "pricingModel": "usage_based",
+      "pricingModel": "flat_rate",
       "basePrice": 5,
       "billingPeriod": "monthly",
       "annualDiscount": 18,
@@ -62,7 +62,7 @@
     {
       "name": "Pro",
       "slug": "pro",
-      "pricingModel": "usage_based",
+      "pricingModel": "flat_rate",
       "basePrice": 25,
       "billingPeriod": "monthly",
       "annualDiscount": 18,

@@ -36,7 +36,7 @@
     {
       "name": "Starter",
       "slug": "starter",
-      "pricingModel": "hybrid",
+      "pricingModel": "per_seat",
       "basePrice": 100,
       "billingPeriod": "monthly",
       "annualDiscount": 10,
@@ -50,7 +50,7 @@
     {
       "name": "Pro",
       "slug": "pro",
-      "pricingModel": "hybrid",
+      "pricingModel": "per_seat",
       "basePrice": 575,
       "billingPeriod": "monthly",
       "annualDiscount": 10,

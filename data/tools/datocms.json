@@ -5,7 +5,13 @@
   "url": "https://www.datocms.com",
   "pricingUrl": "https://www.datocms.com/pricing",
   "category": "cms",
-  "tags": ["headless-cms", "graphql", "real-time", "collaboration", "structured-content"],
+  "tags": [
+    "headless-cms",
+    "graphql",
+    "real-time",
+    "collaboration",
+    "structured-content"
+  ],
   "lastVerified": "2026-04-04",
   "freshnessCategory": "volatile",
   "currency": "EUR",
@@ -25,19 +31,29 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "projects": 3, "records": 300, "bandwidthGb": 10, "fileStorageMb": 200 }
+      "limits": {
+        "projects": 3,
+        "records": 300,
+        "bandwidthGb": 10,
+        "fileStorageMb": 200
+      }
     },
     {
       "name": "Professional",
       "slug": "professional",
-      "pricingModel": "hybrid",
+      "pricingModel": "per_seat",
       "basePrice": 149,
       "billingPeriod": "monthly",
       "annualDiscount": 25,
       "seatPrice": 9,
       "usageMetrics": [],
       "features": [],
-      "limits": { "collaboratorsPerProject": 10, "records": 100000, "bandwidthGb": 1000, "fileStorageGb": 500 }
+      "limits": {
+        "collaboratorsPerProject": 10,
+        "records": 100000,
+        "bandwidthGb": 1000,
+        "fileStorageGb": 500
+      }
     },
     {
       "name": "Enterprise",

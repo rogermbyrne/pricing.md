@@ -5,7 +5,11 @@
   "url": "https://devcycle.com",
   "pricingUrl": "https://devcycle.com/pricing",
   "category": "feature-flags",
-  "tags": ["feature-flags", "edge-delivery", "ab-testing"],
+  "tags": [
+    "feature-flags",
+    "edge-delivery",
+    "ab-testing"
+  ],
   "lastVerified": "2026-04-04",
   "freshnessCategory": "volatile",
   "currency": "USD",
@@ -32,7 +36,7 @@
     {
       "name": "Business",
       "slug": "business",
-      "pricingModel": "hybrid",
+      "pricingModel": "flat_rate",
       "basePrice": 500,
       "billingPeriod": "annual",
       "annualDiscount": null,

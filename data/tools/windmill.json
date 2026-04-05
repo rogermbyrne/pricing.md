@@ -5,7 +5,13 @@
   "url": "https://windmill.dev",
   "pricingUrl": "https://www.windmill.dev/pricing",
   "category": "queues",
-  "tags": ["workflow-engine", "open-source", "internal-tools", "scripts", "automation"],
+  "tags": [
+    "workflow-engine",
+    "open-source",
+    "internal-tools",
+    "scripts",
+    "automation"
+  ],
   "lastVerified": "2026-04-04",
   "freshnessCategory": "volatile",
   "currency": "USD",
@@ -25,12 +31,15 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "users": 50, "workspaces": 3 }
+      "limits": {
+        "users": 50,
+        "workspaces": 3
+      }
     },
     {
       "name": "Enterprise Edition",
       "slug": "enterprise",
-      "pricingModel": "hybrid",
+      "pricingModel": "per_seat",
       "basePrice": 120,
       "billingPeriod": "monthly",
       "annualDiscount": null,

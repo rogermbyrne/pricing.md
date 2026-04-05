@@ -3,23 +3,23 @@
  * has NOT changed since the last check. For tools that HAVE changed,
  * it prints a warning but does not modify the JSON (those need manual review).
  *
+ * Reads pricingUrl directly from tool JSON files — no database needed.
  * Intended to be run by CI on a schedule (e.g. weekly).
  */
 import crypto from "crypto";
 import fs from "fs";
 import path from "path";
-import Database from "better-sqlite3";
 import { isSafeUrl } from "./lib/safe-url.js";
 
 const PROJECT_ROOT = path.join(__dirname, "..");
 const TOOLS_DIR = path.join(PROJECT_ROOT, "data", "tools");
 const SNAPSHOTS_DIR = path.join(PROJECT_ROOT, "data", "snapshots");
-const DB_PATH = path.join(PROJECT_ROOT, "data", "discovery.db");
 
-interface TrackedTool {
+interface ToolEntry {
   id: string;
   name: string;
-  pricing_md_url: string;
+  pricingUrl: string;
+  lastVerified: string;
 }
 
 async function fetchContent(url: string): Promise<string | null> {
@@ -43,24 +43,31 @@ function hash(content: string): string {
 
 async function main() {
   const today = new Date().toISOString().split("T")[0];
-  const db = new Database(DB_PATH, { readonly: true });
   fs.mkdirSync(SNAPSHOTS_DIR, { recursive: true });
 
-  const tracked = db
-    .prepare("SELECT id, name, pricing_md_url FROM tools WHERE has_pricing_md = 1 AND pricing_md_url IS NOT NULL")
-    .all() as TrackedTool[];
+  // Read all tool JSON files to get pricingUrls
+  const toolFiles = fs.readdirSync(TOOLS_DIR).filter((f) => f.endsWith(".json"));
+  const tools: ToolEntry[] = toolFiles.map((f) => {
+    const data = JSON.parse(fs.readFileSync(path.join(TOOLS_DIR, f), "utf-8"));
+    return {
+      id: data.id,
+      name: data.name,
+      pricingUrl: data.pricingUrl,
+      lastVerified: data.lastVerified,
+    };
+  });
 
-  console.log(`Checking ${tracked.length} tools with pricing.md files...\n`);
+  console.log(`Checking ${tools.length} tools...\n`);
 
   let verified = 0;
   let changed = 0;
   let failed = 0;
   const changes: string[] = [];
 
-  for (const tool of tracked) {
+  for (const tool of tools) {
     process.stdout.write(`  ${tool.name}... `);
 
-    const content = await fetchContent(tool.pricing_md_url);
+    const content = await fetchContent(tool.pricingUrl);
     if (!content) {
       console.log("FETCH FAILED");
       failed++;
@@ -86,25 +93,19 @@ async function main() {
       fs.writeFileSync(snapshotPath, currentHash, "utf-8");
     } else {
       // Unchanged — update lastVerified in the JSON
-      if (fs.existsSync(toolJsonPath)) {
-        const json = JSON.parse(fs.readFileSync(toolJsonPath, "utf-8"));
-        if (json.lastVerified !== today) {
-          json.lastVerified = today;
-          fs.writeFileSync(toolJsonPath, JSON.stringify(json, null, 2) + "\n", "utf-8");
-          console.log(`verified → ${today}`);
-        } else {
-          console.log("already current");
-        }
+      const json = JSON.parse(fs.readFileSync(toolJsonPath, "utf-8"));
+      if (json.lastVerified !== today) {
+        json.lastVerified = today;
+        fs.writeFileSync(toolJsonPath, JSON.stringify(json, null, 2) + "\n", "utf-8");
+        console.log(`verified → ${today}`);
       } else {
-        console.log("no JSON file");
+        console.log("already current");
       }
       // Save/refresh snapshot
       fs.writeFileSync(snapshotPath, currentHash, "utf-8");
       verified++;
     }
   }
-
-  db.close();
 
   console.log(`\n========================================`);
   console.log(`VERIFICATION SUMMARY`);

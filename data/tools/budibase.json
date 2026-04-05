@@ -17,13 +17,13 @@
   "portability": {
     "switchingCost": "significant",
     "openStandard": null,
-    "whatYouLose": "App definitions, automation workflows, data connections — can self-host open-source version"
+    "whatYouLose": "App definitions, automation workflows, data connections \u2014 can self-host open-source version"
   },
   "tiers": [
     {
       "name": "Pro",
       "slug": "pro",
-      "pricingModel": "hybrid",
+      "pricingModel": "per_seat",
       "basePrice": 23,
       "billingPeriod": "monthly",
       "annualDiscount": 17,
@@ -42,7 +42,7 @@
     {
       "name": "Premium",
       "slug": "premium",
-      "pricingModel": "hybrid",
+      "pricingModel": "per_seat",
       "basePrice": 59,
       "billingPeriod": "monthly",
       "annualDiscount": 17,
@@ -61,7 +61,7 @@
     {
       "name": "Business",
       "slug": "business",
-      "pricingModel": "hybrid",
+      "pricingModel": "per_seat",
       "basePrice": 359,
       "billingPeriod": "monthly",
       "annualDiscount": 17,

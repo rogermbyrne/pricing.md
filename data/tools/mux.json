@@ -37,10 +37,22 @@
           "unitQuantity": 1,
           "includedQuantity": 0,
           "tieredPricing": [
-            { "upTo": 5000, "pricePerUnit": 0.025 },
-            { "upTo": 15000, "pricePerUnit": 0.02375 },
-            { "upTo": 25000, "pricePerUnit": 0.023125 },
-            { "upTo": null, "pricePerUnit": 0.0225 }
+            {
+              "upTo": 5000,
+              "pricePerUnit": 0.025
+            },
+            {
+              "upTo": 15000,
+              "pricePerUnit": 0.02375
+            },
+            {
+              "upTo": 25000,
+              "pricePerUnit": 0.023125
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 0.0225
+            }
           ]
         },
         {
@@ -50,10 +62,22 @@
           "unitQuantity": 1,
           "includedQuantity": 0,
           "tieredPricing": [
-            { "upTo": 5000, "pricePerUnit": 0.03125 },
-            { "upTo": 15000, "pricePerUnit": 0.029688 },
-            { "upTo": 25000, "pricePerUnit": 0.028906 },
-            { "upTo": null, "pricePerUnit": 0.028125 }
+            {
+              "upTo": 5000,
+              "pricePerUnit": 0.03125
+            },
+            {
+              "upTo": 15000,
+              "pricePerUnit": 0.029688
+            },
+            {
+              "upTo": 25000,
+              "pricePerUnit": 0.028906
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 0.028125
+            }
           ]
         },
         {
@@ -63,10 +87,22 @@
           "unitQuantity": 1,
           "includedQuantity": 0,
           "tieredPricing": [
-            { "upTo": 50000, "pricePerUnit": 0.0024 },
-            { "upTo": 150000, "pricePerUnit": 0.00232 },
-            { "upTo": 250000, "pricePerUnit": 0.00228 },
-            { "upTo": null, "pricePerUnit": 0.00224 }
+            {
+              "upTo": 50000,
+              "pricePerUnit": 0.0024
+            },
+            {
+              "upTo": 150000,
+              "pricePerUnit": 0.00232
+            },
+            {
+              "upTo": 250000,
+              "pricePerUnit": 0.00228
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 0.00224
+            }
           ]
         },
         {
@@ -76,12 +112,30 @@
           "unitQuantity": 1,
           "includedQuantity": 0,
           "tieredPricing": [
-            { "upTo": 500000, "pricePerUnit": 0.0008 },
-            { "upTo": 1000000, "pricePerUnit": 0.00076 },
-            { "upTo": 2000000, "pricePerUnit": 0.00072 },
-            { "upTo": 6000000, "pricePerUnit": 0.00067 },
-            { "upTo": 10000000, "pricePerUnit": 0.00061 },
-            { "upTo": null, "pricePerUnit": 0.00056 }
+            {
+              "upTo": 500000,
+              "pricePerUnit": 0.0008
+            },
+            {
+              "upTo": 1000000,
+              "pricePerUnit": 0.00076
+            },
+            {
+              "upTo": 2000000,
+              "pricePerUnit": 0.00072
+            },
+            {
+              "upTo": 6000000,
+              "pricePerUnit": 0.00067
+            },
+            {
+              "upTo": 10000000,
+              "pricePerUnit": 0.00061
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 0.00056
+            }
           ]
         },
         {
@@ -121,7 +175,7 @@
     {
       "name": "Launch Credits",
       "slug": "launch-credits",
-      "pricingModel": "hybrid",
+      "pricingModel": "flat_rate",
       "basePrice": 20,
       "billingPeriod": "monthly",
       "annualDiscount": null,
@@ -135,7 +189,7 @@
     {
       "name": "Scale Credits",
       "slug": "scale-credits",
-      "pricingModel": "hybrid",
+      "pricingModel": "flat_rate",
       "basePrice": 500,
       "billingPeriod": "monthly",
       "annualDiscount": null,

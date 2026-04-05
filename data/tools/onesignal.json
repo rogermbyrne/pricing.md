@@ -5,7 +5,13 @@
   "url": "https://onesignal.com",
   "pricingUrl": "https://onesignal.com/pricing",
   "category": "notifications",
-  "tags": ["notifications", "push", "email", "sms", "messaging"],
+  "tags": [
+    "notifications",
+    "push",
+    "email",
+    "sms",
+    "messaging"
+  ],
   "lastVerified": "2026-04-04",
   "freshnessCategory": "volatile",
   "currency": "USD",
@@ -32,7 +38,7 @@
     {
       "name": "Growth",
       "slug": "growth",
-      "pricingModel": "usage_based",
+      "pricingModel": "flat_rate",
       "basePrice": 19,
       "billingPeriod": "monthly",
       "annualDiscount": null,
