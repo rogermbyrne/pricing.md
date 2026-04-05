@@ -1,0 +1,78 @@
+{
+  "id": "codecov",
+  "name": "Codecov",
+  "description": "Code coverage reporting platform with PR comments, flags, bundle analysis, and flaky test detection",
+  "url": "https://codecov.io",
+  "pricingUrl": "https://about.codecov.io/pricing",
+  "category": "testing",
+  "tags": [
+    "code-coverage",
+    "testing",
+    "ci-cd",
+    "quality"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "Coverage history, PR comment config, flag definitions, component settings"
+  },
+  "tiers": [
+    {
+      "name": "Developer",
+      "slug": "developer",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "users": 1,
+        "privateRepoUploadsPerMonth": 250
+      }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 5,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "users": 10,
+        "privateRepoUploadsPerMonth": 2500
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 12,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

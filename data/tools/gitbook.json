@@ -1,0 +1,76 @@
+{
+  "id": "gitbook",
+  "name": "GitBook",
+  "description": "Documentation platform with Git sync, API playgrounds, AI assistant, and team collaboration",
+  "url": "https://www.gitbook.com",
+  "pricingUrl": "https://www.gitbook.com/pricing",
+  "category": "cms",
+  "tags": [
+    "documentation",
+    "docs",
+    "git-sync",
+    "api-docs"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "Markdown / Git",
+    "whatYouLose": "Custom domain config, branding, AI assistant setup, site insights, access controls"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "users": 1
+      }
+    },
+    {
+      "name": "Premium",
+      "slug": "premium",
+      "pricingModel": "hybrid",
+      "basePrice": 65,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 12,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Ultimate",
+      "slug": "ultimate",
+      "pricingModel": "hybrid",
+      "basePrice": 249,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 12,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "aiAssistantAnswers": 200
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

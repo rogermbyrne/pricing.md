@@ -1,0 +1,76 @@
+{
+  "id": "raycast",
+  "name": "Raycast",
+  "description": "Productivity launcher for macOS with AI assistant, clipboard history, snippets, and extensions",
+  "url": "https://www.raycast.com",
+  "pricingUrl": "https://www.raycast.com/pricing",
+  "category": "hosting",
+  "tags": [
+    "productivity",
+    "launcher",
+    "ai-assistant",
+    "macos"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Snippets, quicklinks, custom extensions, cloud sync, clipboard history"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "aiMessages": 50,
+        "notes": 5,
+        "clipboardHistoryMonths": 3
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 10,
+      "billingPeriod": "monthly",
+      "annualDiscount": 20,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Team Pro",
+      "slug": "team-pro",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": 20,
+      "seatPrice": 15,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

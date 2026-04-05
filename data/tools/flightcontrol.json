@@ -1,0 +1,96 @@
+{
+  "id": "flightcontrol",
+  "name": "Flightcontrol",
+  "description": "PaaS deployment platform that provisions and manages infrastructure on your own AWS account",
+  "url": "https://flightcontrol.dev",
+  "pricingUrl": "https://flightcontrol.dev/pricing",
+  "category": "hosting",
+  "tags": [
+    "paas",
+    "aws",
+    "deployment",
+    "infrastructure"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "AWS",
+    "whatYouLose": "Deployment pipeline config, preview environments, Flightcontrol dashboard — AWS infra remains yours"
+  },
+  "tiers": [
+    {
+      "name": "Single User",
+      "slug": "single-user",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "users": 1
+      }
+    },
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "hybrid",
+      "basePrice": 97,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "services",
+          "unit": "services",
+          "pricePerUnit": 20,
+          "unitQuantity": 1,
+          "includedQuantity": 5
+        }
+      ],
+      "features": [],
+      "limits": {
+        "users": 25,
+        "services": 5
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "hybrid",
+      "basePrice": 397,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "services",
+          "unit": "services",
+          "pricePerUnit": 30,
+          "unitQuantity": 1,
+          "includedQuantity": 10
+        }
+      ],
+      "features": [],
+      "limits": {
+        "users": 100,
+        "services": 10
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

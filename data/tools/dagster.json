@@ -1,0 +1,100 @@
+{
+  "id": "dagster",
+  "name": "Dagster",
+  "description": "Data orchestration platform with software-defined assets, observability, and serverless compute",
+  "url": "https://dagster.io",
+  "pricingUrl": "https://dagster.io/pricing",
+  "category": "queues",
+  "tags": [
+    "orchestration",
+    "data-pipelines",
+    "etl",
+    "assets"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Asset definitions, schedules, sensors, Dagster Cloud UI, serverless compute, catalog"
+  },
+  "tiers": [
+    {
+      "name": "Solo",
+      "slug": "solo",
+      "pricingModel": "hybrid",
+      "basePrice": 10,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "credits",
+          "unit": "credits",
+          "pricePerUnit": 0.04,
+          "unitQuantity": 1,
+          "includedQuantity": 7500
+        },
+        {
+          "name": "serverless-compute",
+          "unit": "minutes",
+          "pricePerUnit": 0.005,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "users": 1,
+        "codeLocations": 1,
+        "deployments": 1,
+        "creditsPerMonth": 7500
+      }
+    },
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "hybrid",
+      "basePrice": 100,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "credits",
+          "unit": "credits",
+          "pricePerUnit": 0.03,
+          "unitQuantity": 1,
+          "includedQuantity": 30000
+        },
+        {
+          "name": "serverless-compute",
+          "unit": "minutes",
+          "pricePerUnit": 0.005,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "users": 3,
+        "codeLocations": 5,
+        "deployments": 1,
+        "creditsPerMonth": 30000
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "fern",
+  "name": "Fern",
+  "description": "API development platform with docs generation, SDK generation, and developer portal hosting",
+  "url": "https://www.buildwithfern.com",
+  "pricingUrl": "https://www.buildwithfern.com/pricing",
+  "category": "ci-cd",
+  "tags": [
+    "api-docs",
+    "sdk-generation",
+    "developer-portal",
+    "openapi"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "OpenAPI",
+    "whatYouLose": "Hosted docs portal, SDK generation pipeline, custom themes, Git Sync config"
+  },
+  "tiers": [
+    {
+      "name": "Hobby",
+      "slug": "hobby",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "teamMembers": 2,
+        "aiCredits": 250,
+        "sites": 1
+      }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "flat_rate",
+      "basePrice": 200,
+      "billingPeriod": "monthly",
+      "annualDiscount": 25,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "teamMembers": 5,
+        "aiCredits": 1000,
+        "sites": 1
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

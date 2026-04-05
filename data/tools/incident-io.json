@@ -1,0 +1,88 @@
+{
+  "id": "incident-io",
+  "name": "incident.io",
+  "description": "Incident management platform with on-call scheduling, status pages, workflows, and post-mortems",
+  "url": "https://incident.io",
+  "pricingUrl": "https://incident.io/pricing",
+  "category": "monitoring",
+  "tags": [
+    "incident-management",
+    "on-call",
+    "status-page",
+    "post-mortems"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Incident workflows, on-call schedules, status page config, custom fields, insight dashboards"
+  },
+  "tiers": [
+    {
+      "name": "Basic",
+      "slug": "basic",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "customFields": 1,
+        "schedules": 1,
+        "workflows": 1,
+        "integrations": 2,
+        "statusPages": 1
+      }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": 21,
+      "seatPrice": 19,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "customFields": 3,
+        "schedules": 2,
+        "workflows": 3,
+        "statusPages": 1
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 25,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "liveCallRoutingNumbers": 1,
+        "insightDashboards": 3,
+        "responsePolicies": 1,
+        "onCallPolicies": 1
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

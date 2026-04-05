@@ -1,0 +1,81 @@
+{
+  "id": "plane",
+  "name": "Plane",
+  "description": "Open-source project management tool with issues, cycles, modules, and AI-assisted workflows",
+  "url": "https://plane.so",
+  "pricingUrl": "https://plane.so/pricing",
+  "category": "hosting",
+  "tags": [
+    "project-management",
+    "issues",
+    "open-source",
+    "agile"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Issue history, cycle/module configs, custom views, AI credit balance"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "users": 12,
+        "aiCreditsPerSeatPerMonth": 500
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": 25,
+      "seatPrice": 8,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "aiCreditsPerSeatPerMonth": 1000,
+        "guestsPerPaidMember": 5
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": 13,
+      "seatPrice": 15,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "aiCreditsPerSeatPerMonth": 2000,
+        "guestsPerPaidMember": 5
+      }
+    },
+    {
+      "name": "Enterprise Grid",
+      "slug": "enterprise-grid",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

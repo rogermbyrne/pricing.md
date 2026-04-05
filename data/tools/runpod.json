@@ -1,0 +1,65 @@
+{
+  "id": "runpod",
+  "name": "RunPod",
+  "description": "GPU cloud platform for AI inference and training with serverless endpoints and on-demand pods",
+  "url": "https://www.runpod.io",
+  "pricingUrl": "https://www.runpod.io/pricing",
+  "category": "ai-api",
+  "tags": [
+    "gpu",
+    "inference",
+    "serverless",
+    "ml-infra"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Serverless endpoint config, auto-scaling rules, network storage volumes, container templates"
+  },
+  "tiers": [
+    {
+      "name": "Pay-as-you-go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "container-disk",
+          "unit": "GB",
+          "pricePerUnit": 0.10,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "volume-running",
+          "unit": "GB",
+          "pricePerUnit": 0.10,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "volume-idle",
+          "unit": "GB",
+          "pricePerUnit": 0.20,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "network-storage-standard",
+          "unit": "GB",
+          "pricePerUnit": 0.07,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}
