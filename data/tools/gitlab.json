@@ -1,0 +1,87 @@
+{
+  "id": "gitlab",
+  "name": "GitLab",
+  "description": "DevSecOps platform with source control, CI/CD, security scanning, and project management",
+  "url": "https://gitlab.com",
+  "pricingUrl": "https://about.gitlab.com/pricing",
+  "category": "ci-cd",
+  "tags": [
+    "git",
+    "ci-cd",
+    "devsecops",
+    "source-control"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": "Git",
+    "whatYouLose": "CI/CD pipelines, security scan config, project management, merge request workflows"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "users": 5,
+        "computeMinutesPerMonth": 400,
+        "storageGiB": 10
+      }
+    },
+    {
+      "name": "Premium",
+      "slug": "premium",
+      "pricingModel": "per_seat",
+      "basePrice": 29,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": 29,
+      "usageMetrics": [
+        {
+          "name": "compute-minutes",
+          "unit": "minutes",
+          "pricePerUnit": 10,
+          "unitQuantity": 1000,
+          "includedQuantity": 10000
+        },
+        {
+          "name": "storage",
+          "unit": "GiB",
+          "pricePerUnit": 0.50,
+          "unitQuantity": 1,
+          "includedQuantity": 500
+        }
+      ],
+      "features": [],
+      "limits": {
+        "computeMinutesPerMonth": 10000,
+        "storageGiB": 500,
+        "duoCreditsPerUser": 12
+      }
+    },
+    {
+      "name": "Ultimate",
+      "slug": "ultimate",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "computeMinutesPerMonth": 50000,
+        "storageGiB": 500,
+        "duoCreditsPerUser": 24
+      }
+    }
+  ]
+}

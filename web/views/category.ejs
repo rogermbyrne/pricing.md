@@ -51,6 +51,10 @@ function primaryModel(tool) {
   if (paid.length === 0) return tool.tiers[0].pricingModel;
   return paid[0].pricingModel;
 }
+
+function hasPricingMd(tool) {
+  return tool.pricingUrl && tool.pricingUrl.endsWith('/pricing.md');
+}
 %>
 
 <div class="max-w-7xl mx-auto px-6 py-10">
@@ -87,7 +91,12 @@ function primaryModel(tool) {
         <% for (const tool of tools) { %>
           <tr class="border-b border-neutral-100 dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-[#0a0a0a] transition-colors">
             <td class="px-5 py-4">
-              <a href="/tool/<%= tool.id %>" class="font-bold text-base text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors no-underline"><%= tool.name %></a>
+              <div class="flex items-center gap-1.5">
+                <a href="/tool/<%= tool.id %>" class="font-bold text-base text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors no-underline"><%= tool.name %></a>
+                <% if (hasPricingMd(tool)) { %>
+                  <span title="Has pricing.md" class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-[#1d9bf0] flex-shrink-0"><svg viewBox="0 0 24 24" width="10" height="10" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                <% } %>
+              </div>
               <div class="text-sm text-neutral-500 mt-0.5 max-w-[300px] truncate"><%= tool.description %></div>
             </td>
             <td class="px-5 py-4">

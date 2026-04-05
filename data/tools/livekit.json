@@ -1,0 +1,137 @@
+{
+  "id": "livekit",
+  "name": "LiveKit",
+  "description": "Real-time audio/video infrastructure with AI agent sessions, WebRTC, SIP trunking, and voice AI",
+  "url": "https://livekit.com",
+  "pricingUrl": "https://livekit.com/pricing",
+  "category": "queues",
+  "tags": [
+    "webrtc",
+    "voice-ai",
+    "real-time",
+    "video"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": "WebRTC / SIP",
+    "whatYouLose": "Agent deployments, inference config, phone numbers, recording pipeline — LiveKit is open-source"
+  },
+  "tiers": [
+    {
+      "name": "Build",
+      "slug": "build",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "agentSessionMinutes": 1000,
+        "concurrentAgentSessions": 5,
+        "agentDeployments": 1,
+        "webrtcMinutes": 5000,
+        "concurrentConnections": 100,
+        "downstreamDataGB": 50
+      }
+    },
+    {
+      "name": "Ship",
+      "slug": "ship",
+      "pricingModel": "hybrid",
+      "basePrice": 50,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "agent-session-minutes",
+          "unit": "minutes",
+          "pricePerUnit": 0.01,
+          "unitQuantity": 1,
+          "includedQuantity": 5000
+        },
+        {
+          "name": "webrtc-minutes",
+          "unit": "minutes",
+          "pricePerUnit": 0.0005,
+          "unitQuantity": 1,
+          "includedQuantity": 150000
+        },
+        {
+          "name": "downstream-data",
+          "unit": "GB",
+          "pricePerUnit": 0.12,
+          "unitQuantity": 1,
+          "includedQuantity": 250
+        }
+      ],
+      "features": [],
+      "limits": {
+        "agentSessionMinutes": 5000,
+        "concurrentAgentSessions": 20,
+        "agentDeployments": 2,
+        "webrtcMinutes": 150000,
+        "concurrentConnections": 1000,
+        "downstreamDataGB": 250
+      }
+    },
+    {
+      "name": "Scale",
+      "slug": "scale",
+      "pricingModel": "hybrid",
+      "basePrice": 500,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "agent-session-minutes",
+          "unit": "minutes",
+          "pricePerUnit": 0.01,
+          "unitQuantity": 1,
+          "includedQuantity": 50000
+        },
+        {
+          "name": "webrtc-minutes",
+          "unit": "minutes",
+          "pricePerUnit": 0.0004,
+          "unitQuantity": 1,
+          "includedQuantity": 1500000
+        },
+        {
+          "name": "downstream-data",
+          "unit": "GB",
+          "pricePerUnit": 0.10,
+          "unitQuantity": 1,
+          "includedQuantity": 3000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "agentSessionMinutes": 50000,
+        "concurrentAgentSessions": 600,
+        "agentDeployments": 4,
+        "webrtcMinutes": 1500000,
+        "concurrentConnections": 5000,
+        "downstreamDataGB": 3000
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

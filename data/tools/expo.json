@@ -1,0 +1,132 @@
+{
+  "id": "expo",
+  "name": "Expo",
+  "description": "React Native development platform with cloud builds, OTA updates, CI/CD, edge hosting, and app store submission",
+  "url": "https://expo.dev",
+  "pricingUrl": "https://expo.dev/pricing",
+  "category": "ci-cd",
+  "tags": [
+    "react-native",
+    "mobile",
+    "builds",
+    "ota-updates"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "React Native",
+    "whatYouLose": "Cloud builds, OTA update pipeline, EAS Submit config, hosting — Expo CLI is open-source"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "androidBuilds": 15,
+        "iosBuilds": 15,
+        "buildTimeoutMinutes": 45,
+        "concurrencies": 1,
+        "ciCdMinutes": 60,
+        "updateMAU": 1000,
+        "edgeBandwidthGiB": 100,
+        "storageGiB": 20,
+        "hostingRequests": 100000,
+        "projects": 25
+      }
+    },
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "hybrid",
+      "basePrice": 19,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "edge-bandwidth",
+          "unit": "GiB",
+          "pricePerUnit": 0.10,
+          "unitQuantity": 1,
+          "includedQuantity": 500
+        },
+        {
+          "name": "storage",
+          "unit": "GiB",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1,
+          "includedQuantity": 20
+        },
+        {
+          "name": "hosting-requests",
+          "unit": "requests",
+          "pricePerUnit": 2.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 100000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "buildCredit": 45,
+        "buildTimeoutHours": 2,
+        "concurrencies": 1,
+        "updateMAU": 3000,
+        "projects": 50
+      }
+    },
+    {
+      "name": "Production",
+      "slug": "production",
+      "pricingModel": "hybrid",
+      "basePrice": 199,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "edge-bandwidth",
+          "unit": "GiB",
+          "pricePerUnit": 0.10,
+          "unitQuantity": 1,
+          "includedQuantity": 1000
+        },
+        {
+          "name": "storage",
+          "unit": "GiB",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1,
+          "includedQuantity": 1000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "buildCredit": 225,
+        "concurrencies": 2,
+        "updateMAU": 50000,
+        "customEnvironments": 10,
+        "projects": 100
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

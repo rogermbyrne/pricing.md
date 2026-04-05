@@ -1,0 +1,63 @@
+{
+  "id": "codacy",
+  "name": "Codacy",
+  "description": "Code quality and security platform with SAST, SCA, AI code review, and IDE integrations",
+  "url": "https://codacy.com",
+  "pricingUrl": "https://codacy.com/pricing",
+  "category": "testing",
+  "tags": [
+    "code-quality",
+    "sast",
+    "security",
+    "code-review"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "Code quality history, custom rules, coverage tracking, merge gate config"
+  },
+  "tiers": [
+    {
+      "name": "Developer",
+      "slug": "developer",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "per_seat",
+      "basePrice": 21,
+      "billingPeriod": "monthly",
+      "annualDiscount": 14,
+      "seatPrice": 21,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "maxDevelopers": 30,
+        "privateRepositories": 100
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "cloudwatch",
+  "name": "Amazon CloudWatch",
+  "description": "AWS monitoring and observability service for metrics, logs, alarms, and dashboards",
+  "url": "https://aws.amazon.com/cloudwatch",
+  "pricingUrl": "https://aws.amazon.com/cloudwatch/pricing",
+  "category": "monitoring",
+  "tags": [
+    "aws",
+    "monitoring",
+    "logs",
+    "metrics",
+    "alarms"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Dashboards, alarm config, log insights queries, metric streams — deeply tied to AWS"
+  },
+  "tiers": [
+    {
+      "name": "Pay-as-you-go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "custom-metrics",
+          "unit": "metrics",
+          "pricePerUnit": 0.30,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "log-ingestion",
+          "unit": "GB",
+          "pricePerUnit": 0.50,
+          "unitQuantity": 1,
+          "includedQuantity": 5
+        },
+        {
+          "name": "log-archive-storage",
+          "unit": "GB",
+          "pricePerUnit": 0.03,
+          "unitQuantity": 1,
+          "includedQuantity": 5
+        },
+        {
+          "name": "log-insights-scanned",
+          "unit": "GB",
+          "pricePerUnit": 0.50,
+          "unitQuantity": 1,
+          "includedQuantity": 5
+        },
+        {
+          "name": "data-protection-scanning",
+          "unit": "GB",
+          "pricePerUnit": 0.12,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "freeApiRequests": 1000000,
+        "freeAlarmMetrics": 10
+      }
+    }
+  ]
+}

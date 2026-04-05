@@ -1,0 +1,81 @@
+{
+  "id": "notion",
+  "name": "Notion",
+  "description": "All-in-one workspace for docs, wikis, projects, and AI with databases, charts, and custom agents",
+  "url": "https://notion.com",
+  "pricingUrl": "https://notion.com/pricing",
+  "category": "internal-tools",
+  "tags": [
+    "wiki",
+    "docs",
+    "project-management",
+    "ai"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "EUR",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": "Markdown export",
+    "whatYouLose": "Database views, relations, automations, integrations, page history, AI agent config"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "fileUploadMB": 5,
+        "pageHistoryDays": 7,
+        "externalGuests": 10,
+        "charts": 1
+      }
+    },
+    {
+      "name": "Plus",
+      "slug": "plus",
+      "pricingModel": "per_seat",
+      "basePrice": 9.50,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 9.50,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "pageHistoryDays": 30
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "per_seat",
+      "basePrice": 19.50,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 19.50,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "pageHistoryDays": 90
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

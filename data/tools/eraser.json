@@ -1,0 +1,85 @@
+{
+  "id": "eraser",
+  "name": "Eraser",
+  "description": "Technical diagramming and documentation platform with AI diagram generation and version history",
+  "url": "https://eraser.io",
+  "pricingUrl": "https://eraser.io/pricing",
+  "category": "docs",
+  "tags": [
+    "diagrams",
+    "documentation",
+    "ai",
+    "whiteboard"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Diagram definitions, version history, custom icons, API integrations"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "files": 3,
+        "aiDiagrams": 5,
+        "versionHistoryDays": 7,
+        "customIcons": 0,
+        "apiCalls": 0
+      }
+    },
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "per_seat",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": 25,
+      "seatPrice": 20,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "aiDiagrams": 40,
+        "versionHistoryDays": 90,
+        "customIcons": 20
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "per_seat",
+      "basePrice": 60,
+      "billingPeriod": "monthly",
+      "annualDiscount": 25,
+      "seatPrice": 60,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "aiDiagrams": 250,
+        "customIcons": 100
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

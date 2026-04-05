@@ -1,0 +1,74 @@
+{
+  "id": "agora",
+  "name": "Agora",
+  "description": "Real-time engagement platform with video/voice calling, live streaming, chat, signaling, and AI features",
+  "url": "https://agora.io",
+  "pricingUrl": "https://agora.io/en/pricing",
+  "category": "queues",
+  "tags": [
+    "webrtc",
+    "video",
+    "voice",
+    "live-streaming",
+    "real-time"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "SDK integrations, channel config, recording pipeline, AI moderation rules"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "videoMinutesPerMonth": 10000,
+        "voiceMinutesPerMonth": 10000
+      }
+    },
+    {
+      "name": "Pay-as-you-go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "video-calling",
+          "unit": "minutes",
+          "pricePerUnit": 3.99,
+          "unitQuantity": 1000,
+          "includedQuantity": 10000
+        },
+        {
+          "name": "voice-calling",
+          "unit": "minutes",
+          "pricePerUnit": 0.99,
+          "unitQuantity": 1000,
+          "includedQuantity": 10000
+        },
+        {
+          "name": "recording",
+          "unit": "minutes",
+          "pricePerUnit": 0.99,
+          "unitQuantity": 1000,
+          "includedQuantity": 10000
+        }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

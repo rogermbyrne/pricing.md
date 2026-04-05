@@ -1,0 +1,51 @@
+{
+  "id": "twilio",
+  "name": "Twilio",
+  "description": "Cloud communications platform with SMS, voice, video, email, and verification APIs",
+  "url": "https://twilio.com",
+  "pricingUrl": "https://twilio.com/en-us/messaging/pricing/sms",
+  "category": "notifications",
+  "tags": [
+    "sms",
+    "voice",
+    "communications",
+    "verification"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Phone numbers, messaging profiles, verification config, Twilio-specific SDKs"
+  },
+  "tiers": [
+    {
+      "name": "Pay-as-you-go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "sms-us",
+          "unit": "messages",
+          "pricePerUnit": 0.0083,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "verify",
+          "unit": "verifications",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "id": "tolgee",
+  "name": "Tolgee",
+  "description": "Open-source localization platform with in-context translation, machine translation, and OTA updates",
+  "url": "https://tolgee.io",
+  "pricingUrl": "https://tolgee.io/pricing",
+  "category": "hosting",
+  "tags": [
+    "localization",
+    "i18n",
+    "translation",
+    "open-source"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "EUR",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "ICU message format",
+    "whatYouLose": "In-context editing, MT credits, OTA config — can self-host open-source version"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "keys": 500,
+        "seats": 3
+      }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "flat_rate",
+      "basePrice": 49,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "keys": 2000,
+        "seats": 4
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "flat_rate",
+      "basePrice": 179,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "keys": 5000,
+        "seats": 8
+      }
+    },
+    {
+      "name": "Advanced",
+      "slug": "advanced",
+      "pricingModel": "flat_rate",
+      "basePrice": 499,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "keys": 20000,
+        "seats": 20
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}
