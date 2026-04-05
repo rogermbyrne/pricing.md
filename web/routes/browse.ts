@@ -43,7 +43,7 @@ export function createBrowseRouter(registry: Registry): Router {
       return;
     }
 
-    const sort = (req.query.sort as string) || "name";
+    const sort = (req.query.sort as string) || "verified";
 
     if (sort === "lowest-paid") {
       tools = [...tools].sort((a, b) => {
