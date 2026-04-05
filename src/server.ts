@@ -5,6 +5,7 @@ import { getPricingSchema, handleGetPricing } from "./tools/get-pricing.js";
 import { compareToolsSchema, handleCompareTools } from "./tools/compare-tools.js";
 import { estimateCostSchema, handleEstimateCost } from "./tools/estimate-cost.js";
 import { findCheapestSchema, handleFindCheapest } from "./tools/find-cheapest.js";
+import { growthCostSchema, handleGrowthCost } from "./tools/growth-cost.js";
 
 function respond(result: unknown) {
   if (result && typeof result === "object" && "error" in result) {
@@ -57,6 +58,13 @@ export function createServer(registry: Registry): McpServer {
     "Find the cheapest tool in a category for your specific usage. Compares all tools side by side, showing the best tier per tool ranked by total monthly cost. Includes portability info to weigh cost vs lock-in.",
     findCheapestSchema.shape,
     async (params) => respond(handleFindCheapest(registry, params))
+  );
+
+  server.tool(
+    "growth_cost",
+    "Compare what tools actually cost at realistic growth, not just their free tier or starting price. Uses standard growth scenarios per category (e.g. 100K MAU for auth, 50GB+500GB BW for databases, 100K emails for email). Shows entry price → scale price for each tool, ranked cheapest first. Exposes the free-tier-to-paid cliff.",
+    growthCostSchema.shape,
+    async (params) => respond(handleGrowthCost(registry, params))
   );
 
   return server;

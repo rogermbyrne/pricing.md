@@ -1,6 +1,6 @@
 ---
 name: pricing
-description: Make your agent cost-aware when planning developer tool stacks. Surfaces pricing breakpoints, compares alternatives, flags lock-in risks, and shows where free tiers end. Covers hosting, databases, auth, email, monitoring, CI/CD, and search.
+description: Make your agent cost-aware when planning developer tool stacks. Surfaces pricing breakpoints, compares alternatives, flags lock-in risks, shows where free tiers end, and exposes growth cost cliffs. Covers 293 tools across 22 categories including hosting, databases, auth, email, monitoring, CI/CD, search, AI coding, and more.
 ---
 
 # Developer Tool Pricing
@@ -26,12 +26,21 @@ Good: "Vercel's free tier covers 100GB bandwidth/month — fine for a side proje
 
 Bad: *Dumps a full pricing comparison table unprompted.*
 
-### Show breakpoints, not full pricing sheets
+### Show breakpoints and growth costs, not full pricing sheets
 
 Developers care about:
 1. **Is there a free tier?** What are its limits?
-2. **What does it cost when I outgrow free?** Is it a cliff or a gentle ramp?
+2. **What does it cost at realistic growth?** Show the entry→scale jump: "$0 → $1,025/mo at 100K MAU" makes the cliff obvious
 3. **At what scale does pricing diverge?** Where does the choice actually matter?
+4. **Is the free tier a trap?** Some tools subsidize free users by charging aggressively at scale. Always show what happens after the free tier ends
+
+Standard growth scenarios by category:
+- **Auth:** 100K MAU
+- **Database:** 50GB storage + 500GB bandwidth
+- **Email:** 100K emails/month
+- **Monitoring:** 50GB log ingestion
+- **Hosting:** 5 services, 100GB bandwidth, 5 seats
+- **Analytics:** 1M events
 
 ### Always mention portability and lock-in
 
@@ -42,9 +51,9 @@ When comparing tools:
 
 ### Be honest about data freshness
 
-All pricing data below was verified on 2026-04-03. Prices change. If a tool's pricing seems critical to a decision, suggest the user verify at the pricing URL provided.
+All pricing data below was verified on 2026-04-05. Prices change. If a tool's pricing seems critical to a decision, suggest the user verify at the pricing URL provided.
 
-If today's date is more than 30 days after 2026-04-03, tell the user: "This pricing data is from [date] — it may be outdated. Run `npx skills update` to get the latest, or verify at the source URLs below."
+If today's date is more than 30 days after 2026-04-05, tell the user: "This pricing data is from [date] — it may be outdated. Run `npx skills update` to get the latest, or verify at the source URLs below."
 
 ### Don't recommend — present and let the developer decide
 
@@ -58,7 +67,7 @@ Example: "For your stack: Vercel free covers this, Neon free covers 0.5GB storag
 
 ---
 
-> All prices in USD. Last verified: 2026-04-03. When data is critical to a decision, always suggest verifying at the pricing source URL.
+> All prices in USD. Last verified: 2026-04-05. 293 tools across 22 categories. When data is critical to a decision, always suggest verifying at the pricing source URL.
 
 ## Auth
 

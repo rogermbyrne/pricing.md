@@ -39,10 +39,12 @@ Add to your Claude Code MCP config:
 | `get_pricing` | Get full pricing details for a specific tool |
 | `compare_tools` | Side-by-side comparison of 2-5 tools |
 | `estimate_cost` | Estimate monthly cost given usage quantities |
+| `find_cheapest` | Find the cheapest tool in a category for your usage |
+| `growth_cost` | Compare what tools cost at realistic growth (e.g. 100K MAU for auth, 50GB for databases) — exposes free-tier-to-paid cliffs |
 
 ## What's Covered
 
-210 developer tools across 18 categories:
+293 developer tools across 22 categories:
 
 | Category | Tools |
 | --- | --- |
@@ -64,6 +66,10 @@ Add to your Claude Code MCP config:
 | **Storage** | Tigris, Mux, and more |
 | **Scheduling** | Mergent, Cal.com |
 | **Testing** | Cypress Cloud, BrowserStack, and more |
+| **AI Coding** | GitHub Copilot, Cursor, Windsurf, Cline, and more |
+| **Docs** | GitBook, ReadMe, Mintlify, and more |
+| **Internal Tools** | Retool, Appsmith, Budibase, and more |
+| **Secrets** | Doppler, Infisical, and more |
 
 All pricing verified as of 2026-04-05. Each tool links to its pricing page for verification.
 
@@ -72,9 +78,10 @@ All pricing verified as of 2026-04-05. Each tool links to its pricing page for v
 When you're planning a project and mention tools like Vercel or Resend, the agent will:
 
 1. **Show the free tier** and its limits
-2. **Flag where free ends** — is it a cliff ($0 to $25/mo) or a gentle ramp?
-3. **Note portability** — open standard (SMTP, PostgreSQL) or proprietary lock-in?
-4. **Present, don't recommend** — you know your requirements, the agent shows the numbers
+2. **Show the cost at scale** — what does this tool actually cost at 100K users? ($0 → $1,025/mo for Clerk, $0 → $0 for WorkOS)
+3. **Flag the free-tier cliff** — some tools lure you with free tiers then charge aggressively when you outgrow them
+4. **Note portability** — open standard (SMTP, PostgreSQL) or proprietary lock-in?
+5. **Present, don't recommend** — you know your requirements, the agent shows the numbers
 
 ## Maintaining Pricing Data
 
