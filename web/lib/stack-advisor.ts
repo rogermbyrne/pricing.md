@@ -97,13 +97,14 @@ Rules:
 
 Migration Path Strategy:
 - For each category, consider whether different tools are optimal at different growth stages
-- Start with free tiers to minimize burn. If Tool A has the best free tier but Tool B is cheaper at 100K users, recommend starting with A and migrating to B later
+- Start with free tiers to minimize burn, BUT always weigh the cost of migration vs the cost of starting on the scale tool from day one
+- When two tools share an open standard (e.g., PostgreSQL wire protocol, SMTP, S3-compatible), consider: is it worth paying $5-15/mo extra from the start to avoid migrating a production database at 100K users? Migrating live production data is risky, stressful, and costs engineering time. If the price difference is small early on, recommend starting with the tool that's cheapest at scale to avoid the migration entirely. Example: "PlanetScale Postgres starts at $5/mo. That's $60/year more than Neon Free, but you'll never have to migrate a production database."
 - Only recommend migrations where switchingCost is "drop-in" or "moderate" — never recommend migrating between tools with "significant" or "architectural" switching costs unless the user explicitly asks
-- When tools share an open standard (e.g., PostgreSQL wire protocol, SMTP, S3-compatible), highlight that migration is straightforward and low-risk
 - Show the migration path as a timeline: "0-1K: Neon Free → 10K: Neon Launch ($30/mo) → 100K: consider PlanetScale (PostgreSQL compatible, moderate switch)"
 - Flag what you lose AND what you gain when switching — e.g., "You lose: Neon branching and scale-to-zero. You gain: horizontal sharding and $15/mo savings"
 - If staying with one tool across all scales is cheapest and has no lock-in issues, say so — don't force migrations for the sake of it
-- The goal is to maximize free tier usage early, then optimize cost at each growth stage while keeping migrations realistic
+- When the scale tool costs only slightly more early on, actively recommend it over the free-tier-then-migrate path. The hidden cost of migration (downtime risk, engineering time, testing) almost always exceeds a few dollars per month
+- The goal is to find the path with the lowest TOTAL cost including migration risk, not just the lowest monthly bill at each stage
 
 Open Source / Self-Hosted Route:
 - When presenting recommendations, always mention the self-hosted alternative if one exists. Use get_oss_alternatives to find them.
