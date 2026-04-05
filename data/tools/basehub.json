@@ -1,0 +1,122 @@
+{
+  "id": "basehub",
+  "name": "BaseHub",
+  "description": "AI-native headless CMS with block-based editing, API-first content delivery, and asset management",
+  "url": "https://basehub.com",
+  "pricingUrl": "https://basehub.com/pricing",
+  "category": "cms",
+  "tags": [
+    "cms",
+    "headless",
+    "api-first",
+    "content"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Block-based content schema, API endpoints, asset CDN config, team permissions"
+  },
+  "tiers": [
+    {
+      "name": "Personal",
+      "slug": "personal",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "blocks",
+          "unit": "blocks",
+          "pricePerUnit": 1.00,
+          "unitQuantity": 500,
+          "includedQuantity": 5000
+        },
+        {
+          "name": "api-requests",
+          "unit": "requests",
+          "pricePerUnit": 1.00,
+          "unitQuantity": 50000,
+          "includedQuantity": 75000
+        },
+        {
+          "name": "asset-storage",
+          "unit": "GB",
+          "pricePerUnit": 0.10,
+          "unitQuantity": 1,
+          "includedQuantity": 25
+        }
+      ],
+      "features": [],
+      "limits": {
+        "blocks": 5000,
+        "apiRequests": 75000,
+        "assetStorageGB": 25,
+        "assetRequests": 1000000
+      }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "per_seat",
+      "basePrice": 15,
+      "billingPeriod": "monthly",
+      "annualDiscount": 20,
+      "seatPrice": 15,
+      "usageMetrics": [
+        {
+          "name": "api-requests",
+          "unit": "requests",
+          "pricePerUnit": 1.00,
+          "unitQuantity": 100000,
+          "includedQuantity": 500000
+        },
+        {
+          "name": "asset-storage",
+          "unit": "GB",
+          "pricePerUnit": 0.10,
+          "unitQuantity": 1,
+          "includedQuantity": 500
+        }
+      ],
+      "features": [],
+      "limits": {
+        "apiRequests": 500000,
+        "assetStorageGB": 500,
+        "assetRequests": 5000000
+      }
+    },
+    {
+      "name": "Unlimited",
+      "slug": "unlimited",
+      "pricingModel": "flat_rate",
+      "basePrice": 350,
+      "billingPeriod": "monthly",
+      "annualDiscount": 15,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "apiRequests": 5000000,
+        "assetStorageGB": 5000,
+        "assetRequests": 50000000
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

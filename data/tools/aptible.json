@@ -1,0 +1,118 @@
+{
+  "id": "aptible",
+  "name": "Aptible",
+  "description": "HIPAA/SOC2-compliant PaaS for deploying containers, databases, and managed infrastructure",
+  "url": "https://www.aptible.com",
+  "pricingUrl": "https://www.aptible.com/pricing",
+  "category": "hosting",
+  "tags": [
+    "paas",
+    "hipaa",
+    "compliance",
+    "containers"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "Docker containers",
+    "whatYouLose": "Compliance automation, managed VPNs, host intrusion detection, Aptible dashboard"
+  },
+  "tiers": [
+    {
+      "name": "Development",
+      "slug": "development",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "endpoints",
+          "unit": "endpoint-hours",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "general-purpose-containers",
+          "unit": "GB-RAM-hours",
+          "pricePerUnit": 0.08,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "cpu-optimized-containers",
+          "unit": "GB-RAM-hours",
+          "pricePerUnit": 0.10,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "ram-optimized-containers",
+          "unit": "GB-RAM-hours",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Production",
+      "slug": "production",
+      "pricingModel": "hybrid",
+      "basePrice": 499,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "endpoints",
+          "unit": "endpoint-hours",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "general-purpose-containers",
+          "unit": "GB-RAM-hours",
+          "pricePerUnit": 0.08,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "dedicated-stacks",
+          "unit": "stacks",
+          "pricePerUnit": 499,
+          "unitQuantity": 1,
+          "includedQuantity": 1
+        },
+        {
+          "name": "vpn-peers",
+          "unit": "peers",
+          "pricePerUnit": 99,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

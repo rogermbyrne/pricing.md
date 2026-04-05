@@ -1,0 +1,91 @@
+{
+  "id": "langsmith",
+  "name": "LangSmith",
+  "description": "LLM observability and evaluation platform by LangChain with tracing, testing, prompt management, and deployment",
+  "url": "https://www.langchain.com",
+  "pricingUrl": "https://www.langchain.com/pricing",
+  "category": "ai-api",
+  "tags": [
+    "llm-observability",
+    "tracing",
+    "evaluation",
+    "prompt-management"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Trace history, evaluation datasets, prompt versions, deployment configs, fleet agents"
+  },
+  "tiers": [
+    {
+      "name": "Developer",
+      "slug": "developer",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "tracesPerMonth": 5000,
+        "seats": 1,
+        "fleetAgents": 1,
+        "fleetRunsPerMonth": 50
+      }
+    },
+    {
+      "name": "Plus",
+      "slug": "plus",
+      "pricingModel": "per_seat",
+      "basePrice": 39,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 39,
+      "usageMetrics": [
+        {
+          "name": "extended-traces",
+          "unit": "traces",
+          "pricePerUnit": 2.50,
+          "unitQuantity": 1000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "fleet-runs",
+          "unit": "runs",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1,
+          "includedQuantity": 500
+        },
+        {
+          "name": "deployment-runs",
+          "unit": "runs",
+          "pricePerUnit": 0.005,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "tracesPerMonth": 10000,
+        "workspaces": 3,
+        "fleetRunsPerMonth": 500
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

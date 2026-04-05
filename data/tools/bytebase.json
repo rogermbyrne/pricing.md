@@ -1,0 +1,63 @@
+{
+  "id": "bytebase",
+  "name": "Bytebase",
+  "description": "Database DevOps platform for schema migration, SQL review, data masking, and change management",
+  "url": "https://www.bytebase.com",
+  "pricingUrl": "https://www.bytebase.com/pricing",
+  "category": "database",
+  "tags": [
+    "database-devops",
+    "schema-migration",
+    "sql-review",
+    "change-management"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "SQL",
+    "whatYouLose": "Migration history, review policies, masking rules, approval workflows"
+  },
+  "tiers": [
+    {
+      "name": "Community",
+      "slug": "community",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "users": 20,
+        "databaseInstances": 10
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "per_seat",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 20,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}
