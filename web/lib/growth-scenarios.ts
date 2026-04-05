@@ -166,14 +166,29 @@ export function computeGrowthCost(
   const viable = estimates.filter((e) => !e.exceedsLimits);
   const pool = viable.length > 0 ? viable : estimates;
 
-  // "Cost at Scale" should reflect paid-tier pricing, not free-tier limits.
-  // Free tier limit keys often don't match usage metric names, making the
-  // estimation engine unable to reject them. If the tool has paid tiers,
-  // show the cheapest paid tier cost. Only show $0 for genuinely free tools
-  // (OSS/self-hosted with no paid pricing at all).
-  const hasPaidTiers = estimates.some((e) => e.basePrice > 0);
-  const candidates = hasPaidTiers ? pool.filter((e) => e.basePrice > 0) : pool;
-  const finalPool = candidates.length > 0 ? candidates : pool;
+  // "Cost at Scale" should reflect real pricing, not free-tier illusions.
+  // A tool is "genuinely free" only if ALL its non-custom tiers are free with
+  // no usage-based charges. Otherwise, prefer the estimate with the highest
+  // total — free tiers that silently exceed limits show $0 but aren't viable.
+  const tool = registry.get(toolId);
+  const genuinelyFree =
+    !!tool &&
+    tool.tiers
+      .filter((t) => t.pricingModel !== "custom")
+      .every(
+        (t) =>
+          (t.pricingModel === "free" || t.basePrice === 0) &&
+          t.usageMetrics.every((m) => m.pricePerUnit === 0)
+      );
+
+  let finalPool: typeof pool;
+  if (genuinelyFree) {
+    finalPool = pool;
+  } else {
+    // Pick tiers that actually cost something — these reflect real scale pricing
+    const nonZero = pool.filter((e) => e.totalMonthly > 0);
+    finalPool = nonZero.length > 0 ? nonZero : pool;
+  }
 
   const best = finalPool.reduce((min, e) =>
     e.totalMonthly < min.totalMonthly ? e : min
