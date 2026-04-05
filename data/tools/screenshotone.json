@@ -1,0 +1,107 @@
+{
+  "id": "screenshotone",
+  "name": "ScreenshotOne",
+  "description": "Screenshot API for capturing web pages as PNG, WebP, JPEG, or PDF with caching and stealth mode",
+  "url": "https://screenshotone.com",
+  "pricingUrl": "https://screenshotone.com/pricing",
+  "category": "edge",
+  "tags": [
+    "screenshot-api",
+    "rendering",
+    "pdf",
+    "web-capture"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "REST API",
+    "whatYouLose": "Cached screenshots, S3 upload config, webhook integrations"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "screenshotsPerMonth": 100
+      }
+    },
+    {
+      "name": "Basic",
+      "slug": "basic",
+      "pricingModel": "hybrid",
+      "basePrice": 17,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "screenshots",
+          "unit": "screenshots",
+          "pricePerUnit": 0.009,
+          "unitQuantity": 1,
+          "includedQuantity": 2000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "screenshotsPerMonth": 2000,
+        "requestsPerMinute": 40
+      }
+    },
+    {
+      "name": "Growth",
+      "slug": "growth",
+      "pricingModel": "hybrid",
+      "basePrice": 79,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "screenshots",
+          "unit": "screenshots",
+          "pricePerUnit": 0.006,
+          "unitQuantity": 1,
+          "includedQuantity": 10000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "screenshotsPerMonth": 10000,
+        "requestsPerMinute": 80
+      }
+    },
+    {
+      "name": "Scale",
+      "slug": "scale",
+      "pricingModel": "hybrid",
+      "basePrice": 259,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "screenshots",
+          "unit": "screenshots",
+          "pricePerUnit": 0.004,
+          "unitQuantity": 1,
+          "includedQuantity": 50000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "screenshotsPerMonth": 50000,
+        "requestsPerMinute": 150
+      }
+    }
+  ]
+}

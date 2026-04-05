@@ -4,7 +4,7 @@
   "description": "Developer documentation platform with custom domains, API playground, AI assistant, and MDX support",
   "url": "https://mintlify.com",
   "pricingUrl": "https://mintlify.com/pricing",
-  "category": "cms",
+  "category": "docs",
   "tags": [
     "documentation",
     "docs",

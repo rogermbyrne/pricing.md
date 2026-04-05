@@ -1,0 +1,100 @@
+{
+  "id": "zep",
+  "name": "Zep",
+  "description": "Long-term memory and knowledge graph platform for AI agents and LLM applications",
+  "url": "https://www.getzep.com",
+  "pricingUrl": "https://www.getzep.com/pricing",
+  "category": "ai-api",
+  "tags": [
+    "ai-memory",
+    "knowledge-graph",
+    "llm",
+    "agents"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Memory graphs, entity relationships, extraction pipelines, episode history"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "episodesPerMonth": 1000
+      }
+    },
+    {
+      "name": "Flex",
+      "slug": "flex",
+      "pricingModel": "hybrid",
+      "basePrice": 25,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "credits",
+          "unit": "credits",
+          "pricePerUnit": 25,
+          "unitQuantity": 20000,
+          "includedQuantity": 20000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "creditsPerMonth": 20000,
+        "requestsPerMinute": 600,
+        "projects": 5,
+        "customEntityTypes": 10
+      }
+    },
+    {
+      "name": "Flex Plus",
+      "slug": "flex-plus",
+      "pricingModel": "hybrid",
+      "basePrice": 475,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "credits",
+          "unit": "credits",
+          "pricePerUnit": 125,
+          "unitQuantity": 100000,
+          "includedQuantity": 300000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "creditsPerMonth": 300000,
+        "requestsPerMinute": 1000,
+        "projects": 5,
+        "customEntityTypes": 20
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

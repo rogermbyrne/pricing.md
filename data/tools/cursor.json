@@ -1,0 +1,96 @@
+{
+  "id": "cursor",
+  "name": "Cursor",
+  "description": "AI-powered code editor with agent mode, tab completions, frontier model access, and cloud agents",
+  "url": "https://cursor.com",
+  "pricingUrl": "https://cursor.com/pricing",
+  "category": "ai-coding",
+  "tags": [
+    "ide",
+    "ai-coding",
+    "code-editor",
+    "agent"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "VS Code compatible",
+    "whatYouLose": "AI agent context, custom rules, shared team chats, cloud agents"
+  },
+  "tiers": [
+    {
+      "name": "Hobby",
+      "slug": "hobby",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Teams",
+      "slug": "teams",
+      "pricingModel": "per_seat",
+      "basePrice": 40,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 40,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pro+",
+      "slug": "pro-plus",
+      "pricingModel": "flat_rate",
+      "basePrice": 60,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Ultra",
+      "slug": "ultra",
+      "pricingModel": "flat_rate",
+      "basePrice": 200,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

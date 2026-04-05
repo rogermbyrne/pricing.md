@@ -4,7 +4,7 @@
   "description": "API development platform with docs generation, SDK generation, and developer portal hosting",
   "url": "https://www.buildwithfern.com",
   "pricingUrl": "https://www.buildwithfern.com/pricing",
-  "category": "ci-cd",
+  "category": "docs",
   "tags": [
     "api-docs",
     "sdk-generation",

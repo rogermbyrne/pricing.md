@@ -8,17 +8,21 @@ export const CategoryEnum = z.enum([
   "payments",
   "monitoring",
   "ai-api",
+  "ai-coding",
   "storage",
   "ci-cd",
   "search",
   "analytics",
   "feature-flags",
   "cms",
+  "docs",
   "queues",
   "edge",
   "testing",
   "scheduling",
   "notifications",
+  "internal-tools",
+  "secrets",
 ]);
 export type Category = z.infer<typeof CategoryEnum>;
 

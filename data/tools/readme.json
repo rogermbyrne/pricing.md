@@ -1,0 +1,83 @@
+{
+  "id": "readme",
+  "name": "ReadMe",
+  "description": "API documentation platform with interactive reference, changelog, metrics, and developer hub",
+  "url": "https://readme.com",
+  "pricingUrl": "https://readme.com/pricing",
+  "category": "docs",
+  "tags": [
+    "api-docs",
+    "documentation",
+    "developer-portal",
+    "changelog"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "OpenAPI",
+    "whatYouLose": "Hosted docs portal, API metrics, custom domain, changelog, discussion forum"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "projects": 1,
+        "apiVersions": 3,
+        "admins": 5,
+        "requestHistoryHours": 24
+      }
+    },
+    {
+      "name": "Startup",
+      "slug": "startup",
+      "pricingModel": "flat_rate",
+      "basePrice": 79,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "projects": 1,
+        "admins": 10
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "flat_rate",
+      "basePrice": 349,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "projects": 1,
+        "admins": 50
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

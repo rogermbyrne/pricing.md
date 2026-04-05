@@ -1,23 +1,23 @@
 {
-  "id": "warp",
-  "name": "Warp",
-  "description": "AI-powered terminal with cloud agents, codebase indexing, and collaborative session sharing",
-  "url": "https://www.warp.dev",
-  "pricingUrl": "https://www.warp.dev/pricing",
+  "id": "windsurf",
+  "name": "Windsurf",
+  "description": "AI-powered IDE (formerly Codeium) with agentic coding, tab completions, and premium model access",
+  "url": "https://windsurf.com",
+  "pricingUrl": "https://windsurf.com/pricing",
   "category": "ai-coding",
   "tags": [
-    "terminal",
-    "ai-assistant",
-    "developer-tools",
-    "collaboration"
+    "ide",
+    "ai-coding",
+    "code-editor",
+    "agent"
   ],
   "lastVerified": "2026-04-05",
-  "freshnessCategory": "stable",
+  "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
     "switchingCost": "drop-in",
     "openStandard": null,
-    "whatYouLose": "AI credits, cloud agents, Warp Drive workflows, session sharing, codebase indexing"
+    "whatYouLose": "AI context, usage credits — works in standalone IDE"
   },
   "tiers": [
     {
@@ -30,45 +30,43 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": {
-        "aiCreditsPerMonth": 75,
-        "concurrentCloudAgents": 4,
-        "indexedCodebases": 3,
-        "filesPerCodebase": 3000,
-        "cloudConversations": 30,
-        "sharedSessions": 5
-      }
+      "limits": {}
     },
     {
-      "name": "Build",
-      "slug": "build",
+      "name": "Pro",
+      "slug": "pro",
       "pricingModel": "flat_rate",
-      "basePrice": 18,
+      "basePrice": 20,
       "billingPeriod": "monthly",
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": {
-        "aiCreditsPerMonth": 1500,
-        "concurrentCloudAgents": 20,
-        "indexedCodebases": 40,
-        "filesPerCodebase": 100000
-      }
+      "limits": {}
     },
     {
-      "name": "Business",
-      "slug": "business",
+      "name": "Teams",
+      "slug": "teams",
       "pricingModel": "per_seat",
-      "basePrice": 45,
+      "basePrice": 40,
       "billingPeriod": "monthly",
       "annualDiscount": null,
-      "seatPrice": 45,
+      "seatPrice": 40,
       "usageMetrics": [],
       "features": [],
-      "limits": {
-        "maxSeats": 50
-      }
+      "limits": {}
+    },
+    {
+      "name": "Max",
+      "slug": "max",
+      "pricingModel": "flat_rate",
+      "basePrice": 200,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
     },
     {
       "name": "Enterprise",

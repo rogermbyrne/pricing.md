@@ -4,7 +4,7 @@
   "description": "API documentation platform with interactive references, developer portal, and REST/GraphQL client",
   "url": "https://scalar.com",
   "pricingUrl": "https://scalar.com/pricing",
-  "category": "ci-cd",
+  "category": "docs",
   "tags": [
     "api-docs",
     "openapi",

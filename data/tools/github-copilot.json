@@ -1,23 +1,23 @@
 {
-  "id": "warp",
-  "name": "Warp",
-  "description": "AI-powered terminal with cloud agents, codebase indexing, and collaborative session sharing",
-  "url": "https://www.warp.dev",
-  "pricingUrl": "https://www.warp.dev/pricing",
+  "id": "github-copilot",
+  "name": "GitHub Copilot",
+  "description": "AI pair programmer with code completions, chat, agent mode, code review, and cloud agents across IDEs",
+  "url": "https://github.com/features/copilot",
+  "pricingUrl": "https://github.com/features/copilot/plans",
   "category": "ai-coding",
   "tags": [
-    "terminal",
-    "ai-assistant",
-    "developer-tools",
-    "collaboration"
+    "ai-coding",
+    "code-completion",
+    "agent",
+    "code-review"
   ],
   "lastVerified": "2026-04-05",
-  "freshnessCategory": "stable",
+  "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
     "switchingCost": "drop-in",
     "openStandard": null,
-    "whatYouLose": "AI credits, cloud agents, Warp Drive workflows, session sharing, codebase indexing"
+    "whatYouLose": "Custom instructions, organization policies, usage metrics — works in any IDE"
   },
   "tiers": [
     {
@@ -31,56 +31,52 @@
       "usageMetrics": [],
       "features": [],
       "limits": {
-        "aiCreditsPerMonth": 75,
-        "concurrentCloudAgents": 4,
-        "indexedCodebases": 3,
-        "filesPerCodebase": 3000,
-        "cloudConversations": 30,
-        "sharedSessions": 5
+        "premiumRequests": 50,
+        "completions": 2000,
+        "chatRequests": 50
       }
     },
     {
-      "name": "Build",
-      "slug": "build",
+      "name": "Pro",
+      "slug": "pro",
       "pricingModel": "flat_rate",
-      "basePrice": 18,
+      "basePrice": 10,
       "billingPeriod": "monthly",
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
       "limits": {
-        "aiCreditsPerMonth": 1500,
-        "concurrentCloudAgents": 20,
-        "indexedCodebases": 40,
-        "filesPerCodebase": 100000
+        "premiumRequests": 300
       }
     },
     {
       "name": "Business",
       "slug": "business",
       "pricingModel": "per_seat",
-      "basePrice": 45,
+      "basePrice": 19,
       "billingPeriod": "monthly",
       "annualDiscount": null,
-      "seatPrice": 45,
+      "seatPrice": 19,
       "usageMetrics": [],
       "features": [],
       "limits": {
-        "maxSeats": 50
+        "premiumRequestsPerUser": 300
       }
     },
     {
       "name": "Enterprise",
       "slug": "enterprise",
-      "pricingModel": "custom",
-      "basePrice": null,
-      "billingPeriod": null,
+      "pricingModel": "per_seat",
+      "basePrice": 39,
+      "billingPeriod": "monthly",
       "annualDiscount": null,
-      "seatPrice": null,
+      "seatPrice": 39,
       "usageMetrics": [],
       "features": [],
-      "limits": {}
+      "limits": {
+        "premiumRequestsPerUser": 1000
+      }
     }
   ]
 }

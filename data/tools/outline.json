@@ -1,0 +1,66 @@
+{
+  "id": "outline",
+  "name": "Outline",
+  "description": "Open-source knowledge base and wiki with real-time collaboration, SSO, and 20+ integrations",
+  "url": "https://www.getoutline.com",
+  "pricingUrl": "https://www.getoutline.com/pricing",
+  "category": "cms",
+  "tags": [
+    "wiki",
+    "knowledge-base",
+    "collaboration",
+    "open-source"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "Markdown",
+    "whatYouLose": "Document structure, permissions, integrations — can self-host open-source version"
+  },
+  "tiers": [
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "flat_rate",
+      "basePrice": 10,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "teamMembers": 10
+      }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "flat_rate",
+      "basePrice": 79,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "teamMembers": 100
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "flat_rate",
+      "basePrice": 249,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "teamMembers": 200
+      }
+    }
+  ]
+}

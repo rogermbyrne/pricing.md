@@ -4,7 +4,7 @@
   "description": "Documentation platform with Git sync, API playgrounds, AI assistant, and team collaboration",
   "url": "https://www.gitbook.com",
   "pricingUrl": "https://www.gitbook.com/pricing",
-  "category": "cms",
+  "category": "docs",
   "tags": [
     "documentation",
     "docs",

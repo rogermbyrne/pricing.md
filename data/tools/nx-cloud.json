@@ -1,0 +1,82 @@
+{
+  "id": "nx-cloud",
+  "name": "Nx Cloud",
+  "description": "Remote caching and distributed task execution for monorepos with CI optimization and AI integrations",
+  "url": "https://nx.dev",
+  "pricingUrl": "https://nx.dev/pricing",
+  "category": "ci-cd",
+  "tags": [
+    "monorepo",
+    "remote-caching",
+    "ci-cd",
+    "build-tools"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Remote cache, distributed task execution history, CI analytics — Nx CLI is open-source"
+  },
+  "tiers": [
+    {
+      "name": "Hobby",
+      "slug": "hobby",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "monthlyCredits": 50000
+      }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "hybrid",
+      "basePrice": 19,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 19,
+      "usageMetrics": [
+        {
+          "name": "credits",
+          "unit": "credits",
+          "pricePerUnit": 5.50,
+          "unitQuantity": 10000,
+          "includedQuantity": 50000
+        },
+        {
+          "name": "ci-connections",
+          "unit": "connections",
+          "pricePerUnit": 2.25,
+          "unitQuantity": 1,
+          "includedQuantity": 10
+        }
+      ],
+      "features": [],
+      "limits": {
+        "freeContributors": 5,
+        "maxContributors": 50,
+        "monthlyCredits": 50000,
+        "concurrentCiConnections": 10
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

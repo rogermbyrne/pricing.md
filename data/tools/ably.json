@@ -1,0 +1,148 @@
+{
+  "id": "ably",
+  "name": "Ably",
+  "description": "Realtime messaging infrastructure with pub/sub, presence, message history, and global edge network",
+  "url": "https://ably.com",
+  "pricingUrl": "https://ably.com/pricing",
+  "category": "queues",
+  "tags": [
+    "realtime",
+    "pub-sub",
+    "messaging",
+    "websockets"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Channel config, presence state, message history, push notification rules, integrations"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "concurrentConnections": 200,
+        "messageThroughputPerSecond": 500,
+        "monthlyMessages": 6000000,
+        "messageStorageDays": 1,
+        "maxMessageSizeKiB": 64
+      }
+    },
+    {
+      "name": "Standard",
+      "slug": "standard",
+      "pricingModel": "hybrid",
+      "basePrice": 29,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "messages",
+          "unit": "messages",
+          "pricePerUnit": 2.50,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "connections",
+          "unit": "connection-minutes",
+          "pricePerUnit": 1.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "channels",
+          "unit": "channel-minutes",
+          "pricePerUnit": 1.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "data-transfer",
+          "unit": "GiB",
+          "pricePerUnit": 0.25,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "concurrentChannels": 10000,
+        "concurrentConnections": 10000,
+        "messageThroughputPerSecond": 2500,
+        "messageStorageDays": 30,
+        "maxMessageSizeKiB": 64
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "hybrid",
+      "basePrice": 399,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "messages",
+          "unit": "messages",
+          "pricePerUnit": 2.50,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "connections",
+          "unit": "connection-minutes",
+          "pricePerUnit": 1.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "channels",
+          "unit": "channel-minutes",
+          "pricePerUnit": 1.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "data-transfer",
+          "unit": "GiB",
+          "pricePerUnit": 0.25,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "concurrentChannels": 50000,
+        "concurrentConnections": 50000,
+        "messageThroughputPerSecond": 10000,
+        "messageStorageDays": 365,
+        "maxMessageSizeKiB": 256
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

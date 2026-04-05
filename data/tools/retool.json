@@ -4,7 +4,7 @@
   "description": "Low-code platform for building internal tools with drag-and-drop UI components and workflow automation",
   "url": "https://retool.com",
   "pricingUrl": "https://retool.com/pricing",
-  "category": "cms",
+  "category": "internal-tools",
   "tags": ["internal-tools", "low-code", "admin-panels", "workflows"],
   "lastVerified": "2026-04-04",
   "freshnessCategory": "volatile",

@@ -4,7 +4,7 @@
   "description": "Open-source secrets management platform for syncing secrets across infrastructure and CI/CD",
   "url": "https://infisical.com",
   "pricingUrl": "https://infisical.com/pricing",
-  "category": "ci-cd",
+  "category": "secrets",
   "tags": [
     "secrets-management",
     "security",

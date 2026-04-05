@@ -4,7 +4,7 @@
   "description": "Secrets management platform for syncing environment variables across apps, CI/CD, and infrastructure",
   "url": "https://www.doppler.com",
   "pricingUrl": "https://www.doppler.com/pricing",
-  "category": "ci-cd",
+  "category": "secrets",
   "tags": [
     "secrets-management",
     "env-vars",
