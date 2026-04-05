@@ -1,0 +1,128 @@
+{
+  "id": "browserless",
+  "name": "Browserless",
+  "description": "Headless browser API for scraping, screenshots, PDFs, and automation with concurrent session management",
+  "url": "https://browserless.io",
+  "pricingUrl": "https://browserless.io/pricing",
+  "category": "testing",
+  "tags": [
+    "headless-browser",
+    "scraping",
+    "automation",
+    "screenshots"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "Chrome DevTools Protocol",
+    "whatYouLose": "Session storage, proxy config, managed infrastructure"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "concurrentBrowsers": 2,
+        "unitsPerMonth": 1000,
+        "maxSessionMinutes": 1,
+        "sessionStorageDays": 1
+      }
+    },
+    {
+      "name": "Prototyping",
+      "slug": "prototyping",
+      "pricingModel": "hybrid",
+      "basePrice": 25,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "units",
+          "unit": "units",
+          "pricePerUnit": 0.002,
+          "unitQuantity": 1,
+          "includedQuantity": 20000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "concurrentBrowsers": 15,
+        "unitsPerMonth": 20000,
+        "maxSessionMinutes": 15,
+        "sessionStorageDays": 7
+      }
+    },
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "hybrid",
+      "basePrice": 140,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "units",
+          "unit": "units",
+          "pricePerUnit": 0.0017,
+          "unitQuantity": 1,
+          "includedQuantity": 180000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "concurrentBrowsers": 40,
+        "unitsPerMonth": 180000,
+        "maxSessionMinutes": 30,
+        "sessionStorageDays": 30
+      }
+    },
+    {
+      "name": "Scale",
+      "slug": "scale",
+      "pricingModel": "hybrid",
+      "basePrice": 350,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "units",
+          "unit": "units",
+          "pricePerUnit": 0.0015,
+          "unitQuantity": 1,
+          "includedQuantity": 500000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "concurrentBrowsers": 100,
+        "unitsPerMonth": 500000,
+        "maxSessionMinutes": 60,
+        "sessionStorageDays": 90
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "twenty",
+  "name": "Twenty",
+  "description": "Open-source CRM with custom objects, APIs, webhooks, and email integration",
+  "url": "https://twenty.com",
+  "pricingUrl": "https://twenty.com/pricing",
+  "category": "internal-tools",
+  "tags": [
+    "crm",
+    "open-source",
+    "sales",
+    "customer-management"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "CRM data, custom objects, workflows — can self-host open-source version"
+  },
+  "tiers": [
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "per_seat",
+      "basePrice": 9,
+      "billingPeriod": "monthly",
+      "annualDiscount": 25,
+      "seatPrice": 9,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "per_seat",
+      "basePrice": 19,
+      "billingPeriod": "monthly",
+      "annualDiscount": 25,
+      "seatPrice": 19,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "clickhouse",
+  "name": "ClickHouse Cloud",
+  "description": "Column-oriented OLAP database for real-time analytics with compute-compute separation and serverless scaling",
+  "url": "https://clickhouse.com",
+  "pricingUrl": "https://clickhouse.com/pricing",
+  "category": "database",
+  "tags": [
+    "olap",
+    "analytics-database",
+    "real-time",
+    "columnar"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": "SQL / ClickHouse protocol",
+    "whatYouLose": "Cloud scaling config, managed backups, private networking — ClickHouse is open-source"
+  },
+  "tiers": [
+    {
+      "name": "Basic",
+      "slug": "basic",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "storage",
+          "unit": "TB",
+          "pricePerUnit": 47.10,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "compute",
+          "unit": "unit-hours",
+          "pricePerUnit": 0.6888,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "maxStorageTB": 1
+      }
+    },
+    {
+      "name": "Scale",
+      "slug": "scale",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

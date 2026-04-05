@@ -1,0 +1,78 @@
+{
+  "id": "linear",
+  "name": "Linear",
+  "description": "Issue tracking and project management tool with AI agent, triage intelligence, and real-time sync",
+  "url": "https://linear.app",
+  "pricingUrl": "https://linear.app/pricing",
+  "category": "internal-tools",
+  "tags": [
+    "project-management",
+    "issue-tracking",
+    "agile",
+    "ai"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Issue history, cycles, project views, automations, integrations — can export data"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "teams": 2,
+        "issues": 250,
+        "fileUploadMB": 10
+      }
+    },
+    {
+      "name": "Basic",
+      "slug": "basic",
+      "pricingModel": "per_seat",
+      "basePrice": 10,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": 10,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "teams": 5
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "per_seat",
+      "basePrice": 16,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": 16,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

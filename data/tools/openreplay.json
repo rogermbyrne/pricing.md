@@ -1,0 +1,77 @@
+{
+  "id": "openreplay",
+  "name": "OpenReplay",
+  "description": "Open-source session replay and product analytics platform with developer tools and co-browsing",
+  "url": "https://openreplay.com",
+  "pricingUrl": "https://openreplay.com/pricing",
+  "category": "analytics",
+  "tags": [
+    "session-replay",
+    "analytics",
+    "debugging",
+    "open-source"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "Session history, analytics dashboards — can self-host open-source version"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "sessionsPerMonth": 1000,
+        "users": 2,
+        "projects": 1,
+        "dataRetentionDays": 30
+      }
+    },
+    {
+      "name": "Serverless",
+      "slug": "serverless",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "sessions",
+          "unit": "sessions",
+          "pricePerUnit": 5.95,
+          "unitQuantity": 1000,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "dataRetentionDays": 30
+      }
+    },
+    {
+      "name": "Dedicated",
+      "slug": "dedicated",
+      "pricingModel": "flat_rate",
+      "basePrice": 200,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "sessionsPerMonth": 50000
+      }
+    }
+  ]
+}

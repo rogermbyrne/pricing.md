@@ -1,0 +1,71 @@
+{
+  "id": "surrealdb",
+  "name": "SurrealDB",
+  "description": "Multi-model database with SQL-like query language, graph relations, and real-time subscriptions",
+  "url": "https://surrealdb.com",
+  "pricingUrl": "https://surrealdb.com/pricing",
+  "category": "database",
+  "tags": [
+    "multi-model",
+    "graph",
+    "real-time",
+    "sql"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": "SurrealQL (SQL-like)",
+    "whatYouLose": "Cloud managed infra, backups — SurrealDB is open-source and self-hostable"
+  },
+  "tiers": [
+    {
+      "name": "Start",
+      "slug": "start",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "compute",
+          "unit": "hours",
+          "pricePerUnit": 0.021,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "storageGB": 1,
+        "egressGBPerMonth": 1
+      }
+    },
+    {
+      "name": "Dedicated",
+      "slug": "dedicated",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

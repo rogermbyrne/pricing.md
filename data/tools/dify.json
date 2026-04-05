@@ -1,0 +1,83 @@
+{
+  "id": "dify",
+  "name": "Dify",
+  "description": "Open-source LLM app development platform with visual workflows, RAG, agent orchestration, and triggers",
+  "url": "https://dify.ai",
+  "pricingUrl": "https://dify.ai/pricing",
+  "category": "ai-api",
+  "tags": [
+    "llm-platform",
+    "rag",
+    "agent-orchestration",
+    "open-source"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Workflow definitions, knowledge base, annotations — can self-host open-source version"
+  },
+  "tiers": [
+    {
+      "name": "Sandbox",
+      "slug": "sandbox",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "messageCredits": 200,
+        "teamMembers": 1,
+        "apps": 5,
+        "knowledgeDocuments": 50,
+        "storageMB": 50,
+        "triggerEventsPerMonth": 3000,
+        "triggersPerWorkflow": 2,
+        "logHistoryDays": 30,
+        "apiRatePerMonth": 5000
+      }
+    },
+    {
+      "name": "Professional",
+      "slug": "professional",
+      "pricingModel": "flat_rate",
+      "basePrice": 59,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "messageCreditsPerMonth": 5000,
+        "teamMembers": 3,
+        "apps": 50,
+        "knowledgeDocuments": 500,
+        "storageGB": 5,
+        "triggerEventsPerMonth": 20000
+      }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "flat_rate",
+      "basePrice": 159,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "messageCreditsPerMonth": 10000,
+        "teamMembers": 50,
+        "apps": 200,
+        "knowledgeDocuments": 1000,
+        "storageGB": 20
+      }
+    }
+  ]
+}

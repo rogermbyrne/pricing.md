@@ -1,0 +1,89 @@
+{
+  "id": "documenso",
+  "name": "Documenso",
+  "description": "Open-source document signing platform with embedded signing, API access, and self-hosting option",
+  "url": "https://documenso.com",
+  "pricingUrl": "https://documenso.com/pricing",
+  "category": "hosting",
+  "tags": [
+    "e-signature",
+    "document-signing",
+    "open-source",
+    "api"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "Signing history, templates — can self-host open-source version"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "documentsPerMonth": 5,
+        "recipientsPerDocument": 10
+      }
+    },
+    {
+      "name": "Individual",
+      "slug": "individual",
+      "pricingModel": "flat_rate",
+      "basePrice": 25,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Teams",
+      "slug": "teams",
+      "pricingModel": "hybrid",
+      "basePrice": 40,
+      "billingPeriod": "monthly",
+      "annualDiscount": 21,
+      "seatPrice": 8,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "usersIncluded": 5
+      }
+    },
+    {
+      "name": "Platform",
+      "slug": "platform",
+      "pricingModel": "flat_rate",
+      "basePrice": 250,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

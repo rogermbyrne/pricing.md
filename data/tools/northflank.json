@@ -1,0 +1,93 @@
+{
+  "id": "northflank",
+  "name": "Northflank",
+  "description": "Cloud deployment platform with containers, databases, cron jobs, GPU instances, and pay-as-you-go pricing",
+  "url": "https://northflank.com",
+  "pricingUrl": "https://northflank.com/pricing",
+  "category": "hosting",
+  "tags": [
+    "paas",
+    "containers",
+    "gpu",
+    "deployment"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "Docker containers",
+    "whatYouLose": "Deployment config, build pipelines, managed databases, GPU provisioning"
+  },
+  "tiers": [
+    {
+      "name": "Sandbox",
+      "slug": "sandbox",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "services": 2,
+        "databases": 1,
+        "cronJobs": 2
+      }
+    },
+    {
+      "name": "Pay-as-you-go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "compute-vcpu",
+          "unit": "vCPU-hours",
+          "pricePerUnit": 0.01667,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "compute-memory",
+          "unit": "GB-hours",
+          "pricePerUnit": 0.00833,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "network-egress",
+          "unit": "GB",
+          "pricePerUnit": 0.06,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "disk-storage",
+          "unit": "GB",
+          "pricePerUnit": 0.15,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}
