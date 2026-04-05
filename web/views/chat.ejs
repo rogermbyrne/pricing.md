@@ -44,13 +44,10 @@
     <!-- Welcome -->
     <div class="max-w-2xl mx-auto">
       <p class="text-neutral-500 text-center mb-6">Tell me about your app and I'll recommend a dev tool stack with real pricing at different user scales, migration paths, and open-source options.</p>
-      <div class="flex flex-wrap justify-center gap-2">
-        <button onclick="useExample(this)" class="px-4 py-2 text-sm text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 hover:text-neutral-900 dark:hover:text-white rounded-full transition-all cursor-pointer">AI code editor like Cursor</button>
-        <button onclick="useExample(this)" data-prompt="I want to build something like Cursor, an AI code editor. I'll need user auth, subscription billing, usage tracking, email onboarding, and monitoring. Aiming for 100K+ developers." class="hidden"></button>
-        <button onclick="useExample(this)" class="px-4 py-2 text-sm text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 hover:text-neutral-900 dark:hover:text-white rounded-full transition-all cursor-pointer">Social network like Bluesky</button>
-        <button onclick="useExample(this)" data-prompt="I'm building a social network similar to Bluesky. Need a PostgreSQL database, full-text search, media storage, auth, and email notifications that can handle serious scale." class="hidden"></button>
-        <button onclick="useExample(this)" class="px-4 py-2 text-sm text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 hover:text-neutral-900 dark:hover:text-white rounded-full transition-all cursor-pointer">AI app builder like Lovable</button>
-        <button onclick="useExample(this)" data-prompt="I'm working on an AI app builder like Lovable where users describe an app and we generate it. Need hosting for the generated apps, a Postgres database, auth, payments, and analytics." class="hidden"></button>
+      <div class="flex flex-wrap justify-center gap-2" id="examples-container">
+        <button onclick="useExample(this)" data-prompt="I want to build something like Cursor, an AI code editor. I'll need user auth, subscription billing, usage tracking, email onboarding, and monitoring. Aiming for 100K+ developers." class="px-4 py-2 text-sm text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 hover:text-neutral-900 dark:hover:text-white rounded-full transition-all cursor-pointer">AI code editor like Cursor</button>
+        <button onclick="useExample(this)" data-prompt="I'm building a social network similar to Bluesky. Need a PostgreSQL database, full-text search, media storage, auth, and email notifications that can handle serious scale." class="px-4 py-2 text-sm text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 hover:text-neutral-900 dark:hover:text-white rounded-full transition-all cursor-pointer">Social network like Bluesky</button>
+        <button onclick="useExample(this)" data-prompt="I'm working on an AI app builder like Lovable where users describe an app and we generate it. Need hosting for the generated apps, a Postgres database, auth, payments, and analytics." class="px-4 py-2 text-sm text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 hover:text-neutral-900 dark:hover:text-white rounded-full transition-all cursor-pointer">AI app builder like Lovable</button>
       </div>
     </div>
     <% } %>
@@ -79,18 +76,9 @@
   var history = [];
   var isLoading = false;
 
-  // Example prompts mapping
-  var examples = {
-    'AI code editor like Cursor': "I want to build something like Cursor, an AI code editor. I'll need user auth, subscription billing, usage tracking, email onboarding, and monitoring. Aiming for 100K+ developers.",
-    'Social network like Bluesky': "I'm building a social network similar to Bluesky. Need a PostgreSQL database, full-text search, media storage, auth, and email notifications that can handle serious scale.",
-    'AI app builder like Lovable': "I'm working on an AI app builder like Lovable where users describe an app and we generate it. Need hosting for the generated apps, a Postgres database, auth, payments, and analytics."
-  };
-
   function useExample(btn) {
-    if (!chatInput) return;
-    var label = btn.textContent.trim();
-    chatInput.value = examples[label] || label;
-    chatInput.focus();
+    if (!chatInput || isLoading) return;
+    chatInput.value = btn.dataset.prompt || btn.textContent.trim();
     sendMessage();
   }
 
@@ -233,7 +221,23 @@
     });
   }
 
+  function addThinkingIndicator() {
+    removeThinkingIndicator();
+    var div = document.createElement('div');
+    div.id = 'thinking-indicator';
+    div.className = 'flex items-center gap-2 py-3';
+    div.innerHTML = '<div class="flex gap-1"><span class="w-2 h-2 bg-neutral-300 dark:bg-neutral-600 rounded-full animate-bounce" style="animation-delay:0ms"></span><span class="w-2 h-2 bg-neutral-300 dark:bg-neutral-600 rounded-full animate-bounce" style="animation-delay:150ms"></span><span class="w-2 h-2 bg-neutral-300 dark:bg-neutral-600 rounded-full animate-bounce" style="animation-delay:300ms"></span></div>';
+    messagesDiv.appendChild(div);
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+  }
+
+  function removeThinkingIndicator() {
+    var el = document.getElementById('thinking-indicator');
+    if (el) el.remove();
+  }
+
   function addToolCallIndicator(toolName) {
+    removeThinkingIndicator();
     var existing = document.getElementById('tool-indicator');
     var label = toolName === 'find_cheapest' ? 'cheapest options' : toolName === 'get_oss_alternatives' ? 'open-source alternatives' : 'pricing data';
     if (existing) {
@@ -303,8 +307,12 @@
     if (!msg) return;
 
     chatInput.value = '';
+    // Hide welcome/examples on first message
+    var welcomeEl = document.querySelector('#messages > .max-w-2xl');
+    if (welcomeEl) welcomeEl.remove();
     addMessage('user', msg);
     history.push({ role: 'user', content: msg });
+    addThinkingIndicator();
 
     isLoading = true;
     sendBtn.style.opacity = '0.5';
@@ -359,11 +367,15 @@
         }
       }
 
+      removeThinkingIndicator();
+      removeToolIndicators();
       if (fullResponse) {
         addMessage('assistant', fullResponse, fullResponse);
         history.push({ role: 'assistant', content: fullResponse });
       }
     } catch (err) {
+      removeThinkingIndicator();
+      removeToolIndicators();
       addMessage('assistant', 'Connection error. Please try again.', 'Connection error.');
     } finally {
       isLoading = false;
