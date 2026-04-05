@@ -1,0 +1,113 @@
+{
+  "id": "dub",
+  "name": "Dub",
+  "description": "Link management platform with analytics, custom domains, and partner program tools",
+  "url": "https://dub.co",
+  "pricingUrl": "https://dub.co/pricing",
+  "category": "analytics",
+  "tags": [
+    "link-management",
+    "url-shortener",
+    "analytics",
+    "affiliate"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Short link redirects, click analytics history, partner program config, custom domain routing"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "trackedEventsPerMonth": 1000,
+        "newLinksPerMonth": 25,
+        "users": 1,
+        "analyticsRetentionDays": 30,
+        "customDomains": 3
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 25,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "trackedEventsPerMonth": 50000,
+        "newLinksPerMonth": 1000,
+        "users": 3,
+        "analyticsRetentionDays": 365,
+        "customDomains": 10,
+        "tags": 25,
+        "folders": 3,
+        "apiRatePerMinute": 600
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "flat_rate",
+      "basePrice": 75,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "trackedEventsPerMonth": 250000,
+        "newLinksPerMonth": 10000,
+        "users": 10,
+        "analyticsRetentionDays": 1095,
+        "customDomains": 100,
+        "apiRatePerMinute": 1200
+      }
+    },
+    {
+      "name": "Advanced",
+      "slug": "advanced",
+      "pricingModel": "flat_rate",
+      "basePrice": 250,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "trackedEventsPerMonth": 1000000,
+        "newLinksPerMonth": 50000,
+        "users": 20,
+        "analyticsRetentionDays": 1825,
+        "customDomains": 250,
+        "apiRatePerMinute": 3000
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

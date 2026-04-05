@@ -1,0 +1,101 @@
+{
+  "id": "ngrok",
+  "name": "ngrok",
+  "description": "Unified ingress platform for tunnels, API gateway, and traffic policy with global edge network",
+  "url": "https://ngrok.com",
+  "pricingUrl": "https://ngrok.com/pricing",
+  "category": "edge",
+  "tags": [
+    "tunneling",
+    "ingress",
+    "api-gateway",
+    "edge"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Tunnel URLs, traffic policies, custom domain routing, edge termination config"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "endpoints": 3,
+        "dataTransferGB": 1,
+        "httpRequestsPerMonth": 20000,
+        "teamMembers": 1
+      }
+    },
+    {
+      "name": "Hobbyist",
+      "slug": "hobbyist",
+      "pricingModel": "flat_rate",
+      "basePrice": 10,
+      "billingPeriod": "monthly",
+      "annualDiscount": 20,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "endpoints": 3,
+        "dataTransferGB": 5,
+        "httpRequestsPerMonth": 100000,
+        "teamMembers": 1
+      }
+    },
+    {
+      "name": "Pay-as-you-go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "hybrid",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 5,
+      "usageMetrics": [
+        {
+          "name": "data-transfer",
+          "unit": "GB",
+          "pricePerUnit": 0.10,
+          "unitQuantity": 1,
+          "includedQuantity": 5
+        },
+        {
+          "name": "https-requests",
+          "unit": "requests",
+          "pricePerUnit": 1.00,
+          "unitQuantity": 100000,
+          "includedQuantity": 100000
+        },
+        {
+          "name": "tcp-tls-connections",
+          "unit": "connections",
+          "pricePerUnit": 2.00,
+          "unitQuantity": 100000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "traffic-policy-units",
+          "unit": "units",
+          "pricePerUnit": 1.00,
+          "unitQuantity": 100000,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "teamMembers": 3
+      }
+    }
+  ]
+}

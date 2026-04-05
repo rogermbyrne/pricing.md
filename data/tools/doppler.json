@@ -1,0 +1,81 @@
+{
+  "id": "doppler",
+  "name": "Doppler",
+  "description": "Secrets management platform for syncing environment variables across apps, CI/CD, and infrastructure",
+  "url": "https://www.doppler.com",
+  "pricingUrl": "https://www.doppler.com/pricing",
+  "category": "ci-cd",
+  "tags": [
+    "secrets-management",
+    "env-vars",
+    "configuration",
+    "security"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Secret syncing integrations, access controls, activity audit logs, config inheritance"
+  },
+  "tiers": [
+    {
+      "name": "Developer",
+      "slug": "developer",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 8,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "freeUsers": 3,
+        "users": 25,
+        "serviceTokens": 50,
+        "projects": 10,
+        "environments": 4,
+        "configsPerEnvironment": 10,
+        "configSyncs": 5,
+        "webhooks": 5,
+        "cliTokensPerUser": 5,
+        "activityLogRetentionDays": 3
+      }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 21,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "users": 500,
+        "serviceTokens": 500,
+        "projects": 250,
+        "environments": 15,
+        "configsPerEnvironment": 100,
+        "configSyncs": 100,
+        "webhooks": 50,
+        "cliTokensPerUser": 20,
+        "activityLogRetentionDays": 90
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

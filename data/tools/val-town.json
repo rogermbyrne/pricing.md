@@ -1,0 +1,87 @@
+{
+  "id": "val-town",
+  "name": "Val Town",
+  "description": "Cloud scripting platform for serverless functions, cron jobs, and HTTP endpoints with browser IDE",
+  "url": "https://val.town",
+  "pricingUrl": "https://val.town/pricing",
+  "category": "hosting",
+  "tags": [
+    "serverless",
+    "scripting",
+    "cron",
+    "functions"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Browser IDE, instant deployment, built-in cron scheduling, val sharing/forking community"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "runsPerDay": 100000,
+        "customDomains": 0,
+        "cronIntervalMinutes": 15,
+        "wallClockTimeMinutes": 1,
+        "privateVals": 5,
+        "logRetentionDays": 3
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 10,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "runsPerDay": 1000000,
+        "customDomains": 10,
+        "cronIntervalMinutes": 1,
+        "wallClockTimeMinutes": 10,
+        "logRetentionDays": 10
+      }
+    },
+    {
+      "name": "Teams",
+      "slug": "teams",
+      "pricingModel": "flat_rate",
+      "basePrice": 200,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "runsPerDay": 5000000
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

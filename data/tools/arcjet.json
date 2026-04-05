@@ -1,0 +1,211 @@
+{
+  "id": "arcjet",
+  "name": "Arcjet",
+  "description": "Application security platform with bot detection, rate limiting, email validation, and PII detection",
+  "url": "https://arcjet.com",
+  "pricingUrl": "https://arcjet.com/pricing.md",
+  "category": "edge",
+  "tags": [
+    "security",
+    "bot-detection",
+    "rate-limiting",
+    "waf",
+    "pii-detection"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Bot detection rules, rate limiting config, email validation integration, PII detection pipeline"
+  },
+  "tiers": [
+    {
+      "name": "Individual",
+      "slug": "individual",
+      "pricingModel": "hybrid",
+      "basePrice": 25,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "protected-requests",
+          "unit": "requests",
+          "pricePerUnit": 0.50,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "bot-detection",
+          "unit": "requests",
+          "pricePerUnit": 0.50,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "advanced-bot-signals",
+          "unit": "requests",
+          "pricePerUnit": 2.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "email-validations",
+          "unit": "validations",
+          "pricePerUnit": 1.50,
+          "unitQuantity": 1000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "pii-detection",
+          "unit": "requests",
+          "pricePerUnit": 1.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "prompt-scanning",
+          "unit": "tokens",
+          "pricePerUnit": 2.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "teamMembers": 1,
+        "logRetentionHours": 1
+      }
+    },
+    {
+      "name": "Startup",
+      "slug": "startup",
+      "pricingModel": "hybrid",
+      "basePrice": 299,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "protected-requests",
+          "unit": "requests",
+          "pricePerUnit": 0.50,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "bot-detection",
+          "unit": "requests",
+          "pricePerUnit": 0.50,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "advanced-bot-signals",
+          "unit": "requests",
+          "pricePerUnit": 2.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "email-validations",
+          "unit": "validations",
+          "pricePerUnit": 1.50,
+          "unitQuantity": 1000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "pii-detection",
+          "unit": "requests",
+          "pricePerUnit": 1.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "prompt-scanning",
+          "unit": "tokens",
+          "pricePerUnit": 2.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "teamMembers": 2,
+        "logRetentionHours": 24
+      }
+    },
+    {
+      "name": "Growth",
+      "slug": "growth",
+      "pricingModel": "hybrid",
+      "basePrice": 799,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "protected-requests",
+          "unit": "requests",
+          "pricePerUnit": 0.50,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "bot-detection",
+          "unit": "requests",
+          "pricePerUnit": 0.50,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "advanced-bot-signals",
+          "unit": "requests",
+          "pricePerUnit": 2.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "email-validations",
+          "unit": "validations",
+          "pricePerUnit": 1.50,
+          "unitQuantity": 1000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "pii-detection",
+          "unit": "requests",
+          "pricePerUnit": 1.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "prompt-scanning",
+          "unit": "tokens",
+          "pricePerUnit": 2.00,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "teamMembers": 10,
+        "logRetentionDays": 30
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

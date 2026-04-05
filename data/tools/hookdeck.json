@@ -1,0 +1,115 @@
+{
+  "id": "hookdeck",
+  "name": "Hookdeck",
+  "description": "Event gateway for ingesting, routing, and delivering webhooks and asynchronous events",
+  "url": "https://hookdeck.com",
+  "pricingUrl": "https://hookdeck.com/pricing",
+  "category": "queues",
+  "tags": [
+    "webhooks",
+    "event-gateway",
+    "async",
+    "event-routing"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "HTTP webhooks",
+    "whatYouLose": "Event routing rules, retry policies, transformation pipelines, delivery monitoring"
+  },
+  "tiers": [
+    {
+      "name": "Developer",
+      "slug": "developer",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "eventsPerMonth": 10000,
+        "dataRetentionDays": 3,
+        "users": 1,
+        "eventsPerSecond": 5
+      }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "hybrid",
+      "basePrice": 39,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "events",
+          "unit": "events",
+          "pricePerUnit": 3.00,
+          "unitQuantity": 100000,
+          "includedQuantity": 10000
+        },
+        {
+          "name": "discarded-requests",
+          "unit": "requests",
+          "pricePerUnit": 2.50,
+          "unitQuantity": 1000000,
+          "includedQuantity": 100000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "eventsPerMonth": 10000,
+        "dataRetentionDays": 7,
+        "eventsPerSecond": 5
+      }
+    },
+    {
+      "name": "Growth",
+      "slug": "growth",
+      "pricingModel": "hybrid",
+      "basePrice": 499,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "events",
+          "unit": "events",
+          "pricePerUnit": 3.00,
+          "unitQuantity": 100000,
+          "includedQuantity": 10000
+        },
+        {
+          "name": "discarded-requests",
+          "unit": "requests",
+          "pricePerUnit": 2.50,
+          "unitQuantity": 1000000,
+          "includedQuantity": 100000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "eventsPerMonth": 10000,
+        "dataRetentionDays": 30,
+        "eventsPerSecond": 5
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

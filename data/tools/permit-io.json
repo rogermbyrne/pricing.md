@@ -1,0 +1,92 @@
+{
+  "id": "permit-io",
+  "name": "Permit.io",
+  "description": "Authorization-as-a-service platform with RBAC, ABAC, and ReBAC policy management",
+  "url": "https://www.permit.io",
+  "pricingUrl": "https://www.permit.io/pricing",
+  "category": "auth",
+  "tags": [
+    "authorization",
+    "rbac",
+    "abac",
+    "policy-management"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": "OPA/Cedar policies",
+    "whatYouLose": "Policy editor UI, audit logs, tenant management, embedded authorization components"
+  },
+  "tiers": [
+    {
+      "name": "Community",
+      "slug": "community",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "mau": 1000,
+        "tenants": 20,
+        "environments": 3,
+        "roles": 25,
+        "resourceTypes": 50,
+        "conditionSets": 5,
+        "roleAssignments": 2000,
+        "groups": 20,
+        "resourceInstances": 2000,
+        "logsRetentionDays": 14
+      }
+    },
+    {
+      "name": "Startup",
+      "slug": "startup",
+      "pricingModel": "usage_based",
+      "basePrice": 5,
+      "billingPeriod": "monthly",
+      "annualDiscount": 18,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "mau": 25000,
+        "tenants": 100,
+        "environments": 5
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "usage_based",
+      "basePrice": 25,
+      "billingPeriod": "monthly",
+      "annualDiscount": 18,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "mau": 50000,
+        "tenants": 20000,
+        "environments": 50,
+        "logsRetentionDays": 21
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -1,3 +1,19 @@
+---
+tags:
+  - pricing
+  - cost estimation
+  - tool evaluation
+  - developer tooling
+  - free tier strategy
+tools:
+  - Vercel
+  - Railway
+  - Fly.io
+  - Netlify
+  - Render
+people:
+  - rogermbyrne
+---
 # Pricing.md
 
 Make your AI agent cost-aware when planning developer tool stacks.
@@ -42,28 +58,30 @@ Add to your Claude Code MCP config:
 
 ## What's Covered
 
-53 developer tools across 16 categories:
+210 developer tools across 18 categories:
 
 | Category | Tools |
 | --- | --- |
-| **Hosting** | Vercel, Railway, Fly.io, Netlify, Render |
-| **Database** | Supabase, Neon, PlanetScale Postgres, PlanetScale Vitess, Turso, Upstash, Convex |
-| **Auth** | Clerk, Auth0 (B2C), Auth0 (B2B), WorkOS, Descope |
-| **Email** | Resend, Unosend, Postmark, SendGrid |
-| **Payments** | Stripe, Paddle |
-| **Monitoring** | Sentry, Checkly, New Relic, Honeycomb |
-| **CI/CD** | CircleCI, Buildkite, GitHub Actions, Depot |
-| **Search** | Algolia, Weaviate, Orama |
-| **Analytics** | PostHog, Plausible, Mixpanel, Amplitude |
-| **CMS** | Sanity, Contentful, Storyblok |
-| **Feature Flags** | LaunchDarkly, Statsig |
-| **Edge** | Cloudflare, Deno Deploy |
-| **Queues** | Inngest, Trigger.dev |
-| **Notifications** | Novu, Courier, Engagespot |
-| **Storage** | Tigris, Mux |
-| **Scheduling** | Mergent |
+| **Hosting** | Vercel, Railway, Fly.io, Netlify, Render, Val Town, Liveblocks, Pulumi, and more |
+| **Database** | Supabase, Neon, PlanetScale Postgres, PlanetScale Vitess, Turso, Upstash, Convex, and more |
+| **Auth** | Clerk, Auth0 (B2C), Auth0 (B2B), WorkOS, Descope, Permit.io, and more |
+| **Email** | Resend, Unosend, Postmark, SendGrid, and more |
+| **Payments** | Stripe, Paddle, and more |
+| **Monitoring** | Sentry, Checkly, New Relic, Honeycomb, and more |
+| **AI/ML** | OpenAI, Anthropic, Fireworks AI, Replicate, Modal, and more |
+| **CI/CD** | CircleCI, Buildkite, GitHub Actions, Depot, Doppler, and more |
+| **Search** | Algolia, Weaviate, Orama, Meilisearch, Pinecone, and more |
+| **Analytics** | PostHog, Plausible, Mixpanel, Amplitude, Dub, and more |
+| **CMS** | Sanity, Contentful, Storyblok, and more |
+| **Feature Flags** | LaunchDarkly, Statsig, and more |
+| **Edge** | Cloudflare, Deno Deploy, ngrok, Arcjet, Zuplo, and more |
+| **Queues** | Inngest, Trigger.dev, Svix, Hookdeck, and more |
+| **Notifications** | Novu, Courier, Engagespot, Knock, and more |
+| **Storage** | Tigris, Mux, and more |
+| **Scheduling** | Mergent, Cal.com |
+| **Testing** | Cypress Cloud, BrowserStack, and more |
 
-All pricing verified as of 2026-04-03. Each tool links to its pricing page for verification.
+All pricing verified as of 2026-04-05. Each tool links to its pricing page for verification.
 
 ## How It Works
 

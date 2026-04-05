@@ -1,0 +1,87 @@
+{
+  "id": "svix",
+  "name": "Svix",
+  "description": "Webhook delivery infrastructure with retries, monitoring, and management portal",
+  "url": "https://www.svix.com",
+  "pricingUrl": "https://www.svix.com/pricing",
+  "category": "queues",
+  "tags": [
+    "webhooks",
+    "event-delivery",
+    "infrastructure"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "HTTP webhooks",
+    "whatYouLose": "Retry logic, delivery monitoring portal, webhook signing, payload transformations"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "messages",
+          "unit": "messages",
+          "pricePerUnit": 0.0001,
+          "unitQuantity": 1,
+          "includedQuantity": 50000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "messagesPerMonth": 50000,
+        "ratePerSecond": 50,
+        "payloadRetentionDays": 30,
+        "teamMembers": 3,
+        "connectors": 0
+      }
+    },
+    {
+      "name": "Professional",
+      "slug": "professional",
+      "pricingModel": "hybrid",
+      "basePrice": 490,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "messages",
+          "unit": "messages",
+          "pricePerUnit": 0.0001,
+          "unitQuantity": 1,
+          "includedQuantity": 50000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "messagesPerMonth": 50000,
+        "ratePerSecond": 400,
+        "payloadRetentionDays": 90,
+        "teamMembers": 10,
+        "connectors": 3
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

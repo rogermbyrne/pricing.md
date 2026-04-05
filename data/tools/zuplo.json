@@ -1,0 +1,77 @@
+{
+  "id": "zuplo",
+  "name": "Zuplo",
+  "description": "Programmable API gateway with developer portal, API key management, and rate limiting at the edge",
+  "url": "https://zuplo.com",
+  "pricingUrl": "https://zuplo.com/pricing",
+  "category": "edge",
+  "tags": [
+    "api-gateway",
+    "developer-portal",
+    "api-keys",
+    "rate-limiting"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "OpenAPI",
+    "whatYouLose": "Edge gateway config, API key management, developer portal, rate limiting policies"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "requestsPerMonth": 100000,
+        "customDomains": 0,
+        "egressGB": 1,
+        "gatewayDevelopers": 2
+      }
+    },
+    {
+      "name": "Builder",
+      "slug": "builder",
+      "pricingModel": "hybrid",
+      "basePrice": 25,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "requests",
+          "unit": "requests",
+          "pricePerUnit": 100,
+          "unitQuantity": 100000,
+          "includedQuantity": 100000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "requestsPerMonth": 100000,
+        "customDomains": 2,
+        "maxRequestsPerMonth": 1000000
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "id": "liveblocks",
+  "name": "Liveblocks",
+  "description": "Collaborative infrastructure for real-time presence, storage, comments, and notifications",
+  "url": "https://liveblocks.io",
+  "pricingUrl": "https://liveblocks.io/pricing",
+  "category": "hosting",
+  "tags": [
+    "collaboration",
+    "realtime",
+    "presence",
+    "multiplayer"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Realtime sync engine, presence indicators, collaborative cursors, conflict resolution, room infrastructure"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "monthlyActiveRooms": 500,
+        "projects": 10,
+        "teamSeats": 3,
+        "realtimeStorageMB": 256,
+        "fileStorageMB": 512,
+        "versionHistoryHours": 24,
+        "maxRoomSizeMB": 10,
+        "simultaneousConnectionsPerRoom": 10,
+        "customNotificationEventsPerMonth": 1000
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "hybrid",
+      "basePrice": 30,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 10,
+      "usageMetrics": [
+        {
+          "name": "monthly-active-rooms",
+          "unit": "rooms",
+          "pricePerUnit": 0.03,
+          "unitQuantity": 1,
+          "includedQuantity": 500
+        },
+        {
+          "name": "realtime-storage",
+          "unit": "GB",
+          "pricePerUnit": 0.15,
+          "unitQuantity": 1,
+          "includedQuantity": 8
+        },
+        {
+          "name": "file-storage",
+          "unit": "GB",
+          "pricePerUnit": 0.021,
+          "unitQuantity": 1,
+          "includedQuantity": 100
+        },
+        {
+          "name": "custom-notification-events",
+          "unit": "events",
+          "pricePerUnit": 0.001,
+          "unitQuantity": 1,
+          "includedQuantity": 30000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "monthlyActiveRooms": 500,
+        "projects": 10,
+        "teamSeats": 3,
+        "realtimeStorageGB": 8,
+        "fileStorageGB": 100,
+        "maxFileUploadGB": 1,
+        "versionHistoryDays": 30,
+        "maxRoomSizeMB": 20,
+        "simultaneousConnectionsPerRoom": 50
+      }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "hybrid",
+      "basePrice": 600,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 10,
+      "usageMetrics": [
+        {
+          "name": "monthly-active-rooms",
+          "unit": "rooms",
+          "pricePerUnit": 0.03,
+          "unitQuantity": 1,
+          "includedQuantity": 500
+        },
+        {
+          "name": "realtime-storage",
+          "unit": "GB",
+          "pricePerUnit": 0.15,
+          "unitQuantity": 1,
+          "includedQuantity": 8
+        },
+        {
+          "name": "file-storage",
+          "unit": "GB",
+          "pricePerUnit": 0.021,
+          "unitQuantity": 1,
+          "includedQuantity": 100
+        },
+        {
+          "name": "custom-notification-events",
+          "unit": "events",
+          "pricePerUnit": 0.001,
+          "unitQuantity": 1,
+          "includedQuantity": 30000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "monthlyActiveRooms": 500,
+        "projects": 10,
+        "teamSeats": 10,
+        "realtimeStorageGB": 8,
+        "fileStorageGB": 100,
+        "versionHistoryDays": 30,
+        "maxRoomSizeMB": 20,
+        "simultaneousConnectionsPerRoom": 50
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

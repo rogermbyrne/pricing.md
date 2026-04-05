@@ -1,0 +1,146 @@
+{
+  "id": "modal",
+  "name": "Modal",
+  "description": "Serverless cloud for AI/ML workloads with GPU access, cron jobs, and web endpoints",
+  "url": "https://modal.com",
+  "pricingUrl": "https://modal.com/pricing",
+  "category": "ai-api",
+  "tags": [
+    "gpu",
+    "serverless",
+    "ml-infra",
+    "compute"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Serverless GPU orchestration, auto-scaling, container caching, Modal-specific SDK decorators"
+  },
+  "tiers": [
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "h100-gpu",
+          "unit": "seconds",
+          "pricePerUnit": 0.001097,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "a100-80gb-gpu",
+          "unit": "seconds",
+          "pricePerUnit": 0.000694,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "t4-gpu",
+          "unit": "seconds",
+          "pricePerUnit": 0.000164,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "cpu",
+          "unit": "core-seconds",
+          "pricePerUnit": 0.0000131,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "memory",
+          "unit": "GiB-seconds",
+          "pricePerUnit": 0.00000222,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "freeCreditsPerMonth": 30,
+        "seats": 3,
+        "containers": 100,
+        "gpuConcurrency": 10,
+        "cronJobs": 5,
+        "webhookEndpoints": 8,
+        "logRetentionDays": 1,
+        "deploymentRollbacks": 3
+      }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "hybrid",
+      "basePrice": 250,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "h100-gpu",
+          "unit": "seconds",
+          "pricePerUnit": 0.001097,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "a100-80gb-gpu",
+          "unit": "seconds",
+          "pricePerUnit": 0.000694,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "t4-gpu",
+          "unit": "seconds",
+          "pricePerUnit": 0.000164,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "cpu",
+          "unit": "core-seconds",
+          "pricePerUnit": 0.0000131,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "memory",
+          "unit": "GiB-seconds",
+          "pricePerUnit": 0.00000222,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "freeCreditsPerMonth": 100,
+        "containers": 1000,
+        "gpuConcurrency": 50,
+        "logRetentionDays": 30
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}
