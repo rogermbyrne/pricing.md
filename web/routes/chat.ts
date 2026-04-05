@@ -32,7 +32,7 @@ export function createChatRouter(registry: Registry): Router {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   let anthropic: Anthropic | null = null;
   if (apiKey) {
-    anthropic = new Anthropic({ apiKey });
+    anthropic = new Anthropic({ apiKey, timeout: 30000 });
   }
 
   router.get("/chat", (req: Request, res: Response) => {
@@ -89,9 +89,9 @@ export function createChatRouter(registry: Registry): Router {
         messages.push({ role: "user", content: message });
       }
 
-      // Tool use loop
+      // Tool use loop — limit rounds to avoid timeout
       let currentMessages = [...messages];
-      const MAX_TOOL_ROUNDS = 10;
+      const MAX_TOOL_ROUNDS = 5;
 
       for (let round = 0; round < MAX_TOOL_ROUNDS; round++) {
         const response = await anthropic.messages.create({

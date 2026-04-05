@@ -76,15 +76,23 @@
   }
 
   function addToolCallIndicator(toolName) {
-    const div = document.createElement('div');
-    div.className = 'text-xs font-mono text-neutral-400 flex items-center gap-2 tool-indicator';
+    // Remove any existing indicator first — only show one at a time
+    var existing = document.getElementById('tool-indicator');
+    if (existing) {
+      existing.textContent = 'Looking up ' + (toolName === 'find_cheapest' ? 'cheapest options' : 'pricing data') + '...';
+      return;
+    }
+    var div = document.createElement('div');
+    div.id = 'tool-indicator';
+    div.className = 'text-xs font-mono text-neutral-400 flex items-center gap-2';
     div.innerHTML = '<span class="inline-block w-2 h-2 bg-neutral-400 animate-pulse"></span> Looking up ' + (toolName === 'find_cheapest' ? 'cheapest options' : 'pricing data') + '...';
     messagesDiv.appendChild(div);
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
   }
 
   function removeToolIndicators() {
-    document.querySelectorAll('.tool-indicator').forEach(function(el) { el.remove(); });
+    var el = document.getElementById('tool-indicator');
+    if (el) el.remove();
   }
 
   function escapeHtml(text) {
