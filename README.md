@@ -1,19 +1,3 @@
----
-tags:
-  - pricing
-  - cost estimation
-  - tool evaluation
-  - developer tooling
-  - free tier strategy
-tools:
-  - Vercel
-  - Railway
-  - Fly.io
-  - Netlify
-  - Render
-people:
-  - rogermbyrne
----
 # Pricing.md
 
 Make your AI agent cost-aware when planning developer tool stacks.
