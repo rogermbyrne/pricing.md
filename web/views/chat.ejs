@@ -325,19 +325,13 @@
         body: JSON.stringify({ message: msg, history: history.slice(-10) })
       });
 
-      if (response.status === 429) {
-        removeThinkingIndicator();
-        addMessage('assistant', 'Rate limit reached. Please try again in a few minutes.', 'Rate limit reached.');
-        return;
-      }
-      if (response.status === 503) {
-        removeThinkingIndicator();
-        addMessage('assistant', 'Stack Advisor is not available right now.', 'Stack Advisor unavailable.');
-        return;
-      }
       if (!response.ok) {
+        console.error('Stack Advisor API error:', response.status, response.statusText);
         removeThinkingIndicator();
-        addMessage('assistant', 'Something went wrong (HTTP ' + response.status + '). Please try again.', 'Error.');
+        var errMsg = response.status === 429 ? 'Rate limit reached. Please try again in a few minutes.'
+          : response.status === 503 ? 'Stack Advisor is not available right now.'
+          : 'Something went wrong (HTTP ' + response.status + '). Please try again.';
+        addMessage('assistant', errMsg, errMsg);
         return;
       }
 
@@ -381,6 +375,7 @@
         history.push({ role: 'assistant', content: fullResponse });
       }
     } catch (err) {
+      console.error('Stack Advisor fetch error:', err);
       removeThinkingIndicator();
       removeToolIndicators();
       addMessage('assistant', 'Connection error. Please try again.', 'Connection error.');

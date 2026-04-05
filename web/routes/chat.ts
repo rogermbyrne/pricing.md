@@ -91,7 +91,8 @@ export function createChatRouter(registry: Registry): Router {
 
       // Tool use loop — limit rounds to avoid timeout
       let currentMessages = [...messages];
-      const MAX_TOOL_ROUNDS = 5;
+      const MAX_TOOL_ROUNDS = 8;
+      let sentText = false;
 
       for (let round = 0; round < MAX_TOOL_ROUNDS; round++) {
         const response = await anthropic.messages.create({
@@ -119,6 +120,7 @@ export function createChatRouter(registry: Registry): Router {
             .join("\n");
 
           res.write(`data: ${JSON.stringify({ type: "text", content: textContent })}\n\n`);
+          sentText = true;
           break;
         }
 
@@ -157,6 +159,26 @@ export function createChatRouter(registry: Registry): Router {
         if (response.stop_reason === "end_turn") {
           break;
         }
+      }
+
+      // If we exhausted tool rounds without a text response, force one
+      if (!sentText) {
+        const finalResponse = await anthropic.messages.create({
+          model: "claude-haiku-4-5-20251001",
+          max_tokens: 4096,
+          system: SYSTEM_PROMPT + "\n\nIMPORTANT: You have already gathered all the data you need. Do NOT call any more tools. Summarize your findings now.",
+          messages: currentMessages,
+        });
+
+        const textContent = finalResponse.content
+          .filter(
+            (block): block is Anthropic.ContentBlock & { type: "text" } =>
+              block.type === "text"
+          )
+          .map((block) => block.text)
+          .join("\n");
+
+        res.write(`data: ${JSON.stringify({ type: "text", content: textContent || "I gathered pricing data but couldn't generate a summary. Please try again." })}\n\n`);
       }
     } catch (err: any) {
       console.error("Chat API error:", err.message);
