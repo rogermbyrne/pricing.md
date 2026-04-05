@@ -1,0 +1,53 @@
+{
+  "id": "superblocks",
+  "name": "Superblocks",
+  "description": "AI-powered internal tool builder with drag-and-drop UI, workflows, and 50+ integrations",
+  "url": "https://www.superblocks.com",
+  "pricingUrl": "https://www.superblocks.com/pricing",
+  "category": "hosting",
+  "tags": [
+    "internal-tools",
+    "low-code",
+    "ai-builder",
+    "admin-panels"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "App definitions, workflow logic, AI builder context, integration configs"
+  },
+  "tiers": [
+    {
+      "name": "Teams",
+      "slug": "teams",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 80,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "maxBuilders": 15,
+        "hostedApps": 1,
+        "aiCreditsPerBuilder": 80,
+        "additionalAppPrice": 100
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

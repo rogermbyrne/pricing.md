@@ -1,0 +1,77 @@
+{
+  "id": "metabase",
+  "name": "Metabase",
+  "description": "Open-source business intelligence tool for SQL queries, dashboards, and embedded analytics",
+  "url": "https://www.metabase.com",
+  "pricingUrl": "https://www.metabase.com/pricing",
+  "category": "analytics",
+  "tags": [
+    "bi",
+    "dashboards",
+    "sql",
+    "embedded-analytics",
+    "open-source"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "SQL",
+    "whatYouLose": "Dashboard definitions, saved questions, collection permissions, embedding config"
+  },
+  "tiers": [
+    {
+      "name": "Open Source",
+      "slug": "open-source",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "hybrid",
+      "basePrice": 100,
+      "billingPeriod": "monthly",
+      "annualDiscount": 10,
+      "seatPrice": 6,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "usersIncluded": 5
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "hybrid",
+      "basePrice": 575,
+      "billingPeriod": "monthly",
+      "annualDiscount": 10,
+      "seatPrice": 12,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "usersIncluded": 10
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

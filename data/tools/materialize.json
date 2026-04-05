@@ -1,0 +1,107 @@
+{
+  "id": "materialize",
+  "name": "Materialize",
+  "description": "Streaming SQL database for real-time materialized views with PostgreSQL wire compatibility",
+  "url": "https://materialize.com",
+  "pricingUrl": "https://materialize.com/pricing",
+  "category": "database",
+  "tags": [
+    "streaming",
+    "sql",
+    "materialized-views",
+    "real-time"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": "PostgreSQL wire protocol",
+    "whatYouLose": "Streaming materialized views, incremental computation, source/sink connectors"
+  },
+  "tiers": [
+    {
+      "name": "Self-Managed Community",
+      "slug": "community",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "memoryGiB": 24,
+        "diskGiB": 48
+      }
+    },
+    {
+      "name": "Cloud On-Demand",
+      "slug": "cloud-on-demand",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "compute",
+          "unit": "credit-hours",
+          "pricePerUnit": 1.50,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "storage",
+          "unit": "GB-hours",
+          "pricePerUnit": 0.0000411,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "networking",
+          "unit": "GB",
+          "pricePerUnit": 0.12,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Cloud Capacity",
+      "slug": "cloud-capacity",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "compute",
+          "unit": "credit-hours",
+          "pricePerUnit": 1.50,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "storage",
+          "unit": "GB-hours",
+          "pricePerUnit": 0.00003151,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "networking",
+          "unit": "GB",
+          "pricePerUnit": 0.09,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

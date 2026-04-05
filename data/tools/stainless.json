@@ -1,0 +1,99 @@
+{
+  "id": "stainless",
+  "name": "Stainless",
+  "description": "SDK generation platform that creates idiomatic client libraries and documentation from OpenAPI specs",
+  "url": "https://www.stainless.com",
+  "pricingUrl": "https://www.stainless.com/pricing",
+  "category": "ci-cd",
+  "tags": [
+    "sdk-generation",
+    "openapi",
+    "developer-tools",
+    "api"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "OpenAPI",
+    "whatYouLose": "SDK generation pipeline, preview builds, language-specific customizations"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "generators": 5,
+        "endpoints": 25,
+        "previewBuildsPerMonth": 100,
+        "previewBuildsPerDay": 25
+      }
+    },
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "hybrid",
+      "basePrice": 79,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "preview-builds",
+          "unit": "builds-per-SDK",
+          "pricePerUnit": 1.00,
+          "unitQuantity": 1000,
+          "includedQuantity": 300
+        }
+      ],
+      "features": [],
+      "limits": {
+        "endpoints": 50,
+        "previewBuildsPerMonth": 300
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "hybrid",
+      "basePrice": 499,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "preview-builds",
+          "unit": "builds-per-SDK",
+          "pricePerUnit": 1.00,
+          "unitQuantity": 1000,
+          "includedQuantity": 1000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "endpoints": 100,
+        "previewBuildsPerMonth": 1000
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

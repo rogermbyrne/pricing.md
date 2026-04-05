@@ -1,0 +1,126 @@
+{
+  "id": "stream-chat",
+  "name": "Stream Chat",
+  "description": "Chat messaging API and SDK for building real-time messaging features with moderation and offline support",
+  "url": "https://getstream.io",
+  "pricingUrl": "https://getstream.io/pricing",
+  "category": "hosting",
+  "tags": [
+    "chat",
+    "messaging",
+    "real-time",
+    "sdk"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "architectural",
+    "openStandard": null,
+    "whatYouLose": "Chat UI components, message history, moderation config, push notifications, offline sync"
+  },
+  "tiers": [
+    {
+      "name": "Build",
+      "slug": "build",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "mau": 1000,
+        "concurrentConnections": 100
+      }
+    },
+    {
+      "name": "Start",
+      "slug": "start",
+      "pricingModel": "hybrid",
+      "basePrice": 499,
+      "billingPeriod": "monthly",
+      "annualDiscount": 20,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "mau-overage",
+          "unit": "users",
+          "pricePerUnit": 0.09,
+          "unitQuantity": 1,
+          "includedQuantity": 10000
+        },
+        {
+          "name": "concurrent-overage",
+          "unit": "connections",
+          "pricePerUnit": 0.99,
+          "unitQuantity": 1,
+          "includedQuantity": 500
+        },
+        {
+          "name": "cdn-bandwidth",
+          "unit": "GB",
+          "pricePerUnit": 0.17,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "storage",
+          "unit": "GB",
+          "pricePerUnit": 0.07,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "mau": 10000,
+        "concurrentConnections": 500,
+        "messages": 2000000000
+      }
+    },
+    {
+      "name": "Elevate",
+      "slug": "elevate",
+      "pricingModel": "hybrid",
+      "basePrice": 675,
+      "billingPeriod": "monthly",
+      "annualDiscount": 11,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "cdn-bandwidth",
+          "unit": "GB",
+          "pricePerUnit": 0.17,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "storage",
+          "unit": "GB",
+          "pricePerUnit": 0.07,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "mau": 10000,
+        "concurrentConnections": 500
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "id": "baseten",
+  "name": "Baseten",
+  "description": "ML inference platform for deploying and scaling AI models with GPU access and auto-scaling",
+  "url": "https://www.baseten.co",
+  "pricingUrl": "https://www.baseten.co/pricing",
+  "category": "ai-api",
+  "tags": [
+    "ml-inference",
+    "gpu",
+    "model-serving",
+    "ai-infra"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Auto-scaling config, model optimization, fast cold starts, deployment pipeline"
+  },
+  "tiers": [
+    {
+      "name": "Basic",
+      "slug": "basic",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "h100-gpu",
+          "unit": "minutes",
+          "pricePerUnit": 0.10833,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "a100-gpu",
+          "unit": "minutes",
+          "pricePerUnit": 0.06667,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "l4-gpu",
+          "unit": "minutes",
+          "pricePerUnit": 0.01414,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "t4-gpu",
+          "unit": "minutes",
+          "pricePerUnit": 0.01052,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "id": "stigg",
+  "name": "Stigg",
+  "description": "Pricing and packaging infrastructure for SaaS with entitlements, metering, and paywall widgets",
+  "url": "https://www.stigg.io",
+  "pricingUrl": "https://www.stigg.io/pricing",
+  "category": "payments",
+  "tags": [
+    "pricing",
+    "packaging",
+    "entitlements",
+    "metering",
+    "billing"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Entitlement definitions, plan configs, paywall widgets, metering pipelines, Stripe integration"
+  },
+  "tiers": [
+    {
+      "name": "Sandbox",
+      "slug": "sandbox",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "nonProdEnvironments": 2,
+        "prodEnvironments": 0
+      }
+    },
+    {
+      "name": "Growth",
+      "slug": "growth",
+      "pricingModel": "hybrid",
+      "basePrice": 448,
+      "billingPeriod": "annual",
+      "annualDiscount": 20,
+      "seatPrice": 32,
+      "usageMetrics": [
+        {
+          "name": "self-service-subscriptions",
+          "unit": "subscriptions",
+          "pricePerUnit": 0.32,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "enterprise-subscriptions",
+          "unit": "subscriptions",
+          "pricePerUnit": 4.70,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "event-metering",
+          "unit": "GB",
+          "pricePerUnit": 0.55,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {
+        "prodEnvironments": 1
+      }
+    },
+    {
+      "name": "Scale",
+      "slug": "scale",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

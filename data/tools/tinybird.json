@@ -1,0 +1,101 @@
+{
+  "id": "tinybird",
+  "name": "Tinybird",
+  "description": "Real-time analytics API platform for ingesting, transforming, and publishing data as low-latency APIs",
+  "url": "https://www.tinybird.co",
+  "pricingUrl": "https://www.tinybird.co/pricing",
+  "category": "analytics",
+  "tags": [
+    "real-time-analytics",
+    "data-api",
+    "clickhouse",
+    "analytics"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "Data pipelines, API endpoint definitions, materialized views, query optimization"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "vCPUs": 0.25,
+        "concurrencyThreads": 1,
+        "qps": 10,
+        "storageGB": 10
+      }
+    },
+    {
+      "name": "Developer",
+      "slug": "developer",
+      "pricingModel": "hybrid",
+      "basePrice": 49,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "storage",
+          "unit": "GB",
+          "pricePerUnit": 0.058,
+          "unitQuantity": 1,
+          "includedQuantity": 25
+        },
+        {
+          "name": "qps",
+          "unit": "requests",
+          "pricePerUnit": 0.0005,
+          "unitQuantity": 1,
+          "includedQuantity": 15
+        }
+      ],
+      "features": [],
+      "limits": {
+        "vCPUs": 0.5,
+        "concurrencyThreads": 1,
+        "qps": 15,
+        "storageGB": 25,
+        "replicas": 2
+      }
+    },
+    {
+      "name": "SaaS",
+      "slug": "saas",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "storageGB": 500,
+        "replicas": 2
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}
