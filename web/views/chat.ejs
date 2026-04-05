@@ -1,9 +1,35 @@
 <%- include('partials/head', { title: 'Stack Advisor', description: 'Describe your app and get a recommended developer tool stack with real pricing at different user scales.', path: '/stack' }) %>
 
-<div class="max-w-3xl mx-auto px-6 py-10 flex flex-col" style="min-height:calc(100vh - 80px)">
+<style>
+  .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .drawer-content h2 { font-size: 1.25rem; font-weight: 700; margin-top: 1.75rem; margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid; }
+  .drawer-content h3 { font-size: 1.1rem; font-weight: 700; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+  .drawer-content p { margin-top: 0.5rem; line-height: 1.65; }
+  .drawer-content ul { margin: 0.5rem 0; }
+  .drawer-content li { margin: 0.25rem 0; }
+  .drawer-content table { margin: 0.75rem 0; }
+  .drawer-content tr:nth-child(even) td { background: rgba(0,0,0,0.02); }
+  .dark .drawer-content h2 { border-color: #333; color: #fff; }
+  .dark .drawer-content h3 { color: #fff; }
+  .dark .drawer-content tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+</style>
+
+<!-- Drawer overlay -->
+<div id="drawer-overlay" class="fixed inset-0 bg-black/30 backdrop-blur-sm z-40 hidden transition-opacity duration-300 opacity-0" onclick="closeDrawer()"></div>
+
+<!-- Artifact drawer -->
+<div id="drawer" class="fixed top-0 right-0 h-full w-full max-w-2xl bg-white dark:bg-[#0a0a0a] border-l border-neutral-200 dark:border-neutral-800 z-50 transform translate-x-full transition-transform duration-300 ease-out flex flex-col">
+  <div class="sticky top-0 bg-white dark:bg-[#0a0a0a] border-b border-neutral-200 dark:border-neutral-800 px-6 py-4 flex justify-between items-center z-10">
+    <span class="font-mono text-[10px] uppercase tracking-widest text-neutral-400">Stack Recommendation</span>
+    <button onclick="closeDrawer()" class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors text-lg leading-none">&times;</button>
+  </div>
+  <div id="drawer-content" class="drawer-content flex-1 overflow-y-auto px-6 py-6 text-neutral-700 dark:text-neutral-300 text-sm"></div>
+</div>
+
+<div class="max-w-4xl mx-auto px-6 py-10 flex flex-col" style="min-height:calc(100vh - 80px)">
 
   <!-- Header -->
-  <div class="mb-8">
+  <div class="mb-10 text-center">
     <h1 class="text-4xl font-bold tracking-tighter text-neutral-900 dark:text-white">Stack Advisor</h1>
     <p class="text-base text-neutral-500 mt-2">Describe your app. Get a recommended stack with real pricing.</p>
   </div>
@@ -11,21 +37,20 @@
   <!-- Chat messages area -->
   <div id="messages" class="flex-1 overflow-y-auto space-y-6 mb-6">
     <% if (typeof hasApiKey !== 'undefined' && !hasApiKey) { %>
-    <!-- No API key warning -->
-    <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 p-5 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]">
-      <div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 mb-2">System</div>
-      <p class="text-neutral-700 dark:text-neutral-300">Stack Advisor requires an API key to be configured. Please set the <code class="font-mono text-sm bg-neutral-100 dark:bg-[#0a0a0a] px-1 py-0.5">ANTHROPIC_API_KEY</code> environment variable.</p>
+    <div class="text-center py-8">
+      <p class="text-neutral-500">Stack Advisor requires an API key. Set <code class="font-mono text-sm bg-neutral-100 dark:bg-neutral-800 px-1.5 py-0.5 rounded">ANTHROPIC_API_KEY</code> to enable.</p>
     </div>
     <% } else { %>
-    <!-- Welcome message -->
-    <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 p-5 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]">
-      <div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 mb-2">Pricing.md</div>
-      <p class="text-neutral-700 dark:text-neutral-300">Tell me about your app and I'll put together a dev tool stack with real pricing at different user scales, including migration paths and open-source options.</p>
-      <div class="mt-4 flex flex-col gap-2">
-        <div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400">Try a real-world example:</div>
-        <button onclick="useExample(this)" class="text-left px-3 py-2 text-sm border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 hover:border-neutral-900 dark:hover:border-white hover:text-neutral-900 dark:hover:text-white transition-all cursor-pointer rounded-none">I want to build something like Cursor, an AI code editor. I'll need user auth, subscription billing, usage tracking, email onboarding, and monitoring. Aiming for 100K+ developers.</button>
-        <button onclick="useExample(this)" class="text-left px-3 py-2 text-sm border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 hover:border-neutral-900 dark:hover:border-white hover:text-neutral-900 dark:hover:text-white transition-all cursor-pointer rounded-none">I'm building a social network similar to Bluesky. Need a PostgreSQL database, full-text search, media storage, auth, and email notifications that can handle serious scale.</button>
-        <button onclick="useExample(this)" class="text-left px-3 py-2 text-sm border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-[#0a0a0a] text-neutral-600 dark:text-neutral-400 hover:border-neutral-900 dark:hover:border-white hover:text-neutral-900 dark:hover:text-white transition-all cursor-pointer rounded-none">I'm working on an AI app builder like Lovable where users describe an app and we generate it. Need hosting for the generated apps, a Postgres database, auth, payments, and analytics.</button>
+    <!-- Welcome -->
+    <div class="max-w-2xl mx-auto">
+      <p class="text-neutral-500 text-center mb-6">Tell me about your app and I'll recommend a dev tool stack with real pricing at different user scales, migration paths, and open-source options.</p>
+      <div class="flex flex-wrap justify-center gap-2">
+        <button onclick="useExample(this)" class="px-4 py-2 text-sm text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 hover:text-neutral-900 dark:hover:text-white rounded-full transition-all cursor-pointer">AI code editor like Cursor</button>
+        <button onclick="useExample(this)" data-prompt="I want to build something like Cursor, an AI code editor. I'll need user auth, subscription billing, usage tracking, email onboarding, and monitoring. Aiming for 100K+ developers." class="hidden"></button>
+        <button onclick="useExample(this)" class="px-4 py-2 text-sm text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 hover:text-neutral-900 dark:hover:text-white rounded-full transition-all cursor-pointer">Social network like Bluesky</button>
+        <button onclick="useExample(this)" data-prompt="I'm building a social network similar to Bluesky. Need a PostgreSQL database, full-text search, media storage, auth, and email notifications that can handle serious scale." class="hidden"></button>
+        <button onclick="useExample(this)" class="px-4 py-2 text-sm text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 hover:text-neutral-900 dark:hover:text-white rounded-full transition-all cursor-pointer">AI app builder like Lovable</button>
+        <button onclick="useExample(this)" data-prompt="I'm working on an AI app builder like Lovable where users describe an app and we generate it. Need hosting for the generated apps, a Postgres database, auth, payments, and analytics." class="hidden"></button>
       </div>
     </div>
     <% } %>
@@ -33,14 +58,14 @@
 
   <!-- Input area -->
   <% if (typeof hasApiKey === 'undefined' || hasApiKey) { %>
-  <div class="sticky bottom-0 bg-neutral-50 dark:bg-[#0a0a0a] pt-4 pb-8">
-    <div class="flex gap-3">
+  <div class="sticky bottom-0 bg-gradient-to-t from-white dark:from-[#0a0a0a] from-80% to-transparent pt-6 pb-8">
+    <div class="max-w-2xl mx-auto flex gap-3">
       <input id="chatInput" type="text" placeholder="Describe your app..."
-        class="flex-1 bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-white px-4 py-3 font-sans text-base rounded-none focus:outline-none focus:border-neutral-900 dark:focus:border-white"
+        class="flex-1 bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white px-5 py-3.5 font-sans text-base rounded-full focus:outline-none focus:border-neutral-400 dark:focus:border-neutral-500 transition-colors"
         onkeydown="if(event.key==='Enter')sendMessage()">
       <button onclick="sendMessage()" id="sendBtn"
-        class="px-6 py-3 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-mono text-sm rounded-none border border-neutral-900 dark:border-white hover:opacity-80 transition-opacity">
-        Send
+        class="px-5 py-3.5 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-mono text-sm rounded-full hover:opacity-80 transition-opacity">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
       </button>
     </div>
   </div>
@@ -48,44 +73,177 @@
 </div>
 
 <script>
-  const messagesDiv = document.getElementById('messages');
-  const chatInput = document.getElementById('chatInput');
-  const sendBtn = document.getElementById('sendBtn');
-  let history = [];
-  let isLoading = false;
+  var messagesDiv = document.getElementById('messages');
+  var chatInput = document.getElementById('chatInput');
+  var sendBtn = document.getElementById('sendBtn');
+  var history = [];
+  var isLoading = false;
+
+  // Example prompts mapping
+  var examples = {
+    'AI code editor like Cursor': "I want to build something like Cursor, an AI code editor. I'll need user auth, subscription billing, usage tracking, email onboarding, and monitoring. Aiming for 100K+ developers.",
+    'Social network like Bluesky': "I'm building a social network similar to Bluesky. Need a PostgreSQL database, full-text search, media storage, auth, and email notifications that can handle serious scale.",
+    'AI app builder like Lovable': "I'm working on an AI app builder like Lovable where users describe an app and we generate it. Need hosting for the generated apps, a Postgres database, auth, payments, and analytics."
+  };
 
   function useExample(btn) {
-    if (chatInput) {
-      chatInput.value = btn.textContent.trim();
-      chatInput.focus();
-      sendMessage();
-    }
+    if (!chatInput) return;
+    var label = btn.textContent.trim();
+    chatInput.value = examples[label] || label;
+    chatInput.focus();
+    sendMessage();
   }
 
-  function addMessage(role, content) {
-    const div = document.createElement('div');
+  function addMessage(role, content, rawMarkdown) {
+    var div = document.createElement('div');
     if (role === 'user') {
       div.className = 'flex justify-end';
-      div.innerHTML = '<div class="bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-4 py-3 max-w-[80%] font-sans text-base rounded-none">' + escapeHtml(content) + '</div>';
+      div.innerHTML = '<div class="bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-white px-5 py-3 max-w-[75%] text-base rounded-2xl">' + escapeHtml(content) + '</div>';
     } else {
-      div.className = 'bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 p-5 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]';
-      div.innerHTML = '<div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 mb-2">Pricing.md</div><div class="prose-container text-neutral-700 dark:text-neutral-300">' + content + '</div>';
+      // Result card
+      var preview = getPreview(rawMarkdown || content);
+      var rendered = renderMarkdown(rawMarkdown || content);
+      div.className = 'max-w-2xl';
+      div.innerHTML =
+        '<div class="result-card cursor-pointer rounded-lg border border-neutral-200 dark:border-neutral-700 p-5 hover:border-neutral-400 dark:hover:border-neutral-500 hover:shadow-md transition-all" onclick="openDrawer(this)">' +
+          '<div class="font-mono text-[10px] uppercase tracking-widest text-neutral-400 mb-2">Pricing.md</div>' +
+          '<div class="font-bold text-base text-neutral-900 dark:text-white mb-1">Stack Recommendation</div>' +
+          '<div class="text-sm text-neutral-500 line-clamp-2">' + escapeHtml(preview) + '</div>' +
+          '<div class="mt-3 flex items-center gap-1 text-xs text-neutral-400 font-mono">View details <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div>' +
+        '</div>';
+      // Store rendered content for the drawer
+      div.querySelector('.result-card').dataset.content = rendered;
     }
     messagesDiv.appendChild(div);
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
   }
 
+  function getPreview(markdown) {
+    // Strip markdown formatting for preview
+    var text = markdown
+      .replace(/#{1,3}\s+/g, '')
+      .replace(/\*\*(.+?)\*\*/g, '$1')
+      .replace(/\|[^\n]+/g, '')
+      .replace(/[-]{3,}/g, '')
+      .replace(/`([^`]+)`/g, '$1')
+      .replace(/\n+/g, ' ')
+      .trim();
+    if (text.length > 140) text = text.substring(0, 140).replace(/\s\S*$/, '') + '...';
+    return text;
+  }
+
+  function openDrawer(card) {
+    var content = card.dataset.content;
+    var drawerContent = document.getElementById('drawer-content');
+    drawerContent.innerHTML = content;
+    // Inject charts into pricing tables
+    injectCharts(drawerContent);
+    // Show drawer
+    document.getElementById('drawer').classList.remove('translate-x-full');
+    var overlay = document.getElementById('drawer-overlay');
+    overlay.classList.remove('hidden');
+    setTimeout(function() { overlay.classList.remove('opacity-0'); overlay.classList.add('opacity-100'); }, 10);
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDrawer() {
+    document.getElementById('drawer').classList.add('translate-x-full');
+    var overlay = document.getElementById('drawer-overlay');
+    overlay.classList.remove('opacity-100');
+    overlay.classList.add('opacity-0');
+    setTimeout(function() { overlay.classList.add('hidden'); }, 300);
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeDrawer(); });
+
+  // --- Chart generation ---
+  var chartColors = ['#6366f1', '#f59e0b', '#10b981', '#ef4444', '#8b5cf6', '#ec4899', '#06b6d4', '#f97316'];
+
+  function extractChartData(tableEl) {
+    var ths = tableEl.querySelectorAll('th');
+    var trs = tableEl.querySelectorAll('tbody tr');
+    if (ths.length < 2 || trs.length < 1) return null;
+
+    // Find the rightmost column with $ values for the bars
+    var colIndex = -1;
+    for (var c = ths.length - 1; c >= 1; c--) {
+      var hasPrice = false;
+      trs.forEach(function(tr) {
+        var tds = tr.querySelectorAll('td');
+        if (tds[c] && /\$/.test(tds[c].textContent)) hasPrice = true;
+      });
+      if (hasPrice) { colIndex = c; break; }
+    }
+    if (colIndex === -1) return null;
+
+    var header = ths[colIndex].textContent.trim();
+    var items = [];
+    trs.forEach(function(tr) {
+      var tds = tr.querySelectorAll('td');
+      if (!tds[0] || !tds[colIndex]) return;
+      var label = tds[0].textContent.trim();
+      var raw = tds[colIndex].textContent.replace(/[^0-9.]/g, '');
+      var cost = parseFloat(raw);
+      if (!isNaN(cost)) items.push({ label: label, cost: cost });
+    });
+    if (items.length < 2) return null;
+    return { header: header, items: items };
+  }
+
+  function generateBarChart(data) {
+    var maxCost = Math.max.apply(null, data.items.map(function(d) { return d.cost; }));
+    if (maxCost === 0) return '';
+    var barH = 28, gap = 8, labelW = 120, valueW = 80, padL = 8, padR = 8, padT = 30, padB = 8;
+    var chartW = 500;
+    var barAreaW = chartW - labelW - valueW - padL - padR;
+    var totalH = padT + data.items.length * (barH + gap) - gap + padB;
+    var isDark = document.documentElement.classList.contains('dark');
+    var textColor = isDark ? '#a3a3a3' : '#737373';
+    var labelColor = isDark ? '#d4d4d4' : '#404040';
+    var bgColor = isDark ? '#171717' : '#fafafa';
+    var borderColor = isDark ? '#333' : '#e5e5e5';
+
+    var svg = '<svg viewBox="0 0 ' + chartW + ' ' + totalH + '" width="100%" style="max-width:' + chartW + 'px;border:1px solid ' + borderColor + ';border-radius:8px;background:' + bgColor + ';margin:12px 0">';
+    // Title
+    svg += '<text x="' + padL + '" y="20" fill="' + textColor + '" font-family="JetBrains Mono,monospace" font-size="9" text-transform="uppercase" letter-spacing="1">COST COMPARISON (' + escapeHtml(data.header) + ')</text>';
+    data.items.forEach(function(item, i) {
+      var y = padT + i * (barH + gap);
+      var barW = Math.max(2, (item.cost / maxCost) * barAreaW);
+      var color = chartColors[i % chartColors.length];
+      // Label
+      svg += '<text x="' + (padL + labelW - 4) + '" y="' + (y + barH / 2 + 4) + '" fill="' + labelColor + '" font-family="Inter,sans-serif" font-size="12" text-anchor="end">' + escapeHtml(item.label) + '</text>';
+      // Bar
+      svg += '<rect x="' + (padL + labelW) + '" y="' + y + '" width="' + barW + '" height="' + barH + '" rx="4" fill="' + color + '" opacity="0.85"/>';
+      // Value
+      svg += '<text x="' + (padL + labelW + barW + 8) + '" y="' + (y + barH / 2 + 4) + '" fill="' + textColor + '" font-family="JetBrains Mono,monospace" font-size="11" font-weight="600">$' + item.cost.toLocaleString() + '/mo</text>';
+    });
+    svg += '</svg>';
+    return svg;
+  }
+
+  function injectCharts(container) {
+    var tables = container.querySelectorAll('table');
+    tables.forEach(function(table) {
+      var data = extractChartData(table);
+      if (!data) return;
+      var chartDiv = document.createElement('div');
+      chartDiv.innerHTML = generateBarChart(data);
+      table.parentNode.insertBefore(chartDiv, table.nextSibling);
+    });
+  }
+
   function addToolCallIndicator(toolName) {
-    // Remove any existing indicator first — only show one at a time
     var existing = document.getElementById('tool-indicator');
+    var label = toolName === 'find_cheapest' ? 'cheapest options' : toolName === 'get_oss_alternatives' ? 'open-source alternatives' : 'pricing data';
     if (existing) {
-      existing.textContent = 'Looking up ' + (toolName === 'find_cheapest' ? 'cheapest options' : 'pricing data') + '...';
+      existing.querySelector('span:last-child').textContent = 'Looking up ' + label + '...';
       return;
     }
     var div = document.createElement('div');
     div.id = 'tool-indicator';
-    div.className = 'text-xs font-mono text-neutral-400 flex items-center gap-2';
-    div.innerHTML = '<span class="inline-block w-2 h-2 bg-neutral-400 animate-pulse"></span> Looking up ' + (toolName === 'find_cheapest' ? 'cheapest options' : 'pricing data') + '...';
+    div.className = 'text-xs font-mono text-neutral-400 flex items-center gap-2 py-2';
+    div.innerHTML = '<span class="inline-block w-2 h-2 bg-neutral-400 rounded-full animate-pulse"></span><span>Looking up ' + label + '...</span>';
     messagesDiv.appendChild(div);
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
   }
@@ -103,45 +261,39 @@
 
   function renderMarkdown(text) {
     var html = text;
-
     // Bold
     html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-
     // Headers
-    html = html.replace(/^### (.+)$/gm, '<h3 class="text-lg font-bold text-neutral-900 dark:text-white mt-4 mb-2">$1</h3>');
-    html = html.replace(/^## (.+)$/gm, '<h2 class="text-xl font-bold text-neutral-900 dark:text-white mt-6 mb-3">$1</h2>');
-
+    html = html.replace(/^### (.+)$/gm, '<h3 class="text-base font-bold text-neutral-900 dark:text-white mt-5 mb-2">$1</h3>');
+    html = html.replace(/^## (.+)$/gm, '<h2 class="text-lg font-bold text-neutral-900 dark:text-white mt-7 mb-3 pb-2 border-b border-neutral-200 dark:border-neutral-700">$1</h2>');
+    // Horizontal rules
+    html = html.replace(/^---$/gm, '<hr class="border-neutral-200 dark:border-neutral-700 my-4">');
     // Tables
     html = html.replace(/\|(.+)\|\n\|[-| :]+\|\n((?:\|.+\|\n?)*)/g, function(match, header, body) {
       var headers = header.split('|').map(function(h) { return h.trim(); }).filter(Boolean);
       var rows = body.trim().split('\n').map(function(row) { return row.split('|').map(function(c) { return c.trim(); }).filter(Boolean); });
-      var table = '<div class="overflow-x-auto my-3"><table class="w-full text-sm border-collapse">';
-      table += '<thead><tr class="border-b border-neutral-200 dark:border-neutral-700">';
-      headers.forEach(function(h) { table += '<th class="px-3 py-2 text-left text-xs font-mono uppercase tracking-widest text-neutral-500">' + h + '</th>'; });
+      var table = '<div class="overflow-x-auto my-4"><table class="w-full text-sm border-collapse">';
+      table += '<thead><tr class="border-b-2 border-neutral-200 dark:border-neutral-700">';
+      headers.forEach(function(h) { table += '<th class="px-3 py-2.5 text-left text-xs font-mono uppercase tracking-widest text-neutral-500">' + h + '</th>'; });
       table += '</tr></thead><tbody>';
-      rows.forEach(function(row) {
+      rows.forEach(function(row, idx) {
         table += '<tr class="border-b border-neutral-100 dark:border-neutral-800">';
-        row.forEach(function(cell) { table += '<td class="px-3 py-2 text-neutral-700 dark:text-neutral-300">' + cell + '</td>'; });
+        row.forEach(function(cell) { table += '<td class="px-3 py-2.5 text-neutral-700 dark:text-neutral-300">' + cell + '</td>'; });
         table += '</tr>';
       });
       table += '</tbody></table></div>';
       return table;
     });
-
     // Bullet lists
     html = html.replace(/^- (.+)$/gm, '<li class="text-sm text-neutral-600 dark:text-neutral-400 ml-4">$1</li>');
     html = html.replace(/(<li[^>]*>.*<\/li>\n?)+/g, '<ul class="my-2 list-disc">$&</ul>');
-
     // Code inline
-    html = html.replace(/`([^`]+)`/g, '<code class="font-mono text-sm bg-neutral-100 dark:bg-[#0a0a0a] px-1 py-0.5 text-neutral-800 dark:text-neutral-200">$1</code>');
-
+    html = html.replace(/`([^`]+)`/g, '<code class="font-mono text-sm bg-neutral-100 dark:bg-neutral-800 px-1.5 py-0.5 rounded text-neutral-800 dark:text-neutral-200">$1</code>');
     // Money formatting
     html = html.replace(/\$([0-9,.]+)(\/mo)?/g, '<span class="font-mono font-bold text-neutral-900 dark:text-white">$$$1$2</span>');
-
     // Paragraphs
-    html = html.replace(/\n\n/g, '</p><p class="text-sm text-neutral-600 dark:text-neutral-400 mt-2">');
-    html = '<p class="text-sm text-neutral-600 dark:text-neutral-400">' + html + '</p>';
-
+    html = html.replace(/\n\n/g, '</p><p class="text-sm text-neutral-600 dark:text-neutral-400 mt-3 leading-relaxed">');
+    html = '<p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">' + html + '</p>';
     return html;
   }
 
@@ -155,8 +307,8 @@
     history.push({ role: 'user', content: msg });
 
     isLoading = true;
-    sendBtn.textContent = '...';
-    sendBtn.disabled = true;
+    sendBtn.style.opacity = '0.5';
+    sendBtn.style.pointerEvents = 'none';
 
     try {
       var response = await fetch('/api/stack', {
@@ -166,12 +318,11 @@
       });
 
       if (response.status === 429) {
-        addMessage('assistant', 'Rate limit reached. Please try again in a few minutes.');
+        addMessage('assistant', 'Rate limit reached. Please try again in a few minutes.', 'Rate limit reached.');
         return;
       }
-
       if (response.status === 503) {
-        addMessage('assistant', 'Stack Advisor is not available right now.');
+        addMessage('assistant', 'Stack Advisor is not available right now.', 'Stack Advisor unavailable.');
         return;
       }
 
@@ -202,22 +353,22 @@
               removeToolIndicators();
               fullResponse = parsed.content;
             } else if (parsed.type === 'error') {
-              addMessage('assistant', 'Sorry, something went wrong. Please try again.');
+              addMessage('assistant', 'Sorry, something went wrong. Please try again.', 'Error occurred.');
             }
           } catch (e) { /* ignore parse errors */ }
         }
       }
 
       if (fullResponse) {
-        addMessage('assistant', renderMarkdown(fullResponse));
+        addMessage('assistant', fullResponse, fullResponse);
         history.push({ role: 'assistant', content: fullResponse });
       }
     } catch (err) {
-      addMessage('assistant', 'Connection error. Please try again.');
+      addMessage('assistant', 'Connection error. Please try again.', 'Connection error.');
     } finally {
       isLoading = false;
-      sendBtn.textContent = 'Send';
-      sendBtn.disabled = false;
+      sendBtn.style.opacity = '1';
+      sendBtn.style.pointerEvents = 'auto';
       chatInput.focus();
     }
   }
