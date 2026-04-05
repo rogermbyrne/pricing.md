@@ -6,7 +6,7 @@
   "pricingUrl": "https://novu.co/pricing",
   "category": "notifications",
   "tags": [],
-  "lastVerified": "2026-04-03",
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -45,7 +45,7 @@
         {
           "name": "workflow-runs",
           "unit": "runs",
-          "pricePerUnit": 1.20,
+          "pricePerUnit": 1.2,
           "unitQuantity": 1000,
           "includedQuantity": 30000
         }
@@ -67,7 +67,7 @@
         {
           "name": "workflow-runs",
           "unit": "runs",
-          "pricePerUnit": 1.20,
+          "pricePerUnit": 1.2,
           "unitQuantity": 1000,
           "includedQuantity": 250000
         }

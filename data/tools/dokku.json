@@ -5,8 +5,14 @@
   "url": "https://dokku.com",
   "pricingUrl": "https://dokku.com",
   "category": "hosting",
-  "tags": ["hosting", "open-source", "paas", "docker", "self-hosted"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "hosting",
+    "open-source",
+    "paas",
+    "docker",
+    "self-hosted"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {

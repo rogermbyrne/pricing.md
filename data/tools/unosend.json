@@ -5,8 +5,12 @@
   "url": "https://www.unosend.co",
   "pricingUrl": "https://www.unosend.co/pricing",
   "category": "email",
-  "tags": ["transactional-email", "marketing-email", "api"],
-  "lastVerified": "2026-04-03",
+  "tags": [
+    "transactional-email",
+    "marketing-email",
+    "api"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

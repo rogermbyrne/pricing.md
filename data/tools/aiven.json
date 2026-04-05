@@ -5,8 +5,15 @@
   "url": "https://aiven.io",
   "pricingUrl": "https://aiven.io/pricing",
   "category": "database",
-  "tags": ["managed-database", "postgresql", "mysql", "kafka", "redis", "multi-cloud"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "managed-database",
+    "postgresql",
+    "mysql",
+    "kafka",
+    "redis",
+    "multi-cloud"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +32,11 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "storageMB": 1024, "nodes": 1, "ramGB": 1 }
+      "limits": {
+        "storageMB": 1024,
+        "nodes": 1,
+        "ramGB": 1
+      }
     },
     {
       "name": "Developer",
@@ -37,7 +48,11 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "storageMB": 8192, "nodes": 1, "ramGB": 1 }
+      "limits": {
+        "storageMB": 8192,
+        "nodes": 1,
+        "ramGB": 1
+      }
     },
     {
       "name": "Startup",
@@ -49,7 +64,12 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "storageMB": 51200, "nodes": 1, "ramGB": 4, "backupRetentionDays": 2 }
+      "limits": {
+        "storageMB": 51200,
+        "nodes": 1,
+        "ramGB": 4,
+        "backupRetentionDays": 2
+      }
     },
     {
       "name": "Business",
@@ -61,7 +81,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "nodes": 2, "backupRetentionDays": 14 }
+      "limits": {
+        "nodes": 2,
+        "backupRetentionDays": 14
+      }
     },
     {
       "name": "Premium",
@@ -73,7 +96,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "nodes": 3, "backupRetentionDays": 30 }
+      "limits": {
+        "nodes": 3,
+        "backupRetentionDays": 30
+      }
     }
   ]
 }

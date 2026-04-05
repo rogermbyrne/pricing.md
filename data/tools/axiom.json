@@ -5,8 +5,14 @@
   "url": "https://axiom.co",
   "pricingUrl": "https://axiom.co/pricing",
   "category": "monitoring",
-  "tags": ["logs", "observability", "traces", "event-data", "opentelemetry"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "logs",
+    "observability",
+    "traces",
+    "event-data",
+    "opentelemetry"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

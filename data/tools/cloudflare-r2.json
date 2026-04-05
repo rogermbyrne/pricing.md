@@ -5,8 +5,13 @@
   "url": "https://cloudflare.com",
   "pricingUrl": "https://developers.cloudflare.com/r2/pricing/",
   "category": "storage",
-  "tags": ["object-storage", "s3-compatible", "zero-egress", "cloudflare"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "object-storage",
+    "s3-compatible",
+    "zero-egress",
+    "cloudflare"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +30,11 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "storageGB": 10, "classARequestsPerMonth": 1000000, "classBRequestsPerMonth": 10000000 }
+      "limits": {
+        "storageGB": 10,
+        "classARequestsPerMonth": 1000000,
+        "classBRequestsPerMonth": 10000000
+      }
     },
     {
       "name": "Standard",
@@ -36,9 +45,27 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "storage", "unit": "GB", "pricePerUnit": 0.015, "unitQuantity": 1, "includedQuantity": 10 },
-        { "name": "class-A-operations", "unit": "requests", "pricePerUnit": 4.50, "unitQuantity": 1000000, "includedQuantity": 1000000 },
-        { "name": "class-B-operations", "unit": "requests", "pricePerUnit": 0.36, "unitQuantity": 1000000, "includedQuantity": 10000000 }
+        {
+          "name": "storage",
+          "unit": "GB",
+          "pricePerUnit": 0.015,
+          "unitQuantity": 1,
+          "includedQuantity": 10
+        },
+        {
+          "name": "class-A-operations",
+          "unit": "requests",
+          "pricePerUnit": 4.5,
+          "unitQuantity": 1000000,
+          "includedQuantity": 1000000
+        },
+        {
+          "name": "class-B-operations",
+          "unit": "requests",
+          "pricePerUnit": 0.36,
+          "unitQuantity": 1000000,
+          "includedQuantity": 10000000
+        }
       ],
       "features": [],
       "limits": {}

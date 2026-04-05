@@ -5,8 +5,14 @@
   "url": "https://digitalocean.com",
   "pricingUrl": "https://www.digitalocean.com/pricing/app-platform",
   "category": "hosting",
-  "tags": ["paas", "containers", "static-sites", "managed", "autoscaling"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "paas",
+    "containers",
+    "static-sites",
+    "managed",
+    "autoscaling"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +31,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "staticSiteApps": 3, "bandwidthGiBPerApp": 1 }
+      "limits": {
+        "staticSiteApps": 3,
+        "bandwidthGiBPerApp": 1
+      }
     },
     {
       "name": "Starter Container",
@@ -37,7 +46,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "ramMiB": 512, "bandwidthGiB": 50 }
+      "limits": {
+        "ramMiB": 512,
+        "bandwidthGiB": 50
+      }
     },
     {
       "name": "Basic Container",
@@ -49,7 +61,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "ramMiB": 1024, "bandwidthGiB": 150 }
+      "limits": {
+        "ramMiB": 1024,
+        "bandwidthGiB": 150
+      }
     },
     {
       "name": "Pro Container",
@@ -61,7 +76,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "ramMiB": 4096, "bandwidthGiB": 250 }
+      "limits": {
+        "ramMiB": 4096,
+        "bandwidthGiB": 250
+      }
     }
   ]
 }

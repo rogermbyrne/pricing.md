@@ -5,8 +5,13 @@
   "url": "https://qdrant.tech",
   "pricingUrl": "https://qdrant.tech/pricing/",
   "category": "search",
-  "tags": ["vector-database", "similarity-search", "open-source", "self-hosted"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "vector-database",
+    "similarity-search",
+    "open-source",
+    "self-hosted"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +30,11 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "ramGb": 1, "diskGb": 4, "nodes": 1 }
+      "limits": {
+        "ramGb": 1,
+        "diskGb": 4,
+        "nodes": 1
+      }
     },
     {
       "name": "Standard",

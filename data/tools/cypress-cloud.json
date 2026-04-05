@@ -5,8 +5,14 @@
   "url": "https://www.cypress.io",
   "pricingUrl": "https://www.cypress.io/pricing",
   "category": "testing",
-  "tags": ["e2e-testing", "cypress", "test-replay", "parallelization", "flake-detection"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "e2e-testing",
+    "cypress",
+    "test-replay",
+    "parallelization",
+    "flake-detection"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +31,11 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "users": 50, "testResultsPerMonth": 500, "dataRetentionDays": 30 }
+      "limits": {
+        "users": 50,
+        "testResultsPerMonth": 500,
+        "dataRetentionDays": 30
+      }
     },
     {
       "name": "Team",
@@ -37,7 +47,11 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "users": 50, "testResultsPerYear": 120000, "dataRetentionDays": 90 }
+      "limits": {
+        "users": 50,
+        "testResultsPerYear": 120000,
+        "dataRetentionDays": 90
+      }
     },
     {
       "name": "Business",
@@ -49,7 +63,11 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "users": 50, "testResultsPerYear": 120000, "dataRetentionDays": 90 }
+      "limits": {
+        "users": 50,
+        "testResultsPerYear": 120000,
+        "dataRetentionDays": 90
+      }
     },
     {
       "name": "Enterprise",

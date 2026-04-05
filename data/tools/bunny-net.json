@@ -5,8 +5,13 @@
   "url": "https://bunny.net",
   "pricingUrl": "https://bunny.net/pricing",
   "category": "storage",
-  "tags": ["cdn", "edge-storage", "video-streaming", "dns"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "cdn",
+    "edge-storage",
+    "video-streaming",
+    "dns"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -24,12 +29,32 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "bandwidth-eu-na", "unit": "GB", "pricePerUnit": 0.01, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "bandwidth-asia", "unit": "GB", "pricePerUnit": 0.03, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "storage", "unit": "GB", "pricePerUnit": 0.01, "unitQuantity": 1, "includedQuantity": 0 }
+        {
+          "name": "bandwidth-eu-na",
+          "unit": "GB",
+          "pricePerUnit": 0.01,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "bandwidth-asia",
+          "unit": "GB",
+          "pricePerUnit": 0.03,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "storage",
+          "unit": "GB",
+          "pricePerUnit": 0.01,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
-      "limits": { "minimumMonthlyChargeUSD": 1 }
+      "limits": {
+        "minimumMonthlyChargeUSD": 1
+      }
     },
     {
       "name": "Volume Network",
@@ -40,11 +65,25 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "bandwidth-eu-na", "unit": "GB", "pricePerUnit": 0.005, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "storage", "unit": "GB", "pricePerUnit": 0.01, "unitQuantity": 1, "includedQuantity": 0 }
+        {
+          "name": "bandwidth-eu-na",
+          "unit": "GB",
+          "pricePerUnit": 0.005,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "storage",
+          "unit": "GB",
+          "pricePerUnit": 0.01,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
-      "limits": { "minimumMonthlyChargeUSD": 1 }
+      "limits": {
+        "minimumMonthlyChargeUSD": 1
+      }
     }
   ]
 }

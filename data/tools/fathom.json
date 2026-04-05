@@ -5,8 +5,13 @@
   "url": "https://usefathom.com",
   "pricingUrl": "https://usefathom.com/pricing",
   "category": "analytics",
-  "tags": ["web-analytics", "privacy", "gdpr", "cookieless"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "web-analytics",
+    "privacy",
+    "gdpr",
+    "cookieless"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +30,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "pageviewsPerMonth": 100000, "sites": 50 }
+      "limits": {
+        "pageviewsPerMonth": 100000,
+        "sites": 50
+      }
     },
     {
       "name": "1M Pageviews",
@@ -37,7 +45,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "pageviewsPerMonth": 1000000, "sites": 50 }
+      "limits": {
+        "pageviewsPerMonth": 1000000,
+        "sites": 50
+      }
     },
     {
       "name": "10M Pageviews",
@@ -49,7 +60,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "pageviewsPerMonth": 10000000, "sites": 50 }
+      "limits": {
+        "pageviewsPerMonth": 10000000,
+        "sites": 50
+      }
     },
     {
       "name": "25M+ Pageviews",

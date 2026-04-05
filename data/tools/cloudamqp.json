@@ -5,8 +5,13 @@
   "url": "https://www.cloudamqp.com",
   "pricingUrl": "https://www.cloudamqp.com/plans.html",
   "category": "queues",
-  "tags": ["queues", "rabbitmq", "amqp", "message-broker"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "queues",
+    "rabbitmq",
+    "amqp",
+    "message-broker"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

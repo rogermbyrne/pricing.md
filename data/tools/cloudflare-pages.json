@@ -5,8 +5,14 @@
   "url": "https://cloudflare.com",
   "pricingUrl": "https://www.cloudflare.com/plans/developer-platform/",
   "category": "hosting",
-  "tags": ["static-sites", "edge", "serverless", "jamstack", "cdn"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "static-sites",
+    "edge",
+    "serverless",
+    "jamstack",
+    "cdn"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +31,11 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "buildsPerMonth": 500, "concurrentBuilds": 1, "functionRequestsPerDay": 100000 }
+      "limits": {
+        "buildsPerMonth": 500,
+        "concurrentBuilds": 1,
+        "functionRequestsPerDay": 100000
+      }
     },
     {
       "name": "Pro",
@@ -37,7 +47,11 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "buildsPerMonth": 5000, "concurrentBuilds": 5, "functionRequestsPerMonth": 10000000 }
+      "limits": {
+        "buildsPerMonth": 5000,
+        "concurrentBuilds": 5,
+        "functionRequestsPerMonth": 10000000
+      }
     },
     {
       "name": "Business",
@@ -49,7 +63,11 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "buildsPerMonth": 20000, "concurrentBuilds": 20, "functionRequestsPerMonth": 50000000 }
+      "limits": {
+        "buildsPerMonth": 20000,
+        "concurrentBuilds": 20,
+        "functionRequestsPerMonth": 50000000
+      }
     },
     {
       "name": "Enterprise",

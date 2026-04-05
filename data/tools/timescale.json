@@ -5,8 +5,14 @@
   "url": "https://timescale.com",
   "pricingUrl": "https://www.tigerdata.com/pricing",
   "category": "database",
-  "tags": ["time-series", "postgresql", "managed-database", "analytics", "iot"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "time-series",
+    "postgresql",
+    "managed-database",
+    "analytics",
+    "iot"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -24,10 +30,19 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "storage", "unit": "GB", "pricePerUnit": 0.177, "unitQuantity": 1, "includedQuantity": 0 }
+        {
+          "name": "storage",
+          "unit": "GB",
+          "pricePerUnit": 0.177,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
-      "limits": { "maxCPUPerService": 8, "maxRAMGBPerService": 32 }
+      "limits": {
+        "maxCPUPerService": 8,
+        "maxRAMGBPerService": 32
+      }
     },
     {
       "name": "Scale",
@@ -38,10 +53,19 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "storage", "unit": "GB", "pricePerUnit": 0.212, "unitQuantity": 1, "includedQuantity": 0 }
+        {
+          "name": "storage",
+          "unit": "GB",
+          "pricePerUnit": 0.212,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
-      "limits": { "maxCPUPerService": 32, "maxRAMGBPerService": 128 }
+      "limits": {
+        "maxCPUPerService": 32,
+        "maxRAMGBPerService": 128
+      }
     },
     {
       "name": "Enterprise",

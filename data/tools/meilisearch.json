@@ -5,8 +5,14 @@
   "url": "https://www.meilisearch.com",
   "pricingUrl": "https://www.meilisearch.com/pricing",
   "category": "search",
-  "tags": ["search", "open-source", "typo-tolerance", "instant-search", "full-text"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "search",
+    "open-source",
+    "typo-tolerance",
+    "instant-search",
+    "full-text"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -36,8 +42,20 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "searches", "unit": "searches", "pricePerUnit": 0.40, "unitQuantity": 1000, "includedQuantity": 50000 },
-        { "name": "documents", "unit": "documents", "pricePerUnit": 0.30, "unitQuantity": 1000, "includedQuantity": 100000 }
+        {
+          "name": "searches",
+          "unit": "searches",
+          "pricePerUnit": 0.4,
+          "unitQuantity": 1000,
+          "includedQuantity": 50000
+        },
+        {
+          "name": "documents",
+          "unit": "documents",
+          "pricePerUnit": 0.3,
+          "unitQuantity": 1000,
+          "includedQuantity": 100000
+        }
       ],
       "features": [],
       "limits": {}
@@ -51,8 +69,20 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "searches", "unit": "searches", "pricePerUnit": 0.30, "unitQuantity": 1000, "includedQuantity": 250000 },
-        { "name": "documents", "unit": "documents", "pricePerUnit": 0.20, "unitQuantity": 1000, "includedQuantity": 1000000 }
+        {
+          "name": "searches",
+          "unit": "searches",
+          "pricePerUnit": 0.3,
+          "unitQuantity": 1000,
+          "includedQuantity": 250000
+        },
+        {
+          "name": "documents",
+          "unit": "documents",
+          "pricePerUnit": 0.2,
+          "unitQuantity": 1000,
+          "includedQuantity": 1000000
+        }
       ],
       "features": [],
       "limits": {}

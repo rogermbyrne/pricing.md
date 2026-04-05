@@ -5,8 +5,14 @@
   "url": "https://cohere.com",
   "pricingUrl": "https://cohere.com/pricing",
   "category": "ai-api",
-  "tags": ["inference", "embeddings", "reranking", "rag", "enterprise-ai"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "inference",
+    "embeddings",
+    "reranking",
+    "rag",
+    "enterprise-ai"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -36,10 +42,34 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "Command A input", "unit": "tokens", "pricePerUnit": 2.50, "unitQuantity": 1000000, "includedQuantity": 0 },
-        { "name": "Command A output", "unit": "tokens", "pricePerUnit": 10.00, "unitQuantity": 1000000, "includedQuantity": 0 },
-        { "name": "Command R input", "unit": "tokens", "pricePerUnit": 0.50, "unitQuantity": 1000000, "includedQuantity": 0 },
-        { "name": "Command R output", "unit": "tokens", "pricePerUnit": 1.50, "unitQuantity": 1000000, "includedQuantity": 0 }
+        {
+          "name": "Command A input",
+          "unit": "tokens",
+          "pricePerUnit": 2.5,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Command A output",
+          "unit": "tokens",
+          "pricePerUnit": 10,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Command R input",
+          "unit": "tokens",
+          "pricePerUnit": 0.5,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "Command R output",
+          "unit": "tokens",
+          "pricePerUnit": 1.5,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
       "limits": {}

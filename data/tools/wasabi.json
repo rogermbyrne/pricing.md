@@ -5,8 +5,13 @@
   "url": "https://wasabi.com",
   "pricingUrl": "https://wasabi.com/pricing",
   "category": "storage",
-  "tags": ["storage", "s3-compatible", "cloud-storage", "no-egress"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "storage",
+    "s3-compatible",
+    "cloud-storage",
+    "no-egress"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {

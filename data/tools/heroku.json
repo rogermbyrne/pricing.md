@@ -5,8 +5,13 @@
   "url": "https://www.heroku.com",
   "pricingUrl": "https://www.heroku.com/pricing",
   "category": "hosting",
-  "tags": ["paas", "dynos", "deployment", "salesforce"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "paas",
+    "dynos",
+    "deployment",
+    "salesforce"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +30,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "ramMb": 512, "computeHours": 1000 }
+      "limits": {
+        "ramMb": 512,
+        "computeHours": 1000
+      }
     },
     {
       "name": "Basic",
@@ -37,7 +45,9 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "ramMb": 512 }
+      "limits": {
+        "ramMb": 512
+      }
     },
     {
       "name": "Standard-1X",
@@ -49,7 +59,9 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "ramMb": 512 }
+      "limits": {
+        "ramMb": 512
+      }
     },
     {
       "name": "Standard-2X",
@@ -61,7 +73,9 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "ramMb": 1024 }
+      "limits": {
+        "ramMb": 1024
+      }
     },
     {
       "name": "Performance-M",
@@ -73,7 +87,9 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "ramMb": 2560 }
+      "limits": {
+        "ramMb": 2560
+      }
     },
     {
       "name": "Performance-L",
@@ -85,7 +101,9 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "ramMb": 14336 }
+      "limits": {
+        "ramMb": 14336
+      }
     },
     {
       "name": "Enterprise",

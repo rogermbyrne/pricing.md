@@ -5,8 +5,16 @@
   "url": "https://grafana.com",
   "pricingUrl": "https://grafana.com/pricing/",
   "category": "monitoring",
-  "tags": ["metrics", "logging", "tracing", "prometheus", "grafana", "observability", "dashboards"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "metrics",
+    "logging",
+    "tracing",
+    "prometheus",
+    "grafana",
+    "observability",
+    "dashboards"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -50,14 +58,14 @@
         {
           "name": "logs",
           "unit": "GB",
-          "pricePerUnit": 0.50,
+          "pricePerUnit": 0.5,
           "unitQuantity": 1,
           "includedQuantity": 50
         },
         {
           "name": "traces",
           "unit": "GB",
-          "pricePerUnit": 0.50,
+          "pricePerUnit": 0.5,
           "unitQuantity": 1,
           "includedQuantity": 50
         }
@@ -86,14 +94,14 @@
         {
           "name": "logs",
           "unit": "GB",
-          "pricePerUnit": 0.50,
+          "pricePerUnit": 0.5,
           "unitQuantity": 1,
           "includedQuantity": 50
         },
         {
           "name": "traces",
           "unit": "GB",
-          "pricePerUnit": 0.50,
+          "pricePerUnit": 0.5,
           "unitQuantity": 1,
           "includedQuantity": 50
         }

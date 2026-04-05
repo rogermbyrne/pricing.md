@@ -5,8 +5,14 @@
   "url": "https://segment.com",
   "pricingUrl": "https://segment.com/pricing",
   "category": "analytics",
-  "tags": ["cdp", "customer-data-platform", "data-pipeline", "integrations", "identity-resolution"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "cdp",
+    "customer-data-platform",
+    "data-pipeline",
+    "integrations",
+    "identity-resolution"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +31,11 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "monthlyTrackedUsers": 1000, "sources": 2, "warehouseDestinations": 1 }
+      "limits": {
+        "monthlyTrackedUsers": 1000,
+        "sources": 2,
+        "warehouseDestinations": 1
+      }
     },
     {
       "name": "Team",
@@ -36,10 +46,18 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "MTUs", "unit": "users", "pricePerUnit": 12, "unitQuantity": 1000, "includedQuantity": 10000 }
+        {
+          "name": "MTUs",
+          "unit": "users",
+          "pricePerUnit": 12,
+          "unitQuantity": 1000,
+          "includedQuantity": 10000
+        }
       ],
       "features": [],
-      "limits": { "seats": 10 }
+      "limits": {
+        "seats": 10
+      }
     },
     {
       "name": "Business",

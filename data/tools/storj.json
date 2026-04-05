@@ -5,8 +5,13 @@
   "url": "https://www.storj.io",
   "pricingUrl": "https://www.storj.io/pricing",
   "category": "storage",
-  "tags": ["storage", "s3-compatible", "decentralized", "cloud-storage"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "storage",
+    "s3-compatible",
+    "decentralized",
+    "cloud-storage"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {

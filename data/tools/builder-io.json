@@ -5,8 +5,13 @@
   "url": "https://builder.io",
   "pricingUrl": "https://www.builder.io/m/pricing",
   "category": "cms",
-  "tags": ["visual-cms", "headless-cms", "ai-design-to-code", "no-code"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "visual-cms",
+    "headless-cms",
+    "ai-design-to-code",
+    "no-code"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +30,11 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "users": 10, "monthlyVisualViews": 10000, "monthlyCodeGenerations": 20 }
+      "limits": {
+        "users": 10,
+        "monthlyVisualViews": 10000,
+        "monthlyCodeGenerations": 20
+      }
     },
     {
       "name": "Develop Pro",
@@ -37,7 +46,10 @@
       "seatPrice": 19,
       "usageMetrics": [],
       "features": [],
-      "limits": { "users": 20, "monthlyCodeGenerations": 200 }
+      "limits": {
+        "users": 20,
+        "monthlyCodeGenerations": 200
+      }
     },
     {
       "name": "Publish Pro",
@@ -49,7 +61,10 @@
       "seatPrice": 39,
       "usageMetrics": [],
       "features": [],
-      "limits": { "users": 20, "monthlyVisualViews": 100000 }
+      "limits": {
+        "users": 20,
+        "monthlyVisualViews": 100000
+      }
     },
     {
       "name": "Enterprise",

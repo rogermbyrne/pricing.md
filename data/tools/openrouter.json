@@ -5,8 +5,13 @@
   "url": "https://openrouter.ai",
   "pricingUrl": "https://openrouter.ai/pricing",
   "category": "ai-api",
-  "tags": ["ai", "api-gateway", "llm", "multi-model"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "ai",
+    "api-gateway",
+    "llm",
+    "multi-model"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +30,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "requestsPerDay": 50, "requestsPerMinute": 20 }
+      "limits": {
+        "requestsPerDay": 50,
+        "requestsPerMinute": 20
+      }
     },
     {
       "name": "Pay-as-you-go",
@@ -36,7 +44,13 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "platform-fee", "unit": "percentage", "pricePerUnit": 5.5, "unitQuantity": 1, "includedQuantity": 0 }
+        {
+          "name": "platform-fee",
+          "unit": "percentage",
+          "pricePerUnit": 5.5,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
       "limits": {}

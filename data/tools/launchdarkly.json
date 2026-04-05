@@ -5,8 +5,14 @@
   "url": "https://launchdarkly.com",
   "pricingUrl": "https://launchdarkly.com/pricing/",
   "category": "feature-flags",
-  "tags": ["feature-flags", "experimentation", "ab-testing", "targeting", "session-replays"],
-  "lastVerified": "2026-04-03",
+  "tags": [
+    "feature-flags",
+    "experimentation",
+    "ab-testing",
+    "targeting",
+    "session-replays"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

@@ -5,8 +5,13 @@
   "url": "https://orm.drizzle.team/drizzle-studio/overview",
   "pricingUrl": "https://orm.drizzle.team",
   "category": "database",
-  "tags": ["database", "open-source", "orm", "studio"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "database",
+    "open-source",
+    "orm",
+    "studio"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {

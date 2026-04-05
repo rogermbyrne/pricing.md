@@ -5,8 +5,14 @@
   "url": "https://pirsch.io",
   "pricingUrl": "https://pirsch.io/pricing",
   "category": "analytics",
-  "tags": ["web-analytics", "privacy", "gdpr", "cookieless", "white-label"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "web-analytics",
+    "privacy",
+    "gdpr",
+    "cookieless",
+    "white-label"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +31,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "pageviewsPerMonth": 10000, "websites": 50 }
+      "limits": {
+        "pageviewsPerMonth": 10000,
+        "websites": 50
+      }
     },
     {
       "name": "Standard 100K",
@@ -37,7 +46,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "pageviewsPerMonth": 100000, "websites": 50 }
+      "limits": {
+        "pageviewsPerMonth": 100000,
+        "websites": 50
+      }
     },
     {
       "name": "Standard 1M",
@@ -49,7 +61,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "pageviewsPerMonth": 1000000, "websites": 50 }
+      "limits": {
+        "pageviewsPerMonth": 1000000,
+        "websites": 50
+      }
     },
     {
       "name": "Enterprise",

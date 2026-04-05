@@ -5,8 +5,13 @@
   "url": "https://www.smtp2go.com",
   "pricingUrl": "https://www.smtp2go.com/pricing/",
   "category": "email",
-  "tags": ["email", "smtp", "email-delivery", "relay"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "email",
+    "smtp",
+    "email-delivery",
+    "relay"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

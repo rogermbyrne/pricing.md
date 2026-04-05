@@ -5,8 +5,13 @@
   "url": "https://matomo.org",
   "pricingUrl": "https://matomo.org/pricing/",
   "category": "analytics",
-  "tags": ["analytics", "web-analytics", "open-source", "privacy"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "analytics",
+    "web-analytics",
+    "open-source",
+    "privacy"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

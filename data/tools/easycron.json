@@ -5,8 +5,12 @@
   "url": "https://www.easycron.com",
   "pricingUrl": "https://www.easycron.com/pricing",
   "category": "scheduling",
-  "tags": ["scheduling", "cron", "automation"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "scheduling",
+    "cron",
+    "automation"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {

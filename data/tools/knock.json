@@ -5,8 +5,15 @@
   "url": "https://knock.app",
   "pricingUrl": "https://knock.app/pricing",
   "category": "notifications",
-  "tags": ["notifications", "messaging", "in-app", "push", "email", "sms"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "notifications",
+    "messaging",
+    "in-app",
+    "push",
+    "email",
+    "sms"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +32,9 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "messagesIncluded": 10000 }
+      "limits": {
+        "messagesIncluded": 10000
+      }
     },
     {
       "name": "Starter",
@@ -36,7 +45,13 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "messages", "unit": "messages", "pricePerUnit": 5, "unitQuantity": 1000, "includedQuantity": 50000 }
+        {
+          "name": "messages",
+          "unit": "messages",
+          "pricePerUnit": 5,
+          "unitQuantity": 1000,
+          "includedQuantity": 50000
+        }
       ],
       "features": [],
       "limits": {}

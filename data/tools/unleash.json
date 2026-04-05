@@ -5,8 +5,13 @@
   "url": "https://www.getunleash.io",
   "pricingUrl": "https://www.getunleash.io/pricing",
   "category": "feature-flags",
-  "tags": ["feature-flags", "open-source", "ab-testing", "rollouts"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "feature-flags",
+    "open-source",
+    "ab-testing",
+    "rollouts"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

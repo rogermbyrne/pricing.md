@@ -5,8 +5,13 @@
   "url": "https://customer.io",
   "pricingUrl": "https://customer.io/pricing",
   "category": "email",
-  "tags": ["marketing-automation", "behavioral-messaging", "push-notifications", "sms"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "marketing-automation",
+    "behavioral-messaging",
+    "push-notifications",
+    "sms"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

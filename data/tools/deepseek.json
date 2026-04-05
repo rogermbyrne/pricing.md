@@ -5,8 +5,13 @@
   "url": "https://deepseek.com",
   "pricingUrl": "https://api-docs.deepseek.com/quick_start/pricing",
   "category": "ai-api",
-  "tags": ["inference", "reasoning", "open-source-models", "code-generation"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "inference",
+    "reasoning",
+    "open-source-models",
+    "code-generation"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +30,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "freeTokens": 5000000, "freeTokenExpiryDays": 30 }
+      "limits": {
+        "freeTokens": 5000000,
+        "freeTokenExpiryDays": 30
+      }
     },
     {
       "name": "Pay As You Go",
@@ -36,12 +44,32 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "input tokens (cache miss)", "unit": "tokens", "pricePerUnit": 0.28, "unitQuantity": 1000000, "includedQuantity": 0 },
-        { "name": "input tokens (cache hit)", "unit": "tokens", "pricePerUnit": 0.028, "unitQuantity": 1000000, "includedQuantity": 0 },
-        { "name": "output tokens", "unit": "tokens", "pricePerUnit": 0.42, "unitQuantity": 1000000, "includedQuantity": 0 }
+        {
+          "name": "input tokens (cache miss)",
+          "unit": "tokens",
+          "pricePerUnit": 0.28,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "input tokens (cache hit)",
+          "unit": "tokens",
+          "pricePerUnit": 0.028,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "output tokens",
+          "unit": "tokens",
+          "pricePerUnit": 0.42,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
-      "limits": { "contextWindow": 128000 }
+      "limits": {
+        "contextWindow": 128000
+      }
     }
   ]
 }

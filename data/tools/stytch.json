@@ -5,8 +5,15 @@
   "url": "https://stytch.com",
   "pricingUrl": "https://stytch.com/pricing",
   "category": "auth",
-  "tags": ["authentication", "passwordless", "sso", "mfa", "b2b", "identity"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "authentication",
+    "passwordless",
+    "sso",
+    "mfa",
+    "b2b",
+    "identity"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +32,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "mau": 10000, "ssoConnections": 5 }
+      "limits": {
+        "mau": 10000,
+        "ssoConnections": 5
+      }
     },
     {
       "name": "Pro",
@@ -36,10 +46,18 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "additional-mau", "unit": "MAU", "pricePerUnit": 0.10, "unitQuantity": 1, "includedQuantity": 10000 }
+        {
+          "name": "additional-mau",
+          "unit": "MAU",
+          "pricePerUnit": 0.1,
+          "unitQuantity": 1,
+          "includedQuantity": 10000
+        }
       ],
       "features": [],
-      "limits": { "ssoConnections": 3 }
+      "limits": {
+        "ssoConnections": 3
+      }
     },
     {
       "name": "Scale",
@@ -50,10 +68,18 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "additional-mau", "unit": "MAU", "pricePerUnit": 0.10, "unitQuantity": 1, "includedQuantity": 10000 }
+        {
+          "name": "additional-mau",
+          "unit": "MAU",
+          "pricePerUnit": 0.1,
+          "unitQuantity": 1,
+          "includedQuantity": 10000
+        }
       ],
       "features": [],
-      "limits": { "ssoConnections": 8 }
+      "limits": {
+        "ssoConnections": 8
+      }
     },
     {
       "name": "Enterprise",

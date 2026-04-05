@@ -5,8 +5,14 @@
   "url": "https://prismic.io",
   "pricingUrl": "https://prismic.io/pricing",
   "category": "cms",
-  "tags": ["headless-cms", "api-first", "visual-builder", "slices", "graphql"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "headless-cms",
+    "api-first",
+    "visual-builder",
+    "slices",
+    "graphql"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +31,12 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "users": 1, "apiCallsPerMonth": 4000000, "cdnBandwidthGb": 100, "locales": 2 }
+      "limits": {
+        "users": 1,
+        "apiCallsPerMonth": 4000000,
+        "cdnBandwidthGb": 100,
+        "locales": 2
+      }
     },
     {
       "name": "Starter",
@@ -37,7 +48,12 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "users": 3, "apiCallsPerMonth": 4000000, "cdnBandwidthGb": 100, "locales": 3 }
+      "limits": {
+        "users": 3,
+        "apiCallsPerMonth": 4000000,
+        "cdnBandwidthGb": 100,
+        "locales": 3
+      }
     },
     {
       "name": "Small",
@@ -49,7 +65,11 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "users": 7, "apiCallsPerMonth": 4000000, "locales": 4 }
+      "limits": {
+        "users": 7,
+        "apiCallsPerMonth": 4000000,
+        "locales": 4
+      }
     },
     {
       "name": "Medium",
@@ -61,7 +81,12 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "users": 25, "apiCallsPerMonth": 5000000, "cdnBandwidthGb": 500, "locales": 5 }
+      "limits": {
+        "users": 25,
+        "apiCallsPerMonth": 5000000,
+        "cdnBandwidthGb": 500,
+        "locales": 5
+      }
     },
     {
       "name": "Enterprise",

@@ -5,8 +5,15 @@
   "url": "https://www.confluent.io",
   "pricingUrl": "https://www.confluent.io/pricing",
   "category": "queues",
-  "tags": ["kafka", "streaming", "event-driven", "flink", "connectors", "schema-registry"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "kafka",
+    "streaming",
+    "event-driven",
+    "flink",
+    "connectors",
+    "schema-registry"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -24,13 +31,39 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "compute", "unit": "eCKU-hours", "pricePerUnit": 0.14, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "data-in", "unit": "GB", "pricePerUnit": 0.05, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "data-out", "unit": "GB", "pricePerUnit": 0.05, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "storage", "unit": "GB", "pricePerUnit": 0.08, "unitQuantity": 1, "includedQuantity": 0 }
+        {
+          "name": "compute",
+          "unit": "eCKU-hours",
+          "pricePerUnit": 0.14,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "data-in",
+          "unit": "GB",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "data-out",
+          "unit": "GB",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "storage",
+          "unit": "GB",
+          "pricePerUnit": 0.08,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
-      "limits": { "maxPartitions": 1500 }
+      "limits": {
+        "maxPartitions": 1500
+      }
     },
     {
       "name": "Standard",
@@ -41,12 +74,32 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "compute", "unit": "eCKU-hours", "pricePerUnit": 0.75, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "data-in", "unit": "GB", "pricePerUnit": 0.05, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "data-out", "unit": "GB", "pricePerUnit": 0.05, "unitQuantity": 1, "includedQuantity": 0 }
+        {
+          "name": "compute",
+          "unit": "eCKU-hours",
+          "pricePerUnit": 0.75,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "data-in",
+          "unit": "GB",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "data-out",
+          "unit": "GB",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
-      "limits": { "maxPartitions": 2500 }
+      "limits": {
+        "maxPartitions": 2500
+      }
     },
     {
       "name": "Enterprise",
@@ -57,12 +110,32 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "compute", "unit": "eCKU-hours", "pricePerUnit": 2.00, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "data-in", "unit": "GB", "pricePerUnit": 0.04, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "data-out", "unit": "GB", "pricePerUnit": 0.04, "unitQuantity": 1, "includedQuantity": 0 }
+        {
+          "name": "compute",
+          "unit": "eCKU-hours",
+          "pricePerUnit": 2,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "data-in",
+          "unit": "GB",
+          "pricePerUnit": 0.04,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "data-out",
+          "unit": "GB",
+          "pricePerUnit": 0.04,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
-      "limits": { "maxPartitions": 96000 }
+      "limits": {
+        "maxPartitions": 96000
+      }
     }
   ]
 }

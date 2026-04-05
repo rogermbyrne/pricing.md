@@ -5,8 +5,15 @@
   "url": "https://tina.io",
   "pricingUrl": "https://tina.io/pricing/",
   "category": "cms",
-  "tags": ["headless-cms", "git-backed", "visual-editing", "markdown", "jamstack", "open-source"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "headless-cms",
+    "git-backed",
+    "visual-editing",
+    "markdown",
+    "jamstack",
+    "open-source"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +32,9 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "users": 2 }
+      "limits": {
+        "users": 2
+      }
     },
     {
       "name": "Team",
@@ -37,7 +46,9 @@
       "seatPrice": 9,
       "usageMetrics": [],
       "features": [],
-      "limits": { "usersMax": 10 }
+      "limits": {
+        "usersMax": 10
+      }
     },
     {
       "name": "Team Plus",
@@ -49,7 +60,9 @@
       "seatPrice": 15,
       "usageMetrics": [],
       "features": [],
-      "limits": { "usersMax": 20 }
+      "limits": {
+        "usersMax": 20
+      }
     },
     {
       "name": "Business",

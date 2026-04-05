@@ -5,8 +5,14 @@
   "url": "https://trychroma.com",
   "pricingUrl": "https://www.trychroma.com/pricing",
   "category": "search",
-  "tags": ["vector-database", "embeddings", "open-source", "ai-native", "retrieval"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "vector-database",
+    "embeddings",
+    "open-source",
+    "ai-native",
+    "retrieval"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -24,12 +30,34 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "write", "unit": "GiB", "pricePerUnit": 2.50, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "storage", "unit": "GiB", "pricePerUnit": 0.33, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "network", "unit": "GiB", "pricePerUnit": 0.09, "unitQuantity": 1, "includedQuantity": 0 }
+        {
+          "name": "write",
+          "unit": "GiB",
+          "pricePerUnit": 2.5,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "storage",
+          "unit": "GiB",
+          "pricePerUnit": 0.33,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "network",
+          "unit": "GiB",
+          "pricePerUnit": 0.09,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
-      "limits": { "databases": 10, "teamMembers": 10, "freeCreditsUsd": 5 }
+      "limits": {
+        "databases": 10,
+        "teamMembers": 10,
+        "freeCreditsUsd": 5
+      }
     },
     {
       "name": "Team",
@@ -40,12 +68,34 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "write", "unit": "GiB", "pricePerUnit": 2.50, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "storage", "unit": "GiB", "pricePerUnit": 0.33, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "network", "unit": "GiB", "pricePerUnit": 0.09, "unitQuantity": 1, "includedQuantity": 0 }
+        {
+          "name": "write",
+          "unit": "GiB",
+          "pricePerUnit": 2.5,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "storage",
+          "unit": "GiB",
+          "pricePerUnit": 0.33,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "network",
+          "unit": "GiB",
+          "pricePerUnit": 0.09,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
-      "limits": { "databases": 100, "teamMembers": 30, "includedCreditsPerMonthUsd": 100 }
+      "limits": {
+        "databases": 100,
+        "teamMembers": 30,
+        "includedCreditsPerMonthUsd": 100
+      }
     },
     {
       "name": "Enterprise",

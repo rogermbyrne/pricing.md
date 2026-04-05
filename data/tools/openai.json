@@ -5,8 +5,15 @@
   "url": "https://openai.com",
   "pricingUrl": "https://openai.com/api/pricing/",
   "category": "ai-api",
-  "tags": ["llm", "gpt", "reasoning", "multimodal", "code-generation", "embeddings"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "llm",
+    "gpt",
+    "reasoning",
+    "multimodal",
+    "code-generation",
+    "embeddings"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -27,14 +34,14 @@
         {
           "name": "GPT-4o input",
           "unit": "tokens",
-          "pricePerUnit": 2.50,
+          "pricePerUnit": 2.5,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "GPT-4o output",
           "unit": "tokens",
-          "pricePerUnit": 10.00,
+          "pricePerUnit": 10,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
@@ -48,21 +55,21 @@
         {
           "name": "GPT-4o mini output",
           "unit": "tokens",
-          "pricePerUnit": 0.60,
+          "pricePerUnit": 0.6,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "o3 input",
           "unit": "tokens",
-          "pricePerUnit": 2.00,
+          "pricePerUnit": 2,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "o3 output",
           "unit": "tokens",
-          "pricePerUnit": 8.00,
+          "pricePerUnit": 8,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
@@ -76,7 +83,7 @@
         {
           "name": "o4-mini output",
           "unit": "tokens",
-          "pricePerUnit": 2.20,
+          "pricePerUnit": 2.2,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         }

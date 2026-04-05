@@ -5,8 +5,15 @@
   "url": "https://kinde.com",
   "pricingUrl": "https://kinde.com/pricing",
   "category": "auth",
-  "tags": ["authentication", "user-management", "sso", "mfa", "feature-flags", "rbac"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "authentication",
+    "user-management",
+    "sso",
+    "mfa",
+    "feature-flags",
+    "rbac"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +32,12 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "mau": 10500, "roles": 2, "permissions": 10, "featureFlags": 10 }
+      "limits": {
+        "mau": 10500,
+        "roles": 2,
+        "permissions": 10,
+        "featureFlags": 10
+      }
     },
     {
       "name": "Pro",
@@ -36,7 +48,13 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "additional-mau", "unit": "MAU", "pricePerUnit": 0.0175, "unitQuantity": 1, "includedQuantity": 10500 }
+        {
+          "name": "additional-mau",
+          "unit": "MAU",
+          "pricePerUnit": 0.0175,
+          "unitQuantity": 1,
+          "includedQuantity": 10500
+        }
       ],
       "features": [],
       "limits": {}
@@ -50,10 +68,18 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "additional-mau", "unit": "MAU", "pricePerUnit": 0.0163, "unitQuantity": 1, "includedQuantity": 10500 }
+        {
+          "name": "additional-mau",
+          "unit": "MAU",
+          "pricePerUnit": 0.0163,
+          "unitQuantity": 1,
+          "includedQuantity": 10500
+        }
       ],
       "features": [],
-      "limits": { "environments": 6 }
+      "limits": {
+        "environments": 6
+      }
     },
     {
       "name": "Scale",
@@ -64,10 +90,18 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "additional-mau", "unit": "MAU", "pricePerUnit": 0.0151, "unitQuantity": 1, "includedQuantity": 10500 }
+        {
+          "name": "additional-mau",
+          "unit": "MAU",
+          "pricePerUnit": 0.0151,
+          "unitQuantity": 1,
+          "includedQuantity": 10500
+        }
       ],
       "features": [],
-      "limits": { "environments": 11 }
+      "limits": {
+        "environments": 11
+      }
     },
     {
       "name": "Enterprise",

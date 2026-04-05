@@ -5,8 +5,12 @@
   "url": "https://pushover.net",
   "pricingUrl": "https://pushover.net/pricing",
   "category": "notifications",
-  "tags": ["notifications", "push", "simple"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "notifications",
+    "push",
+    "simple"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {

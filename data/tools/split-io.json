@@ -5,8 +5,13 @@
   "url": "https://www.split.io",
   "pricingUrl": "https://www.split.io/pricing/",
   "category": "feature-flags",
-  "tags": ["feature-flags", "experimentation", "ab-testing", "harness"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "feature-flags",
+    "experimentation",
+    "ab-testing",
+    "harness"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

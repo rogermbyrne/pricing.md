@@ -5,8 +5,14 @@
   "url": "https://saucelabs.com",
   "pricingUrl": "https://saucelabs.com/pricing",
   "category": "testing",
-  "tags": ["cloud-testing", "selenium", "appium", "real-devices", "cross-browser"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "cloud-testing",
+    "selenium",
+    "appium",
+    "real-devices",
+    "cross-browser"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +31,9 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "parallelTests": 1 }
+      "limits": {
+        "parallelTests": 1
+      }
     },
     {
       "name": "Virtual Cloud",
@@ -37,7 +45,9 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "parallelTests": 1 }
+      "limits": {
+        "parallelTests": 1
+      }
     },
     {
       "name": "Real Device Cloud",
@@ -49,7 +59,9 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "parallelTests": 1 }
+      "limits": {
+        "parallelTests": 1
+      }
     },
     {
       "name": "Enterprise",

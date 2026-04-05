@@ -5,8 +5,13 @@
   "url": "https://temporal.io",
   "pricingUrl": "https://temporal.io/pricing",
   "category": "queues",
-  "tags": ["workflow-orchestration", "durable-execution", "distributed-systems", "microservices"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "workflow-orchestration",
+    "durable-execution",
+    "distributed-systems",
+    "microservices"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +30,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "creditsDollars": 1000, "creditValidityDays": 90 }
+      "limits": {
+        "creditsDollars": 1000,
+        "creditValidityDays": 90
+      }
     },
     {
       "name": "Essentials",
@@ -36,10 +44,19 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "actions", "unit": "actions", "pricePerUnit": 50, "unitQuantity": 1000000, "includedQuantity": 1000000 }
+        {
+          "name": "actions",
+          "unit": "actions",
+          "pricePerUnit": 50,
+          "unitQuantity": 1000000,
+          "includedQuantity": 1000000
+        }
       ],
       "features": [],
-      "limits": { "activeStorageGB": 1, "retainedStorageGB": 40 }
+      "limits": {
+        "activeStorageGB": 1,
+        "retainedStorageGB": 40
+      }
     },
     {
       "name": "Business",
@@ -50,10 +67,19 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "actions", "unit": "actions", "pricePerUnit": 50, "unitQuantity": 1000000, "includedQuantity": 2500000 }
+        {
+          "name": "actions",
+          "unit": "actions",
+          "pricePerUnit": 50,
+          "unitQuantity": 1000000,
+          "includedQuantity": 2500000
+        }
       ],
       "features": [],
-      "limits": { "activeStorageGB": 2, "retainedStorageGB": 100 }
+      "limits": {
+        "activeStorageGB": 2,
+        "retainedStorageGB": 100
+      }
     },
     {
       "name": "Enterprise",

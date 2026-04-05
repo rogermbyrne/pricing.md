@@ -5,8 +5,14 @@
   "url": "https://gitlab.com",
   "pricingUrl": "https://about.gitlab.com/pricing/",
   "category": "ci-cd",
-  "tags": ["ci-cd", "devops", "pipelines", "gitlab", "scm"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "ci-cd",
+    "devops",
+    "pipelines",
+    "gitlab",
+    "scm"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +31,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "computeMinutesPerMonth": 400, "storageGiB": 10 }
+      "limits": {
+        "computeMinutesPerMonth": 400,
+        "storageGiB": 10
+      }
     },
     {
       "name": "Premium",
@@ -37,7 +46,10 @@
       "seatPrice": 29,
       "usageMetrics": [],
       "features": [],
-      "limits": { "computeMinutesPerMonth": 10000, "storageGiB": 500 }
+      "limits": {
+        "computeMinutesPerMonth": 10000,
+        "storageGiB": 500
+      }
     },
     {
       "name": "Ultimate",
@@ -49,7 +61,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "computeMinutesPerMonth": 50000, "storageGiB": 500 }
+      "limits": {
+        "computeMinutesPerMonth": 50000,
+        "storageGiB": 500
+      }
     }
   ]
 }

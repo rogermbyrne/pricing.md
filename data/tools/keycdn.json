@@ -5,8 +5,12 @@
   "url": "https://www.keycdn.com",
   "pricingUrl": "https://www.keycdn.com/pricing",
   "category": "edge",
-  "tags": ["edge", "cdn", "pay-as-you-go"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "edge",
+    "cdn",
+    "pay-as-you-go"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {

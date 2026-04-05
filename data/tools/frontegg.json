@@ -5,8 +5,15 @@
   "url": "https://frontegg.com",
   "pricingUrl": "https://frontegg.com/pricing",
   "category": "auth",
-  "tags": ["authentication", "b2b", "multi-tenancy", "sso", "user-management", "admin-portal"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "authentication",
+    "b2b",
+    "multi-tenancy",
+    "sso",
+    "user-management",
+    "admin-portal"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +32,9 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "organizations": 5 }
+      "limits": {
+        "organizations": 5
+      }
     },
     {
       "name": "Starter",
@@ -37,7 +46,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "mau": 1000, "ssoConnections": 3 }
+      "limits": {
+        "mau": 1000,
+        "ssoConnections": 3
+      }
     },
     {
       "name": "Growth",
@@ -49,7 +61,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "mau": 5000, "ssoConnections": 10 }
+      "limits": {
+        "mau": 5000,
+        "ssoConnections": 10
+      }
     },
     {
       "name": "Enterprise",

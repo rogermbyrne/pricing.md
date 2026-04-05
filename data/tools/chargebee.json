@@ -5,8 +5,14 @@
   "url": "https://www.chargebee.com",
   "pricingUrl": "https://www.chargebee.com/pricing/",
   "category": "payments",
-  "tags": ["subscription-billing", "recurring-payments", "dunning", "invoicing", "revenue-recognition"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "subscription-billing",
+    "recurring-payments",
+    "dunning",
+    "invoicing",
+    "revenue-recognition"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +31,9 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "lifetimeBillingFreeUSD": 250000 }
+      "limits": {
+        "lifetimeBillingFreeUSD": 250000
+      }
     },
     {
       "name": "Performance",

@@ -6,7 +6,7 @@
   "pricingUrl": "https://deno.com/deploy/pricing",
   "category": "edge",
   "tags": [],
-  "lastVerified": "2026-04-03",
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -52,7 +52,7 @@
         {
           "name": "egress",
           "unit": "GB",
-          "pricePerUnit": 0.50,
+          "pricePerUnit": 0.5,
           "unitQuantity": 1,
           "includedQuantity": 200
         },
@@ -73,7 +73,7 @@
         {
           "name": "kv-writes",
           "unit": "writes",
-          "pricePerUnit": 2.50,
+          "pricePerUnit": 2.5,
           "unitQuantity": 1000000,
           "includedQuantity": 900000
         }
@@ -100,7 +100,7 @@
         {
           "name": "egress",
           "unit": "GB",
-          "pricePerUnit": 0.50,
+          "pricePerUnit": 0.5,
           "unitQuantity": 1,
           "includedQuantity": 300
         },
@@ -121,7 +121,7 @@
         {
           "name": "kv-writes",
           "unit": "writes",
-          "pricePerUnit": 2.50,
+          "pricePerUnit": 2.5,
           "unitQuantity": 1000000,
           "includedQuantity": 3000000
         }

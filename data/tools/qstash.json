@@ -5,8 +5,15 @@
   "url": "https://upstash.com/docs/qstash",
   "pricingUrl": "https://upstash.com/pricing/qstash",
   "category": "queues",
-  "tags": ["serverless", "messaging", "scheduling", "queues", "http-messaging", "cron"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "serverless",
+    "messaging",
+    "scheduling",
+    "queues",
+    "http-messaging",
+    "cron"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +32,11 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "messagesPerDay": 1000, "maxMessageSizeMB": 1, "activeSchedules": 10 }
+      "limits": {
+        "messagesPerDay": 1000,
+        "maxMessageSizeMB": 1,
+        "activeSchedules": 10
+      }
     },
     {
       "name": "Pay as You Go",
@@ -36,10 +47,19 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "messages", "unit": "messages", "pricePerUnit": 1.00, "unitQuantity": 100000, "includedQuantity": 0 }
+        {
+          "name": "messages",
+          "unit": "messages",
+          "pricePerUnit": 1,
+          "unitQuantity": 100000,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
-      "limits": { "maxMessageSizeMB": 10, "activeSchedules": 1000 }
+      "limits": {
+        "maxMessageSizeMB": 10,
+        "activeSchedules": 1000
+      }
     },
     {
       "name": "Fixed 1M",
@@ -51,7 +71,11 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "messagesPerDay": 1000000, "maxMessageSizeMB": 50, "activeSchedules": 10000 }
+      "limits": {
+        "messagesPerDay": 1000000,
+        "maxMessageSizeMB": 50,
+        "activeSchedules": 10000
+      }
     },
     {
       "name": "Fixed 10M",
@@ -63,7 +87,11 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "messagesPerDay": 10000000, "maxMessageSizeMB": 50, "activeSchedules": 50000 }
+      "limits": {
+        "messagesPerDay": 10000000,
+        "maxMessageSizeMB": 50,
+        "activeSchedules": 50000
+      }
     },
     {
       "name": "Enterprise",

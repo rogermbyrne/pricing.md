@@ -5,8 +5,13 @@
   "url": "https://loops.so",
   "pricingUrl": "https://loops.so/pricing",
   "category": "email",
-  "tags": ["saas-email", "transactional-email", "marketing-email", "email-automation"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "saas-email",
+    "transactional-email",
+    "marketing-email",
+    "email-automation"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

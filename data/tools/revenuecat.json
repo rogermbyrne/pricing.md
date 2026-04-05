@@ -5,8 +5,13 @@
   "url": "https://www.revenuecat.com",
   "pricingUrl": "https://www.revenuecat.com/pricing/",
   "category": "payments",
-  "tags": ["payments", "subscriptions", "mobile", "in-app-purchases"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "payments",
+    "subscriptions",
+    "mobile",
+    "in-app-purchases"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

@@ -5,8 +5,15 @@
   "url": "https://www.propelauth.com",
   "pricingUrl": "https://www.propelauth.com/pricing",
   "category": "auth",
-  "tags": ["authentication", "b2b", "sso", "saml", "rbac", "organizations"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "authentication",
+    "b2b",
+    "sso",
+    "saml",
+    "rbac",
+    "organizations"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +32,9 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "monthlyActiveUsers": 10000 }
+      "limits": {
+        "monthlyActiveUsers": 10000
+      }
     },
     {
       "name": "Growth",
@@ -36,7 +45,13 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "additional-mau", "unit": "MAU", "pricePerUnit": 0.05, "unitQuantity": 1, "includedQuantity": 10000 }
+        {
+          "name": "additional-mau",
+          "unit": "MAU",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1,
+          "includedQuantity": 10000
+        }
       ],
       "features": [],
       "limits": {}
@@ -50,7 +65,13 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "additional-mau", "unit": "MAU", "pricePerUnit": 0.05, "unitQuantity": 1, "includedQuantity": 10000 }
+        {
+          "name": "additional-mau",
+          "unit": "MAU",
+          "pricePerUnit": 0.05,
+          "unitQuantity": 1,
+          "includedQuantity": 10000
+        }
       ],
       "features": [],
       "limits": {}

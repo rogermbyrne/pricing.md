@@ -5,8 +5,14 @@
   "url": "https://flipt.io",
   "pricingUrl": "https://flipt.io/pricing",
   "category": "feature-flags",
-  "tags": ["feature-flags", "open-source", "git-native", "self-hosted", "grpc"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "feature-flags",
+    "open-source",
+    "git-native",
+    "self-hosted",
+    "grpc"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

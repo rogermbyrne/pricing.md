@@ -5,8 +5,13 @@
   "url": "https://xata.io",
   "pricingUrl": "https://xata.io/pricing",
   "category": "database",
-  "tags": ["postgresql", "serverless", "branching", "scale-to-zero"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "postgresql",
+    "serverless",
+    "branching",
+    "scale-to-zero"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -24,9 +29,27 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "compute-micro", "unit": "hours", "pricePerUnit": 0.012, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "storage-nvme", "unit": "GB", "pricePerUnit": 0.30, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "bandwidth", "unit": "GB", "pricePerUnit": 0.09, "unitQuantity": 1, "includedQuantity": 0 }
+        {
+          "name": "compute-micro",
+          "unit": "hours",
+          "pricePerUnit": 0.012,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "storage-nvme",
+          "unit": "GB",
+          "pricePerUnit": 0.3,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "bandwidth",
+          "unit": "GB",
+          "pricePerUnit": 0.09,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
       "limits": {}

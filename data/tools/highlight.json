@@ -5,8 +5,15 @@
   "url": "https://www.highlight.io",
   "pricingUrl": "https://www.highlight.io/pricing",
   "category": "monitoring",
-  "tags": ["session-replay", "error-monitoring", "logging", "tracing", "open-source", "observability"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "session-replay",
+    "error-monitoring",
+    "logging",
+    "tracing",
+    "open-source",
+    "observability"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

@@ -5,8 +5,14 @@
   "url": "https://typesense.org",
   "pricingUrl": "https://cloud.typesense.org/pricing",
   "category": "search",
-  "tags": ["search", "open-source", "typo-tolerance", "vector-search", "geo-search"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "search",
+    "open-source",
+    "typo-tolerance",
+    "vector-search",
+    "geo-search"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -36,10 +42,18 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "bandwidth", "unit": "GB", "pricePerUnit": 0.10, "unitQuantity": 1, "includedQuantity": 0 }
+        {
+          "name": "bandwidth",
+          "unit": "GB",
+          "pricePerUnit": 0.1,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
-      "limits": { "ramMB": 512 }
+      "limits": {
+        "ramMB": 512
+      }
     },
     {
       "name": "Cloud Production",
@@ -50,10 +64,18 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "bandwidth", "unit": "GB", "pricePerUnit": 0.10, "unitQuantity": 1, "includedQuantity": 0 }
+        {
+          "name": "bandwidth",
+          "unit": "GB",
+          "pricePerUnit": 0.1,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
-      "limits": { "ramGB": 8 }
+      "limits": {
+        "ramGB": 8
+      }
     },
     {
       "name": "Enterprise",

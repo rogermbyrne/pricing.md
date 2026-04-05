@@ -5,8 +5,14 @@
   "url": "https://www.brevo.com",
   "pricingUrl": "https://www.brevo.com/pricing/",
   "category": "email",
-  "tags": ["email-marketing", "marketing-automation", "crm", "sms", "transactional-email"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "email-marketing",
+    "marketing-automation",
+    "crm",
+    "sms",
+    "transactional-email"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

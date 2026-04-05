@@ -5,8 +5,13 @@
   "url": "https://www.lemonsqueezy.com",
   "pricingUrl": "https://www.lemonsqueezy.com/pricing",
   "category": "payments",
-  "tags": ["merchant-of-record", "digital-products", "subscriptions", "tax-compliance"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "merchant-of-record",
+    "digital-products",
+    "subscriptions",
+    "tax-compliance"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -24,7 +29,13 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "transaction-fee", "unit": "percentage", "pricePerUnit": 5, "unitQuantity": 1, "includedQuantity": 0 }
+        {
+          "name": "transaction-fee",
+          "unit": "percentage",
+          "pricePerUnit": 5,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
       "limits": {}

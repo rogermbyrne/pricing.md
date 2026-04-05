@@ -5,8 +5,14 @@
   "url": "https://mistral.ai",
   "pricingUrl": "https://mistral.ai/pricing",
   "category": "ai-api",
-  "tags": ["llm", "open-weight", "eu-hosted", "gdpr", "code-generation"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "llm",
+    "open-weight",
+    "eu-hosted",
+    "gdpr",
+    "code-generation"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -27,28 +33,28 @@
         {
           "name": "Mistral Large 3 input",
           "unit": "tokens",
-          "pricePerUnit": 2.00,
+          "pricePerUnit": 2,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "Mistral Large 3 output",
           "unit": "tokens",
-          "pricePerUnit": 6.00,
+          "pricePerUnit": 6,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "Mistral Small 3 input",
           "unit": "tokens",
-          "pricePerUnit": 0.20,
+          "pricePerUnit": 0.2,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "Mistral Small 3 output",
           "unit": "tokens",
-          "pricePerUnit": 0.60,
+          "pricePerUnit": 0.6,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         }

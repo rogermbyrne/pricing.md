@@ -5,8 +5,14 @@
   "url": "https://grafbase.com",
   "pricingUrl": "https://grafbase.com/pricing",
   "category": "database",
-  "tags": ["database", "graphql", "federation", "rust", "edge"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "database",
+    "graphql",
+    "federation",
+    "rust",
+    "edge"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

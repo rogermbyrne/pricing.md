@@ -5,8 +5,14 @@
   "url": "https://cloudflare.com",
   "pricingUrl": "https://cloudflare.com/plans/",
   "category": "edge",
-  "tags": ["cdn", "edge", "security", "workers", "ddos"],
-  "lastVerified": "2026-04-03",
+  "tags": [
+    "cdn",
+    "edge",
+    "security",
+    "workers",
+    "ddos"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

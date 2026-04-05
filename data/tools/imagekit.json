@@ -5,8 +5,13 @@
   "url": "https://imagekit.io",
   "pricingUrl": "https://imagekit.io/plans/",
   "category": "storage",
-  "tags": ["image-cdn", "video", "transformations", "optimization"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "image-cdn",
+    "video",
+    "transformations",
+    "optimization"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +30,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "bandwidthGB": 20, "storageGB": 3 }
+      "limits": {
+        "bandwidthGB": 20,
+        "storageGB": 3
+      }
     },
     {
       "name": "Lite",
@@ -36,8 +44,20 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "bandwidth", "unit": "GB", "pricePerUnit": 0.50, "unitQuantity": 1, "includedQuantity": 40 },
-        { "name": "storage", "unit": "GB", "pricePerUnit": 0.10, "unitQuantity": 1, "includedQuantity": 10 }
+        {
+          "name": "bandwidth",
+          "unit": "GB",
+          "pricePerUnit": 0.5,
+          "unitQuantity": 1,
+          "includedQuantity": 40
+        },
+        {
+          "name": "storage",
+          "unit": "GB",
+          "pricePerUnit": 0.1,
+          "unitQuantity": 1,
+          "includedQuantity": 10
+        }
       ],
       "features": [],
       "limits": {}
@@ -51,8 +71,20 @@
       "annualDiscount": null,
       "seatPrice": 9,
       "usageMetrics": [
-        { "name": "bandwidth", "unit": "GB", "pricePerUnit": 0.45, "unitQuantity": 1, "includedQuantity": 225 },
-        { "name": "storage", "unit": "GB", "pricePerUnit": 0.09, "unitQuantity": 1, "includedQuantity": 225 }
+        {
+          "name": "bandwidth",
+          "unit": "GB",
+          "pricePerUnit": 0.45,
+          "unitQuantity": 1,
+          "includedQuantity": 225
+        },
+        {
+          "name": "storage",
+          "unit": "GB",
+          "pricePerUnit": 0.09,
+          "unitQuantity": 1,
+          "includedQuantity": 225
+        }
       ],
       "features": [],
       "limits": {}

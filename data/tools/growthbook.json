@@ -5,8 +5,14 @@
   "url": "https://growthbook.io",
   "pricingUrl": "https://growthbook.io/pricing",
   "category": "feature-flags",
-  "tags": ["feature-flags", "a-b-testing", "experimentation", "open-source", "warehouse-native"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "feature-flags",
+    "a-b-testing",
+    "experimentation",
+    "open-source",
+    "warehouse-native"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +31,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "seats": 3, "cdnRequestsPerMonth": 1000000 }
+      "limits": {
+        "seats": 3,
+        "cdnRequestsPerMonth": 1000000
+      }
     },
     {
       "name": "Pro",
@@ -37,7 +46,10 @@
       "seatPrice": 40,
       "usageMetrics": [],
       "features": [],
-      "limits": { "seats": 50, "cdnRequestsPerMonth": 2000000 }
+      "limits": {
+        "seats": 50,
+        "cdnRequestsPerMonth": 2000000
+      }
     },
     {
       "name": "Enterprise",

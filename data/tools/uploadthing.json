@@ -5,8 +5,13 @@
   "url": "https://uploadthing.com",
   "pricingUrl": "https://uploadthing.com/pricing",
   "category": "storage",
-  "tags": ["file-upload", "nextjs", "react", "storage"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "file-upload",
+    "nextjs",
+    "react",
+    "storage"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +30,9 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "storageGB": 2 }
+      "limits": {
+        "storageGB": 2
+      }
     },
     {
       "name": "App",
@@ -37,7 +44,9 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "storageGB": 100 }
+      "limits": {
+        "storageGB": 100
+      }
     },
     {
       "name": "Pro",
@@ -48,7 +57,13 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "storage-overage", "unit": "GB", "pricePerUnit": 0.08, "unitQuantity": 1, "includedQuantity": 250 }
+        {
+          "name": "storage-overage",
+          "unit": "GB",
+          "pricePerUnit": 0.08,
+          "unitQuantity": 1,
+          "includedQuantity": 250
+        }
       ],
       "features": [],
       "limits": {}

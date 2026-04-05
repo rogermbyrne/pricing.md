@@ -5,8 +5,13 @@
   "url": "https://betterstack.com",
   "pricingUrl": "https://betterstack.com/pricing",
   "category": "monitoring",
-  "tags": ["uptime-monitoring", "logging", "incident-management", "status-pages"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "uptime-monitoring",
+    "logging",
+    "incident-management",
+    "status-pages"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

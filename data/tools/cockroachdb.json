@@ -5,8 +5,14 @@
   "url": "https://www.cockroachlabs.com",
   "pricingUrl": "https://www.cockroachlabs.com/pricing/",
   "category": "database",
-  "tags": ["sql", "distributed", "postgresql", "multi-region", "serverless"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "sql",
+    "distributed",
+    "postgresql",
+    "multi-region",
+    "serverless"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -24,8 +30,20 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "request-units", "unit": "RU", "pricePerUnit": 0.0000002, "unitQuantity": 1, "includedQuantity": 50000000 },
-        { "name": "storage", "unit": "GiB", "pricePerUnit": 0.50, "unitQuantity": 1, "includedQuantity": 10 }
+        {
+          "name": "request-units",
+          "unit": "RU",
+          "pricePerUnit": 2e-7,
+          "unitQuantity": 1,
+          "includedQuantity": 50000000
+        },
+        {
+          "name": "storage",
+          "unit": "GiB",
+          "pricePerUnit": 0.5,
+          "unitQuantity": 1,
+          "includedQuantity": 10
+        }
       ],
       "features": [],
       "limits": {}
@@ -39,8 +57,20 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "compute", "unit": "vCPU-hours", "pricePerUnit": 0.09, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "storage", "unit": "GiB", "pricePerUnit": 0.50, "unitQuantity": 1, "includedQuantity": 10 }
+        {
+          "name": "compute",
+          "unit": "vCPU-hours",
+          "pricePerUnit": 0.09,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "storage",
+          "unit": "GiB",
+          "pricePerUnit": 0.5,
+          "unitQuantity": 1,
+          "includedQuantity": 10
+        }
       ],
       "features": [],
       "limits": {}
@@ -54,8 +84,20 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "compute", "unit": "vCPU-hours", "pricePerUnit": 0.15, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "storage", "unit": "GiB", "pricePerUnit": 0.50, "unitQuantity": 1, "includedQuantity": 10 }
+        {
+          "name": "compute",
+          "unit": "vCPU-hours",
+          "pricePerUnit": 0.15,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "storage",
+          "unit": "GiB",
+          "pricePerUnit": 0.5,
+          "unitQuantity": 1,
+          "includedQuantity": 10
+        }
       ],
       "features": [],
       "limits": {}

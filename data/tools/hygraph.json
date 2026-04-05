@@ -5,8 +5,13 @@
   "url": "https://hygraph.com",
   "pricingUrl": "https://hygraph.com/pricing",
   "category": "cms",
-  "tags": ["headless-cms", "graphql", "content-federation", "ai"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "headless-cms",
+    "graphql",
+    "content-federation",
+    "ai"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +30,12 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "seats": 3, "contentEntries": 1000, "apiCallsPerMonth": 500000, "assetTrafficGB": 100 }
+      "limits": {
+        "seats": 3,
+        "contentEntries": 1000,
+        "apiCallsPerMonth": 500000,
+        "assetTrafficGB": 100
+      }
     },
     {
       "name": "Growth",
@@ -37,7 +47,12 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "seats": 10, "contentEntries": 10000, "apiCallsPerMonth": 1000000, "assetTrafficGB": 500 }
+      "limits": {
+        "seats": 10,
+        "contentEntries": 10000,
+        "apiCallsPerMonth": 1000000,
+        "assetTrafficGB": 500
+      }
     },
     {
       "name": "Enterprise",

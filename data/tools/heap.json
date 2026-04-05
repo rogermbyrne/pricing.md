@@ -5,8 +5,13 @@
   "url": "https://heap.io",
   "pricingUrl": "https://heap.io/pricing",
   "category": "analytics",
-  "tags": ["product-analytics", "auto-capture", "session-replay", "heatmaps"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "product-analytics",
+    "auto-capture",
+    "session-replay",
+    "heatmaps"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +30,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "monthlySessions": 10000, "dataHistoryMonths": 6 }
+      "limits": {
+        "monthlySessions": 10000,
+        "dataHistoryMonths": 6
+      }
     },
     {
       "name": "Growth",
@@ -37,7 +45,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "monthlySessions": 500000, "dataHistoryMonths": 12 }
+      "limits": {
+        "monthlySessions": 500000,
+        "dataHistoryMonths": 12
+      }
     },
     {
       "name": "Pro",

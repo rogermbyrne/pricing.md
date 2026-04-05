@@ -5,8 +5,13 @@
   "url": "https://pinecone.io",
   "pricingUrl": "https://www.pinecone.io/pricing/",
   "category": "search",
-  "tags": ["vector-database", "embeddings", "similarity-search", "ai-infrastructure"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "vector-database",
+    "embeddings",
+    "similarity-search",
+    "ai-infrastructure"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +30,11 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "storageMb": 2048, "indexes": 5, "users": 2 }
+      "limits": {
+        "storageMb": 2048,
+        "indexes": 5,
+        "users": 2
+      }
     },
     {
       "name": "Standard",
@@ -36,9 +45,27 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "storage", "unit": "GB", "pricePerUnit": 0.33, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "write-units", "unit": "units", "pricePerUnit": 4, "unitQuantity": 1000000, "includedQuantity": 0 },
-        { "name": "read-units", "unit": "units", "pricePerUnit": 16, "unitQuantity": 1000000, "includedQuantity": 0 }
+        {
+          "name": "storage",
+          "unit": "GB",
+          "pricePerUnit": 0.33,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "write-units",
+          "unit": "units",
+          "pricePerUnit": 4,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "read-units",
+          "unit": "units",
+          "pricePerUnit": 16,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
       "limits": {}
@@ -52,9 +79,27 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "storage", "unit": "GB", "pricePerUnit": 0.33, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "write-units", "unit": "units", "pricePerUnit": 6, "unitQuantity": 1000000, "includedQuantity": 0 },
-        { "name": "read-units", "unit": "units", "pricePerUnit": 24, "unitQuantity": 1000000, "includedQuantity": 0 }
+        {
+          "name": "storage",
+          "unit": "GB",
+          "pricePerUnit": 0.33,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "write-units",
+          "unit": "units",
+          "pricePerUnit": 6,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "read-units",
+          "unit": "units",
+          "pricePerUnit": 24,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
       "limits": {}

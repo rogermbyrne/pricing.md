@@ -5,8 +5,13 @@
   "url": "https://retool.com",
   "pricingUrl": "https://retool.com/pricing",
   "category": "internal-tools",
-  "tags": ["internal-tools", "low-code", "admin-panels", "workflows"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "internal-tools",
+    "low-code",
+    "admin-panels",
+    "workflows"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

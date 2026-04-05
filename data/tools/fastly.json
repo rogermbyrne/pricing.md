@@ -5,8 +5,14 @@
   "url": "https://fastly.com",
   "pricingUrl": "https://www.fastly.com/pricing",
   "category": "edge",
-  "tags": ["cdn", "edge-compute", "ddos-protection", "waf", "streaming"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "cdn",
+    "edge-compute",
+    "ddos-protection",
+    "waf",
+    "streaming"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +31,11 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "bandwidthGB": 100, "cdnRequests": 1000000, "computeRequests": 10000000 }
+      "limits": {
+        "bandwidthGB": 100,
+        "cdnRequests": 1000000,
+        "computeRequests": 10000000
+      }
     },
     {
       "name": "Basic Package",
@@ -37,7 +47,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "requests": 100000000, "tlsDomains": 20 }
+      "limits": {
+        "requests": 100000000,
+        "tlsDomains": 20
+      }
     },
     {
       "name": "Starter Package",
@@ -49,7 +62,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "requests": 500000000, "tlsDomains": 40 }
+      "limits": {
+        "requests": 500000000,
+        "tlsDomains": 40
+      }
     },
     {
       "name": "Enterprise",

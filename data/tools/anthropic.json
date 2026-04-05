@@ -5,8 +5,16 @@
   "url": "https://anthropic.com",
   "pricingUrl": "https://docs.anthropic.com/en/docs/about-claude/pricing",
   "category": "ai-api",
-  "tags": ["llm", "claude", "reasoning", "coding", "multimodal", "agents", "extended-thinking"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "llm",
+    "claude",
+    "reasoning",
+    "coding",
+    "multimodal",
+    "agents",
+    "extended-thinking"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -27,42 +35,42 @@
         {
           "name": "Claude Opus 4.6 input",
           "unit": "tokens",
-          "pricePerUnit": 5.00,
+          "pricePerUnit": 5,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "Claude Opus 4.6 output",
           "unit": "tokens",
-          "pricePerUnit": 25.00,
+          "pricePerUnit": 25,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "Claude Sonnet 4.6 input",
           "unit": "tokens",
-          "pricePerUnit": 3.00,
+          "pricePerUnit": 3,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "Claude Sonnet 4.6 output",
           "unit": "tokens",
-          "pricePerUnit": 15.00,
+          "pricePerUnit": 15,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "Claude Haiku 4.5 input",
           "unit": "tokens",
-          "pricePerUnit": 1.00,
+          "pricePerUnit": 1,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "Claude Haiku 4.5 output",
           "unit": "tokens",
-          "pricePerUnit": 5.00,
+          "pricePerUnit": 5,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         }

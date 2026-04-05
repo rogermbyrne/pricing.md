@@ -6,7 +6,7 @@
   "pricingUrl": "https://postmarkapp.com/pricing",
   "category": "email",
   "tags": [],
-  "lastVerified": "2026-04-03",
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -41,7 +41,7 @@
         {
           "name": "emails",
           "unit": "emails",
-          "pricePerUnit": 1.80,
+          "pricePerUnit": 1.8,
           "unitQuantity": 1000,
           "includedQuantity": 10000
         }
@@ -61,7 +61,7 @@
         {
           "name": "emails",
           "unit": "emails",
-          "pricePerUnit": 1.30,
+          "pricePerUnit": 1.3,
           "unitQuantity": 1000,
           "includedQuantity": 10000
         }
@@ -81,7 +81,7 @@
         {
           "name": "emails",
           "unit": "emails",
-          "pricePerUnit": 1.20,
+          "pricePerUnit": 1.2,
           "unitQuantity": 1000,
           "includedQuantity": 10000
         }

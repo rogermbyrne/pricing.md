@@ -6,7 +6,7 @@
   "pricingUrl": "https://newrelic.com/pricing",
   "category": "monitoring",
   "tags": [],
-  "lastVerified": "2026-04-03",
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -27,7 +27,7 @@
         {
           "name": "data-ingest",
           "unit": "GB",
-          "pricePerUnit": 0.40,
+          "pricePerUnit": 0.4,
           "unitQuantity": 1,
           "includedQuantity": 100
         }
@@ -51,7 +51,7 @@
         {
           "name": "data-ingest",
           "unit": "GB",
-          "pricePerUnit": 0.40,
+          "pricePerUnit": 0.4,
           "unitQuantity": 1,
           "includedQuantity": 100
         },
@@ -80,7 +80,7 @@
         {
           "name": "data-ingest",
           "unit": "GB",
-          "pricePerUnit": 0.40,
+          "pricePerUnit": 0.4,
           "unitQuantity": 1,
           "includedQuantity": 100
         }

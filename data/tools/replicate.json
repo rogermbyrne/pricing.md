@@ -5,8 +5,13 @@
   "url": "https://replicate.com",
   "pricingUrl": "https://replicate.com/pricing",
   "category": "ai-api",
-  "tags": ["inference", "open-source-models", "image-generation", "serverless-gpu"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "inference",
+    "open-source-models",
+    "image-generation",
+    "serverless-gpu"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -36,8 +41,20 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "gpu-compute-A100-80GB", "unit": "seconds", "pricePerUnit": 0.0032, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "gpu-compute-CPU", "unit": "seconds", "pricePerUnit": 0.000025, "unitQuantity": 1, "includedQuantity": 0 }
+        {
+          "name": "gpu-compute-A100-80GB",
+          "unit": "seconds",
+          "pricePerUnit": 0.0032,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "gpu-compute-CPU",
+          "unit": "seconds",
+          "pricePerUnit": 0.000025,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
       "limits": {}

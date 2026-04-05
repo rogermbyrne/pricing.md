@@ -5,8 +5,13 @@
   "url": "https://www.mabl.com",
   "pricingUrl": "https://www.mabl.com/pricing",
   "category": "testing",
-  "tags": ["testing", "test-automation", "ai", "auto-healing"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "testing",
+    "test-automation",
+    "ai",
+    "auto-healing"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

@@ -5,8 +5,14 @@
   "url": "https://clerk.com",
   "pricingUrl": "https://clerk.com/pricing",
   "category": "auth",
-  "tags": ["auth", "authentication", "user-management", "oauth", "oidc"],
-  "lastVerified": "2026-04-03",
+  "tags": [
+    "auth",
+    "authentication",
+    "user-management",
+    "oauth",
+    "oidc"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -46,11 +52,26 @@
           "unitQuantity": 1,
           "includedQuantity": 50000,
           "tieredPricing": [
-            { "upTo": 50000, "pricePerUnit": 0 },
-            { "upTo": 100000, "pricePerUnit": 0.02 },
-            { "upTo": 1000000, "pricePerUnit": 0.018 },
-            { "upTo": 10000000, "pricePerUnit": 0.015 },
-            { "upTo": null, "pricePerUnit": 0.012 }
+            {
+              "upTo": 50000,
+              "pricePerUnit": 0
+            },
+            {
+              "upTo": 100000,
+              "pricePerUnit": 0.02
+            },
+            {
+              "upTo": 1000000,
+              "pricePerUnit": 0.018
+            },
+            {
+              "upTo": 10000000,
+              "pricePerUnit": 0.015
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 0.012
+            }
           ]
         },
         {
@@ -80,11 +101,26 @@
           "unitQuantity": 1,
           "includedQuantity": 50000,
           "tieredPricing": [
-            { "upTo": 50000, "pricePerUnit": 0 },
-            { "upTo": 100000, "pricePerUnit": 0.02 },
-            { "upTo": 1000000, "pricePerUnit": 0.018 },
-            { "upTo": 10000000, "pricePerUnit": 0.015 },
-            { "upTo": null, "pricePerUnit": 0.012 }
+            {
+              "upTo": 50000,
+              "pricePerUnit": 0
+            },
+            {
+              "upTo": 100000,
+              "pricePerUnit": 0.02
+            },
+            {
+              "upTo": 1000000,
+              "pricePerUnit": 0.018
+            },
+            {
+              "upTo": 10000000,
+              "pricePerUnit": 0.015
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 0.012
+            }
           ]
         }
       ],

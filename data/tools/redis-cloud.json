@@ -5,8 +5,14 @@
   "url": "https://redis.io",
   "pricingUrl": "https://redis.io/pricing/",
   "category": "database",
-  "tags": ["in-memory", "cache", "key-value", "real-time", "managed"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "in-memory",
+    "cache",
+    "key-value",
+    "real-time",
+    "managed"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +31,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "storageMB": 30, "databases": 1 }
+      "limits": {
+        "storageMB": 30,
+        "databases": 1
+      }
     },
     {
       "name": "Essentials",
@@ -36,10 +45,18 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "compute", "unit": "hours", "pricePerUnit": 0.007, "unitQuantity": 1, "includedQuantity": 0 }
+        {
+          "name": "compute",
+          "unit": "hours",
+          "pricePerUnit": 0.007,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
-      "limits": { "databases": 1 }
+      "limits": {
+        "databases": 1
+      }
     },
     {
       "name": "Pro",
@@ -50,7 +67,13 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "compute", "unit": "hours", "pricePerUnit": 0.014, "unitQuantity": 1, "includedQuantity": 0 }
+        {
+          "name": "compute",
+          "unit": "hours",
+          "pricePerUnit": 0.014,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
       "limits": {}

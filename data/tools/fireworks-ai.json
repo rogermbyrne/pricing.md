@@ -5,8 +5,14 @@
   "url": "https://fireworks.ai",
   "pricingUrl": "https://fireworks.ai/pricing",
   "category": "ai-api",
-  "tags": ["inference", "open-source-models", "fine-tuning", "serverless", "batch-api"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "inference",
+    "open-source-models",
+    "fine-tuning",
+    "serverless",
+    "batch-api"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -24,10 +30,34 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "tokens (models <4B)", "unit": "tokens", "pricePerUnit": 0.10, "unitQuantity": 1000000, "includedQuantity": 0 },
-        { "name": "tokens (models 4B-16B)", "unit": "tokens", "pricePerUnit": 0.20, "unitQuantity": 1000000, "includedQuantity": 0 },
-        { "name": "tokens (models 16B+)", "unit": "tokens", "pricePerUnit": 0.90, "unitQuantity": 1000000, "includedQuantity": 0 },
-        { "name": "tokens (MoE 56B+)", "unit": "tokens", "pricePerUnit": 1.20, "unitQuantity": 1000000, "includedQuantity": 0 }
+        {
+          "name": "tokens (models <4B)",
+          "unit": "tokens",
+          "pricePerUnit": 0.1,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "tokens (models 4B-16B)",
+          "unit": "tokens",
+          "pricePerUnit": 0.2,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "tokens (models 16B+)",
+          "unit": "tokens",
+          "pricePerUnit": 0.9,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "tokens (MoE 56B+)",
+          "unit": "tokens",
+          "pricePerUnit": 1.2,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
       "limits": {}

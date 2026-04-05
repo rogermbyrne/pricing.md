@@ -5,8 +5,14 @@
   "url": "https://www.inngest.com",
   "pricingUrl": "https://www.inngest.com/pricing",
   "category": "queues",
-  "tags": ["queues", "orchestration", "step-functions", "event-driven", "background-jobs"],
-  "lastVerified": "2026-04-03",
+  "tags": [
+    "queues",
+    "orchestration",
+    "step-functions",
+    "event-driven",
+    "background-jobs"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -48,12 +54,30 @@
           "unitQuantity": 1,
           "includedQuantity": 1000000,
           "tieredPricing": [
-            { "upTo": 1000000, "pricePerUnit": 0 },
-            { "upTo": 5000000, "pricePerUnit": 0.00005 },
-            { "upTo": 15000000, "pricePerUnit": 0.000025 },
-            { "upTo": 50000000, "pricePerUnit": 0.00002 },
-            { "upTo": 100000000, "pricePerUnit": 0.000015 },
-            { "upTo": null, "pricePerUnit": 0.000015 }
+            {
+              "upTo": 1000000,
+              "pricePerUnit": 0
+            },
+            {
+              "upTo": 5000000,
+              "pricePerUnit": 0.00005
+            },
+            {
+              "upTo": 15000000,
+              "pricePerUnit": 0.000025
+            },
+            {
+              "upTo": 50000000,
+              "pricePerUnit": 0.00002
+            },
+            {
+              "upTo": 100000000,
+              "pricePerUnit": 0.000015
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 0.000015
+            }
           ]
         }
       ],

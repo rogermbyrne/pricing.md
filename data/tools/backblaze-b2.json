@@ -5,8 +5,13 @@
   "url": "https://backblaze.com",
   "pricingUrl": "https://www.backblaze.com/cloud-storage/pricing",
   "category": "storage",
-  "tags": ["object-storage", "s3-compatible", "backup", "cloud-storage"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "object-storage",
+    "s3-compatible",
+    "backup",
+    "cloud-storage"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +30,9 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "storageGB": 10 }
+      "limits": {
+        "storageGB": 10
+      }
     },
     {
       "name": "Pay-As-You-Go",
@@ -36,8 +43,20 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "storage", "unit": "GB", "pricePerUnit": 0.006, "unitQuantity": 1, "includedQuantity": 10 },
-        { "name": "download-bandwidth", "unit": "GB", "pricePerUnit": 0.01, "unitQuantity": 1, "includedQuantity": 0 }
+        {
+          "name": "storage",
+          "unit": "GB",
+          "pricePerUnit": 0.006,
+          "unitQuantity": 1,
+          "includedQuantity": 10
+        },
+        {
+          "name": "download-bandwidth",
+          "unit": "GB",
+          "pricePerUnit": 0.01,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
       "limits": {}

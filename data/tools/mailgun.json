@@ -5,8 +5,13 @@
   "url": "https://www.mailgun.com",
   "pricingUrl": "https://www.mailgun.com/pricing/",
   "category": "email",
-  "tags": ["transactional-email", "email-api", "smtp", "email-validation"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "transactional-email",
+    "email-api",
+    "smtp",
+    "email-validation"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -42,7 +47,7 @@
         {
           "name": "emails",
           "unit": "emails",
-          "pricePerUnit": 1.80,
+          "pricePerUnit": 1.8,
           "unitQuantity": 1000,
           "includedQuantity": 10000
         }
@@ -64,7 +69,7 @@
         {
           "name": "emails",
           "unit": "emails",
-          "pricePerUnit": 1.30,
+          "pricePerUnit": 1.3,
           "unitQuantity": 1000,
           "includedQuantity": 50000
         }
@@ -87,7 +92,7 @@
         {
           "name": "emails",
           "unit": "emails",
-          "pricePerUnit": 1.10,
+          "pricePerUnit": 1.1,
           "unitQuantity": 1000,
           "includedQuantity": 100000
         }

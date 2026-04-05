@@ -5,8 +5,15 @@
   "url": "https://playwright.dev",
   "pricingUrl": "https://playwright.dev",
   "category": "testing",
-  "tags": ["open-source", "e2e-testing", "browser-automation", "chromium", "firefox", "webkit"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "open-source",
+    "e2e-testing",
+    "browser-automation",
+    "chromium",
+    "firefox",
+    "webkit"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {

@@ -5,8 +5,13 @@
   "url": "https://www.akamai.com",
   "pricingUrl": "https://www.akamai.com/pricing",
   "category": "edge",
-  "tags": ["edge", "cdn", "security", "edge-compute"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "edge",
+    "cdn",
+    "security",
+    "edge-compute"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

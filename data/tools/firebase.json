@@ -5,8 +5,15 @@
   "url": "https://firebase.google.com",
   "pricingUrl": "https://firebase.google.com/pricing",
   "category": "database",
-  "tags": ["nosql", "document-database", "realtime", "serverless", "google-cloud", "baas"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "nosql",
+    "document-database",
+    "realtime",
+    "serverless",
+    "google-cloud",
+    "baas"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -43,10 +50,34 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "firestore-reads", "unit": "documents", "pricePerUnit": 0.06, "unitQuantity": 100000, "includedQuantity": 50000 },
-        { "name": "firestore-writes", "unit": "documents", "pricePerUnit": 0.18, "unitQuantity": 100000, "includedQuantity": 20000 },
-        { "name": "firestore-storage", "unit": "GiB", "pricePerUnit": 0.26, "unitQuantity": 1, "includedQuantity": 1 },
-        { "name": "cloud-functions-invocations", "unit": "invocations", "pricePerUnit": 0.40, "unitQuantity": 1000000, "includedQuantity": 2000000 }
+        {
+          "name": "firestore-reads",
+          "unit": "documents",
+          "pricePerUnit": 0.06,
+          "unitQuantity": 100000,
+          "includedQuantity": 50000
+        },
+        {
+          "name": "firestore-writes",
+          "unit": "documents",
+          "pricePerUnit": 0.18,
+          "unitQuantity": 100000,
+          "includedQuantity": 20000
+        },
+        {
+          "name": "firestore-storage",
+          "unit": "GiB",
+          "pricePerUnit": 0.26,
+          "unitQuantity": 1,
+          "includedQuantity": 1
+        },
+        {
+          "name": "cloud-functions-invocations",
+          "unit": "invocations",
+          "pricePerUnit": 0.4,
+          "unitQuantity": 1000000,
+          "includedQuantity": 2000000
+        }
       ],
       "features": [],
       "limits": {}

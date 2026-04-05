@@ -5,8 +5,14 @@
   "url": "https://datadoghq.com",
   "pricingUrl": "https://www.datadoghq.com/pricing/",
   "category": "monitoring",
-  "tags": ["infrastructure-monitoring", "apm", "logs", "observability", "alerts"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "infrastructure-monitoring",
+    "apm",
+    "logs",
+    "observability",
+    "alerts"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

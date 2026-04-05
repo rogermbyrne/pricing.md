@@ -12,7 +12,7 @@
     "feature-flags",
     "ab-testing"
   ],
-  "lastVerified": "2026-04-02",
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -52,13 +52,34 @@
           "unitQuantity": 1,
           "includedQuantity": 1000000,
           "tieredPricing": [
-            { "upTo": 1000000, "pricePerUnit": 0 },
-            { "upTo": 2000000, "pricePerUnit": 0.00005 },
-            { "upTo": 15000000, "pricePerUnit": 0.0000343 },
-            { "upTo": 50000000, "pricePerUnit": 0.0000295 },
-            { "upTo": 100000000, "pricePerUnit": 0.0000218 },
-            { "upTo": 250000000, "pricePerUnit": 0.000015 },
-            { "upTo": null, "pricePerUnit": 0.000009 }
+            {
+              "upTo": 1000000,
+              "pricePerUnit": 0
+            },
+            {
+              "upTo": 2000000,
+              "pricePerUnit": 0.00005
+            },
+            {
+              "upTo": 15000000,
+              "pricePerUnit": 0.0000343
+            },
+            {
+              "upTo": 50000000,
+              "pricePerUnit": 0.0000295
+            },
+            {
+              "upTo": 100000000,
+              "pricePerUnit": 0.0000218
+            },
+            {
+              "upTo": 250000000,
+              "pricePerUnit": 0.000015
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 0.000009
+            }
           ]
         },
         {
@@ -68,12 +89,30 @@
           "unitQuantity": 1,
           "includedQuantity": 5000,
           "tieredPricing": [
-            { "upTo": 5000, "pricePerUnit": 0 },
-            { "upTo": 15000, "pricePerUnit": 0.005 },
-            { "upTo": 50000, "pricePerUnit": 0.0035 },
-            { "upTo": 150000, "pricePerUnit": 0.002 },
-            { "upTo": 500000, "pricePerUnit": 0.0017 },
-            { "upTo": null, "pricePerUnit": 0.0015 }
+            {
+              "upTo": 5000,
+              "pricePerUnit": 0
+            },
+            {
+              "upTo": 15000,
+              "pricePerUnit": 0.005
+            },
+            {
+              "upTo": 50000,
+              "pricePerUnit": 0.0035
+            },
+            {
+              "upTo": 150000,
+              "pricePerUnit": 0.002
+            },
+            {
+              "upTo": 500000,
+              "pricePerUnit": 0.0017
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 0.0015
+            }
           ]
         },
         {
@@ -83,11 +122,26 @@
           "unitQuantity": 1,
           "includedQuantity": 1000000,
           "tieredPricing": [
-            { "upTo": 1000000, "pricePerUnit": 0 },
-            { "upTo": 2000000, "pricePerUnit": 0.0001 },
-            { "upTo": 10000000, "pricePerUnit": 0.000045 },
-            { "upTo": 50000000, "pricePerUnit": 0.000025 },
-            { "upTo": null, "pricePerUnit": 0.00001 }
+            {
+              "upTo": 1000000,
+              "pricePerUnit": 0
+            },
+            {
+              "upTo": 2000000,
+              "pricePerUnit": 0.0001
+            },
+            {
+              "upTo": 10000000,
+              "pricePerUnit": 0.000045
+            },
+            {
+              "upTo": 50000000,
+              "pricePerUnit": 0.000025
+            },
+            {
+              "upTo": null,
+              "pricePerUnit": 0.00001
+            }
           ]
         }
       ],

@@ -5,8 +5,13 @@
   "url": "https://www.smartlook.com",
   "pricingUrl": "https://www.smartlook.com/pricing/",
   "category": "analytics",
-  "tags": ["analytics", "session-replay", "heatmaps", "product-analytics"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "analytics",
+    "session-replay",
+    "heatmaps",
+    "product-analytics"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

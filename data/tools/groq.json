@@ -5,8 +5,15 @@
   "url": "https://groq.com",
   "pricingUrl": "https://groq.com/pricing/",
   "category": "ai-api",
-  "tags": ["llm", "inference", "low-latency", "lpu", "open-source-models", "llama"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "llm",
+    "inference",
+    "low-latency",
+    "lpu",
+    "open-source-models",
+    "llama"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

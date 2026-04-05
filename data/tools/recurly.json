@@ -5,8 +5,14 @@
   "url": "https://recurly.com",
   "pricingUrl": "https://recurly.com/pricing/",
   "category": "payments",
-  "tags": ["subscription-billing", "recurring-payments", "dunning", "churn-mitigation", "revenue-recognition"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "subscription-billing",
+    "recurring-payments",
+    "dunning",
+    "churn-mitigation",
+    "revenue-recognition"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -24,7 +30,13 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "gmv-fee", "unit": "percentage", "pricePerUnit": 1.5, "unitQuantity": 1, "includedQuantity": 0 }
+        {
+          "name": "gmv-fee",
+          "unit": "percentage",
+          "pricePerUnit": 1.5,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
       "limits": {}

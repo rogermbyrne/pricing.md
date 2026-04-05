@@ -5,8 +5,13 @@
   "url": "https://www.fullstory.com",
   "pricingUrl": "https://www.fullstory.com/pricing/",
   "category": "analytics",
-  "tags": ["analytics", "session-replay", "digital-experience", "rage-click"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "analytics",
+    "session-replay",
+    "digital-experience",
+    "rage-click"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {

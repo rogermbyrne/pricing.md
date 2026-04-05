@@ -5,8 +5,14 @@
   "url": "https://browserstack.com",
   "pricingUrl": "https://www.browserstack.com/pricing",
   "category": "testing",
-  "tags": ["cross-browser", "real-devices", "selenium", "appium", "visual-testing"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "cross-browser",
+    "real-devices",
+    "selenium",
+    "appium",
+    "visual-testing"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +31,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "parallelTests": 1, "users": 1 }
+      "limits": {
+        "parallelTests": 1,
+        "users": 1
+      }
     },
     {
       "name": "Automate Desktop",
@@ -37,7 +46,9 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "parallelTests": 1 }
+      "limits": {
+        "parallelTests": 1
+      }
     },
     {
       "name": "Live Team",
@@ -49,7 +60,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "parallelTests": 1, "users": 5 }
+      "limits": {
+        "parallelTests": 1,
+        "users": 5
+      }
     },
     {
       "name": "Automate Desktop + Mobile",
@@ -61,7 +75,9 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "parallelTests": 1 }
+      "limits": {
+        "parallelTests": 1
+      }
     },
     {
       "name": "Enterprise",

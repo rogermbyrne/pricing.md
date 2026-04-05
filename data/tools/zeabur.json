@@ -5,8 +5,13 @@
   "url": "https://zeabur.com",
   "pricingUrl": "https://zeabur.com/pricing",
   "category": "hosting",
-  "tags": ["paas", "ai-deployment", "multi-cloud", "serverless"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "paas",
+    "ai-deployment",
+    "multi-cloud",
+    "serverless"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +30,9 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "servers": 1 }
+      "limits": {
+        "servers": 1
+      }
     },
     {
       "name": "Developer",
@@ -36,8 +43,20 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "memory", "unit": "GB-minutes", "pricePerUnit": 0.00025, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "network-egress", "unit": "GB", "pricePerUnit": 0.10, "unitQuantity": 1, "includedQuantity": 0 }
+        {
+          "name": "memory",
+          "unit": "GB-minutes",
+          "pricePerUnit": 0.00025,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "network-egress",
+          "unit": "GB",
+          "pricePerUnit": 0.1,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
       "limits": {}
@@ -51,8 +70,20 @@
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
-        { "name": "memory", "unit": "GB-minutes", "pricePerUnit": 0.00025, "unitQuantity": 1, "includedQuantity": 0 },
-        { "name": "network-egress", "unit": "GB", "pricePerUnit": 0.10, "unitQuantity": 1, "includedQuantity": 0 }
+        {
+          "name": "memory",
+          "unit": "GB-minutes",
+          "pricePerUnit": 0.00025,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "network-egress",
+          "unit": "GB",
+          "pricePerUnit": 0.1,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
       ],
       "features": [],
       "limits": {}

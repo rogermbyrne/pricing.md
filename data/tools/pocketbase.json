@@ -5,8 +5,14 @@
   "url": "https://pocketbase.io",
   "pricingUrl": "https://pocketbase.io",
   "category": "database",
-  "tags": ["database", "baas", "open-source", "sqlite", "go"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "database",
+    "baas",
+    "open-source",
+    "sqlite",
+    "go"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {

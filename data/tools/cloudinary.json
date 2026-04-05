@@ -5,8 +5,14 @@
   "url": "https://cloudinary.com",
   "pricingUrl": "https://cloudinary.com/pricing",
   "category": "storage",
-  "tags": ["image-cdn", "video", "media-management", "transformations", "optimization"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "image-cdn",
+    "video",
+    "media-management",
+    "transformations",
+    "optimization"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +31,11 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "creditsPerMonth": 25, "storageGB": 25, "bandwidthGB": 25 }
+      "limits": {
+        "creditsPerMonth": 25,
+        "storageGB": 25,
+        "bandwidthGB": 25
+      }
     },
     {
       "name": "Plus",
@@ -37,7 +47,11 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "creditsPerMonth": 225, "storageGB": 225, "bandwidthGB": 225 }
+      "limits": {
+        "creditsPerMonth": 225,
+        "storageGB": 225,
+        "bandwidthGB": 225
+      }
     },
     {
       "name": "Advanced",
@@ -49,7 +63,11 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "creditsPerMonth": 600, "storageGB": 600, "bandwidthGB": 600 }
+      "limits": {
+        "creditsPerMonth": 600,
+        "storageGB": 600,
+        "bandwidthGB": 600
+      }
     },
     {
       "name": "Enterprise",

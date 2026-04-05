@@ -5,8 +5,14 @@
   "url": "https://dagger.io",
   "pricingUrl": "https://dagger.io/pricing",
   "category": "ci-cd",
-  "tags": ["ci-cd", "pipelines", "containers", "sdk", "programmable-ci"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "ci-cd",
+    "pipelines",
+    "containers",
+    "sdk",
+    "programmable-ci"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -25,7 +31,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "users": 1, "monthlyEvents": 1000000 }
+      "limits": {
+        "users": 1,
+        "monthlyEvents": 1000000
+      }
     },
     {
       "name": "Team",
@@ -37,7 +46,10 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": { "users": 10, "monthlyEvents": 10000000 }
+      "limits": {
+        "users": 10,
+        "monthlyEvents": 10000000
+      }
     },
     {
       "name": "Enterprise",

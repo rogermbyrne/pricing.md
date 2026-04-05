@@ -5,8 +5,14 @@
   "url": "https://www.pagerduty.com",
   "pricingUrl": "https://www.pagerduty.com/pricing/",
   "category": "monitoring",
-  "tags": ["incident-management", "on-call", "alerting", "aiops", "status-pages"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "incident-management",
+    "on-call",
+    "alerting",
+    "aiops",
+    "status-pages"
+  ],
+  "lastVerified": "2026-04-05",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
