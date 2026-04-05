@@ -55,6 +55,40 @@ function primaryModel(tool) {
 function hasPricingMd(tool) {
   return tool.pricingUrl && tool.pricingUrl.endsWith('/pricing.md');
 }
+
+function growthCostCell(tool) {
+  if (!growthScenario || !growthCosts[tool.id] || growthCosts[tool.id].cost === null) {
+    return '<span class="text-neutral-400 font-mono text-sm">&mdash;</span>';
+  }
+  const cost = growthCosts[tool.id].cost;
+  const tier = growthCosts[tool.id].tierName;
+  const exceeds = growthCosts[tool.id].exceedsLimits;
+
+  // Entry price: $0 if free tier exists, otherwise lowest paid
+  const entryPrice = hasFree(tool) ? 0 : (lowestPaid(tool) || 0);
+  const entryStr = entryPrice === 0 ? '$0' : '$' + entryPrice.toLocaleString();
+  const scaleStr = '$' + cost.toLocaleString() + '/mo';
+
+  let badge = '';
+  if (cheapestGrowthCost && cheapestGrowthCost > 0 && cost > 0) {
+    const ratio = cost / cheapestGrowthCost;
+    if (ratio > 10) {
+      badge = '<span class="inline-block ml-2 px-1.5 py-0.5 text-[10px] font-mono border border-red-400 dark:border-red-600 text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-950 rounded-none">' + Math.round(ratio) + 'x</span>';
+    } else if (ratio > 5) {
+      badge = '<span class="inline-block ml-2 px-1.5 py-0.5 text-[10px] font-mono border border-orange-400 dark:border-orange-600 text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-950 rounded-none">' + Math.round(ratio) + 'x</span>';
+    } else if (ratio > 2) {
+      badge = '<span class="inline-block ml-2 px-1.5 py-0.5 text-[10px] font-mono border border-amber-400 dark:border-amber-600 text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950 rounded-none">' + Math.round(ratio) + 'x</span>';
+    }
+  }
+
+  let html = '<span class="text-neutral-400 font-mono text-sm">' + entryStr + '</span>';
+  html += '<span class="text-neutral-500 mx-1">&rarr;</span>';
+  html += '<span class="font-mono font-semibold text-neutral-900 dark:text-white">' + scaleStr + '</span>' + badge;
+  if (tier) {
+    html += '<div class="text-[11px] text-neutral-400 mt-0.5">' + tier + (exceeds ? ' (limits exceeded)' : '') + '</div>';
+  }
+  return html;
+}
 %>
 
 <div class="max-w-7xl mx-auto px-6 py-10">
@@ -66,19 +100,22 @@ function hasPricingMd(tool) {
   </div>
 
   <h1 class="text-4xl font-bold tracking-tighter text-neutral-900 dark:text-white"><%= category %></h1>
-  <div class="flex items-center gap-2 mt-3 mb-1 text-xs text-neutral-400 dark:text-neutral-500">
+  <p class="text-base text-neutral-500 mt-2"><%= tools.length %> tool<%= tools.length !== 1 ? 's' : '' %> &middot; <a href="/compare?tools=<%= tools.slice(0, 3).map(t => t.id).join(',') %>" class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white border-b border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white pb-0.5 transition-all">Compare top 3</a></p>
+
+  <div class="flex items-center gap-2 mt-4 text-xs text-neutral-400 dark:text-neutral-500">
     <span class="inline-flex items-center justify-center w-3.5 h-3.5 rounded-full bg-[#1d9bf0] flex-shrink-0"><svg viewBox="0 0 24 24" width="8" height="8" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
     <span>= publishes a <a href="https://github.com/nichochar/pricing.md" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white border-b border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white transition-all">pricing.md</a> file &mdash; machine-readable pricing your AI agent can use directly</span>
   </div>
-  <div class="flex flex-wrap items-center gap-4 mt-2 mb-8">
-    <p class="text-base text-neutral-500"><%= tools.length %> tool<%= tools.length !== 1 ? 's' : '' %> &middot; <a href="/compare?tools=<%= tools.slice(0, 3).map(t => t.id).join(',') %>" class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white border-b border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white pb-0.5 transition-all">Compare top 3</a></p>
-    <div class="flex gap-2 font-mono text-xs">
-      <span class="text-neutral-400 uppercase tracking-widest">Sort:</span>
-      <a href="/browse/<%= categorySlug %>?sort=name" class="<%= currentSort === 'name' ? 'text-neutral-900 dark:text-white border-b border-neutral-900 dark:border-white' : 'text-neutral-400 hover:text-neutral-900 dark:hover:text-white' %> pb-0.5 transition-all uppercase tracking-widest">Name</a>
-      <a href="/browse/<%= categorySlug %>?sort=lowest-paid" class="<%= currentSort === 'lowest-paid' ? 'text-neutral-900 dark:text-white border-b border-neutral-900 dark:border-white' : 'text-neutral-400 hover:text-neutral-900 dark:hover:text-white' %> pb-0.5 transition-all uppercase tracking-widest">Lowest Paid</a>
-      <a href="/browse/<%= categorySlug %>?sort=free-first" class="<%= currentSort === 'free-first' ? 'text-neutral-900 dark:text-white border-b border-neutral-900 dark:border-white' : 'text-neutral-400 hover:text-neutral-900 dark:hover:text-white' %> pb-0.5 transition-all uppercase tracking-widest">Free First</a>
-      <a href="/browse/<%= categorySlug %>?sort=verified" class="<%= currentSort === 'verified' ? 'text-neutral-900 dark:text-white border-b border-neutral-900 dark:border-white' : 'text-neutral-400 hover:text-neutral-900 dark:hover:text-white' %> pb-0.5 transition-all uppercase tracking-widest">Verified</a>
-    </div>
+
+  <div class="flex flex-wrap items-center gap-3 mt-6 mb-8">
+    <span class="text-neutral-400 font-mono text-xs uppercase tracking-widest">Sort:</span>
+    <a href="/browse/<%= categorySlug %>?sort=name" class="px-3 py-1.5 text-xs font-mono uppercase tracking-widest rounded-full transition-all <%= currentSort === 'name' ? 'bg-neutral-900 dark:bg-white text-white dark:text-neutral-900' : 'text-neutral-400 hover:text-neutral-900 dark:hover:text-white bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700' %>">Name</a>
+    <a href="/browse/<%= categorySlug %>?sort=lowest-paid" class="px-3 py-1.5 text-xs font-mono uppercase tracking-widest rounded-full transition-all <%= currentSort === 'lowest-paid' ? 'bg-neutral-900 dark:bg-white text-white dark:text-neutral-900' : 'text-neutral-400 hover:text-neutral-900 dark:hover:text-white bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700' %>">Lowest Paid</a>
+    <a href="/browse/<%= categorySlug %>?sort=free-first" class="px-3 py-1.5 text-xs font-mono uppercase tracking-widest rounded-full transition-all <%= currentSort === 'free-first' ? 'bg-neutral-900 dark:bg-white text-white dark:text-neutral-900' : 'text-neutral-400 hover:text-neutral-900 dark:hover:text-white bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700' %>">Free First</a>
+    <a href="/browse/<%= categorySlug %>?sort=verified" class="px-3 py-1.5 text-xs font-mono uppercase tracking-widest rounded-full transition-all <%= currentSort === 'verified' ? 'bg-neutral-900 dark:bg-white text-white dark:text-neutral-900' : 'text-neutral-400 hover:text-neutral-900 dark:hover:text-white bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700' %>">Verified</a>
+    <% if (growthScenario) { %>
+    <a href="/browse/<%= categorySlug %>?sort=growth-cost" class="px-3 py-1.5 text-xs font-mono uppercase tracking-widest rounded-full transition-all <%= currentSort === 'growth-cost' ? 'bg-neutral-900 dark:bg-white text-white dark:text-neutral-900' : 'text-neutral-400 hover:text-neutral-900 dark:hover:text-white bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700' %>">Growth Cost</a>
+    <% } %>
   </div>
 
   <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] overflow-x-auto theme-transition">
@@ -88,6 +125,12 @@ function hasPricingMd(tool) {
           <th class="px-5 py-3 text-left text-xs font-mono uppercase tracking-widest text-neutral-500 font-normal">Tool</th>
           <th class="px-5 py-3 text-left text-xs font-mono uppercase tracking-widest text-neutral-500 font-normal">Free Tier</th>
           <th class="px-5 py-3 text-left text-xs font-mono uppercase tracking-widest text-neutral-500 font-normal">Lowest Paid</th>
+          <% if (growthScenario) { %>
+          <th class="px-5 py-3 text-left text-xs font-mono uppercase tracking-widest text-neutral-500 font-normal">
+            Cost at Scale
+            <div class="font-normal normal-case tracking-normal text-[10px] text-neutral-400 mt-0.5">at <%= growthScenario.label %></div>
+          </th>
+          <% } %>
           <th class="px-5 py-3 text-left text-xs font-mono uppercase tracking-widest text-neutral-500 font-normal">Model</th>
           <th class="px-5 py-3 text-left text-xs font-mono uppercase tracking-widest text-neutral-500 font-normal">Portability</th>
         </tr>
@@ -119,6 +162,11 @@ function hasPricingMd(tool) {
               <% const lp = lowestPaid(tool); %>
               <%- formatPrice(lp) %>
             </td>
+            <% if (growthScenario) { %>
+            <td class="px-5 py-4">
+              <%- growthCostCell(tool) %>
+            </td>
+            <% } %>
             <td class="px-5 py-4">
               <%- modelBadge(primaryModel(tool)) %>
             </td>

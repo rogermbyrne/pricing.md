@@ -1,5 +1,7 @@
 import { Router, Request, Response } from "express";
 import { Registry } from "../../src/registry/registry.js";
+import { GROWTH_SCENARIOS, computeGrowthCost, type GrowthCostResult } from "../lib/growth-scenarios.js";
+import type { Category } from "../../src/schema/pricing.js";
 
 export function createBrowseRouter(registry: Registry): Router {
   const router = Router();
@@ -69,6 +71,34 @@ export function createBrowseRouter(registry: Registry): Router {
       });
     }
 
+    // Compute growth cost for each tool
+    const scenario = GROWTH_SCENARIOS[category as Category] ?? null;
+    const growthCosts: Record<string, GrowthCostResult> = {};
+    let cheapestGrowthCost = Infinity;
+
+    if (scenario) {
+      for (const tool of tools) {
+        const result = computeGrowthCost(registry, tool.id, scenario);
+        growthCosts[tool.id] = result;
+      }
+      // Use median non-zero cost as baseline for ratio badges
+      const nonZeroCosts = Object.values(growthCosts)
+        .map((r) => r.cost)
+        .filter((c): c is number => c !== null && c > 0)
+        .sort((a, b) => a - b);
+      if (nonZeroCosts.length > 0) {
+        cheapestGrowthCost = nonZeroCosts[Math.floor(nonZeroCosts.length / 2)];
+      }
+    }
+
+    if (sort === "growth-cost" && scenario) {
+      tools = [...tools].sort((a, b) => {
+        const aCost = growthCosts[a.id]?.cost ?? Infinity;
+        const bCost = growthCosts[b.id]?.cost ?? Infinity;
+        return aCost - bCost;
+      });
+    }
+
     const displayName = category.replace(/-/g, " ").replace(/\b\w/g, (c: string) => c.toUpperCase());
 
     res.render("category", {
@@ -79,6 +109,9 @@ export function createBrowseRouter(registry: Registry): Router {
       categorySlug: category,
       tools,
       currentSort: sort,
+      growthScenario: scenario,
+      growthCosts,
+      cheapestGrowthCost: isFinite(cheapestGrowthCost) ? cheapestGrowthCost : null,
     });
   });
 
