@@ -188,6 +188,14 @@
   }
 
   function renderMarkdown(text) {
+    // Pre-process: the model sometimes outputs entire tables on one line.
+    // Insert newlines before separator patterns (|---|) and after them.
+    text = text.replace(/\|\s*(\|[\s:-]+(?:\|[\s:-]+)+\|)\s*\|/g, '|\n$1\n|');
+    // Also insert newlines between row-ending "| |" patterns where the next cell has content
+    // This handles "| $0 | | Auth |" → newline before "| Auth |"
+    // Use a lookahead: split when "|" is followed by " |" then a word char
+    text = text.replace(/\|\s+\|(?=\s*[A-Za-z*$#])/g, '|\n|');
+
     // Parse tables first (line-by-line for robustness), then inline formatting
     var lines = text.split('\n');
     var out = [];
