@@ -2,7 +2,7 @@
 
 <div class="max-w-6xl mx-auto px-6 py-10">
   <h1 class="text-4xl md:text-5xl font-bold tracking-tighter text-neutral-900 dark:text-white">Developer Tool Pricing</h1>
-  <p class="text-base text-neutral-500 mt-2 mb-10">Compare pricing across <%= categories.reduce((sum, c) => sum + c.count, 0) %> tools in <%= categories.length %> categories</p>
+  <p class="text-base text-neutral-500 mt-2 mb-10">Compare pricing across <%= categories.reduce((sum, c) => sum + c.count, 0) %> tools in <%= categories.length %> categories · updated <%= lastVerified %></p>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
     <% for (const cat of categories) { %>

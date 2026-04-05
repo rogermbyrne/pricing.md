@@ -1,0 +1,65 @@
+{
+  "id": "speakeasy",
+  "name": "Speakeasy",
+  "description": "SDK generation platform that creates idiomatic client libraries from OpenAPI specs",
+  "url": "https://www.speakeasy.com",
+  "pricingUrl": "https://www.speakeasy.com/pricing",
+  "category": "ci-cd",
+  "tags": [
+    "sdk-generation",
+    "openapi",
+    "developer-tools",
+    "api"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "OpenAPI",
+    "whatYouLose": "SDK generation pipeline, CI/CD integration, language-specific customizations"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "operationsPerLanguage": 250,
+        "languageLicenses": 1
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "flat_rate",
+      "basePrice": 720,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "operationsPerLanguage": 250
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

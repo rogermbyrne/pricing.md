@@ -1,3 +1,21 @@
+---
+tags:
+  - pricing
+  - cost-awareness
+  - tool-evaluation
+  - stack-planning
+  - free-tiers
+people:
+  - rogermbyrne
+tools:
+  - Vercel
+  - Railway
+  - Fly.io
+  - Supabase
+  - Neon
+frameworks:
+  - MCP
+---
 # Pricing.md
 
 Make your AI agent cost-aware when planning developer tool stacks.

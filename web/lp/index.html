@@ -1154,9 +1154,22 @@ video {
                 <span class="text-neutral-500 dark:text-neutral-500" vid="27">Yours should also consider cost.</span>
             </h1>
             
-            <p class="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 mb-12 max-w-xl leading-relaxed" vid="28">
+            <p class="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 mb-8 max-w-xl leading-relaxed" vid="28">
                 Install one skill. Your agent knows what every developer tool costs, and what it'll cost when you scale.
             </p>
+
+            <p id="stats-line" class="font-mono text-sm text-neutral-500 dark:text-neutral-500 mb-12 tracking-wide" style="opacity:0;transition:opacity 0.3s">
+            </p>
+            <script>
+              fetch('/api/stats').then(r=>r.json()).then(d=>{
+                var el=document.getElementById('stats-line');
+                var dt=new Date(d.lastVerified+'T00:00:00');
+                var mon=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+                var dateStr=mon[dt.getMonth()]+' '+dt.getDate()+', '+dt.getFullYear();
+                el.innerHTML='<span style="color:#e5e5e5;font-weight:700">'+d.tools+'</span> tools · <span style="color:#e5e5e5;font-weight:700">'+d.categories+'</span> categories · updated '+dateStr;
+                el.style.opacity='1';
+              });
+            </script>
 
             <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-16" vid="29">
                 <div class="group flex items-center gap-3 font-mono text-sm bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 px-5 py-4 theme-transition shadow-lg" vid="30">

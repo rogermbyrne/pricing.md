@@ -1,0 +1,68 @@
+{
+  "id": "infisical",
+  "name": "Infisical",
+  "description": "Open-source secrets management platform for syncing secrets across infrastructure and CI/CD",
+  "url": "https://infisical.com",
+  "pricingUrl": "https://infisical.com/pricing",
+  "category": "ci-cd",
+  "tags": [
+    "secrets-management",
+    "security",
+    "env-vars",
+    "open-source"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Secret syncing integrations, rotation policies, access controls, audit logs"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "identities": 5,
+        "projects": 3,
+        "environments": 3,
+        "integrations": 10
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 18,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "environments": 12,
+        "integrations": 50
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

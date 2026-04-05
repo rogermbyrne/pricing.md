@@ -1,0 +1,147 @@
+{
+  "id": "browserbase",
+  "name": "Browserbase",
+  "description": "Headless browser infrastructure for web scraping, testing, and AI agents with managed Chromium",
+  "url": "https://www.browserbase.com",
+  "pricingUrl": "https://www.browserbase.com/pricing",
+  "category": "testing",
+  "tags": [
+    "headless-browser",
+    "scraping",
+    "automation",
+    "ai-agents"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "Chrome DevTools Protocol",
+    "whatYouLose": "Managed browser fleet, proxy network, session recording, stealth mode"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "browserHours": 1,
+        "searchCalls": 1000,
+        "fetchCalls": 1000,
+        "concurrentBrowsers": 3,
+        "dataRetentionDays": 7,
+        "maxSessionMinutes": 15
+      }
+    },
+    {
+      "name": "Developer",
+      "slug": "developer",
+      "pricingModel": "hybrid",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "browser-hours",
+          "unit": "hours",
+          "pricePerUnit": 0.12,
+          "unitQuantity": 1,
+          "includedQuantity": 100
+        },
+        {
+          "name": "proxies",
+          "unit": "GB",
+          "pricePerUnit": 12.00,
+          "unitQuantity": 1,
+          "includedQuantity": 1
+        },
+        {
+          "name": "search-calls",
+          "unit": "calls",
+          "pricePerUnit": 7.00,
+          "unitQuantity": 1000,
+          "includedQuantity": 1000
+        },
+        {
+          "name": "fetch-calls",
+          "unit": "calls",
+          "pricePerUnit": 1.00,
+          "unitQuantity": 1000,
+          "includedQuantity": 1000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "browserHours": 100,
+        "concurrentBrowsers": 25,
+        "dataRetentionDays": 7,
+        "maxSessionHours": 6
+      }
+    },
+    {
+      "name": "Startup",
+      "slug": "startup",
+      "pricingModel": "hybrid",
+      "basePrice": 99,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "browser-hours",
+          "unit": "hours",
+          "pricePerUnit": 0.10,
+          "unitQuantity": 1,
+          "includedQuantity": 500
+        },
+        {
+          "name": "proxies",
+          "unit": "GB",
+          "pricePerUnit": 10.00,
+          "unitQuantity": 1,
+          "includedQuantity": 5
+        },
+        {
+          "name": "search-calls",
+          "unit": "calls",
+          "pricePerUnit": 7.00,
+          "unitQuantity": 1000,
+          "includedQuantity": 1000
+        },
+        {
+          "name": "fetch-calls",
+          "unit": "calls",
+          "pricePerUnit": 0.50,
+          "unitQuantity": 1000,
+          "includedQuantity": 10000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "browserHours": 500,
+        "concurrentBrowsers": 100,
+        "dataRetentionDays": 30,
+        "maxSessionHours": 6
+      }
+    },
+    {
+      "name": "Scale",
+      "slug": "scale",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

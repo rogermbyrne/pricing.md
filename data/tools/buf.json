@@ -1,0 +1,90 @@
+{
+  "id": "buf",
+  "name": "Buf",
+  "description": "Protobuf and gRPC tooling platform with schema registry, linting, breaking change detection, and SDK generation",
+  "url": "https://buf.build",
+  "pricingUrl": "https://buf.build/pricing",
+  "category": "ci-cd",
+  "tags": [
+    "protobuf",
+    "grpc",
+    "schema-registry",
+    "api"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "Protocol Buffers / gRPC",
+    "whatYouLose": "BSR hosted registry, breaking change detection, managed plugins, generated SDKs"
+  },
+  "tiers": [
+    {
+      "name": "Community",
+      "slug": "community",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "privateRepositories": 1
+      }
+    },
+    {
+      "name": "Teams",
+      "slug": "teams",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "types",
+          "unit": "types",
+          "pricePerUnit": 0.50,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "usage_based",
+      "basePrice": 3000,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "types",
+          "unit": "types",
+          "pricePerUnit": 5.00,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

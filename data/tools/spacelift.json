@@ -1,0 +1,79 @@
+{
+  "id": "spacelift",
+  "name": "Spacelift",
+  "description": "Infrastructure orchestration platform for Terraform, OpenTofu, Pulumi, CloudFormation, and Kubernetes",
+  "url": "https://spacelift.io",
+  "pricingUrl": "https://spacelift.io/pricing",
+  "category": "ci-cd",
+  "tags": [
+    "iac",
+    "terraform",
+    "infrastructure",
+    "orchestration"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": "Terraform/OpenTofu",
+    "whatYouLose": "Policy-as-code rules, drift detection, workflow customization, private module registry"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "users": 2,
+        "apiKeys": 1,
+        "publicWorkers": 1
+      }
+    },
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "flat_rate",
+      "basePrice": 399,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "users": 10,
+        "publicWorkers": 2
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "unkey",
+  "name": "Unkey",
+  "description": "API key management and rate limiting infrastructure for developers",
+  "url": "https://unkey.com",
+  "pricingUrl": "https://unkey.com/pricing",
+  "category": "auth",
+  "tags": [
+    "api-keys",
+    "rate-limiting",
+    "auth",
+    "infrastructure"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "API key management UI, rate limiting rules, usage analytics, audit logs"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "apiKeys": 1000,
+        "validRequestsPerMonth": 150000,
+        "logsRetentionDays": 7,
+        "auditLogRetentionDays": 30
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 25,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "apiKeys": 1000000,
+        "validRequestsPerMonth": 250000,
+        "logsRetentionDays": 30,
+        "auditLogRetentionDays": 90
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

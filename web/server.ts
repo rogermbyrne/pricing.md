@@ -38,8 +38,15 @@ app.disable("x-powered-by");
 app.set("view engine", "ejs");
 app.set("views", viewsDir);
 
+// Make registry stats available to all templates
+app.locals.toolCount = registry.size;
+app.locals.categoryCount = registry.categories().length;
+
 // Static files
 app.use("/public", express.static(publicDir));
+
+// SEO routes (before static so dynamic llms.txt wins over static file)
+app.use(createSeoRouter(registry));
 
 // Landing page at root
 app.use(express.static(lpDir));
@@ -50,7 +57,6 @@ app.use(createToolRouter(registry, changelogDB));
 app.use(createCompareRouter(registry));
 app.use(createChangelogRouter(registry, changelogDB));
 app.use(createApiRouter(registry, changelogDB));
-app.use(createSeoRouter(registry));
 
 // 404 catch-all
 app.use((req: express.Request, res: express.Response) => {

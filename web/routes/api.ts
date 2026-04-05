@@ -27,6 +27,19 @@ export function createApiRouter(registry: Registry, changelogDB: ChangelogDB): R
     res.json(tool);
   });
 
+  router.get("/api/stats", (req: Request, res: Response) => {
+    const categories = registry.categories();
+    const allTools = registry.allTools();
+    const lastVerified = allTools.reduce((latest, t) => {
+      return t.lastVerified > latest ? t.lastVerified : latest;
+    }, "");
+    res.json({
+      tools: allTools.length,
+      categories: categories.length,
+      lastVerified,
+    });
+  });
+
   router.get("/api/changelog", (req: Request, res: Response) => {
     const toolId = req.query.tool as string | undefined;
     const since = req.query.since as string | undefined;

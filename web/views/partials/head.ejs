@@ -12,17 +12,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= title %> | Pricing.md</title>
-  <meta name="description" content="<%= typeof description !== 'undefined' && description ? description : 'Compare developer tool pricing side-by-side. 197 tools with verified prices, free tier details, and switching costs.' %>">
+  <meta name="description" content="<%= typeof description !== 'undefined' && description ? description : 'Compare developer tool pricing side-by-side. <%= toolCount %> tools with verified prices, free tier details, and switching costs.' %>">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://latest.sh<%= typeof path !== 'undefined' && path ? path : '' %>">
   <meta property="og:title" content="<%= title %> | Pricing.md">
-  <meta property="og:description" content="<%= typeof description !== 'undefined' && description ? description : 'Compare developer tool pricing side-by-side. 197 tools with verified prices, free tier details, and switching costs.' %>">
+  <meta property="og:description" content="<%= typeof description !== 'undefined' && description ? description : 'Compare developer tool pricing side-by-side. <%= toolCount %> tools with verified prices, free tier details, and switching costs.' %>">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://latest.sh<%= typeof path !== 'undefined' && path ? path : '' %>">
   <meta property="og:image" content="https://latest.sh/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="<%= title %> | Pricing.md">
-  <meta name="twitter:description" content="<%= typeof description !== 'undefined' && description ? description : 'Compare developer tool pricing side-by-side. 197 tools with verified prices, free tier details, and switching costs.' %>">
+  <meta name="twitter:description" content="<%= typeof description !== 'undefined' && description ? description : 'Compare developer tool pricing side-by-side. <%= toolCount %> tools with verified prices, free tier details, and switching costs.' %>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">

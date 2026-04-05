@@ -16,11 +16,17 @@ export function createBrowseRouter(registry: Registry): Router {
       };
     });
 
+    const allTools = registry.allTools().filter((t) => t.category !== "ai-api");
+    const lastVerified = allTools.reduce((latest, t) => {
+      return t.lastVerified > latest ? t.lastVerified : latest;
+    }, "");
+
     res.render("browse", {
       title: "Browse Developer Tool Pricing",
       description: "Compare pricing across " + categoryData.reduce((sum, c) => sum + c.count, 0) + " developer tools in " + categoryData.length + " categories. Find free tiers, switching costs, and the cheapest options.",
       path: "/browse",
       categories: categoryData,
+      lastVerified,
     });
   });
 

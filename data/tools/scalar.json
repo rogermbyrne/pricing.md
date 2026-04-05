@@ -1,0 +1,64 @@
+{
+  "id": "scalar",
+  "name": "Scalar",
+  "description": "API documentation platform with interactive references, developer portal, and REST/GraphQL client",
+  "url": "https://scalar.com",
+  "pricingUrl": "https://scalar.com/pricing",
+  "category": "ci-cd",
+  "tags": [
+    "api-docs",
+    "openapi",
+    "developer-portal",
+    "api-client"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "OpenAPI",
+    "whatYouLose": "Hosted docs portal, custom themes, Git Sync config, team collaboration"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "editorSeats": 1
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 24,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "minSeats": 3
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -4,6 +4,47 @@ import { Registry } from "../../src/registry/registry.js";
 export function createSeoRouter(registry: Registry): Router {
   const router = Router();
 
+  router.get("/llms.txt", (req: Request, res: Response) => {
+    const categories = registry.categories().filter((cat) => cat !== "ai-api");
+    const allTools = registry.allTools().filter((t) => t.category !== "ai-api");
+    const totalTools = allTools.length;
+    const totalCategories = categories.length;
+
+    const categoryLines = categories.map((cat) => {
+      const tools = registry.search({ category: cat as any });
+      const topNames = tools.slice(0, 4).map((t) => t.name).join(", ");
+      const displayName = cat.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+      return `- [${displayName}](/browse/${cat}): ${topNames}, and more`;
+    });
+
+    const text = `# Pricing.md
+
+> Developer tool pricing registry with ${totalTools} tools across ${totalCategories} categories. Compare pricing, free tiers, switching costs, and portability for ${categories.map(c => c.replace(/-/g, " ")).join(", ")} tools.
+
+## Browse Categories
+
+${categoryLines.join("\n")}
+
+## API
+
+- [All Tools JSON](/api/tools): Complete tool listing with pricing data
+- [Single Tool](/api/tools/{id}): Full pricing details for a specific tool
+- [Changelog](/api/changelog): Pricing change history
+
+## Compare Tools
+
+- [Compare](/compare): Side-by-side tool comparison (add ?tools=vercel,netlify,railway)
+
+## Optional
+
+- [GitHub Repository](https://github.com/rogermbyrne/pricing.md)
+- [Install as Skill](https://github.com/rogermbyrne/pricing.md#install-as-a-skill): \`npx skills add rogermbyrne/pricing.md\`
+`;
+
+    res.set("Content-Type", "text/plain; charset=utf-8");
+    res.send(text);
+  });
+
   router.get("/sitemap.xml", (req: Request, res: Response) => {
     const BASE = "https://latest.sh";
     const today = new Date().toISOString().split("T")[0];

@@ -1,0 +1,168 @@
+{
+  "id": "nango",
+  "name": "Nango",
+  "description": "Unified API for building product integrations with auth, syncing, proxying, and webhooks",
+  "url": "https://nango.dev",
+  "pricingUrl": "https://nango.dev/pricing",
+  "category": "hosting",
+  "tags": [
+    "integrations",
+    "api",
+    "syncing",
+    "webhooks"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": "OAuth 2.0",
+    "whatYouLose": "Integration auth management, sync pipelines, proxy config, function orchestration"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "connections": 10,
+        "proxyRequests": 100000,
+        "functionComputeHours": 10,
+        "functionRuns": 100000,
+        "customLogs": 100000,
+        "syncRecords": 100000,
+        "webhooks": 100000
+      }
+    },
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "hybrid",
+      "basePrice": 50,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "connections",
+          "unit": "connections",
+          "pricePerUnit": 1.00,
+          "unitQuantity": 1,
+          "includedQuantity": 20
+        },
+        {
+          "name": "proxy-requests",
+          "unit": "requests",
+          "pricePerUnit": 0.0001,
+          "unitQuantity": 1,
+          "includedQuantity": 200000
+        },
+        {
+          "name": "function-runs",
+          "unit": "runs",
+          "pricePerUnit": 0.0001,
+          "unitQuantity": 1,
+          "includedQuantity": 200000
+        },
+        {
+          "name": "sync-records",
+          "unit": "records",
+          "pricePerUnit": 0.0001,
+          "unitQuantity": 1,
+          "includedQuantity": 200000
+        },
+        {
+          "name": "webhooks",
+          "unit": "webhooks",
+          "pricePerUnit": 0.0001,
+          "unitQuantity": 1,
+          "includedQuantity": 200000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "connections": 20,
+        "proxyRequests": 200000,
+        "functionComputeHours": 20,
+        "functionRuns": 200000,
+        "customLogs": 200000,
+        "syncRecords": 200000,
+        "webhooks": 200000
+      }
+    },
+    {
+      "name": "Growth",
+      "slug": "growth",
+      "pricingModel": "hybrid",
+      "basePrice": 500,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "connections",
+          "unit": "connections",
+          "pricePerUnit": 1.00,
+          "unitQuantity": 1,
+          "includedQuantity": 100
+        },
+        {
+          "name": "proxy-requests",
+          "unit": "requests",
+          "pricePerUnit": 0.0001,
+          "unitQuantity": 1,
+          "includedQuantity": 1000000
+        },
+        {
+          "name": "function-runs",
+          "unit": "runs",
+          "pricePerUnit": 0.0001,
+          "unitQuantity": 1,
+          "includedQuantity": 1000000
+        },
+        {
+          "name": "sync-records",
+          "unit": "records",
+          "pricePerUnit": 0.0001,
+          "unitQuantity": 1,
+          "includedQuantity": 1000000
+        },
+        {
+          "name": "webhooks",
+          "unit": "webhooks",
+          "pricePerUnit": 0.0001,
+          "unitQuantity": 1,
+          "includedQuantity": 1000000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "connections": 100,
+        "proxyRequests": 1000000,
+        "functionComputeHours": 100,
+        "functionRuns": 1000000,
+        "customLogs": 1000000,
+        "syncRecords": 1000000,
+        "webhooks": 1000000
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

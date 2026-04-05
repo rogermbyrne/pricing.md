@@ -1,0 +1,86 @@
+{
+  "id": "openstatus",
+  "name": "OpenStatus",
+  "description": "Open-source monitoring platform with status pages, uptime checks, and incident management",
+  "url": "https://www.openstatus.dev",
+  "pricingUrl": "https://www.openstatus.dev/pricing",
+  "category": "monitoring",
+  "tags": [
+    "status-page",
+    "uptime",
+    "monitoring",
+    "open-source"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "Status page config, monitor history, notification channel setup, subscriber list"
+  },
+  "tiers": [
+    {
+      "name": "Hobby",
+      "slug": "hobby",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "statusPages": 1,
+        "components": 3,
+        "monitors": 1,
+        "checkIntervalMinutes": 10,
+        "dataRetentionDays": 14,
+        "notificationChannels": 1,
+        "teamMembers": 1,
+        "onDemandChecks": 30
+      }
+    },
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "flat_rate",
+      "basePrice": 30,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "statusPages": 1,
+        "components": 20,
+        "monitors": 20,
+        "checkIntervalMinutes": 1,
+        "dataRetentionDays": 90,
+        "notificationChannels": 10,
+        "onDemandChecks": 100
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 100,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "statusPages": 5,
+        "components": 50,
+        "monitors": 50,
+        "checkIntervalSeconds": 30,
+        "dataRetentionDays": 365,
+        "notificationChannels": 20,
+        "onDemandChecks": 300,
+        "regionsPerMonitor": 28
+      }
+    }
+  ]
+}
