@@ -1,0 +1,92 @@
+{
+  "id": "budibase",
+  "name": "Budibase",
+  "description": "Open-source low-code platform for building internal tools, forms, and admin panels with automation",
+  "url": "https://budibase.com",
+  "pricingUrl": "https://budibase.com/pricing",
+  "category": "internal-tools",
+  "tags": [
+    "low-code",
+    "internal-tools",
+    "automation",
+    "open-source"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "significant",
+    "openStandard": null,
+    "whatYouLose": "App definitions, automation workflows, data connections — can self-host open-source version"
+  },
+  "tiers": [
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "hybrid",
+      "basePrice": 23,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": 5,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "actions": 5000,
+        "aiCredits": 2000,
+        "creators": 1,
+        "endUsersIncluded": 2,
+        "workspaces": 1,
+        "logRetentionDays": 1
+      }
+    },
+    {
+      "name": "Premium",
+      "slug": "premium",
+      "pricingModel": "hybrid",
+      "basePrice": 59,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": 5,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "actions": 20000,
+        "aiCredits": 10000,
+        "creators": 1,
+        "endUsersIncluded": 10,
+        "workspaces": 10,
+        "logRetentionDays": 7
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "hybrid",
+      "basePrice": 359,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": 5,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "actions": 250000,
+        "aiCredits": 50000,
+        "creatorsIncluded": 3,
+        "endUsersIncluded": 30,
+        "logRetentionDays": 30
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

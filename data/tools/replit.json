@@ -1,0 +1,82 @@
+{
+  "id": "replit",
+  "name": "Replit",
+  "description": "AI-powered cloud IDE with autonomous coding agent, instant deployments, and collaborative workspaces",
+  "url": "https://replit.com",
+  "pricingUrl": "https://replit.com/pricing",
+  "category": "ai-coding",
+  "tags": [
+    "ide",
+    "ai-coding",
+    "cloud-ide",
+    "deployment"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Cloud workspaces, deployment config, database state, AI agent context"
+  },
+  "tiers": [
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "publishedApps": 1
+      }
+    },
+    {
+      "name": "Core",
+      "slug": "core",
+      "pricingModel": "flat_rate",
+      "basePrice": 25,
+      "billingPeriod": "monthly",
+      "annualDiscount": 20,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "monthlyCredits": 25,
+        "collaborators": 5
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 100,
+      "billingPeriod": "monthly",
+      "annualDiscount": 5,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "monthlyCredits": 100,
+        "collaborators": 15,
+        "viewers": 50,
+        "databaseRestoreDays": 28
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

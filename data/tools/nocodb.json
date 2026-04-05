@@ -1,0 +1,97 @@
+{
+  "id": "nocodb",
+  "name": "NocoDB",
+  "description": "Open-source Airtable alternative with database views, API access, webhooks, and external DB connections",
+  "url": "https://nocodb.com",
+  "pricingUrl": "https://nocodb.com/pricing",
+  "category": "internal-tools",
+  "tags": [
+    "no-code",
+    "database",
+    "airtable-alternative",
+    "open-source"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "SQL databases",
+    "whatYouLose": "Views, extensions, webhook config — can self-host open-source version, data stays in your DB"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "editors": 3,
+        "commenters": 10,
+        "records": 1000,
+        "storageGB": 1,
+        "apiCallsPerMonth": 1000,
+        "webhookRunsPerMonth": 100,
+        "extensions": 1,
+        "workspaces": 1
+      }
+    },
+    {
+      "name": "Plus",
+      "slug": "plus",
+      "pricingModel": "per_seat",
+      "basePrice": 12,
+      "billingPeriod": "monthly",
+      "annualDiscount": 20,
+      "seatPrice": 12,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "records": 50000,
+        "storageGB": 20,
+        "apiCallsPerMonth": 100000,
+        "webhookRunsPerMonth": 10000,
+        "workspaces": 1
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "per_seat",
+      "basePrice": 24,
+      "billingPeriod": "monthly",
+      "annualDiscount": 20,
+      "seatPrice": 24,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "records": 300000,
+        "storageGB": 100,
+        "apiCallsPerMonth": 1000000,
+        "webhookRunsPerMonth": 50000,
+        "externalDatabases": 10,
+        "workspaces": 1
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "flat_rate",
+      "basePrice": 1000,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "storageGB": 1000,
+        "webhookRunsPerMonth": 500000
+      }
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "augment-code",
+  "name": "Augment Code",
+  "description": "AI coding assistant with Context Engine, code review, MCP tools, and enterprise-grade security",
+  "url": "https://augmentcode.com",
+  "pricingUrl": "https://augmentcode.com/pricing",
+  "category": "ai-coding",
+  "tags": [
+    "ai-coding",
+    "code-completion",
+    "code-review",
+    "context-engine"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "Context Engine index, credit balance, analytics history"
+  },
+  "tiers": [
+    {
+      "name": "Indie",
+      "slug": "indie",
+      "pricingModel": "flat_rate",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "creditsPerMonth": 40000,
+        "users": 1
+      }
+    },
+    {
+      "name": "Standard",
+      "slug": "standard",
+      "pricingModel": "per_seat",
+      "basePrice": 60,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 60,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "creditsPerMonth": 130000,
+        "users": 20
+      }
+    },
+    {
+      "name": "Max",
+      "slug": "max",
+      "pricingModel": "per_seat",
+      "basePrice": 200,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 200,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "creditsPerMonth": 450000,
+        "users": 20
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}
