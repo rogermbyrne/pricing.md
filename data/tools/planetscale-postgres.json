@@ -14,9 +14,9 @@
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
-    "switchingCost": "moderate",
-    "openStandard": "MySQL wire protocol",
-    "whatYouLose": "Vitess horizontal sharding, non-blocking schema changes, managed HA clustering, metal storage tiers"
+    "switchingCost": "drop-in",
+    "openStandard": "PostgreSQL wire protocol",
+    "whatYouLose": "Managed HA clustering, EBS/Metal storage tier options, PlanetScale dashboard and metrics"
   },
   "tiers": [
     {
