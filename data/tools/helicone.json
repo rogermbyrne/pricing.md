@@ -1,0 +1,92 @@
+{
+  "id": "helicone",
+  "name": "Helicone",
+  "description": "LLM observability platform with request logging, analytics, caching, and rate limiting",
+  "url": "https://www.helicone.ai",
+  "pricingUrl": "https://www.helicone.ai/pricing",
+  "category": "ai-api",
+  "tags": [
+    "llm-observability",
+    "logging",
+    "analytics",
+    "ai-monitoring"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "OpenAI-compatible proxy",
+    "whatYouLose": "Request logs, analytics dashboards, alerts, cached responses"
+  },
+  "tiers": [
+    {
+      "name": "Hobby",
+      "slug": "hobby",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "requestsPerMonth": 10000,
+        "storageGB": 1,
+        "seats": 1,
+        "organizations": 1,
+        "dataRetentionDays": 7,
+        "ingestionLogsPerMin": 10,
+        "apiCallsPerMin": 10
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 79,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "requestsPerMonthFree": 10000,
+        "organizations": 1,
+        "dataRetentionDays": 30,
+        "ingestionLogsPerMin": 1000,
+        "apiCallsPerMin": 60
+      }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "flat_rate",
+      "basePrice": 799,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "requestsPerMonthFree": 10000,
+        "organizations": 5,
+        "dataRetentionDays": 90,
+        "ingestionLogsPerMin": 15000,
+        "apiCallsPerMin": 1000
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

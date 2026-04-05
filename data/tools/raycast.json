@@ -52,7 +52,7 @@
       "name": "Team Pro",
       "slug": "team-pro",
       "pricingModel": "per_seat",
-      "basePrice": 0,
+      "basePrice": 15,
       "billingPeriod": "monthly",
       "annualDiscount": 20,
       "seatPrice": 15,

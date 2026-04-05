@@ -1,0 +1,79 @@
+{
+  "id": "portkey",
+  "name": "Portkey",
+  "description": "AI gateway and observability platform with routing, caching, guardrails, and prompt management",
+  "url": "https://portkey.ai",
+  "pricingUrl": "https://portkey.ai/pricing",
+  "category": "ai-api",
+  "tags": [
+    "ai-gateway",
+    "llm-observability",
+    "prompt-management",
+    "guardrails"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "OpenAI-compatible API",
+    "whatYouLose": "Routing rules, caching config, guardrail policies, prompt templates, observability history"
+  },
+  "tiers": [
+    {
+      "name": "Developer",
+      "slug": "developer",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "requestsPerMonth": 10000,
+        "recordedLogs": 10000,
+        "logRetentionDays": 3,
+        "metricRetentionDays": 30,
+        "promptTemplates": 3
+      }
+    },
+    {
+      "name": "Production",
+      "slug": "production",
+      "pricingModel": "hybrid",
+      "basePrice": 49,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "requests",
+          "unit": "requests",
+          "pricePerUnit": 9,
+          "unitQuantity": 100000,
+          "includedQuantity": 100000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "requestsPerMonth": 100000,
+        "recordedLogs": 100000,
+        "logRetentionDays": 30,
+        "metricRetentionDays": 90
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

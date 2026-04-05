@@ -1,0 +1,95 @@
+{
+  "id": "braintrust",
+  "name": "Braintrust",
+  "description": "AI evaluation and observability platform with evals, scoring, datasets, and prompt playground",
+  "url": "https://www.braintrust.dev",
+  "pricingUrl": "https://www.braintrust.dev/pricing",
+  "category": "ai-api",
+  "tags": [
+    "ai-eval",
+    "observability",
+    "llm-testing",
+    "prompt-engineering"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Eval datasets, scoring history, prompt versions, experiment comparisons"
+  },
+  "tiers": [
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "processed-data",
+          "unit": "GB",
+          "pricePerUnit": 4,
+          "unitQuantity": 1,
+          "includedQuantity": 1
+        },
+        {
+          "name": "scores",
+          "unit": "scores",
+          "pricePerUnit": 2.50,
+          "unitQuantity": 1000,
+          "includedQuantity": 10000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "dataRetentionDays": 14,
+        "humanReviewScoresPerProject": 1
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "hybrid",
+      "basePrice": 249,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "processed-data",
+          "unit": "GB",
+          "pricePerUnit": 3,
+          "unitQuantity": 1,
+          "includedQuantity": 5
+        },
+        {
+          "name": "scores",
+          "unit": "scores",
+          "pricePerUnit": 1.50,
+          "unitQuantity": 1000,
+          "includedQuantity": 50000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "dataRetentionDays": 30
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

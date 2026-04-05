@@ -1,0 +1,105 @@
+{
+  "id": "cerbos",
+  "name": "Cerbos",
+  "description": "Policy-as-code authorization engine with YAML policies, audit logs, and managed PDP deployment",
+  "url": "https://cerbos.dev",
+  "pricingUrl": "https://cerbos.dev/pricing",
+  "category": "auth",
+  "tags": [
+    "authorization",
+    "policy-as-code",
+    "rbac",
+    "open-source"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "YAML policies",
+    "whatYouLose": "Cerbos Hub management, playgrounds, unified audit logs, managed CI/CD pipeline"
+  },
+  "tiers": [
+    {
+      "name": "Open Source",
+      "slug": "open-source",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Proof of Concept",
+      "slug": "poc",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "monthlyActivePrincipals": 100,
+        "workspaces": 1,
+        "developers": 2,
+        "playgrounds": 2,
+        "simultaneousPDPs": 2,
+        "customTenants": 5,
+        "policyBuildsPerWeek": 5,
+        "auditLogRetentionWeeks": 1
+      }
+    },
+    {
+      "name": "Development",
+      "slug": "development",
+      "pricingModel": "hybrid",
+      "basePrice": 25,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "monthlyActivePrincipalsIncluded": 100,
+        "workspaces": 3,
+        "developers": 5,
+        "playgrounds": 5,
+        "simultaneousPDPs": 10,
+        "customTenants": 20,
+        "policyBuildsPerWeek": 100,
+        "auditLogRetentionMonths": 3
+      }
+    },
+    {
+      "name": "Production",
+      "slug": "production",
+      "pricingModel": "hybrid",
+      "basePrice": 933,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "monthlyActivePrincipalsIncluded": 5000,
+        "auditLogRetentionYears": 1
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

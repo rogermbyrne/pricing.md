@@ -60,7 +60,7 @@
       "name": "Team",
       "slug": "team",
       "pricingModel": "per_seat",
-      "basePrice": 0,
+      "basePrice": 400,
       "billingPeriod": "monthly",
       "annualDiscount": null,
       "seatPrice": 100,

@@ -1,0 +1,77 @@
+{
+  "id": "lunary",
+  "name": "Lunary",
+  "description": "Open-source LLM observability and analytics platform with traces, evaluations, and prompt management",
+  "url": "https://lunary.ai",
+  "pricingUrl": "https://lunary.ai/pricing",
+  "category": "ai-api",
+  "tags": [
+    "llm-observability",
+    "traces",
+    "evaluations",
+    "open-source"
+  ],
+  "lastVerified": "2026-04-05",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "Event history, evaluation datasets, prompt versions, analytics dashboards"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "eventsPerMonth": 10000,
+        "projects": 3,
+        "historyRetentionDays": 30,
+        "seats": 1
+      }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 20,
+      "usageMetrics": [
+        {
+          "name": "events",
+          "unit": "events",
+          "pricePerUnit": 10,
+          "unitQuantity": 50000,
+          "includedQuantity": 50000
+        }
+      ],
+      "features": [],
+      "limits": {
+        "eventsPerMonth": 50000,
+        "seats": 10,
+        "historyRetentionDays": 365
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}
