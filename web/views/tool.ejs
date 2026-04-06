@@ -87,13 +87,14 @@ const lowestPaid = paidTiers.length > 0 ? Math.min(...paidTiers.map(t => t.baseP
       <a href="#transparency-score" class="inline-block px-2.5 py-1 text-xs font-mono font-bold border rounded-none no-underline <%= gradeBadgeClass(transparency.grade) %>">Transparency: <%= transparency.grade %></a>
     </div>
 
+    <% const toolHasPricingMd = tool.pricingUrl.endsWith('/pricing.md'); %>
     <div class="flex flex-wrap items-center gap-4 mt-6">
       <a href="<%= tool.pricingUrl %>" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-mono text-sm rounded-none border border-neutral-900 dark:border-white hover:opacity-80 transition-opacity no-underline">View Pricing Page &rarr;</a>
-      <a href="/tool/<%= tool.id %>/pricing.md" class="inline-flex items-center gap-2 px-5 py-2.5 font-mono text-sm rounded-none border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-900 dark:hover:border-white transition-all no-underline">View as Markdown</a>
+      <% if (!toolHasPricingMd) { %>
+        <a href="/tool/<%= tool.id %>/pricing.md" class="inline-flex items-center gap-2 px-5 py-2.5 font-mono text-sm rounded-none border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-900 dark:hover:border-white transition-all no-underline">View as Markdown</a>
+      <% } %>
       <span class="text-xs text-neutral-400 font-mono">Verified <%= tool.lastVerified %></span>
     </div>
-
-    <% const toolHasPricingMd = tool.pricingUrl.endsWith('/pricing.md'); %>
     <% if (toolHasPricingMd) { %>
       <div class="flex items-center gap-2 mt-4 px-4 py-3 border border-emerald-300 dark:border-emerald-700 bg-emerald-50 dark:bg-emerald-950">
         <span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-emerald-500 flex-shrink-0"><svg viewBox="0 0 24 24" width="10" height="10" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
