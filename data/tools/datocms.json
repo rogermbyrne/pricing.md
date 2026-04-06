@@ -12,7 +12,7 @@
     "collaboration",
     "structured-content"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "EUR",
   "portability": {
@@ -42,7 +42,7 @@
       "name": "Professional",
       "slug": "professional",
       "pricingModel": "per_seat",
-      "basePrice": 149,
+      "basePrice": 199,
       "billingPeriod": "monthly",
       "annualDiscount": 25,
       "seatPrice": 9,
