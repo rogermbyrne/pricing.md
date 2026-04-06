@@ -13,7 +13,7 @@
     "graphql",
     "self-hosted"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -39,7 +39,7 @@
       "slug": "professional",
       "pricingModel": "per_seat",
       "basePrice": 99,
-      "billingPeriod": "monthly",
+      "billingPeriod": "annual",
       "annualDiscount": null,
       "seatPrice": 15,
       "usageMetrics": [],
