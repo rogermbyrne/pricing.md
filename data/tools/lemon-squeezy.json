@@ -11,7 +11,7 @@
     "subscriptions",
     "tax-compliance"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -33,6 +33,13 @@
           "name": "transaction-fee",
           "unit": "percentage",
           "pricePerUnit": 5,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "per-transaction-flat-fee",
+          "unit": "USD",
+          "pricePerUnit": 0.50,
           "unitQuantity": 1,
           "includedQuantity": 0
         }
