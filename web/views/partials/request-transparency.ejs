@@ -1,13 +1,13 @@
 <%
 const tweetText = encodeURIComponent(
-  `Hey${tool.twitterHandle ? ' @' + tool.twitterHandle : ' ' + tool.name}, would you consider publishing a pricing.md file? It makes your pricing machine-readable for AI agents and developer tools.\n\nYour community-maintained pricing data: https://latest.sh/tool/${tool.id}/pricing.md\n\nLearn more: https://github.com/nichochar/pricing.md`
+  `Hey${tool.twitterHandle ? ' @' + tool.twitterHandle : ' ' + tool.name}, would you consider publishing a pricing.md file? It makes your pricing machine-readable for AI agents and developer tools.\n\nYour community-maintained pricing data: https://latest.sh/tool/${tool.id}/pricing.md\n\nLearn more: https://github.com/rogermbyrne/pricing.md`
 );
 
 const issueTitle = encodeURIComponent(`Add a pricing.md file for machine-readable pricing`);
 const issueBody = encodeURIComponent(
   `Hi! I use ${tool.name} and would love to see you publish a pricing.md file.\n\n` +
   `## What is pricing.md?\n\n` +
-  `[pricing.md](https://github.com/nichochar/pricing.md) is a standard for publishing machine-readable pricing that AI agents and developer tools can consume directly.\n\n` +
+  `[pricing.md](https://github.com/rogermbyrne/pricing.md) is a standard for publishing machine-readable pricing that AI agents and developer tools can consume directly.\n\n` +
   `## Why?\n\n` +
   `- AI coding agents can automatically factor in your pricing when recommending tools\n` +
   `- Developers get accurate, up-to-date pricing without scraping your website\n` +
@@ -22,7 +22,7 @@ const emailSubject = encodeURIComponent(`Request: Publish a pricing.md file for 
 const emailBody = encodeURIComponent(
   `Hi ${tool.name} team,\n\n` +
   `I'm a developer who uses ${tool.name} and I'd love to see you publish a pricing.md file.\n\n` +
-  `pricing.md (https://github.com/nichochar/pricing.md) is a standard for machine-readable pricing that AI agents and developer tools can consume directly. ` +
+  `pricing.md (https://github.com/rogermbyrne/pricing.md) is a standard for machine-readable pricing that AI agents and developer tools can consume directly. ` +
   `Your pricing data is currently community-maintained at https://latest.sh/tool/${tool.id}/pricing.md — publishing an official one would give you control of that data.\n\n` +
   `Thanks!`
 );
@@ -35,7 +35,7 @@ const shareUrl = encodeURIComponent(`https://latest.sh/tool/${tool.id}?ref=trans
   <div class="flex items-center justify-between mb-4">
     <p class="text-sm text-neutral-600 dark:text-neutral-400">
       Help get <strong class="text-neutral-900 dark:text-white"><%= tool.name %></strong> to publish an official
-      <a href="https://github.com/nichochar/pricing.md" target="_blank" rel="noopener" class="border-b border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white transition-colors">pricing.md</a>
+      <a href="https://github.com/rogermbyrne/pricing.md" target="_blank" rel="noopener" class="border-b border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white transition-colors">pricing.md</a>
       file. Pick an action:
     </p>
     <div class="flex items-center gap-2 flex-shrink-0 ml-4">
@@ -89,7 +89,7 @@ Hi! I use <%= tool.name %> and would love to see you publish a pricing.md file.
 
 ## What is pricing.md?
 
-pricing.md (https://github.com/nichochar/pricing.md) is a standard for publishing machine-readable pricing that AI agents and developer tools can consume directly.
+pricing.md (https://github.com/rogermbyrne/pricing.md) is a standard for publishing machine-readable pricing that AI agents and developer tools can consume directly.
 
 ## Why?
 
