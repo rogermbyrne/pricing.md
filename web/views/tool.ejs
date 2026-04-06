@@ -222,13 +222,6 @@ const lowestPaid = paidTiers.length > 0 ? Math.min(...paidTiers.map(t => t.baseP
   </div>
   <% } %>
 
-  <!-- Request Transparency -->
-  <% if (!toolHasPricingMd) { %>
-    <div id="request-transparency">
-      <%- include('partials/request-transparency') %>
-    </div>
-  <% } %>
-
   <!-- Transparency Score -->
   <div id="transparency-score" class="mb-8">
     <div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-3">Transparency Score</div>
