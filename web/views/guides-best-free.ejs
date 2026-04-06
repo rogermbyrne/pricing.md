@@ -1,0 +1,94 @@
+<%- include('partials/head', { title, description, path }) %>
+
+<div class="max-w-6xl mx-auto px-6 md:px-10 py-12">
+  <div class="mb-8">
+    <a href="/browse/<%= categorySlug %>" class="text-sm text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors no-underline">
+      ← Back to <%= category %>
+    </a>
+  </div>
+
+  <h1 class="text-5xl md:text-6xl font-bold tracking-tighter text-neutral-900 dark:text-white mb-4">
+    Best Free <%= category %> Tools
+  </h1>
+  <p class="text-lg text-neutral-500 mb-12">
+    <span class="font-mono"><%= freeTools.length %></span> of <span class="font-mono"><%= allToolsCount %></span> <%= category.toLowerCase() %> tools offer free tiers
+  </p>
+
+  <!-- Free Tools Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+    <% for (const tool of freeTools) { %>
+      <a href="/tool/<%= tool.id %>" class="block bg-white dark:bg-[#09090b] border border-neutral-200 dark:border-neutral-800 rounded-lg p-5 hover:border-neutral-300 dark:hover:border-neutral-700 transition-all no-underline">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="h-10 w-10 bg-green-100 dark:bg-green-900/30 rounded flex items-center justify-center">
+            <span class="font-mono font-bold text-green-700 dark:text-green-300"><%= tool.name.charAt(0) %></span>
+          </div>
+          <div>
+            <div class="font-semibold text-neutral-900 dark:text-white"><%= tool.name %></div>
+            <div class="text-xs font-mono text-green-600 dark:text-green-400">Free tier available</div>
+          </div>
+        </div>
+        <div class="text-sm text-neutral-500 dark:text-neutral-400 mb-3"><%= tool.description %></div>
+        <div class="text-xs font-mono text-neutral-400 dark:text-neutral-600 mb-1">Switching Cost: <%= tool.portability.switchingCost %></div>
+      </a>
+    <% } %>
+  </div>
+
+  <!-- Paid Tools (No Free Tier) -->
+  <% if (allToolsCount > freeTools.length) { %>
+  <div class="mb-8">
+    <h2 class="text-xl font-bold text-neutral-900 dark:text-white mb-4">Tools Without Free Tiers</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <% const paidTools = []; for (const tool of freeTools) { paidTools.push(tool); } %>
+      <% const categoryTools = registries = null; %> 
+      <div class="text-sm text-neutral-500 dark:text-neutral-400 col-span-full">
+        <%= allToolsCount - freeTools.length %> tools require payment from day one in this category.
+      </div>
+    </div>
+  </div>
+  <% } %>
+
+  <!-- Related Guides -->
+  <div class="mb-8">
+    <h2 class="text-xl font-bold text-neutral-900 dark:text-white mb-4">Related Guides</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <a href="/browse/<%= categorySlug %>" class="block bg-white dark:bg-[#09090b] border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 hover:border-neutral-300 dark:hover:border-neutral-700 transition-all no-underline">
+        <div class="font-mono text-sm text-neutral-400 dark:text-neutral-600 mb-1">Category</div>
+        <div class="font-semibold text-neutral-900 dark:text-white">Browse <%= category %></div>
+      </a>
+      <a href="/guides" class="block bg-white dark:bg-[#09090b] border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 hover:border-neutral-300 dark:hover:border-neutral-700 transition-all no-underline">
+        <div class="font-mono text-sm text-neutral-400 dark:text-neutral-600 mb-1">All Guides</div>
+        <div class="font-semibold text-neutral-900 dark:text-white">All Pricing Guides</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script type="application/ld+json">
+<%- JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": title,
+  "description": description,
+  "numberOfItems": freeTools.length,
+  "itemListElement": freeTools.map((tool, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": tool.name,
+    "url": "https://latest.sh/tool/" + tool.id
+  }))
+}, null, 2) %>
+</script>
+<script type="application/ld+json">
+<%- JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://latest.sh/" },
+    { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://latest.sh/guides" },
+    { "@type": "ListItem", "position": 3, "name": category, "item": "https://latest.sh/browse/" + categorySlug },
+    { "@type": "ListItem", "position": 4, "name": "Best Free", "item": "https://latest.sh" + path }
+  ]
+}, null, 2) %>
+</script>
+
+<%- include('partials/footer') %>

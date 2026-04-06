@@ -310,4 +310,40 @@ export class Registry {
   allTools(): ToolEntry[] {
     return Array.from(this.tools.values());
   }
+
+  /**
+   * Get all unique tool pairs within a category for VS comparisons
+   * Returns sorted pairs to avoid duplicates (A-B, not B-A, A-B)
+   */
+  toolPairsInCategory(category: string): [ToolEntry, ToolEntry][] {
+    const tools = this.byCategory.get(category);
+    if (!tools || tools.length < 2) return [];
+
+    const pairs: [ToolEntry, ToolEntry][] = [];
+    const sortedTools = [...tools].sort((a, b) => a.id.localeCompare(b.id));
+
+    for (let i = 0; i < sortedTools.length; i++) {
+      for (let j = i + 1; j < sortedTools.length; j++) {
+        pairs.push([sortedTools[i], sortedTools[j]]);
+      }
+    }
+
+    return pairs;
+  }
+
+  /**
+   * Get all unique tool pairs across all categories
+   */
+  allToolPairsByCategory(): Map<string, [ToolEntry, ToolEntry][]> {
+    const allPairs = new Map<string, [ToolEntry, ToolEntry][]>();
+    
+    for (const category of this.categories()) {
+      const pairs = this.toolPairsInCategory(category);
+      if (pairs.length > 0) {
+        allPairs.set(category, pairs);
+      }
+    }
+
+    return allPairs;
+  }
 }

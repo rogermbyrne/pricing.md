@@ -13,13 +13,9 @@ tools:
   - Supabase
   - Neon
   - Clerk
-  - Resend
-  - Stripe
-  - Fly.io
-  - Netlify
-  - Render
 projects:
   - Pricing.md
+  - latest.sh
 ---
 # Pricing.md
 

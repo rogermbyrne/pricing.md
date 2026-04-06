@@ -1,5 +1,6 @@
 import { Router, Request, Response } from "express";
 import { Registry } from "../../src/registry/registry.js";
+import { compareTools } from "../lib/humanize.js";
 
 export function createSeoRouter(registry: Registry): Router {
   const router = Router();
@@ -34,6 +35,14 @@ Every tool has a machine-readable pricing.md file at \`/tool/{id}/pricing.md\`. 
 - [All Tools JSON](/api/tools): Complete tool listing with pricing data
 - [Single Tool](/api/tools/{id}): Full pricing details for a specific tool
 - [Changelog](/api/changelog): Pricing change history
+
+## Guides
+
+- [Guides](/guides): 2416 VS comparisons, 303 alternatives pages, 22 best-free guides
+- [Vercel vs Railway](/guides/railway-vs-vercel): Head-to-head comparison
+- [Supabase vs PlanetScale](/guides/planetscale-vs-supabase): Head-to-head comparison
+- [Sendgrid Alternatives](/guides/sendgrid-alternatives): Find similar email tools
+- [Best Free Hosting](/guides/best-free-hosting): Free tier comparison
 
 ## Compare Tools
 
@@ -117,6 +126,77 @@ Every tool has a machine-readable pricing.md file at \`/tool/{id}/pricing.md\`. 
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>${BASE}/guides</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>${BASE}/stack</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>${BASE}/transparency</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>${BASE}/guides</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>`;
+
+    // Add best-free pages for each category
+    for (const cat of categories) {
+      xml += `
+  <url>
+    <loc>${BASE}/guides/best-free-${cat}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>`;
+    }
+
+    // Add alternatives pages for popular tools (first 50)
+    const popularTools = allTools.slice(0, 50);
+    for (const tool of popularTools) {
+      xml += `
+  <url>
+    <loc>${BASE}/guides/${tool.id}-alternatives</loc>
+    <lastmod>${tool.lastVerified || today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>`;
+    }
+
+    // Add a sample of VS comparison pages (first 100 pairs)
+    const vsCount = 0;
+    const maxVsPages = 100;
+    for (const cat of categories) {
+      const tools = registry.search({ category: cat as any });
+      if (tools.length >= 2) {
+        for (let i = 0; i < Math.min(tools.length, 5) && vsCount < maxVsPages; i++) {
+          for (let j = i + 1; j < Math.min(tools.length, 6) && vsCount < maxVsPages; j++) {
+            const sorted = [tools[i].id, tools[j].id].sort();
+            xml += `
+  <url>
+    <loc>${BASE}/guides/${sorted[0]}-vs-${sorted[1]}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>`;
+            (vsCount as any)++;
+          }
+        }
+      }
+    }
+
+    xml += `
 </urlset>`;
 
     res.set("Content-Type", "application/xml");

@@ -11,6 +11,7 @@ import { createApiRouter } from "./routes/api.js";
 import { createSeoRouter } from "./routes/seo.js";
 import { createChatRouter } from "./routes/chat.js";
 import { createTransparencyRouter } from "./routes/transparency.js";
+import { createGuidesRouter } from "./routes/guides.js";
 
 const PORT = parseInt(process.env.PORT || "3001", 10);
 
@@ -85,6 +86,7 @@ app.use(express.json());
 app.use(createApiRouter(registry, changelogDB, voteDB));
 app.use(createChatRouter(registry));
 app.use(createTransparencyRouter(registry));
+app.use(createGuidesRouter(registry));
 
 // 404 catch-all
 app.use((req: express.Request, res: express.Response) => {
