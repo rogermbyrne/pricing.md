@@ -14,7 +14,7 @@ function switchingBadge(cost) {
     'significant': 'border-orange-400 dark:border-orange-600 text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-950',
     'architectural': 'border-red-400 dark:border-red-600 text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-950',
   };
-  return '<span class="inline-block px-2 py-0.5 text-xs font-mono border rounded-none ' + (map[cost] || 'border-neutral-300 dark:border-neutral-700 text-neutral-500') + '">' + cost + '</span>';
+  return '<span class="inline-block px-2 py-0.5 text-xs font-mono border rounded-md ' + (map[cost] || 'border-neutral-300 dark:border-neutral-700 text-neutral-500') + '">' + cost + '</span>';
 }
 
 function hasFree(tool) {
@@ -90,7 +90,7 @@ function isCheapestTier(price, tierIdx) {
   <% } else { %>
 
     <!-- Comparison Table -->
-    <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] overflow-x-auto theme-transition">
+    <div class="bg-white dark:bg-[#111113] border border-neutral-300 dark:border-neutral-700 rounded-md shadow-sm overflow-x-auto theme-transition">
       <table class="w-full border-collapse">
         <!-- Tool names header -->
         <thead>
@@ -114,7 +114,7 @@ function isCheapestTier(price, tierIdx) {
             <% for (const t of tools) { %>
               <td class="px-5 py-3">
                 <% if (hasFree(t)) { %>
-                  <span class="inline-block px-2 py-0.5 text-xs font-mono border border-emerald-300 dark:border-emerald-700 text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950 rounded-none">Yes</span>
+                  <span class="inline-block px-2 py-0.5 text-xs font-mono border border-emerald-300 dark:border-emerald-700 text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950 rounded-md">Yes</span>
                   <% const freeTier = t.tiers.find(tier => tier.pricingModel === 'free' || tier.basePrice === 0); %>
                   <% if (freeTier) { %>
                     <% const limitEntries = Object.entries(freeTier.limits).slice(0, 2); %>
@@ -123,7 +123,7 @@ function isCheapestTier(price, tierIdx) {
                     <% } %>
                   <% } %>
                 <% } else { %>
-                  <span class="inline-block px-2 py-0.5 text-xs font-mono border border-neutral-300 dark:border-neutral-700 text-neutral-400 rounded-none">No</span>
+                  <span class="inline-block px-2 py-0.5 text-xs font-mono border border-neutral-300 dark:border-neutral-700 text-neutral-400 rounded-md">No</span>
                 <% } %>
               </td>
             <% } %>

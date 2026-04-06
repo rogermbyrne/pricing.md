@@ -58,20 +58,25 @@
     })();
   </script>
 </head>
-<body class="font-sans bg-white dark:bg-[#0a0a0a] text-neutral-900 dark:text-white min-h-screen theme-transition">
+<body class="font-sans bg-white dark:bg-[#09090b] text-neutral-900 dark:text-neutral-100 min-h-screen theme-transition">
 
-  <!-- Dark mode toggle -->
-  <button id="theme-btn" class="fixed top-6 right-6 z-50 p-3 bg-white dark:bg-[#111] hover:bg-neutral-100 dark:hover:bg-[#1a1a1a] theme-transition border border-neutral-300 dark:border-neutral-800 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]" aria-label="Toggle Theme" onclick="toggleTheme()">
-    <svg id="moon-icon" class="w-5 h-5 hidden dark:block text-neutral-400 hover:text-white theme-transition" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-    <svg id="sun-icon" class="w-5 h-5 block dark:hidden text-neutral-600 hover:text-black theme-transition" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-  </button>
-
-  <!-- Fixed top-left nav -->
-  <div class="fixed top-6 left-6 z-50 flex gap-4 font-mono text-xs">
-    <a href="/" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white border-b border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white pb-0.5 transition-all uppercase tracking-widest">Home</a>
-    <a href="/browse" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white border-b border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white pb-0.5 transition-all uppercase tracking-widest">Browse</a>
-    <a href="/stack" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white border-b border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white pb-0.5 transition-all uppercase tracking-widest">Advisor</a>
-  </div>
+  <!-- Sticky nav bar -->
+  <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-[#09090b]/80 border-b border-neutral-200 dark:border-neutral-800">
+    <div class="max-w-6xl mx-auto px-6 md:px-10 h-14 flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <a href="/" class="font-mono text-sm font-bold text-neutral-900 dark:text-white no-underline tracking-tight">pricing.md</a>
+        <div class="flex items-center gap-5">
+          <a href="/browse" class="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors no-underline">Browse</a>
+          <a href="/transparency" class="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors no-underline">Transparency</a>
+          <a href="/stack" class="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors no-underline">Advisor</a>
+        </div>
+      </div>
+      <button id="theme-btn" class="p-2 text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors" aria-label="Toggle Theme" onclick="toggleTheme()">
+        <svg id="moon-icon" class="w-4 h-4 hidden dark:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        <svg id="sun-icon" class="w-4 h-4 block dark:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      </button>
+    </div>
+  </nav>
 
   <script>
     function toggleTheme() {

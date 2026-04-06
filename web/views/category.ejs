@@ -14,11 +14,11 @@ function switchingBadge(cost) {
     'significant': 'border-orange-400 dark:border-orange-600 text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-950',
     'architectural': 'border-red-400 dark:border-red-600 text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-950',
   };
-  return '<span class="inline-block px-2 py-0.5 text-xs font-mono border rounded-none ' + (map[cost] || 'border-neutral-300 dark:border-neutral-700 text-neutral-500') + '">' + cost + '</span>';
+  return '<span class="inline-block px-2 py-0.5 text-xs font-mono border rounded-md ' + (map[cost] || 'border-neutral-300 dark:border-neutral-700 text-neutral-500') + '">' + cost + '</span>';
 }
 
 function modelBadge(model) {
-  return '<span class="inline-block px-2 py-0.5 text-xs font-mono border border-neutral-300 dark:border-neutral-700 text-neutral-500 rounded-none">' + model.replace(/_/g, ' ') + '</span>';
+  return '<span class="inline-block px-2 py-0.5 text-xs font-mono border border-neutral-300 dark:border-neutral-700 text-neutral-500 rounded-md">' + model.replace(/_/g, ' ') + '</span>';
 }
 
 function hasFree(tool) {
@@ -73,11 +73,11 @@ function growthCostCell(tool) {
   if (cheapestGrowthCost && cheapestGrowthCost > 0 && cost > 0) {
     const ratio = cost / cheapestGrowthCost;
     if (ratio > 10) {
-      badge = '<span class="inline-block ml-2 px-1.5 py-0.5 text-[10px] font-mono border border-red-400 dark:border-red-600 text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-950 rounded-none">' + Math.round(ratio) + 'x</span>';
+      badge = '<span class="inline-block ml-2 px-1.5 py-0.5 text-[10px] font-mono border border-red-400 dark:border-red-600 text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-950 rounded-md">' + Math.round(ratio) + 'x</span>';
     } else if (ratio > 5) {
-      badge = '<span class="inline-block ml-2 px-1.5 py-0.5 text-[10px] font-mono border border-orange-400 dark:border-orange-600 text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-950 rounded-none">' + Math.round(ratio) + 'x</span>';
+      badge = '<span class="inline-block ml-2 px-1.5 py-0.5 text-[10px] font-mono border border-orange-400 dark:border-orange-600 text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-950 rounded-md">' + Math.round(ratio) + 'x</span>';
     } else if (ratio > 2) {
-      badge = '<span class="inline-block ml-2 px-1.5 py-0.5 text-[10px] font-mono border border-amber-400 dark:border-amber-600 text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950 rounded-none">' + Math.round(ratio) + 'x</span>';
+      badge = '<span class="inline-block ml-2 px-1.5 py-0.5 text-[10px] font-mono border border-amber-400 dark:border-amber-600 text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950 rounded-md">' + Math.round(ratio) + 'x</span>';
     }
   }
 
@@ -119,7 +119,7 @@ function growthCostCell(tool) {
     <a href="/browse/<%= categorySlug %>?sort=transparency" class="px-3 py-1.5 text-xs font-mono uppercase tracking-widest rounded-full transition-all <%= currentSort === 'transparency' ? 'bg-neutral-900 dark:bg-white text-white dark:text-neutral-900' : 'text-neutral-400 hover:text-neutral-900 dark:hover:text-white bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700' %>">Transparency</a>
   </div>
 
-  <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] overflow-x-auto theme-transition">
+  <div class="bg-white dark:bg-[#111113] border border-neutral-300 dark:border-neutral-700 rounded-md shadow-sm overflow-x-auto theme-transition">
     <table class="w-full border-collapse">
       <thead>
         <tr class="border-b-2 border-neutral-200 dark:border-neutral-700">
@@ -152,13 +152,13 @@ function growthCostCell(tool) {
             </td>
             <td class="px-5 py-4">
               <% if (hasFree(tool)) { %>
-                <span class="inline-block px-2 py-0.5 text-xs font-mono border border-neutral-300 dark:border-neutral-600 text-neutral-600 dark:text-neutral-400 rounded-none">Yes</span>
+                <span class="inline-block px-2 py-0.5 text-xs font-mono border border-neutral-300 dark:border-neutral-600 text-neutral-600 dark:text-neutral-400 rounded-md">Yes</span>
                 <% const info = freeTierInfo(tool); %>
                 <% if (info) { %>
                   <div class="text-xs text-neutral-400 dark:text-neutral-600 mt-0.5"><%= info %></div>
                 <% } %>
               <% } else { %>
-                <span class="inline-block px-2 py-0.5 text-xs font-mono border border-neutral-300 dark:border-neutral-700 text-neutral-400 rounded-none">No</span>
+                <span class="inline-block px-2 py-0.5 text-xs font-mono border border-neutral-300 dark:border-neutral-700 text-neutral-400 rounded-md">No</span>
               <% } %>
             </td>
             <td class="px-5 py-4">

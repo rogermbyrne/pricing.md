@@ -4,9 +4,9 @@
   <h1 class="text-5xl md:text-6xl font-bold tracking-tighter text-neutral-900 dark:text-white">Developer Tool Pricing</h1>
   <p class="text-lg text-neutral-500 mt-3 mb-12">Compare pricing across <span class="font-mono font-semibold text-neutral-900 dark:text-white"><%= categories.reduce((sum, c) => sum + c.count, 0) %></span> tools in <span class="font-mono font-semibold text-neutral-900 dark:text-white"><%= categories.length %></span> categories · updated <%= lastVerified %></p>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-200 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-200 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800 rounded-lg overflow-hidden">
     <% for (const cat of categories) { %>
-      <a href="/browse/<%= cat.name %>" class="group block bg-white dark:bg-[#0a0a0a] hover:bg-neutral-50 dark:hover:bg-[#111] px-6 py-6 transition-all no-underline">
+      <a href="/browse/<%= cat.name %>" class="group block bg-white dark:bg-[#09090b] hover:bg-neutral-50 dark:hover:bg-[#111113] px-6 py-6 transition-all no-underline">
         <div class="flex items-baseline justify-between mb-3">
           <div class="text-xs font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 group-hover:text-neutral-900 dark:group-hover:text-white transition-colors"><%= cat.displayName %></div>
           <div class="font-mono text-sm text-neutral-400 dark:text-neutral-600"><%= cat.count %></div>

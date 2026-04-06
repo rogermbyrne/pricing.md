@@ -7,7 +7,7 @@
   <!-- Filter -->
   <div class="mb-6">
     <form method="get" action="/changelog" class="flex items-center gap-3">
-      <select name="category" onchange="this.form.submit()" class="bg-neutral-50 dark:bg-[#0a0a0a] border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-white px-3 py-2 font-sans text-sm rounded-none focus:outline-none focus:border-neutral-900 dark:focus:border-white cursor-pointer">
+      <select name="category" onchange="this.form.submit()" class="bg-neutral-50 dark:bg-[#0a0a0a] border border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-white px-3 py-2 font-sans text-sm rounded-md focus:outline-none focus:border-neutral-900 dark:focus:border-white cursor-pointer">
         <option value="">All Categories</option>
         <% for (const cat of categories) { %>
           <option value="<%= cat %>" <%= currentCategory === cat ? 'selected' : '' %>><%= cat.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) %></option>
@@ -19,14 +19,14 @@
   <% if (changes.length === 0) { %>
     <div class="text-center py-16">
       <h2 class="text-xl font-bold tracking-tighter text-neutral-900 dark:text-white mb-2">No pricing changes recorded yet</h2>
-      <p class="text-sm text-neutral-500 max-w-md mx-auto">Changes will appear here as tools update their pricing. Run <code class="font-mono bg-neutral-100 dark:bg-[#111] px-1.5 py-0.5 border border-neutral-200 dark:border-neutral-800 text-xs rounded-none">npm run record-snapshot -- --all</code> to seed baseline data.</p>
+      <p class="text-sm text-neutral-500 max-w-md mx-auto">Changes will appear here as tools update their pricing. Run <code class="font-mono bg-neutral-100 dark:bg-[#111113] px-1.5 py-0.5 border border-neutral-200 dark:border-neutral-800 text-xs rounded-md">npm run record-snapshot -- --all</code> to seed baseline data.</p>
     </div>
   <% } else { %>
 
     <!-- Timeline -->
     <div class="space-y-3">
       <% for (const change of changes) { %>
-        <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 rounded-none p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] flex gap-4 items-start theme-transition">
+        <div class="bg-white dark:bg-[#111113] border border-neutral-300 dark:border-neutral-700 rounded-md p-4 shadow-sm flex gap-4 items-start theme-transition">
           <div class="text-xs text-neutral-400 font-mono whitespace-nowrap pt-0.5 min-w-[80px]"><%= change.detected_at.split('T')[0] %></div>
           <div class="flex-1">
             <div class="flex items-center gap-2 flex-wrap">
@@ -41,7 +41,7 @@
                 };
                 const badgeCls = typeColors[change.change_type] || 'border-neutral-300 dark:border-neutral-700 text-neutral-500';
               %>
-              <span class="inline-block px-2 py-0.5 text-xs font-mono border rounded-none <%= badgeCls %>"><%= change.change_type.replace(/_/g, ' ') %></span>
+              <span class="inline-block px-2 py-0.5 text-xs font-mono border rounded-md <%= badgeCls %>"><%= change.change_type.replace(/_/g, ' ') %></span>
             </div>
             <p class="text-sm text-neutral-500 mt-1"><%= change.summary %></p>
           </div>
@@ -52,9 +52,9 @@
     <% if (changes.length >= 50) { %>
       <div class="flex items-center gap-3 justify-center mt-8">
         <% if (page > 1) { %>
-          <a href="/changelog?page=<%= page - 1 %><%= currentCategory ? '&category=' + currentCategory : '' %>" class="px-4 py-2 border border-neutral-300 dark:border-neutral-700 text-sm font-mono text-neutral-700 dark:text-neutral-300 rounded-none hover:border-neutral-900 dark:hover:border-white transition-colors no-underline">&larr; Newer</a>
+          <a href="/changelog?page=<%= page - 1 %><%= currentCategory ? '&category=' + currentCategory : '' %>" class="px-4 py-2 border border-neutral-300 dark:border-neutral-700 text-sm font-mono text-neutral-700 dark:text-neutral-300 rounded-md hover:border-neutral-900 dark:hover:border-white transition-colors no-underline">&larr; Newer</a>
         <% } %>
-        <a href="/changelog?page=<%= page + 1 %><%= currentCategory ? '&category=' + currentCategory : '' %>" class="px-4 py-2 border border-neutral-300 dark:border-neutral-700 text-sm font-mono text-neutral-700 dark:text-neutral-300 rounded-none hover:border-neutral-900 dark:hover:border-white transition-colors no-underline">Older &rarr;</a>
+        <a href="/changelog?page=<%= page + 1 %><%= currentCategory ? '&category=' + currentCategory : '' %>" class="px-4 py-2 border border-neutral-300 dark:border-neutral-700 text-sm font-mono text-neutral-700 dark:text-neutral-300 rounded-md hover:border-neutral-900 dark:hover:border-white transition-colors no-underline">Older &rarr;</a>
       </div>
     <% } %>
   <% } %>

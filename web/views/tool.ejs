@@ -14,7 +14,7 @@ function switchingBadge(cost) {
     'significant': 'border-orange-400 dark:border-orange-600 text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-950',
     'architectural': 'border-red-400 dark:border-red-600 text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-950',
   };
-  return '<span class="inline-block px-2 py-0.5 text-xs font-mono border rounded-none ' + (map[cost] || 'border-neutral-300 dark:border-neutral-700 text-neutral-500') + '">' + cost + '</span>';
+  return '<span class="inline-block px-2 py-0.5 text-xs font-mono border rounded-md ' + (map[cost] || 'border-neutral-300 dark:border-neutral-700 text-neutral-500') + '">' + cost + '</span>';
 }
 
 function freshness(dateStr) {
@@ -83,15 +83,15 @@ const lowestPaid = paidTiers.length > 0 ? Math.min(...paidTiers.map(t => t.baseP
       <% if (tool.portability.openStandard) { %>
         <span class="text-xs font-mono text-neutral-400"><%= tool.portability.openStandard %></span>
       <% } %>
-      <span class="inline-block px-2.5 py-1 text-xs font-mono border rounded-none <%= fresh.cls %>"><%= fresh.label %></span>
-      <a href="#transparency-score" class="inline-block px-2.5 py-1 text-xs font-mono font-bold border rounded-none no-underline <%= gradeBadgeClass(transparency.grade) %>">Transparency: <%= transparency.grade %></a>
+      <span class="inline-block px-2.5 py-1 text-xs font-mono border rounded-md <%= fresh.cls %>"><%= fresh.label %></span>
+      <a href="#transparency-score" class="inline-block px-2.5 py-1 text-xs font-mono font-bold border rounded-md no-underline <%= gradeBadgeClass(transparency.grade) %>">Transparency: <%= transparency.grade %></a>
     </div>
 
     <% const toolHasPricingMd = tool.pricingUrl.endsWith('/pricing.md'); %>
     <div class="flex flex-wrap items-center gap-4 mt-6">
-      <a href="<%= tool.pricingUrl %>" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-mono text-sm rounded-none border border-neutral-900 dark:border-white hover:opacity-80 transition-opacity no-underline">View Pricing Page &rarr;</a>
+      <a href="<%= tool.pricingUrl %>" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-mono text-sm rounded-md border border-neutral-900 dark:border-white hover:opacity-80 transition-opacity no-underline">View Pricing Page &rarr;</a>
       <% if (!toolHasPricingMd) { %>
-        <a href="/tool/<%= tool.id %>/pricing.md" class="inline-flex items-center gap-2 px-5 py-2.5 font-mono text-sm rounded-none border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-900 dark:hover:border-white transition-all no-underline">View as Markdown</a>
+        <a href="/tool/<%= tool.id %>/pricing.md" class="inline-flex items-center gap-2 px-5 py-2.5 font-mono text-sm rounded-md border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-900 dark:hover:border-white transition-all no-underline">View as Markdown</a>
       <% } %>
       <span class="text-xs text-neutral-400 font-mono">Verified <%= tool.lastVerified %></span>
     </div>
@@ -114,7 +114,7 @@ const lowestPaid = paidTiers.length > 0 ? Math.min(...paidTiers.map(t => t.baseP
   </div>
 
   <!-- Pricing Tiers Table -->
-  <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] overflow-x-auto theme-transition mb-10">
+  <div class="bg-white dark:bg-[#111113] border border-neutral-300 dark:border-neutral-700 rounded-md shadow-sm overflow-x-auto theme-transition mb-10">
     <table class="w-full border-collapse">
       <thead>
         <tr class="border-b-2 border-neutral-200 dark:border-neutral-700">
@@ -223,7 +223,7 @@ const lowestPaid = paidTiers.length > 0 ? Math.min(...paidTiers.map(t => t.baseP
   <!-- Transparency Score -->
   <div id="transparency-score" class="mb-8">
     <div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-3">Transparency Score</div>
-    <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] px-5 py-5">
+    <div class="bg-white dark:bg-[#111113] border border-neutral-300 dark:border-neutral-700 rounded-md shadow-sm px-5 py-5">
       <div class="flex items-center gap-4 mb-4">
         <span class="text-3xl font-mono font-bold <%= gradeBadgeClass(transparency.grade).split(' ').filter(c => c.startsWith('text-') && !c.startsWith('text-neutral')).join(' ') %>"><%= transparency.grade %></span>
         <div>
@@ -261,7 +261,7 @@ const lowestPaid = paidTiers.length > 0 ? Math.min(...paidTiers.map(t => t.baseP
   <!-- Changelog -->
   <% if (changes.length > 0) { %>
     <div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-3">Pricing Changes</div>
-    <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] overflow-x-auto theme-transition">
+    <div class="bg-white dark:bg-[#111113] border border-neutral-300 dark:border-neutral-700 rounded-md shadow-sm overflow-x-auto theme-transition">
       <table class="w-full border-collapse">
         <thead>
           <tr class="border-b border-neutral-200 dark:border-neutral-800">
@@ -274,7 +274,7 @@ const lowestPaid = paidTiers.length > 0 ? Math.min(...paidTiers.map(t => t.baseP
           <% for (const change of changes) { %>
             <tr class="border-b border-neutral-100 dark:border-neutral-800">
               <td class="px-4 py-3 text-xs text-neutral-400 font-mono whitespace-nowrap"><%= change.detected_at.split('T')[0] %></td>
-              <td class="px-4 py-3"><span class="inline-block px-2 py-0.5 text-xs font-mono border border-neutral-300 dark:border-neutral-700 text-neutral-500 rounded-none"><%= change.change_type.replace(/_/g, ' ') %></span></td>
+              <td class="px-4 py-3"><span class="inline-block px-2 py-0.5 text-xs font-mono border border-neutral-300 dark:border-neutral-700 text-neutral-500 rounded-md"><%= change.change_type.replace(/_/g, ' ') %></span></td>
               <td class="px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300"><%= change.summary %></td>
             </tr>
           <% } %>
