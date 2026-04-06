@@ -1,0 +1,95 @@
+{
+  "id": "motherduck",
+  "name": "MotherDuck",
+  "description": "Serverless analytics platform built on DuckDB with hybrid local/cloud execution",
+  "url": "https://motherduck.com",
+  "pricingUrl": "https://motherduck.com/docs/about-motherduck/billing/pricing/",
+  "category": "database",
+  "tags": [
+    "analytics",
+    "duckdb",
+    "serverless",
+    "data-warehouse"
+  ],
+  "lastVerified": "2026-04-06",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "DuckDB / SQL",
+    "whatYouLose": "Hybrid local/cloud execution, MotherDuck sharing, managed infrastructure — data is DuckDB format and fully portable"
+  },
+  "tiers": [
+    {
+      "name": "Lite",
+      "slug": "lite",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "compute",
+          "pricePerUnit": 0.25,
+          "unitQuantity": 1,
+          "includedQuantity": 10,
+          "unit": "CU-hours"
+        },
+        {
+          "name": "storage",
+          "pricePerUnit": 0.04,
+          "unitQuantity": 1,
+          "includedQuantity": 10,
+          "unit": "GB"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "activeUsers": 3,
+        "serviceAccounts": 2
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "usage_based",
+      "basePrice": 250,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "compute",
+          "pricePerUnit": 0.25,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "CU-hours"
+        },
+        {
+          "name": "storage",
+          "pricePerUnit": 0.04,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "GB"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "activeUsers": 10
+      }
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

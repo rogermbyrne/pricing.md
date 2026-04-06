@@ -1,0 +1,70 @@
+{
+  "id": "dragonfly",
+  "name": "Dragonfly",
+  "description": "Redis and Memcached compatible in-memory data store, with managed cloud offering",
+  "url": "https://www.dragonflydb.io",
+  "pricingUrl": "https://www.dragonflydb.io/pricing",
+  "category": "database",
+  "tags": [
+    "redis",
+    "memcached",
+    "in-memory",
+    "cache"
+  ],
+  "lastVerified": "2026-04-06",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "Redis API",
+    "whatYouLose": "Dragonfly Cloud management, vertical scaling to 600GB — data is Redis-compatible and portable"
+  },
+  "tiers": [
+    {
+      "name": "Community",
+      "slug": "community",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Cloud Flex",
+      "slug": "cloud-flex",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": 20,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "storage",
+          "pricePerUnit": 8,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "GB"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "maxStorageGB": 600
+      }
+    },
+    {
+      "name": "Cloud Business",
+      "slug": "cloud-business",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

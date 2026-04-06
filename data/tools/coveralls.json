@@ -1,0 +1,90 @@
+{
+  "id": "coveralls",
+  "name": "Coveralls",
+  "description": "Code coverage tracking and reporting service for test suites",
+  "url": "https://coveralls.io",
+  "pricingUrl": "https://coveralls.io/pricing",
+  "category": "testing",
+  "tags": [
+    "code-coverage",
+    "testing",
+    "ci-cd",
+    "quality"
+  ],
+  "lastVerified": "2026-04-06",
+  "freshnessCategory": "stable",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "Coverage history, PR badges, team dashboard — coverage data format is standard (lcov, etc.)"
+  },
+  "tiers": [
+    {
+      "name": "Open Source",
+      "slug": "open-source",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "flat_rate",
+      "basePrice": 10,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "privateRepos": 1
+      }
+    },
+    {
+      "name": "Org",
+      "slug": "org",
+      "pricingModel": "flat_rate",
+      "basePrice": 50,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "privateRepos": 10
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 200,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "privateRepos": 40
+      }
+    },
+    {
+      "name": "Unlimited",
+      "slug": "unlimited",
+      "pricingModel": "flat_rate",
+      "basePrice": 400,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

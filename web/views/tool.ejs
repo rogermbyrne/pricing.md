@@ -28,10 +28,11 @@ function freshness(dateStr) {
 
 function humanizeKey(key) {
   return key
-    .replace(/([A-Z])/g, ' $1')
+    .replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2')
+    .replace(/([a-z])([A-Z])/g, '$1 $2')
     .replace(/([a-z])([0-9])/g, '$1 $2')
     .replace(/_/g, ' ')
-    .replace(/\b(mb|gb|tb|mau|cpu|ram)\b/gi, s => s.toUpperCase())
+    .replace(/\b(mb|gb|tb|mau|cpu|ram|api)\b/gi, s => s.toUpperCase())
     .replace(/^./, s => s.toUpperCase())
     .trim();
 }

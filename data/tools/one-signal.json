@@ -1,0 +1,104 @@
+{
+  "id": "one-signal",
+  "name": "OneSignal",
+  "description": "Multi-channel push notification, email, SMS, and in-app messaging platform",
+  "url": "https://onesignal.com",
+  "pricingUrl": "https://onesignal.com/pricing",
+  "category": "notifications",
+  "tags": [
+    "push-notifications",
+    "email",
+    "sms",
+    "in-app-messaging"
+  ],
+  "lastVerified": "2026-04-06",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "FCM / APNs",
+    "whatYouLose": "Journeys automation, audience segmentation, OneSignal SDK integration — push tokens are portable via FCM/APNs"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "emails",
+          "pricePerUnit": 0,
+          "unitQuantity": 1000,
+          "includedQuantity": 10000,
+          "unit": "emails"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "webPushSubscribersPerSend": 10000,
+        "activeJourneys": 1,
+        "segments": 6,
+        "dataTags": 2
+      }
+    },
+    {
+      "name": "Growth",
+      "slug": "growth",
+      "pricingModel": "usage_based",
+      "basePrice": 19,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "MAU",
+          "pricePerUnit": 0.012,
+          "unitQuantity": 1,
+          "includedQuantity": 0,
+          "unit": "users"
+        },
+        {
+          "name": "emails",
+          "pricePerUnit": 1.5,
+          "unitQuantity": 1000,
+          "includedQuantity": 20000,
+          "unit": "emails"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "activeJourneys": 3,
+        "segments": 10,
+        "dataTags": 10
+      }
+    },
+    {
+      "name": "Professional",
+      "slug": "professional",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

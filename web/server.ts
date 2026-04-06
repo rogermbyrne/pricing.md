@@ -40,6 +40,9 @@ const app = express();
 // Disable X-Powered-By header
 app.disable("x-powered-by");
 
+// Trust first proxy (Railway, Cloudflare, etc.) for correct req.ip
+app.set("trust proxy", 1);
+
 // View engine
 app.set("view engine", "ejs");
 app.set("views", viewsDir);

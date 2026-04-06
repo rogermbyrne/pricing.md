@@ -1,3 +1,21 @@
+---
+tags:
+  - pricing
+  - cost-awareness
+  - tool evaluation
+  - free tier
+  - vendor lock-in
+people:
+  - rogermbyrne
+tools:
+  - Vercel
+  - Railway
+  - Fly.io
+  - Netlify
+  - Render
+projects:
+  - Pricing.md
+---
 # Pricing.md
 
 Make your AI agent cost-aware when planning developer tool stacks.
@@ -44,7 +62,7 @@ Add to your Claude Code MCP config:
 
 ## What's Covered
 
-293 developer tools across 22 categories:
+303 developer tools across 22 categories:
 
 | Category | Tools |
 | --- | --- |

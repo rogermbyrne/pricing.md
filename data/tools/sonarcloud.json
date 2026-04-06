@@ -1,0 +1,78 @@
+{
+  "id": "sonarcloud",
+  "name": "SonarQube Cloud",
+  "description": "Cloud-based code quality and security analysis platform (formerly SonarCloud)",
+  "url": "https://www.sonarsource.com",
+  "pricingUrl": "https://www.sonarsource.com/plans-and-pricing/sonarcloud/",
+  "category": "testing",
+  "tags": [
+    "code-quality",
+    "static-analysis",
+    "security",
+    "sast"
+  ],
+  "lastVerified": "2026-04-06",
+  "freshnessCategory": "volatile",
+  "currency": "EUR",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "Quality gate configurations, issue history, PR decoration — code and CI pipelines are unaffected"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "lines-of-code",
+          "pricePerUnit": 0,
+          "unitQuantity": 1,
+          "includedQuantity": 50000,
+          "unit": "LOC"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "members": 5
+      }
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "usage_based",
+      "basePrice": 30,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "lines-of-code",
+          "pricePerUnit": 0,
+          "unitQuantity": 1,
+          "includedQuantity": 100000,
+          "unit": "LOC"
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": "annual",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

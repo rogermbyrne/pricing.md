@@ -1,0 +1,103 @@
+{
+  "id": "canny",
+  "name": "Canny",
+  "description": "Product feedback management platform with voting, roadmaps, and changelog",
+  "url": "https://canny.io",
+  "pricingUrl": "https://canny.io/pricing",
+  "category": "internal-tools",
+  "tags": [
+    "feedback",
+    "roadmap",
+    "changelog",
+    "product-management"
+  ],
+  "lastVerified": "2026-04-06",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Voter history, feedback boards, roadmap views, changelog subscribers — data is exportable via API"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "tracked-users",
+          "pricePerUnit": 0,
+          "unitQuantity": 1,
+          "includedQuantity": 25,
+          "unit": "users"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "adminSeats": 5
+      }
+    },
+    {
+      "name": "Core",
+      "slug": "core",
+      "pricingModel": "tiered",
+      "basePrice": 19,
+      "billingPeriod": "monthly",
+      "annualDiscount": 20,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "tracked-users",
+          "pricePerUnit": 0,
+          "unitQuantity": 1,
+          "includedQuantity": 100,
+          "unit": "users"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "adminSeats": 5,
+        "internalRoadmaps": 1
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "tiered",
+      "basePrice": 79,
+      "billingPeriod": "monthly",
+      "annualDiscount": 20,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "tracked-users",
+          "pricePerUnit": 0,
+          "unitQuantity": 1,
+          "includedQuantity": 100,
+          "unit": "users"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "adminSeats": 10
+      }
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

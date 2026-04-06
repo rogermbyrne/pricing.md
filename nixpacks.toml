@@ -1,0 +1,8 @@
+[phases.setup]
+aptPkgs = ["python3", "make", "g++"]
+
+[phases.build]
+cmds = ["npm ci", "npx tsc"]
+
+[start]
+cmd = "node dist/web/server.js"

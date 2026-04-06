@@ -1,0 +1,98 @@
+{
+  "id": "chromatic",
+  "name": "Chromatic",
+  "description": "Visual testing and UI review platform for Storybook, with automated snapshot testing",
+  "url": "https://www.chromatic.com",
+  "pricingUrl": "https://www.chromatic.com/pricing",
+  "category": "testing",
+  "tags": [
+    "visual-testing",
+    "storybook",
+    "ui-review",
+    "snapshot-testing"
+  ],
+  "lastVerified": "2026-04-06",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "Storybook",
+    "whatYouLose": "TurboSnap optimization, interaction tests, Chromatic UI review workflow — stories are portable Storybook format"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "snapshots",
+          "pricePerUnit": 0,
+          "unitQuantity": 1,
+          "includedQuantity": 5000,
+          "unit": "snapshots"
+        }
+      ],
+      "features": [],
+      "limits": {
+        "browsers": 1
+      }
+    },
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "usage_based",
+      "basePrice": 179,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "snapshots",
+          "pricePerUnit": 0.008,
+          "unitQuantity": 1,
+          "includedQuantity": 35000,
+          "unit": "snapshots"
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "usage_based",
+      "basePrice": 399,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "snapshots",
+          "pricePerUnit": 0.008,
+          "unitQuantity": 1,
+          "includedQuantity": 85000,
+          "unit": "snapshots"
+        }
+      ],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

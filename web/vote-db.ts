@@ -1,15 +1,39 @@
 import Database from "better-sqlite3";
 import path from "path";
 
+const MAX_RATE_LIMIT_ENTRIES = 50_000;
+const ONE_DAY_MS = 24 * 60 * 60 * 1000;
+
 export class VoteDB {
   private db: Database.Database;
   private rateLimit: Map<string, number> = new Map();
+  private cleanupTimer: ReturnType<typeof setInterval>;
 
   constructor(dbPath?: string) {
     const resolvedPath = dbPath || path.join(__dirname, "..", "data", "votes.db");
     this.db = new Database(resolvedPath);
     this.db.pragma("journal_mode = WAL");
     this.init();
+
+    // Evict stale entries every hour to prevent unbounded memory growth
+    this.cleanupTimer = setInterval(() => this.evictStaleEntries(), 60 * 60 * 1000);
+  }
+
+  private evictStaleEntries(): void {
+    const now = Date.now();
+    for (const [key, timestamp] of this.rateLimit) {
+      if (now - timestamp > ONE_DAY_MS) {
+        this.rateLimit.delete(key);
+      }
+    }
+    // Hard cap: if still too large, drop oldest entries
+    if (this.rateLimit.size > MAX_RATE_LIMIT_ENTRIES) {
+      const sorted = [...this.rateLimit.entries()].sort((a, b) => a[1] - b[1]);
+      const toRemove = sorted.slice(0, this.rateLimit.size - MAX_RATE_LIMIT_ENTRIES);
+      for (const [key] of toRemove) {
+        this.rateLimit.delete(key);
+      }
+    }
   }
 
   private init(): void {
@@ -31,9 +55,7 @@ export class VoteDB {
     const key = `${toolId}:${ip}`;
     const lastVote = this.rateLimit.get(key);
     const now = Date.now();
-    const oneDay = 24 * 60 * 60 * 1000;
-
-    if (lastVote && now - lastVote < oneDay) {
+    if (lastVote && now - lastVote < ONE_DAY_MS) {
       return false;
     }
 
@@ -48,6 +70,7 @@ export class VoteDB {
   }
 
   close(): void {
+    clearInterval(this.cleanupTimer);
     this.db.close();
   }
 }

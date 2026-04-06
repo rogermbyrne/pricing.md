@@ -1,0 +1,100 @@
+{
+  "id": "planetscale",
+  "name": "PlanetScale",
+  "description": "Managed MySQL-compatible and Postgres database platform with horizontal sharding via Vitess",
+  "url": "https://planetscale.com",
+  "pricingUrl": "https://planetscale.com/pricing",
+  "category": "database",
+  "tags": [
+    "mysql",
+    "postgres",
+    "vitess",
+    "managed-database",
+    "sharding"
+  ],
+  "lastVerified": "2026-04-06",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": "PostgreSQL / MySQL",
+    "whatYouLose": "Vitess horizontal sharding, PlanetScale branching, managed HA — data is standard Postgres/MySQL and exportable"
+  },
+  "tiers": [
+    {
+      "name": "PS-5 Non-HA",
+      "slug": "ps5-non-ha",
+      "pricingModel": "flat_rate",
+      "basePrice": 5,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "cpu": 0.0625,
+        "memoryMB": 512
+      }
+    },
+    {
+      "name": "PS-5 HA",
+      "slug": "ps5-ha",
+      "pricingModel": "flat_rate",
+      "basePrice": 15,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "cpu": 0.0625,
+        "memoryMB": 512
+      }
+    },
+    {
+      "name": "PS-80 HA",
+      "slug": "ps80-ha",
+      "pricingModel": "flat_rate",
+      "basePrice": 148,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "cpu": 1,
+        "memoryGB": 8
+      }
+    },
+    {
+      "name": "PS-320 HA",
+      "slug": "ps320-ha",
+      "pricingModel": "flat_rate",
+      "basePrice": 570,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "cpu": 4,
+        "memoryGB": 32
+      }
+    },
+    {
+      "name": "PS-1280 HA",
+      "slug": "ps1280-ha",
+      "pricingModel": "flat_rate",
+      "basePrice": 2265,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "cpu": 16,
+        "memoryGB": 128
+      }
+    }
+  ]
+}

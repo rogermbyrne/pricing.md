@@ -107,7 +107,7 @@ export const ToolEntrySchema = z.object({
   freshnessCategory: FreshnessCategoryEnum,
   currency: z.string().default("USD"),
   portability: PortabilityInfoSchema,
-  twitterHandle: z.string().optional().describe("Twitter/X handle without @, e.g. 'suaborner'"),
-  githubOrg: z.string().optional().describe("GitHub org or user, e.g. 'supabase'"),
+  twitterHandle: z.string().regex(/^[A-Za-z0-9_]{1,15}$/, "Twitter handle: 1-15 alphanumeric/underscore chars").optional().describe("Twitter/X handle without @, e.g. 'supabase'"),
+  githubOrg: z.string().regex(/^[A-Za-z0-9_.-]{1,39}$/, "GitHub org: 1-39 alphanumeric/dot/hyphen/underscore chars").optional().describe("GitHub org or user, e.g. 'supabase'"),
 });
 export type ToolEntry = z.infer<typeof ToolEntrySchema>;
