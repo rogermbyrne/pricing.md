@@ -62,17 +62,24 @@ export function generatePricingMarkdown(tool: ToolEntry): string {
     const includedMetrics = tier.usageMetrics.filter(
       (m) => m.includedQuantity > 0
     );
-    const limitEntries = Object.entries(tier.limits);
+    // Skip limit keys already represented by an included metric
+    const metricWords = includedMetrics.flatMap((m) =>
+      m.name.toLowerCase().replace(/overage/g, "").split(/\s+/).filter((w) => w.length > 2)
+    );
+    const filteredLimits = Object.entries(tier.limits).filter(
+      ([key]) => !metricWords.some((w) => key.toLowerCase().includes(w))
+    );
 
-    if (includedMetrics.length > 0 || limitEntries.length > 0) {
+    if (includedMetrics.length > 0 || filteredLimits.length > 0) {
       lines.push("");
       lines.push("**Includes:**");
       for (const m of includedMetrics) {
+        const label = m.name.replace(/ Overage$/, "");
         lines.push(
-          `- ${m.name}: ${m.includedQuantity.toLocaleString()} ${m.unit}`
+          `- ${label}: ${m.includedQuantity.toLocaleString()} ${m.unit}`
         );
       }
-      for (const [key, val] of limitEntries) {
+      for (const [key, val] of filteredLimits) {
         lines.push(`- ${humanizeKey(key)}: ${val.toLocaleString()}`);
       }
     }
@@ -118,10 +125,11 @@ export function generatePricingMarkdown(tool: ToolEntry): string {
 
 function humanizeKey(key: string): string {
   return key
-    .replace(/([A-Z])/g, " $1")
+    .replace(/([A-Z]+)([A-Z][a-z])/g, "$1 $2")
+    .replace(/([a-z])([A-Z])/g, "$1 $2")
     .replace(/([a-z])([0-9])/g, "$1 $2")
     .replace(/_/g, " ")
-    .replace(/\b(mb|gb|tb|mau|cpu|ram)\b/gi, (s) => s.toUpperCase())
+    .replace(/\b(mb|gb|tb|mau|cpu|ram|api)\b/gi, (s) => s.toUpperCase())
     .replace(/^./, (s) => s.toUpperCase())
     .trim();
 }
