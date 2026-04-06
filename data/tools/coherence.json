@@ -6,7 +6,7 @@
   "pricingUrl": "https://www.withcoherence.com/pricing",
   "category": "hosting",
   "tags": ["hosting", "cloud-management", "environments", "devops"],
-  "lastVerified": "2026-04-04",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -16,8 +16,8 @@
   },
   "tiers": [
     {
-      "name": "Free",
-      "slug": "free",
+      "name": "Project",
+      "slug": "project",
       "pricingModel": "free",
       "basePrice": 0,
       "billingPeriod": "monthly",
@@ -25,19 +25,41 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": {}
+      "limits": {
+        "applications": 1,
+        "environmentsPerApp": 5,
+        "collaborators": 2
+      }
     },
     {
-      "name": "Pro",
-      "slug": "pro",
+      "name": "Startup",
+      "slug": "startup",
       "pricingModel": "flat_rate",
-      "basePrice": 99,
+      "basePrice": 300,
       "billingPeriod": "monthly",
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": {}
+      "limits": {
+        "applications": 3,
+        "environmentsPerApp": 10
+      }
+    },
+    {
+      "name": "Growth",
+      "slug": "growth",
+      "pricingModel": "flat_rate",
+      "basePrice": 1000,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "applications": 10,
+        "environmentsPerApp": 50
+      }
     },
     {
       "name": "Enterprise",
