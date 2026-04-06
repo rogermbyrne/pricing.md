@@ -91,7 +91,7 @@ const lowestPaid = paidTiers.length > 0 ? Math.min(...paidTiers.map(t => t.baseP
     <div class="flex flex-wrap items-center gap-4 mt-6">
       <a href="<%= tool.pricingUrl %>" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-mono text-sm rounded-md border border-neutral-900 dark:border-white hover:opacity-80 transition-opacity no-underline">View Pricing Page &rarr;</a>
       <% if (!toolHasPricingMd) { %>
-        <a href="/tool/<%= tool.id %>/pricing.md" class="inline-flex items-center gap-2 px-5 py-2.5 font-mono text-sm rounded-md border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-900 dark:hover:border-white transition-all no-underline">View as Markdown</a>
+        <a href="/tool/<%= tool.id %>/pricing.md" class="inline-flex items-center gap-2 px-5 py-2.5 font-mono text-sm rounded-md border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-900 dark:hover:border-white transition-all no-underline"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>pricing.md</a>
       <% } %>
       <span class="text-xs text-neutral-400 font-mono">Verified <%= tool.lastVerified %></span>
     </div>

@@ -144,9 +144,10 @@ function growthCostCell(tool) {
               <div class="flex items-center gap-2">
                 <a href="/tool/<%= tool.id %>" class="font-bold text-base text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors no-underline"><%= tool.name %></a>
                 <% if (hasPricingMd(tool)) { %>
-                  <span title="Publishes a pricing.md file — machine-readable pricing for AI agents" class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-[#1d9bf0] flex-shrink-0 cursor-help"><svg viewBox="0 0 24 24" width="10" height="10" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                  <span title="Publishes an official pricing.md file" class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-[#1d9bf0] flex-shrink-0 cursor-help"><svg viewBox="0 0 24 24" width="10" height="10" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                <% } else { %>
+                  <a href="/tool/<%= tool.id %>/pricing.md" title="View community-maintained pricing.md" class="inline-flex items-center gap-1 text-xs font-mono text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors no-underline"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>pricing.md</a>
                 <% } %>
-                <a href="/tool/<%= tool.id %>/pricing.md" title="View pricing as markdown" class="text-[10px] font-mono text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors no-underline border-b border-neutral-200 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white">md</a>
               </div>
               <div class="text-sm text-neutral-500 mt-1 max-w-[400px] truncate"><%= tool.description %></div>
             </td>
