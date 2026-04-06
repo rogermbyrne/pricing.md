@@ -12,7 +12,7 @@
     "transformations",
     "optimization"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -41,7 +41,7 @@
       "name": "Plus",
       "slug": "plus",
       "pricingModel": "flat_rate",
-      "basePrice": 89,
+      "basePrice": 99,
       "billingPeriod": "monthly",
       "annualDiscount": 10,
       "seatPrice": null,
@@ -57,7 +57,7 @@
       "name": "Advanced",
       "slug": "advanced",
       "pricingModel": "flat_rate",
-      "basePrice": 224,
+      "basePrice": 249,
       "billingPeriod": "monthly",
       "annualDiscount": 10,
       "seatPrice": null,

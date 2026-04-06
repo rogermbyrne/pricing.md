@@ -12,7 +12,7 @@
     "metrics",
     "alarms"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {
@@ -54,7 +54,7 @@
         {
           "name": "log-insights-scanned",
           "unit": "GB",
-          "pricePerUnit": 0.50,
+          "pricePerUnit": 0.005,
           "unitQuantity": 1,
           "includedQuantity": 5
         },
