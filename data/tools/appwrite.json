@@ -12,7 +12,7 @@
     "auth",
     "serverless"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -33,20 +33,50 @@
       "features": [],
       "limits": {
         "monthlyActiveUsers": 75000,
-        "projects": 2
+        "projects": 2,
+        "bandwidthGB": 5,
+        "storageGB": 2,
+        "executionsPerMonth": 750000
       }
     },
     {
       "name": "Pro",
       "slug": "pro",
-      "pricingModel": "flat_rate",
+      "pricingModel": "hybrid",
       "basePrice": 25,
       "billingPeriod": "monthly",
       "annualDiscount": null,
       "seatPrice": null,
-      "usageMetrics": [],
+      "usageMetrics": [
+        {
+          "name": "Bandwidth",
+          "unit": "GB",
+          "pricePerUnit": 0.15,
+          "unitQuantity": 1,
+          "includedQuantity": 2048
+        },
+        {
+          "name": "Storage",
+          "unit": "GB",
+          "pricePerUnit": 0.028,
+          "unitQuantity": 1,
+          "includedQuantity": 150
+        },
+        {
+          "name": "Monthly Active Users",
+          "unit": "users",
+          "pricePerUnit": 3,
+          "unitQuantity": 1000,
+          "includedQuantity": 200000
+        }
+      ],
       "features": [],
-      "limits": {}
+      "limits": {
+        "bandwidthGB": 2048,
+        "storageGB": 150,
+        "monthlyActiveUsers": 200000,
+        "executionsPerMonth": 3500000
+      }
     },
     {
       "name": "Enterprise",

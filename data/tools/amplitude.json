@@ -6,7 +6,7 @@
   "pricingUrl": "https://amplitude.com/pricing",
   "category": "analytics",
   "tags": [],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -33,12 +33,20 @@
     {
       "name": "Plus",
       "slug": "plus",
-      "pricingModel": "flat_rate",
+      "pricingModel": "usage_based",
       "basePrice": 49,
       "billingPeriod": "annual",
       "annualDiscount": null,
       "seatPrice": null,
-      "usageMetrics": [],
+      "usageMetrics": [
+        {
+          "name": "Monthly Tracked Users",
+          "unit": "MTUs",
+          "pricePerUnit": 0.049,
+          "unitQuantity": 1,
+          "includedQuantity": 1000
+        }
+      ],
       "features": [],
       "limits": {
         "mtus": 300000,

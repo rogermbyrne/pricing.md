@@ -3,7 +3,7 @@
   "name": "Anthropic",
   "description": "AI API platform offering Claude models for text generation, coding, analysis, and agentic tasks",
   "url": "https://anthropic.com",
-  "pricingUrl": "https://docs.anthropic.com/en/docs/about-claude/pricing",
+  "pricingUrl": "https://platform.claude.com/docs/en/docs/about-claude/pricing",
   "category": "ai-api",
   "tags": [
     "llm",
