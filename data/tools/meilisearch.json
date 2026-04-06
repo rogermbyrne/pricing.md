@@ -12,7 +12,7 @@
     "instant-search",
     "full-text"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -34,56 +34,26 @@
       "limits": {}
     },
     {
-      "name": "Cloud Build",
-      "slug": "cloud-build",
+      "name": "Cloud: Resource-Based",
+      "slug": "cloud-resource",
+      "pricingModel": "flat_rate",
+      "basePrice": 23,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Cloud: Usage-Based",
+      "slug": "cloud-usage",
       "pricingModel": "usage_based",
       "basePrice": 30,
       "billingPeriod": "monthly",
       "annualDiscount": null,
       "seatPrice": null,
-      "usageMetrics": [
-        {
-          "name": "searches",
-          "unit": "searches",
-          "pricePerUnit": 0.4,
-          "unitQuantity": 1000,
-          "includedQuantity": 50000
-        },
-        {
-          "name": "documents",
-          "unit": "documents",
-          "pricePerUnit": 0.3,
-          "unitQuantity": 1000,
-          "includedQuantity": 100000
-        }
-      ],
-      "features": [],
-      "limits": {}
-    },
-    {
-      "name": "Cloud Pro",
-      "slug": "cloud-pro",
-      "pricingModel": "usage_based",
-      "basePrice": 300,
-      "billingPeriod": "monthly",
-      "annualDiscount": null,
-      "seatPrice": null,
-      "usageMetrics": [
-        {
-          "name": "searches",
-          "unit": "searches",
-          "pricePerUnit": 0.3,
-          "unitQuantity": 1000,
-          "includedQuantity": 250000
-        },
-        {
-          "name": "documents",
-          "unit": "documents",
-          "pricePerUnit": 0.2,
-          "unitQuantity": 1000,
-          "includedQuantity": 1000000
-        }
-      ],
+      "usageMetrics": [],
       "features": [],
       "limits": {}
     },
