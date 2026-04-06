@@ -43,6 +43,22 @@ app.disable("x-powered-by");
 // Trust first proxy (Railway, Cloudflare, etc.) for correct req.ip
 app.set("trust proxy", 1);
 
+// Security and caching headers
+app.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
+  res.set("X-Content-Type-Options", "nosniff");
+  res.set("X-Frame-Options", "SAMEORIGIN");
+  res.set("Referrer-Policy", "strict-origin-when-cross-origin");
+  // Cache HTML pages for 5 minutes, API for 1 minute
+  if (req.path.startsWith("/api/")) {
+    res.set("Cache-Control", "public, max-age=60, s-maxage=60");
+  } else if (req.path.endsWith(".svg")) {
+    res.set("Cache-Control", "public, max-age=86400");
+  } else {
+    res.set("Cache-Control", "public, max-age=300, s-maxage=300");
+  }
+  next();
+});
+
 // View engine
 app.set("view engine", "ejs");
 app.set("views", viewsDir);

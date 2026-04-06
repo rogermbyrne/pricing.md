@@ -114,6 +114,7 @@ const lowestPaid = paidTiers.length > 0 ? Math.min(...paidTiers.map(t => t.baseP
   </div>
 
   <!-- Pricing Tiers Table -->
+  <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-3">Pricing Tiers</h2>
   <div class="bg-white dark:bg-[#111113] border border-neutral-300 dark:border-neutral-700 rounded-md shadow-sm overflow-x-auto theme-transition mb-10">
     <table class="w-full border-collapse">
       <thead>
@@ -204,6 +205,7 @@ const lowestPaid = paidTiers.length > 0 ? Math.min(...paidTiers.map(t => t.baseP
 
   <!-- Portability -->
   <% if (tool.portability.whatYouLose) { %>
+  <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-3">Portability</h2>
   <div class="flex flex-wrap gap-x-10 gap-y-4 text-sm mb-10 px-1">
     <div>
       <span class="text-xs font-mono text-neutral-400 uppercase tracking-widest">Switching Cost</span>
@@ -222,7 +224,7 @@ const lowestPaid = paidTiers.length > 0 ? Math.min(...paidTiers.map(t => t.baseP
 
   <!-- Transparency Score -->
   <div id="transparency-score" class="mb-8">
-    <div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-3">Transparency Score</div>
+    <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-3">Transparency Score</h2>
     <div class="bg-white dark:bg-[#111113] border border-neutral-300 dark:border-neutral-700 rounded-md shadow-sm px-5 py-5">
       <div class="flex items-center gap-4 mb-4">
         <span class="text-3xl font-mono font-bold <%= gradeBadgeClass(transparency.grade).split(' ').filter(c => c.startsWith('text-') && !c.startsWith('text-neutral')).join(' ') %>"><%= transparency.grade %></span>
@@ -260,7 +262,7 @@ const lowestPaid = paidTiers.length > 0 ? Math.min(...paidTiers.map(t => t.baseP
 
   <!-- Changelog -->
   <% if (changes.length > 0) { %>
-    <div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-3">Pricing Changes</div>
+    <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-3">Pricing Changes</h2>
     <div class="bg-white dark:bg-[#111113] border border-neutral-300 dark:border-neutral-700 rounded-md shadow-sm overflow-x-auto theme-transition">
       <table class="w-full border-collapse">
         <thead>
@@ -295,15 +297,32 @@ const highPrice = prices.length > 0 ? Math.max(...prices) : 0;
   "@type": "SoftwareApplication",
   "name": tool.name,
   "description": tool.description,
-  "url": tool.pricingUrl,
+  "url": tool.url,
   "applicationCategory": "DeveloperApplication",
-  "offers": {
-    "@type": "AggregateOffer",
-    "lowPrice": String(lowPrice),
-    "highPrice": String(highPrice),
+  "dateModified": tool.lastVerified,
+  "offers": tool.tiers.map(t => ({
+    "@type": "Offer",
+    "name": t.name,
+    "price": t.basePrice !== null ? String(t.basePrice) : undefined,
     "priceCurrency": "USD",
-    "offerCount": String(tool.tiers.length)
-  }
+    "priceSpecification": {
+      "@type": "UnitPriceSpecification",
+      "price": t.basePrice !== null ? String(t.basePrice) : "0",
+      "priceCurrency": "USD",
+      "billingDuration": t.billingPeriod === "annual" ? "P1Y" : "P1M"
+    }
+  }))
+}, null, 2) %>
+</script>
+<script type="application/ld+json">
+<%- JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Browse", "item": "https://latest.sh/browse" },
+    { "@type": "ListItem", "position": 2, "name": categoryDisplay, "item": "https://latest.sh/browse/" + tool.category },
+    { "@type": "ListItem", "position": 3, "name": tool.name, "item": "https://latest.sh/tool/" + tool.id }
+  ]
 }, null, 2) %>
 </script>
 

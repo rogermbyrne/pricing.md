@@ -191,4 +191,30 @@ function growthCostCell(tool) {
   </div>
 </div>
 
+<script type="application/ld+json">
+<%- JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": category + " Pricing Comparison",
+  "description": "Compare " + tools.length + " " + category.toLowerCase() + " tools by pricing, free tiers, and switching costs",
+  "numberOfItems": tools.length,
+  "itemListElement": tools.map((t, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": t.name,
+    "url": "https://latest.sh/tool/" + t.id
+  }))
+}, null, 2) %>
+</script>
+<script type="application/ld+json">
+<%- JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Browse", "item": "https://latest.sh/browse" },
+    { "@type": "ListItem", "position": 2, "name": category, "item": "https://latest.sh/browse/" + categorySlug }
+  ]
+}, null, 2) %>
+</script>
+
 <%- include('partials/footer') %>
