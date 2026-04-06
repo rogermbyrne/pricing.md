@@ -3,6 +3,7 @@ aptPkgs = ["python3", "make", "g++"]
 
 [phases.build]
 cmds = ["npm ci", "npx tsc"]
+cacheDirectories = []
 
 [start]
 cmd = "node dist/web/server.js"
