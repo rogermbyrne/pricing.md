@@ -13,7 +13,7 @@
     "cdn",
     "serverless"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -36,6 +36,8 @@
         "buildMinutesPerMonth": 1000,
         "storageGB": 5,
         "dataTransferGB": 15,
+        "ssrRequestsPerMonth": 500000,
+        "ssrDurationGBHours": 100,
         "freeTierDurationMonths": 12
       }
     },
@@ -66,6 +68,20 @@
           "name": "data-transfer",
           "unit": "GB",
           "pricePerUnit": 0.15,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "SSR Requests",
+          "unit": "requests",
+          "pricePerUnit": 0.3,
+          "unitQuantity": 1000000,
+          "includedQuantity": 0
+        },
+        {
+          "name": "SSR Duration",
+          "unit": "GB-hours",
+          "pricePerUnit": 0.2,
           "unitQuantity": 1,
           "includedQuantity": 0
         }

@@ -14,7 +14,7 @@
     "oauth",
     "oidc"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -125,20 +125,20 @@
           "includedQuantity": 500,
           "tieredPricing": [
             {
-              "upTo": 500,
+              "upTo": 1000,
               "pricePerUnit": 0
             },
             {
               "upTo": 2500,
-              "pricePerUnit": 218
+              "pricePerUnit": 203
             },
             {
               "upTo": 5000,
-              "pricePerUnit": 200
+              "pricePerUnit": 182
             },
             {
               "upTo": 10000,
-              "pricePerUnit": 160
+              "pricePerUnit": 120
             },
             {
               "upTo": 20000,

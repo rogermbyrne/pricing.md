@@ -14,7 +14,7 @@
     "oauth",
     "oidc"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -76,20 +76,24 @@
               "pricePerUnit": 300
             },
             {
+              "upTo": 2500,
+              "pricePerUnit": 267
+            },
+            {
               "upTo": 5000,
-              "pricePerUnit": 280
+              "pricePerUnit": 240
             },
             {
               "upTo": 10000,
-              "pricePerUnit": 260
+              "pricePerUnit": 160
             },
             {
               "upTo": 20000,
-              "pricePerUnit": 190
+              "pricePerUnit": 170
             },
             {
               "upTo": null,
-              "pricePerUnit": 190
+              "pricePerUnit": 170
             }
           ],
           "unit": "MAUs"
@@ -121,24 +125,24 @@
           "includedQuantity": 500,
           "tieredPricing": [
             {
-              "upTo": 500,
+              "upTo": 1000,
               "pricePerUnit": 0
             },
             {
               "upTo": 2500,
-              "pricePerUnit": 240
+              "pricePerUnit": 267
             },
             {
               "upTo": 5000,
-              "pricePerUnit": 300
+              "pricePerUnit": 120
             },
             {
               "upTo": 10000,
-              "pricePerUnit": 240
+              "pricePerUnit": 180
             },
             {
               "upTo": null,
-              "pricePerUnit": 240
+              "pricePerUnit": 180
             }
           ],
           "unit": "MAUs"
