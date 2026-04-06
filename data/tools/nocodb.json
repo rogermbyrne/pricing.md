@@ -11,7 +11,7 @@
     "airtable-alternative",
     "open-source"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {
@@ -45,10 +45,10 @@
       "name": "Plus",
       "slug": "plus",
       "pricingModel": "per_seat",
-      "basePrice": 12,
+      "basePrice": 15,
       "billingPeriod": "monthly",
       "annualDiscount": 20,
-      "seatPrice": 12,
+      "seatPrice": 15,
       "usageMetrics": [],
       "features": [],
       "limits": {
@@ -63,10 +63,10 @@
       "name": "Business",
       "slug": "business",
       "pricingModel": "per_seat",
-      "basePrice": 24,
+      "basePrice": 30,
       "billingPeriod": "monthly",
       "annualDiscount": 20,
-      "seatPrice": 24,
+      "seatPrice": 30,
       "usageMetrics": [],
       "features": [],
       "limits": {

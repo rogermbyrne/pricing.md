@@ -82,7 +82,7 @@
           "unit": "connections",
           "pricePerUnit": 2.00,
           "unitQuantity": 100000,
-          "includedQuantity": 0
+          "includedQuantity": 5000
         },
         {
           "name": "traffic-policy-units",

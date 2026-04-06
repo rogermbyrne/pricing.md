@@ -6,7 +6,7 @@
   "pricingUrl": "https://newrelic.com/pricing",
   "category": "monitoring",
   "tags": [],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -72,10 +72,10 @@
       "name": "Pro",
       "slug": "pro",
       "pricingModel": "per_seat",
-      "basePrice": 349,
+      "basePrice": 419,
       "billingPeriod": "monthly",
-      "annualDiscount": null,
-      "seatPrice": 349,
+      "annualDiscount": 17,
+      "seatPrice": 419,
       "usageMetrics": [
         {
           "name": "data-ingest",
