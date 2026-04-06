@@ -11,7 +11,7 @@
     "developer-tools",
     "api"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {
@@ -41,7 +41,7 @@
       "pricingModel": "flat_rate",
       "basePrice": 720,
       "billingPeriod": "monthly",
-      "annualDiscount": 17,
+      "annualDiscount": 16.67,
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
