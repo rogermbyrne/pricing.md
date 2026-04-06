@@ -13,7 +13,7 @@
     "redis",
     "multi-cloud"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -55,6 +55,23 @@
       }
     },
     {
+      "name": "Hobbyist",
+      "slug": "hobbyist",
+      "pricingModel": "flat_rate",
+      "basePrice": 12,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "storageMB": 8192,
+        "nodes": 1,
+        "cpus": 1,
+        "ramGB": 1
+      }
+    },
+    {
       "name": "Startup",
       "slug": "startup",
       "pricingModel": "flat_rate",
@@ -65,7 +82,7 @@
       "usageMetrics": [],
       "features": [],
       "limits": {
-        "storageMB": 51200,
+        "storageMB": 81920,
         "nodes": 1,
         "ramGB": 4,
         "backupRetentionDays": 2
@@ -75,7 +92,7 @@
       "name": "Business",
       "slug": "business",
       "pricingModel": "flat_rate",
-      "basePrice": 200,
+      "basePrice": 180,
       "billingPeriod": "monthly",
       "annualDiscount": null,
       "seatPrice": null,
@@ -90,7 +107,7 @@
       "name": "Premium",
       "slug": "premium",
       "pricingModel": "flat_rate",
-      "basePrice": 300,
+      "basePrice": 270,
       "billingPeriod": "monthly",
       "annualDiscount": null,
       "seatPrice": null,
