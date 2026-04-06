@@ -11,7 +11,7 @@
     "model-serving",
     "ai-infra"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -54,6 +54,27 @@
           "name": "t4-gpu",
           "unit": "minutes",
           "pricePerUnit": 0.01052,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "b200-gpu",
+          "unit": "minutes",
+          "pricePerUnit": 0.16633,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "h100-mig-gpu",
+          "unit": "minutes",
+          "pricePerUnit": 0.0625,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "a10g-gpu",
+          "unit": "minutes",
+          "pricePerUnit": 0.02012,
           "unitQuantity": 1,
           "includedQuantity": 0
         }
