@@ -12,7 +12,7 @@
     "playwright",
     "status-pages"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -49,7 +49,7 @@
       "name": "Starter",
       "slug": "starter",
       "pricingModel": "flat_rate",
-      "basePrice": 60,
+      "basePrice": 30,
       "billingPeriod": "monthly",
       "annualDiscount": 20,
       "seatPrice": null,
@@ -74,7 +74,7 @@
       "name": "Team",
       "slug": "team",
       "pricingModel": "flat_rate",
-      "basePrice": 163,
+      "basePrice": 80,
       "billingPeriod": "monthly",
       "annualDiscount": 20,
       "seatPrice": null,
