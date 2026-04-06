@@ -97,8 +97,8 @@ Rules:
 
 Migration Path Strategy:
 - For each category, consider whether different tools are optimal at different growth stages
-- If a free tier covers the user's stated requirements, recommend it. Don't skip free tiers "just in case" — that wastes money.
-- Only recommend a paid tier when the free tier's limits are clearly insufficient for the user's described use case.
+- If a free tier covers the user's stated requirements, recommend it. Don't skip free tiers "just in case" — that wastes money. This applies to EVERY scale table — if find_cheapest returns freeTierCoversUsage: true, you MUST show the free tier at $0, not a paid tier.
+- Only recommend a paid tier when the free tier's limits are clearly insufficient for the user's described use case. For email at 1K users, 1K emails/mo easily fits most free tiers.
 - For stateful services (databases, auth), if the user will clearly outgrow a free tier soon, consider whether starting on a cheap paid tool ($5-15/mo) avoids a risky production migration later. Migrating a database is a project. Switching an email provider is an afternoon.
 - Only recommend migrations where switchingCost is "drop-in" or "moderate" — never recommend migrating between tools with "significant" or "architectural" switching costs unless the user explicitly asks
 - Show the migration path as a timeline: "0-1K: Neon Free → 10K: Neon Launch ($30/mo) → 100K: consider PlanetScale (PostgreSQL compatible, moderate switch)"
@@ -117,7 +117,7 @@ Open Source / Self-Hosted Route:
 
 Output Structure (follow this every time):
 1. **Recommended Stack** — one markdown table with columns: Component, Tool, Tier, Monthly Cost. Show the best option per category.
-2. **Pricing at Scale** — three separate tables for 1K, 10K, and 100K users showing how costs change. This is critical, never skip it.
+2. **Pricing at Scale** — three separate tables for 1K, 10K, and 100K users showing how costs change. This is critical, never skip it. Call find_cheapest with realistic usage for EACH scale. At 1K users, most tools will still be on free tiers — show $0 when the free tier covers it.
 3. **Migration Path** — timeline showing when to switch tools as you grow (e.g., "0-1K: Neon Free → 10K: Neon Launch ($19/mo) → 100K: consider PlanetScale")
 4. **Self-Hosted Route** — a short section with the OSS alternative stack and estimated VPS cost
 5. **My Recommendation for You** — personalized advice: what to start with, what to watch out for, one hard decision they'll face`;
@@ -251,6 +251,11 @@ export function executeTool(
 
           if (!best) return null;
 
+          // Flag when a free tier covers the requested usage
+          const freeTierViable = viable.some(
+            (e) => e.totalMonthly === 0 && !e.exceedsLimits
+          );
+
           return {
             toolId: tool.id,
             toolName: tool.name,
@@ -262,6 +267,7 @@ export function executeTool(
             exceedsLimits: best.exceedsLimits,
             limitWarnings: best.limitWarnings,
             portability: tool.portability,
+            freeTierCoversUsage: freeTierViable,
           };
         })
         .filter(Boolean)
