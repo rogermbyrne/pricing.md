@@ -11,7 +11,7 @@
     "open-source",
     "agile"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {
@@ -42,7 +42,7 @@
       "basePrice": 0,
       "billingPeriod": "monthly",
       "annualDiscount": 25,
-      "seatPrice": 8,
+      "seatPrice": 7,
       "usageMetrics": [],
       "features": [],
       "limits": {
