@@ -11,7 +11,7 @@
     "backup",
     "cloud-storage"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -55,7 +55,21 @@
           "unit": "GB",
           "pricePerUnit": 0.01,
           "unitQuantity": 1,
-          "includedQuantity": 0
+          "includedQuantity": 30
+        },
+        {
+          "name": "Class B API calls",
+          "unit": "calls",
+          "pricePerUnit": 0.0004,
+          "unitQuantity": 1000,
+          "includedQuantity": 75000
+        },
+        {
+          "name": "Class C API calls",
+          "unit": "calls",
+          "pricePerUnit": 0.004,
+          "unitQuantity": 1000,
+          "includedQuantity": 75000
         }
       ],
       "features": [],
