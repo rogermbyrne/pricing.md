@@ -55,9 +55,9 @@ const paidTiers = tool.tiers.filter(t => t.basePrice !== null && t.basePrice > 0
 const lowestPaid = paidTiers.length > 0 ? Math.min(...paidTiers.map(t => t.basePrice)) : null;
 %>
 
-<div class="max-w-5xl mx-auto px-6 py-10">
+<div class="max-w-6xl mx-auto px-6 md:px-10 py-12">
   <!-- Breadcrumb -->
-  <div class="flex items-center gap-2 mb-4 text-sm">
+  <div class="flex items-center gap-2 mb-6 text-sm">
     <a href="/browse" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors font-mono">Browse</a>
     <span class="text-neutral-400">/</span>
     <a href="/browse/<%= tool.category %>" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors font-mono"><%= categoryDisplay %></a>
@@ -66,12 +66,12 @@ const lowestPaid = paidTiers.length > 0 ? Math.min(...paidTiers.map(t => t.baseP
   </div>
 
   <!-- Hero -->
-  <div class="mb-8">
-    <h1 class="text-4xl font-bold tracking-tighter text-neutral-900 dark:text-white"><%= tool.name %></h1>
-    <p class="text-neutral-500 mt-2 text-sm max-w-2xl"><%= tool.description %></p>
+  <div class="mb-10">
+    <h1 class="text-5xl font-bold tracking-tighter text-neutral-900 dark:text-white"><%= tool.name %></h1>
+    <p class="text-neutral-500 mt-3 text-base max-w-2xl leading-relaxed"><%= tool.description %></p>
 
     <!-- Quick stats row -->
-    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 mt-4">
+    <div class="flex flex-wrap items-center gap-x-5 gap-y-3 mt-6">
       <% if (hasFree) { %>
         <span class="text-sm"><span class="text-emerald-600 dark:text-emerald-400 font-mono font-semibold">Free tier</span></span>
       <% } %>
@@ -83,13 +83,13 @@ const lowestPaid = paidTiers.length > 0 ? Math.min(...paidTiers.map(t => t.baseP
       <% if (tool.portability.openStandard) { %>
         <span class="text-xs font-mono text-neutral-400"><%= tool.portability.openStandard %></span>
       <% } %>
-      <span class="inline-block px-2 py-0.5 text-xs font-mono border rounded-none <%= fresh.cls %>"><%= fresh.label %></span>
-      <a href="#transparency-score" class="inline-block px-2 py-0.5 text-xs font-mono font-bold border rounded-none no-underline <%= gradeBadgeClass(transparency.grade) %>">Transparency: <%= transparency.grade %></a>
+      <span class="inline-block px-2.5 py-1 text-xs font-mono border rounded-none <%= fresh.cls %>"><%= fresh.label %></span>
+      <a href="#transparency-score" class="inline-block px-2.5 py-1 text-xs font-mono font-bold border rounded-none no-underline <%= gradeBadgeClass(transparency.grade) %>">Transparency: <%= transparency.grade %></a>
     </div>
 
-    <div class="flex items-center gap-4 mt-4">
-      <a href="<%= tool.pricingUrl %>" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-mono text-sm rounded-none border border-neutral-900 dark:border-white hover:opacity-80 transition-opacity no-underline">View Pricing Page &rarr;</a>
-      <a href="/tool/<%= tool.id %>/pricing.md" class="inline-flex items-center gap-2 px-4 py-2 font-mono text-sm rounded-none border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-900 dark:hover:border-white transition-all no-underline">View as Markdown</a>
+    <div class="flex flex-wrap items-center gap-4 mt-6">
+      <a href="<%= tool.pricingUrl %>" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-mono text-sm rounded-none border border-neutral-900 dark:border-white hover:opacity-80 transition-opacity no-underline">View Pricing Page &rarr;</a>
+      <a href="/tool/<%= tool.id %>/pricing.md" class="inline-flex items-center gap-2 px-5 py-2.5 font-mono text-sm rounded-none border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-900 dark:hover:border-white transition-all no-underline">View as Markdown</a>
       <span class="text-xs text-neutral-400 font-mono">Verified <%= tool.lastVerified %></span>
     </div>
 
@@ -106,9 +106,6 @@ const lowestPaid = paidTiers.length > 0 ? Math.min(...paidTiers.map(t => t.baseP
           <div>
             <div class="text-sm text-amber-800 dark:text-amber-200"><strong><%= tool.name %></strong> doesn't publish a pricing.md file yet.</div>
             <div class="text-xs text-amber-600 dark:text-amber-400 mt-1">This pricing data is community-maintained and last verified <%= tool.lastVerified %>.</div>
-            <div class="flex items-center gap-3 mt-2">
-              <a href="#request-transparency" class="text-xs font-mono text-amber-700 dark:text-amber-300 border-b border-amber-400 hover:border-amber-700 dark:hover:border-amber-300 transition-colors no-underline">Request Transparency &darr;</a>
-            </div>
           </div>
         </div>
       </div>
@@ -116,27 +113,27 @@ const lowestPaid = paidTiers.length > 0 ? Math.min(...paidTiers.map(t => t.baseP
   </div>
 
   <!-- Pricing Tiers Table -->
-  <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] overflow-x-auto theme-transition mb-8">
+  <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] overflow-x-auto theme-transition mb-10">
     <table class="w-full border-collapse">
       <thead>
         <tr class="border-b-2 border-neutral-200 dark:border-neutral-700">
-          <th class="px-5 py-3 text-left text-xs font-mono uppercase tracking-widest text-neutral-500 font-normal">Tier</th>
-          <th class="px-5 py-3 text-left text-xs font-mono uppercase tracking-widest text-neutral-500 font-normal">Price</th>
-          <th class="px-5 py-3 text-left text-xs font-mono uppercase tracking-widest text-neutral-500 font-normal">Includes</th>
-          <th class="px-5 py-3 text-left text-xs font-mono uppercase tracking-widest text-neutral-500 font-normal">Overage</th>
+          <th class="px-6 py-4 text-left text-xs font-mono uppercase tracking-widest text-neutral-500 font-normal">Tier</th>
+          <th class="px-6 py-4 text-left text-xs font-mono uppercase tracking-widest text-neutral-500 font-normal">Price</th>
+          <th class="px-6 py-4 text-left text-xs font-mono uppercase tracking-widest text-neutral-500 font-normal">Includes</th>
+          <th class="px-6 py-4 text-left text-xs font-mono uppercase tracking-widest text-neutral-500 font-normal">Overage</th>
         </tr>
       </thead>
       <tbody>
         <% for (const tier of tool.tiers) { %>
           <tr class="border-b border-neutral-100 dark:border-neutral-800">
             <!-- Tier name -->
-            <td class="px-5 py-4 align-top">
-              <div class="font-bold text-neutral-900 dark:text-white"><%= tier.name %></div>
-              <div class="text-[10px] font-mono text-neutral-400 uppercase"><%= tier.pricingModel.replace(/_/g, ' ') %></div>
+            <td class="px-6 py-5 align-top">
+              <div class="font-bold text-base text-neutral-900 dark:text-white"><%= tier.name %></div>
+              <div class="text-[11px] font-mono text-neutral-400 uppercase mt-0.5"><%= tier.pricingModel.replace(/_/g, ' ') %></div>
             </td>
 
             <!-- Price -->
-            <td class="px-5 py-4 align-top">
+            <td class="px-6 py-5 align-top">
               <div class="text-lg font-mono font-bold">
                 <% if (tier.basePrice === 0) { %>
                   <span class="text-emerald-600 dark:text-emerald-400">Free</span>
@@ -155,7 +152,7 @@ const lowestPaid = paidTiers.length > 0 ? Math.min(...paidTiers.map(t => t.baseP
             </td>
 
             <!-- Includes (limits + included quantities) -->
-            <td class="px-5 py-4 align-top">
+            <td class="px-6 py-5 align-top">
               <% const includedMetrics = tier.usageMetrics.filter(m => m.includedQuantity > 0); %>
               <%
                 // Skip limit keys that are already represented by an included metric
@@ -169,33 +166,33 @@ const lowestPaid = paidTiers.length > 0 ? Math.min(...paidTiers.map(t => t.baseP
                 });
               %>
               <% if (filteredLimits.length > 0 || includedMetrics.length > 0) { %>
-                <div class="space-y-0.5">
+                <div class="space-y-1">
                   <% for (const m of includedMetrics) { %>
-                    <div class="text-xs"><span class="text-neutral-500"><%= m.name.replace(/ Overage$/, '') %>:</span> <span class="font-mono text-neutral-900 dark:text-white"><%= m.includedQuantity.toLocaleString() %></span> <span class="text-neutral-400"><%= m.unit %></span></div>
+                    <div class="text-sm"><span class="text-neutral-500"><%= m.name.replace(/ Overage$/, '') %>:</span> <span class="font-mono text-neutral-900 dark:text-white"><%= m.includedQuantity.toLocaleString() %></span> <span class="text-neutral-400"><%= m.unit %></span></div>
                   <% } %>
                   <% for (const [key, val] of filteredLimits.slice(0, 5)) { %>
-                    <div class="text-xs"><span class="text-neutral-500"><%= humanizeKey(key) %>:</span> <span class="font-mono text-neutral-900 dark:text-white"><%= typeof val === 'number' ? val.toLocaleString() : val %></span></div>
+                    <div class="text-sm"><span class="text-neutral-500"><%= humanizeKey(key) %>:</span> <span class="font-mono text-neutral-900 dark:text-white"><%= typeof val === 'number' ? val.toLocaleString() : val %></span></div>
                   <% } %>
                   <% if (filteredLimits.length > 5) { %>
-                    <div class="text-xs text-neutral-400">+<%= filteredLimits.length - 5 %> more</div>
+                    <div class="text-sm text-neutral-400">+<%= filteredLimits.length - 5 %> more</div>
                   <% } %>
                 </div>
               <% } else { %>
-                <span class="text-xs text-neutral-400">&mdash;</span>
+                <span class="text-sm text-neutral-400">&mdash;</span>
               <% } %>
             </td>
 
             <!-- Overage pricing -->
-            <td class="px-5 py-4 align-top">
+            <td class="px-6 py-5 align-top">
               <% const overageMetrics = tier.usageMetrics.filter(m => m.pricePerUnit > 0); %>
               <% if (overageMetrics.length > 0) { %>
-                <div class="space-y-0.5">
+                <div class="space-y-1">
                   <% for (const m of overageMetrics) { %>
-                    <div class="text-xs"><span class="text-neutral-500"><%= m.name %>:</span> <span class="font-mono text-neutral-900 dark:text-white">$<%= m.pricePerUnit %><% if (m.unitQuantity > 1) { %>/<%= m.unitQuantity.toLocaleString() %><% } %></span> <span class="text-neutral-400">per <%= m.unit %></span></div>
+                    <div class="text-sm"><span class="text-neutral-500"><%= m.name %>:</span> <span class="font-mono text-neutral-900 dark:text-white">$<%= m.pricePerUnit %><% if (m.unitQuantity > 1) { %>/<%= m.unitQuantity.toLocaleString() %><% } %></span> <span class="text-neutral-400">per <%= m.unit %></span></div>
                   <% } %>
                 </div>
               <% } else { %>
-                <span class="text-xs text-neutral-400">&mdash;</span>
+                <span class="text-sm text-neutral-400">&mdash;</span>
               <% } %>
             </td>
           </tr>
@@ -206,18 +203,18 @@ const lowestPaid = paidTiers.length > 0 ? Math.min(...paidTiers.map(t => t.baseP
 
   <!-- Portability -->
   <% if (tool.portability.whatYouLose) { %>
-  <div class="flex flex-wrap gap-x-8 gap-y-3 text-sm mb-8 px-1">
+  <div class="flex flex-wrap gap-x-10 gap-y-4 text-sm mb-10 px-1">
     <div>
       <span class="text-xs font-mono text-neutral-400 uppercase tracking-widest">Switching Cost</span>
-      <div class="mt-1"><%- switchingBadge(tool.portability.switchingCost) %></div>
+      <div class="mt-2"><%- switchingBadge(tool.portability.switchingCost) %></div>
     </div>
     <div>
       <span class="text-xs font-mono text-neutral-400 uppercase tracking-widest">Open Standard</span>
-      <div class="mt-1 text-sm <%= tool.portability.openStandard ? 'text-neutral-900 dark:text-white' : 'text-neutral-400' %>"><%= tool.portability.openStandard || 'Proprietary' %></div>
+      <div class="mt-2 text-sm <%= tool.portability.openStandard ? 'text-neutral-900 dark:text-white' : 'text-neutral-400' %>"><%= tool.portability.openStandard || 'Proprietary' %></div>
     </div>
     <div class="flex-1 min-w-[250px]">
       <span class="text-xs font-mono text-neutral-400 uppercase tracking-widest">What You Lose</span>
-      <div class="mt-1 text-sm text-neutral-500"><%= tool.portability.whatYouLose %></div>
+      <div class="mt-2 text-sm text-neutral-500 leading-relaxed"><%= tool.portability.whatYouLose %></div>
     </div>
   </div>
   <% } %>
