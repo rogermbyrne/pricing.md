@@ -3,7 +3,7 @@
   "name": "Keystatic",
   "description": "Git-based CMS for structured content with Markdown, MDX, and JSON stored directly in your repository",
   "url": "https://keystatic.com",
-  "pricingUrl": "https://keystatic.com/pricing",
+  "pricingUrl": "https://keystatic.com/docs/cloud",
   "category": "cms",
   "tags": [
     "cms",

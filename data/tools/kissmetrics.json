@@ -11,7 +11,7 @@
     "funnels",
     "attribution"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -23,7 +23,7 @@
     {
       "name": "Core",
       "slug": "core",
-      "pricingModel": "flat_rate",
+      "pricingModel": "usage_based",
       "basePrice": 99,
       "billingPeriod": "monthly",
       "annualDiscount": null,
@@ -35,34 +35,16 @@
       }
     },
     {
-      "name": "Silver",
-      "slug": "silver",
-      "pricingModel": "flat_rate",
-      "basePrice": 199,
-      "billingPeriod": "monthly",
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": {
-        "eventsPerMonth": 2000000,
-        "seats": 3
-      }
-    },
-    {
-      "name": "Gold",
-      "slug": "gold",
-      "pricingModel": "flat_rate",
-      "basePrice": 499,
-      "billingPeriod": "monthly",
-      "annualDiscount": null,
-      "seatPrice": null,
-      "usageMetrics": [],
-      "features": [],
-      "limits": {
-        "eventsPerMonth": 5000000,
-        "seats": 10
-      }
+      "limits": {}
     }
   ]
 }

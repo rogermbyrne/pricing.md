@@ -10,7 +10,7 @@
     "cdn",
     "pay-as-you-go"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {
@@ -23,7 +23,7 @@
       "name": "Pay-As-You-Go",
       "slug": "pay-as-you-go",
       "pricingModel": "usage_based",
-      "basePrice": 0,
+      "basePrice": 4,
       "billingPeriod": "monthly",
       "annualDiscount": null,
       "seatPrice": null,
