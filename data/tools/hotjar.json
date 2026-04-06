@@ -11,7 +11,7 @@
     "session-recordings",
     "user-behavior"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -38,10 +38,10 @@
     {
       "name": "Growth",
       "slug": "growth",
-      "pricingModel": "flat_rate",
+      "pricingModel": "tiered",
       "basePrice": 49,
       "billingPeriod": "monthly",
-      "annualDiscount": null,
+      "annualDiscount": 20,
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],

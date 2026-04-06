@@ -11,7 +11,7 @@
     "async",
     "event-routing"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {
@@ -49,7 +49,7 @@
         {
           "name": "events",
           "unit": "events",
-          "pricePerUnit": 3.00,
+          "pricePerUnit": 0.33,
           "unitQuantity": 100000,
           "includedQuantity": 10000
         },
@@ -80,7 +80,7 @@
         {
           "name": "events",
           "unit": "events",
-          "pricePerUnit": 3.00,
+          "pricePerUnit": 0.33,
           "unitQuantity": 100000,
           "includedQuantity": 10000
         },
