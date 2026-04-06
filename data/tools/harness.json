@@ -13,7 +13,7 @@
     "cloud-cost",
     "ai"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -32,18 +32,16 @@
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": {
-        "cloudCreditsPerMonth": 2000
-      }
+      "limits": {}
     },
     {
-      "name": "Startup",
-      "slug": "startup",
-      "pricingModel": "per_seat",
-      "basePrice": 0,
-      "billingPeriod": "monthly",
+      "name": "Essentials",
+      "slug": "essentials",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
       "annualDiscount": null,
-      "seatPrice": 57,
+      "seatPrice": null,
       "usageMetrics": [],
       "features": [],
       "limits": {
