@@ -10,6 +10,11 @@ people:
 tools:
   - Vercel
   - Railway
+  - Supabase
+  - Neon
+  - Clerk
+  - Resend
+  - Stripe
   - Fly.io
   - Netlify
   - Render
@@ -21,6 +26,8 @@ projects:
 Make your AI agent cost-aware when planning developer tool stacks.
 
 Pricing.md surfaces pricing breakpoints, compares alternatives, flags lock-in risks, and shows where free tiers end — so developers make informed decisions about the tools they choose.
+
+**Browse the registry at [latest.sh](https://latest.sh)** — 303 tools, side-by-side comparisons, transparency scores, and an AI-powered Stack Advisor.
 
 ## Install as a Skill
 
@@ -60,6 +67,19 @@ Add to your Claude Code MCP config:
 | `find_cheapest` | Find the cheapest tool in a category for your usage |
 | `growth_cost` | Compare what tools cost at realistic growth (e.g. 100K MAU for auth, 50GB for databases) — exposes free-tier-to-paid cliffs |
 
+## Web UI — latest.sh
+
+The full registry is browsable at [latest.sh](https://latest.sh) with:
+
+- **Tool pages** with pricing tiers, portability info, and transparency scores
+- **Category comparisons** with sorting by price, free tier, growth cost, and transparency
+- **Side-by-side compare** for up to 5 tools
+- **Stack Advisor** — describe your app, get a recommended stack with real pricing at 3 user scales
+- **Pricing changelog** tracking when tools change their prices
+- **Transparency leaderboard** scoring tools on pricing openness (A-F)
+- **pricing.md files** — every tool has a machine-readable markdown file at `/tool/{id}/pricing.md`
+- **Embeddable SVG badges** — transparency score badges at `/tool/{id}/badge.svg`
+
 ## What's Covered
 
 303 developer tools across 22 categories:
@@ -89,7 +109,7 @@ Add to your Claude Code MCP config:
 | **Internal Tools** | Retool, Appsmith, Budibase, and more |
 | **Secrets** | Doppler, Infisical, and more |
 
-All pricing verified as of 2026-04-05. Each tool links to its pricing page for verification.
+All pricing verified as of 2026-04-06. Each tool links to its pricing page for verification.
 
 ## How It Works
 
