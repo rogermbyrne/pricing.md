@@ -13,7 +13,7 @@
     "code-generation",
     "embeddings"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -76,14 +76,14 @@
         {
           "name": "o4-mini input",
           "unit": "tokens",
-          "pricePerUnit": 0.55,
+          "pricePerUnit": 1.10,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "o4-mini output",
           "unit": "tokens",
-          "pricePerUnit": 2.2,
+          "pricePerUnit": 4.40,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         }
