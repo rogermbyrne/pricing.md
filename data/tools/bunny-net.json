@@ -11,7 +11,7 @@
     "video-streaming",
     "dns"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -40,6 +40,20 @@
           "name": "bandwidth-asia",
           "unit": "GB",
           "pricePerUnit": 0.03,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "bandwidth-south-america",
+          "unit": "GB",
+          "pricePerUnit": 0.045,
+          "unitQuantity": 1,
+          "includedQuantity": 0
+        },
+        {
+          "name": "bandwidth-middle-east-africa",
+          "unit": "GB",
+          "pricePerUnit": 0.06,
           "unitQuantity": 1,
           "includedQuantity": 0
         },
