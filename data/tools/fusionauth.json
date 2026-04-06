@@ -13,7 +13,7 @@
     "oauth",
     "saml"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -35,18 +35,30 @@
       "limits": {}
     },
     {
+      "name": "Community Cloud",
+      "slug": "community-cloud",
+      "pricingModel": "flat_rate",
+      "basePrice": 37,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
       "name": "Starter",
       "slug": "starter",
       "pricingModel": "tiered",
-      "basePrice": 125,
-      "billingPeriod": "monthly",
+      "basePrice": 162,
+      "billingPeriod": "annual",
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
         {
           "name": "MAU",
           "unit": "users",
-          "pricePerUnit": 75,
+          "pricePerUnit": 150,
           "unitQuantity": 10000,
           "includedQuantity": 10000
         }
@@ -58,15 +70,15 @@
       "name": "Essentials",
       "slug": "essentials",
       "pricingModel": "tiered",
-      "basePrice": 850,
-      "billingPeriod": "monthly",
+      "basePrice": 240,
+      "billingPeriod": "annual",
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [
         {
           "name": "MAU",
           "unit": "users",
-          "pricePerUnit": 850,
+          "pricePerUnit": 700,
           "unitQuantity": 10000,
           "includedQuantity": 10000
         }
