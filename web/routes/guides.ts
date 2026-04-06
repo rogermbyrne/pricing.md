@@ -43,7 +43,8 @@ export function createGuidesRouter(registry: Registry): Router {
 
   // VS comparison pages
   router.get("/guides/:slugA-vs-:slugB", (req: Request, res: Response) => {
-    const { slugA, slugB } = req.params;
+    const slugA = req.params.slugA as string;
+    const slugB = req.params.slugB as string;
     const toolA = registry.get(slugA);
     const toolB = registry.get(slugB);
 
@@ -86,7 +87,7 @@ export function createGuidesRouter(registry: Registry): Router {
 
   // Alternatives pages
   router.get("/guides/:tool-alternatives", (req: Request, res: Response) => {
-    const toolSlug = req.params.tool.replace("-alternatives", "");
+    const toolSlug = (req.params.tool as string).replace("-alternatives", "");
     const tool = registry.get(toolSlug);
 
     if (!tool) {
@@ -130,7 +131,7 @@ export function createGuidesRouter(registry: Registry): Router {
       t.tiers.some((tier) => tier.pricingModel === "free" || tier.basePrice === 0)
     );
 
-    const displayName = category.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+    const displayName = (category as string).replace(/-/g, " ").replace(/\b\w/g, (c: string) => c.toUpperCase());
 
     res.render("guides-best-free", {
       title: `Best Free ${displayName} Tools`,

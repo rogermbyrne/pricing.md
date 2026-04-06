@@ -178,7 +178,7 @@ export function compareTools(toolA: ToolEntry, toolB: ToolEntry): ComparisonData
  * Compare switching costs
  */
 function compareSwitchingCost(costA: SwitchingCost, costB: SwitchingCost): "lower" | "higher" | "equal" {
-  const costRank = { drop_in: 1, moderate: 2, significant: 3, architectural: 4 };
+  const costRank: Record<string, number> = { "drop-in": 1, moderate: 2, significant: 3, architectural: 4 };
   const rankA = costRank[costA];
   const rankB = costRank[costB];
   
