@@ -3,7 +3,7 @@
   "name": "Earthly",
   "description": "Open-source build framework with containerized, repeatable builds and optional cloud Satellites for remote execution",
   "url": "https://earthly.dev",
-  "pricingUrl": "https://earthly.dev/pricing",
+  "pricingUrl": "https://earthly.dev/earthly-lunar",
   "category": "ci-cd",
   "tags": [
     "ci-cd",
@@ -12,7 +12,7 @@
     "open-source",
     "remote-builds"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
