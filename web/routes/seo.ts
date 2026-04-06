@@ -175,7 +175,7 @@ Every tool has a machine-readable pricing.md file at \`/tool/{id}/pricing.md\`. 
     }
 
     // Add a sample of VS comparison pages (first 100 pairs)
-    const vsCount = 0;
+    let vsCount = 0;
     const maxVsPages = 100;
     for (const cat of categories) {
       const tools = registry.search({ category: cat as any });
@@ -190,7 +190,7 @@ Every tool has a machine-readable pricing.md file at \`/tool/{id}/pricing.md\`. 
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>`;
-            (vsCount as any)++;
+            vsCount++;
           }
         }
       }
