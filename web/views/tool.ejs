@@ -229,43 +229,6 @@ const lowestPaid = paidTiers.length > 0 ? Math.min(...paidTiers.map(t => t.baseP
     </div>
   <% } %>
 
-  <!-- Transparency Score -->
-  <div id="transparency-score" class="mb-8">
-    <div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-3">Transparency Score</div>
-    <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] px-5 py-5">
-      <div class="flex items-center gap-4 mb-4">
-        <span class="text-3xl font-mono font-bold <%= gradeBadgeClass(transparency.grade).split(' ').filter(c => c.startsWith('text-') && !c.startsWith('text-neutral')).join(' ') %>"><%= transparency.grade %></span>
-        <div>
-          <div class="text-sm font-mono text-neutral-900 dark:text-white"><%= transparency.score %>/100</div>
-          <div class="text-xs text-neutral-500">Pricing Transparency Score</div>
-        </div>
-        <a href="/tool/<%= tool.id %>/badge.svg" target="_blank" class="ml-auto">
-          <img src="/tool/<%= tool.id %>/badge.svg" alt="<%= tool.name %> Pricing Transparency: <%= transparency.grade %>" height="20">
-        </a>
-      </div>
-
-      <!-- Score breakdown -->
-      <details class="group">
-        <summary class="text-xs font-mono text-neutral-500 cursor-pointer hover:text-neutral-900 dark:hover:text-white transition-colors">Score breakdown</summary>
-        <div class="mt-3 space-y-2">
-          <% for (const f of transparency.factors) { %>
-            <div class="flex items-center justify-between text-xs">
-              <div class="flex items-center gap-2">
-                <% if (f.earned > 0) { %>
-                  <span class="text-emerald-500">&#10003;</span>
-                <% } else { %>
-                  <span class="text-neutral-300 dark:text-neutral-600">&#10005;</span>
-                <% } %>
-                <span class="text-neutral-600 dark:text-neutral-400"><%= f.name %></span>
-              </div>
-              <span class="font-mono text-neutral-500"><%= f.earned %>/<%= f.max %></span>
-            </div>
-          <% } %>
-        </div>
-      </details>
-
-    </div>
-  </div>
 
   <!-- Changelog -->
   <% if (changes.length > 0) { %>
