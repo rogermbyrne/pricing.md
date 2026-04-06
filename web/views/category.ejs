@@ -116,6 +116,7 @@ function growthCostCell(tool) {
     <% if (growthScenario) { %>
     <a href="/browse/<%= categorySlug %>?sort=growth-cost" class="px-3 py-1.5 text-xs font-mono uppercase tracking-widest rounded-full transition-all <%= currentSort === 'growth-cost' ? 'bg-neutral-900 dark:bg-white text-white dark:text-neutral-900' : 'text-neutral-400 hover:text-neutral-900 dark:hover:text-white bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700' %>">Growth Cost</a>
     <% } %>
+    <a href="/browse/<%= categorySlug %>?sort=transparency" class="px-3 py-1.5 text-xs font-mono uppercase tracking-widest rounded-full transition-all <%= currentSort === 'transparency' ? 'bg-neutral-900 dark:bg-white text-white dark:text-neutral-900' : 'text-neutral-400 hover:text-neutral-900 dark:hover:text-white bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700' %>">Transparency</a>
   </div>
 
   <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] overflow-x-auto theme-transition">
@@ -133,6 +134,7 @@ function growthCostCell(tool) {
           <% } %>
           <th class="px-5 py-3 text-left text-xs font-mono uppercase tracking-widest text-neutral-500 font-normal">Model</th>
           <th class="px-5 py-3 text-left text-xs font-mono uppercase tracking-widest text-neutral-500 font-normal">Portability</th>
+          <th class="px-5 py-3 text-center text-xs font-mono uppercase tracking-widest text-neutral-500 font-normal">Score</th>
         </tr>
       </thead>
       <tbody>
@@ -144,6 +146,7 @@ function growthCostCell(tool) {
                 <% if (hasPricingMd(tool)) { %>
                   <span title="Publishes a pricing.md file — machine-readable pricing for AI agents" class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-[#1d9bf0] flex-shrink-0 cursor-help"><svg viewBox="0 0 24 24" width="10" height="10" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
                 <% } %>
+                <a href="/tool/<%= tool.id %>/pricing.md" title="View pricing as markdown" class="text-[10px] font-mono text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors no-underline border-b border-neutral-200 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white">md</a>
               </div>
               <div class="text-sm text-neutral-500 mt-0.5 max-w-[300px] truncate"><%= tool.description %></div>
             </td>
@@ -172,6 +175,13 @@ function growthCostCell(tool) {
             </td>
             <td class="px-5 py-4">
               <%- switchingBadge(tool.portability.switchingCost) %>
+            </td>
+            <td class="px-5 py-4 text-center">
+              <%
+                const ts = transparencyScores[tool.id];
+                const gradeColorMap = { A: 'text-emerald-600 dark:text-emerald-400', B: 'text-blue-600 dark:text-blue-400', C: 'text-amber-600 dark:text-amber-400', D: 'text-orange-600 dark:text-orange-400', F: 'text-red-600 dark:text-red-400' };
+              %>
+              <a href="/tool/<%= tool.id %>#transparency-score" class="font-mono font-bold text-sm no-underline <%= gradeColorMap[ts.grade] || 'text-neutral-500' %>"><%= ts.grade %></a>
             </td>
           </tr>
         <% } %>

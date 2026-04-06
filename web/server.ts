@@ -2,6 +2,7 @@ import express from "express";
 import path from "path";
 import { Registry } from "../src/registry/registry.js";
 import { ChangelogDB } from "./changelog-db.js";
+import { VoteDB } from "./vote-db.js";
 import { createBrowseRouter } from "./routes/browse.js";
 import { createToolRouter } from "./routes/tool.js";
 import { createCompareRouter } from "./routes/compare.js";
@@ -9,6 +10,7 @@ import { createChangelogRouter } from "./routes/changelog.js";
 import { createApiRouter } from "./routes/api.js";
 import { createSeoRouter } from "./routes/seo.js";
 import { createChatRouter } from "./routes/chat.js";
+import { createTransparencyRouter } from "./routes/transparency.js";
 
 const PORT = parseInt(process.env.PORT || "3001", 10);
 
@@ -28,7 +30,10 @@ const registry = new Registry(dataDir);
 console.log(`Registry loaded: ${registry.size} tools`);
 
 const changelogDB = new ChangelogDB(dbPath);
+const voteDBPath = path.join(projectRoot, "data", "votes.db");
+const voteDB = new VoteDB(voteDBPath);
 console.log("Changelog DB initialized");
+console.log("Vote DB initialized");
 
 const app = express();
 
@@ -54,11 +59,13 @@ app.use(express.static(lpDir));
 
 // Mount routes
 app.use(createBrowseRouter(registry));
-app.use(createToolRouter(registry, changelogDB));
+app.use(createToolRouter(registry, changelogDB, voteDB));
 app.use(createCompareRouter(registry));
 app.use(createChangelogRouter(registry, changelogDB));
-app.use(createApiRouter(registry, changelogDB));
+app.use(express.json());
+app.use(createApiRouter(registry, changelogDB, voteDB));
 app.use(createChatRouter(registry));
+app.use(createTransparencyRouter(registry));
 
 // 404 catch-all
 app.use((req: express.Request, res: express.Response) => {

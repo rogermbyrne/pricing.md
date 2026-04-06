@@ -1,6 +1,7 @@
 import { Router, Request, Response } from "express";
 import { Registry } from "../../src/registry/registry.js";
 import { GROWTH_SCENARIOS, computeGrowthCost, type GrowthCostResult } from "../../src/lib/growth-scenarios.js";
+import { computeTransparencyScore } from "../../src/lib/transparency-score.js";
 import type { Category } from "../../src/schema/pricing.js";
 
 export function createBrowseRouter(registry: Registry): Router {
@@ -99,6 +100,19 @@ export function createBrowseRouter(registry: Registry): Router {
       });
     }
 
+    // Compute transparency scores
+    const transparencyScores: Record<string, { grade: string; score: number }> = {};
+    for (const tool of tools) {
+      const { grade, score } = computeTransparencyScore(tool);
+      transparencyScores[tool.id] = { grade, score };
+    }
+
+    if (sort === "transparency") {
+      tools = [...tools].sort((a, b) => {
+        return (transparencyScores[b.id]?.score ?? 0) - (transparencyScores[a.id]?.score ?? 0);
+      });
+    }
+
     const displayName = category.replace(/-/g, " ").replace(/\b\w/g, (c: string) => c.toUpperCase());
 
     res.render("category", {
@@ -112,6 +126,7 @@ export function createBrowseRouter(registry: Registry): Router {
       growthScenario: scenario,
       growthCosts,
       cheapestGrowthCost: isFinite(cheapestGrowthCost) ? cheapestGrowthCost : null,
+      transparencyScores,
     });
   });
 

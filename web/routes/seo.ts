@@ -25,6 +25,10 @@ export function createSeoRouter(registry: Registry): Router {
 
 ${categoryLines.join("\n")}
 
+## Pricing Markdown Files
+
+Every tool has a machine-readable pricing.md file at \`/tool/{id}/pricing.md\`. These files contain structured pricing tiers, limits, overage rates, and portability data.
+
 ## API
 
 - [All Tools JSON](/api/tools): Complete tool listing with pricing data
@@ -85,10 +89,22 @@ ${categoryLines.join("\n")}
     <lastmod>${lastmod}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>${BASE}/tool/${tool.id}/pricing.md</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>`;
     }
 
     xml += `
+  <url>
+    <loc>${BASE}/transparency</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>${BASE}/compare</loc>
     <lastmod>${today}</lastmod>

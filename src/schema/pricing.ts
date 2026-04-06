@@ -107,5 +107,7 @@ export const ToolEntrySchema = z.object({
   freshnessCategory: FreshnessCategoryEnum,
   currency: z.string().default("USD"),
   portability: PortabilityInfoSchema,
+  twitterHandle: z.string().optional().describe("Twitter/X handle without @, e.g. 'suaborner'"),
+  githubOrg: z.string().optional().describe("GitHub org or user, e.g. 'supabase'"),
 });
 export type ToolEntry = z.infer<typeof ToolEntrySchema>;

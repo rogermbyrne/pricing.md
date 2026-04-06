@@ -1,0 +1,104 @@
+<%- include('partials/head', { title }) %>
+
+<%
+const gradeColors = {
+  A: { border: 'border-emerald-400 dark:border-emerald-600', text: 'text-emerald-600 dark:text-emerald-400', bg: 'bg-emerald-50 dark:bg-emerald-950' },
+  B: { border: 'border-blue-400 dark:border-blue-600', text: 'text-blue-600 dark:text-blue-400', bg: 'bg-blue-50 dark:bg-blue-950' },
+  C: { border: 'border-amber-400 dark:border-amber-600', text: 'text-amber-600 dark:text-amber-400', bg: 'bg-amber-50 dark:bg-amber-950' },
+  D: { border: 'border-orange-400 dark:border-orange-600', text: 'text-orange-600 dark:text-orange-400', bg: 'bg-orange-50 dark:bg-orange-950' },
+  F: { border: 'border-red-400 dark:border-red-600', text: 'text-red-600 dark:text-red-400', bg: 'bg-red-50 dark:bg-red-950' },
+};
+
+function categoryLabel(cat) {
+  return cat.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+%>
+
+<div class="max-w-5xl mx-auto px-6 py-10">
+  <!-- Breadcrumb -->
+  <div class="flex items-center gap-2 mb-4 text-sm">
+    <a href="/browse" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors font-mono">Browse</a>
+    <span class="text-neutral-400">/</span>
+    <span class="text-neutral-900 dark:text-white font-mono">Transparency</span>
+  </div>
+
+  <!-- Hero -->
+  <div class="mb-8">
+    <h1 class="text-4xl font-bold tracking-tighter text-neutral-900 dark:text-white">Pricing Transparency Leaderboard</h1>
+    <p class="text-neutral-500 mt-2 text-sm max-w-2xl">How transparent are developer tools about their pricing? We score every tool on a 100-point scale based on whether they publish machine-readable pricing, list all prices publicly, document usage rates, and more.</p>
+
+    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 mt-4">
+      <span class="text-sm text-neutral-500"><span class="font-mono font-semibold text-neutral-900 dark:text-white"><%= stats.total %></span> tools scored</span>
+      <span class="text-sm text-neutral-500"><span class="font-mono font-semibold text-emerald-600 dark:text-emerald-400"><%= stats.withPricingMd %></span> publish pricing.md</span>
+      <span class="text-sm text-neutral-500">Average score: <span class="font-mono font-semibold text-neutral-900 dark:text-white"><%= stats.avgScore %>/100</span></span>
+    </div>
+  </div>
+
+  <!-- Grade groups -->
+  <% for (const grade of grades) { %>
+    <% const tools = grouped[grade]; %>
+    <% if (tools.length > 0) { %>
+      <div class="mb-8">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="text-2xl font-mono font-bold <%= gradeColors[grade].text %>"><%= grade %></span>
+          <span class="text-xs font-mono text-neutral-400"><%= tools.length %> tool<%= tools.length !== 1 ? 's' : '' %></span>
+        </div>
+
+        <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] overflow-x-auto">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="border-b-2 border-neutral-200 dark:border-neutral-700">
+                <th class="px-5 py-3 text-left text-xs font-mono uppercase tracking-widest text-neutral-500 font-normal">Tool</th>
+                <th class="px-5 py-3 text-left text-xs font-mono uppercase tracking-widest text-neutral-500 font-normal">Category</th>
+                <th class="px-5 py-3 text-right text-xs font-mono uppercase tracking-widest text-neutral-500 font-normal">Score</th>
+                <th class="px-5 py-3 text-center text-xs font-mono uppercase tracking-widest text-neutral-500 font-normal">pricing.md</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for (const t of tools) { %>
+                <tr class="border-b border-neutral-100 dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-[#0a0a0a] transition-colors">
+                  <td class="px-5 py-3">
+                    <a href="/tool/<%= t.id %>" class="font-bold text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors no-underline"><%= t.name %></a>
+                  </td>
+                  <td class="px-5 py-3">
+                    <a href="/browse/<%= t.category %>" class="text-xs font-mono text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors no-underline"><%= categoryLabel(t.category) %></a>
+                  </td>
+                  <td class="px-5 py-3 text-right">
+                    <span class="font-mono font-bold <%= gradeColors[grade].text %>"><%= t.score %></span>
+                  </td>
+                  <td class="px-5 py-3 text-center">
+                    <% if (t.hasPricingMd) { %>
+                      <span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-[#1d9bf0]"><svg viewBox="0 0 24 24" width="10" height="10" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                    <% } else { %>
+                      <span class="text-neutral-300 dark:text-neutral-600">&mdash;</span>
+                    <% } %>
+                  </td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    <% } %>
+  <% } %>
+
+  <!-- Scoring methodology -->
+  <div class="mt-8 mb-8">
+    <div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-3">How We Score</div>
+    <div class="bg-white dark:bg-[#111] border border-neutral-300 dark:border-neutral-700 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] px-5 py-5">
+      <div class="space-y-2 text-sm text-neutral-600 dark:text-neutral-400">
+        <div class="flex justify-between"><span>Publishes a <a href="https://github.com/nichochar/pricing.md" target="_blank" rel="noopener" class="border-b border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-white transition-colors">pricing.md</a> file</span><span class="font-mono">30 pts</span></div>
+        <div class="flex justify-between"><span>All prices public (no "Contact Sales")</span><span class="font-mono">15 pts</span></div>
+        <div class="flex justify-between"><span>Usage/overage pricing documented</span><span class="font-mono">15 pts</span></div>
+        <div class="flex justify-between"><span>Free tier available</span><span class="font-mono">10 pts</span></div>
+        <div class="flex justify-between"><span>Portability documented</span><span class="font-mono">10 pts</span></div>
+        <div class="flex justify-between"><span>Open standard</span><span class="font-mono">10 pts</span></div>
+        <div class="flex justify-between"><span>Recently verified (&le;30 days)</span><span class="font-mono">10 pts</span></div>
+        <div class="flex justify-between border-t border-neutral-200 dark:border-neutral-700 pt-2 mt-2 font-bold text-neutral-900 dark:text-white"><span>Total</span><span class="font-mono">100 pts</span></div>
+      </div>
+      <p class="text-xs text-neutral-500 mt-4">A = 80+, B = 60-79, C = 40-59, D = 20-39, F = 0-19. The single biggest factor is publishing an official pricing.md file (30 pts).</p>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
