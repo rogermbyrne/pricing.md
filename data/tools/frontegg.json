@@ -13,7 +13,7 @@
     "user-management",
     "admin-portal"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -23,8 +23,8 @@
   },
   "tiers": [
     {
-      "name": "Free",
-      "slug": "free",
+      "name": "Launch",
+      "slug": "launch",
       "pricingModel": "free",
       "basePrice": 0,
       "billingPeriod": null,
@@ -33,38 +33,23 @@
       "usageMetrics": [],
       "features": [],
       "limits": {
-        "organizations": 5
+        "mau": 7500,
+        "customerAccounts": 50,
+        "ssoConnections": 5,
+        "teamSeats": 3
       }
     },
     {
-      "name": "Starter",
-      "slug": "starter",
-      "pricingModel": "flat_rate",
-      "basePrice": 99,
-      "billingPeriod": "monthly",
+      "name": "Scale",
+      "slug": "scale",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
       "annualDiscount": null,
       "seatPrice": null,
       "usageMetrics": [],
       "features": [],
-      "limits": {
-        "mau": 1000,
-        "ssoConnections": 3
-      }
-    },
-    {
-      "name": "Growth",
-      "slug": "growth",
-      "pricingModel": "flat_rate",
-      "basePrice": 799,
-      "billingPeriod": "monthly",
-      "annualDiscount": null,
-      "seatPrice": null,
-      "usageMetrics": [],
-      "features": [],
-      "limits": {
-        "mau": 5000,
-        "ssoConnections": 10
-      }
+      "limits": {}
     },
     {
       "name": "Enterprise",
