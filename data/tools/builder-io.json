@@ -11,7 +11,7 @@
     "ai-design-to-code",
     "no-code"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-06",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -31,24 +31,24 @@
       "usageMetrics": [],
       "features": [],
       "limits": {
-        "users": 10,
+        "users": 5,
         "monthlyVisualViews": 10000,
-        "monthlyCodeGenerations": 20
+        "monthlyAgentCredits": 75
       }
     },
     {
-      "name": "Develop Pro",
-      "slug": "develop-pro",
+      "name": "Fusion Pro",
+      "slug": "fusion-pro",
       "pricingModel": "per_seat",
       "basePrice": 0,
-      "billingPeriod": "monthly",
-      "annualDiscount": null,
-      "seatPrice": 19,
+      "billingPeriod": "annual",
+      "annualDiscount": 20,
+      "seatPrice": 24,
       "usageMetrics": [],
       "features": [],
       "limits": {
         "users": 20,
-        "monthlyCodeGenerations": 200
+        "monthlyAgentCreditsPerUser": 500
       }
     },
     {
@@ -56,8 +56,8 @@
       "slug": "publish-pro",
       "pricingModel": "per_seat",
       "basePrice": 0,
-      "billingPeriod": "monthly",
-      "annualDiscount": null,
+      "billingPeriod": "annual",
+      "annualDiscount": 20,
       "seatPrice": 39,
       "usageMetrics": [],
       "features": [],
