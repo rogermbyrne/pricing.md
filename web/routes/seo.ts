@@ -162,9 +162,30 @@ Every tool has a machine-readable pricing.md file at \`/tool/{id}/pricing.md\`. 
   </url>`;
     }
 
-    // Add alternatives pages for popular tools (first 50)
-    const popularTools = allTools.slice(0, 50);
-    for (const tool of popularTools) {
+
+
+    // Add VS comparison pages for all category pairs (not limited to 100)
+    for (const cat of categories) {
+      const tools = registry.search({ category: cat as any });
+      if (tools.length >= 2) {
+        for (let i = 0; i < tools.length; i++) {
+          for (let j = i + 1; j < tools.length; j++) {
+            const sorted = [tools[i].id, tools[j].id].sort();
+            const lastmod = tools[i].lastVerified > tools[j].lastVerified ? tools[i].lastVerified : tools[j].lastVerified;
+            xml += `
+  <url>
+    <loc>${BASE}/guides/${sorted[0]}-vs-${sorted[1]}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>`;
+          }
+        }
+      }
+    }
+
+    // Add all alternatives pages (not just first 50)
+    for (const tool of allTools) {
       xml += `
   <url>
     <loc>${BASE}/guides/${tool.id}-alternatives</loc>
@@ -172,28 +193,6 @@ Every tool has a machine-readable pricing.md file at \`/tool/{id}/pricing.md\`. 
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>`;
-    }
-
-    // Add a sample of VS comparison pages (first 100 pairs)
-    let vsCount = 0;
-    const maxVsPages = 100;
-    for (const cat of categories) {
-      const tools = registry.search({ category: cat as any });
-      if (tools.length >= 2) {
-        for (let i = 0; i < Math.min(tools.length, 5) && vsCount < maxVsPages; i++) {
-          for (let j = i + 1; j < Math.min(tools.length, 6) && vsCount < maxVsPages; j++) {
-            const sorted = [tools[i].id, tools[j].id].sort();
-            xml += `
-  <url>
-    <loc>${BASE}/guides/${sorted[0]}-vs-${sorted[1]}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>`;
-            vsCount++;
-          }
-        }
-      }
     }
 
     xml += `

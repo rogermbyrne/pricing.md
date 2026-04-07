@@ -72,10 +72,16 @@ export function createGuidesRouter(registry: Registry): Router {
     // Set noindex if needed
     const metaRobots = comparisonData.shouldNoindex ? "noindex" : "index, follow";
 
+    // Generate canonical URL - use the route pattern (slugA-vs-slugB), not sorted
+    const canonicalPath = `/guides/${slugA}-vs-${slugB}`;
+
     res.render("guides-vs", {
       title: `${toolA.name} vs ${toolB.name}`,
-      description: `Compare ${toolA.name} vs ${toolB.name} pricing side-by-side. Find which tool offers better value for your needs.`,
-      path: `/guides/${generateComparisonSlug(toolA.id, toolB.id)}`,
+      description: comparisonData.priceGap 
+        ? `${comparisonData.priceGap.cheaper === 'A' ? toolA.name : toolB.name} is ${comparisonData.priceGap.ratio.toFixed(1)}x cheaper than ${comparisonData.priceGap.cheaper === 'A' ? toolB.name : toolA.name} — compare pricing, free tiers, and features.`
+        : `Compare ${toolA.name} vs ${toolB.name} pricing side-by-side. Find which tool offers better value for your needs.`,
+      path: canonicalPath,
+      canonicalPath,
       toolA,
       toolB,
       comparisonData,

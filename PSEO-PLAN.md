@@ -11,6 +11,8 @@ frameworks:
   - Express
   - EJS
   - TypeScript
+tools:
+  - Registry
 ---
 # Programmatic SEO Plan — latest.sh
 
