@@ -65,104 +65,38 @@ Every tool has a machine-readable pricing.md file at \`/tool/{id}/pricing.md\`. 
     const categories = registry.categories().filter((cat) => cat !== "ai-api");
     const allTools = registry.allTools().filter((t) => t.category !== "ai-api");
 
-    let xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>${BASE}/</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>${BASE}/browse</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>`;
+    const seen = new Set<string>();
+    const entries: Array<{ loc: string; lastmod: string; changefreq: string; priority: string }> = [];
+
+    const addUrl = (loc: string, lastmod: string, changefreq: string, priority: string) => {
+      if (seen.has(loc)) return;
+      seen.add(loc);
+      entries.push({ loc, lastmod, changefreq, priority });
+    };
+
+    addUrl(`${BASE}/`, today, "daily", "1.0");
+    addUrl(`${BASE}/browse`, today, "daily", "0.9");
 
     for (const cat of categories) {
-      xml += `
-  <url>
-    <loc>${BASE}/browse/${cat}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>`;
+      addUrl(`${BASE}/browse/${cat}`, today, "daily", "0.8");
     }
 
     for (const tool of allTools) {
       const lastmod = tool.lastVerified || today;
-      xml += `
-  <url>
-    <loc>${BASE}/tool/${tool.id}</loc>
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>${BASE}/tool/${tool.id}/pricing.md</loc>
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>`;
+      addUrl(`${BASE}/tool/${tool.id}`, lastmod, "weekly", "0.7");
+      addUrl(`${BASE}/tool/${tool.id}/pricing.md`, lastmod, "weekly", "0.6");
     }
 
-    xml += `
-  <url>
-    <loc>${BASE}/transparency</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>${BASE}/compare</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>${BASE}/changelog</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>${BASE}/guides</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>${BASE}/stack</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>${BASE}/transparency</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>${BASE}/guides</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>`;
+    addUrl(`${BASE}/transparency`, today, "daily", "0.8");
+    addUrl(`${BASE}/compare`, today, "daily", "0.5");
+    addUrl(`${BASE}/changelog`, today, "daily", "0.5");
+    addUrl(`${BASE}/guides`, today, "daily", "0.8");
+    addUrl(`${BASE}/stack`, today, "daily", "0.6");
 
     // Add best-free pages for each category
     for (const cat of categories) {
-      xml += `
-  <url>
-    <loc>${BASE}/guides/best-free-${cat}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>`;
+      addUrl(`${BASE}/guides/best-free-${cat}`, today, "weekly", "0.6");
     }
-
-
 
     // Add VS comparison pages for all category pairs (not limited to 100)
     for (const cat of categories) {
@@ -172,13 +106,7 @@ Every tool has a machine-readable pricing.md file at \`/tool/{id}/pricing.md\`. 
           for (let j = i + 1; j < tools.length; j++) {
             const sorted = [tools[i].id, tools[j].id].sort();
             const lastmod = tools[i].lastVerified > tools[j].lastVerified ? tools[i].lastVerified : tools[j].lastVerified;
-            xml += `
-  <url>
-    <loc>${BASE}/guides/${sorted[0]}-vs-${sorted[1]}</loc>
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>`;
+            addUrl(`${BASE}/guides/${sorted[0]}-vs-${sorted[1]}`, lastmod, "weekly", "0.5");
           }
         }
       }
@@ -186,16 +114,21 @@ Every tool has a machine-readable pricing.md file at \`/tool/{id}/pricing.md\`. 
 
     // Add all alternatives pages (not just first 50)
     for (const tool of allTools) {
-      xml += `
-  <url>
-    <loc>${BASE}/guides/${tool.id}-alternatives</loc>
-    <lastmod>${tool.lastVerified || today}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>`;
+      addUrl(`${BASE}/guides/${tool.id}-alternatives`, tool.lastVerified || today, "weekly", "0.5");
     }
 
-    xml += `
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${entries
+  .map(
+    (entry) => `  <url>
+    <loc>${entry.loc}</loc>
+    <lastmod>${entry.lastmod}</lastmod>
+    <changefreq>${entry.changefreq}</changefreq>
+    <priority>${entry.priority}</priority>
+  </url>`
+  )
+  .join("\n")}
 </urlset>`;
 
     res.set("Content-Type", "application/xml");

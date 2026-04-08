@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
+  <%
+    const resolvedDescription = typeof description !== 'undefined' && description
+      ? description
+      : 'Compare developer tool pricing side-by-side. ' + (typeof toolCount !== 'undefined' ? toolCount : '200+') + ' tools with verified prices, free tier details, and switching costs.';
+    const canonicalUrl = typeof path !== 'undefined' && path ? 'https://latest.sh' + path : null;
+    const robotsContent = typeof metaRobots !== 'undefined' && metaRobots ? metaRobots : 'index, follow';
+  %>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GEGJR9CJ3Q"></script>
   <script>
@@ -12,18 +19,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= title %> | Pricing.md</title>
-  <meta name="description" content="<%= typeof description !== 'undefined' && description ? description : 'Compare developer tool pricing side-by-side. ' + (typeof toolCount !== 'undefined' ? toolCount : '200+') + ' tools with verified prices, free tier details, and switching costs.' %>">
+  <meta name="description" content="<%= resolvedDescription %>">
+  <meta name="robots" content="<%= robotsContent %>">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://latest.sh<%= typeof path !== 'undefined' && path ? path : '' %>">
+  <% if (canonicalUrl) { %>
+  <link rel="canonical" href="<%= canonicalUrl %>">
+  <% } %>
   <meta property="og:title" content="<%= title %> | Pricing.md">
-  <meta property="og:description" content="<%= typeof description !== 'undefined' && description ? description : 'Compare developer tool pricing side-by-side. ' + (typeof toolCount !== 'undefined' ? toolCount : '200+') + ' tools with verified prices, free tier details, and switching costs.' %>">
+  <meta property="og:description" content="<%= resolvedDescription %>">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://latest.sh<%= typeof path !== 'undefined' && path ? path : '' %>">
+  <% if (canonicalUrl) { %>
+  <meta property="og:url" content="<%= canonicalUrl %>">
+  <% } %>
   <meta property="og:image" content="https://latest.sh/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://latest.sh/og.png">
   <meta name="twitter:title" content="<%= title %> | Pricing.md">
-  <meta name="twitter:description" content="<%= typeof description !== 'undefined' && description ? description : 'Compare developer tool pricing side-by-side. ' + (typeof toolCount !== 'undefined' ? toolCount : '200+') + ' tools with verified prices, free tier details, and switching costs.' %>">
+  <meta name="twitter:description" content="<%= resolvedDescription %>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">

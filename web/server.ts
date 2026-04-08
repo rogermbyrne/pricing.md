@@ -93,6 +93,9 @@ app.use((req: express.Request, res: express.Response) => {
   res.status(404).render("error", {
     title: "Not Found",
     message: "The page you're looking for doesn't exist.",
+    description: "This page was not found.",
+    path: req.originalUrl,
+    metaRobots: "noindex, follow",
   });
 });
 
@@ -102,6 +105,9 @@ app.use((err: Error, req: express.Request, res: express.Response, next: express.
   res.status(500).render("error", {
     title: "Server Error",
     message: "Something went wrong. Please try again.",
+    description: "A server error occurred.",
+    path: req.originalUrl,
+    metaRobots: "noindex, follow",
   });
 });
 

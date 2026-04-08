@@ -45,13 +45,22 @@ export function createGuidesRouter(registry: Registry): Router {
   router.get("/guides/:slugA-vs-:slugB", (req: Request, res: Response) => {
     const slugA = req.params.slugA as string;
     const slugB = req.params.slugB as string;
-    const toolA = registry.get(slugA);
-    const toolB = registry.get(slugB);
+    const [sortedA, sortedB] = [slugA, slugB].sort();
+    if (slugA !== sortedA || slugB !== sortedB) {
+      res.redirect(301, `/guides/${sortedA}-vs-${sortedB}`);
+      return;
+    }
+
+    const toolA = registry.get(sortedA);
+    const toolB = registry.get(sortedB);
 
     if (!toolA || !toolB) {
       res.status(404).render("error", {
         title: "Tools Not Found",
         message: `One or both tools ("${slugA}", "${slugB}") were not found in the registry.`,
+        description: `One or both tools ("${slugA}", "${slugB}") were not found in the registry.`,
+        path: req.originalUrl,
+        metaRobots: "noindex, follow",
       });
       return;
     }
@@ -61,6 +70,9 @@ export function createGuidesRouter(registry: Registry): Router {
       res.status(404).render("error", {
         title: "Cross-Category Comparison Not Supported",
         message: `${toolA.name} and ${toolB.name} are in different categories. Comparisons are only available within the same category.`,
+        description: `${toolA.name} and ${toolB.name} are in different categories.`,
+        path: req.originalUrl,
+        metaRobots: "noindex, follow",
       });
       return;
     }
@@ -72,8 +84,7 @@ export function createGuidesRouter(registry: Registry): Router {
     // Set noindex if needed
     const metaRobots = comparisonData.shouldNoindex ? "noindex" : "index, follow";
 
-    // Generate canonical URL - use the route pattern (slugA-vs-slugB), not sorted
-    const canonicalPath = `/guides/${slugA}-vs-${slugB}`;
+    const canonicalPath = `/guides/${sortedA}-vs-${sortedB}`;
 
     res.render("guides-vs", {
       title: `${toolA.name} vs ${toolB.name}`,
@@ -100,6 +111,9 @@ export function createGuidesRouter(registry: Registry): Router {
       res.status(404).render("error", {
         title: "Tool Not Found",
         message: `Tool "${toolSlug}" was not found in the registry.`,
+        description: `Tool "${toolSlug}" was not found in the registry.`,
+        path: req.originalUrl,
+        metaRobots: "noindex, follow",
       });
       return;
     }
@@ -128,6 +142,9 @@ export function createGuidesRouter(registry: Registry): Router {
       res.status(404).render("error", {
         title: "Category Not Found",
         message: `No tools found in category "${category}".`,
+        description: `No tools found in category "${category}".`,
+        path: req.originalUrl,
+        metaRobots: "noindex, follow",
       });
       return;
     }

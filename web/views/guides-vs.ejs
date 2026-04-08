@@ -104,7 +104,7 @@
         <%= comparisonData.switchingCostWinner === 'A' ? toolA.name : toolB.name %>
       </div>
       <div class="text-xs text-neutral-500 dark:text-neutral-400">
-        Lower switching costs for灵活迁移
+        Lower switching costs for easier migration
       </div>
     </div>
     <% } %>
@@ -188,7 +188,7 @@
 <%- JSON.stringify({
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "question": [
+  "mainEntity": [
     {
       "@type": "Question",
       "name": "Which is cheaper, " + toolA.name + " or " + toolB.name + "?",

@@ -15,6 +15,9 @@ export function createToolRouter(registry: Registry, changelogDB: ChangelogDB, v
       res.status(404).render("error", {
         title: "Tool Not Found",
         message: `Tool "${req.params.id as string}" was not found in the registry.`,
+        description: `Tool "${req.params.id as string}" was not found in the registry.`,
+        path: req.originalUrl,
+        metaRobots: "noindex, follow",
       });
       return;
     }

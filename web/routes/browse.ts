@@ -42,6 +42,9 @@ export function createBrowseRouter(registry: Registry): Router {
       res.status(404).render("error", {
         title: "Category Not Found",
         message: `No tools found in category "${category}".`,
+        description: `No tools found in category "${category}".`,
+        path: req.originalUrl,
+        metaRobots: "noindex, follow",
       });
       return;
     }
