@@ -90,8 +90,13 @@ app.use(createGuidesRouter(registry));
 
 // Return 410 Gone for Google's hallucinated /vs/ URLs
 // These URLs don't exist - Google was auto-discovering them from content words
-app.get("/vs/*", (req: express.Request, res: express.Response) => {
-  res.status(410).send("Gone");
+app.use("/vs", (req: express.Request, res: express.Response, next: express.NextFunction) => {
+  // Only match /vs/* paths, not /vs (if that ever exists)
+  if (req.path.startsWith("/")) {
+    res.status(410).send("Gone");
+  } else {
+    next();
+  }
 });
 
 // 404 catch-all
