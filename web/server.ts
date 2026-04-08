@@ -88,6 +88,12 @@ app.use(createChatRouter(registry));
 app.use(createTransparencyRouter(registry));
 app.use(createGuidesRouter(registry));
 
+// Return 410 Gone for Google's hallucinated /vs/ URLs
+// These URLs don't exist - Google was auto-discovering them from content words
+app.get("/vs/*", (req: express.Request, res: express.Response) => {
+  res.status(410).send("Gone");
+});
+
 // 404 catch-all
 app.use((req: express.Request, res: express.Response) => {
   res.status(404).render("error", {

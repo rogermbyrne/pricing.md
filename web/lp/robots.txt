@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /vs/
 Allow: /
 
 Sitemap: https://latest.sh/sitemap.xml
