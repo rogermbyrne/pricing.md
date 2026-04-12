@@ -11,7 +11,7 @@
     "automation",
     "ai-agents"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-12",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {
@@ -58,21 +58,21 @@
         {
           "name": "proxies",
           "unit": "GB",
-          "pricePerUnit": 12.00,
+          "pricePerUnit": 12,
           "unitQuantity": 1,
           "includedQuantity": 1
         },
         {
           "name": "search-calls",
           "unit": "calls",
-          "pricePerUnit": 7.00,
+          "pricePerUnit": 7,
           "unitQuantity": 1000,
           "includedQuantity": 1000
         },
         {
           "name": "fetch-calls",
           "unit": "calls",
-          "pricePerUnit": 1.00,
+          "pricePerUnit": 1,
           "unitQuantity": 1000,
           "includedQuantity": 1000
         }
@@ -97,28 +97,28 @@
         {
           "name": "browser-hours",
           "unit": "hours",
-          "pricePerUnit": 0.10,
+          "pricePerUnit": 0.1,
           "unitQuantity": 1,
           "includedQuantity": 500
         },
         {
           "name": "proxies",
           "unit": "GB",
-          "pricePerUnit": 10.00,
+          "pricePerUnit": 10,
           "unitQuantity": 1,
           "includedQuantity": 5
         },
         {
           "name": "search-calls",
           "unit": "calls",
-          "pricePerUnit": 7.00,
+          "pricePerUnit": 7,
           "unitQuantity": 1000,
           "includedQuantity": 1000
         },
         {
           "name": "fetch-calls",
           "unit": "calls",
-          "pricePerUnit": 0.50,
+          "pricePerUnit": 0.5,
           "unitQuantity": 1000,
           "includedQuantity": 10000
         }

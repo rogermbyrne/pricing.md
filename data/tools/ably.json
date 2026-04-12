@@ -11,7 +11,7 @@
     "messaging",
     "websockets"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-12",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {
@@ -50,21 +50,21 @@
         {
           "name": "messages",
           "unit": "messages",
-          "pricePerUnit": 2.50,
+          "pricePerUnit": 2.5,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "connections",
           "unit": "connection-minutes",
-          "pricePerUnit": 1.00,
+          "pricePerUnit": 1,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "channels",
           "unit": "channel-minutes",
-          "pricePerUnit": 1.00,
+          "pricePerUnit": 1,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
@@ -97,21 +97,21 @@
         {
           "name": "messages",
           "unit": "messages",
-          "pricePerUnit": 2.50,
+          "pricePerUnit": 2.5,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "connections",
           "unit": "connection-minutes",
-          "pricePerUnit": 1.00,
+          "pricePerUnit": 1,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "channels",
           "unit": "channel-minutes",
-          "pricePerUnit": 1.00,
+          "pricePerUnit": 1,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },

@@ -11,7 +11,7 @@
     "software-engineer",
     "agentic"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-12",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -55,7 +55,7 @@
         {
           "name": "acus",
           "unit": "ACUs",
-          "pricePerUnit": 2.00,
+          "pricePerUnit": 2,
           "unitQuantity": 1,
           "includedQuantity": 250
         }

@@ -11,7 +11,7 @@
     "ci-cd",
     "build-tools"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-12",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {
@@ -46,7 +46,7 @@
         {
           "name": "credits",
           "unit": "credits",
-          "pricePerUnit": 5.50,
+          "pricePerUnit": 5.5,
           "unitQuantity": 10000,
           "includedQuantity": 50000
         },

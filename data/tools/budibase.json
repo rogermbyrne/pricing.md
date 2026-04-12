@@ -11,13 +11,13 @@
     "automation",
     "open-source"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-12",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {
     "switchingCost": "significant",
     "openStandard": null,
-    "whatYouLose": "App definitions, automation workflows, data connections \u2014 can self-host open-source version"
+    "whatYouLose": "App definitions, automation workflows, data connections — can self-host open-source version"
   },
   "tiers": [
     {

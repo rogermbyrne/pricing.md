@@ -11,7 +11,7 @@
     "builds",
     "ota-updates"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-12",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {
@@ -55,7 +55,7 @@
         {
           "name": "edge-bandwidth",
           "unit": "GiB",
-          "pricePerUnit": 0.10,
+          "pricePerUnit": 0.1,
           "unitQuantity": 1,
           "includedQuantity": 500
         },
@@ -69,7 +69,7 @@
         {
           "name": "hosting-requests",
           "unit": "requests",
-          "pricePerUnit": 2.00,
+          "pricePerUnit": 2,
           "unitQuantity": 1000000,
           "includedQuantity": 100000
         }
@@ -95,7 +95,7 @@
         {
           "name": "edge-bandwidth",
           "unit": "GiB",
-          "pricePerUnit": 0.10,
+          "pricePerUnit": 0.1,
           "unitQuantity": 1,
           "includedQuantity": 1000
         },

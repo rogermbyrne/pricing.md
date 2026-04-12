@@ -11,7 +11,7 @@
     "serverless",
     "ml-infra"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-12",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
@@ -32,21 +32,21 @@
         {
           "name": "container-disk",
           "unit": "GB",
-          "pricePerUnit": 0.10,
+          "pricePerUnit": 0.1,
           "unitQuantity": 1,
           "includedQuantity": 0
         },
         {
           "name": "volume-running",
           "unit": "GB",
-          "pricePerUnit": 0.10,
+          "pricePerUnit": 0.1,
           "unitQuantity": 1,
           "includedQuantity": 0
         },
         {
           "name": "volume-idle",
           "unit": "GB",
-          "pricePerUnit": 0.20,
+          "pricePerUnit": 0.2,
           "unitQuantity": 1,
           "includedQuantity": 0
         },

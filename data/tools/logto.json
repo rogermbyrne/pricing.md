@@ -12,7 +12,7 @@
     "multi-tenancy",
     "open-source"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-12",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {
@@ -60,28 +60,28 @@
         {
           "name": "m2m-apps",
           "unit": "apps",
-          "pricePerUnit": 8.00,
+          "pricePerUnit": 8,
           "unitQuantity": 1,
           "includedQuantity": 1
         },
         {
           "name": "api-resources",
           "unit": "resources",
-          "pricePerUnit": 4.00,
+          "pricePerUnit": 4,
           "unitQuantity": 1,
           "includedQuantity": 3
         },
         {
           "name": "enterprise-sso",
           "unit": "connectors",
-          "pricePerUnit": 48.00,
+          "pricePerUnit": 48,
           "unitQuantity": 1,
           "includedQuantity": 0
         },
         {
           "name": "tenant-members",
           "unit": "members",
-          "pricePerUnit": 8.00,
+          "pricePerUnit": 8,
           "unitQuantity": 1,
           "includedQuantity": 1
         }

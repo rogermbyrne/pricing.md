@@ -11,7 +11,7 @@
     "schema-registry",
     "api"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-12",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {
@@ -46,7 +46,7 @@
         {
           "name": "types",
           "unit": "types",
-          "pricePerUnit": 0.50,
+          "pricePerUnit": 0.5,
           "unitQuantity": 1,
           "includedQuantity": 0
         }
@@ -66,7 +66,7 @@
         {
           "name": "types",
           "unit": "types",
-          "pricePerUnit": 5.00,
+          "pricePerUnit": 5,
           "unitQuantity": 1,
           "includedQuantity": 0
         }

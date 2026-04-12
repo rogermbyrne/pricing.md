@@ -11,7 +11,7 @@
     "api-first",
     "content"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-12",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {
@@ -32,21 +32,21 @@
         {
           "name": "blocks",
           "unit": "blocks",
-          "pricePerUnit": 1.00,
+          "pricePerUnit": 1,
           "unitQuantity": 500,
           "includedQuantity": 5000
         },
         {
           "name": "api-requests",
           "unit": "requests",
-          "pricePerUnit": 1.00,
+          "pricePerUnit": 1,
           "unitQuantity": 50000,
           "includedQuantity": 75000
         },
         {
           "name": "asset-storage",
           "unit": "GB",
-          "pricePerUnit": 0.10,
+          "pricePerUnit": 0.1,
           "unitQuantity": 1,
           "includedQuantity": 25
         }
@@ -71,14 +71,14 @@
         {
           "name": "api-requests",
           "unit": "requests",
-          "pricePerUnit": 1.00,
+          "pricePerUnit": 1,
           "unitQuantity": 100000,
           "includedQuantity": 500000
         },
         {
           "name": "asset-storage",
           "unit": "GB",
-          "pricePerUnit": 0.10,
+          "pricePerUnit": 0.1,
           "unitQuantity": 1,
           "includedQuantity": 500
         }

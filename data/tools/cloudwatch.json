@@ -12,7 +12,7 @@
     "metrics",
     "alarms"
   ],
-  "lastVerified": "2026-04-06",
+  "lastVerified": "2026-04-12",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {
@@ -33,14 +33,14 @@
         {
           "name": "custom-metrics",
           "unit": "metrics",
-          "pricePerUnit": 0.30,
+          "pricePerUnit": 0.3,
           "unitQuantity": 1,
           "includedQuantity": 0
         },
         {
           "name": "log-ingestion",
           "unit": "GB",
-          "pricePerUnit": 0.50,
+          "pricePerUnit": 0.5,
           "unitQuantity": 1,
           "includedQuantity": 5
         },

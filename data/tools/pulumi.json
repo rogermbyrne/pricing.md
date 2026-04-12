@@ -11,7 +11,7 @@
     "devops",
     "cloud-management"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-12",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {
@@ -56,14 +56,14 @@
         {
           "name": "secrets",
           "unit": "secrets",
-          "pricePerUnit": 0.50,
+          "pricePerUnit": 0.5,
           "unitQuantity": 1,
           "includedQuantity": 0
         },
         {
           "name": "api-calls",
           "unit": "calls",
-          "pricePerUnit": 0.10,
+          "pricePerUnit": 0.1,
           "unitQuantity": 10000,
           "includedQuantity": 0
         },
@@ -107,7 +107,7 @@
         {
           "name": "api-calls",
           "unit": "calls",
-          "pricePerUnit": 0.10,
+          "pricePerUnit": 0.1,
           "unitQuantity": 10000,
           "includedQuantity": 0
         },

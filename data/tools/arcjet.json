@@ -12,7 +12,7 @@
     "waf",
     "pii-detection"
   ],
-  "lastVerified": "2026-04-05",
+  "lastVerified": "2026-04-12",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {
@@ -33,42 +33,42 @@
         {
           "name": "protected-requests",
           "unit": "requests",
-          "pricePerUnit": 0.50,
+          "pricePerUnit": 0.5,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "bot-detection",
           "unit": "requests",
-          "pricePerUnit": 0.50,
+          "pricePerUnit": 0.5,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "advanced-bot-signals",
           "unit": "requests",
-          "pricePerUnit": 2.00,
+          "pricePerUnit": 2,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "email-validations",
           "unit": "validations",
-          "pricePerUnit": 1.50,
+          "pricePerUnit": 1.5,
           "unitQuantity": 1000,
           "includedQuantity": 0
         },
         {
           "name": "pii-detection",
           "unit": "requests",
-          "pricePerUnit": 1.00,
+          "pricePerUnit": 1,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "prompt-scanning",
           "unit": "tokens",
-          "pricePerUnit": 2.00,
+          "pricePerUnit": 2,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         }
@@ -91,42 +91,42 @@
         {
           "name": "protected-requests",
           "unit": "requests",
-          "pricePerUnit": 0.50,
+          "pricePerUnit": 0.5,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "bot-detection",
           "unit": "requests",
-          "pricePerUnit": 0.50,
+          "pricePerUnit": 0.5,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "advanced-bot-signals",
           "unit": "requests",
-          "pricePerUnit": 2.00,
+          "pricePerUnit": 2,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "email-validations",
           "unit": "validations",
-          "pricePerUnit": 1.50,
+          "pricePerUnit": 1.5,
           "unitQuantity": 1000,
           "includedQuantity": 0
         },
         {
           "name": "pii-detection",
           "unit": "requests",
-          "pricePerUnit": 1.00,
+          "pricePerUnit": 1,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "prompt-scanning",
           "unit": "tokens",
-          "pricePerUnit": 2.00,
+          "pricePerUnit": 2,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         }
@@ -149,42 +149,42 @@
         {
           "name": "protected-requests",
           "unit": "requests",
-          "pricePerUnit": 0.50,
+          "pricePerUnit": 0.5,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "bot-detection",
           "unit": "requests",
-          "pricePerUnit": 0.50,
+          "pricePerUnit": 0.5,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "advanced-bot-signals",
           "unit": "requests",
-          "pricePerUnit": 2.00,
+          "pricePerUnit": 2,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "email-validations",
           "unit": "validations",
-          "pricePerUnit": 1.50,
+          "pricePerUnit": 1.5,
           "unitQuantity": 1000,
           "includedQuantity": 0
         },
         {
           "name": "pii-detection",
           "unit": "requests",
-          "pricePerUnit": 1.00,
+          "pricePerUnit": 1,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         },
         {
           "name": "prompt-scanning",
           "unit": "tokens",
-          "pricePerUnit": 2.00,
+          "pricePerUnit": 2,
           "unitQuantity": 1000000,
           "includedQuantity": 0
         }

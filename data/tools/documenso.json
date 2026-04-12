@@ -11,13 +11,13 @@
     "open-source",
     "api"
   ],
-  "lastVerified": "2026-04-06",
+  "lastVerified": "2026-04-12",
   "freshnessCategory": "stable",
   "currency": "USD",
   "portability": {
     "switchingCost": "drop-in",
     "openStandard": null,
-    "whatYouLose": "Signing history, templates \u2014 can self-host open-source version"
+    "whatYouLose": "Signing history, templates — can self-host open-source version"
   },
   "tiers": [
     {
