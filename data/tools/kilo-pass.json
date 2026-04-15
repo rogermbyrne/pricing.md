@@ -55,30 +55,6 @@
       "usageMetrics": [],
       "features": [],
       "limits": {}
-    },
-    {
-      "name": "Teams",
-      "slug": "teams",
-      "pricingModel": "per_seat",
-      "basePrice": 0,
-      "billingPeriod": "monthly",
-      "annualDiscount": null,
-      "seatPrice": 15,
-      "usageMetrics": [],
-      "features": [],
-      "limits": {}
-    },
-    {
-      "name": "Enterprise",
-      "slug": "enterprise",
-      "pricingModel": "custom",
-      "basePrice": null,
-      "billingPeriod": null,
-      "annualDiscount": null,
-      "seatPrice": null,
-      "usageMetrics": [],
-      "features": [],
-      "limits": {}
     }
   ]
 }
