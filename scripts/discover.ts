@@ -182,6 +182,29 @@ const TOOLS: ToolSeed[] = [
   { id: "knock", name: "Knock", domain: "knock.app", category: "notifications" },
   { id: "courier", name: "Courier", domain: "courier.com", category: "notifications" },
   { id: "engagespot", name: "Engagespot", domain: "engagespot.co", category: "notifications" },
+
+  // AI Coding — Direct Providers
+  { id: "chatgpt", name: "ChatGPT", domain: "chatgpt.com", category: "ai-coding" },
+  { id: "claude", name: "Claude", domain: "claude.ai", category: "ai-coding" },
+  { id: "gemini", name: "Gemini", domain: "gemini.google.com", category: "ai-coding" },
+  { id: "kimi", name: "Kimi", domain: "kimi.com", category: "ai-coding" },
+  { id: "xiaomi-mimo", name: "Xiaomi MiMo", domain: "platform.xiaomimimo.com", category: "ai-coding" },
+  { id: "stepfun", name: "StepFun", domain: "platform.stepfun.ai", category: "ai-coding" },
+  { id: "minimax", name: "MiniMax", domain: "platform.minimax.io", category: "ai-coding" },
+  { id: "zhipu-glm", name: "Z.AI GLM", domain: "z.ai", category: "ai-coding" },
+  { id: "cerebras-code", name: "Cerebras Code", domain: "cerebras.ai", category: "ai-coding" },
+  { id: "ollama-cloud", name: "Ollama", domain: "ollama.com", category: "ai-coding" },
+
+  // AI Coding — Aggregators / Routers
+  { id: "crof", name: "Crof", domain: "crof.ai", category: "ai-coding" },
+  { id: "routing-run", name: "routing.run", domain: "routing.run", category: "ai-coding" },
+  { id: "kilo-pass", name: "KiloPass", domain: "kilo.ai", category: "ai-coding" },
+  { id: "llm-gateway", name: "LLM Gateway DevPass", domain: "llmgateway.io", category: "ai-coding" },
+  { id: "opencode-go", name: "OpenCode Go", domain: "opencode.ai", category: "ai-coding" },
+  { id: "hugging-face", name: "Hugging Face", domain: "huggingface.co", category: "ai-coding" },
+  { id: "byteplus", name: "BytePlus", domain: "byteplus.com", category: "ai-coding" },
+  { id: "baidu-cloud-coding", name: "Baidu Cloud Coding", domain: "cloud.baidu.com", category: "ai-coding" },
+  { id: "alibaba-cloud-coding", name: "Alibaba Cloud AI Coding", domain: "alibabacloud.com", category: "ai-coding" },
 ];
 
 function initDb(): Database.Database {

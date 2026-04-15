@@ -1,0 +1,72 @@
+{
+  "id": "claude",
+  "name": "Claude",
+  "description": "Anthropic's AI assistant with extended thinking, Claude Code CLI, and agentic coding for software development",
+  "url": "https://claude.ai",
+  "pricingUrl": "https://claude.ai/pricing",
+  "category": "ai-coding",
+  "tags": [
+    "ai-coding",
+    "agent",
+    "code-generation",
+    "cli"
+  ],
+  "lastVerified": "2026-04-15",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "Projects, conversation history, Claude Code CLI session context, custom styles"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Max 5x",
+      "slug": "max-5x",
+      "pricingModel": "flat_rate",
+      "basePrice": 100,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Max 20x",
+      "slug": "max-20x",
+      "pricingModel": "flat_rate",
+      "basePrice": 200,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

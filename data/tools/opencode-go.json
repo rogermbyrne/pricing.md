@@ -1,0 +1,50 @@
+{
+  "id": "opencode-go",
+  "name": "OpenCode Go",
+  "description": "Affordable agentic coding platform with access to top open-source models including GLM-5, Kimi K2.5, MiMo, and Qwen",
+  "url": "https://opencode.ai",
+  "pricingUrl": "https://opencode.ai/go",
+  "category": "ai-coding",
+  "tags": [
+    "ai-coding",
+    "aggregator",
+    "open-source-models",
+    "agent"
+  ],
+  "lastVerified": "2026-04-15",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "OpenAI-compatible API",
+    "whatYouLose": "Bundled open-source model access, request multipliers"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "requestsPer5Hours": 200
+      }
+    },
+    {
+      "name": "Go",
+      "slug": "go",
+      "pricingModel": "flat_rate",
+      "basePrice": 10,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

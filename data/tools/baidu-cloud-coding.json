@@ -1,0 +1,48 @@
+{
+  "id": "baidu-cloud-coding",
+  "name": "Baidu Cloud Coding Plan",
+  "description": "Baidu's cloud-based AI coding plan with ERNIE model access for software development",
+  "url": "https://cloud.baidu.com",
+  "pricingUrl": "https://cloud.baidu.com/product/codingplan.html",
+  "category": "ai-coding",
+  "tags": [
+    "ai-coding",
+    "code-generation",
+    "ernie",
+    "chinese-provider"
+  ],
+  "lastVerified": "2026-04-15",
+  "freshnessCategory": "volatile",
+  "currency": "CNY",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "ERNIE model access, Baidu Cloud ecosystem integrations"
+  },
+  "tiers": [
+    {
+      "name": "Lite",
+      "slug": "lite",
+      "pricingModel": "flat_rate",
+      "basePrice": 40,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 200,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

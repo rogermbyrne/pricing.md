@@ -1,0 +1,72 @@
+{
+  "id": "hugging-face",
+  "name": "Hugging Face",
+  "description": "ML platform with model hub, inference API, Spaces hosting, and ZeroGPU access for AI-assisted development",
+  "url": "https://huggingface.co",
+  "pricingUrl": "https://huggingface.co/pricing",
+  "category": "ai-coding",
+  "tags": [
+    "ai-coding",
+    "ml-platform",
+    "model-hub",
+    "inference"
+  ],
+  "lastVerified": "2026-04-15",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "moderate",
+    "openStandard": null,
+    "whatYouLose": "Model hosting, Spaces deployments, ZeroGPU access, community integrations"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 9,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Team",
+      "slug": "team",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 20,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 50,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

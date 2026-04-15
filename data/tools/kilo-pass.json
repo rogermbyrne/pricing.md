@@ -1,0 +1,84 @@
+{
+  "id": "kilo-pass",
+  "name": "KiloPass",
+  "description": "AI infrastructure platform with access to 500+ models, credit-based pricing, and no rate limits for coding agents",
+  "url": "https://kilo.ai",
+  "pricingUrl": "https://kilo.ai/pricing",
+  "category": "ai-coding",
+  "tags": [
+    "ai-coding",
+    "aggregator",
+    "multi-model",
+    "credits"
+  ],
+  "lastVerified": "2026-04-15",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "OpenAI-compatible API",
+    "whatYouLose": "Credit bonus multiplier, 500+ model catalog access"
+  },
+  "tiers": [
+    {
+      "name": "Starter",
+      "slug": "starter",
+      "pricingModel": "flat_rate",
+      "basePrice": 19,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 49,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Expert",
+      "slug": "expert",
+      "pricingModel": "flat_rate",
+      "basePrice": 199,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Teams",
+      "slug": "teams",
+      "pricingModel": "per_seat",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": 15,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

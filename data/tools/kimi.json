@@ -1,0 +1,60 @@
+{
+  "id": "kimi",
+  "name": "Kimi",
+  "description": "Moonshot AI's coding assistant with Kimi Code plans for terminal, IDE, and CLI-based AI development",
+  "url": "https://www.kimi.com",
+  "pricingUrl": "https://www.kimi.com/code",
+  "category": "ai-coding",
+  "tags": [
+    "ai-coding",
+    "code-generation",
+    "ide",
+    "chinese-provider"
+  ],
+  "lastVerified": "2026-04-15",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "Kimi Code IDE integrations, conversation context"
+  },
+  "tiers": [
+    {
+      "name": "Moderato",
+      "slug": "moderato",
+      "pricingModel": "flat_rate",
+      "basePrice": 19,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Allegretto",
+      "slug": "allegretto",
+      "pricingModel": "flat_rate",
+      "basePrice": 39,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Allegro",
+      "slug": "allegro",
+      "pricingModel": "flat_rate",
+      "basePrice": 99,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

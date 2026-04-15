@@ -1,0 +1,52 @@
+{
+  "id": "cerebras-code",
+  "name": "Cerebras Code",
+  "description": "Ultra-fast AI coding subscriptions with wafer-scale inference, daily token allowances for IDE integrations and multi-agent systems",
+  "url": "https://cerebras.ai",
+  "pricingUrl": "https://www.cerebras.ai/pricing",
+  "category": "ai-coding",
+  "tags": [
+    "ai-coding",
+    "fast-inference",
+    "agent",
+    "ide"
+  ],
+  "lastVerified": "2026-04-15",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "OpenAI-compatible API",
+    "whatYouLose": "Ultra-fast wafer-scale inference speed, daily token allowances"
+  },
+  "tiers": [
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 50,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "dailyTokens": 24000000
+      }
+    },
+    {
+      "name": "Max",
+      "slug": "max",
+      "pricingModel": "flat_rate",
+      "basePrice": 200,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "dailyTokens": 120000000
+      }
+    }
+  ]
+}

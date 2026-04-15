@@ -1,0 +1,66 @@
+{
+  "id": "ollama-cloud",
+  "name": "Ollama",
+  "description": "Local-first AI platform with cloud model access, CLI/API/desktop apps, and 40,000+ community integrations for coding",
+  "url": "https://ollama.com",
+  "pricingUrl": "https://ollama.com/pricing",
+  "category": "ai-coding",
+  "tags": [
+    "ai-coding",
+    "local-first",
+    "open-source",
+    "self-hosted"
+  ],
+  "lastVerified": "2026-04-15",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "OpenAI-compatible API",
+    "whatYouLose": "Cloud model access, private model hosting — local models remain fully portable"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "concurrentCloudModels": 1
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": 17,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "concurrentCloudModels": 3
+      }
+    },
+    {
+      "name": "Max",
+      "slug": "max",
+      "pricingModel": "flat_rate",
+      "basePrice": 100,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "concurrentCloudModels": 10
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "byteplus",
+  "name": "BytePlus",
+  "description": "ByteDance's international AI coding platform with tiered plans for AI-assisted development",
+  "url": "https://www.byteplus.com",
+  "pricingUrl": "https://www.byteplus.com/activity/codingplan",
+  "category": "ai-coding",
+  "tags": [
+    "ai-coding",
+    "code-generation",
+    "bytedance",
+    "chinese-provider"
+  ],
+  "lastVerified": "2026-04-15",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "BytePlus model access, coding plan allowances"
+  },
+  "tiers": [
+    {
+      "name": "Lite",
+      "slug": "lite",
+      "pricingModel": "flat_rate",
+      "basePrice": 10,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 50,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

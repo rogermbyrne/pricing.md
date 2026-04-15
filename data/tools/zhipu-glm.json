@@ -1,0 +1,60 @@
+{
+  "id": "zhipu-glm",
+  "name": "Z.AI GLM",
+  "description": "Zhipu AI's GLM models with tiered coding subscriptions for AI-assisted development and code generation",
+  "url": "https://z.ai",
+  "pricingUrl": "https://z.ai/subscribe",
+  "category": "ai-coding",
+  "tags": [
+    "ai-coding",
+    "code-generation",
+    "glm",
+    "chinese-provider"
+  ],
+  "lastVerified": "2026-04-15",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "GLM model access, subscription allowances"
+  },
+  "tiers": [
+    {
+      "name": "Lite",
+      "slug": "lite",
+      "pricingModel": "flat_rate",
+      "basePrice": 18,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 72,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Max",
+      "slug": "max",
+      "pricingModel": "flat_rate",
+      "basePrice": 160,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "crof",
+  "name": "Crof",
+  "description": "AI model aggregator with unified API access to MoonshotAI, Google, DeepSeek, Qwen and other providers for coding workflows",
+  "url": "https://crof.ai",
+  "pricingUrl": "https://crof.ai/pricing",
+  "category": "ai-coding",
+  "tags": [
+    "ai-coding",
+    "aggregator",
+    "multi-model",
+    "api-router"
+  ],
+  "lastVerified": "2026-04-15",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "OpenAI-compatible API",
+    "whatYouLose": "Bundled multi-model access, daily request allowances"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Hobby",
+      "slug": "hobby",
+      "pricingModel": "flat_rate",
+      "basePrice": 5,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "dailyRequests": 500
+      }
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 10,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "dailyRequests": 1000
+      }
+    },
+    {
+      "name": "Intermediate",
+      "slug": "intermediate",
+      "pricingModel": "flat_rate",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "dailyRequests": 2500
+      }
+    },
+    {
+      "name": "Scale",
+      "slug": "scale",
+      "pricingModel": "flat_rate",
+      "basePrice": 50,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "dailyRequests": 7500
+      }
+    },
+    {
+      "name": "Max",
+      "slug": "max",
+      "pricingModel": "flat_rate",
+      "basePrice": 100,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "dailyRequests": 15000
+      }
+    }
+  ]
+}

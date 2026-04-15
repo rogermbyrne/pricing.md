@@ -1,0 +1,38 @@
+{
+  "id": "alibaba-cloud-coding",
+  "name": "Alibaba Cloud AI Coding",
+  "description": "Alibaba Cloud's AI coding plan with Qwen models, Claude Code support, and multi-model access for development",
+  "url": "https://www.alibabacloud.com",
+  "pricingUrl": "https://www.alibabacloud.com/en/campaign/ai-scene-coding",
+  "category": "ai-coding",
+  "tags": [
+    "ai-coding",
+    "code-generation",
+    "qwen",
+    "chinese-provider"
+  ],
+  "lastVerified": "2026-04-15",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "OpenAI-compatible API",
+    "whatYouLose": "Qwen model access, Alibaba Cloud ecosystem integrations"
+  },
+  "tiers": [
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 49,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {
+        "monthlyRequests": 90000
+      }
+    }
+  ]
+}

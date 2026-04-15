@@ -1,0 +1,72 @@
+{
+  "id": "chatgpt",
+  "name": "ChatGPT",
+  "description": "OpenAI's AI assistant with coding agent, canvas editor, and frontier model access for software development",
+  "url": "https://chatgpt.com",
+  "pricingUrl": "https://openai.com/chatgpt/pricing/",
+  "category": "ai-coding",
+  "tags": [
+    "ai-coding",
+    "agent",
+    "code-generation",
+    "chatbot"
+  ],
+  "lastVerified": "2026-04-15",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "Custom GPTs, conversation history, project context, Codex agent sessions"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Go",
+      "slug": "go",
+      "pricingModel": "flat_rate",
+      "basePrice": 8,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Plus",
+      "slug": "plus",
+      "pricingModel": "flat_rate",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 200,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

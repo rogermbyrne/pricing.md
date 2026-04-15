@@ -1,0 +1,60 @@
+{
+  "id": "gemini",
+  "name": "Gemini",
+  "description": "Google's AI assistant with Gemini 2.5 Pro, code generation, and deep research for software development",
+  "url": "https://gemini.google.com",
+  "pricingUrl": "https://gemini.google/us/subscriptions/",
+  "category": "ai-coding",
+  "tags": [
+    "ai-coding",
+    "code-generation",
+    "deep-research",
+    "google"
+  ],
+  "lastVerified": "2026-04-15",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "Gems, conversation history, Google Workspace integration, NotebookLM access"
+  },
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "AI Pro",
+      "slug": "ai-pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 20,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "AI Ultra",
+      "slug": "ai-ultra",
+      "pricingModel": "flat_rate",
+      "basePrice": 250,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

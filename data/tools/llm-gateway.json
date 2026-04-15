@@ -1,0 +1,60 @@
+{
+  "id": "llm-gateway",
+  "name": "LLM Gateway DevPass",
+  "description": "Fixed-price dev plans for AI-powered coding with Claude Code, Cursor, Cline, and any OpenAI-compatible tool across 200+ models",
+  "url": "https://code.llmgateway.io",
+  "pricingUrl": "https://code.llmgateway.io/",
+  "category": "ai-coding",
+  "tags": [
+    "ai-coding",
+    "aggregator",
+    "multi-model",
+    "flat-rate"
+  ],
+  "lastVerified": "2026-04-15",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "OpenAI-compatible API",
+    "whatYouLose": "Flat-rate pricing, bundled 200+ model access"
+  },
+  "tiers": [
+    {
+      "name": "Lite",
+      "slug": "lite",
+      "pricingModel": "flat_rate",
+      "basePrice": 29,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 79,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Max",
+      "slug": "max",
+      "pricingModel": "flat_rate",
+      "basePrice": 179,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

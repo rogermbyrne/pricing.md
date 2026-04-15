@@ -1,0 +1,59 @@
+{
+  "id": "stepfun",
+  "name": "StepFun",
+  "description": "Chinese AI platform with Step models and tiered coding plans for AI-assisted development",
+  "url": "https://platform.stepfun.ai",
+  "pricingUrl": "https://platform.stepfun.ai/step-plan",
+  "category": "ai-coding",
+  "tags": [
+    "ai-coding",
+    "code-generation",
+    "chinese-provider"
+  ],
+  "lastVerified": "2026-04-15",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "Step model access, prompt-based billing allowances"
+  },
+  "tiers": [
+    {
+      "name": "Mini",
+      "slug": "mini",
+      "pricingModel": "flat_rate",
+      "basePrice": 7,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Plus",
+      "slug": "plus",
+      "pricingModel": "flat_rate",
+      "basePrice": 10,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 29,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

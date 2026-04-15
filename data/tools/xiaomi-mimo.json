@@ -1,0 +1,60 @@
+{
+  "id": "xiaomi-mimo",
+  "name": "Xiaomi MiMo",
+  "description": "Xiaomi's AI coding platform with reasoning-optimized models for code generation and software development",
+  "url": "https://platform.xiaomimimo.com",
+  "pricingUrl": "https://platform.xiaomimimo.com/#/token-plan",
+  "category": "ai-coding",
+  "tags": [
+    "ai-coding",
+    "code-generation",
+    "reasoning",
+    "chinese-provider"
+  ],
+  "lastVerified": "2026-04-15",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "MiMo model access, token plan allowances"
+  },
+  "tiers": [
+    {
+      "name": "Lite",
+      "slug": "lite",
+      "pricingModel": "flat_rate",
+      "basePrice": 6,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Standard",
+      "slug": "standard",
+      "pricingModel": "flat_rate",
+      "basePrice": 16,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Pro",
+      "slug": "pro",
+      "pricingModel": "flat_rate",
+      "basePrice": 50,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}
