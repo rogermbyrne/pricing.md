@@ -1,6 +1,6 @@
 {
   "name": "pricing.md",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Pricing registry for developer tools, exposed as an MCP server",
   "main": "dist/src/index.js",
   "bin": {
