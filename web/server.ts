@@ -49,6 +49,19 @@ app.use((req: express.Request, res: express.Response, next: express.NextFunction
   res.set("X-Content-Type-Options", "nosniff");
   res.set("X-Frame-Options", "SAMEORIGIN");
   res.set("Referrer-Policy", "strict-origin-when-cross-origin");
+  res.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
+  res.set("Content-Security-Policy",
+    "default-src 'self'; " +
+    // TODO: Switch to build-time Tailwind to remove unsafe-eval
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://www.googletagmanager.com https://www.google-analytics.com https://cdn.jsdelivr.net; " +
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
+    "font-src 'self' https://fonts.gstatic.com; " +
+    "img-src 'self' data: https://latest.sh https://*.google-analytics.com https://www.googletagmanager.com; " +
+    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com; " +
+    "frame-ancestors 'sameorigin'; " +
+    "form-action 'self'; " +
+    "base-uri 'self'"
+  );
   // Cache HTML pages for 5 minutes, API for 1 minute
   if (req.path.startsWith("/api/")) {
     res.set("Cache-Control", "public, max-age=60, s-maxage=60");
@@ -82,6 +95,33 @@ app.use(createBrowseRouter(registry));
 app.use(createToolRouter(registry, changelogDB, voteDB));
 app.use(createCompareRouter(registry));
 app.use(createChangelogRouter(registry, changelogDB));
+
+// CORS protection — reject cross-origin POST/PUT/DELETE requests to API endpoints
+// Note: Non-browser clients (curl, scripts) typically don't send an Origin header,
+// so they bypass this check. This is intended — the goal is to prevent browser-based
+// CSRF-style attacks that drain API credits, not to lock down the API entirely.
+app.use("/api", (req: express.Request, res: express.Response, next: express.NextFunction) => {
+  if (req.method !== "GET" && req.method !== "HEAD" && req.method !== "OPTIONS") {
+    const origin = req.headers.origin;
+    const host = req.headers.host;
+    if (origin && host) {
+      try {
+        const originUrl = new URL(origin);
+        // Enforce same host AND same protocol (https)
+        const expectedProtocol = req.headers["x-forwarded-proto"] || req.protocol;
+        if (originUrl.host !== host || originUrl.protocol !== expectedProtocol + ":") {
+          res.status(403).json({ error: "Cross-origin requests are not allowed" });
+          return;
+        }
+      } catch {
+        res.status(403).json({ error: "Invalid Origin header" });
+        return;
+      }
+    }
+  }
+  next();
+});
+
 app.use(express.json());
 app.use(createApiRouter(registry, changelogDB, voteDB));
 app.use(createChatRouter(registry));

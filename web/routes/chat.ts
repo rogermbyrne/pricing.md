@@ -4,10 +4,14 @@ import Anthropic from "@anthropic-ai/sdk";
 import { Registry } from "../../src/registry/registry.js";
 import { SYSTEM_PROMPT, TOOLS, executeTool } from "../lib/stack-advisor.js";
 
-// Simple in-memory rate limiter
+// Simple in-memory rate limiter with periodic cleanup
 const rateMap = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT = 10;
 const RATE_WINDOW_MS = 60 * 60 * 1000; // 1 hour
+const MAX_RATE_ENTRIES = 10_000;
+const MAX_MESSAGE_LENGTH = 2000;
+const MAX_HISTORY_ENTRIES = 10;
+const MAX_ENTRY_LENGTH = 2000;
 
 function checkRateLimit(ip: string): boolean {
   const now = Date.now();
@@ -25,6 +29,25 @@ function checkRateLimit(ip: string): boolean {
   entry.count++;
   return true;
 }
+
+// Evict stale entries every hour to prevent unbounded memory growth
+setInterval(() => {
+  const now = Date.now();
+  for (const [ip, entry] of rateMap) {
+    if (now > entry.resetAt) {
+      rateMap.delete(ip);
+    }
+  }
+  // Hard cap: drop oldest entries if still too large
+  if (rateMap.size > MAX_RATE_ENTRIES) {
+    const sorted = [...rateMap.entries()].sort((a, b) => a[1].resetAt - b[1].resetAt);
+    const toRemove = sorted.slice(0, rateMap.size - MAX_RATE_ENTRIES);
+    for (const [ip] of toRemove) {
+      rateMap.delete(ip);
+    }
+  }
+}, 60 * 60 * 1000);
+
 
 export function createChatRouter(registry: Registry): Router {
   const router = Router();
@@ -64,6 +87,10 @@ export function createChatRouter(registry: Registry): Router {
       res.status(400).json({ error: "Message is required." });
       return;
     }
+    if (message.length > MAX_MESSAGE_LENGTH) {
+      res.status(400).json({ error: `Message too long. Maximum ${MAX_MESSAGE_LENGTH} characters.` });
+      return;
+    }
 
     // Set SSE headers
     res.setHeader("Content-Type", "text/event-stream");
@@ -76,8 +103,12 @@ export function createChatRouter(registry: Registry): Router {
       const messages: Anthropic.MessageParam[] = [];
 
       if (Array.isArray(history)) {
-        for (const h of history.slice(-10)) {
-          if (h.role === "user" || h.role === "assistant") {
+        for (const h of history.slice(-MAX_HISTORY_ENTRIES)) {
+          if (
+            (h.role === "user" || h.role === "assistant") &&
+            typeof h.content === "string" &&
+            h.content.length <= MAX_ENTRY_LENGTH
+          ) {
             messages.push({ role: h.role, content: h.content });
           }
         }
