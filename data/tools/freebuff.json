@@ -1,0 +1,39 @@
+{
+  "id": "freebuff",
+  "name": "Freebuff",
+  "description": "Free ad-supported AI coding agent for the terminal — the free variant of Codebuff with no subscription or credits required",
+  "url": "https://freebuff.com",
+  "pricingUrl": "https://freebuff.com",
+  "category": "ai-coding",
+  "tags": [
+    "ai-coding",
+    "terminal",
+    "free",
+    "open-source",
+    "agent"
+  ],
+  "lastVerified": "2025-07-10",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": null,
+    "whatYouLose": "Agent context, conversation history — terminal-based, no IDE lock-in"
+  },
+  "githubOrg": "CodebuffAI",
+  "twitterHandle": "codebuffai",
+  "tiers": [
+    {
+      "name": "Free",
+      "slug": "free",
+      "pricingModel": "free",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}

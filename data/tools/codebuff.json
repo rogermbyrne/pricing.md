@@ -1,0 +1,97 @@
+{
+  "id": "codebuff",
+  "name": "Codebuff",
+  "description": "Open-source multi-agent AI coding assistant for the terminal with pay-as-you-go credits and subscription plans",
+  "url": "https://codebuff.com",
+  "pricingUrl": "https://codebuff.com/pricing",
+  "category": "ai-coding",
+  "tags": [
+    "ai-coding",
+    "terminal",
+    "open-source",
+    "mcp",
+    "agent"
+  ],
+  "lastVerified": "2025-07-10",
+  "freshnessCategory": "volatile",
+  "currency": "USD",
+  "portability": {
+    "switchingCost": "drop-in",
+    "openStandard": "MCP",
+    "whatYouLose": "Agent context, custom workflows, conversation history — open-source core works with any AI provider"
+  },
+  "githubOrg": "CodebuffAI",
+  "twitterHandle": "codebuffai",
+  "tiers": [
+    {
+      "name": "Pay As You Go",
+      "slug": "pay-as-you-go",
+      "pricingModel": "usage_based",
+      "basePrice": 0,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [
+        {
+          "name": "Credits",
+          "unit": "credits",
+          "pricePerUnit": 0.01,
+          "unitQuantity": 1,
+          "includedQuantity": 500
+        }
+      ],
+      "features": [],
+      "limits": {
+        "freeCredits": 500
+      }
+    },
+    {
+      "name": "Strong 1×",
+      "slug": "strong-1x",
+      "pricingModel": "flat_rate",
+      "basePrice": 100,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Strong 2.5×",
+      "slug": "strong-2-5x",
+      "pricingModel": "flat_rate",
+      "basePrice": 200,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Strong 7×",
+      "slug": "strong-7x",
+      "pricingModel": "flat_rate",
+      "basePrice": 500,
+      "billingPeriod": "monthly",
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    },
+    {
+      "name": "Enterprise",
+      "slug": "enterprise",
+      "pricingModel": "custom",
+      "basePrice": null,
+      "billingPeriod": null,
+      "annualDiscount": null,
+      "seatPrice": null,
+      "usageMetrics": [],
+      "features": [],
+      "limits": {}
+    }
+  ]
+}
