@@ -5,8 +5,13 @@
   "url": "https://paystack.com",
   "pricingUrl": "https://paystack.com/pricing",
   "category": "payments",
-  "tags": ["payments", "africa", "payment-processing", "fintech"],
-  "lastVerified": "2026-04-04",
+  "tags": [
+    "payments",
+    "africa",
+    "payment-processing",
+    "fintech"
+  ],
+  "lastVerified": "2026-04-26",
   "freshnessCategory": "volatile",
   "currency": "USD",
   "portability": {
