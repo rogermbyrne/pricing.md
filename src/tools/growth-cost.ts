@@ -12,13 +12,13 @@ export function handleGrowthCost(registry: Registry, params: z.infer<typeof grow
 
   if (!scenario) {
     const available = Object.keys(GROWTH_SCENARIOS).join(", ");
-    return { error: `No growth scenario defined for "${params.category}". Available: ${available}` };
+    return { code: "NO_GROWTH_SCENARIO", error: `No growth scenario defined for "${params.category}". Available: ${available}` };
   }
 
   const tools = registry.search({ category: params.category });
 
   if (tools.length === 0) {
-    return { error: `No tools found in category "${params.category}".` };
+    return { code: "CATEGORY_EMPTY", error: `No tools found in category "${params.category}".` };
   }
 
   const results = tools

@@ -8,7 +8,7 @@ export const getPricingSchema = z.object({
 export function handleGetPricing(registry: Registry, params: z.infer<typeof getPricingSchema>) {
   const tool = registry.get(params.toolId);
   if (!tool) {
-    return { error: "Tool not found. Use search_tools to find available tools." };
+    return { code: "TOOL_NOT_FOUND", error: "Tool not found. Use search_tools to find available tools." };
   }
 
   const STALE_DAYS = 90;

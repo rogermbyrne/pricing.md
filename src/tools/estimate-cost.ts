@@ -11,13 +11,13 @@ export const estimateCostSchema = z.object({
 export function handleEstimateCost(registry: Registry, params: z.infer<typeof estimateCostSchema>) {
   const tool = registry.get(params.toolId);
   if (!tool) {
-    return { error: "Tool not found. Use search_tools to find available tools." };
+    return { code: "TOOL_NOT_FOUND", error: "Tool not found. Use search_tools to find available tools." };
   }
 
   const estimates = registry.estimateCost(params);
 
   if (estimates.length === 0) {
-    return { error: "No estimable tiers found. Enterprise/custom tiers cannot be estimated." };
+    return { code: "NO_ESTIMABLE_TIERS", error: "No estimable tiers found. Enterprise/custom tiers cannot be estimated." };
   }
 
   const STALE_DAYS = 90;

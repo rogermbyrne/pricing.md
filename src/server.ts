@@ -21,10 +21,18 @@ export const SERVER_INSTRUCTIONS =
   "what a tool costs at realistic scale, not just at signup. Every tool is read-only; all data comes from the " +
   "registry at https://latest.sh.";
 
+// Success and failure both come back as JSON so a caller can parse either without
+// sniffing. Failures carry a stable machine-readable code alongside the prose.
 function respond(result: unknown) {
   if (result && typeof result === "object" && "error" in result) {
+    const { error, code } = result as { error: string; code?: string };
     return {
-      content: [{ type: "text" as const, text: (result as { error: string }).error }],
+      content: [
+        {
+          type: "text" as const,
+          text: JSON.stringify({ error: { code: code ?? "TOOL_ERROR", message: error } }, null, 2),
+        },
+      ],
       isError: true,
     };
   }

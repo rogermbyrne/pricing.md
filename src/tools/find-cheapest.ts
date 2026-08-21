@@ -27,7 +27,7 @@ export function handleFindCheapest(registry: Registry, params: z.infer<typeof fi
   const tools = registry.search({ category: params.category });
 
   if (tools.length === 0) {
-    return { error: `No tools found in category "${params.category}".` };
+    return { code: "CATEGORY_EMPTY", error: `No tools found in category "${params.category}".` };
   }
 
   const ranked: RankedTool[] = [];
