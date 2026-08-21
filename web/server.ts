@@ -52,14 +52,17 @@ app.use((req: express.Request, res: express.Response, next: express.NextFunction
   res.set("X-Frame-Options", "SAMEORIGIN");
   res.set("Referrer-Policy", "strict-origin-when-cross-origin");
   res.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
+  // carbonads/buysellads hosts are the Carbon ad unit (see partials/carbon-ad.ejs):
+  // carbon.js loads from cdn.carbonads.com, JSONP-fetches ads from srv.carbonads.net,
+  // and renders creatives served from cdn4.buysellads.net.
   res.set("Content-Security-Policy",
     "default-src 'self'; " +
     // TODO: Switch to build-time Tailwind to remove unsafe-eval
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://www.googletagmanager.com https://www.google-analytics.com https://cdn.jsdelivr.net; " +
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://www.googletagmanager.com https://www.google-analytics.com https://cdn.jsdelivr.net https://cdn.carbonads.com https://srv.carbonads.net; " +
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
     "font-src 'self' https://fonts.gstatic.com; " +
-    "img-src 'self' data: https://latest.sh https://*.google-analytics.com https://www.googletagmanager.com; " +
-    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com; " +
+    "img-src 'self' data: https://latest.sh https://*.google-analytics.com https://www.googletagmanager.com https://cdn4.buysellads.net https://srv.carbonads.net https://srv.buysellads.com https://cdn.carbonads.com; " +
+    "connect-src 'self' https://*.google-analytics.com https://analytics.google.com https://srv.carbonads.net https://cdn.carbonads.com; " +
     "frame-ancestors 'sameorigin'; " +
     "form-action 'self'; " +
     "base-uri 'self'"

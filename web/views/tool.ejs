@@ -203,6 +203,8 @@ const lowestPaid = paidTiers.length > 0 ? Math.min(...paidTiers.map(t => t.baseP
     </table>
   </div>
 
+<%- include('partials/carbon-ad') %>
+
   <!-- Portability -->
   <% if (tool.portability.whatYouLose) { %>
   <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-3">Portability</h2>
