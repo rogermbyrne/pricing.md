@@ -580,12 +580,18 @@ export function createAgentRouter(registry: Registry, projectRoot: string): Rout
   };
 
   // Homepage content negotiation: markdown for agents, HTML for everyone else.
+  //
+  // Cloudflare ignores Vary (except Accept-Encoding), so the negotiated markdown
+  // response must never enter the edge cache — otherwise a browser could be handed
+  // raw markdown from a cached agent request. The HTML variant stays cacheable; an
+  // agent served cached HTML is only losing the optimization, not breaking.
   router.get("/", (req: Request, res: Response, next: NextFunction) => {
     res.set("Vary", "Accept, User-Agent");
     if (!wantsMarkdown(req)) {
       next();
       return;
     }
+    res.set("Cache-Control", "no-store");
     sendMarkdown(res, homepageMarkdown(registry));
   });
 
