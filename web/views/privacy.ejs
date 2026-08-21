@@ -1,0 +1,96 @@
+<%- include('partials/head', { title, description, path, metaRobots: 'index, follow' }) %>
+
+<div class="max-w-3xl mx-auto px-6 py-12">
+  <div class="flex items-center gap-2 mb-4 text-sm">
+    <a href="/" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors font-mono">Home</a>
+    <span class="text-neutral-400">/</span>
+    <span class="text-neutral-900 dark:text-white font-mono">Privacy</span>
+  </div>
+
+  <h1 class="text-4xl font-bold tracking-tighter text-neutral-900 dark:text-white mb-2">Privacy</h1>
+  <p class="text-xs font-mono text-neutral-400 mb-8">Last updated <%= lastUpdated %></p>
+
+  <div class="space-y-6 text-neutral-600 dark:text-neutral-400 leading-relaxed">
+    <p class="text-lg text-neutral-700 dark:text-neutral-300">
+      latest.sh has no accounts, no logins, and no newsletter. There is nothing to sign up for, so there is no name,
+      email address, or password to collect. What follows is everything the site does touch.
+    </p>
+
+    <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-400 pt-4">Analytics</h2>
+    <p>
+      Pages load Google Analytics 4, which sets cookies and records the usual aggregate signals: which pages are viewed,
+      roughly where in the world the visitor is, and which site referred them. It is used to see which parts of the registry
+      people actually use. Blocking it with an ad blocker, a tracker blocker, or a browser privacy setting does not affect
+      anything on the site. Google&rsquo;s handling of that data is covered by
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="border-b border-neutral-400 hover:border-neutral-900 dark:hover:border-white transition-colors">Google&rsquo;s privacy policy</a>.
+    </p>
+
+    <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-400 pt-4">Advertising</h2>
+    <p>
+      Most pages carry one ad, served by Carbon (BuySellAds). Displaying it means your browser requests the ad from
+      <code class="font-mono text-sm">carbonads.net</code> and loads the creative from <code class="font-mono text-sm">buysellads.net</code>,
+      which necessarily discloses your IP address and user agent to them, as any third-party resource would. latest.sh does not
+      pass them anything about you, and does not receive anything identifying you back. Their practices are described in the
+      <a href="https://www.carbonads.net/privacy" target="_blank" rel="noopener" class="border-b border-neutral-400 hover:border-neutral-900 dark:hover:border-white transition-colors">Carbon privacy policy</a>.
+    </p>
+
+    <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-400 pt-4">Transparency votes</h2>
+    <p>
+      You can vote for a tool to publish machine-readable pricing. What gets stored is a single number per tool &mdash; the
+      count. To stop one person voting a hundred times, your IP address is held in the server&rsquo;s memory for 24 hours and
+      compared against new votes; it is never written to disk, never attached to the stored count, and disappears when the
+      window passes or the server restarts.
+    </p>
+
+    <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-400 pt-4">Stack Advisor</h2>
+    <p>
+      The Stack Advisor sends the message you type, plus the recent turns of that conversation, to Anthropic&rsquo;s API to
+      generate a reply. latest.sh does not store the conversation &mdash; the history lives in your browser tab and is gone
+      when you close it. Do not paste anything confidential into it. Anthropic&rsquo;s handling is covered by their
+      <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener" class="border-b border-neutral-400 hover:border-neutral-900 dark:hover:border-white transition-colors">privacy policy</a>.
+      Your IP address is held in memory to rate-limit the feature, on the same terms as votes above.
+    </p>
+
+    <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-400 pt-4">The API and MCP server</h2>
+    <p>
+      The REST API and the MCP server need no key and no account, so there is nothing to link a request to a person. Requests
+      are rate-limited per IP using an in-memory counter that resets every minute and is never persisted.
+    </p>
+
+    <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-400 pt-4">Hosting and logs</h2>
+    <p>
+      The site runs on Railway behind Cloudflare. Both keep standard operational logs &mdash; IP address, timestamp, path,
+      status code &mdash; for the ordinary reasons: serving traffic, blocking abuse, and debugging failures. Those logs are
+      held by those providers under their own retention policies, and are not used to build any profile of you.
+    </p>
+
+    <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-400 pt-4">What does not happen</h2>
+    <p>
+      No data about visitors is sold, rented, or shared beyond the services named above. There is no email list, no
+      cross-site tracking pixel beyond the analytics described, no fingerprinting, and no attempt to identify individual
+      visitors. The pricing data itself contains no personal information &mdash; it is public vendor pricing, and all of it
+      is <a href="https://github.com/rogermbyrne/pricing.md" target="_blank" rel="noopener" class="border-b border-neutral-400 hover:border-neutral-900 dark:hover:border-white transition-colors">openly published</a>.
+    </p>
+
+    <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-400 pt-4">Changes and questions</h2>
+    <p>
+      If this changes, the date at the top changes with it. Questions go through the
+      <a href="/contact" class="border-b border-neutral-400 hover:border-neutral-900 dark:hover:border-white transition-colors">contact page</a>.
+    </p>
+  </div>
+</div>
+
+<script type="application/ld+json">
+<%- JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Privacy",
+  "url": "https://latest.sh/privacy",
+  "description": description,
+  "dateModified": lastUpdated,
+  "isPartOf": { "@type": "WebSite", "name": "latest.sh", "url": "https://latest.sh/" },
+  "publisher": { "@id": "https://latest.sh/#organization" }
+}) %>
+</script>
+
+<%- include('partials/footer') %>

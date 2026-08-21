@@ -1,0 +1,126 @@
+<%- include('partials/head', { title, description, path, metaRobots: 'index, follow' }) %>
+
+<div class="max-w-3xl mx-auto px-6 py-12">
+  <div class="flex items-center gap-2 mb-4 text-sm">
+    <a href="/" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors font-mono">Home</a>
+    <span class="text-neutral-400">/</span>
+    <span class="text-neutral-900 dark:text-white font-mono">About</span>
+  </div>
+
+  <h1 class="text-4xl font-bold tracking-tighter text-neutral-900 dark:text-white mb-4">About latest.sh</h1>
+
+  <div class="space-y-6 text-neutral-600 dark:text-neutral-400 leading-relaxed">
+    <p class="text-lg text-neutral-700 dark:text-neutral-300">
+      latest.sh is an open registry of what developer tools actually cost. <span class="font-mono text-neutral-900 dark:text-white"><%= toolCount %></span>
+      tools across <span class="font-mono text-neutral-900 dark:text-white"><%= categoryCount %></span> categories, with every tier, usage rate,
+      free-tier limit, and switching cost recorded in a structured form that both people and agents can read.
+    </p>
+
+    <p>
+      It exists because pricing pages are written to be persuasive, not comparable. Two hosting providers can both say
+      &ldquo;from $20/month&rdquo; and mean completely different things once bandwidth, seats, and overage rates are counted.
+      The question a developer actually has &mdash; <em>what will this cost me at the scale I&rsquo;m heading toward?</em> &mdash;
+      is usually the one a pricing page answers last.
+    </p>
+
+    <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-400 pt-4">Where the data comes from</h2>
+    <p>
+      Every tool is one JSON file in a public repository, validated against a schema before it can be published. The numbers
+      come from each vendor&rsquo;s own published pricing page, and each entry carries a <code class="font-mono text-sm">lastVerified</code>
+      date so you can see how stale it might be. Nothing is estimated, inferred, or negotiated &mdash; if a tier says
+      &ldquo;contact sales,&rdquo; that is what the registry records.
+    </p>
+    <p>
+      A job runs weekly, hashes each vendor&rsquo;s pricing page, and flags the ones that changed so they can be re-checked by hand.
+      Fast-moving categories like AI coding tools are marked volatile and reviewed more often. Every change that lands is
+      visible in the <a href="/changelog" class="border-b border-neutral-400 hover:border-neutral-900 dark:hover:border-white transition-colors">changelog</a>.
+    </p>
+
+    <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-400 pt-4">The transparency score</h2>
+    <p>
+      Each tool gets a 0&ndash;100 score for how legible its pricing is: whether prices are public, whether usage rates are
+      documented, whether switching costs are stated, and &mdash; worth the most &mdash; whether the vendor publishes a
+      machine-readable <code class="font-mono text-sm">pricing.md</code> file of their own. The
+      <a href="/transparency" class="border-b border-neutral-400 hover:border-neutral-900 dark:hover:border-white transition-colors">leaderboard</a>
+      ranks the whole registry. The point is not to shame anyone; it is to make the vendors who are straightforward about
+      money easy to find.
+    </p>
+
+    <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-400 pt-4">Built for agents too</h2>
+    <p>
+      Everything here is readable by machines without scraping: an MCP server at <code class="font-mono text-sm">/mcp</code>,
+      a REST API described by OpenAPI, and markdown at every URL. See the
+      <a href="/developers" class="border-b border-neutral-400 hover:border-neutral-900 dark:hover:border-white transition-colors">developer docs</a>.
+    </p>
+
+    <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-400 pt-4">Who runs it</h2>
+    <p>
+      latest.sh is maintained by Roger Byrne. The pricing data is MIT-licensed and lives at
+      <a href="https://github.com/rogermbyrne/pricing.md" target="_blank" rel="noopener" class="border-b border-neutral-400 hover:border-neutral-900 dark:hover:border-white transition-colors">github.com/rogermbyrne/pricing.md</a>
+      &mdash; corrections are pull requests, and a wrong number is a bug worth reporting.
+      Running costs are covered by a single ad slot served through Carbon. Advertisers cannot buy a position in the registry:
+      rankings are computed from published prices and the scoring rules above, and the same code produces the same ordering
+      whether or not anyone is advertising.
+    </p>
+
+    <h2 class="text-xs font-mono uppercase tracking-widest text-neutral-400 pt-8 pb-2">Questions</h2>
+    <div class="space-y-5">
+      <div>
+        <div class="font-semibold text-neutral-900 dark:text-white">How current is the pricing?</div>
+        <p class="mt-1">Every tool page shows a verification date. Vendor pricing pages are hashed weekly and any that changed are flagged for re-checking, so the gap between a vendor changing a price and the registry reflecting it is usually days, not months.</p>
+      </div>
+      <div>
+        <div class="font-semibold text-neutral-900 dark:text-white">Is it free to use?</div>
+        <p class="mt-1">Yes. The website, the REST API, and the MCP server are all free and need no account or API key. There is no paid tier and nothing is metered.</p>
+      </div>
+      <div>
+        <div class="font-semibold text-neutral-900 dark:text-white">Can a vendor pay to change their listing?</div>
+        <p class="mt-1">No. The data reflects published prices, and the transparency score is computed from fixed rules. A vendor who wants a better score can publish clearer pricing — that is the only lever.</p>
+      </div>
+      <div>
+        <div class="font-semibold text-neutral-900 dark:text-white">A price here is wrong. What now?</div>
+        <p class="mt-1">Open an issue or a pull request against the repository, or see the <a href="/contact" class="border-b border-neutral-400 hover:border-neutral-900 dark:hover:border-white transition-colors">contact page</a>. Corrections with a link to the vendor's pricing page are merged quickly.</p>
+      </div>
+      <div>
+        <div class="font-semibold text-neutral-900 dark:text-white">What is a pricing.md file?</div>
+        <p class="mt-1">A plain markdown document at a predictable URL that states a product's tiers, limits, and overage rates in a form an agent can read without parsing a marketing page. Vendors who publish one score highest here, and their data stays accurate without anyone re-checking it by hand.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="application/ld+json">
+<%- JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About latest.sh",
+  "url": "https://latest.sh/about",
+  "description": description,
+  "mainEntity": {
+    "@type": "Organization",
+    "@id": "https://latest.sh/#organization",
+    "name": "latest.sh",
+    "url": "https://latest.sh/",
+    "founder": { "@type": "Person", "name": "Roger Byrne" },
+    "sameAs": ["https://github.com/rogermbyrne/pricing.md", "https://www.npmjs.com/package/pricing.md"]
+  }
+}) %>
+</script>
+
+<script type="application/ld+json">
+<%- JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How current is the pricing?", "acceptedAnswer": { "@type": "Answer", "text": "Every tool page shows a verification date. Vendor pricing pages are hashed weekly and any that changed are flagged for re-checking, so the gap between a vendor changing a price and the registry reflecting it is usually days, not months." } },
+    { "@type": "Question", "name": "Is it free to use?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The website, the REST API, and the MCP server are all free and need no account or API key. There is no paid tier and nothing is metered." } },
+    { "@type": "Question", "name": "Can a vendor pay to change their listing?", "acceptedAnswer": { "@type": "Answer", "text": "No. The data reflects published prices, and the transparency score is computed from fixed rules. A vendor who wants a better score can publish clearer pricing, which is the only lever." } },
+    { "@type": "Question", "name": "A price here is wrong. What now?", "acceptedAnswer": { "@type": "Answer", "text": "Open an issue or a pull request against the public repository. Corrections with a link to the vendor's pricing page are merged quickly." } },
+    { "@type": "Question", "name": "What is a pricing.md file?", "acceptedAnswer": { "@type": "Answer", "text": "A plain markdown document at a predictable URL that states a product's tiers, limits, and overage rates in a form an agent can read without parsing a marketing page. Vendors who publish one score highest on latest.sh." } }
+  ]
+}) %>
+</script>
+
+<%- include('partials/carbon-ad') %>
+
+<%- include('partials/footer') %>

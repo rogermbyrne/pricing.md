@@ -59,9 +59,16 @@ Every tool has a machine-readable pricing.md file at \`/tool/{id}/pricing.md\`. 
 
 - [Compare](/compare): Side-by-side tool comparison (add ?tools=vercel,netlify,railway)
 
+## About
+
+- [About](/about): Where the data comes from, how it is verified, how the site is funded
+- [Contact](/contact): Report a wrong price, request a tool, fix a vendor listing
+- [Privacy](/privacy): What the site collects — no accounts, no email list
+
 ## Optional
 
 - [Install as Skill](/developers#skill): \`npx skills add rogermbyrne/pricing.md\`
+- [npm package](https://www.npmjs.com/package/pricing.md): Run the MCP server locally over stdio
 - [GitHub Repository](https://github.com/rogermbyrne/pricing.md): Source data, one JSON file per tool, MIT licensed
 `;
 
@@ -99,6 +106,9 @@ Every tool has a machine-readable pricing.md file at \`/tool/{id}/pricing.md\`. 
     }
 
     addUrl(`${BASE}/developers`, today, "weekly", "0.8");
+    addUrl(`${BASE}/about`, today, "monthly", "0.6");
+    addUrl(`${BASE}/contact`, today, "monthly", "0.5");
+    addUrl(`${BASE}/privacy`, today, "monthly", "0.3");
     addUrl(`${BASE}/transparency`, today, "daily", "0.8");
     addUrl(`${BASE}/compare`, today, "daily", "0.5");
     addUrl(`${BASE}/changelog`, today, "daily", "0.5");

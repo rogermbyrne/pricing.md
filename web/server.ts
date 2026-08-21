@@ -14,6 +14,8 @@ import { createTransparencyRouter } from "./routes/transparency.js";
 import { createGuidesRouter } from "./routes/guides.js";
 import { createMcpRouter } from "./routes/mcp.js";
 import { createAgentRouter } from "./routes/agent.js";
+import { createPagesRouter } from "./routes/pages.js";
+import { createRateLimiter, API_RATE_LIMIT } from "./lib/rate-limit.js";
 
 const PORT = parseInt(process.env.PORT || "3001", 10);
 
@@ -145,11 +147,32 @@ app.use("/api", (req: express.Request, res: express.Response, next: express.Next
   next();
 });
 
+// API versioning: /api/v1/* is the pinned alias of the unversioned /api/*.
+// Both are served by the same handlers — v1 is what agents should integrate
+// against, since a future v2 would land on its own prefix rather than changing
+// responses underneath them.
+app.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
+  if (req.url.startsWith("/api/v1/")) {
+    req.url = "/api/" + req.url.slice("/api/v1/".length);
+    // Remember which prefix the caller used so generated links (pagination, for
+    // one) keep them on the versioned surface they chose.
+    res.locals.apiPrefix = "/api/v1";
+  }
+  if (req.path.startsWith("/api/")) {
+    res.set("API-Version", "1");
+  }
+  next();
+});
+
+// Generous per-IP ceiling with RateLimit headers on every API response.
+app.use("/api", createRateLimiter(API_RATE_LIMIT));
+
 app.use(express.json());
 app.use(createApiRouter(registry, changelogDB, voteDB));
 app.use(createChatRouter(registry));
 app.use(createTransparencyRouter(registry));
 app.use(createGuidesRouter(registry));
+app.use(createPagesRouter());
 
 // Return 410 Gone for Google's hallucinated /vs/ URLs
 // These URLs don't exist - Google was auto-discovering them from content words

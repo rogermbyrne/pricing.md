@@ -1,0 +1,91 @@
+<%- include('partials/head', { title, description, path, metaRobots: 'index, follow' }) %>
+
+<div class="max-w-3xl mx-auto px-6 py-12">
+  <div class="flex items-center gap-2 mb-4 text-sm">
+    <a href="/" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors font-mono">Home</a>
+    <span class="text-neutral-400">/</span>
+    <span class="text-neutral-900 dark:text-white font-mono">Contact</span>
+  </div>
+
+  <h1 class="text-4xl font-bold tracking-tighter text-neutral-900 dark:text-white mb-4">Contact</h1>
+  <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8">
+    Everything about latest.sh happens in the open, in the repository that holds the data. Pick the channel that matches
+    what you need &mdash; they all land in the same place and are read by a human.
+  </p>
+
+  <div class="border border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800">
+    <div class="p-5">
+      <div class="font-semibold text-neutral-900 dark:text-white">A price is wrong or out of date</div>
+      <p class="text-sm text-neutral-500 mt-1 leading-relaxed">
+        The fastest fix is a pull request against the tool&rsquo;s JSON file &mdash; include a link to the vendor&rsquo;s pricing
+        page so it can be verified. If you would rather not open a PR,
+        <a href="https://github.com/rogermbyrne/pricing.md/issues/new" target="_blank" rel="noopener" class="border-b border-neutral-400 hover:border-neutral-900 dark:hover:border-white transition-colors">file an issue</a>
+        with the tool name and what changed. Corrections are the most useful thing anyone sends.
+      </p>
+    </div>
+    <div class="p-5">
+      <div class="font-semibold text-neutral-900 dark:text-white">A tool is missing</div>
+      <p class="text-sm text-neutral-500 mt-1 leading-relaxed">
+        <a href="https://github.com/rogermbyrne/pricing.md/issues/new" target="_blank" rel="noopener" class="border-b border-neutral-400 hover:border-neutral-900 dark:hover:border-white transition-colors">Open an issue</a>
+        with the product name and its pricing URL. Tools that publish clear, public pricing are quickest to add; anything
+        behind &ldquo;contact sales&rdquo; for every tier is harder to represent honestly.
+      </p>
+    </div>
+    <div class="p-5">
+      <div class="font-semibold text-neutral-900 dark:text-white">You are a vendor and want your listing fixed</div>
+      <p class="text-sm text-neutral-500 mt-1 leading-relaxed">
+        Same channel, and corrections from vendors are welcome &mdash; you know your own pricing better than anyone. The
+        durable fix is to publish a <code class="font-mono">pricing.md</code> file on your own domain: the registry reads it
+        directly, your entry stops depending on anyone re-checking it by hand, and it is worth the largest single share of
+        your <a href="/transparency" class="border-b border-neutral-400 hover:border-neutral-900 dark:hover:border-white transition-colors">transparency score</a>.
+      </p>
+    </div>
+    <div class="p-5">
+      <div class="font-semibold text-neutral-900 dark:text-white">API, MCP server, or integration questions</div>
+      <p class="text-sm text-neutral-500 mt-1 leading-relaxed">
+        Start with the <a href="/developers" class="border-b border-neutral-400 hover:border-neutral-900 dark:hover:border-white transition-colors">developer docs</a>,
+        which cover the MCP endpoint, the REST API, and every machine-readable file. If something there is wrong or missing,
+        that is a bug &mdash; please
+        <a href="https://github.com/rogermbyrne/pricing.md/issues/new" target="_blank" rel="noopener" class="border-b border-neutral-400 hover:border-neutral-900 dark:hover:border-white transition-colors">report it</a>.
+      </p>
+    </div>
+    <div class="p-5">
+      <div class="font-semibold text-neutral-900 dark:text-white">Advertising</div>
+      <p class="text-sm text-neutral-500 mt-1 leading-relaxed">
+        The single ad slot is sold through Carbon &mdash; enquiries go to
+        <a href="https://www.carbonads.net/" target="_blank" rel="noopener" class="border-b border-neutral-400 hover:border-neutral-900 dark:hover:border-white transition-colors">carbonads.net</a>,
+        not here. Buying an ad does not affect any listing, ranking, or score.
+      </p>
+    </div>
+  </div>
+
+  <p class="text-sm text-neutral-500 mt-8 leading-relaxed">
+    The repository is at
+    <a href="https://github.com/rogermbyrne/pricing.md" target="_blank" rel="noopener" class="border-b border-neutral-400 hover:border-neutral-900 dark:hover:border-white transition-colors">github.com/rogermbyrne/pricing.md</a>,
+    maintained by Roger Byrne.
+  </p>
+</div>
+
+<script type="application/ld+json">
+<%- JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact latest.sh",
+  "url": "https://latest.sh/contact",
+  "description": description,
+  "mainEntity": {
+    "@type": "Organization",
+    "@id": "https://latest.sh/#organization",
+    "name": "latest.sh",
+    "url": "https://latest.sh/",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "technical support",
+      "url": "https://github.com/rogermbyrne/pricing.md/issues",
+      "availableLanguage": "English"
+    }]
+  }
+}) %>
+</script>
+
+<%- include('partials/footer') %>

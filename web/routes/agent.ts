@@ -1,8 +1,10 @@
+import crypto from "crypto";
 import fs from "fs";
 import path from "path";
 import { Router, Request, Response, NextFunction } from "express";
 import { Registry } from "../../src/registry/registry.js";
 import { TOOL_METADATA, SERVER_INFO, SERVER_INSTRUCTIONS } from "../../src/server.js";
+import { API_RATE_LIMIT } from "../lib/rate-limit.js";
 
 const BASE = "https://latest.sh";
 
@@ -292,8 +294,11 @@ function apiCatalog() {
   };
 }
 
-function agentSkillsIndex() {
+const SKILL_PATH = "/.well-known/agent-skills/pricing/SKILL.md";
+
+function agentSkillsIndex(skillDigest: string | null) {
   return {
+    $schema: "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
     version: "0.2.0",
     skills: [
       {
@@ -301,7 +306,11 @@ function agentSkillsIndex() {
         description:
           "Make your agent cost-aware when planning developer tool stacks. Surfaces pricing breakpoints, compares alternatives, flags lock-in risks, and shows where free tiers end.",
         version: SERVER_INFO.version,
-        path: "/.well-known/agent-skills/pricing/SKILL.md",
+        type: "skill-md",
+        url: `${BASE}${SKILL_PATH}`,
+        path: SKILL_PATH,
+        // sha256 over the raw bytes served at `url`, so a client can verify what it fetched.
+        ...(skillDigest ? { digest: `sha256:${skillDigest}` } : {}),
         license: "MIT",
         homepage: `${BASE}/developers`,
       },
@@ -325,6 +334,56 @@ function openApiSpec(registry: Registry) {
   // Redocly (and most agent tooling) expects every operation to document a failure path.
   const genericError = errorResponse("Request could not be served — malformed parameters or unknown path.");
 
+  const rateLimitHeaders = {
+    "RateLimit": {
+      description: "Structured rate-limit field, e.g. `\"api\";r=599;t=42` — requests remaining and seconds until the window resets.",
+      schema: { type: "string" },
+    },
+    "RateLimit-Policy": {
+      description: "The quota and window in force, e.g. `\"api\";q=600;w=60`.",
+      schema: { type: "string" },
+    },
+    "API-Version": { description: "Version serving this response.", schema: { type: "string", examples: ["1"] } },
+  };
+
+  const pagingHeaders = {
+    ...rateLimitHeaders,
+    "X-Total-Count": {
+      description: "Total items matching the query, before limit/offset.",
+      schema: { type: "integer" },
+    },
+    Link: {
+      description: "RFC 8288 pagination links: first, prev, next, last. Present only when `limit` is supplied.",
+      schema: { type: "string" },
+    },
+  };
+
+  const pagingParams = [
+    {
+      name: "limit",
+      in: "query",
+      required: false,
+      description: "Page size. Omit to receive the whole collection.",
+      schema: { type: "integer", minimum: 1, maximum: 500 },
+    },
+    {
+      name: "offset",
+      in: "query",
+      required: false,
+      description: "Items to skip before the page starts. Follow the `Link` header rather than computing this yourself.",
+      schema: { type: "integer", minimum: 0, default: 0 },
+    },
+  ];
+
+  const tooManyRequests = {
+    description: "Rate limit exceeded.",
+    headers: {
+      ...rateLimitHeaders,
+      "Retry-After": { description: "Seconds to wait before retrying.", schema: { type: "integer" } },
+    },
+    content: { "application/json": { schema: { $ref: "#/components/schemas/Error" } } },
+  };
+
   return {
     openapi: "3.1.0",
     info: {
@@ -332,8 +391,22 @@ function openApiSpec(registry: Registry) {
       version: SERVER_INFO.version,
       summary: "Public pricing data for developer tools.",
       description:
-        "Read-only REST access to the latest.sh pricing registry. No API key, no signup, no rate limit on reads. " +
-        "Agents that speak MCP should prefer the Streamable HTTP endpoint at /mcp.",
+        "Read-only REST access to the latest.sh pricing registry. No API key and no signup. " +
+        "Agents that speak MCP should prefer the Streamable HTTP endpoint at /mcp.\n\n" +
+        "**Versioning.** Every path is served under a version prefix (`/api/v1/...`) and under the " +
+        "unversioned alias (`/api/...`). Integrate against `/api/v1`: breaking changes ship as a new " +
+        "prefix (`/api/v2`) rather than changing v1 responses underneath you. Additive changes — new " +
+        "fields, new endpoints — can land in v1 at any time, so parse leniently. A retired version is " +
+        "announced with `Deprecation` and `Sunset` response headers (RFC 9745 / RFC 8594) and stays " +
+        "reachable for at least 6 months after the `Sunset` date. Responses carry the serving version " +
+        "in an `API-Version` header.\n\n" +
+        "**Rate limits.** " + String(API_RATE_LIMIT.limit) + " requests per " +
+        String(API_RATE_LIMIT.windowMs / 1000) + "s per IP. Every response carries `RateLimit`, " +
+        "`RateLimit-Policy`, and the discrete `RateLimit-Limit`/`-Remaining`/`-Reset` headers; a 429 " +
+        "adds `Retry-After`.\n\n" +
+        "**Pagination.** List endpoints accept `limit` and `offset`. Omit `limit` and you get the whole " +
+        "collection. Paged responses carry `X-Total-Count` and RFC 8288 `Link` headers " +
+        "(`first`, `prev`, `next`, `last`).",
       license: { name: "MIT", identifier: "MIT" },
       contact: { name: "latest.sh", url: `${BASE}/developers` },
     },
@@ -347,7 +420,7 @@ function openApiSpec(registry: Registry) {
       { name: "votes", description: "Community demand signal for pricing transparency" },
     ],
     paths: {
-      "/api/tools": {
+      "/api/v1/tools": {
         get: {
           tags: ["tools"],
           operationId: "listTools",
@@ -361,21 +434,25 @@ function openApiSpec(registry: Registry) {
               description: "Restrict results to a single category.",
               schema: { type: "string", enum: categories },
             },
+            ...pagingParams,
           ],
           responses: {
             "200": {
               description: "Matching tools.",
+              headers: pagingHeaders,
               content: {
                 "application/json": {
                   schema: { type: "array", items: { $ref: "#/components/schemas/Tool" } },
                 },
               },
             },
+            "400": errorResponse("Invalid limit or offset."),
+            "429": tooManyRequests,
             "4XX": genericError,
           },
         },
       },
-      "/api/tools/{id}": {
+      "/api/v1/tools/{id}": {
         get: {
           tags: ["tools"],
           operationId: "getTool",
@@ -398,7 +475,7 @@ function openApiSpec(registry: Registry) {
           },
         },
       },
-      "/api/stats": {
+      "/api/v1/stats": {
         get: {
           tags: ["meta"],
           operationId: "getStats",
@@ -424,7 +501,7 @@ function openApiSpec(registry: Registry) {
           },
         },
       },
-      "/api/changelog": {
+      "/api/v1/changelog": {
         get: {
           tags: ["meta"],
           operationId: "getChangelog",
@@ -438,21 +515,25 @@ function openApiSpec(registry: Registry) {
               description: "ISO date; only changes detected on or after this date.",
               schema: { type: "string", format: "date" },
             },
+            ...pagingParams,
           ],
           responses: {
             "200": {
-              description: "Change records, newest first.",
+              description: "Change records, newest first. Defaults to the 100 most recent when `limit` is omitted.",
+              headers: pagingHeaders,
               content: {
                 "application/json": {
                   schema: { type: "array", items: { $ref: "#/components/schemas/Change" } },
                 },
               },
             },
+            "400": errorResponse("Invalid limit or offset."),
+            "429": tooManyRequests,
             "4XX": genericError,
           },
         },
       },
-      "/api/vote/{id}": {
+      "/api/v1/vote/{id}": {
         get: {
           tags: ["votes"],
           operationId: "getVotes",
@@ -574,6 +655,14 @@ function openApiSpec(registry: Registry) {
 
 export function createAgentRouter(registry: Registry, projectRoot: string): Router {
   const router = Router();
+
+  const skillFile = path.join(projectRoot, "SKILL.md");
+  let skillDigest: string | null = null;
+  try {
+    skillDigest = crypto.createHash("sha256").update(fs.readFileSync(skillFile)).digest("hex");
+  } catch (err) {
+    console.error("SKILL.md unreadable, publishing skills index without a digest:", err instanceof Error ? err.message : err);
+  }
   // res.send() appends "; charset=utf-8" to the content type, which mangles
   // parameterised media types (…+json;version=3.1) and trips validators that
   // compare the header verbatim. JSON is UTF-8 by definition (RFC 8259), so
@@ -628,10 +717,12 @@ export function createAgentRouter(registry: Registry, projectRoot: string): Rout
   router.get("/.well-known/api-catalog", (req: Request, res: Response) =>
     json(res, apiCatalog(), "application/linkset+json")
   );
-  router.get("/.well-known/agent-skills/index.json", (req: Request, res: Response) => json(res, agentSkillsIndex()));
+  router.get("/.well-known/agent-skills/index.json", (req: Request, res: Response) =>
+    json(res, agentSkillsIndex(skillDigest))
+  );
 
-  router.get("/.well-known/agent-skills/pricing/SKILL.md", (req: Request, res: Response) => {
-    fs.readFile(path.join(projectRoot, "SKILL.md"), "utf-8", (err, body) => {
+  router.get(SKILL_PATH, (req: Request, res: Response) => {
+    fs.readFile(skillFile, "utf-8", (err, body) => {
       if (err) {
         res.status(404).set("Content-Type", "text/plain; charset=utf-8").send("SKILL.md not found.");
         return;
