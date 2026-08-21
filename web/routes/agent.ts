@@ -574,9 +574,17 @@ function openApiSpec(registry: Registry) {
 
 export function createAgentRouter(registry: Registry, projectRoot: string): Router {
   const router = Router();
+  // res.send() appends "; charset=utf-8" to the content type, which mangles
+  // parameterised media types (…+json;version=3.1) and trips validators that
+  // compare the header verbatim. JSON is UTF-8 by definition (RFC 8259), so
+  // write the buffer directly and keep the type exactly as declared.
   const json = (res: Response, body: unknown, type = "application/json") => {
-    res.set("Content-Type", `${type}; charset=utf-8`);
-    res.send(JSON.stringify(body, null, 2));
+    const payload = Buffer.from(JSON.stringify(body, null, 2), "utf-8");
+    // setHeader, not res.set: Express's setter appends a charset parameter for
+    // any type its mime table recognises, including application/json.
+    res.setHeader("Content-Type", type);
+    res.setHeader("Content-Length", payload.byteLength);
+    res.end(payload);
   };
 
   // Homepage content negotiation: markdown for agents, HTML for everyone else.

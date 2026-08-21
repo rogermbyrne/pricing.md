@@ -164,6 +164,10 @@ app.use("/vs", (req: express.Request, res: express.Response, next: express.NextF
 
 // 404 catch-all — JSON for the API, markdown for agents, HTML for browsers
 app.use((req: express.Request, res: express.Response) => {
+  // Never let a 404 into the edge cache: a path that 404s just before a deploy
+  // would keep 404ing for the full cache window after it goes live.
+  res.set("Cache-Control", "no-store");
+
   if (req.path.startsWith("/api/")) {
     res.status(404).json({ error: `No API endpoint at ${req.path}. See https://latest.sh/openapi.json for the full surface.` });
     return;
@@ -197,6 +201,7 @@ app.use((req: express.Request, res: express.Response) => {
 // Global error handler — never leak stack traces
 app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
   console.error("Unhandled error:", err.message);
+  res.set("Cache-Control", "no-store");
   res.status(500).render("error", {
     title: "Server Error",
     message: "Something went wrong. Please try again.",
