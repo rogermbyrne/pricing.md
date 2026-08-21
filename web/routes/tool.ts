@@ -30,6 +30,7 @@ export function createToolRouter(registry: Registry, changelogDB: ChangelogDB, v
       title: `${tool.name} Pricing`,
       description: `Compare ${tool.name} pricing tiers, free tier limits, and switching costs. Verified ${tool.lastVerified}.`,
       path: `/tool/${tool.id}`,
+      markdownAlternate: `https://latest.sh/tool/${tool.id}/pricing.md`,
       tool,
       changes,
       voteCount,

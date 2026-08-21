@@ -12,6 +12,7 @@
     <title vid="4">latest.sh — Compare Developer Tool Pricing Side-by-Side</title>
     <meta name="description" content="Compare pricing across 300+ developer tools. Free tiers, switching costs, usage rates, and portability for hosting, databases, auth, email, monitoring, and more.">
     <link rel="canonical" href="https://latest.sh/">
+    <link rel="alternate" type="text/markdown" href="https://latest.sh/index.md">
     <meta property="og:title" content="latest.sh — Developer Tool Pricing Registry">
     <meta property="og:description" content="Compare pricing across 300+ developer tools. Free tiers, switching costs, usage rates, and portability for hosting, databases, auth, email, monitoring, and more.">
     <meta property="og:type" content="website">
@@ -1138,6 +1139,7 @@ video {
     <div style="position:fixed;top:1.5rem;left:1.5rem;z-index:50;display:flex;gap:1rem;font-family:'JetBrains Mono',monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em">
       <a href="/browse" style="color:#737373;text-decoration:none;border-bottom:1px solid #404040;padding-bottom:2px;transition:all 0.15s">Browse</a>
       <a href="/stack" style="color:#737373;text-decoration:none;border-bottom:1px solid #404040;padding-bottom:2px;transition:all 0.15s">Advisor</a>
+      <a href="/developers" style="color:#737373;text-decoration:none;border-bottom:1px solid #404040;padding-bottom:2px;transition:all 0.15s">API Docs</a>
     </div>
 
     <button id="theme-btn" class="fixed top-6 right-6 z-50 p-3 bg-white dark:bg-[#111] hover:bg-neutral-100 dark:hover:bg-[#1a1a1a] theme-transition border border-neutral-300 dark:border-neutral-800 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]" aria-label="Toggle Theme" vid="9">
@@ -1459,4 +1461,89 @@ video {
     </script>
 
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://latest.sh/#organization",
+      "name": "latest.sh",
+      "alternateName": "Pricing.md",
+      "url": "https://latest.sh/",
+      "logo": "https://latest.sh/og.png",
+      "description": "An open registry of verified pricing for developer tools, readable by humans and by agents.",
+      "sameAs": [
+        "https://github.com/rogermbyrne/pricing.md",
+        "https://www.npmjs.com/package/pricing.md"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://latest.sh/#website",
+      "url": "https://latest.sh/",
+      "name": "latest.sh",
+      "description": "Compare pricing across 300+ developer tools: free tiers, usage rates, switching costs, and what each tool costs at real scale.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://latest.sh/#organization"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://latest.sh/#dataset",
+      "name": "Developer tool pricing registry",
+      "description": "Structured pricing for 300+ developer tools across 22 categories: tiers, base and seat prices, usage metrics and overage rates, free-tier limits, portability and switching cost, and a verification date per tool.",
+      "url": "https://latest.sh/browse",
+      "license": "https://opensource.org/licenses/MIT",
+      "creator": {
+        "@id": "https://latest.sh/#organization"
+      },
+      "isAccessibleForFree": true,
+      "keywords": [
+        "developer tools",
+        "pricing",
+        "SaaS pricing",
+        "free tier",
+        "cost comparison",
+        "vendor lock-in"
+      ],
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "application/json",
+          "contentUrl": "https://latest.sh/api/tools",
+          "name": "REST API"
+        },
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "text/markdown",
+          "contentUrl": "https://latest.sh/llms.txt",
+          "name": "llms.txt index"
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://latest.sh/#mcp",
+      "name": "pricing.md MCP server",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "url": "https://latest.sh/developers",
+      "downloadUrl": "https://www.npmjs.com/package/pricing.md",
+      "softwareVersion": "1.2.1",
+      "description": "Model Context Protocol server exposing the latest.sh pricing registry as six read-only tools: search, get pricing, compare, estimate cost, find cheapest, and growth cost. Available over Streamable HTTP at https://latest.sh/mcp or over stdio via npx pricing.md.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@id": "https://latest.sh/#organization"
+      }
+    }
+  ]
+}
+</script>
 </body></html>

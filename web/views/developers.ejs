@@ -1,0 +1,154 @@
+<%- include('partials/head', { title, description, path, metaRobots: 'index, follow' }) %>
+
+<div class="max-w-5xl mx-auto px-6 py-10">
+  <!-- Breadcrumb -->
+  <div class="flex items-center gap-2 mb-4 text-sm">
+    <a href="/" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors font-mono">Home</a>
+    <span class="text-neutral-400">/</span>
+    <span class="text-neutral-900 dark:text-white font-mono">Developers</span>
+  </div>
+
+  <!-- Hero -->
+  <div class="mb-10">
+    <h1 class="text-4xl font-bold tracking-tighter text-neutral-900 dark:text-white">Developer &amp; Agent API</h1>
+    <p class="text-neutral-500 mt-2 text-sm max-w-2xl leading-relaxed">
+      Every price on latest.sh is readable by machines: an MCP server, a REST API, and markdown at every URL.
+      No API key, no signup, no rate limit on reads. <span class="font-mono text-neutral-900 dark:text-white"><%= toolCount %></span> tools across
+      <span class="font-mono text-neutral-900 dark:text-white"><%= categoryCount %></span> categories.
+    </p>
+  </div>
+
+  <!-- MCP -->
+  <section id="mcp" class="mb-12">
+    <h2 class="text-xl font-bold tracking-tight text-neutral-900 dark:text-white mb-2">MCP server</h2>
+    <p class="text-sm text-neutral-500 mb-4 max-w-2xl">Streamable HTTP, unauthenticated, read-only. This is the fastest path for an agent — typed tools instead of scraped HTML.</p>
+
+    <div class="border border-neutral-200 dark:border-neutral-800 p-4 mb-4">
+      <div class="text-xs font-mono uppercase tracking-widest text-neutral-400 mb-2">Endpoint</div>
+      <code class="font-mono text-sm text-neutral-900 dark:text-white">https://latest.sh/mcp</code>
+    </div>
+
+    <div class="text-xs font-mono uppercase tracking-widest text-neutral-400 mb-2">Claude Code</div>
+    <pre class="border border-neutral-200 dark:border-neutral-800 p-4 overflow-x-auto text-sm font-mono mb-4"><code>claude mcp add --transport http pricing https://latest.sh/mcp</code></pre>
+
+    <div class="text-xs font-mono uppercase tracking-widest text-neutral-400 mb-2">Any MCP client (JSON config)</div>
+    <pre class="border border-neutral-200 dark:border-neutral-800 p-4 overflow-x-auto text-sm font-mono mb-4"><code>{
+  "mcpServers": {
+    "pricing": {
+      "type": "http",
+      "url": "https://latest.sh/mcp"
+    }
+  }
+}</code></pre>
+
+    <div class="text-xs font-mono uppercase tracking-widest text-neutral-400 mb-2">Or run it locally over stdio</div>
+    <pre class="border border-neutral-200 dark:border-neutral-800 p-4 overflow-x-auto text-sm font-mono mb-4"><code>npx pricing.md</code></pre>
+
+    <div class="text-xs font-mono uppercase tracking-widest text-neutral-400 mb-3">Tools</div>
+    <div class="border border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800">
+      <% for (const t of mcpTools) { %>
+      <div class="p-4">
+        <div class="font-mono text-sm font-semibold text-neutral-900 dark:text-white"><%= t.name %></div>
+        <p class="text-sm text-neutral-500 mt-1 leading-relaxed"><%= t.description %></p>
+      </div>
+      <% } %>
+    </div>
+    <p class="text-xs text-neutral-400 mt-3 font-mono">Server card: <a href="/.well-known/mcp/server-card.json" class="underline hover:text-neutral-900 dark:hover:text-white">/.well-known/mcp/server-card.json</a></p>
+  </section>
+
+  <!-- REST -->
+  <section id="rest" class="mb-12">
+    <h2 class="text-xl font-bold tracking-tight text-neutral-900 dark:text-white mb-2">REST API</h2>
+    <p class="text-sm text-neutral-500 mb-4 max-w-2xl">Plain JSON over HTTPS. Described by <a href="/openapi.json" class="underline hover:text-neutral-900 dark:hover:text-white">OpenAPI 3.1</a>, so it drops straight into function calling.</p>
+
+    <div class="border border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800">
+      <% const endpoints = [
+        { method: 'GET', path: '/api/tools', desc: 'Every tool. Add ?category=hosting to filter.' },
+        { method: 'GET', path: '/api/tools/{id}', desc: 'One tool, full pricing entry.' },
+        { method: 'GET', path: '/api/stats', desc: 'Registry size and freshness.' },
+        { method: 'GET', path: '/api/changelog', desc: 'Detected pricing changes. ?tool= and ?since= supported.' },
+        { method: 'GET', path: '/api/vote/{id}', desc: 'Transparency vote count for a tool.' },
+        { method: 'GET', path: '/tool/{id}/pricing.md', desc: 'Machine-readable pricing.md for one tool.' },
+        { method: 'GET', path: '/tool/{id}/badge.svg', desc: 'Transparency score badge.' },
+      ]; %>
+      <% for (const e of endpoints) { %>
+      <div class="p-4 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+        <span class="font-mono text-xs px-1.5 py-0.5 border border-neutral-300 dark:border-neutral-700 text-neutral-500"><%= e.method %></span>
+        <code class="font-mono text-sm text-neutral-900 dark:text-white"><%= e.path %></code>
+        <span class="text-sm text-neutral-500"><%= e.desc %></span>
+      </div>
+      <% } %>
+    </div>
+
+    <div class="text-xs font-mono uppercase tracking-widest text-neutral-400 mt-6 mb-2">Example</div>
+    <pre class="border border-neutral-200 dark:border-neutral-800 p-4 overflow-x-auto text-sm font-mono"><code>curl https://latest.sh/api/tools?category=hosting</code></pre>
+  </section>
+
+  <!-- Markdown -->
+  <section id="markdown" class="mb-12">
+    <h2 class="text-xl font-bold tracking-tight text-neutral-900 dark:text-white mb-2">Markdown, not scraped HTML</h2>
+    <p class="text-sm text-neutral-500 mb-4 max-w-2xl">Ask any page for markdown and you get markdown — via content negotiation, a query flag, or a known agent user-agent.</p>
+    <pre class="border border-neutral-200 dark:border-neutral-800 p-4 overflow-x-auto text-sm font-mono"><code>curl -H "Accept: text/markdown" https://latest.sh/
+curl https://latest.sh/?mode=agent
+curl https://latest.sh/index.md</code></pre>
+
+    <div class="border border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800 mt-4">
+      <% const files = [
+        { path: '/llms.txt', desc: 'Site index for language models.' },
+        { path: '/AGENTS.md', desc: 'When to use latest.sh and which interface to reach for.' },
+        { path: '/pricing.md', desc: "latest.sh's own pricing, in the format we ask vendors to publish." },
+        { path: '/openapi.json', desc: 'OpenAPI 3.1 description of the REST API.' },
+        { path: '/.well-known/ai-catalog.json', desc: 'Agentic Resource Discovery catalog.' },
+        { path: '/.well-known/mcp/server-card.json', desc: 'MCP server card.' },
+        { path: '/.well-known/api-catalog', desc: 'RFC 9727 API catalog linkset.' },
+        { path: '/.well-known/agent-skills/index.json', desc: 'Published agent skills.' },
+      ]; %>
+      <% for (const f of files) { %>
+      <div class="p-4 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+        <a href="<%= f.path %>" class="font-mono text-sm text-neutral-900 dark:text-white underline decoration-neutral-300 dark:decoration-neutral-700 hover:decoration-neutral-900"><%= f.path %></a>
+        <span class="text-sm text-neutral-500"><%= f.desc %></span>
+      </div>
+      <% } %>
+    </div>
+  </section>
+
+  <!-- Skill -->
+  <section id="skill" class="mb-12">
+    <h2 class="text-xl font-bold tracking-tight text-neutral-900 dark:text-white mb-2">Install as a skill</h2>
+    <p class="text-sm text-neutral-500 mb-4 max-w-2xl">Makes a coding agent cost-aware while it plans a stack — breakpoints, free-tier cliffs, and lock-in risk, surfaced without being asked.</p>
+    <pre class="border border-neutral-200 dark:border-neutral-800 p-4 overflow-x-auto text-sm font-mono"><code>npx skills add rogermbyrne/pricing.md</code></pre>
+  </section>
+
+  <!-- Data -->
+  <section id="data" class="mb-12">
+    <h2 class="text-xl font-bold tracking-tight text-neutral-900 dark:text-white mb-2">The data</h2>
+    <p class="text-sm text-neutral-500 max-w-2xl leading-relaxed">
+      One JSON file per tool, validated against a Zod schema, MIT-licensed, in a public repo:
+      <a href="https://github.com/rogermbyrne/pricing.md" target="_blank" rel="noopener" class="underline hover:text-neutral-900 dark:hover:text-white">github.com/rogermbyrne/pricing.md</a>.
+      Every entry carries a <code class="font-mono">lastVerified</code> date — quote it when you quote a price.
+      Corrections are pull requests.
+    </p>
+  </section>
+</div>
+
+<script type="application/ld+json">
+<%- JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "latest.sh Developer & Agent API",
+  "description": description,
+  "url": "https://latest.sh/developers",
+  "isPartOf": { "@type": "WebSite", "name": "latest.sh", "url": "https://latest.sh/" },
+  "publisher": { "@type": "Organization", "name": "latest.sh", "url": "https://latest.sh/" },
+  "mainEntity": {
+    "@type": "WebAPI",
+    "name": "latest.sh API",
+    "description": "Public REST and MCP access to verified pricing for developer tools.",
+    "documentation": "https://latest.sh/developers",
+    "termsOfService": "https://github.com/rogermbyrne/pricing.md/blob/main/LICENSE",
+    "provider": { "@type": "Organization", "name": "latest.sh", "url": "https://latest.sh/" }
+  }
+}) %>
+</script>
+
+<%- include('partials/footer') %>

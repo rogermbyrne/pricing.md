@@ -30,6 +30,17 @@ ${categoryLines.join("\n")}
 
 Every tool has a machine-readable pricing.md file at \`/tool/{id}/pricing.md\`. These files contain structured pricing tiers, limits, overage rates, and portability data.
 
+## For Agents
+
+- [MCP Server](/mcp): Streamable HTTP MCP endpoint, no auth. Six read-only tools: search_tools, get_pricing, compare_tools, estimate_cost, find_cheapest, growth_cost
+- [AGENTS.md](/AGENTS.md): When to use this site, which interface to reach for, and what the data does not cover
+- [Developer Portal](/developers): MCP setup, REST endpoints, and every machine-readable file in one page
+- [OpenAPI 3.1 Spec](/openapi.json): Full description of the REST API
+- [MCP Server Card](/.well-known/mcp/server-card.json): Server identity, transport, and tool list
+- [AI Catalog](/.well-known/ai-catalog.json): Agentic Resource Discovery catalog
+- [Our Own Pricing](/pricing.md): latest.sh is free — machine-readable proof
+- Any page returns markdown with \`Accept: text/markdown\` or \`?mode=agent\`
+
 ## API
 
 - [All Tools JSON](/api/tools): Complete tool listing with pricing data
@@ -50,8 +61,8 @@ Every tool has a machine-readable pricing.md file at \`/tool/{id}/pricing.md\`. 
 
 ## Optional
 
-- [GitHub Repository](https://github.com/rogermbyrne/pricing.md)
-- [Install as Skill](https://github.com/rogermbyrne/pricing.md#install-as-a-skill): \`npx skills add rogermbyrne/pricing.md\`
+- [Install as Skill](/developers#skill): \`npx skills add rogermbyrne/pricing.md\`
+- [GitHub Repository](https://github.com/rogermbyrne/pricing.md): Source data, one JSON file per tool, MIT licensed
 `;
 
     res.set("Content-Type", "text/plain; charset=utf-8");
@@ -87,6 +98,7 @@ Every tool has a machine-readable pricing.md file at \`/tool/{id}/pricing.md\`. 
       addUrl(`${BASE}/tool/${tool.id}/pricing.md`, lastmod, "weekly", "0.6");
     }
 
+    addUrl(`${BASE}/developers`, today, "weekly", "0.8");
     addUrl(`${BASE}/transparency`, today, "daily", "0.8");
     addUrl(`${BASE}/compare`, today, "daily", "0.5");
     addUrl(`${BASE}/changelog`, today, "daily", "0.5");

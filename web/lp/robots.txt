@@ -1,5 +1,59 @@
+# latest.sh exists to be read by agents. Answer engines and user-triggered
+# agents are welcome; model training on the corpus is not.
+#
+# NOTE: Cloudflare currently prepends a managed robots.txt block to this file
+# that disallows ClaudeBot, GPTBot, CCBot, Google-Extended, Applebot-Extended,
+# and meta-externalagent, and the edge returns 403 to those user-agents.
+# That block overrides everything below. Turn off "AI Scrapers and Crawlers"
+# blocking + managed robots.txt in the Cloudflare dashboard for this to apply.
+
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Disallow: /vs/
 Allow: /
+
+# Answer engines and user-triggered agents — explicitly welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: ora-agent
+Allow: /
+
+# Training-only crawlers
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
 
 Sitemap: https://latest.sh/sitemap.xml

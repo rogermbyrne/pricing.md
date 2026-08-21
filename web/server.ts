@@ -12,6 +12,8 @@ import { createSeoRouter } from "./routes/seo.js";
 import { createChatRouter } from "./routes/chat.js";
 import { createTransparencyRouter } from "./routes/transparency.js";
 import { createGuidesRouter } from "./routes/guides.js";
+import { createMcpRouter } from "./routes/mcp.js";
+import { createAgentRouter } from "./routes/agent.js";
 
 const PORT = parseInt(process.env.PORT || "3001", 10);
 
@@ -62,6 +64,17 @@ app.use((req: express.Request, res: express.Response, next: express.NextFunction
     "form-action 'self'; " +
     "base-uri 'self'"
   );
+  // RFC 8288 discovery links — how an agent finds the MCP server, the API spec,
+  // and the site index without guessing URLs.
+  res.set("Link", [
+    '</llms.txt>; rel="describedby"; type="text/plain"',
+    '</.well-known/ai-catalog.json>; rel="ai-catalog"; type="application/json"',
+    '</openapi.json>; rel="service-desc"; type="application/vnd.oai.openapi+json;version=3.1"',
+    '</.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json"',
+    '</developers>; rel="service-doc"; type="text/html"',
+    '</mcp>; rel="mcp-server"',
+  ].join(", "));
+
   // Cache HTML pages for 5 minutes, API for 1 minute
   if (req.path.startsWith("/api/")) {
     res.set("Cache-Control", "public, max-age=60, s-maxage=60");
@@ -84,8 +97,15 @@ app.locals.categoryCount = registry.categories().length;
 // Static files
 app.use("/public", express.static(publicDir));
 
+// MCP over Streamable HTTP — same tools as the stdio server, no install required
+app.use(createMcpRouter(registry));
+
 // SEO routes (before static so dynamic llms.txt wins over static file)
 app.use(createSeoRouter(registry));
+
+// Agent-facing discovery: well-known catalogs, OpenAPI, markdown views.
+// Must precede the static landing page so "/" content negotiation wins over index.html.
+app.use(createAgentRouter(registry, projectRoot));
 
 // Landing page at root
 app.use(express.static(lpDir));
@@ -139,8 +159,29 @@ app.use("/vs", (req: express.Request, res: express.Response, next: express.NextF
   }
 });
 
-// 404 catch-all
+// 404 catch-all — JSON for the API, markdown for agents, HTML for browsers
 app.use((req: express.Request, res: express.Response) => {
+  if (req.path.startsWith("/api/")) {
+    res.status(404).json({ error: `No API endpoint at ${req.path}. See https://latest.sh/openapi.json for the full surface.` });
+    return;
+  }
+
+  const wantsMarkdown =
+    req.path.endsWith(".md") || req.accepts(["text/html", "text/markdown"]) === "text/markdown";
+
+  if (wantsMarkdown) {
+    res.status(404).set("Content-Type", "text/markdown; charset=utf-8").send(
+      `# 404 — not found\n\n\`${req.path}\` does not exist on latest.sh.\n\n` +
+        "Where to go instead:\n\n" +
+        "- [/llms.txt](https://latest.sh/llms.txt) — site index\n" +
+        "- [/AGENTS.md](https://latest.sh/AGENTS.md) — which interface to use\n" +
+        "- [/openapi.json](https://latest.sh/openapi.json) — REST API spec\n" +
+        "- `https://latest.sh/mcp` — MCP server (Streamable HTTP)\n" +
+        "- [/tool/{id}/pricing.md](https://latest.sh/browse) — pricing for one tool\n"
+    );
+    return;
+  }
+
   res.status(404).render("error", {
     title: "Not Found",
     message: "The page you're looking for doesn't exist.",

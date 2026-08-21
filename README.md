@@ -39,7 +39,13 @@ Once installed, your agent will proactively surface pricing when you're evaluati
 
 For programmatic pricing queries (search, compare, estimate cost), you can also run Pricing.md as an MCP server.
 
-Add to your Claude Code MCP config:
+**Hosted (no install):** the same six tools are live at `https://latest.sh/mcp` over Streamable HTTP, unauthenticated and read-only.
+
+```bash
+claude mcp add --transport http pricing https://latest.sh/mcp
+```
+
+**Local over stdio** — add to your Claude Code MCP config:
 
 ```json
 {
@@ -75,6 +81,31 @@ The full registry is browsable at [latest.sh](https://latest.sh) with:
 - **Transparency leaderboard** scoring tools on pricing openness (A-F)
 - **pricing.md files** — every tool has a machine-readable markdown file at `/tool/{id}/pricing.md`
 - **Embeddable SVG badges** — transparency score badges at `/tool/{id}/badge.svg`
+
+## For Agents
+
+Everything on latest.sh is machine-readable without scraping HTML. Full docs at [latest.sh/developers](https://latest.sh/developers).
+
+| Endpoint | What it is |
+| --- | --- |
+| `/mcp` | MCP server, Streamable HTTP, no auth |
+| `/openapi.json` | OpenAPI 3.1 description of the REST API |
+| `/api/tools`, `/api/tools/{id}`, `/api/stats`, `/api/changelog` | REST endpoints |
+| `/AGENTS.md` | When to use the site and which interface to reach for |
+| `/llms.txt` | Site index for language models |
+| `/pricing.md` | latest.sh's own pricing, in the format we ask vendors to publish |
+| `/tool/{id}/pricing.md` | Machine-readable pricing for one tool |
+| `/.well-known/ai-catalog.json` | Agentic Resource Discovery catalog |
+| `/.well-known/mcp/server-card.json` | MCP server card |
+| `/.well-known/api-catalog` | RFC 9727 API catalog linkset |
+| `/.well-known/agent-skills/index.json` | Published agent skills |
+
+Any page returns markdown instead of HTML when you send `Accept: text/markdown`, append `?mode=agent`, or crawl with a known agent user-agent:
+
+```bash
+curl -H "Accept: text/markdown" https://latest.sh/
+curl https://latest.sh/index.md
+```
 
 ## What's Covered
 

@@ -25,6 +25,9 @@
   <% if (canonicalUrl) { %>
   <link rel="canonical" href="<%= canonicalUrl %>">
   <% } %>
+  <% if (typeof markdownAlternate !== 'undefined' && markdownAlternate) { %>
+  <link rel="alternate" type="text/markdown" href="<%= markdownAlternate %>">
+  <% } %>
   <meta property="og:title" content="<%= title %> | Pricing.md">
   <meta property="og:description" content="<%= resolvedDescription %>">
   <meta property="og:type" content="website">
