@@ -68,8 +68,8 @@ Every tool has a machine-readable pricing.md file at \`/tool/{id}/pricing.md\`. 
 ## Optional
 
 - [Install as Skill](/developers#skill): \`npx skills add rogermbyrne/pricing.md\`
-- [npm package](https://www.npmjs.com/package/pricing.md): Run the MCP server locally over stdio
-- [GitHub Repository](https://github.com/rogermbyrne/pricing.md): Source data, one JSON file per tool, MIT licensed
+- [npm package metadata](https://registry.npmjs.org/pricing.md): \`npx pricing.md\` runs the MCP server locally over stdio
+- [Source data](https://raw.githubusercontent.com/rogermbyrne/pricing.md/main/README.md): One JSON file per tool, MIT licensed, at github.com/rogermbyrne/pricing.md
 `;
 
     res.set("Content-Type", "text/plain; charset=utf-8");
