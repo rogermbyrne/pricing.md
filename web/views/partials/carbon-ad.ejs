@@ -1,11 +1,117 @@
   <!--
-    Carbon Cover ad unit (BuySellAds). One per page — carbon.js keys off the
-    #_carbonads_js id and injects into this script tag's parent, so the container
-    reserves 280px to keep the injection from shifting layout.
-    Styling hook: #carbon-cover. Hosts are allowlisted in the CSP in web/server.ts.
+    Carbon Cover ad unit (BuySellAds), rendered as an above-the-fold sticky box.
+    One per page — carbon.js keys off the #_carbonads_js id and injects into this
+    script tag's parent (#carbon-slot).
+
+    Layout: below 1440px the unit stays in the content flow, where this partial is
+    included. From 1440px up the page reserves a right-hand rail and #carbon-sticky
+    is pinned to the bottom-right of the viewport inside it — in view on load, so it
+    counts as ATF, and never over the content column.
+
+    The rail is `max(0px, 1896px - 100vw)` of padding-right on <body> — 1152px
+    content column + the 4rem padding-left + 2 x 340px needed to keep a centred
+    column clear of a 300px ad inset 16px — so once the viewport is wide enough that
+    the natural gutter already clears the ad (>=1896px) the padding drops to zero and
+    the column sits dead centre again. nav and footer negate the padding so their backgrounds
+    and borders stay full-bleed while their inner columns track the content.
+    A matching (capped) padding-left keeps the column from going flush against the
+    left edge once the rail eats all the slack. Reserved in CSS rather than on ad
+    load, so there is no layout shift.
+
+    Styling hooks: #carbon-sticky (wrapper), #carbon-cover / #carbon-responsive
+    (Carbon's own roots). Hosts are allowlisted in the CSP in web/server.ts.
   -->
-  <div class="my-12 flex justify-center">
-    <div class="w-full max-w-[340px]" style="min-height: 280px;">
-      <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CWBDV5Q7&placement=latestsh&format=cover" id="_carbonads_js"></script>
+  <style>
+    #carbon-sticky { margin: 3rem 0; display: flex; justify-content: center; }
+    #carbon-slot { position: relative; width: 100%; max-width: 340px; min-height: 280px; }
+    #carbon-sticky-close { display: none; }
+
+    @media (min-width: 1440px) {
+      :root {
+        --carbon-rail: max(0px, calc(1896px - 100vw));
+        --carbon-rail-left: min(var(--carbon-rail), 4rem);
+      }
+      body { padding-right: var(--carbon-rail); padding-left: var(--carbon-rail-left); }
+      nav, footer {
+        margin-right: calc(var(--carbon-rail) * -1);
+        padding-right: var(--carbon-rail);
+        margin-left: calc(var(--carbon-rail-left) * -1);
+        padding-left: var(--carbon-rail-left);
+      }
+      body.carbon-dismissed { padding-right: 0; padding-left: 0; }
+      body.carbon-dismissed nav, body.carbon-dismissed footer { margin: 0; padding-right: 0; padding-left: 0; }
+
+      #carbon-sticky {
+        position: fixed;
+        inset: auto 1rem 2rem auto;
+        margin: 0;
+        z-index: 40;
+      }
+      #carbon-slot { max-width: 300px; min-height: 0; }
+      #carbon-sticky[data-ad="ready"] #carbon-sticky-close {
+        position: absolute;
+        top: -0.5rem;
+        right: -0.5rem;
+        z-index: 11;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        padding: 0;
+        border: 1px solid rgb(229 229 229);
+        border-radius: 9999px;
+        background: #fff;
+        color: rgb(115 115 115);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, .08);
+        cursor: pointer;
+      }
+      #carbon-sticky[data-ad="ready"] #carbon-sticky-close:hover { color: rgb(23 23 23); }
+      .dark #carbon-sticky[data-ad="ready"] #carbon-sticky-close {
+        border-color: rgb(64 64 64);
+        background: rgb(23 23 23);
+        color: rgb(163 163 163);
+      }
+      .dark #carbon-sticky[data-ad="ready"] #carbon-sticky-close:hover { color: #fff; }
+    }
+  </style>
+  <div id="carbon-sticky" data-ad="pending">
+    <div id="carbon-slot">
+      <button type="button" id="carbon-sticky-close" aria-label="Dismiss ad">
+        <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <script async type="text/javascript" src="https://cdn.carbonads.com/carbon.js?serve=CWBDV5Q7&placement=latestsh&format=cover" id="_carbonads_js"></script>
     </div>
   </div>
+  <script>
+    (function () {
+      var DISMISSED = 'carbon-sticky-dismissed';
+      var box = document.getElementById('carbon-sticky');
+      var slot = document.getElementById('carbon-slot');
+      var close = document.getElementById('carbon-sticky-close');
+      if (!box || !slot || !close) return;
+
+      function dismiss() {
+        box.remove();
+        document.body.classList.add('carbon-dismissed');
+      }
+
+      try {
+        if (sessionStorage.getItem(DISMISSED) === '1') { dismiss(); return; }
+      } catch (e) {}
+
+      // Only offer the dismiss button once carbon.js has injected an ad — an
+      // adblocked or unfilled slot should leave nothing floating in the rail.
+      var observer = new MutationObserver(function () {
+        if (!slot.querySelector('#carbon-cover, #carbon-responsive, #carbonads')) return;
+        box.dataset.ad = 'ready';
+        observer.disconnect();
+      });
+      observer.observe(slot, { childList: true, subtree: true });
+
+      close.addEventListener('click', function () {
+        dismiss();
+        try { sessionStorage.setItem(DISMISSED, '1'); } catch (e) {}
+      });
+    })();
+  </script>
